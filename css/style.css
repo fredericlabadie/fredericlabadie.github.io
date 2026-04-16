@@ -434,6 +434,70 @@ ul {
 }
 
 /* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+
+.section-testimonials {
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.testimonial {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  position: relative;
+}
+
+.testimonial::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.25;
+  font-family: Georgia, serif;
+}
+
+.testimonial p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding-top: 8px;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
    SKILLS
    ============================================================ */
 
@@ -613,6 +677,10 @@ ul {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
   }
 
   .about-grid {
