@@ -5,7 +5,7 @@
 
 ### WHO HE IS AT THE START
 
-Naum is nearly eighteen, strong through the shoulders, still growing into himself. He has the particular physicality of someone who grew up doing physical work without thinking of it as training — hunter-built, trail-capable, comfortable in his body in the way of people who have always used it. He is not yet the person his body suggests he might become.
+Noan is nearly eighteen, strong through the shoulders, still growing into himself. He has the particular physicality of someone who grew up doing physical work without thinking of it as training — hunter-built, trail-capable, comfortable in his body in the way of people who have always used it. He is not yet the person his body suggests he might become.
 
 He leaves on his quest wearing his best. This is significant. His tribe makes clothing with real care — the quest garments are handmade, thoughtfully constructed, probably including something small that marks the occasion: a piece of worked leather, a detail that took time. He looks like someone departing for a story, which is exactly what he believes he is doing.
 
@@ -15,7 +15,7 @@ His face is open. He does not have a face that hides things well, which will mat
 
 ### THE MISUNDERSTANDING OF GLORY
 
-Naum's central flaw at the start is not cowardice or cruelty — it's a specific misunderstanding about what a true story is.
+Noan's central flaw at the start is not cowardice or cruelty — it's a specific misunderstanding about what a true story is.
 
 He has grown up hearing the tribe's archive spoken aloud at gatherings: the stories that made people into men and women, the accounts that were deemed worth tattooing. In his memory, these are stories of action. Things done, enemies faced, distances crossed. He has abstracted the lesson incorrectly. He believes the story he needs to bring back is a story of something he *did*, and that what he did should be impressive.
 
@@ -39,7 +39,7 @@ He doesn't notice this consciously. He notices it once, near the end, in a way h
 
 ### THE PROTECTIVE INSTINCT
 
-Naum finds Kess on a failing farm with nowhere to go. His decision to bring her is immediate and only partly examined. Part of it is genuine compassion. Part of it is that having someone to protect feels like a story — the tribesman who shelters the lost child is a narrative shape he recognizes.
+Noan finds Kess on a failing farm with nowhere to go. His decision to bring her is immediate and only partly examined. Part of it is genuine compassion. Part of it is that having someone to protect feels like a story — the tribesman who shelters the lost child is a narrative shape he recognizes.
 
 What changes over the journey is the direction of the protection. He starts as the person putting himself between Kess and danger. He ends as the person who understands that Kess's most important function in the world is something he cannot protect her from — her gift is both the most useful thing in the room and something she cannot put down. You can't protect someone from their own necessity. The protective instinct matures into something more mutual: he protects her body while she goes somewhere the rest of them can't follow.
 
@@ -49,9 +49,9 @@ He doesn't fully understand this. He feels it.
 
 ### NAUM AND MARN
 
-They don't trust each other first and travel together anyway, which is the beginning of something. Marn is from a tribe that calls Naum's people false keepers. Naum has grown up with the understanding that the True Keeper tribe is arrogant in a specific and irritating way.
+They don't trust each other first and travel together anyway, which is the beginning of something. Aldous is from a tribe that calls Noan's people false keepers. Noan has grown up with the understanding that the True Keeper tribe is arrogant in a specific and irritating way.
 
-What shifts: Naum watches Marn's certainty erode in real time over the course of the journey, and instead of satisfaction he feels something uncomfortably close to recognition. Marn's belief in the machine is not so different from Naum's belief in his own coming glory — both of them are carrying a story about how this is going to go. Both of them are wrong.
+What shifts: Noan watches Aldous's certainty erode in real time over the course of the journey, and instead of satisfaction he feels something uncomfortably close to recognition. Aldous's belief in the machine is not so different from Noan's belief in his own coming glory — both of them are carrying a story about how this is going to go. Both of them are wrong.
 
 He doesn't say this out loud. He would not be able to articulate it if he tried. But the recognition is there.
 
@@ -69,9 +69,9 @@ He adapts her bedroll practice without telling her. He starts pausing at crossro
 
 ### NAUM AND TACE
 
-Tace's arrival into the group is not quite like anything Naum has experienced before. She doesn't ask to join. She joins. The distinction matters to him for about three days before he stops noticing it.
+Tace's arrival into the group is not quite like anything Noan has experienced before. She doesn't ask to join. She joins. The distinction matters to him for about three days before he stops noticing it.
 
-What she does for him, practically, is provide a different model of competence than the one he's been operating under. He came out expecting to face the world frontally. Tace moves through it laterally — watching, cataloguing, redirecting. You can learn from this if you're paying attention, and Naum is, even when he doesn't look like it.
+What she does for him, practically, is provide a different model of competence than the one he's been operating under. He came out expecting to face the world frontally. Tace moves through it laterally — watching, cataloguing, redirecting. You can learn from this if you're paying attention, and Noan is, even when he doesn't look like it.
 
 ---
 
@@ -81,9 +81,9 @@ The moment that breaks his story open comes from Kess, at a fire on the ninth da
 
 She is tired. He is tired. The Harbinger lifted off the ridge a few hours before and none of them are fully settled from it. The others are quiet in their own ways. Kess says, not as an accusation — as a genuine question, the kind she rarely asks about other people because she usually already knows the answer — what story he thinks he's going to bring back.
 
-He starts to answer. He describes what he's been doing: finding the Cold House, getting Marn there, seeing what's inside. He is halfway through the sentence when he hears himself.
+He starts to answer. He describes what he's been doing: finding the Cold House, getting Aldous there, seeing what's inside. He is halfway through the sentence when he hears himself.
 
-He is describing Marn's story. His role in it is: helper. Guide. The one who made it possible for someone else to receive something extraordinary. That is a meaningful role. It is also a supporting role. If the Recorder tattooed this story, whose skin would hold the center of it? Whose name would be at the heart of the account?
+He is describing Aldous's story. His role in it is: helper. Guide. The one who made it possible for someone else to receive something extraordinary. That is a meaningful role. It is also a supporting role. If the Recorder tattooed this story, whose skin would hold the center of it? Whose name would be at the heart of the account?
 
 Not his.
 
@@ -99,7 +99,7 @@ He doesn't know yet what story he actually has. He will not know until after the
 
 ### THE NIGHT BEFORE
 
-The night before he goes into the longhouse, Naum sits with his story and with Kess.
+The night before he goes into the longhouse, Noan sits with his story and with Kess.
 
 He has been performing certainty since he left Holdfast — the shape of someone on a quest, someone who knows what they're looking for. The performance has been exhausting in ways he couldn't have named before he lived it. He is about to be witnessed by his entire community and he knows the story he planned to bring back is not the story that happened to him.
 
@@ -109,7 +109,7 @@ He takes off the performance in return. Shows her the exhaustion underneath the 
 
 They see each other fully, before the community sees him.
 
-What she told him is not in the archive. It was not given to the archive. It was given to him specifically, and he understands the difference. He carries it alongside everything else the tradition asks, and it is the heaviest thing he carries — heavier than Marn's face in the bunker, heavier than the second half of the old story, heavier than his own becoming. Something trusted to him by someone who trusts almost no one with it.
+What she told him is not in the archive. It was not given to the archive. It was given to him specifically, and he understands the difference. He carries it alongside everything else the tradition asks, and it is the heaviest thing he carries — heavier than Aldous's face in the bunker, heavier than the second half of the old story, heavier than his own becoming. Something trusted to him by someone who trusts almost no one with it.
 
 ---
 
@@ -131,4 +131,4 @@ He is physically brave in a way that slightly outpaces his judgment — he puts 
 
 He is not subtle. He cannot pretend to feel things he doesn't feel or hide things he does feel. This makes him terrible at diplomacy and very easy to trust.
 
-He will carry the weight of Marn's crisis with him in a way he won't be able to explain. He witnessed it. It is now part of him. That is what the tradition asks of a Recorder tribesman. He did not fully understand this until it happened.
+He will carry the weight of Aldous's crisis with him in a way he won't be able to explain. He witnessed it. It is now part of him. That is what the tradition asks of a Recorder tribesman. He did not fully understand this until it happened.

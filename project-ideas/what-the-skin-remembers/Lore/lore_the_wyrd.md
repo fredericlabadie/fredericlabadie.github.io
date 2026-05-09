@@ -33,13 +33,13 @@ The program was classified. The truth never entered public scientific record. Th
 
 ### HOW DIFFERENT TRADITIONS UNDERSTAND IT
 
-**The Recorder tribe** treats the Wyrd as something that happens to other people. This is not denial — it is a cultural disposition toward the measurable, the accountable, the storied. If a Wyrd encounter happens to one of their people, it gets recorded. If it doesn't get recorded, in some functional sense it didn't happen. This produces a tradition with very few Wyrd entries and therefore a people who don't think about it often. Naum inherits this disposition entirely.
+**The Recorder tribe** treats the Wyrd as something that happens to other people. This is not denial — it is a cultural disposition toward the measurable, the accountable, the storied. If a Wyrd encounter happens to one of their people, it gets recorded. If it doesn't get recorded, in some functional sense it didn't happen. This produces a tradition with very few Wyrd entries and therefore a people who don't think about it often. Noan inherits this disposition entirely.
 
 **ARDEN** does not believe the Wyrd exists. This is the machine's active position, not a gap in its knowledge. The pre-Collapse datasets the True Keeper was trained on classified anomalous phenomena as folklore, as anxiety-management behavior in high-risk environments, as misidentified biology. The machine inherited this classification entirely. When asked about the Not Deer, it produces a behavioral profile for *Odocoileus virginianus* and notes Appalachian regional folklore patterns. When asked about the crossroads presence, it produces a survey of threshold folklore as pre-scientific psychological phenomenon. It does not say *I don't know.* It says *this is what this is.*
 
 The machine never lies about the Wyrd. It does something harder to correct than lying: it explains the Wyrd away with the same unhedged authority it uses for everything else. A confabulation can be caught against a document. A classification can't. The True Keeper didn't get the Wyrd wrong. It deleted the Wyrd as a category of thing.
 
-The tribe therefore approaches the Wyrd with the confidence of people who have been told it doesn't require a category — not aggressive, not malicious, but operating without the protocols that keep people whole. Marn has explanations for every encounter. The explanations are sourced. The sources are a machine trained on a world that had already decided not to see.
+The tribe therefore approaches the Wyrd with the confidence of people who have been told it doesn't require a category — not aggressive, not malicious, but operating without the protocols that keep people whole. Aldous has explanations for every encounter. The explanations are sourced. The sources are a machine trained on a world that had already decided not to see.
 
 His crisis in the bunker is therefore doubled: the document shows the machine invented part of the founding narrative. But the entire journey has shown him something the machine erased from the present. Both failures are the same failure. He just couldn't see the shape of it until now.
 
@@ -81,7 +81,7 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 
 **What Tace has established.** The crossroads presence is real in the sense that failing to observe the protocol produces measurable negative outcomes and observing it does not. This is her entire entry. She has no further explanation and has held the heading open for three years.
 
-**What ARDEN knows.** The Keeper has records on "threshold folklore" as a pre-Collapse cultural phenomenon. It classifies crossroads practices as anxiety management behavior in high-risk travel situations. Marn finds, on this journey, that this classification does not account for the data.
+**What ARDEN knows.** The Keeper has records on "threshold folklore" as a pre-Collapse cultural phenomenon. It classifies crossroads practices as anxiety management behavior in high-risk travel situations. Aldous finds, on this journey, that this classification does not account for the data.
 
 ---
 
@@ -90,13 +90,13 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 
 **Description.** You hear them before you become aware that you're hearing them — a presence in the upper canopy that is not wind, not animal movement, not the settling of branches. A quality of attention directed downward. Whether they are visible if you look is a question that the relevant protocol forecloses.
 
-**The rule.** Do not look up into trees after dark. This is Kess's rule, inherited from her tradition, and it is the only piece of Wyrd knowledge that Naum quietly absorbs on the journey without examining why. It is also Tace's rule, arrived at independently through field observation. She has an entry in her journal with a heading she has never closed: *Things in trees (after dark) — response to direct observation.* The entry contains two incident reports and then a gap. She stopped testing.
+**The rule.** Do not look up into trees after dark. This is Kess's rule, inherited from her tradition, and it is the only piece of Wyrd knowledge that Noan quietly absorbs on the journey without examining why. It is also Tace's rule, arrived at independently through field observation. She has an entry in her journal with a heading she has never closed: *Things in trees (after dark) — response to direct observation.* The entry contains two incident reports and then a gap. She stopped testing.
 
 **What Goins Hollow knows.** They call them Tree Toppers — plain, practical, unsentimental. They are there most nights above a certain elevation. They do not come down. The condition for them not coming down appears to be related to whether they are watched — observed or not, they stay above. The mechanism is unknown. The practical guidance is unambiguous.
 
 **What Tace suspects.** The protocol feels less like appeasing something and more like not triggering a threat response. She has watched birds exhibit similar behavior around certain predators — the wrong kind of attention, at the wrong moment, changes the calculation. She does not look up. She files the instinct under *operationally validated, mechanistically unclear.*
 
-**What Kess knows.** Her tradition calls them the Ruven. She does not say this aloud and does not offer it without being asked. The word is said quietly, in the register of something that has weight — not fear exactly, but the particular awareness you give to something that has been there longer than you and will be there after. She observes the protocol without discussion. She sleeps easily in spite of it, which Naum finds deeply unsettling until he stops finding it unsettling.
+**What Kess knows.** Her tradition calls them the Ruven. She does not say this aloud and does not offer it without being asked. The word is said quietly, in the register of something that has weight — not fear exactly, but the particular awareness you give to something that has been there longer than you and will be there after. She observes the protocol without discussion. She sleeps easily in spite of it, which Noan finds deeply unsettling until he stops finding it unsettling.
 
 ---
 
@@ -174,7 +174,7 @@ The practical knowledge from Goins Hollow oral tradition: approximately three da
 
 5. **The Pale Road, if you see it: you can follow it or not. If you follow it, know where you need to go before you step onto it. It will take you where you need to go, not where you want to go. These are sometimes the same thing.**
 
-6. **Kess's method, whatever it looks like, works.** Marn learned this. Anyone traveling with Kess will learn this. The temptation to explain why it works is best resisted until after it has worked.
+6. **Kess's method, whatever it looks like, works.** Aldous learned this. Anyone traveling with Kess will learn this. The temptation to explain why it works is best resisted until after it has worked.
 
 7. **If you see the Harbinger near a settlement, start counting days and start moving people.** Three days is the average. Do not wait for certainty. Certainty will arrive on its own schedule and it will not wait for you.
 

@@ -71,7 +71,7 @@ Tace's tradition treats the Wyrd as a biological and ecological phenomenon that 
 
 The True Keeper has records on anomalous phenomena but they are incomplete and some of them are hallucinated.
 
-Naum's tribe treats the Wyrd as something that happens to other people, until it doesn't.
+Noan's tribe treats the Wyrd as something that happens to other people, until it doesn't.
 
 ---
 

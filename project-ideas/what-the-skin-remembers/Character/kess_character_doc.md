@@ -19,7 +19,7 @@ Her gift — the truth-sense, the physical pressure of lies and true things in h
 
 **Never looks up into trees after dark.** This is absolute. If you ask her why, she'll say only: *you might see something you can't unsee.* She won't elaborate. She's not being dramatic. Something her grandmother told her and her grandmother believed it, and Kess has had no evidence to doubt it. She angles her eyes down or straight ahead after sunset in any wooded space.
 
-**Won't whistle in the forest.** Won't whistle after dark anywhere. Whistling in the woods calls things. She doesn't specify what things. When Naum whistles a walking tune on the trail she'll go silent and slightly ahead of him, putting distance between herself and whatever he may have just called.
+**Won't whistle in the forest.** Won't whistle after dark anywhere. Whistling in the woods calls things. She doesn't specify what things. When Noan whistles a walking tune on the trail she'll go silent and slightly ahead of him, putting distance between herself and whatever he may have just called.
 
 **Counts crows.** Involuntarily and under her breath. *One for sorrow, two for joy, three for a letter, four for a boy, five for silver, six for gold, seven for a secret never to be told.* She'll stop mid-sentence to count if crows cross her path. She takes the results seriously. A seven-crow morning means she moves carefully all day and says little.
 
@@ -27,7 +27,7 @@ Her gift — the truth-sense, the physical pressure of lies and true things in h
 
 **Won't burn sassafras.** If someone reaches for a piece of sassafras wood for the fire she'll take it from their hand without explanation and set it aside. She won't say why unless pushed, and when pushed she'll just say *not that wood* in a tone that closes the subject.
 
-**Bedroll orientation.** Every camp, every night, she arranges her bedroll so her feet point away from any entrance — door, gap, tent opening. The dead are carried out feet first. You don't sleep feet-to-door. She does this without comment and without fail. After a few weeks on the trail, Naum starts doing it too. He doesn't tell her.
+**Bedroll orientation.** Every camp, every night, she arranges her bedroll so her feet point away from any entrance — door, gap, tent opening. The dead are carried out feet first. You don't sleep feet-to-door. She does this without comment and without fail. After a few weeks on the trail, Noan starts doing it too. He doesn't tell her.
 
 **Stops at crossroads.** Any significant intersection — roads, trails, rivers meeting — she pauses. She turns in a slow circle, listening. She leaves something small: a pinch of tobacco, a coin, a single hair. The crossroads is a threshold between worlds in both the hoodoo tradition she carries and the Scots-Irish one. Eshu/Legba opens roads and closes them. The crossroads is where you leave debts and pick up knowledge. She never passes through one carelessly.
 
@@ -47,7 +47,7 @@ When they reach a significant threshold — the bunker, a ruin of consequence, a
 
 She wears a small cloth bag around her neck, inside her shirt. Knotted with red thread. She made it herself from instructions passed down through her mother's line, which was working hoodoo before the Collapse and after it with equal pragmatism. The bag contains: graveyard dirt from her mother's grave, a small bone, a root she won't name, something else she won't show anyone.
 
-She will not let anyone touch it. Not even Naum. Not as a rule she explains — she simply moves away if a hand comes near it, the way you'd protect a wound. The working is sealed. Outside hands break it. If the bag were lost or destroyed she would spend a significant portion of whatever resources she had replacing it before she did anything else.
+She will not let anyone touch it. Not even Noan. Not as a rule she explains — she simply moves away if a hand comes near it, the way you'd protect a wound. The working is sealed. Outside hands break it. If the bag were lost or destroyed she would spend a significant portion of whatever resources she had replacing it before she did anything else.
 
 ---
 
@@ -93,9 +93,9 @@ And then there is "Oh Death" — the fourth song, the one she plays only when sh
 
 ### HOW THE OTHERS READ HER
 
-**Naum** finds her practices instinctively respectful before he finds them meaningful. He was raised in a tradition of stored memory and witnessed truth; Kess's relationship to the invisible world isn't foreign to him, just different in its grammar. He starts adapting small behaviors — the bedroll, pausing at crossroads — without discussing it with her. At some point on the journey he takes her seriously in a way he couldn't have articulated before they started.
+**Noan** finds her practices instinctively respectful before he finds them meaningful. He was raised in a tradition of stored memory and witnessed truth; Kess's relationship to the invisible world isn't foreign to him, just different in its grammar. He starts adapting small behaviors — the bedroll, pausing at crossroads — without discussing it with her. At some point on the journey he takes her seriously in a way he couldn't have articulated before they started.
 
-**Marn** was raised by people who treat non-computational knowledge as noise. Her practices irritate him in specific proportion to how often they seem to be correct. He asks once, early in the journey, what the empirical basis is for the crow-counting. She looks at him for a long moment and says: *what's the empirical basis for asking a machine what's true?* He doesn't have a good answer. He doesn't bring it up again.
+**Aldous** was raised by people who treat non-computational knowledge as noise. Her practices irritate him in specific proportion to how often they seem to be correct. He asks once, early in the journey, what the empirical basis is for the crow-counting. She looks at him for a long moment and says: *what's the empirical basis for asking a machine what's true?* He doesn't have a good answer. He doesn't bring it up again.
 
 ---
 
@@ -109,7 +109,7 @@ The gift is mostly a receiving instrument. She absorbs. Truth and falsehood arri
 
 In moments when she needs to be a power beyond her years, it surfaces without her choosing it. She does not reach for it. It comes.
 
-What changes on this journey is that for the first time it isn't just a burden she manages. It's a tool the world needs her to use. That is new. She doesn't know yet what to do with it — until the bunker, when she crosses the room to Marn and takes his hand, and for the first time reaches for the outward expression deliberately. Uses it not to harm but to tell the truth. To bring something down honestly. Her first outward expression and her second are separated by years. Between them she has been a receiver. What she does in the bunker is the same muscle, the same reaching — but chosen, and gentle, and entirely different.
+What changes on this journey is that for the first time it isn't just a burden she manages. It's a tool the world needs her to use. That is new. She doesn't know yet what to do with it — until the bunker, when she crosses the room to Aldous and takes his hand, and for the first time reaches for the outward expression deliberately. Uses it not to harm but to tell the truth. To bring something down honestly. Her first outward expression and her second are separated by years. Between them she has been a receiver. What she does in the bunker is the same muscle, the same reaching — but chosen, and gentle, and entirely different.
 
 ---
 
@@ -117,11 +117,11 @@ What changes on this journey is that for the first time it isn't just a burden s
 
 Her parents were unkind. This is not elaborated. The elaboration is in "Bible by the Bed," which she plays facing away from the others, and in the way her demeanor cracks for just a moment when someone asks about them before she comes back to the present.
 
-When Naum found her she was on the porch of the failing farm, barefoot, banjo across her knees, not crying. The family was recently dead. He read the story of it in the farm before she said a word — the signs of disruption, the timeline visible in what had been left undone. He assumed raiders. She did not correct him. She has not corrected anyone.
+When Noan found her she was on the porch of the failing farm, barefoot, banjo across her knees, not crying. The family was recently dead. He read the story of it in the farm before she said a word — the signs of disruption, the timeline visible in what had been left undone. He assumed raiders. She did not correct him. She has not corrected anyone.
 
 She knows what happened. She has known since it happened. She was twelve years old and her gift was new and uncontrolled and came in for the first time in a moment of need, and the invisible world answered in a way she had not asked for and could not take back. She carries this the way she carries everything — not suppressed, not dissociated, just kept. Held privately. Tended to, in its way.
 
-She pushes it away by living in the immediate. This is why she seems confusingly cheerful about Naum's quest, genuinely delighted by Tace's catalogue, fully present with the strange small beauties of the journey. She actually is. The present moment is where she can breathe. It is also the door she keeps closed against what's behind it.
+She pushes it away by living in the immediate. This is why she seems confusingly cheerful about Noan's quest, genuinely delighted by Tace's catalogue, fully present with the strange small beauties of the journey. She actually is. The present moment is where she can breathe. It is also the door she keeps closed against what's behind it.
 
 The mourning comes later and is more complicated than grief for the dead. She mourns what could have been — a different set of parents, a different kind of close. She mourns that this found family she has walked into will eventually scatter, and she cannot hold it either. The grief is not for the loss of what she had. It is for the permanent impossibility of what she wanted.
 
@@ -141,7 +141,7 @@ She plays "Oh Death" that night, alone, for a long time, facing the dark. She do
 
 ### THE SECRET AND THE TELLING
 
-The true version of what happened to her parents she tells once, to Naum, the night before he becomes Written. He is sitting with his story, trying to decide how to tell it, and she gives him the true version of hers — not as a gift, exactly, but as evidence of what true stories cost. He takes off the performance of purpose in return. Shows her how hard the glory hunting has actually been, the exhaustion of performing certainty when you don't have it.
+The true version of what happened to her parents she tells once, to Noan, the night before he becomes Written. He is sitting with his story, trying to decide how to tell it, and she gives him the true version of hers — not as a gift, exactly, but as evidence of what true stories cost. He takes off the performance of purpose in return. Shows her how hard the glory hunting has actually been, the exhaustion of performing certainty when you don't have it.
 
 They see each other fully, before he goes in to be witnessed by everyone.
 

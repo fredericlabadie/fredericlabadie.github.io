@@ -12,7 +12,7 @@ The interstates are the most alien things in the landscape.
 
 The surface is cracked and heaved by root systems that have had five generations to work, but the grade is still there — the impossibly precise flat corridor cut through terrain that resists flatness, running in directions that make no sense unless you understand the logic of moving very large numbers of people very fast between cities that no longer exist in any recognizable form. The bridges still standing are the ones built to outlast civilization, and they did. Massive concrete spans over rivers, carrying nothing but weather. Guardrails bent at the places where something hit them, a century ago, the impact still legible in the metal.
 
-The blue signs are the strangest part. They are still standing in places, still readable, because they were made to outlast ordinary abuse. *EXIT 47. INTERSTATE 81 NORTH. ROANOKE 24.* The distances are accurate to a city that is now a hill of rubble with trees growing through it. Naum has read one of these signs and understood every word of it and understood nothing about what it meant.
+The blue signs are the strangest part. They are still standing in places, still readable, because they were made to outlast ordinary abuse. *EXIT 47. INTERSTATE 81 NORTH. ROANOKE 24.* The distances are accurate to a city that is now a hill of rubble with trees growing through it. Noan has read one of these signs and understood every word of it and understood nothing about what it meant.
 
 On-ramps form natural archways where the embankment has become a forest feature — you duck under the concrete to pass, and the underside is cool and damp and has been colonized by something that grows in the dark. The medians are forest. The lanes are parallel clearings, a green tunnel you can see down for miles if you stand in the middle, which nobody does for long because standing in the open on flat ground with clear sightlines in both directions is the kind of comfort nobody in this world has learned to trust.
 
@@ -114,7 +114,7 @@ Smoke on distant ridges: sometimes signal, sometimes cooking, sometimes a commun
 
 A boat on the river, seen from the ridge above: a flat-bottomed thing, well-made, moving downstream with a pole. One person managing it. Moving too fast to have come from anywhere close. Gone around the bend before the party can get to the river.
 
-Marks on trees along certain routes that Kess reads and Tace catalogues and Naum files away and Marn cannot find a reference for in anything the Keeper told him. They mean things. Some are directional. Some are warnings. Some are claims. Some are, in Kess's assessment, nothing to do with people at all. She does not elaborate.
+Marks on trees along certain routes that Kess reads and Tace catalogues and Noan files away and Aldous cannot find a reference for in anything the Keeper told him. They mean things. Some are directional. Some are warnings. Some are claims. Some are, in Kess's assessment, nothing to do with people at all. She does not elaborate.
 
 ---
 

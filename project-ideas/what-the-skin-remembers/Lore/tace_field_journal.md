@@ -149,7 +149,7 @@ I have a new heading to open.
 
 **Mountain camp, four days out**
 
-Marn — the scholar from ARDEN — uses the Keeper's behavioral profiles for nã-veado. I have read those profiles in a trade document. They are wrong in ways that will get someone hurt.
+Aldous — the scholar from ARDEN — uses the Keeper's behavioral profiles for nã-veado. I have read those profiles in a trade document. They are wrong in ways that will get someone hurt.
 
 He is educated in the sense of having absorbed a great deal of informação. He is nã educated in the sense of having tested any of it against conditions. He keeps a very good journal. His handwriting is small and precise. He ran out of space in the margins on the fourth day and has started writing vertical in the borders.
 
@@ -161,13 +161,13 @@ His pen is a refillable instrument. I have nã seen one before. *Note for later:
 
 Nã-veado. Single bicho, approximately thirty feet from the camp perimeter, present when I woke at fourth hour.
 
-Marn had a procedure. He followed it correct and the procedure was wrong — the bicho assessed him as a threat and held position. He did nã run, which was correct. The rest of his protocol was calibrated for a different kind of coisa.
+Aldous had a procedure. He followed it correct and the procedure was wrong — the bicho assessed him as a threat and held position. He did nã run, which was correct. The rest of his protocol was calibrated for a different kind of coisa.
 
 Kess woke. She placed something at the base of the tree to her left — could nã see what. She spoke something under her breath in a direction that was nã toward the bicho but nã away from it either. She turned her back to the tree line.
 
 The nã-veado lost interest and moved away in approximately four minutes.
 
-Marn put it in his journal. He opened a heading and did nã close it.
+Aldous put it in his journal. He opened a heading and did nã close it.
 
 *The child is nã adjacent to the Wyrd. She is of it. Require further observation.*
 
@@ -229,7 +229,7 @@ The nã-veado are ranging further north than at any prior point in the catalogue
 
 Three sightings in two days, all north of where I would have expected them.
 
-They follow Naum at distance. They follow Marn more closely and with what I can only describe as additional interest — they seem to be assessing something about him specifically.
+They follow Noan at distance. They follow Aldous more closely and with what I can only describe as additional interest — they seem to be assessing something about him specifically.
 
 They do nã follow Kess.
 
@@ -251,13 +251,13 @@ The eyes.
 
 I am filing this under observational artifact for now — eyes don't reflect red without a light source, there was no light source. I am crossing that note out já. There was no light source and the eyes were red and present in the way that Wyrd things are present when they have registered that you exist.
 
-It did nã look at me. It did nã look at Naum or Marn. Kess had stopped before I stopped — she was already watching it. She was nã afraid. The quality of her stillness was nã fear. It was the stillness of recognition. The bicho looked at her. She looked at it. Approximately seven seconds of that kind of accounting happened between them. Then it lifted without sound and was gone into the treeline on the north slope.
+It did nã look at me. It did nã look at Noan or Aldous. Kess had stopped before I stopped — she was already watching it. She was nã afraid. The quality of her stillness was nã fear. It was the stillness of recognition. The bicho looked at her. She looked at it. Approximately seven seconds of that kind of accounting happened between them. Then it lifted without sound and was gone into the treeline on the north slope.
 
 I asked her what it was. She said only: *it was saying goodbye.*
 
 I did nã ask goodbye to what. I should have asked.
 
-We came back down the same route eleven days later. The settlement at Corbin Branch was dead. Destroyed. What the gente of the hollow call wound-work done to a living place — the kind of damage that happens when Wyrd things move through in numbers. We did nã stop long. Marn was sick from looking at it. He was matching it against a Keeper behavioral profile and finding nada that fit. I did nã interrupt.
+We came back down the same route eleven days later. The settlement at Corbin Branch was dead. Destroyed. What the gente of the hollow call wound-work done to a living place — the kind of damage that happens when Wyrd things move through in numbers. We did nã stop long. Aldous was sick from looking at it. He was matching it against a Keeper behavioral profile and finding nada that fit. I did nã interrupt.
 
 Kess walked through without looking. She had já said her goodbye eleven days before. The rest of us were just catching up.
 
@@ -301,9 +301,9 @@ We went in.
 
 **Interior — first hours**
 
-Filing system intact. Organized by logic I am still reconstructing. Marn found his document within two hours. I could see his hands from across the room.
+Filing system intact. Organized by logic I am still reconstructing. Aldous found his document within two hours. I could see his hands from across the room.
 
-Naum found something in the third hour, in the historical records section. He went very still. He did nã call anyone over. He stood holding it for approximately fifteen minutes before he sat down on the floor and continued reading.
+Noan found something in the third hour, in the historical records section. He went very still. He did nã call anyone over. He stood holding it for approximately fifteen minutes before he sat down on the floor and continued reading.
 
 I filed both observations and did nã approach either of them.
 
@@ -353,7 +353,7 @@ I am updating several headings.
 
 ---
 
-**Interior — Marn**
+**Interior — Aldous**
 
 He depressurized.
 
@@ -373,9 +373,9 @@ I am nã going to show it to anyone.
 
 Different gente descending the same mountain.
 
-Marn eats when food is put in front of him. He is checking everyone's physical condition at intervals that suggest the healer part of him is still functional even when the rest of him isn't. This is useful informação about the architecture of a person.
+Aldous eats when food is put in front of him. He is checking everyone's physical condition at intervals that suggest the healer part of him is still functional even when the rest of him isn't. This is useful informação about the architecture of a person.
 
-Naum is carrying something heavy that he received in that room and is nã yet ready to talk about. I can see it in the set of his shoulders.
+Noan is carrying something heavy that he received in that room and is nã yet ready to talk about. I can see it in the set of his shoulders.
 
 Kess walks. She is as present as she always is. The difference is smaller than I expected. She absorbed the document and kept moving. She is twelve years old and she is made of something the pre-Collapse researchers did nã account for when they were designing their outcomes.
 
@@ -387,7 +387,7 @@ We passed through.
 
 Nã cataloguing this in detail. The kind of damage that happens when Wyrd things move through in numbers — I have descriptions from Goins Hollow oral tradition and they are correct. The compound was nã struck by anything weather or human could do. The wound place it has become will be there for a long time.
 
-Marn observed without speaking for approximately two minutes. I did nã interrupt. Kess walked through without looking.
+Aldous observed without speaking for approximately two minutes. I did nã interrupt. Kess walked through without looking.
 
 She had já said her goodbye eleven days before. The rest of us were just catching up.
 
@@ -419,7 +419,7 @@ They yield. They move aside as Kess passes and then return to position and watch
 
 **The yard outside the longhouse — late autumn**
 
-Inside, the Scribe is doing something extraordinary with a needle and the last unmarked skin on the Recorder's forearm. Naum is in there. Marn is in the doorway. Kess is against the outside wall with the banjo and I am in the yard and the pencil is moving.
+Inside, the Scribe is doing something extraordinary with a needle and the last unmarked skin on the Recorder's forearm. Noan is in there. Aldous is in the doorway. Kess is against the outside wall with the banjo and I am in the yard and the pencil is moving.
 
 Heading I have been holding for five years:
 
