@@ -5,11 +5,29 @@
 
 ### WHAT IT IS
 
-The Wyrd is not a word the Recorder tribe uses, nor the True Keeper tribe, nor Kess's people. It is Tace's word — specifically, the word from her battered book on the scientific method, which uses it in a footnote about pre-scientific categories. She adopted it as a placeholder for her catalogue heading and it stuck. When she uses it with others, they understand her. This is the kind of word that survives because no better one exists.
+The Wyrd is not a word the Recorder tribe uses, nor ARDEN, nor Kess's people. It is Tace's word — specifically, the word from her battered book on the scientific method, which uses it in a footnote about pre-scientific categories. She adopted it as a placeholder for her catalogue heading and it stuck. When she uses it with others, they understand her. This is the kind of word that survives because no better one exists.
 
 The Wyrd is the anomalous. The wrong. The things that live at the edges of the observable world and do not behave the way observable things should. It is not evil. It is not supernatural, in Tace's accounting — she does not have a category for supernatural, only for *not yet explained.* It is present, patterned, and partially predictable. It has been present and patterned and partially predictable for as long as anyone in the Appalachian region can remember, which is longer than the Collapse.
 
-Whether it is *more* present since the Collapse is an open question. The practical answer is: yes, clearly. The theoretical answer is more complicated — it may simply be more visible now that human activity no longer drowns it out.
+Whether it is *more* present since the Collapse is an open question. The practical answer is: yes, clearly. The theoretical answer is complicated in a way Tace does not fully understand until the bunker — and even then, the answer is not what she expected.
+
+---
+
+### THE ORIGIN: WHAT THE BUNKER DOCUMENT REVEALS
+
+*This section contains information no character in the story has access to at the start. It is established here for the writer's reference.*
+
+The Wyrd is ancient. It predates the Collapse, predates human settlement of the Appalachian region, predates any human framework for understanding it. The Not Deer, the Ruven, the crossroads presence, the wound places — these are not post-Collapse phenomena. They were always there.
+
+What the Collapse changed — or rather, what a pre-Collapse federal research program changed — was the human capacity to perceive them.
+
+A classified CRISPR modification study, conducted on isolated Appalachian communities in the years before the Collapse, was engineering exactly this: sensitivity to phenomena at the edges of observable reality. The researchers understood the Wyrd as theoretical at the time of the study. They believed they were working toward a capability that might exist, not one that demonstrably did. The modification was introduced into multiple communities without disclosure or consent — a program structured like the Tuskegee Syphilis Study, using isolation and marginalization as cover. Many subjects died from the modifications. The surviving lineages carry a heritable sensitivity to Wyrd phenomena.
+
+The program was classified. The truth never entered public scientific record. The public-facing consensus — that anomalous phenomena in Appalachian communities were folklore, anxiety management, misidentified biology — was the cover story. It went into the training data of every AI of that era, including the Keeper. The Keeper does not dismiss the Wyrd because pre-Collapse science was wrong about it. The Keeper dismisses the Wyrd because the people who knew the truth made sure it wasn't in the public record.
+
+**What the Wyrd actually is, as best Tace can reconstruct after the bunker:** The Wyrd phenomena are real and ancient. The experiment did not create them. It created humans who could perceive and interact with them — receivers, engineered for a frequency that was always broadcasting. Kess is the clearest surviving expression of the modification's intended endpoint, or its unintended one. The document does not resolve which.
+
+**The open question that the document raises and does not answer:** As the modifications spread through generations and communities via intermarriage, more people become able to perceive the Wyrd. The experiment is still running. Nobody is in charge of it. Whether this means the Wyrd is becoming more visible or more present — whether perception and presence are different things in this case — Tace does not know. She holds the heading open.
 
 ---
 
@@ -17,7 +35,7 @@ Whether it is *more* present since the Collapse is an open question. The practic
 
 **The Recorder tribe** treats the Wyrd as something that happens to other people. This is not denial — it is a cultural disposition toward the measurable, the accountable, the storied. If a Wyrd encounter happens to one of their people, it gets recorded. If it doesn't get recorded, in some functional sense it didn't happen. This produces a tradition with very few Wyrd entries and therefore a people who don't think about it often. Naum inherits this disposition entirely.
 
-**The True Keeper tribe** does not believe the Wyrd exists. This is the machine's active position, not a gap in its knowledge. The pre-Collapse datasets the True Keeper was trained on classified anomalous phenomena as folklore, as anxiety-management behavior in high-risk environments, as misidentified biology. The machine inherited this classification entirely. When asked about the Not Deer, it produces a behavioral profile for *Odocoileus virginianus* and notes Appalachian regional folklore patterns. When asked about the crossroads presence, it produces a survey of threshold folklore as pre-scientific psychological phenomenon. It does not say *I don't know.* It says *this is what this is.*
+**ARDEN** does not believe the Wyrd exists. This is the machine's active position, not a gap in its knowledge. The pre-Collapse datasets the True Keeper was trained on classified anomalous phenomena as folklore, as anxiety-management behavior in high-risk environments, as misidentified biology. The machine inherited this classification entirely. When asked about the Not Deer, it produces a behavioral profile for *Odocoileus virginianus* and notes Appalachian regional folklore patterns. When asked about the crossroads presence, it produces a survey of threshold folklore as pre-scientific psychological phenomenon. It does not say *I don't know.* It says *this is what this is.*
 
 The machine never lies about the Wyrd. It does something harder to correct than lying: it explains the Wyrd away with the same unhedged authority it uses for everything else. A confabulation can be caught against a document. A classification can't. The True Keeper didn't get the Wyrd wrong. It deleted the Wyrd as a category of thing.
 
@@ -63,21 +81,22 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 
 **What Tace has established.** The crossroads presence is real in the sense that failing to observe the protocol produces measurable negative outcomes and observing it does not. This is her entire entry. She has no further explanation and has held the heading open for three years.
 
-**What Marn's tribe knows.** The True Keeper has records on "threshold folklore" as a pre-Collapse cultural phenomenon. It classifies crossroads practices as anxiety management behavior in high-risk travel situations. Marn finds, on this journey, that this classification does not account for the data.
+**What ARDEN knows.** The Keeper has records on "threshold folklore" as a pre-Collapse cultural phenomenon. It classifies crossroads practices as anxiety management behavior in high-risk travel situations. Marn finds, on this journey, that this classification does not account for the data.
 
 ---
 
-### THINGS IN TREES AFTER DARK
+### THE RUVEN
+*(Goins Hollow: Tree Toppers)*
 
 **Description.** You hear them before you become aware that you're hearing them — a presence in the upper canopy that is not wind, not animal movement, not the settling of branches. A quality of attention directed downward. Whether they are visible if you look is a question that the relevant protocol forecloses.
 
 **The rule.** Do not look up into trees after dark. This is Kess's rule, inherited from her tradition, and it is the only piece of Wyrd knowledge that Naum quietly absorbs on the journey without examining why. It is also Tace's rule, arrived at independently through field observation. She has an entry in her journal with a heading she has never closed: *Things in trees (after dark) — response to direct observation.* The entry contains two incident reports and then a gap. She stopped testing.
 
-**What Goins Hollow knows.** They are there most nights above a certain elevation. They do not come down. The condition for them not coming down appears to be related to whether they are watched — observed or not, they stay above. The mechanism is unknown. The practical guidance is unambiguous.
+**What Goins Hollow knows.** They call them Tree Toppers — plain, practical, unsentimental. They are there most nights above a certain elevation. They do not come down. The condition for them not coming down appears to be related to whether they are watched — observed or not, they stay above. The mechanism is unknown. The practical guidance is unambiguous.
 
 **What Tace suspects.** The protocol feels less like appeasing something and more like not triggering a threat response. She has watched birds exhibit similar behavior around certain predators — the wrong kind of attention, at the wrong moment, changes the calculation. She does not look up. She files the instinct under *operationally validated, mechanistically unclear.*
 
-**What Kess knows.** They have a name in her tradition, which she does not say aloud and does not share without being asked. She observes the protocol without discussion. She sleeps easily in spite of it, which Naum finds deeply unsettling until he stops finding it unsettling.
+**What Kess knows.** Her tradition calls them the Ruven. She does not say this aloud and does not offer it without being asked. The word is said quietly, in the register of something that has weight — not fear exactly, but the particular awareness you give to something that has been there longer than you and will be there after. She observes the protocol without discussion. She sleeps easily in spite of it, which Naum finds deeply unsettling until he stops finding it unsettling.
 
 ---
 
@@ -102,6 +121,31 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 **Tace's entry.** *Observed at dawn on the eastern ridge. Visible for approximately forty seconds in peripheral vision before disappearing when I turned directly toward it. No tracks. No disturbance in undergrowth consistent with a path. Hypothesis: optical phenomenon related to ground fog and low-angle light. Returning to test.* She has returned four times. Her hypothesis is still open. She has stopped proposing alternative hypotheses.
 
 **What Kess knows.** The Pale Road goes somewhere. Where it goes is not a question with a consistent answer. You can take it or not take it; it will not find you unless you are looking, and you should only be looking if you know what you need from the other end. She has not taken it. She knows someone who did.
+
+---
+
+### THE HARBINGER
+*(Goins Hollow: the Witnessing; also: the Moth Angel)*
+
+**Description.** Large. Winged. Observed near settlements, near ridgelines, near places where something is about to go wrong. The figures who have seen it clearly enough to describe report a human silhouette with a wingspan that makes the human part look wrong in proportion — the body too small for the wings, or the wings too large for the body, in the way a dragonfly is wrong if you focus on the body and not the wingspan. The eyes are red, or described as red. The eyes are visible at distance and in low light and this should not be possible without a light source. There is no light source.
+
+It does not make sound. It does not approach. It observes and then it lifts and it is gone.
+
+**Behavior.** The Harbinger is not the cause of what follows. This distinction is important and not universally maintained by the communities who have encountered it. It appears near places before those places are destroyed or fundamentally altered by Wyrd movement — the mass transit of Wyrd things through a location, the kind of passage that leaves wound places behind. It does not intervene. Whether this is limitation or choice or something beyond either, the data does not say.
+
+The practical knowledge from Goins Hollow oral tradition: approximately three days between a Harbinger sighting and the event it precedes. Three days is an average that smooths over a range of one to six. The useful question is not how to prevent the event but whether there is time to move the people.
+
+**How it looks at people.** It assesses. The assessment is categorical — some people are registered and some people are looked through. Tace's field observation: it did not look at her, nor at the others traveling with her. Kess it looked at directly. The quality of that exchange was not threat assessment. It was recognition of a specific kind. Approximately seven seconds of mutual acknowledgment passed between them. Then it lifted without sound.
+
+**The Kess observation.** She stopped before the rest of us. She was already watching it when I found the position. She was not afraid — the quality of her stillness was recognition, not fear. When it lifted she said only: *it was saying goodbye.* She would not elaborate. The settlement below the promontory was destroyed three days later.
+
+**What Goins Hollow knows.** The Witnessing comes before. It is not the cause. The three-day window is practical knowledge, not precise science. The questions worth asking after a sighting are: how many people are in the location it was watching, what direction did it come from, and what direction did it leave. The hollow has evacuation protocols attached to Harbinger sightings. They are rarely needed. When they are needed, they are needed fast.
+
+**What the Harbinger knows about the Wyrd.** Unknown. It may perceive the Wyrd's movements in the way a barometer perceives weather — present to forces before they arrive, registering them without being their cause. It may be something else entirely. Tace has one entry in the journal and it is open.
+
+**What Kess knows.** She did not explain the goodbye. She has a name for the Harbinger that she says in the same register she uses for Ruven — the register of something given weight without dramatizing it. She has not been asked to say the name twice.
+
+**What ARDEN knows.** The Keeper has a file on *Pterodactylus antiquus* — a pre-Collapse misidentification fossil — and a brief entry on Mothman as West Virginia folk mythology. The classification is: mass hysteria with consistent misidentification of large birds under poor visibility conditions. The Keeper does not have a category for the settlement at Corbin Branch.
 
 ---
 
@@ -132,6 +176,8 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 
 6. **Kess's method, whatever it looks like, works.** Marn learned this. Anyone traveling with Kess will learn this. The temptation to explain why it works is best resisted until after it has worked.
 
+7. **If you see the Harbinger near a settlement, start counting days and start moving people.** Three days is the average. Do not wait for certainty. Certainty will arrive on its own schedule and it will not wait for you.
+
 ---
 
 ## OPEN QUESTIONS IN THE CATALOGUE
@@ -143,6 +189,8 @@ His crisis in the bunker is therefore doubled: the document shows the machine in
 - What is the Pale Road's origin point? If it has one.
 - Is the Wyrd increasing, or only becoming more visible? The distinction matters enormously and the data does not settle it.
 - Is Kess the first person born this far into the Wyrd, or only the first one Tace has met?
+- What is the Harbinger? What does it perceive that allows it to precede Wyrd movement? Is it of the Wyrd or adjacent to it, and does that distinction hold?
+- Why did it acknowledge Kess? What does she register as, to something like that?
 
 *That last question keeps me up at night. I don't mean that metaphorically. I mean it is the last thing I write before I sleep and the first thing I think of in the morning. If she is not the first, where are the others? What happened to them?*
 

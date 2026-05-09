@@ -5,7 +5,7 @@
 
 ### WHO HE IS AT THE START
 
-Marn is mixed-race, late teens, with curly dark hair that does its own thing and round glasses that are carefully maintained because he cannot function without them and has one repair kit and no backup pair. He wears a structured coat that was once institutional — Tyvek or lab-coat material from the data center's supply room, with real zippers, functional pockets, and a faded blue circular insignia on the shoulder. He keeps it cleaner than the situation warrants. The coat is his identity made external.
+Marn is mixed-race, mid-twenties — closer in age to Tace than to Naum or Kess, though his sheltered upbringing inside ARDEN makes him feel younger in certain ways and older in others. Curly dark hair that does its own thing. Round glasses carefully maintained because he cannot function without them; he has one repair kit and no backup pair. He wears a structured coat that was once institutional — Tyvek or lab-coat material from the data center's supply room, with real zippers, functional pockets, and a faded blue circular insignia on the shoulder. He keeps it cleaner than the situation warrants. The coat is his identity made external.
 
 He carries a journal dense with notation and a writing instrument that he treats with the care most people reserve for weapons. His handwriting is very small. He runs out of space constantly.
 
@@ -27,13 +27,17 @@ His navigation is where the problems show up. The True Keeper's maps are partly 
 
 ### HOW HE WAS SENT
 
-The True Keeper provisioned him. This is not a metaphor — before Marn left, the tribe consulted the machine and the machine produced a list: supplies, ratios, routes, contingencies, protocols for injury, weather, hostile encounter, equipment failure. The Interpreter transcribed the output. The tribe assembled everything on the list. Marn memorized it.
+The Keeper provisioned him. This is not a metaphor — before Marn left, the tribe consulted the machine and the machine produced a list: supplies, ratios, routes, contingencies, protocols for injury, weather, hostile encounter, equipment failure. The Interpreter transcribed the output. The tribe assembled everything on the list. Marn memorized it.
 
 The list is largely correct. The machine's procedural knowledge is its strongest domain — wound management, water safety, caloric estimates, seasonal weather patterns. The things it was trained on that don't change much have mostly stayed accurate. Marn's medical kit is the best-stocked of anyone in the party by a significant margin. His waterproofing holds. His food calculations are close.
 
 What the machine could not calculate: what Marn would need from other people. What the journey would require of him emotionally, relationally, spiritually — the True Keeper does not have categories for these, and the tribe did not know to ask. The machine was never asked *what kind of person does he need to become to complete this mission.* It was asked *what does he need to bring.* The machine answered the question it was asked, with the data it had, in the only direction it could go. It cannot update. No one knows how to update it — the people who built it are five generations gone, and the tribe that maintains it knows the maintenance protocols but not the architecture. The machine holds what it was trained on plus what it has absorbed from five generations of questions, shaped by what the tribe knew to ask. It cannot go beyond that. It cannot learn from what happened after.
 
-So Marn left with everything the machine thought he needed. And the machine was not wrong about what it could see.
+What the Keeper also cannot calculate: whether Marn was the right person. He was the *selected* person — the output of a calculation that weighed his probability of mission success against the cost of his loss. He is genuinely capable. He is also not irreplaceable inside ARDEN. The Keeper found the configuration where the mission had a chance and the expenditure was survivable. It does not expect him to return.
+
+Marn does not know this. He believes he was chosen for his fitness — that the Keeper saw something in him. He has been carrying this belief since his selection, working to justify it, trying to live up to what he imagines was recognized in him. All the over-preparation is the labor of someone who thinks he was entrusted. He was assessed.
+
+So Marn left with everything the Keeper thought he needed. And the Keeper was not wrong about what it could see.
 
 ---
 
@@ -105,7 +109,13 @@ He starts asking her questions. She is slightly surprised anyone is interested. 
 
 Marn stands in the doorway of the longhouse watching Naum's story get tattooed into the Recorder's skin. He has not decided whether he is staying.
 
-The decision is not about logistics. It is about what he is now — whether there is a version of himself that can exist without the machine's authority as a foundation. Whether the person who was built by the True Keeper's knowledge is someone he wants to remain.
+At some point in the watching, the calculation finishes. He has been running it since the bunker — the same way he runs every calculation, following the evidence where it leads. The evidence leads somewhere he can feel the others actively avoiding. Kess knew from the moment she met him. Naum put it together on the road down and decided it wasn't his to say. Tace filed it in the journal without annotation. They've been, collectively and without coordination, trying to leave him the one thing that survived: the feeling of having been chosen for his worth.
+
+He says it before anyone else can. Quietly, without drama, in the same tone he uses to read an injury assessment. He names what the Keeper calculated and what that calculation meant, and he owns it — not as a wound, but as data he now has access to that the Keeper never will. He survived a mission the Keeper designed to be survivable without him. That outcome cannot be received. The Keeper's model is closed.
+
+There's probably a beat where the others don't say anything, and he lets them not say anything, and that's enough.
+
+The decision about staying is not about logistics. It is about what he is now — whether there is a version of himself that can exist without the Keeper's authority as a foundation. Whether the person ARDEN built is someone he wants to remain.
 
 Kess already knows what he decides. She is the only one who does.
 

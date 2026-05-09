@@ -75,6 +75,44 @@ What she does for him, practically, is provide a different model of competence t
 
 ---
 
+### THE WRONG ROLE
+
+The moment that breaks his story open comes from Kess, at a fire on the ninth day, in a register she doesn't usually use — the register of someone who has let their guard down without meaning to.
+
+She is tired. He is tired. The Harbinger lifted off the ridge a few hours before and none of them are fully settled from it. The others are quiet in their own ways. Kess says, not as an accusation — as a genuine question, the kind she rarely asks about other people because she usually already knows the answer — what story he thinks he's going to bring back.
+
+He starts to answer. He describes what he's been doing: finding the Cold House, getting Marn there, seeing what's inside. He is halfway through the sentence when he hears himself.
+
+He is describing Marn's story. His role in it is: helper. Guide. The one who made it possible for someone else to receive something extraordinary. That is a meaningful role. It is also a supporting role. If the Recorder tattooed this story, whose skin would hold the center of it? Whose name would be at the heart of the account?
+
+Not his.
+
+She doesn't say it. She doesn't have to. Her expression is the expression of someone who has known this for several days and has been waiting for him to find it himself — not cruel, not satisfied, just present with the fact of it. This is Kess in a soft moment, the guard down, letting something she's been thinking show on her face.
+
+What he confronts is not just that the story is wrong. It is that the specific shape of glory he was hunting — the noble helper, the competent tribesman who enables the quest — would make him the least important person in his own biography. He went out to become Written and instead he has become a footnote in someone else's archive.
+
+He goes quiet in the way he does when something has genuinely landed. Not defensive. Not devastated. Quiet.
+
+He doesn't know yet what story he actually has. He will not know until after the bunker. But he stops carrying the wrong one from this moment forward, which is the first honest thing he does on the journey.
+
+---
+
+### THE NIGHT BEFORE
+
+The night before he goes into the longhouse, Naum sits with his story and with Kess.
+
+He has been performing certainty since he left Holdfast — the shape of someone on a quest, someone who knows what they're looking for. The performance has been exhausting in ways he couldn't have named before he lived it. He is about to be witnessed by his entire community and he knows the story he planned to bring back is not the story that happened to him.
+
+Kess gives him the true version of hers. The farm. Her parents. What he read when he found her as a raider attack and what it actually was: her gift coming in for the first time, uncontrolled, at twelve years old, in the way of something that answered before she knew how to ask. She has carried it alone since it happened. She tells him because he is about to stand in front of the Recorder, and she wants him to understand what it means to be witnessed — to give a true thing to someone who will keep it.
+
+He takes off the performance in return. Shows her the exhaustion underneath the glory hunting, the loneliness of performing purpose when you don't have it, the specific weight of a story he has been trying to force into a shape it kept refusing. He has been wrong about what he was looking for since he left. He could not say that plainly until now.
+
+They see each other fully, before the community sees him.
+
+What she told him is not in the archive. It was not given to the archive. It was given to him specifically, and he understands the difference. He carries it alongside everything else the tradition asks, and it is the heaviest thing he carries — heavier than Marn's face in the bunker, heavier than the second half of the old story, heavier than his own becoming. Something trusted to him by someone who trusts almost no one with it.
+
+---
+
 ### WHAT HE BRINGS HOME
 
 Not a story of glory. A story of a machine that dreamed it remembered everything, a girl who could feel the weight of truth, a young man who lost his home without moving an inch, and — most significantly — the second half of a story already in the archive.

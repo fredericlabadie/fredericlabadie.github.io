@@ -83,7 +83,11 @@ She plays in the evenings when the camp is settled and the obligations of the da
 
 She stops playing completely when she's frightened — not silence, absence, which is different. The cessation of the banjo is the clearest signal she gives that something is wrong.
 
-She has specific songs for specific situations: one she plays while working, rhythmic and low, that keeps her hands steady. One for the dead, slower, that she plays when she tells the bees or leaves graveyard dirt. One she picks under her breath in a place where something bad happened — her grandmother called it *the sweeping song*, because it's what you play to move something out. And one she has never named and plays only when she's alone, that she learned from no one and doesn't remember learning, that she has been playing since before she was old enough to know she knew it.
+She has specific songs for specific situations: one she plays while working, rhythmic and low, that keeps her hands steady. One for the dead, slower, that she plays when she tells the bees or leaves graveyard dirt. One she picks under her breath in a place where something bad happened — her grandmother called it *the sweeping song*, because it's what you play to move something out.
+
+She plays "Bible by the Bed" in her own grammar, from the child's side of a specific kind of damage, with words adjusted over years of playing until it fits the shape of what she actually carries. She plays it facing away from the others. She has never explained it. Nobody has asked twice.
+
+And then there is "Oh Death" — the fourth song, the one she plays only when she's alone. She learned it from no one and doesn't remember learning it. She has been playing it since before she was old enough to know she knew it. In her tradition, death is a neighbor, not an enemy. The song is not a lament. It is closer to a greeting. A maintenance call made from the place she has always lived, which is the membrane between the visible world and what's on the other side. She plays it quietly. She plays it facing the dark.
 
 ---
 
@@ -101,7 +105,47 @@ She does not think of herself as having a mutation. The word would mean nothing 
 
 This is not comfortable. She is permanently closer to the membrane than other people. She feels everything at a higher intensity. The whiskey for the little people, the graveyard coins, the mojo bag, the stopped at crossroads — all of it is maintenance. You tend your obligations so the invisible world doesn't pull you under. She's been managing this since she was small enough that her mother had to explain why she couldn't sit at the dinner table when her father was lying about the harvest. It has never been easy. It has also never been something she could put down.
 
-What changes on this journey is that for the first time it isn't just a burden she manages. It's a tool the world needs her to use. That is new. She doesn't know yet what to do with it.
+The gift is mostly a receiving instrument. She absorbs. Truth and falsehood arrive in her chest as physical pressure, information she didn't ask for and cannot return. This is what she knows how to do, what she has learned to manage. The gift has an outward expression too — she knows this, because she knows what the first expression was. She does not use it consciously. She does not know how. She is afraid of what she knows it can do.
+
+In moments when she needs to be a power beyond her years, it surfaces without her choosing it. She does not reach for it. It comes.
+
+What changes on this journey is that for the first time it isn't just a burden she manages. It's a tool the world needs her to use. That is new. She doesn't know yet what to do with it — until the bunker, when she crosses the room to Marn and takes his hand, and for the first time reaches for the outward expression deliberately. Uses it not to harm but to tell the truth. To bring something down honestly. Her first outward expression and her second are separated by years. Between them she has been a receiver. What she does in the bunker is the same muscle, the same reaching — but chosen, and gentle, and entirely different.
+
+---
+
+### THE PARENTS
+
+Her parents were unkind. This is not elaborated. The elaboration is in "Bible by the Bed," which she plays facing away from the others, and in the way her demeanor cracks for just a moment when someone asks about them before she comes back to the present.
+
+When Naum found her she was on the porch of the failing farm, barefoot, banjo across her knees, not crying. The family was recently dead. He read the story of it in the farm before she said a word — the signs of disruption, the timeline visible in what had been left undone. He assumed raiders. She did not correct him. She has not corrected anyone.
+
+She knows what happened. She has known since it happened. She was twelve years old and her gift was new and uncontrolled and came in for the first time in a moment of need, and the invisible world answered in a way she had not asked for and could not take back. She carries this the way she carries everything — not suppressed, not dissociated, just kept. Held privately. Tended to, in its way.
+
+She pushes it away by living in the immediate. This is why she seems confusingly cheerful about Naum's quest, genuinely delighted by Tace's catalogue, fully present with the strange small beauties of the journey. She actually is. The present moment is where she can breathe. It is also the door she keeps closed against what's behind it.
+
+The mourning comes later and is more complicated than grief for the dead. She mourns what could have been — a different set of parents, a different kind of close. She mourns that this found family she has walked into will eventually scatter, and she cannot hold it either. The grief is not for the loss of what she had. It is for the permanent impossibility of what she wanted.
+
+---
+
+### THE DOCUMENT
+
+In the federal bunker, Tace finds a classified research document and brings it to Kess. It covers a pre-Collapse CRISPR modification program conducted on isolated Appalachian communities — Hollerside Bend named among them — without the knowledge or consent of the people involved. It was akin to the Tuskegee Syphilis Study in its structure: federal researchers, isolated communities considered acceptable subjects, no disclosure, systematic monitoring of outcomes. At the time of the study, the Wyrd was theoretical — the researchers believed they were engineering sensitivity to phenomena that might exist at the edge of human perception. Many subjects died. The program was classified. The Collapse ended it.
+
+Kess reads it with uncharacteristic coldness. Not her usual presence, not the warmth she extends even to difficult things. A flat, removed quality — the present moment failing to hold what is in front of her, the only time in the story her coping mechanism doesn't work. She does not ask questions. She does not want to understand the implications. She reads it and puts it down and does not pick it up again.
+
+What the document means that she will not look at: the gift was not chosen. Not by her, not by her parents, not by anyone she knows. Someone put it into her family's bloodline without telling anyone they were doing it. The sacred inheritance she has been tending — the maintenance, the obligations, the price she paid at twelve years old — has an origin that was not sacred. Her ancestors died from it. The ones who survived, including her line, were compatible by accident of genetics.
+
+She plays "Oh Death" that night, alone, for a long time, facing the dark. She does not discuss the document again. What she does with its contents she does in private, in the way she does everything difficult — absorbed into the maintenance, carried alongside everything else, tended without being spoken.
+
+---
+
+### THE SECRET AND THE TELLING
+
+The true version of what happened to her parents she tells once, to Naum, the night before he becomes Written. He is sitting with his story, trying to decide how to tell it, and she gives him the true version of hers — not as a gift, exactly, but as evidence of what true stories cost. He takes off the performance of purpose in return. Shows her how hard the glory hunting has actually been, the exhaustion of performing certainty when you don't have it.
+
+They see each other fully, before he goes in to be witnessed by everyone.
+
+He carries what she told him for the rest of his life. It is not in the archive. It does not need to be. It was not given to the archive. It was given to him.
 
 ---
 

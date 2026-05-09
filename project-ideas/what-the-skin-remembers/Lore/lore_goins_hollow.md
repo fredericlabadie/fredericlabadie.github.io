@@ -23,6 +23,28 @@ The community knows its own letters. This was a point of pride before the Collap
 
 ---
 
+### HOW THE HOLLOW HOLDS THINGS
+
+Goins Hollow operates as a commons. This is not a policy — it is a cultural inheritance so old that nobody in the hollow thinks of it as a choice. Things circulate based on need and availability. If you have more than you need, you put it somewhere accessible. If you need something and it's there, you take it. There is no ledger, no reciprocity tracking, no debt. The community's collective survival has always depended on this, and five generations of post-Collapse life has made it more true, not less.
+
+The cache system is the most visible expression of this principle, but it runs through everything: tools are shared without asking, food is prepared in quantities meant for more than the cook, a skill you have is a skill the hollow has. What looks from outside like looseness with property is, from inside, a different accounting entirely. The relevant categories for any object are *here* and *needed*, not *mine* and *yours*. Personal ownership exists for a narrow category of things — a specific knife, a specific journal, something made by hand for a specific person. Everything else moves.
+
+Visitors sometimes find this disorienting. People from communities with harder property lines will take the commons behavior for carelessness or naivety, and will be corrected by experience. Goins Hollow knows what it has. It simply doesn't organize that knowledge around individual possession.
+
+---
+
+### WHAT THE HOLLOW DOESN'T SHOW
+
+The Scots-Irish heritage of the hollow carries something that five generations of post-Collapse life has only deepened: you do not display what you have. Not resources, not knowledge, not capability. The communities that announce themselves are the communities that get assessed and targeted and diminished. The communities that look like nothing from the outside keep what matters.
+
+Goins Hollow looks like a small settlement of farmers and woodspeople in a fold of the mountains. From outside: modest houses, modest dress, modest apparent means. From inside: the most reliable Wyrd knowledge in the region, a plant medicine practice more sophisticated than anything ARDEN's Keeper can produce, a distributed network of cached resources across a significant stretch of wilderness, and a century of accumulated practical intelligence about how to survive what the Collapse left behind.
+
+Visitors mistake competence for simplicity. This is a mistake the hollow has never bothered to correct. The people who need to know already know. The people who don't need to know don't need to.
+
+Tace carries this so completely that she doesn't know she carries it. She does not announce herself, does not explain herself, does not perform capability. She steps out of trees and begins walking. What she knows reveals itself only through what she does, and only to people paying close enough attention to see it. This is not strategy. It is the grammar of where she's from.
+
+---
+
 ### WHAT THEY KNOW
 
 The knowledge base of Goins Hollow is practical, deep, and distributed. No single person carries all of it — it lives in the community collectively, which is by design.

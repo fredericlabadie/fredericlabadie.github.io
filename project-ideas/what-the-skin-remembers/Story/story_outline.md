@@ -23,9 +23,9 @@ Naum leaves wearing his best.
 
 The Anabasis feeling begins immediately. An overpass consumed by forest, its concrete legs still standing in the tree line like ruins of a temple no one built for worship. A valley where something enormous once was — the footings still visible, the purpose illegible. Naum moves through this without grief. It is simply the world.
 
-He finds Kess on a failing farm at the edge of the high country. The family is recently dead — the farm tells the story before she does. She is sitting on the porch, barefoot, a gourd banjo across her knees, and she is not crying. She is waiting, in the way of someone who doesn't yet know what they're waiting for.
+He finds Kess on a failing farm at the edge of the high country. The family is recently dead — the farm tells the story before she does. Signs of disruption, the timeline visible in what has been left undone. She is sitting on the porch, barefoot, a gourd banjo across her knees, and she is not crying. She is waiting, in the way of someone who doesn't yet know what they're waiting for.
 
-Naum offers her a place in his traveling party before he has fully thought through what this means. She accepts before he finishes the sentence.
+Naum reads the farm as a raider attack. He does not press her. She does not correct him. She accepts his offer to travel before he finishes the sentence — not because she needs rescuing, but because he is the thing that came next and she has been waiting for what would come next.
 
 They set out. He is carrying a story about what kind of journey this is. She already knows it's a different one.
 
@@ -94,11 +94,19 @@ Naum, watching all of this, has begun to suspect that the story he came out to f
 ### Chapter 7 — The Pivot
 *Naum understands he's been wrong about what kind of story this is.*
 
-A night scene. Fire, downtime, everyone quiet in their own way. Naum has been quietly constructing a narrative in which the glory is helping Marn complete his mission — the tribesman who guides the scholar to the lost knowledge, who makes the retrieval possible. A good story. A story about doing something.
+Late afternoon on the ninth day, above a settlement called Corbin Branch: something large is standing at the edge of the promontory. Winged. Human silhouette, wrong proportions, red eyes visible at distance in fading light. Tace stops. Naum stops. Marn opens his mouth.
 
-Something said or unsaid around the fire dismantles it. Maybe Kess simply turns to look at him at the wrong moment, and her expression is the expression of someone who has known for several days that he's been wrong about something.
+Kess had already stopped. She was already watching it.
 
-He doesn't say anything. He goes quiet in the way he does when something has genuinely landed. Tace notes the silence.
+The Harbinger looks at her. She looks at it. Seven seconds of some kind of accounting that has nothing to do with the rest of them. Then it lifts — no sound — and is gone into the northern treeline.
+
+Kess says only: *it was saying goodbye.* She won't say what it was saying goodbye to. She walks on.
+
+That evening, around the fire, Naum has been quietly constructing the story he'll bring back: the tribesman who guides the scholar to the lost knowledge, who makes the retrieval possible. A supporting role, but a noble one. A story about doing something that mattered.
+
+Kess has been watching him construct it. She doesn't say much — she rarely does about things she's already seen the shape of. But something she says in a low, unguarded moment lands: the observation is gentle and it is not meant to wound, which is precisely why it does. He's been writing himself as the person who gets someone else to the end of someone else's story. If Marn walks out of the bunker with what he came for, whose biography is this?
+
+He doesn't say anything. He goes quiet in the way he does when something has genuinely landed. Tace notes the silence in one word and closes the entry.
 
 He doesn't know yet what the true story is. But he stops expecting it to be the one he planned.
 
@@ -120,15 +128,25 @@ Kess stands in the entrance for a long moment before following. Her chest is ful
 ---
 
 ### Chapter 9 — What the Archive Kept
-*Two discoveries. One breaks everything.*
+*Three discoveries. One breaks everything. One completes something. One changes what the world is.*
 
-Marn finds the document. It is exactly where the True Keeper said it would be. He opens it with hands that are not quite steady.
+Marn finds the document. It is exactly where the Keeper said it would be. He opens it with hands that are not quite steady.
 
 The document contains what he was sent to retrieve — and something else. A gap. A section of the founding narrative that doesn't match the machine's records because the machine, five generations ago, confabulated it. The truth and the error are both in the document, and the document is older than the machine's account of it. The machine invented the part it didn't know.
 
 Across the room, Naum has found something else entirely: a document he recognizes. Not its content — its shape. He has heard the beginning of this story in the longhouse since he was a child. This is the second half. The record of what happened *after* — the consequences that were never recorded because the person who lived them never came home.
 
 He holds it and understands, for the first time, what a true story actually is. Events without their consequences are incomplete truths. Someone had to walk far enough to find the other half.
+
+In a third section of the archive, Tace finds something she was not looking for. A classified federal research document — filed under a heading that conceals what it is — covering a CRISPR modification program conducted on isolated Appalachian communities without disclosure or consent, akin to the Tuskegee Syphilis Study. The program was active before the Collapse. At that time, what the researchers were working toward was theoretical: the engineering of human sensitivity to phenomena at the edge of the observable world. Many subjects died. The surviving lineages carry the modification. The program was never made public. The Collapse ended it before any results were formally recorded.
+
+The document names communities. One of the names is Hollerside Bend.
+
+Tace reads it twice. Then she crosses the room and shows it to Kess.
+
+This is why the Keeper has no category for the Wyrd — not only because it inherited a public-facing scientific consensus that dismissed the Wyrd as folklore, but because the truth was classified. The researchers knew. They kept it out of the public record. The cover story went into the training data. The Keeper has been faithfully reproducing the cover story for five generations.
+
+The Wyrd is not a post-Collapse mutation. It is not folklore. It is ancient, real, and present. What the experiment created was not the Wyrd but the people who could perceive it. The frequency was always broadcasting. Someone engineered the receivers.
 
 ---
 
@@ -158,13 +176,32 @@ Tace is watching. She writes a single sentence in the journal and does not show 
 
 They don't talk much on the way down. The silence has different textures for each of them.
 
-Marn moves through it carefully, like someone relearning how to walk. He eats when Tace puts food in front of him. He checks Kess's feet without being asked and treats the worst of it without comment. The healer in him functions even when the rest of him doesn't. He is, practically speaking, still useful. He doesn't know what to do with this.
+On the second day of descent they pass through Corbin Branch. The settlement the Harbinger was watching eleven days ago is gone — not raided, not burned, but passed through by something the Wyrd sent in numbers. The kind of damage that leaves wound places behind. Marn stands at the edge of it for two minutes and says nothing. He is matching it against a Keeper behavioral profile and finding nothing that fits. Nobody speaks to him about this. The others wait.
 
-Naum carries two documents. One for the Recorder. One for himself — the weight of Marn's crisis, which he witnessed and which is now part of him, which is what the tradition actually meant when it asked him to bring back something true.
+Kess walks through without looking. She said her goodbye eleven days ago. She knew. None of them said anything to the people at Corbin Branch. They didn't know then what the goodbye meant. That's a weight Naum adds to what he's carrying down the mountain, and he doesn't put it down.
+
+Marn moves through the rest of the descent carefully, like someone relearning how to walk. He eats when Tace puts food in front of him. He checks Kess's feet without being asked and treats the worst of it without comment. The healer in him functions even when the rest of him doesn't. He is, practically speaking, still useful. He doesn't know what to do with this.
+
+Naum carries two documents. One for the Recorder. One for himself — the weight of Marn's crisis, which he witnessed and which is now part of him, which is what the tradition actually meant when it asked him to bring back something true. And the weight of Corbin Branch, which is a different kind of thing: something he couldn't have prevented and can't undo and will carry anyway.
 
 Kess walks barefoot as always. She already knows how this ends.
 
-Tace leaves a cache note in a hollow tree on a known hunting route: *Going to be later than expected. Tell Callum the Not Deer are ranging north. I'm fine.*
+Tace leaves a cache note in a hollow tree on a known hunting route: *Going to be later than expected. Tell Callum the nã-veado are ranging north. I'm fine.*
+
+---
+
+### Chapter 11b — Before the Longhouse
+*The night before. Two true stories.*
+
+The sidekick realization happened at a fire nine days ago. Since then he has been carrying the absence of the story he planned, waiting for the shape of the true one to become clear. The bunker gave him pieces. The road back gave him more. He knows what he has. He doesn't yet know how to hold it so it carries everything it was.
+
+Kess sits with him. She gives him the true version of hers — not as a gift, but as evidence of what true stories cost. The family. The farm. What Naum read as a raider attack. What it actually was: the first expression of a gift she didn't choose, at twelve years old, coming in before she knew what she carried. She has never told anyone. She tells him because he is about to stand in front of the Recorder — to give something to the communal record and have it entered into another person's skin — and she wants him to understand what that costs. What it means to give a thing away so that it can be kept.
+
+He takes off the performance in return. Not the sidekick realization — that was already gone. What he shows her now is what was underneath: the loneliness of performing purpose when you don't have it, the specific exhaustion of carrying a shape that kept refusing to be filled. The story he left expecting would have made him impressive. The story he has will make him known. He does not yet know which of those he would have chosen, if he could have chosen.
+
+They see each other fully, in the dark, before he goes in to be witnessed by everyone.
+
+What she told him does not go into the archive. It was not given to the archive. It was given to him. He carries it alongside everything else the tradition asks of him, and the weight is different — heavier in the way of something chosen, something trusted to him specifically. He will carry it for the rest of his life.
 
 ---
 
@@ -189,11 +226,21 @@ Naum is a man. He doesn't feel what he expected. He feels something quieter and 
 
 ## CODA
 
-Marn stands in the doorway of the longhouse. He watches the needle work. He has not decided whether he is staying. The decision is not about logistics. It is about whether the person built by the True Keeper's knowledge is someone he wants to remain.
+Marn stands in the doorway of the longhouse. He watches the needle work. At some point in the watching, the calculation finishes. The others are not saying it — Kess, who knew first; Naum, who figured it out on the road down and chose silence; Tace, who closed the journal entry without annotation. They have been protecting him without coordinating it, leaving him the one intact thing: the feeling of having been chosen.
+
+He says it himself. Quietly. The way he reads an injury assessment. He names the Keeper's calculation and owns it — not as a wound but as information he now has that the Keeper never will. He survived. The Keeper's model is closed. It cannot receive this outcome.
+
+There is a beat where nobody says anything. He lets them not say anything. That's enough.
+
+Whether he stays is a decision still being made. It is not about logistics. It is about whether the person ARDEN built is someone he wants to remain.
 
 Kess sits against the outside wall, her gourd banjo across her knees. She already knows what he decides. She is the only one who does.
 
-Tace is in the yard, crouching over something in the dirt — a track, a mark, something that requires closer examination. Her pencil moves. The journal is open. She does not look up.
+Tace is in the yard, crouching over something in the dirt. Her pencil moves. The journal is open to a heading she has been holding open for years — *Is the Wyrd increasing, or only becoming more visible? The distinction matters enormously and the data does not settle it.* She is writing. She has the bunker document in her pack and Kess in her peripheral vision and five years of catalogue behind her and she is, for the first time, close to an answer.
+
+The answer is: both, and neither, and the question was wrong to begin with. The Wyrd is not increasing. It is not only becoming more visible. The receivers are multiplying — the modification spreading through intermarriage, generation by generation, the experiment still running with no one in charge of it. More people can perceive the Wyrd. Whether that changes the Wyrd itself she does not know yet. She holds the heading open. She will be back.
+
+She does not look up.
 
 The archive has a new entry.
 
