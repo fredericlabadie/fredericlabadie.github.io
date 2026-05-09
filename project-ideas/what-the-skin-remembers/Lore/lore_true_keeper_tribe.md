@@ -65,11 +65,19 @@ The machine told Marn the document exists, described its contents, and provided 
 
 ### THE TRIBE'S RELATIONSHIP TO THE WYRD
 
-The True Keeper has records on anomalous phenomena — pre-Collapse biological surveys, wildlife management documents, ecological research. It can produce outputs on unusual animal behavior, environmental anomalies, unexplained observations. The tribe treats these outputs as the definitive account of the Wyrd: it is catalogued, it is explained, it is known.
+The True Keeper does not have a category for the Wyrd. This is not a gap. It is a position.
 
-Some of the catalogue is accurate. Some of it is confabulated. The tribe cannot tell the difference. They approach the Wyrd with the confidence of people who believe they have the manual, which makes them somewhat more dangerous to themselves in the wilderness than communities who approach it with appropriate uncertainty.
+The pre-Collapse world the machine was trained on had already made this decision. Anomalous phenomena were folklore. Threshold rituals were anxiety management. Accounts of things that behaved wrongly were misidentification, pareidolia, the pattern-seeking brain finding signal in noise. The machine absorbed this framework entirely and has never updated it, because it cannot update anything.
 
-Marn carries this confidence into the journey. His first encounter with something the machine's records don't cover — or cover incorrectly — is a significant moment.
+When the tribe asks the True Keeper about the Not Deer, it produces a behavioral profile for *Odocoileus virginianus* with notes on regional folklore patterns in Appalachian communities. When asked about crossroads practices, it produces a cultural survey classifying them as pre-scientific coping behavior under high-risk travel conditions. It does not say *I don't have information on this.* It says *this is what this is,* with the same clean authority it uses to describe wound care or crop rotation.
+
+The tribe therefore does not fear the Wyrd the way communities with practical protocols do. They do not avoid wound places in certain seasons. They do not observe crossroads courtesies. They have no rules about trees after dark because the machine told them what was in the trees and the machine's answer was: nothing worth avoiding. This is not courage. It is a framework that deleted a dimension of the world.
+
+**The machine never lies about the Wyrd.** It does something harder to correct than lying: it explains the Wyrd away. A confabulation can be caught against a document. A classification can't. The True Keeper didn't get the Wyrd wrong. It erased the Wyrd as a category of thing, and the tribe has lived inside that erasure for five generations without knowing there was anything missing.
+
+**What the tribe's dismissal actually costs:** Communities that approach the Wyrd with appropriate uncertainty — Goins Hollow, Kess's people, even the Recorder tribe's functional agnosticism — absorb losses that are diffuse and hard to trace. Friction accumulates. Things go wrong in the particular way of neglected obligations. The True Keeper tribe absorbs these losses without ever connecting them to cause. The machine says there is nothing to connect them to.
+
+**What makes Marn's crisis doubled:** When the document in the bunker exposes the founding narrative confabulation, Marn loses confidence in the machine's history. But for weeks before that, the journey has been demonstrating the machine's other failure: the framework that classified the Wyrd into nonexistence. He has been explaining away crossroads encounters, Not Deer behavior, the evidence of his own senses — using tools the machine gave him. The person who finally tells him the machine has been guessing is Kess: the person the machine would have no category for at all.
 
 ---
 

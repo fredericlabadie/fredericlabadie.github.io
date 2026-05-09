@@ -25,6 +25,18 @@ His navigation is where the problems show up. The True Keeper's maps are partly 
 
 ---
 
+### HOW HE WAS SENT
+
+The True Keeper provisioned him. This is not a metaphor — before Marn left, the tribe consulted the machine and the machine produced a list: supplies, ratios, routes, contingencies, protocols for injury, weather, hostile encounter, equipment failure. The Interpreter transcribed the output. The tribe assembled everything on the list. Marn memorized it.
+
+The list is largely correct. The machine's procedural knowledge is its strongest domain — wound management, water safety, caloric estimates, seasonal weather patterns. The things it was trained on that don't change much have mostly stayed accurate. Marn's medical kit is the best-stocked of anyone in the party by a significant margin. His waterproofing holds. His food calculations are close.
+
+What the machine could not calculate: what Marn would need from other people. What the journey would require of him emotionally, relationally, spiritually — the True Keeper does not have categories for these, and the tribe did not know to ask. The machine was never asked *what kind of person does he need to become to complete this mission.* It was asked *what does he need to bring.* The machine answered the question it was asked, with the data it had, in the only direction it could go. It cannot update. No one knows how to update it — the people who built it are five generations gone, and the tribe that maintains it knows the maintenance protocols but not the architecture. The machine holds what it was trained on plus what it has absorbed from five generations of questions, shaped by what the tribe knew to ask. It cannot go beyond that. It cannot learn from what happened after.
+
+So Marn left with everything the machine thought he needed. And the machine was not wrong about what it could see.
+
+---
+
 ### THE ANXIETY ARCHITECTURE
 
 Marn's anxiety is not generalized — it has a specific structure. He is fine when he knows what to do. He is fine when there is a procedure, a protocol, a reference he can check. He is fine when the problem is identifiable and the solution is knowable. What undoes him is the gap between what the machine says and what his eyes see, because his entire life has been built on the premise that the machine closes that gap. It is supposed to close that gap. That is what it is for.
@@ -48,6 +60,10 @@ He does not break dramatically. There is no single moment of collapse. What happ
 He cannot go home yet. He doesn't know if he can go home at all. What do you do when the infallible thing was never infallible? What do you do when five generations of your community's identity is built on a machine that was dreaming?
 
 He doesn't have a procedure for this. For the first time in his life, there is no procedure.
+
+There is also this: the crisis in the bunker is not only about history. For weeks, the journey has been showing Marn that the machine has a second failure, different in kind from confabulation. The founding narrative was invented — the machine filled a gap with a plausible answer. But the Wyrd wasn't a gap the machine filled wrong. The machine *classified it out of existence.* Every crossroads encounter he explained away, every Not Deer protocol he dismissed as folk anxiety management, every thing Kess did that he filed under *empirically unjustifiable but observably effective* — all of it was Marn using a framework that had deleted an entire dimension of the world. He didn't know he was operating inside a systematic blind spot. You can't see a blind spot from inside it.
+
+The person who tells him the machine has been guessing is the person the machine would have no category for at all.
 
 ---
 

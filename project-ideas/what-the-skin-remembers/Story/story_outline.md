@@ -66,6 +66,8 @@ They encounter Marn on a shared trail — or he encounters them, which is a diff
 
 His mission: retrieve a document from a sealed federal installation in the high country that will confirm his tribe's founding narrative. He has the True Keeper's directions to the location. The directions are slightly wrong in ways he has already explained to himself.
 
+He was sent out fully equipped. The True Keeper calculated what he would need — supplies, routes, contingencies, protocols for every foreseeable situation. The calculation was meticulous. The list was comprehensive. Most of it is exactly right for the journey the machine could model: the medical kit, the food ratios, the waterproofing. Some of it is calibrated for a world that no longer exists quite the way the machine believes it does. Marn has explanations for the gaps. He is good at explanations.
+
 He and Naum do not trust each other. The Recorder tribe and the True Keeper tribe have a history of mutual condescension running in both directions. They have the same destination. They travel together.
 
 Kess says nothing about Marn at first. She is listening to something the others can't hear.
@@ -80,6 +82,8 @@ The four travel. Marn's navigation is off by a margin he keeps adjusting. He has
 Tace asks him a question about a plant he identified incorrectly, in the way of someone genuinely curious about where the error came from. It lands badly. They spend two days in productive hostility before realizing they are both empiricists running on incompatible data sets.
 
 A Not Deer encounter in the pre-dawn: Marn has a procedure. The procedure is wrong. Kess does what she does — places something, speaks something under her breath, turns her back to the tree line in a way that communicates without communicating. The thing loses interest and goes. Marn puts it in his journal under a heading he doesn't close.
+
+His private explanation for all of it: external variables. The True Keeper gave him an accurate model; Naum and Kess are inputs the machine couldn't have anticipated. The equation was right. The variables changed. This is not the same as the machine being wrong. He believes this. He keeps believing it past the point where he finds it easy to believe.
 
 Tace writes: *The child is not adjacent to the Wyrd. She is of it. Require further observation.*
 
@@ -136,6 +140,10 @@ Kess crosses the room to where Marn is standing. She doesn't say anything for a 
 *"It's been guessing. For a long time."*
 
 He goes quiet. Not the quiet of gathering himself. The quiet of someone from whom something structural has been removed — the certainty he has been building his identity around, gone, and now he has to find out what's underneath. He doesn't know what's underneath. That is the actual terror.
+
+What lands, in the silence, is not just the founding narrative. It is everything that came before the bunker. The external variables defense collapses here too. Naum and Kess weren't anomalies the machine couldn't predict — they are evidence that the machine cannot predict what a person needs in an open world, because it only holds the world it was trained on. The machine sent him out equipped for a journey it could model. The journey it could model was not this one. There is no version of the calculation that would have gotten him here correctly, because the machine cannot update. It cannot learn from what happened after. It has been answering the tribe's questions with the same frozen data for five generations, shaped only by the questions they knew to ask, unable to know what it doesn't know.
+
+He was not failed by bad inputs. He was failed by a closed system trying to predict an open world.
 
 He does not break dramatically. He depressurizes.
 
