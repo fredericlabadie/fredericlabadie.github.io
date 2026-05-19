@@ -39,6 +39,7 @@
       <ul class="nav-links" id="primary-nav">
         <li><a href="../">Home</a></li>
         <li><a href="../work/">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
         <li><a href="../about/" aria-current="page">About</a></li>
         <li><a href="../contact/">Contact</a></li>
       </ul>
@@ -318,98 +319,10 @@
       </div>
     </section>
 
-    <!-- QUESTIONS I'M CHASING — open-notebook style -->
-    <section id="questions" class="alt">
-      <div class="section-head">
-        <div class="num">05</div>
-        <div class="label">Open notebook</div>
-        <div class="title">Questions I'm chasing &middot; working notes</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Open notebook</p>
-          <h2 class="section-heading">Questions I'm currently chasing.</h2>
-          <p class="section-sub">A working notebook of problems I'm thinking through. Not finished arguments &mdash; drafts, working theories, open questions. If any of these resonate, <a href="../contact/">get in touch</a>.</p>
-
-          <div class="post-feed">
-            <article class="post-entry" id="q-qualitative-replaces-quantitative">
-              <p class="post-meta">
-                <time datetime="2026-04-04">Posted 4 Apr 2026</time>
-                <span class="post-tags">Methodology &middot; Sense-Making</span>
-              </p>
-              <h3 class="post-title">
-                <a href="#q-qualitative-replaces-quantitative">Where does qualitative methodology <em>replace</em> quantitative instrumentation, not just supplement it?</a>
-              </h3>
-              <div class="post-body">
-                <p>The standard order is "instrument first, qualitative for the why". Cases like the shadow-IT discovery suggest the order sometimes inverts &mdash; observation first, instrumentation last. What's the rule for which way around it should go?</p>
-                <p><strong>Working theory:</strong> the order inverts when the workflow is <em>unauthorised</em>, because instrumentation only sees what the system was designed to surface and never the workarounds users build on top. Quantitative discovery would only show the gap as silence.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-ai-gate-structure">
-              <p class="post-meta">
-                <time datetime="2026-04-18">Posted 18 Apr 2026</time>
-                <span class="post-tags">AI-assisted workflows &middot; Alert design</span>
-              </p>
-              <h3 class="post-title">
-                <a href="#q-ai-gate-structure">What's the right gate-structure for AI-assisted analytics workflows when human judgement is the bottleneck, not the model?</a>
-              </h3>
-              <div class="post-body">
-                <p>The V1 alert-triage system caught a critical issue humans had missed and still kept the human as the actor. V2 needs the same logic in a different shape. Where do the gates go when the AI is good enough that suppression becomes the harder design problem?</p>
-                <p><strong>Working theory:</strong> the interesting design moves <em>up</em> the stack &mdash; taxonomy, schema, what counts as "the same error" &mdash; not down into the model. The model is fine. The thing that needs design attention is the data layer the model is reading from.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-ab-tests-die-before-shipping">
-              <p class="post-meta">
-                <time datetime="2026-05-01">Posted 1 May 2026</time>
-                <span class="post-tags">A/B testing &middot; Pre-mortems</span>
-              </p>
-              <h3 class="post-title">
-                <a href="#q-ab-tests-die-before-shipping">Why do most A/B tests die before they ship?</a>
-              </h3>
-              <div class="post-body">
-                <p>Working hypothesis: the question wasn't worth the test, and the cost of figuring that out post-spec is what kills the rollout. What's the upstream instrumentation that would have surfaced "not worth testing" <em>before</em> the spec was written?</p>
-                <p>Most test kills look like budget kills or scope kills, but those are downstream symptoms. The actual kill is a discovery gap. The instrumentation question is whether you can measure your way to "this isn't worth testing" without running the test.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-deliberate-omission">
-              <p class="post-meta">
-                <time datetime="2026-05-06">Posted 6 May 2026</time>
-                <span class="post-tags">Schema design &middot; Behavioural signals</span>
-              </p>
-              <h3 class="post-title">
-                <a href="#q-deliberate-omission">How do you instrument for <em>deliberate omission</em> &mdash; a step the user actively skipped?</a>
-              </h3>
-              <div class="post-body">
-                <p>An expected event that doesn't fire reads as silence by default. The skip itself disappears into the gap. What's the schema-level move that makes "the user chose not to do this" a first-class signal rather than an absence?</p>
-                <p><strong>Suspect:</strong> the answer lives in the <em>surrounding context</em> &mdash; dwell time on the option, hover, back-out pattern, sequence of competing actions &mdash; not the missing event itself. The omission becomes visible as a positive signal once you instrument the choices made around it.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-analytics-shadow-it">
-              <p class="post-meta">
-                <time datetime="2026-05-15">Posted 15 May 2026</time>
-                <span class="post-tags">Practitioner observation &middot; Discovery</span>
-              </p>
-              <h3 class="post-title">
-                <a href="#q-analytics-shadow-it">What's the analytics function's own shadow IT?</a>
-              </h3>
-              <div class="post-body">
-                <p>If shadow IT in product teams is a signal that the designed system doesn't support a real workflow, where does the same pattern live <em>inside</em> the analytics function &mdash; the spreadsheets, the manual pulls, the workarounds practitioners build because the official measurement layer doesn't cover the question?</p>
-                <p>Suspect the answer is uncomfortably close to "everywhere." Open question: what would it mean to instrument the analytics function for its own gaps the way we instrument products for theirs?</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-head">
-        <div class="num">06</div>
+        <div class="num">05</div>
         <div class="label">Contact</div>
         <div class="title">Open to senior roles &middot; Amsterdam</div>
       </div>

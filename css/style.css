@@ -1399,6 +1399,16 @@ section.alt { background: var(--c-bg-alt); }
 .post-body strong { font-weight: 600; color: var(--c-primary); }
 .post-body em { font-style: italic; }
 
+.post-feed-footer {
+  margin: 36px 0 0;
+  padding-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--c-ink-soft);
+  max-width: 760px;
+}
+
 @media (max-width: 720px) {
   .post-entry { padding: 28px 0; }
   .post-entry:target { padding-left: 14px; margin-left: -14px; }
