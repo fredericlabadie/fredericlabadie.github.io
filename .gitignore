@@ -3,3 +3,7 @@ Thumbs.db
 *.env
 node_modules/
 .claude/
+
+# Working files & source material — not for publication
+_drafts/
+

@@ -8,7 +8,6 @@ if (toggle && navLinks) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 
-  // Close mobile nav on link click
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -17,23 +16,23 @@ if (toggle && navLinks) {
   });
 }
 
-// Highlight active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-links a[href^="#"]');
+// Active-section highlight in nav
+const sections = document.querySelectorAll('main section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+const anchorMap = new Map();
+navAnchors.forEach(a => anchorMap.set(a.getAttribute('href').slice(1), a));
 
-if (sections.length && links.length) {
+if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(link => {
-          link.classList.toggle(
-            'active',
-            link.getAttribute('href') === '#' + entry.target.id
-          );
-        });
-      }
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      // Only sections that have a matching nav anchor
+      if (!anchorMap.has(id)) return;
+      navAnchors.forEach(a => a.classList.remove('active'));
+      anchorMap.get(id).classList.add('active');
     });
-  }, { rootMargin: '-40% 0px -55% 0px' });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
 
-  sections.forEach(s => observer.observe(s));
+  sections.forEach(section => observer.observe(section));
 }
