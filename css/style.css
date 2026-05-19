@@ -217,7 +217,6 @@ section.alt { background: var(--c-bg-alt); }
   line-height: 1.06;
   letter-spacing: -0.022em;
   color: var(--c-ink);
-  max-width: 22ch;
   margin-bottom: 16px;
 }
 .section-sub {
@@ -258,11 +257,25 @@ section.alt { background: var(--c-bg-alt); }
   letter-spacing: -0.028em;
   color: var(--c-ink);
   margin-bottom: 36px;
-  max-width: 18ch;
 }
 .hero h1 em {
   font-style: italic;
   color: var(--c-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--c-accent);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
+.hero h1 em.say {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--c-primary);
+  text-decoration: none;
+}
+.hero h1 em.do {
+  font-style: normal;
+  font-weight: inherit;
+  color: var(--c-ink);
   text-decoration: underline;
   text-decoration-color: var(--c-accent);
   text-decoration-thickness: 0.06em;
@@ -434,7 +447,6 @@ section.alt { background: var(--c-bg-alt); }
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--c-ink);
-  max-width: 22ch;
   margin-bottom: 12px;
 }
 .case-subtitle {
@@ -766,8 +778,13 @@ section.alt { background: var(--c-bg-alt); }
   grid-template-columns: 280px 1fr;
 }
 .about-grid {
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 300px;
   align-items: start;
+}
+.about-grid > aside {
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+  align-self: start;
 }
 .portrait {
   margin: 0;
@@ -1208,7 +1225,6 @@ section.alt { background: var(--c-bg-alt); }
   letter-spacing: -0.028em;
   color: var(--c-ink);
   margin: 0 0 24px;
-  max-width: 18ch;
 }
 .page-intro h1 em {
   font-style: italic;
@@ -1304,7 +1320,7 @@ section.alt { background: var(--c-bg-alt); }
   .project-grid { grid-template-columns: 1fr 1fr; }
   .case-toc { grid-template-columns: 1fr; }
   .about-portrait-grid { grid-template-columns: 220px 1fr; gap: 32px; }
-  .about-grid { grid-template-columns: 1fr 220px; gap: 32px; }
+  .about-grid { grid-template-columns: 1fr 240px; gap: 32px; }
   .flow { grid-template-columns: 1fr 1fr; }
   .card-row-3 { grid-template-columns: 1fr; }
   .dash-mock-kpis { grid-template-columns: 1fr 1fr; }
@@ -1718,6 +1734,10 @@ section.alt { background: var(--c-bg-alt); }
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .about-grid > aside {
+    position: static;
+    top: auto;
   }
   .principles .principle:nth-child(2),
   .principles .principle:nth-child(3) {
