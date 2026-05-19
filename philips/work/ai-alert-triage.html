@@ -70,8 +70,38 @@
             </div>
           </div>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A production AI alert-triage system compressed <strong>230 raw alerts to 39 posts (83% reduction)</strong> across a two-week run on real on-call volume (13&ndash;26 April 2026) &mdash; and surfaced <strong>one critical feature failure the human-only review had missed</strong>. That signal would have continued silently otherwise. The architecture: AI surfaces and ranks; the human still diagnoses and acts. V2 build in progress.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
-            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume. V2 build in progress.
+            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A noisy alert channel at a major QSR's analytics stack: roughly 230 alerts per fortnight from production and staging monitors, with a known failure mode &mdash; a prior critical checkout regression had <strong>gone unactioned</strong> because technical percentages obscured the signal. The on-call team needed the signal to be readable, not just present.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Design an AI-assisted triage pipeline that <em>compresses the noise</em> without removing the human gate. The brief: surface what matters, suppress what doesn't, escalate when a suppressed signal worsens &mdash; and never delegate the diagnose-and-act decision to a model.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">A four-step pipeline (detail in the flow below) running hourly: suppress known issues, pull / dedupe / pre-screen, fetch 7-day trend + error breakdown from Amplitude, gate &middot; group &middot; post. Two explicit gates around the AI: the system <strong>surfaces and ranks</strong> &mdash; it does not diagnose or decide. The plain-English summary exists because the previous critical checkout regression went unactioned when technical percentages obscured the signal. The escalation override exists specifically to prevent suppression logic from <strong>silencing a worsening issue</strong> with its own earlier post.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">V1 ran 13&ndash;26 April 2026 on real on-call volume. <strong>230 raw alerts compressed to 39 AI-posted findings (83% reduction)</strong>. Hourly alert-to-action cycle versus the previous multi-hour manual review. Most consequentially: the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; the signal that justifies the design. V2 build in progress.</div>
+            </div>
           </div>
 
           <div class="flow">
@@ -97,17 +127,6 @@
             </div>
           </div>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Where human judgement is preserved</div>
-              <div class="card-body">The system surfaces and ranks &mdash; it does not diagnose or decide. The plain-English summary exists because a previous critical checkout regression <strong>went unactioned because technical percentages obscured the signal.</strong> The human still acts. The AI makes the signal readable.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">What cognitive surrender would look like</div>
-              <div class="card-body">Auto-resolve, auto-assign, auto-deprioritise without a human gate. The escalation override exists specifically to prevent the suppression logic from becoming a way to <strong>silence a worsening issue</strong> with its own earlier post.</div>
-            </div>
-          </div>
-
           <div class="metrics">
             <div class="metric">
               <div class="metric-value">230 &rarr; 39</div>
@@ -120,14 +139,6 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Critical issues silenceable by their own prior suppression</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">Within the two-week run, the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; a signal that would have continued silently otherwise. That single catch is the case for the design: the AI made a signal readable that human review had filtered out as noise, and the human still made the call to act. V2 build in progress.</div>
             </div>
           </div>
 

@@ -181,8 +181,38 @@
           <h3 class="case-title">A workaround broke. The transaction data confessed.</h3>
           <p class="case-subtitle">Quantitative signal &rarr; observation &rarr; Sense-Making questioning &rarr; product capability that shipped.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">The client built and deployed a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with automatic part filtering, inventory integration, and a dedicated assembly service tier built around it. The capability did not start as a feature request; it started inside an unrelated lifecycle-marketing build, with a transactional anomaly nobody had asked about, and a Sense-Making conversation with floor staff. <a href="/philips/work/shadow-it.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument amber">
             The role asks for someone who helps teams <strong>define the right questions</strong>. Most analytics practitioners skip this step and instrument based on assumed questions. Sense-Making is the structured approach to not doing that &mdash; and it's the approach that surfaces what the data alone cannot.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">Building customer lifecycle segments for post-purchase marketing. An odd pattern: a meaningful cohort returning shortly after purchase to buy additional components. <strong>Nobody asked for the investigation.</strong> The anomaly surfaced while building something else.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Turn the anomaly into a diagnosed root cause without overstepping the analyst's remit &mdash; surfacing the diagnosis from the people who held it (floor staff) and routing it to the team that could act on it (CX / Product), without formal authority over either.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Four steps (detail in the flow below). Quantitative signal &rarr; observation on the floor &rarr; SMM-structured neutral questioning with staff &rarr; diagnosis named by the people who held it. The instrumentation response followed from the diagnosis, not the other way around. Presented to the CX team across stakeholders without formal authority over product.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">A <strong>shadow IT tool</strong> staff had built to handle part-compatibility decisions had stopped working &mdash; the designed system never supported compatibility guidance. The gap was resourced and addressed: the client built and deployed a full <strong>compatibility-checking configurator</strong>, now central to the business. Root cause confirmed by the product that shipped.</div>
+            </div>
           </div>
 
           <div class="flow">
@@ -242,8 +272,38 @@
           <h3 class="case-title">From "what should we measure?" to 30+ shipped tickets.</h3>
           <p class="case-subtitle">Greenfield mobile UX-telemetry layer across iOS and Android &mdash; spec to production, with cross-platform parity and consent built in.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A brand-new mobile app shipped to production with a full UX-telemetry layer underneath it &mdash; <strong>30+ tickets authored, owned, and deployed</strong> across iOS and Android, cross-platform schema parity audited and closed, GA4 e-commerce taxonomy live, and TrustArc + OneTrust consent management integrated before launch. The dashboards that now run on it work because this layer does. <a href="/philips/work/sslp-mobile.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument">
             The role asks for someone who can <strong>translate questions into concrete event definitions, tracking plans, and implementation requirements</strong>. This case is the full arc of doing exactly that, on a brand-new mobile app with zero prior instrumentation. The deliverable wasn't a dashboard &mdash; it was the analytics layer the dashboards run on.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">Brand-new mobile app from scratch. <strong>Zero prior instrumentation</strong> &mdash; no taxonomy, no schema, no SDK integration, no production deployment story. Downstream marketing, product, and compliance work all depended on it being right the first time.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Stand up the full mobile UX-telemetry layer end to end across iOS and Android &mdash; spec to production &mdash; with <strong>cross-platform parity</strong> audited explicitly and <strong>consent management built in from the start</strong> (state-regulated context: TrustArc + OneTrust, no after-the-fact bolting).</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Designed and shipped the GA4 e-commerce taxonomy, screen-view coverage, interaction telemetry, and a governance layer around it (DebugView for real-time validation, real-device testing iOS + Android, regression QA per sprint, privacy-compliance review before any PII-adjacent property was specced, data-governance sign-off). Same engagement-family also surfaced cross-platform parity gaps and an SDK-level iOS undercount root-caused to a Segment SDK gate. Detail in the three- and two-card breakdowns below.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>30+ Jira tickets authored, owned, and shipped to production.</strong> Cross-platform schema parity across iOS, Android, and web &mdash; audited and ticketed where gaps existed. TrustArc + OneTrust consent management integrated with tag configuration in production. The mobile app launched with a UX-telemetry foundation the analytics team could trust on day one.</div>
+            </div>
           </div>
 
           <div class="card-row card-row-3">
@@ -305,8 +365,38 @@
           <h3 class="case-title">Designing AI workflows that don't outsource the thinking.</h3>
           <p class="case-subtitle">A production alert-triage system on Claude API + Amplitude, with explicit decisions about where the AI assists and where human judgement is preserved.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A production AI alert-triage system compressed <strong>230 raw alerts to 39 posts (83% reduction)</strong> across a two-week run on real on-call volume (13&ndash;26 April 2026) &mdash; and surfaced <strong>one critical feature failure the human-only review had missed</strong>. AI surfaces and ranks; the human still diagnoses and acts. V2 build in progress. <a href="/philips/work/ai-alert-triage.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument">
-            The role asks for <strong>AI-enabled telemetry use cases</strong>. The interesting design problem in AI-assisted analytics isn't the model &mdash; it's the <em>gates</em>. A workflow that delegates diagnosis to AI removes the human judgement step that makes triage meaningful. The risk isn't automation; it's <strong>outsourced thinking</strong>. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume. V2 build in progress.
+            The role asks for <strong>AI-enabled telemetry use cases</strong>. The interesting design problem in AI-assisted analytics isn't the model &mdash; it's the <em>gates</em>. A workflow that delegates diagnosis to AI removes the human judgement step that makes triage meaningful. The risk isn't automation; it's <strong>outsourced thinking</strong>.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A noisy alert channel at a major QSR's analytics stack: ~230 alerts per fortnight from production and staging monitors, with a known failure mode &mdash; a prior critical checkout regression had <strong>gone unactioned</strong> because technical percentages obscured the signal.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Design an AI-assisted triage pipeline that compresses the noise <em>without</em> removing the human gate: surface what matters, suppress what doesn't, escalate when a suppressed signal worsens &mdash; never delegate the diagnose-and-act decision to a model.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">A five-step hourly pipeline (detail in the flow below): suppress known issues, pull / dedupe / pre-screen, fetch 7-day trend + error breakdown from Amplitude, severity gate with escalation override, post plain-English summary. Two explicit gates: the system surfaces and ranks; the plain-English summary makes the signal readable; the escalation override prevents suppression logic from <strong>silencing a worsening issue</strong> with its own earlier post.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">V1 ran 13&ndash;26 April 2026 on real on-call volume. <strong>230 raw alerts &rarr; 39 AI-posted findings (83% reduction)</strong>. Hourly alert-to-action cycle vs. multi-hour manual review. Most consequentially: the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> &mdash; the signal that justifies the design. V2 build in progress.</div>
+            </div>
           </div>
 
           <p class="ai-human-legend">
@@ -391,8 +481,38 @@
           <h3 class="case-title">The system survived the people who built it.</h3>
           <p class="case-subtitle">Greenfield UX telemetry across web, app, and CRM &mdash; then a structured handoff designed so the client team could maintain and extend it independently.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">Two analysts spending ~two combined work-weeks per month on manual data pulling moved to a unified BigQuery + Dataform + Looker Studio stack with three structured handoff sessions behind it. <strong>38 analyst hours recovered per month</strong>; when the team turned over, <strong>ramp-up time on the data infrastructure was zero</strong>. The system survived the people who built it. <a href="/philips/work/sslp-enablement.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument">
             The role asks for <strong>data storytelling, data literacy, and a cultural transition toward data-driven product management</strong>. The correct evaluation of an analytics engagement isn't what got built &mdash; it's whether the client team <em>changed how they work</em>. A measurement layer that produces reports nobody reads has not been adopted.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">Two dedicated analysts spending ~two combined work-weeks per month on manual extraction and reconciliation. Web, app, GSC, and Braze data lived in <strong>disconnected sources</strong>; domain specialists had no clean access to their own data.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Unify the data layer so specialists could self-serve, free analyst time from data pulling, and &mdash; the harder part &mdash; design the handoff so the system would <strong>survive the team that inherited it</strong>. Adoption was the deliverable; the pipelines were the substrate.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Unified GA4, GSC, and Braze into BigQuery via scheduled Dataform pipelines; Looker Studio dashboards for cross-channel visibility; Python automation against the Braze REST API. Then <strong>three structured handoff sessions</strong> (Web, App, CRM) &mdash; documented for a client analyst audience, not an agency one. Confluence knowledge base, ERD summary, data dictionary, repo access with branching strategy and PR review process explained.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>38 analyst hours recovered per month</strong>, redirected to analysis. Three handoff sessions delivered across web, app, and CRM. When the client team turned over, <strong>ramp-up time on the data infrastructure was zero</strong> &mdash; new team members started from domain expertise on day one because the documentation had been built for the team that would inherit the system, not the team that built it.</div>
+            </div>
           </div>
 
           <div class="metrics">
@@ -545,8 +665,38 @@
           <h3 class="case-title">Telemetry locates the gap. SMM diagnoses what <em>kind</em> of gap.</h3>
           <p class="case-subtitle">Quantitative GA4 telemetry paired with Sense-Making&ndash;informed moderated research &mdash; a sequential protocol for diagnosing gap <em>type</em>, not just gap location.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">At a 280+ location home services franchise, quantitative GA4 telemetry was paired with a UserZoom protocol that was ~90% <strong>SMM-informed neutral questioning</strong> &mdash; producing a documented sequential protocol (<strong>telemetry locates &middot; SMM diagnoses &middot; design responds</strong>) and three findings of three different gap types the funnel could not see (problematic, confusion, pre-arrival sense-making). The case is the methodology piece behind every SMM reference elsewhere on the site. <a href="/philips/work/ux-research-home-services.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument amber">
             The role asks for someone who can pair <strong>quantitative telemetry with qualitative user research</strong> &mdash; not as two separate workstreams, but as a sequential protocol where each stream answers a question the other cannot. This is the methodology piece behind every Sense-Making reference elsewhere on the site: a documented practice that ran on a real engagement, not an asserted philosophy.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">National home services franchise, 280+ locations. Strong digital traffic, underperforming conversion in specific service categories. Telemetry was precise &mdash; we knew exactly <em>where</em> users dropped off. It could not tell us the <strong>nature of the gap</strong> users were experiencing at those moments.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Diagnose <em>gap type</em> &mdash; barrier, decision, problematic, or confusion &mdash; not just gap location. Without that diagnosis, any conversion optimisation would design bridges for <em>assumed</em> gaps rather than real ones. Pair telemetry with qualitative research as a <strong>sequential protocol</strong>, not two parallel workstreams.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Two-stream protocol (detail below). <strong>Stream 1</strong>: GA4, funnels, multi-round A/B, session behaviour &mdash; locates where the gap is. <strong>Stream 2</strong>: UserZoom moderated sessions with a protocol that was ~90% SMM-informed neutral questioning, 10% instruction &mdash; diagnoses what kind of gap is present, using Dervin's gap taxonomy as the analytical frame. Every question constructed against four design rules: anchored to a specific moment, asked about the gap, did not presuppose the bridge type, framed around verbs.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">A documented sequential protocol (<strong>telemetry locates &middot; SMM diagnoses &middot; design responds</strong>) and three findings of three different gap types: a <em>problematic gap</em> in category consideration (cleaning categorised as treat, not maintenance); a <em>confusion gap</em> at the promotion step (a winning A/B variant won <strong>despite</strong> a vocabulary problem the funnel could not surface); a <em>pre-arrival sense-making</em> finding (the funnel begins upstream of the homepage). The case is the methodology piece behind every SMM reference on the site.</div>
+            </div>
           </div>
 
           <div class="card-row card-row-2">

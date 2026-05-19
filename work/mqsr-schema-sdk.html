@@ -64,11 +64,28 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A major QSR's systematic <strong>iOS undercount of <code>Application Opened</code> events</strong> versus Android was root-caused to a Segment SDK 1.9.1 gate in the app's initialisation sequence (<code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>, silently dropping cold-launch events fired before remote config flipped the gate). Same engagement surfaced cross-platform tracking-plan parity gaps and a GTM misconfiguration where two international locales were feeding the main analytics container. Telemetry that undercounts is worse than telemetry that's missing &mdash; this is the SDK-level discipline behind catching it.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             iOS was systematically undercounting <code>Application Opened</code> events compared to Android. Investigation traced the root cause to the app's initialisation sequence: <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed. The Segment SDK 1.9.1 <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code> &mdash; cold-launch events fired before the gate flipped were <strong>silently dropped</strong>, not queued.
           </div>
 
-          <p>Same engagement also surfaced cross-platform tracking-plan parity gaps (web on legacy <code>dataLayer</code>/GA naming; apps on a unified Title Case Segment model) and a GTM misconfiguration where two international locales were feeding the main analytics container.</p>
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Context</div>
+              <div class="card-body">A major quick-service restaurant's mobile analytics showed a systematic gap between iOS and Android <code>Application Opened</code> counts. The bug was <strong>silent</strong>: no errors, no dropped-event logs &mdash; just a stable undercount. Downstream funnel reading was being skewed and nobody was sure why. The engagement also raised broader concerns about cross-platform tracking-plan parity and GTM container governance.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">What I did</div>
+              <div class="card-body">SDK-level debugging. Traced the iOS undercount through the app's initialisation sequence: <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed. Identified that Segment SDK 1.9.1 <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code> &mdash; cold-launch events were dropped, not queued. Surfaced the same engagement's cross-platform parity gaps (web on legacy <code>dataLayer</code>/GA naming; apps on a unified Title Case Segment model) and the <strong>GTM misconfiguration</strong> where two international locales were feeding the main analytics container.</div>
+            </div>
+          </div>
 
           <div class="tags">
             <span class="tag">Segment CDP</span>

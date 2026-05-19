@@ -64,8 +64,23 @@
       <div class="section-body">
         <div class="container">
 
-          <div class="case-argument">
-            The four-person demand-marketing team was spending ~2 hours per month manually extracting Braze campaign metrics for monthly readouts. Designed and shipped a Python automation that authenticates against the Braze REST API, resolves campaign IDs dynamically by name pattern (so campaign clones and rebuilds don't silently break the report), excludes a known-noisy luxury form-submission campaign from aggregates, and writes send volume, open rate, click rate, unsubscribe rate, and revenue attribution directly to a Google Sheet tab ready for the team's template. <strong>Dynamic name-matching with exclusion rules was the key engineering decision</strong> &mdash; hard-coded IDs would have failed silently on every campaign edit.
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A four-person demand-marketing team went from <strong>~2 hours of manual Braze data extraction per month to zero clicks per cycle</strong> &mdash; a Python automation against the Braze REST API now writes send volume, open rate, click rate, unsubscribe rate, and revenue attribution directly to the team's Google Sheet template. The key engineering decision: <strong>dynamic name-matching with exclusion rules</strong>, not hard-coded campaign IDs &mdash; so campaign clones and rebuilds don't silently break the report. First automated delivery: May 26.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Context</div>
+              <div class="card-body">A four-person demand-marketing team spending <strong>~2 hours per month manually extracting Braze campaign metrics</strong> for the monthly readout. The fragility wasn't just time &mdash; any automation built on hard-coded campaign IDs would silently fail every time a campaign got cloned or rebuilt, and a known-noisy luxury form-submission campaign needed to be excluded from aggregates without manual triage every cycle.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">What I did</div>
+              <div class="card-body">Shipped a Python automation against the Braze REST API. <strong>Dynamic campaign-ID resolution by name pattern</strong> with explicit exclusion rules for the luxury form-submission noise. Writes send volume, open rate, click rate, unsubscribe rate, and revenue attribution directly to a Google Sheet tab ready for the team's template. The engineering decision around dynamic name-matching is what makes it survive campaign edits &mdash; the difference between a script that runs and a script that lasts.</div>
+            </div>
           </div>
 
           <div class="metrics">

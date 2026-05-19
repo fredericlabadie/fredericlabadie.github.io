@@ -70,37 +70,37 @@
             </div>
           </div>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A major QSR's planned <strong>straight-cutover nav redesign was reshaped into a controlled A/B release</strong> by proposing and owning the measurement framework before development began &mdash; event tagging spec, written tracking plan, and an A/B-rationale one-pager that isolated the nav change as the causal variable. The <strong>architectural deliverable was the framework itself</strong>; specs, tracking plan, and rationale handed to engineering and the client analytics lead, with test ownership and rollout decision held by the client team. Post-launch results sit under client confidentiality.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             UX changes of this scale are impossible to evaluate fairly without a pre-defined measurement plan: baselines haven't been captured, the right events aren't instrumented, and success criteria get defined retroactively to match whatever the data shows. The argument for an A/B test is also an argument for <strong>not being fooled by your own product launch</strong>.
           </div>
 
           <div class="card-row card-row-2">
-            <div class="card accent">
-              <div class="card-label">Deliverable 01 &mdash; Event tagging requirements</div>
-              <div class="card-body">Defined the full analytics requirements before development began: new events for tab taps, nav state changes, back-navigation patterns; required properties <code>tab_name</code>, <code>previous_tab</code>, <code>platform</code>; audit of existing <code>screen_view</code> coverage against the new nav destinations. Engineering-ready Jira story with acceptance criteria tied to dev tickets.</div>
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A major quick-service restaurant brand's mobile app heading into a <strong>significant navigation redesign</strong> &mdash; planned as a straight cutover with no controlled-release framing. Baselines hadn't been captured, the right events weren't instrumented for the new IA, and there was no contract for what would count as success or failure. An Upsells v1.0 release was running concurrently, raising the risk of confounding any post-launch reading.</div>
             </div>
-            <div class="card accent">
-              <div class="card-label">Deliverable 02 &mdash; Release tracking plan + A/B rationale</div>
-              <div class="card-body">A written tracking plan covering metrics to monitor before, during, and after launch, plus an A/B-test-rationale one-pager for the internal team and client stakeholders &mdash; explaining why a controlled release isolates the nav change as the causal variable and enables rollback with statistical confidence.</div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Propose and own the release measurement framework that turned the planned cutover into a controlled experiment &mdash; written before code. Three things had to be true: the right events had to be specced and instrumented <em>before</em> the redesign shipped; metrics, guardrails, and success criteria had to be agreed up front; and the confounding risk from concurrent releases had to be called out explicitly in the rationale.</div>
             </div>
           </div>
 
           <div class="card-row card-row-2">
             <div class="card amber">
-              <div class="card-label">What got measured</div>
-              <div class="card-body"><strong>Primary:</strong> Transactions (North Star) impact. <strong>Funnel:</strong> <code>screen_view &rarr; add_to_cart &rarr; order_placed</code> conversion at each step. <strong>Nav-specific:</strong> tab tap distribution, time-to-first-order, deals/loyalty discovery rate. <strong>Guardrails:</strong> session length, crash rate, error rate.</div>
+              <div class="card-label">Action</div>
+              <div class="card-body">Two written deliverables. <strong>Event tagging requirements</strong>: new events for tab taps, nav state changes, back-navigation patterns; required properties <code>tab_name</code>, <code>previous_tab</code>, <code>platform</code>; an audit of existing <code>screen_view</code> coverage against the new nav destinations &mdash; engineering-ready Jira story with acceptance criteria tied to dev tickets. <strong>Release tracking plan + A/B-rationale one-pager</strong>: metrics to monitor before, during, and after launch (Primary: Transactions / North Star; Funnel: <code>screen_view &rarr; add_to_cart &rarr; order_placed</code>; Nav-specific: tap distribution, time-to-first-order, deals/loyalty discovery; Guardrails: session length, crash rate, error rate). The rationale called out the Upsells v1.0 confounding risk and defined statistical significance threshold and minimum run duration up front.</div>
             </div>
-            <div class="card amber">
-              <div class="card-label">Confounding addressed explicitly</div>
-              <div class="card-body">The A/B rationale called out the risk of confounding with other in-flight changes (e.g., an Upsells v1.0 release running concurrently) &mdash; a key argument for controlled release over straight cutover. Statistical significance threshold and minimum run duration defined up front.</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Where the engagement ended</div>
-              <div class="outcome-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead; test ownership and rollout decision held by the client team. <strong>The architectural deliverable was the measurement framework that turned a planned straight cutover into a controlled experiment</strong> &mdash; the post-launch result and rollout decision sit under client confidentiality.</div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead. The planned straight-cutover became a <strong>controlled release with rollback options and statistical confidence</strong>. Test ownership and rollout decision held by the client team; the architectural deliverable was the measurement framework itself, not the result of any single experiment. Post-launch readings and the eventual rollout decision sit under client confidentiality.</div>
             </div>
           </div>
 

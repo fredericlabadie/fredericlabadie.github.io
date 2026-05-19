@@ -64,8 +64,38 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A state-regulated retail platform's analytics function moved from two analysts spending the equivalent of <strong>two combined work-weeks per month manually pulling data</strong> to a unified BigQuery + Dataform + Looker Studio stack with three structured handoff sessions behind it. <strong>38 analyst hours recovered per month</strong>, redirected from data-pulling to analysis. The final adoption test: when the team turned over, <strong>zero ramp-up time</strong> was required on the data infrastructure.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             The final measure of an analytics engagement is whether the client team <strong>changed how they work</strong> as a result. A measurement layer that produces reports nobody reads has not been adopted. The 38 hours recovered per month is not the point &mdash; the point is what that recovered time was redirected to.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">Two dedicated analysts spending the equivalent of <strong>two combined work-weeks per month</strong> on manual data extraction, reconciliation, and formatting for a single monthly report. Web, app, GSC, and Braze data lived in <strong>disconnected sources</strong> with no shared infrastructure. Domain specialists had no clean access to their own data.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Unify the data layer so domain specialists could self-serve, free the analysts from manual pulling, and &mdash; the harder part &mdash; design the handoff so the system would <strong>survive the team that inherited it</strong>. Adoption was the real deliverable; the pipelines were the substrate.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Unified GA4, GSC, and Braze into BigQuery via scheduled <strong>Dataform pipelines</strong>; built Looker Studio dashboards for cross-channel visibility; added a Python automation against the Braze REST API to remove another ~2 hours/month of manual CRM reporting. Then <strong>three structured handoff sessions</strong> (Web, App, CRM) &mdash; documented for a <em>client analyst audience</em>, not an agency one. Confluence knowledge base, ERD summary, data dictionary, repo access with branching strategy and PR review process explained, API key rotation, handoff checklist. Detail in the timeline below.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>38 analyst hours recovered per month</strong> &mdash; redirected from data pulling to analysis. Three structured handoff sessions delivered across web, app, and CRM layers. Most consequentially: when the client team turned over, <strong>ramp-up time on the data infrastructure was zero</strong>. New team members started from domain expertise on day one because the documentation and training architecture had been built for the team that would inherit the system, not for the team that built it. The system survived the people who built it &mdash; the real test.</div>
+            </div>
           </div>
 
           <div class="metrics">

@@ -64,8 +64,38 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A high-profile content brand's GA installation went from <strong>traffic numbers without answers</strong> to a GA4 stack that surfaced six tracking gaps the client did not know existed, reframed the editorial premise (podcast pages &mdash; not the homepage &mdash; were where the most engaged audience actually lived), and shipped with a Loom training library so the team could operate it without the analyst. Adoption signal: the agency returned with substantive questions in October 2022, and came back <strong>unprompted two years later</strong> (April 2024) with a GTM issue. The relationship was still live &mdash; the only adoption metric that matters.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             A high-profile content brand &mdash; podcasts, newsletter, events, books &mdash; had Google Analytics installed and could see traffic numbers. They could not answer the questions that drove their business: <strong>were people actually listening to episodes, what drove newsletter signups, which pages were genuinely performing.</strong> They had data. They did not have answers.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A high-profile content brand (podcasts, newsletter, events, books) with GA installed but unable to answer the questions that drove its business &mdash; whether people were actually listening, what drove newsletter signups, which pages were genuinely performing. The implicit editorial model treated the homepage as the primary entry point. Optimisation effort and content decisions both flowed from that premise.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Move the client from <strong>data without answers</strong> to instrumentation that mapped to the questions actually being asked &mdash; and design it so a small editorial team could operate the implementation without the analyst. Two layers: surface the technical gaps (the data not being collected honestly), then rebuild around real editorial goals (podcast engagement, newsletter conversion, content-level dimensions). Adoption was the deliverable, not the dashboard.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Four-step protocol (detail in the flow below). <strong>Structured discovery</strong> &mdash; documented Q&amp;A with agency and client on what the data was/wasn't doing and what decisions it should inform. <strong>Audit against the questions</strong> &mdash; six technical gaps surfaced (double-firing pageviews, broken UTMs, no conversion tracking, podcast engagement entirely unmeasured, event taxonomy misaligned, iframe player events firing incorrectly). <strong>Full GA4 rebuild around real goals</strong> &mdash; scroll depth, episode engagement, 2-min engaged-session conversion, newsletter signups, content-level custom dimensions, source/medium fixed. <strong>Loom training library</strong> &mdash; custom dimensions, conversions, explorations, entrances/exits, real-time &mdash; so the team could operate the implementation without the analyst.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">Once the instrumentation was honest, the editorial premise reframed: <strong>podcast episode pages</strong> (not the homepage) were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed. Adoption signal: the agency returned in October 2022 with substantive usage questions &mdash; not service-questions, usage-questions. <strong>Two years later (April 2024), the same agency came back unprompted with a GTM issue.</strong> The implementation was being used, not shelved. That's the only adoption metric that matters.</div>
+            </div>
           </div>
 
           <div class="flow">
@@ -93,20 +123,12 @@
 
           <div class="card-row card-row-2">
             <div class="card amber">
-              <div class="card-label">The assumption</div>
+              <div class="card-label">The assumption (before instrumentation)</div>
               <div class="card-body">The homepage was the primary entry point. Audience experience was centred on it. Editorial decisions and optimisation effort followed from that premise.</div>
             </div>
             <div class="card accent">
-              <div class="card-label">What behaviour showed</div>
-              <div class="card-body">Once the instrumentation was honest, <strong>podcast episode pages</strong> were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed.</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">The agency returned in October 2022 with substantive usage questions &mdash; signal that the implementation was being used, not shelved. <strong>Two years later, in April 2024, the same agency came back unprompted with a GTM issue.</strong> The relationship was still live. That's the only adoption metric that matters.</div>
+              <div class="card-label">What honest instrumentation showed</div>
+              <div class="card-body">Once the data was collected honestly, <strong>podcast episode pages</strong> were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed.</div>
             </div>
           </div>
 

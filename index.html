@@ -290,26 +290,37 @@
           <h3 class="case-title">A workaround broke. The transaction data confessed.</h3>
           <p class="case-subtitle">An anomaly surfaced inside an unrelated lifecycle model &mdash; and led to a product capability that's now central to the business.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">The client built and deployed a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with automatic part filtering, inventory integration, and a dedicated assembly service tier built around it. The capability did not start as a feature request; it started inside an unrelated lifecycle-marketing build, with a transactional anomaly nobody had asked about, and a Sense-Making conversation with floor staff. <a href="work/shadow-it.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument amber">
             Most "interesting" findings in analytics arrive in the middle of doing something else. <strong>The data doesn't tell you where to look</strong> &mdash; observation does. The role of instrumentation is to make the gap between designed system and lived practice visible enough that a question becomes worth asking.
           </div>
 
           <div class="card-row card-row-2">
-            <div class="card accent">
-              <div class="card-label">The quantitative signal</div>
+            <div class="card">
+              <div class="card-label">Situation</div>
               <div class="card-body">Building customer lifecycle segments for post-purchase marketing. An odd pattern: a meaningful cohort returning shortly after purchase to buy additional components. <strong>Nobody asked for the investigation.</strong> The anomaly surfaced while building something else.</div>
             </div>
-            <div class="card amber">
-              <div class="card-label">What observation found</div>
-              <div class="card-body">A <strong>shadow IT tool</strong> &mdash; built informally by staff to guide customers through part-compatibility questions &mdash; had stopped working. The designed system never supported compatibility guidance. When the workaround broke, the gap became visible in transaction behaviour.</div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Turn the anomaly into a diagnosed root cause without overstepping the analyst's remit &mdash; surfacing the diagnosis from the people who held it (floor staff) and routing it to the team that could act on it (CX / Product), without formal authority over either.</div>
             </div>
           </div>
 
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">The client subsequently built and deployed a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with automatic part filtering, inventory integration, and a dedicated assembly service tier built around it. Root cause confirmed by the product that shipped.</div>
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Sense-Making&ndash;informed neutral questioning with floor staff. The finding: a <strong>shadow IT tool</strong> &mdash; built informally by staff to guide customers through part-compatibility questions &mdash; had stopped working. The designed system never supported compatibility guidance. When the workaround broke, the gap became visible in transaction behaviour. Presented to the CX team across stakeholders, framing the gap as a resourcing question.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body">The compatibility-guidance gap was resourced and addressed. The client built and deployed a full compatibility-checking configurator &mdash; now central to the business. Root cause confirmed by the product that shipped.</div>
             </div>
           </div>
 
@@ -327,8 +338,38 @@
           <h3 class="case-title">The system survived the people who built it.</h3>
           <p class="case-subtitle">Greenfield UX telemetry across web, app, and CRM &mdash; then a structured handoff designed so the client team could maintain and extend it independently.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">Two analysts spending ~two combined work-weeks per month on manual data pulling moved to a unified BigQuery + Dataform + Looker Studio stack with three structured handoff sessions behind it. <strong>38 analyst hours recovered per month</strong>; when the team turned over, <strong>ramp-up time on the data infrastructure was zero</strong>. The system survived the people who built it. <a href="work/sslp-enablement.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument">
             The final measure of an analytics engagement is whether the client team <strong>changed how they work</strong> as a result. A measurement layer that produces reports nobody reads has not been adopted. The 38 hours recovered per month is not the point &mdash; the point is what that recovered time was redirected to.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">Two dedicated analysts spending ~two combined work-weeks per month on manual extraction and reconciliation. Web, app, GSC, and Braze data lived in <strong>disconnected sources</strong>; domain specialists had no clean access to their own data.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Unify the data layer so specialists could self-serve, free analyst time from data pulling, and &mdash; the harder part &mdash; design the handoff so the system would <strong>survive the team that inherited it</strong>. Adoption was the deliverable; the pipelines were the substrate.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Unified GA4, GSC, and Braze into BigQuery via scheduled Dataform pipelines; Looker Studio dashboards for cross-channel visibility; Python automation against the Braze REST API. Then <strong>three structured handoff sessions</strong> (Web, App, CRM) &mdash; documented for a client analyst audience, not an agency one. Confluence, ERD, data dictionary, repo access, branching strategy, API key rotation.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>38 analyst hours recovered per month</strong>, redirected to analysis. Three handoff sessions delivered across web, app, and CRM layers. When the client team turned over, <strong>ramp-up time on the data infrastructure was zero</strong> &mdash; new team members started from domain expertise on day one.</div>
+            </div>
           </div>
 
           <div class="metrics">
@@ -343,14 +384,6 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Ramp-up time required when the client team turned over</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">When new analysts onboarded after team turnover, ramp-up time on the data infrastructure was zero. The documentation and training architecture meant new team members could start from domain expertise on day one. The final test of any analytics engagement: <strong>does the system survive the people who built it?</strong> <a href="work/sslp-enablement.html">Full case &rarr;</a></div>
             </div>
           </div>
 
@@ -370,18 +403,37 @@
           <h3 class="case-title">Designing AI workflows that don't outsource the thinking.</h3>
           <p class="case-subtitle">A production alert-triage system with explicit decisions about where AI assists and where human judgement is preserved &mdash; and why those lines are where they are.</p>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A production AI alert-triage system compressed <strong>230 raw alerts to 39 posts (83% reduction)</strong> across a two-week run on real on-call volume (13&ndash;26 April 2026) &mdash; and surfaced <strong>one critical feature failure the human-only review had missed</strong>. AI surfaces and ranks; the human still diagnoses and acts. V2 build in progress. <a href="work/ai-alert-triage.html">Full case &rarr;</a></div>
+            </div>
+          </div>
+
           <div class="case-argument">
-            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume; currently offline pending V2 build.
+            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A noisy alert channel at a major QSR's analytics stack: ~230 alerts per fortnight from production and staging monitors, with a known failure mode &mdash; a prior critical checkout regression had <strong>gone unactioned</strong> because technical percentages obscured the signal.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Design an AI-assisted triage pipeline that compresses the noise <em>without</em> removing the human gate: surface what matters, suppress what doesn't, escalate when a suppressed signal worsens &mdash; never delegate diagnose-and-act.</div>
+            </div>
           </div>
 
           <div class="card-row card-row-2">
             <div class="card amber">
-              <div class="card-label">Where human judgement is preserved</div>
-              <div class="card-body">The system surfaces and ranks &mdash; it does not diagnose or decide. The plain-English summary exists because a previous critical checkout regression <strong>went unactioned because technical percentages obscured the signal.</strong> The human still acts. The AI makes the signal readable.</div>
+              <div class="card-label">Action</div>
+              <div class="card-body">Four-step hourly pipeline: suppress known issues, pull / dedupe / pre-screen, fetch 7-day trend + error breakdown from Amplitude, gate &middot; group &middot; post. Two explicit gates: the system <strong>surfaces and ranks</strong>, never diagnoses or decides; the plain-English summary makes the signal readable; the escalation override prevents suppression logic from silencing a worsening issue with its own earlier post.</div>
             </div>
             <div class="card accent">
-              <div class="card-label">What cognitive surrender would look like</div>
-              <div class="card-body">Auto-resolve, auto-assign, auto-deprioritise without a human gate. The escalation override exists specifically to prevent the suppression logic from becoming a way to <strong>silence a worsening issue</strong> with its own earlier post.</div>
+              <div class="card-label">Result</div>
+              <div class="card-body">V1 ran 13&ndash;26 April 2026 on real on-call volume. <strong>230 raw alerts &rarr; 39 AI-posted findings (83% reduction)</strong>. Hourly alert-to-action cycle vs. multi-hour manual review. Most consequentially: the AI surfaced <strong>one critical feature failure the on-call team had missed</strong>. V2 build in progress.</div>
             </div>
           </div>
 
@@ -397,14 +449,6 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Critical issues silenceable by their own prior suppression</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">Within the two-week run, the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; a signal that would have continued silently otherwise. That single catch is the case for the design: the AI made a signal readable that human review had filtered out as noise, and the human still made the call to act. V2 build in progress.</div>
             </div>
           </div>
 

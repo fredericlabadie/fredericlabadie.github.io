@@ -64,29 +64,37 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A GA4 &rarr; BigQuery analytics pipeline that had grown organically into a <strong>~$112/run CTE chain processing ~18 TB per execution</strong> was redesigned around a single shared computation: <strong>~50% cost reduction across pipeline and dashboard queries</strong>, the 1.2 TB <code>GA4_Event_Params</code> intermediate table retired, heavy dashboards halved from ~$200 to ~$100/day. Delivered as a 4-phase migration plan with a 2&ndash;4 week validation window. The optimisation was architectural, not query-level.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             Pipeline debt accumulates the same way technical debt does &mdash; one reasonable decision at a time, each solving an immediate problem without visibility into the cumulative architecture. The 1.2 TB <code>GA4_Event_Params</code> table was a reasonable intermediate step when first introduced. The 15-CTE PDP extraction was a reasonable way to get the data. <strong>The problem was that no one had stepped back to look at the whole system.</strong>
           </div>
 
           <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A state-regulated retail platform's GA4 &rarr; BigQuery analytics pipeline, grown organically over several engagements: <code>events_*</code> scanned three separate times (200&ndash;400 GB each at $6.25/TB); Step 02.25 unnested every event type into a generic key-value table (<code>GA4_Event_Params</code> &mdash; 1.2 TB, 4.67 billion rows); Step 02.5 ran 15+ separate CTEs each independently scanning that 1.2 TB table and FULL OUTER JOIN-ed them together. Total: <strong>~18 TB processed per run, ~$112/run</strong>. On top of that, <code>SELECT DISTINCT</code> on 30&ndash;50 columns in three steps, duplicated and slightly inconsistent channel-grouping CASE logic, and a 429 GB unpartitioned table forcing full scans on every downstream query.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Audit the whole pipeline, find where the cost was actually coming from, and redesign &mdash; not optimise queries in place. The brief was implicit: surface architectural waste, then propose a migration plan the team could execute against without a freeze. Cost reduction was the visible target; <strong>maintainability and consistency</strong> were the real ones.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
             <div class="card amber">
-              <div class="card-label">Where the money was going</div>
-              <div class="card-body">
-                The original pipeline scanned <code>events_*</code> three separate times (200&ndash;400 GB each at $6.25/TB).
-                Step 02.25 unnested every event type into a generic key-value table (<code>GA4_Event_Params</code> &mdash; 1.2 TB, 4.67 billion rows).
-                Step 02.5 then ran 15+ separate CTEs each independently scanning that full 1.2 TB table and FULL OUTER JOIN-ed them together: <strong>~18 TB processed per run</strong>, the primary cost driver at ~$112/run.
-                On top of that: <code>SELECT DISTINCT</code> on 30&ndash;50 columns in three steps; channel-grouping CASE logic duplicated and slightly inconsistent across steps; a 429 GB unpartitioned table forcing full scans on every downstream query.
-              </div>
+              <div class="card-label">Action</div>
+              <div class="card-body"><strong>Single raw event scan via conditional aggregation</strong> &mdash; one <code>GROUP BY</code> with <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code> for each of 25+ event parameter keys simultaneously, producing a flat analysis-ready row per <code>page_view</code> event with all parameters pivoted into columns. 8-step sequential pipeline restructured as a <strong>6-step DAG with three tiers of parallel execution</strong>. <code>SELECT DISTINCT</code> replaced with <code>ROW_NUMBER</code> dedup and <code>GROUP BY</code>. Channel grouping unified into a single canonical CASE definition. Partitioning added to the largest reporting tables, converting full-table scans into pruned daily reads. Migration plan delivered as a 4-phase rollout: schema preparation, historical backfill, scheduled-query deployment, table cleanup &mdash; with a 2&ndash;4 week validation window.</div>
             </div>
             <div class="card accent">
-              <div class="card-label">What replaced it</div>
-              <div class="card-body">
-                <strong>Single raw event scan via conditional aggregation</strong> &mdash; one <code>GROUP BY</code> with <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code> for each of 25+ event parameter keys simultaneously, producing a flat analysis-ready row per <code>page_view</code> event with all parameters pivoted into columns.
-                8-step sequential pipeline restructured as a <strong>6-step DAG with three tiers of parallel execution</strong>.
-                <code>SELECT DISTINCT</code> replaced with <code>ROW_NUMBER</code> dedup and <code>GROUP BY</code>.
-                Channel grouping unified into a single canonical CASE definition.
-                Partitioning added to the largest reporting tables, converting full-table scans into pruned daily reads.
-              </div>
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>~50% cost reduction</strong> across both pipeline and dashboard queries. Heavy-usage dashboard query cost halved (~$200 &rarr; ~$100/day). The 1.2 TB <code>GA4_Event_Params</code> intermediate table and the <code>pdp_pageview_params</code> table both retired. A pipeline that's cheaper, faster, easier to maintain, and more consistent in its output &mdash; with the channel-grouping logic now defined in one place instead of three. The optimisation here wasn't about writing faster queries; it was about <strong>understanding the full data flow, identifying where costs were actually coming from, and redesigning around a single shared computation rather than repeated independent ones</strong>.</div>
             </div>
           </div>
 
@@ -102,14 +110,6 @@
             <div class="metric">
               <div class="metric-value">1.2 TB</div>
               <div class="metric-label">Intermediate storage retired (<code>GA4_Event_Params</code> + <code>pdp_pageview_params</code>)</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">A pipeline that's cheaper, faster, easier to maintain, and more consistent in its output. Migration plan delivered as a 4-phase rollout covering schema preparation, historical backfill, scheduled-query deployment, and table cleanup with a 2&ndash;4 week validation window. The optimisation here wasn't about writing faster queries &mdash; it was about <strong>understanding the full data flow, identifying where costs were actually coming from, and redesigning around a single shared computation rather than repeated independent ones</strong>.</div>
             </div>
           </div>
 

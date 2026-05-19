@@ -70,8 +70,27 @@
             </div>
           </div>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A noisy Amplitude alert channel where genuine checkout failures were buried in low-traffic Active% noise gained <strong>three layers of remediation</strong>: redesigned thresholds with troubleshooting guidance on each chart, a hierarchical error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with governance rules against schema drift, and <code>cart_id</code> enrichment so error events carry the same context as their success counterparts. Alerts became trustworthy enough to drive action without detective work &mdash; and the taxonomy directly reduces false positives in the AI alert-triage system.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             Three layers of remediation on an alert channel where genuine checkout failures were buried in noise from low-traffic Active% triggers. <strong>Error events must carry the same context as their success counterparts</strong> &mdash; otherwise alerting is correct but actionable only with detective work.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Context</div>
+              <div class="card-body">An Amplitude alert channel at a major QSR firing on too many low-signal events &mdash; Active% triggers from low-traffic monitors drowning out genuine checkout failures. Error events did not carry the context their success counterparts had, which meant every alert kicked off detective work just to know <em>which basket</em> had failed. The alert engineering needed to be made trustworthy, and the schema needed to stop drifting.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">What I did</div>
+              <div class="card-body">Three layers (detail in the flow below). <strong>Threshold redesign</strong> &mdash; absolute rate + rate-of-change, with engineering-facing troubleshooting guidance directly on each chart so the alert itself carries the start of the diagnosis. <strong>Hierarchical error-category ID scheme</strong> (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with deterministic mapping rules and governance guidelines against schema drift. <strong>Context enrichment</strong> &mdash; added <code>cart_id</code> to <code>Checkout Started Error Received</code> so engineering could correlate specific basket instances to checkout failures.</div>
+            </div>
           </div>
 
           <div class="flow">

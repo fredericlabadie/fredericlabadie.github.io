@@ -64,11 +64,24 @@
       <div class="section-body">
         <div class="container">
 
-          <div class="case-argument">
-            Built the scheduled Dataform pipeline that transforms raw GA4 events into analysis-ready BigQuery tables &mdash; <code>GA4_Event_Params</code>, <code>GA4_Event_Users</code>, <code>GA4_Events</code> &mdash; feeding production Looker Studio dashboards.
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A state-regulated retail platform now runs production Looker Studio dashboards (including executive revenue-linked product reporting) on a <strong>scheduled Dataform pipeline</strong> that transforms raw GA4 events into analysis-ready BigQuery tables. Production SQL scripts authored, maintained in the agency-client analytics repo, with <strong>query rights formally transferred to the client analytics lead at engagement rolloff</strong> &mdash; reporting continuity preserved after the engagement ended.</div>
+            </div>
           </div>
 
-          <p>Authored production SQL scripts (<code>bq_product_revenue_inserts.sql</code>, <code>bq_sales_product_data_table_inserts.sql</code>) maintained in the agency-client analytics repo, powering revenue-linked product reporting used in executive readouts. Scoped a separate product-inventory pipeline modelled against existing product tables. <strong>Query rights formally transferred to the client analytics lead at engagement rolloff</strong> &mdash; reporting continuity preserved after the engagement ended.</p>
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Context</div>
+              <div class="card-body">State-regulated retail platform's mobile instrumentation needed an analysis-ready data layer underneath it &mdash; raw GA4 events out of BigQuery were not directly usable for the executive Looker Studio dashboards. No production pipeline existed for the new app data, and reporting was at risk of stalling at rolloff if the agency held query ownership.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">What I did</div>
+              <div class="card-body">Built the scheduled <strong>Dataform pipeline</strong> producing <code>GA4_Event_Params</code>, <code>GA4_Event_Users</code>, and <code>GA4_Events</code> &mdash; the foundation the production Looker Studio dashboards run on. Authored production SQL scripts (<code>bq_product_revenue_inserts.sql</code>, <code>bq_sales_product_data_table_inserts.sql</code>) maintained in the agency-client analytics repo, powering revenue-linked product reporting used in executive readouts. Scoped a separate product-inventory pipeline modelled against existing product tables. <strong>Formal query-rights transfer</strong> to the client analytics lead at rolloff.</div>
+            </div>
+          </div>
 
           <div class="tags">
             <span class="tag">BigQuery / GCP</span>

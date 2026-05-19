@@ -64,11 +64,24 @@
       <div class="section-body">
         <div class="container">
 
-          <div class="case-argument">
-            The sourcing team knew there was a 50%+ drop-off between candidate selection and start of work, but couldn't tell <em>where</em> in the funnel candidates were being lost &mdash; metrics lived in Excel spreadsheets hand-populated from the operational system.
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A global AI services firm's sourcing team moved from <strong>"we're losing candidates somewhere"</strong> to <strong>"step 4 has a 43% abandonment rate; let's look at what's happening there"</strong> &mdash; via full GA4 instrumentation of the Candidate Management Platform and a Looker Studio dashboard on the GA4 &rarr; BigQuery pipeline that replaced the manual Excel workflow. Presented to sourcing stakeholders in a May 2025 sync framed as "an update on what data is now available for sourcing decisions." Qualitative problem decomposed into a solvable product question.</div>
+            </div>
           </div>
 
-          <p>Led front-end behavioural instrumentation of the Candidate Management Platform working with two web engineers: GA4 event capture across application start, exam steps, compliance checkpoints, and selection status, with user-identity parameters enabling per-candidate and per-programme segmentation. Built a Looker Studio dashboard on the GA4 &rarr; BigQuery pipeline that replaced the manual Excel workflow with a queryable view of candidate flow, presented to sourcing stakeholders in a May 2025 sync framed as "an update on what data is now available for sourcing decisions" &mdash; <strong>turning a qualitative problem ("we're losing candidates somewhere") into a solvable product question ("step 4 has a 43% abandonment rate; let's look at what's happening there")</strong>.</p>
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Context</div>
+              <div class="card-body">A global AI services firm's sourcing team knew there was a <strong>50%+ drop-off between candidate selection and start of work</strong> but couldn't tell <em>where</em>. Metrics lived in Excel spreadsheets hand-populated from the operational system &mdash; no funnel decomposition was possible, and any conversation about fixing the drop-off was stuck at the qualitative level.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">What I did</div>
+              <div class="card-body">Led front-end behavioural instrumentation of the Candidate Management Platform with two web engineers. <strong>GA4 event capture</strong> across application start, exam steps, compliance checkpoints, and selection status, with user-identity parameters enabling per-candidate and per-programme segmentation. Built a Looker Studio dashboard on the GA4 &rarr; BigQuery pipeline that replaced the manual Excel workflow with a queryable view of candidate flow. Presented to sourcing stakeholders as available data for sourcing decisions, not as a finding to react to.</div>
+            </div>
+          </div>
 
           <div class="tags">
             <span class="tag">GA4 instrumentation</span>

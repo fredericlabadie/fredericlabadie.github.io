@@ -64,8 +64,38 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A state-regulated retail platform's mobile app shipped to production with a full UX-telemetry layer underneath it &mdash; <strong>30+ tickets authored, owned, and deployed</strong> across iOS and Android, cross-platform schema parity audited and closed, GA4 e-commerce taxonomy live, and consent management integrated via TrustArc + OneTrust before launch. The dashboards that now run on it work because this layer does.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             A brand-new mobile app with zero prior instrumentation. The deliverable wasn't a dashboard &mdash; it was the analytics layer the dashboards run on, end to end: taxonomy, schema, SDK implementation, QA, and production deployment across both platforms.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A state-regulated retail platform building a brand-new mobile app from scratch. <strong>Zero prior instrumentation</strong> &mdash; no taxonomy, no schema, no SDK integration, no production deployment story for telemetry. Downstream marketing, product, and compliance work all depended on it being right the first time.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Stand up the full mobile UX-telemetry layer end to end across iOS and Android &mdash; spec to production &mdash; with <strong>cross-platform parity</strong> audited explicitly and <strong>consent management built in from the start</strong> (state-regulated context: TrustArc + OneTrust, no after-the-fact bolting). The deliverable was the layer itself, not a deliverable about the layer.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Designed and shipped the full GA4 e-commerce taxonomy (purchase, add_to_cart, view_item, begin_checkout, view_cart, refund with required items array, value, currency, transaction_id), screen-view coverage across core/auth/permission/system-state screens, interaction telemetry (bottom-nav, search-query submission with results count, PDP product metadata on every event, barcode-scanner with full payload, account-management flows, retention cohorts in GA4 Explore), and a governance layer around it (GA4 DebugView for real-time event validation, real-device testing iOS + Android, regression QA checklists per sprint, privacy-compliance review before any PII-adjacent property was specced, data-governance sign-off from client stakeholders). Detail in the three-card breakdown below.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>30+ Jira tickets authored, owned, and shipped to production.</strong> Cross-platform schema parity across iOS, Android, and web &mdash; audited and ticketed where gaps existed. TrustArc + OneTrust consent management integrated with tag configuration in production. The mobile app launched with a UX-telemetry foundation that the analytics team could trust on day one, and that downstream marketing and product work could build against without retroactive remediation.</div>
+            </div>
           </div>
 
           <div class="card-row card-row-3">

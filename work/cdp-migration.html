@@ -64,8 +64,38 @@
       <div class="section-body">
         <div class="container">
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">What happened</div>
+              <div class="outcome-body">A consumer-electronics retailer's CRM moved from Oracle Responsys to Bloomreach with the <strong>customer data model redesigned</strong> for the new platform's primitives, not lifted from the old schema &mdash; and with <strong>zero campaign downtime</strong> through cutover. Year-one results post-migration: <strong>+10.8% CTR YoY</strong> and <strong>+5.8% open rate YoY</strong>. The lift validated the architectural decision, not just the platform change. Same engagement included managing a team of two designers on the campaign-creative side.</div>
+            </div>
+          </div>
+
           <div class="case-argument">
             Marketing-platform migrations fail two ways: by breaking campaign continuity (data gaps that don't close cleanly post-migration), or by carrying the previous platform's data model forward unchanged (winning the migration, losing the architectural opportunity). The work here did neither. <strong>The migration was the moment to redesign the customer data model, not the moment to deploy a fresh copy of the old one.</strong>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card">
+              <div class="card-label">Situation</div>
+              <div class="card-body">A consumer-electronics retailer running lifecycle marketing on <strong>Oracle Responsys</strong>, with a customer data model shaped by the platform's constraints &mdash; static list-based segmentation, identity stitching glued on, consent state managed sideways. The decision had been taken to move to Bloomreach. The risk: a fresh copy of the old schema in a new house.</div>
+            </div>
+            <div class="card">
+              <div class="card-label">Task</div>
+              <div class="card-body">Run the migration without breaking campaign continuity <em>and</em> use the moment to redesign the customer data model around Bloomreach's CDP primitives. Two outcomes had to hold simultaneously: <strong>no campaign downtime through cutover</strong>, and <strong>no porting of the old architecture forward</strong>. The migration was the architectural opportunity; treating it as a platform swap would have squandered it.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Action</div>
+              <div class="card-body">Customer data model rebuilt from scratch for Bloomreach &mdash; customer identity stitched cleanly across email, SMS, and on-site behavioural events, with consent state carried through the model rather than bolted on after. Lifecycle event taxonomy authored from product, transactional, and engagement signals. Segmentation logic rewritten to be <strong>queryable rather than enumerated</strong> &mdash; cohorts defined by behaviour rather than by static list membership. Triggered-campaign automation built on the new lifecycle event tracking, with GDPR-compliant consent maintained through cutover. Detail in the three-card breakdown below. Same engagement included managing a team of two designers on the campaign-creative side: real, scoped people-management.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Result</div>
+              <div class="card-body"><strong>+10.8% CTR YoY</strong> and <strong>+5.8% open rate YoY</strong> in the first year post-migration. <strong>Zero campaign downtime</strong> during the cutover &mdash; full continuity through the platform swap. The lift in year one was the evidence that the architectural decisions held: it wasn't the platform that moved the numbers, it was the data model designed for the new platform's strengths. The CRM ended on infrastructure designed for what it now does, not for what its predecessor used to do.</div>
+            </div>
           </div>
 
           <div class="card-row card-row-3">
@@ -95,14 +125,6 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Campaign downtime during cutover &mdash; full continuity through the platform swap</div>
-            </div>
-          </div>
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">Outcome</div>
-              <div class="outcome-body">A CRM platform on a customer data model designed for the new platform's strengths, not ported from the previous one. CTR and open-rate lift in year one were the evidence that the architectural decisions held &mdash; not that the platform itself moved the numbers. Same engagement included managing a team of two designers on the campaign-creative side of the migration: real, scoped people-management experience.</div>
             </div>
           </div>
 
