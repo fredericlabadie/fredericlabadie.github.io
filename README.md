@@ -21,9 +21,19 @@ Working notes &mdash; deferred case studies, design improvements, post-launch ad
 
 ## Stack
 
-Plain HTML, CSS, and a small amount of JavaScript. Fonts via Google Fonts (Fraunces serif, DM Sans, DM Mono). Hosted on GitHub Pages.
+Plain HTML, CSS, and a small amount of JavaScript. Hosted on GitHub Pages.
 
-All asset paths are root-relative (`/css/style.css`, `/js/main.js`, `/assets/...`) so the three pages can share the same chrome without per-page path edits.
+### Design system &mdash; Anchor &middot; Query (May 2026 rebuild)
+
+The site moved from a Fraunces-on-navy serif system to an editorial sans system called **Anchor &middot; Query**:
+
+- **Palette** &mdash; white background, slate (`#2c3e50`) primary, crimson (`#c0392b`) accent, off-white alt surface (`#f1efe9`), near-black ink (`#15181d`). All exposed as `--c-*` CSS custom properties at the top of `css/style.css` &mdash; change them once, the whole site follows.
+- **Typography** &mdash; IBM Plex Sans + IBM Plex Mono, via Google Fonts. Mono is used for labels, eyebrows, metadata strips, buttons, and section numbers.
+- **Layout language** &mdash; strict hairline rules, big plate numbers on each section opener, sectioned with a metadata strip (`id` / `label` / `title`). Cards have sharp 90° corners, no shadows. Section bands alternate via the `.alt` class. Print stylesheet flattens the grid for clean A4 export.
+
+Asset paths are **relative** (`css/style.css` from home, `../css/style.css` from sub-pages). Both relative and root-relative work on GitHub Pages when the site lives at the repo root; relative was kept so the bundle is also openable as a folder over `file://` for local preview.
+
+The previous design system bundle remains in `_drafts/new-design.zip` for reference.
 
 ```
 .
@@ -31,17 +41,17 @@ All asset paths are root-relative (`/css/style.css`, `/js/main.js`, `/assets/...
 ├── work/index.html         # full case library + projects + GitHub activity graph
 ├── about/index.html        # extended bio + testimonials + skills + certifications + contact
 ├── philips.html            # targeted pitch for Philips UX Telemetry Expert (579397)
-├── css/style.css           # design system + components (shared across all pages)
+├── css/style.css           # design system + components (shared across all pages) + print + philips additions
 ├── js/main.js              # mobile nav toggle + in-page scroll-spy
-├── favicon.svg             # site favicon (dark navy rounded square + cool-blue dot)
+├── favicon.svg             # site favicon (ink rounded square + crimson dot — matches new palette)
 ├── apple-touch-icon.png    # 180×180 iOS touch icon
 ├── robots.txt              # disallow all (site is noindex while job search is active)
 ├── assets/
-│   ├── og/og-image.png     # 1536×1024 Open Graph / Twitter card
-│   ├── photo/              # portrait variants (1x and 2x, lightly desaturated for the dark palette)
-│   └── resume/             # drop frederic-labadie-cv.pdf here — referenced as /assets/resume/frederic-labadie-cv.pdf
+│   ├── og/og-image.png     # 1536×1024 Open Graph / Twitter card (still the previous serif design — see TODO)
+│   ├── photo/              # portrait variants (1x and 2x, lightly desaturated)
+│   └── resume/             # drop frederic-labadie-cv.pdf here — referenced as assets/resume/frederic-labadie-cv.pdf
 ├── CNAME                   # custom-domain mapping
-└── _drafts/                # working files, source case studies (gitignored)
+└── _drafts/                # working files, source case studies, design bundle archive (gitignored)
 ```
 
 ## Local preview
