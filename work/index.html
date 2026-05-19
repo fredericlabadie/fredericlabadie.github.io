@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work &mdash; Frederic Labadie, Analytics Architect</title>
-  <meta name="description" content="The full case library: fourteen years of analytics engagements organised into seven topic groups — question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering. Each case is its own page." />
+  <meta name="description" content="The full case library: fourteen years of analytics engagements organised into seven topic groups — AI workflow design, data engineering, instrumentation, adoption, marketing analytics, experimentation, and question formulation. Ordered to lead with the loudest evidence; each case is its own page." />
   <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="noindex, nofollow" />
 
@@ -14,12 +14,12 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Work &mdash; Frederic Labadie" />
-  <meta property="og:description" content="Seventeen case studies across seven topic groups — the full proof-of-work library for an analytics architect." />
+  <meta property="og:description" content="Eighteen case studies across seven topic groups, ordered to lead with the loudest evidence." />
   <meta property="og:url" content="https://fredericlabadie.com/work/" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Work &mdash; Frederic Labadie" />
-  <meta name="twitter:description" content="Seventeen case studies across seven topic groups." />
+  <meta name="twitter:description" content="Eighteen case studies across seven topic groups, ordered to lead with the loudest evidence." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,7 @@
         <p class="eyebrow">Work</p>
         <h1>Fourteen years of engagements, grouped by the <em>shape of the problem</em>.</h1>
         <p>Seven topic groups, each one a different facet of the work. <strong>Each case is its own page now</strong> &mdash; the cards below carry the meta, the title, a one-line precis, and a link to the full anatomy: argument, flows, metrics, outcome, tags. Names anonymised where engagements are under NDA.</p>
-        <p>If you're here from the landing page looking for the deep dive, scroll &mdash; the topic groups start below. If you want to know more about <em>me</em> rather than the work, <a href="../about/">about &rarr;</a> is the next page over.</p>
+        <p>Ordered to <strong>lead with the loudest evidence</strong>: AI workflow design and data-engineering cost work first, then instrumentation and adoption, then marketing analytics, experimentation, and the question-formulation methodology underneath. Topic numbers are preserved (they index a fixed taxonomy, not page position), which is why they appear out of numerical sequence below. If you're here from the landing page looking for the deep dive, scroll. If you want to know more about <em>me</em> rather than the work, <a href="../about/">about &rarr;</a> is the next page over.</p>
       </div>
     </section>
 
@@ -66,34 +66,29 @@
       <div class="section-head">
         <div class="num">00</div>
         <div class="label">Topic index</div>
-        <div class="title">Seven topic groups &middot; seventeen cases</div>
+        <div class="title">Seven topic groups &middot; eighteen cases &middot; ordered by impact</div>
       </div>
       <div class="section-body">
         <div class="container">
           <p class="section-eyebrow">Topic index</p>
           <h2 class="section-heading">Jump to a topic.</h2>
-          <p class="section-sub">Seven shapes the work takes. Click any case card to read the full anatomy.</p>
+          <p class="section-sub">Seven shapes the work takes, ordered to surface the strongest evidence first. Click any case card to read the full anatomy.</p>
 
           <nav class="case-toc" aria-label="Case study topics">
-            <a class="case-toc-item" href="#topic-question">
-              <div class="case-toc-num">01</div>
-              <div class="case-toc-title">Question Formulation &amp; Discovery</div>
-              <div class="case-toc-meta">Shadow IT detection &middot; content brand GA4 discovery &middot; mixed-methods UX research</div>
-            </a>
-            <a class="case-toc-item" href="#topic-instrumentation">
-              <div class="case-toc-num">02</div>
-              <div class="case-toc-title">Instrumentation &amp; Cross-Platform Telemetry</div>
-              <div class="case-toc-meta">Greenfield mobile &middot; SDK debugging &middot; error taxonomy</div>
-            </a>
-            <a class="case-toc-item" href="#topic-experimentation">
-              <div class="case-toc-num">03</div>
-              <div class="case-toc-title">Experimentation &amp; Release Measurement</div>
-              <div class="case-toc-meta">Nav redesign A/B &middot; Stanley Steemer A/B introduction &middot; campaign analytics</div>
-            </a>
             <a class="case-toc-item" href="#topic-ai">
               <div class="case-toc-num">04</div>
               <div class="case-toc-title">AI Workflow Design</div>
               <div class="case-toc-meta">Alert triage with explicit human gates</div>
+            </a>
+            <a class="case-toc-item" href="#topic-data-eng">
+              <div class="case-toc-num">07</div>
+              <div class="case-toc-title">Data Engineering &amp; Architecture</div>
+              <div class="case-toc-meta">BigQuery pipeline optimisation (~50% cost reduction) &middot; Dataform &middot; enterprise AI pipeline</div>
+            </a>
+            <a class="case-toc-item" href="#topic-instrumentation">
+              <div class="case-toc-num">02</div>
+              <div class="case-toc-title">Instrumentation &amp; Cross-Platform Telemetry</div>
+              <div class="case-toc-meta">Greenfield mobile &middot; error taxonomy &middot; SDK debugging</div>
             </a>
             <a class="case-toc-item" href="#topic-adoption">
               <div class="case-toc-num">05</div>
@@ -103,40 +98,75 @@
             <a class="case-toc-item" href="#topic-marketing">
               <div class="case-toc-num">06</div>
               <div class="case-toc-title">Marketing Analytics &amp; Lifecycle</div>
-              <div class="case-toc-meta">Bloomreach CDP migration &middot; Braze automation &middot; identity stitching &middot; candidate funnel</div>
+              <div class="case-toc-meta">Bloomreach CDP migration &middot; cross-channel identity &middot; Braze automation &middot; candidate funnel</div>
             </a>
-            <a class="case-toc-item" href="#topic-data-eng">
-              <div class="case-toc-num">07</div>
-              <div class="case-toc-title">Data Engineering &amp; Architecture</div>
-              <div class="case-toc-meta">BigQuery pipeline optimisation (~50% cost reduction) &middot; Dataform &middot; enterprise AI pipeline</div>
+            <a class="case-toc-item" href="#topic-experimentation">
+              <div class="case-toc-num">03</div>
+              <div class="case-toc-title">Experimentation &amp; Release Measurement</div>
+              <div class="case-toc-meta">Nav redesign A/B &middot; Stanley Steemer A/B introduction &middot; campaign analytics</div>
+            </a>
+            <a class="case-toc-item" href="#topic-question">
+              <div class="case-toc-num">01</div>
+              <div class="case-toc-title">Question Formulation &amp; Discovery</div>
+              <div class="case-toc-meta">Mixed-methods UX research &middot; Shadow IT detection &middot; content brand GA4 discovery</div>
             </a>
           </nav>
         </div>
 
-        <!-- ===== TOPIC 01 — QUESTION FORMULATION ===== -->
-        <div class="container case-group" id="topic-question">
+        <!-- ===== TOPIC 04 — AI WORKFLOW DESIGN ===== -->
+        <div class="container case-group" id="topic-ai">
           <header class="case-group-header">
-            <p class="case-group-eyebrow">Topic 01</p>
-            <h3 class="case-group-title">Question Formulation &amp; Discovery</h3>
-            <p class="case-group-sub">Before any instrumentation, the right question. The cases below show what Sense-Making questioning and structured discovery surface that data alone cannot.</p>
-            <p class="case-group-roles">For: UX Telemetry &middot; Insight &middot; Product Strategy</p>
+            <p class="case-group-eyebrow">Topic 04</p>
+            <h3 class="case-group-title">AI Workflow Design</h3>
+            <p class="case-group-sub">The interesting work in AI-assisted analytics isn't the model &mdash; it's the gates. Where AI assists, where human judgement is preserved, and why those lines are where they are.</p>
+            <p class="case-group-roles">For: Product Analytics &middot; UX Telemetry &middot; AI workflow design</p>
           </header>
         </div>
 
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Discovery</span>
-              <span class="case-card-context">Content brand &middot; freelance &middot; 2022&ndash;2024</span>
+              <span class="case-card-meta">Case &middot; AI workflow design</span>
+              <span class="case-card-context">Major quick-service restaurant brand &middot; analytics architect</span>
             </div>
-            <h4 class="case-card-title"><a href="content-brand-ga4.html" style="color: inherit; text-decoration: none;">When the homepage isn't the front door.</a></h4>
-            <p class="case-card-body">A GA4 discovery for a podcast-and-newsletter brand that surfaced six tracking gaps the client didn't know existed &mdash; and one finding (podcast pages, not the homepage, were where the most engaged audience actually lived) that reframed the editorial strategy.</p>
-            <p class="case-card-body"><a href="content-brand-ga4.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="ai-alert-triage.html" style="color: inherit; text-decoration: none;">Designing AI workflows that don't outsource the thinking.</a></h4>
+            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13&ndash;26 April 2026; compressed 230 raw alerts to 39 posts (<strong>83% reduction</strong>), surfaced one critical feature failure the on-call team had missed in their human-only review. V2 build in progress.</p>
+            <p class="case-card-body"><a href="ai-alert-triage.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">GA4 migration</span>
-              <span class="tag">Discovery facilitation</span>
-              <span class="tag">GTM</span>
-              <span class="tag">Loom training library</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Amplitude</span>
+              <span class="tag">AI workflow design</span>
+              <span class="tag">Human-AI collaboration</span>
+              <span class="tag">Alert triage</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ===== TOPIC 07 — DATA ENGINEERING ===== -->
+        <div class="container case-group" id="topic-data-eng">
+          <header class="case-group-header">
+            <p class="case-group-eyebrow">Topic 07</p>
+            <h3 class="case-group-title">Data Engineering &amp; Architecture</h3>
+            <p class="case-group-sub">Pipeline architecture, cost-thinking, schema design, and the patient work of stepping back to look at the whole system &mdash; not just writing faster queries.</p>
+            <p class="case-group-roles">For: Data Engineer &middot; Analytics Engineer &middot; Architect</p>
+          </header>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case &middot; Cost engineering</span>
+              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; April 2026</span>
+            </div>
+            <h4 class="case-card-title"><a href="pipeline-optimization.html" style="color: inherit; text-decoration: none;">Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction.</a></h4>
+            <p class="case-card-body">An audit and architectural redesign of a GA4 &rarr; BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaces ~18 TB of repeated scans. <strong>~50% cost reduction</strong> across pipeline and dashboard queries.</p>
+            <p class="case-card-body"><a href="pipeline-optimization.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">BigQuery</span>
+              <span class="tag">SQL (advanced)</span>
+              <span class="tag">DAG redesign</span>
+              <span class="tag">Conditional aggregation</span>
+              <span class="tag">Cost engineering</span>
             </div>
           </article>
         </div>
@@ -144,41 +174,38 @@
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Sense-Making applied</span>
-              <span class="case-card-context">Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
+              <span class="case-card-meta">Compact &middot; Pipeline build</span>
+              <span class="case-card-context">State-regulated retail platform &middot; BigQuery + Dataform &middot; production</span>
             </div>
-            <h4 class="case-card-title"><a href="shadow-it.html" style="color: inherit; text-decoration: none;">A workaround broke. The transaction data confessed.</a></h4>
-            <p class="case-card-body">A meaningful cohort returning post-purchase for additional components, surfaced while building lifecycle segments for something else &mdash; root cause was a shadow-IT compatibility tool that had stopped working. The product capability that grew out of the finding is now central to the business.</p>
-            <p class="case-card-body"><a href="shadow-it.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="sslp-data-infra.html" style="color: inherit; text-decoration: none;">The pipeline layer behind the mobile instrumentation.</a></h4>
+            <p class="case-card-body">Built the scheduled Dataform pipeline that transforms raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards. Authored production SQL scripts powering revenue-linked product reporting. Query rights formally transferred to the client at rolloff.</p>
+            <p class="case-card-body"><a href="sslp-data-infra.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Sense-Making / Dervin</span>
-              <span class="tag">Observational research</span>
-              <span class="tag">Shadow IT detection</span>
-              <span class="tag">Influence without authority</span>
+              <span class="tag">BigQuery / GCP</span>
+              <span class="tag">Dataform</span>
+              <span class="tag">Scheduled queries</span>
+              <span class="tag">SQL pipeline ownership</span>
             </div>
           </article>
         </div>
 
         <div class="container">
-          <article class="case-card" id="cs-mixed-methods-ux">
+          <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Methodology piece</span>
-              <span class="case-card-context">National home services franchise (Stanley Steemer, anonymised) &middot; 2021&ndash;2022</span>
+              <span class="case-card-meta">Compact &middot; AI platform analytics</span>
+              <span class="case-card-context">Enterprise AI copilot platform &middot; agency-client engagement</span>
             </div>
-            <h4 class="case-card-title"><a href="ux-research-home-services.html" style="color: inherit; text-decoration: none;">Mixed-Methods UX Research &mdash; diagnosing <em>gap type</em>, not just gap location.</a></h4>
-            <p class="case-card-body">GA4/A-B telemetry locating <em>where</em> users fell out, paired with a UserZoom protocol that was ~90% SMM-informed neutral questioning. The protocol surfaced findings the funnel could not &mdash; including that "Promo Code" and "Online Specials" were read as categorically different things, and that professional cleaning sits in users' sense-making as a treat, not maintenance. The argument: analytics and qualitative research are not competing methods &mdash; they are sequential ones.</p>
-            <p class="case-card-body"><a href="ux-research-home-services.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="copilot-pipeline.html" style="color: inherit; text-decoration: none;">Front-end behavioural signal for a commercial Claude-powered platform.</a></h4>
+            <p class="case-card-body">Designed and delivered the full GA4 event collection and BigQuery export pipeline for an enterprise AI copilot platform that had only backend metering for billing. Pipeline confirmed live and in use by engineering teams within weeks. Subsequently served as internal BigQuery SME.</p>
+            <p class="case-card-body"><a href="copilot-pipeline.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Sense-Making / Dervin</span>
-              <span class="tag">UserZoom (moderated)</span>
-              <span class="tag">A/B testing</span>
-              <span class="tag">Mixed-methods research</span>
-              <span class="tag">Gap-type diagnosis</span>
+              <span class="tag">GA4 &rarr; BigQuery</span>
+              <span class="tag">Looker Studio</span>
+              <span class="tag">Enterprise AI</span>
+              <span class="tag">Engineering enablement</span>
             </div>
           </article>
         </div>
-
-        <!-- Failure case scaffold hidden 19 May 2026 — to be promoted to /work/failure-wrong-question.html when the real engagement narrative is written; backlog item in README "Status & roadmap". -->
 
         <!-- ===== TOPIC 02 — INSTRUMENTATION ===== -->
         <div class="container case-group" id="topic-instrumentation">
@@ -213,6 +240,24 @@
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
+              <span class="case-card-meta">Compact &middot; Error taxonomy</span>
+              <span class="case-card-context">Major quick-service restaurant &middot; Amplitude monitors</span>
+            </div>
+            <h4 class="case-card-title"><a href="mqsr-errors.html" style="color: inherit; text-decoration: none;">Clean taxonomy, trustworthy alerts, enriched context.</a></h4>
+            <p class="case-card-body">Three layers of remediation on a noisy alert channel &mdash; threshold redesign, a hierarchical error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>), and <code>cart_id</code> enrichment so error events carry the same context as their success counterparts. Directly reduces false positives in the AI alert triage system.</p>
+            <p class="case-card-body"><a href="mqsr-errors.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">Amplitude monitors</span>
+              <span class="tag">Error taxonomy design</span>
+              <span class="tag">Alert engineering</span>
+              <span class="tag">Schema governance</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
               <span class="case-card-meta">Compact &middot; SDK debugging</span>
               <span class="case-card-context">Major quick-service restaurant &middot; Segment &middot; analytics-swift 1.9.1</span>
             </div>
@@ -228,20 +273,115 @@
           </article>
         </div>
 
+        <!-- ===== TOPIC 05 — ADOPTION ===== -->
+        <div class="container case-group" id="topic-adoption">
+          <header class="case-group-header">
+            <p class="case-group-eyebrow">Topic 05</p>
+            <h3 class="case-group-title">Adoption &amp; Cultural Transition</h3>
+            <p class="case-group-sub">The final measure of an engagement isn't what got built &mdash; it's whether the team <em>changed how they work</em>. A measurement layer that produces reports nobody reads has not been adopted.</p>
+            <p class="case-group-roles">For: Insight roles &middot; Product Analytics &middot; Consulting &middot; Cross-functional leadership</p>
+          </header>
+        </div>
+
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Error taxonomy</span>
-              <span class="case-card-context">Major quick-service restaurant &middot; Amplitude monitors</span>
+              <span class="case-card-meta">Case &middot; Enablement &amp; handoff</span>
+              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
             </div>
-            <h4 class="case-card-title"><a href="mqsr-errors.html" style="color: inherit; text-decoration: none;">Clean taxonomy, trustworthy alerts, enriched context.</a></h4>
-            <p class="case-card-body">Three layers of remediation on a noisy alert channel &mdash; threshold redesign, a hierarchical error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>), and <code>cart_id</code> enrichment so error events carry the same context as their success counterparts. Directly reduces false positives in the AI alert triage system.</p>
-            <p class="case-card-body"><a href="mqsr-errors.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="sslp-enablement.html" style="color: inherit; text-decoration: none;">The system survived the people who built it.</a></h4>
+            <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM &mdash; then a three-session structured handoff designed so the client team could maintain and extend it independently. 38 analyst hours recovered per month, zero ramp-up time when the team turned over.</p>
+            <p class="case-card-body"><a href="sslp-enablement.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Amplitude monitors</span>
-              <span class="tag">Error taxonomy design</span>
-              <span class="tag">Alert engineering</span>
-              <span class="tag">Schema governance</span>
+              <span class="tag">BigQuery / GCP</span>
+              <span class="tag">Dataform</span>
+              <span class="tag">GA4 (web + app)</span>
+              <span class="tag">Looker Studio</span>
+              <span class="tag">Braze REST API</span>
+              <span class="tag">Client enablement</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ===== TOPIC 06 — MARKETING ANALYTICS ===== -->
+        <div class="container case-group" id="topic-marketing">
+          <header class="case-group-header">
+            <p class="case-group-eyebrow">Topic 06</p>
+            <h3 class="case-group-title">Marketing Analytics &amp; Lifecycle</h3>
+            <p class="case-group-sub">Email, CRM, identity stitching, and funnel analytics &mdash; the cross-channel layer that connects message to behaviour. Background includes a five-year build at Stanley Steemer covering greenfield marketing analytics across 280 franchise locations and a full Oracle Responsys &rarr; Bloomreach CDP migration at a US consumer-electronics retailer.</p>
+            <p class="case-group-roles">For: Marketing Analytics &middot; CRM / Lifecycle &middot; Product Analytics</p>
+          </header>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case &middot; CDP migration</span>
+              <span class="case-card-context">Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
+            </div>
+            <h4 class="case-card-title"><a href="cdp-migration.html" style="color: inherit; text-decoration: none;">Replatformed the CRM. The campaigns didn't notice.</a></h4>
+            <p class="case-card-body">Full Oracle Responsys &rarr; Bloomreach CDP migration &mdash; customer data model, event schemas, segmentation, and triggered-campaign architecture all redesigned (not ported). Zero campaign downtime through cutover; <strong>+10.8% CTR YoY</strong> in the first year post-migration validated the new data model, not just the platform change.</p>
+            <p class="case-card-body"><a href="cdp-migration.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">Bloomreach CDP</span>
+              <span class="tag">Oracle Responsys</span>
+              <span class="tag">CDP migration</span>
+              <span class="tag">Customer data model</span>
+              <span class="tag">GDPR consent</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Compact &middot; Cross-channel identity</span>
+              <span class="case-card-context">State-regulated retail platform &middot; Braze + GA4 + web</span>
+            </div>
+            <h4 class="case-card-title"><a href="cross-channel-identity.html" style="color: inherit; text-decoration: none;">Connecting email behaviour to in-app sessions.</a></h4>
+            <p class="case-card-body">The spec to push Braze ID and Account GUID into the GA data layer, and to carry Braze ID in email URL parameters &mdash; the cross-channel identity stitching behind every "did this campaign actually drive product interaction or just a click?" question. Plus GTM audit, TrustArc consent, and monthly executive readouts.</p>
+            <p class="case-card-body"><a href="cross-channel-identity.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">Identity stitching</span>
+              <span class="tag">Braze + GA4</span>
+              <span class="tag">TrustArc consent</span>
+              <span class="tag">Executive readouts</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Compact &middot; Lifecycle automation</span>
+              <span class="case-card-context">State-regulated retail platform &middot; Braze REST API &middot; Python</span>
+            </div>
+            <h4 class="case-card-title"><a href="braze-automation.html" style="color: inherit; text-decoration: none;">Email telemetry that stops being a copy-paste job.</a></h4>
+            <p class="case-card-body">A Python automation against the Braze REST API that resolves campaign IDs dynamically (surviving campaign edits), excludes a known-noisy luxury form-submission campaign, and writes campaign metrics directly to Google Sheets. ~2 hours/month recovered for the demand-marketing team.</p>
+            <p class="case-card-body"><a href="braze-automation.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">Braze REST API</span>
+              <span class="tag">Python</span>
+              <span class="tag">Google Sheets API</span>
+              <span class="tag">Reporting ops</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Compact &middot; Funnel analytics</span>
+              <span class="case-card-context">Global AI services firm &middot; candidate sourcing platform &middot; 2025</span>
+            </div>
+            <h4 class="case-card-title"><a href="candidate-funnel.html" style="color: inherit; text-decoration: none;">A 50%+ candidate drop-off, decomposed step by step.</a></h4>
+            <p class="case-card-body">Front-end behavioural instrumentation of a Candidate Management Platform replacing a manual Excel workflow with a queryable Looker Studio view &mdash; turning "we're losing candidates somewhere" into "step 4 has a 43% abandonment rate".</p>
+            <p class="case-card-body"><a href="candidate-funnel.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">GA4 instrumentation</span>
+              <span class="tag">BigQuery + Looker Studio</span>
+              <span class="tag">Funnel decomposition</span>
+              <span class="tag">Stakeholder enablement</span>
             </div>
           </article>
         </div>
@@ -311,90 +451,49 @@
           </article>
         </div>
 
-        <!-- ===== TOPIC 04 — AI WORKFLOW DESIGN ===== -->
-        <div class="container case-group" id="topic-ai">
+        <!-- ===== TOPIC 01 — QUESTION FORMULATION ===== -->
+        <div class="container case-group" id="topic-question">
           <header class="case-group-header">
-            <p class="case-group-eyebrow">Topic 04</p>
-            <h3 class="case-group-title">AI Workflow Design</h3>
-            <p class="case-group-sub">The interesting work in AI-assisted analytics isn't the model &mdash; it's the gates. Where AI assists, where human judgement is preserved, and why those lines are where they are.</p>
-            <p class="case-group-roles">For: Product Analytics &middot; UX Telemetry &middot; AI workflow design</p>
+            <p class="case-group-eyebrow">Topic 01</p>
+            <h3 class="case-group-title">Question Formulation &amp; Discovery</h3>
+            <p class="case-group-sub">Before any instrumentation, the right question. The cases below show what Sense-Making questioning and structured discovery surface that data alone cannot.</p>
+            <p class="case-group-roles">For: UX Telemetry &middot; Insight &middot; Product Strategy</p>
           </header>
         </div>
 
         <div class="container">
-          <article class="case-card">
+          <article class="case-card" id="cs-mixed-methods-ux">
             <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; AI workflow design</span>
-              <span class="case-card-context">Major quick-service restaurant brand &middot; analytics architect</span>
+              <span class="case-card-meta">Case &middot; Methodology piece</span>
+              <span class="case-card-context">National home services franchise (Stanley Steemer, anonymised) &middot; 2021&ndash;2022</span>
             </div>
-            <h4 class="case-card-title"><a href="ai-alert-triage.html" style="color: inherit; text-decoration: none;">Designing AI workflows that don't outsource the thinking.</a></h4>
-            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13&ndash;26 April 2026; compressed 230 raw alerts to 39 posts (<strong>83% reduction</strong>), surfaced one critical feature failure the on-call team had missed in their human-only review. V2 build in progress.</p>
-            <p class="case-card-body"><a href="ai-alert-triage.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="ux-research-home-services.html" style="color: inherit; text-decoration: none;">Mixed-Methods UX Research &mdash; diagnosing <em>gap type</em>, not just gap location.</a></h4>
+            <p class="case-card-body">GA4/A-B telemetry locating <em>where</em> users fell out, paired with a UserZoom protocol that was ~90% SMM-informed neutral questioning. The protocol surfaced findings the funnel could not &mdash; including that "Promo Code" and "Online Specials" were read as categorically different things, and that professional cleaning sits in users' sense-making as a treat, not maintenance. The argument: analytics and qualitative research are not competing methods &mdash; they are sequential ones.</p>
+            <p class="case-card-body"><a href="ux-research-home-services.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Claude API</span>
-              <span class="tag">Amplitude</span>
-              <span class="tag">AI workflow design</span>
-              <span class="tag">Human-AI collaboration</span>
-              <span class="tag">Alert triage</span>
+              <span class="tag">Sense-Making / Dervin</span>
+              <span class="tag">UserZoom (moderated)</span>
+              <span class="tag">A/B testing</span>
+              <span class="tag">Mixed-methods research</span>
+              <span class="tag">Gap-type diagnosis</span>
             </div>
           </article>
         </div>
 
-        <!-- ===== TOPIC 05 — ADOPTION ===== -->
-        <div class="container case-group" id="topic-adoption">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Topic 05</p>
-            <h3 class="case-group-title">Adoption &amp; Cultural Transition</h3>
-            <p class="case-group-sub">The final measure of an engagement isn't what got built &mdash; it's whether the team <em>changed how they work</em>. A measurement layer that produces reports nobody reads has not been adopted.</p>
-            <p class="case-group-roles">For: Insight roles &middot; Product Analytics &middot; Consulting &middot; Cross-functional leadership</p>
-          </header>
-        </div>
-
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Enablement &amp; handoff</span>
-              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="sslp-enablement.html" style="color: inherit; text-decoration: none;">The system survived the people who built it.</a></h4>
-            <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM &mdash; then a three-session structured handoff designed so the client team could maintain and extend it independently. 38 analyst hours recovered per month, zero ramp-up time when the team turned over.</p>
-            <p class="case-card-body"><a href="sslp-enablement.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">BigQuery / GCP</span>
-              <span class="tag">Dataform</span>
-              <span class="tag">GA4 (web + app)</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Braze REST API</span>
-              <span class="tag">Client enablement</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== TOPIC 06 — MARKETING ANALYTICS ===== -->
-        <div class="container case-group" id="topic-marketing">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Topic 06</p>
-            <h3 class="case-group-title">Marketing Analytics &amp; Lifecycle</h3>
-            <p class="case-group-sub">Email, CRM, identity stitching, and funnel analytics &mdash; the cross-channel layer that connects message to behaviour. Background includes a five-year build at Stanley Steemer covering greenfield marketing analytics across 280 franchise locations and a full Oracle Responsys &rarr; Bloomreach CDP migration at a US consumer-electronics retailer.</p>
-            <p class="case-group-roles">For: Marketing Analytics &middot; CRM / Lifecycle &middot; Product Analytics</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; CDP migration</span>
+              <span class="case-card-meta">Case &middot; Sense-Making applied</span>
               <span class="case-card-context">Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
             </div>
-            <h4 class="case-card-title"><a href="cdp-migration.html" style="color: inherit; text-decoration: none;">Replatformed the CRM. The campaigns didn't notice.</a></h4>
-            <p class="case-card-body">Full Oracle Responsys &rarr; Bloomreach CDP migration &mdash; customer data model, event schemas, segmentation, and triggered-campaign architecture all redesigned (not ported). Zero campaign downtime through cutover; <strong>+10.8% CTR YoY</strong> in the first year post-migration validated the new data model, not just the platform change.</p>
-            <p class="case-card-body"><a href="cdp-migration.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="shadow-it.html" style="color: inherit; text-decoration: none;">A workaround broke. The transaction data confessed.</a></h4>
+            <p class="case-card-body">A meaningful cohort returning post-purchase for additional components, surfaced while building lifecycle segments for something else &mdash; root cause was a shadow-IT compatibility tool that had stopped working. The product capability that grew out of the finding is now central to the business.</p>
+            <p class="case-card-body"><a href="shadow-it.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Bloomreach CDP</span>
-              <span class="tag">Oracle Responsys</span>
-              <span class="tag">CDP migration</span>
-              <span class="tag">Customer data model</span>
-              <span class="tag">GDPR consent</span>
+              <span class="tag">Sense-Making / Dervin</span>
+              <span class="tag">Observational research</span>
+              <span class="tag">Shadow IT detection</span>
+              <span class="tag">Influence without authority</span>
             </div>
           </article>
         </div>
@@ -402,121 +501,22 @@
         <div class="container">
           <article class="case-card">
             <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Lifecycle automation</span>
-              <span class="case-card-context">State-regulated retail platform &middot; Braze REST API &middot; Python</span>
+              <span class="case-card-meta">Case &middot; Discovery</span>
+              <span class="case-card-context">Content brand &middot; freelance &middot; 2022&ndash;2024</span>
             </div>
-            <h4 class="case-card-title"><a href="braze-automation.html" style="color: inherit; text-decoration: none;">Email telemetry that stops being a copy-paste job.</a></h4>
-            <p class="case-card-body">A Python automation against the Braze REST API that resolves campaign IDs dynamically (surviving campaign edits), excludes a known-noisy luxury form-submission campaign, and writes campaign metrics directly to Google Sheets. ~2 hours/month recovered for the demand-marketing team.</p>
-            <p class="case-card-body"><a href="braze-automation.html">Read the full case &rarr;</a></p>
+            <h4 class="case-card-title"><a href="content-brand-ga4.html" style="color: inherit; text-decoration: none;">When the homepage isn't the front door.</a></h4>
+            <p class="case-card-body">A GA4 discovery for a podcast-and-newsletter brand that surfaced six tracking gaps the client didn't know existed &mdash; and one finding (podcast pages, not the homepage, were where the most engaged audience actually lived) that reframed the editorial strategy.</p>
+            <p class="case-card-body"><a href="content-brand-ga4.html">Read the full case &rarr;</a></p>
             <div class="tags">
-              <span class="tag">Braze REST API</span>
-              <span class="tag">Python</span>
-              <span class="tag">Google Sheets API</span>
-              <span class="tag">Reporting ops</span>
+              <span class="tag">GA4 migration</span>
+              <span class="tag">Discovery facilitation</span>
+              <span class="tag">GTM</span>
+              <span class="tag">Loom training library</span>
             </div>
           </article>
         </div>
 
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Cross-channel identity</span>
-              <span class="case-card-context">State-regulated retail platform &middot; Braze + GA4 + web</span>
-            </div>
-            <h4 class="case-card-title"><a href="cross-channel-identity.html" style="color: inherit; text-decoration: none;">Connecting email behaviour to in-app sessions.</a></h4>
-            <p class="case-card-body">The spec to push Braze ID and Account GUID into the GA data layer, and to carry Braze ID in email URL parameters &mdash; the cross-channel identity stitching behind every "did this campaign actually drive product interaction or just a click?" question. Plus GTM audit, TrustArc consent, and monthly executive readouts.</p>
-            <p class="case-card-body"><a href="cross-channel-identity.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Identity stitching</span>
-              <span class="tag">Braze + GA4</span>
-              <span class="tag">TrustArc consent</span>
-              <span class="tag">Executive readouts</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Funnel analytics</span>
-              <span class="case-card-context">Global AI services firm &middot; candidate sourcing platform &middot; 2025</span>
-            </div>
-            <h4 class="case-card-title"><a href="candidate-funnel.html" style="color: inherit; text-decoration: none;">A 50%+ candidate drop-off, decomposed step by step.</a></h4>
-            <p class="case-card-body">Front-end behavioural instrumentation of a Candidate Management Platform replacing a manual Excel workflow with a queryable Looker Studio view &mdash; turning "we're losing candidates somewhere" into "step 4 has a 43% abandonment rate".</p>
-            <p class="case-card-body"><a href="candidate-funnel.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GA4 instrumentation</span>
-              <span class="tag">BigQuery + Looker Studio</span>
-              <span class="tag">Funnel decomposition</span>
-              <span class="tag">Stakeholder enablement</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== TOPIC 07 — DATA ENGINEERING ===== -->
-        <div class="container case-group" id="topic-data-eng">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Topic 07</p>
-            <h3 class="case-group-title">Data Engineering &amp; Architecture</h3>
-            <p class="case-group-sub">Pipeline architecture, cost-thinking, schema design, and the patient work of stepping back to look at the whole system &mdash; not just writing faster queries.</p>
-            <p class="case-group-roles">For: Data Engineer &middot; Analytics Engineer &middot; Architect</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Cost engineering</span>
-              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; April 2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="pipeline-optimization.html" style="color: inherit; text-decoration: none;">Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction.</a></h4>
-            <p class="case-card-body">An audit and architectural redesign of a GA4 &rarr; BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaces ~18 TB of repeated scans. <strong>~50% cost reduction</strong> across pipeline and dashboard queries.</p>
-            <p class="case-card-body"><a href="pipeline-optimization.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">BigQuery</span>
-              <span class="tag">SQL (advanced)</span>
-              <span class="tag">DAG redesign</span>
-              <span class="tag">Conditional aggregation</span>
-              <span class="tag">Cost engineering</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Pipeline build</span>
-              <span class="case-card-context">State-regulated retail platform &middot; BigQuery + Dataform &middot; production</span>
-            </div>
-            <h4 class="case-card-title"><a href="sslp-data-infra.html" style="color: inherit; text-decoration: none;">The pipeline layer behind the mobile instrumentation.</a></h4>
-            <p class="case-card-body">Built the scheduled Dataform pipeline that transforms raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards. Authored production SQL scripts powering revenue-linked product reporting. Query rights formally transferred to the client at rolloff.</p>
-            <p class="case-card-body"><a href="sslp-data-infra.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">BigQuery / GCP</span>
-              <span class="tag">Dataform</span>
-              <span class="tag">Scheduled queries</span>
-              <span class="tag">SQL pipeline ownership</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; AI platform analytics</span>
-              <span class="case-card-context">Enterprise AI copilot platform &middot; agency-client engagement</span>
-            </div>
-            <h4 class="case-card-title"><a href="copilot-pipeline.html" style="color: inherit; text-decoration: none;">Front-end behavioural signal for a commercial Claude-powered platform.</a></h4>
-            <p class="case-card-body">Designed and delivered the full GA4 event collection and BigQuery export pipeline for an enterprise AI copilot platform that had only backend metering for billing. Pipeline confirmed live and in use by engineering teams within weeks. Subsequently served as internal BigQuery SME.</p>
-            <p class="case-card-body"><a href="copilot-pipeline.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GA4 &rarr; BigQuery</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Enterprise AI</span>
-              <span class="tag">Engineering enablement</span>
-            </div>
-          </article>
-        </div>
+        <!-- Failure case scaffold hidden 19 May 2026 — to be promoted to /work/failure-wrong-question.html when the real engagement narrative is written; backlog item in README "Status & roadmap". -->
 
       </div>
     </section>
