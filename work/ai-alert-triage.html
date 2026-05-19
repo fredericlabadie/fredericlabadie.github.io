@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing AI workflows that don't outsource the thinking &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="A production AI alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13–26 April 2026, compressed 230 raw alerts to 39 posts (83% reduction), caught one critical failure human review had missed. Topic 04 · AI workflow design." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Designing AI workflows that don't outsource the thinking &mdash; case study" />
+  <meta property="og:description" content="A production AI alert-triage system with explicit human-judgement gates." />
+  <meta property="og:url" content="https://fredericlabadie.com/work/ai-alert-triage.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Designing AI workflows that don't outsource the thinking &mdash; case study" />
+  <meta name="twitter:description" content="A production AI alert-triage system with explicit human-judgement gates." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; Topic 04 &middot; AI Workflow Design</p>
+        <h1>Designing AI workflows that don't outsource the thinking.</h1>
+        <p class="hero-subtitle">A production alert-triage system with explicit decisions about where AI assists and where human judgement is preserved &mdash; and why those lines are where they are.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ Major quick-service restaurant brand &middot; analytics architect</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="case-argument">
+            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume. V2 build in progress.
+          </div>
+
+          <div class="flow">
+            <div class="flow-step">
+              <div class="flow-num">01</div>
+              <div class="flow-label">Suppress known issues</div>
+              <div class="flow-desc">Reads the alert channel. Records monitors already posted today including peak values. Silences for the rest of the day unless escalated significantly.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">02</div>
+              <div class="flow-label">Pull, dedupe, pre-screen</div>
+              <div class="flow-desc">Last ~65 minutes from production and staging alert channels. Groups firings by monitor name. Drops without querying: overnight 0&rarr;near-zero spikes and misconfigured "0.0 higher than 0.0" monitors.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">03</div>
+              <div class="flow-label">Trend + error breakdown</div>
+              <div class="flow-desc">Queries Amplitude for each surviving monitor's 7-day chart. Surfaces error-type breakdown. Known low-signal errors auto-downgraded.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">04</div>
+              <div class="flow-label">Gate, group, post</div>
+              <div class="flow-desc">Critical or Warning only. Suppressed monitor hitting 2&times; prior value overrides suppression. Co-firing monitors grouped under one root cause. Output: one structured message, plain-English summary, next steps.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">Where human judgement is preserved</div>
+              <div class="card-body">The system surfaces and ranks &mdash; it does not diagnose or decide. The plain-English summary exists because a previous critical checkout regression <strong>went unactioned because technical percentages obscured the signal.</strong> The human still acts. The AI makes the signal readable.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">What cognitive surrender would look like</div>
+              <div class="card-body">Auto-resolve, auto-assign, auto-deprioritise without a human gate. The escalation override exists specifically to prevent the suppression logic from becoming a way to <strong>silence a worsening issue</strong> with its own earlier post.</div>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-value">230 &rarr; 39</div>
+              <div class="metric-label">Raw alerts compressed to AI-posted findings across the two-week production run (13&ndash;26 April) &mdash; <strong>83% reduction</strong></div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">Hourly</div>
+              <div class="metric-label">Alert-to-action cycle vs. multi-hour manual review</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">0</div>
+              <div class="metric-label">Critical issues silenceable by their own prior suppression</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Outcome</div>
+              <div class="outcome-body">Within the two-week run, the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; a signal that would have continued silently otherwise. That single catch is the case for the design: the AI made a signal readable that human review had filtered out as noise, and the human still made the call to act. V2 build in progress.</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Claude API</span>
+            <span class="tag">Amplitude</span>
+            <span class="tag">AI workflow design</span>
+            <span class="tag">Human-AI collaboration</span>
+            <span class="tag">Alert triage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="../work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Full case library &mdash; <em>seventeen cases, seven topics</em>.</span>
+              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
+              <span class="deeper-cta">Open the library &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

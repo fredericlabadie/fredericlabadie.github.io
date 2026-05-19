@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The measurement plan written before the code &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign — turning a planned straight-cutover into a controlled experiment. Topic 03 · Experimentation." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The measurement plan written before the code &mdash; case study" />
+  <meta property="og:description" content="Turning a planned straight-cutover into a controlled experiment with a pre-written tracking plan." />
+  <meta property="og:url" content="https://fredericlabadie.com/work/mqsr-release-ab.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The measurement plan written before the code &mdash; case study" />
+  <meta name="twitter:description" content="Turning a planned straight-cutover into a controlled experiment with a pre-written tracking plan." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; Topic 03 &middot; Experimentation</p>
+        <h1>The measurement plan written before the code.</h1>
+        <p class="hero-subtitle">Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign &mdash; turning a planned straight-cutover into a controlled experiment.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ Major quick-service restaurant &middot; analytics architect &middot; navigation redesign</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="case-argument">
+            UX changes of this scale are impossible to evaluate fairly without a pre-defined measurement plan: baselines haven't been captured, the right events aren't instrumented, and success criteria get defined retroactively to match whatever the data shows. The argument for an A/B test is also an argument for <strong>not being fooled by your own product launch</strong>.
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card accent">
+              <div class="card-label">Deliverable 01 &mdash; Event tagging requirements</div>
+              <div class="card-body">Defined the full analytics requirements before development began: new events for tab taps, nav state changes, back-navigation patterns; required properties <code>tab_name</code>, <code>previous_tab</code>, <code>platform</code>; audit of existing <code>screen_view</code> coverage against the new nav destinations. Engineering-ready Jira story with acceptance criteria tied to dev tickets.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Deliverable 02 &mdash; Release tracking plan + A/B rationale</div>
+              <div class="card-body">A written tracking plan covering metrics to monitor before, during, and after launch, plus an A/B-test-rationale one-pager for the internal team and client stakeholders &mdash; explaining why a controlled release isolates the nav change as the causal variable and enables rollback with statistical confidence.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">What got measured</div>
+              <div class="card-body"><strong>Primary:</strong> Transactions (North Star) impact. <strong>Funnel:</strong> <code>screen_view &rarr; add_to_cart &rarr; order_placed</code> conversion at each step. <strong>Nav-specific:</strong> tab tap distribution, time-to-first-order, deals/loyalty discovery rate. <strong>Guardrails:</strong> session length, crash rate, error rate.</div>
+            </div>
+            <div class="card amber">
+              <div class="card-label">Confounding addressed explicitly</div>
+              <div class="card-body">The A/B rationale called out the risk of confounding with other in-flight changes (e.g., an Upsells v1.0 release running concurrently) &mdash; a key argument for controlled release over straight cutover. Statistical significance threshold and minimum run duration defined up front.</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Where the engagement ended</div>
+              <div class="outcome-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead; test ownership and rollout decision held by the client team. <strong>The architectural deliverable was the measurement framework that turned a planned straight cutover into a controlled experiment</strong> &mdash; the post-launch result and rollout decision sit under client confidentiality.</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Amplitude</span>
+            <span class="tag">Segment CDP</span>
+            <span class="tag">A/B test design</span>
+            <span class="tag">Release measurement</span>
+            <span class="tag">Jira (spec authorship)</span>
+            <span class="tag">Causal isolation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="../work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Full case library &mdash; <em>seventeen cases, seven topics</em>.</span>
+              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
+              <span class="deeper-cta">Open the library &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

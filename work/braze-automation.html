@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email telemetry that stops being a copy-paste job &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="A Python automation against the Braze REST API that eliminates ~2 hours/month of manual campaign-metric extraction — with dynamic name-matching and exclusion rules that survive campaign edits. Topic 06 · Marketing Analytics." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Email telemetry that stops being a copy-paste job &mdash; case study" />
+  <meta property="og:description" content="Python automation against the Braze REST API with dynamic name-matching." />
+  <meta property="og:url" content="https://fredericlabadie.com/work/braze-automation.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Email telemetry that stops being a copy-paste job &mdash; case study" />
+  <meta name="twitter:description" content="Python automation against the Braze REST API with dynamic name-matching." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; Topic 06 &middot; Marketing Analytics &middot; Lifecycle automation</p>
+        <h1>Email telemetry that stops being a copy-paste job.</h1>
+        <p class="hero-subtitle">A Python automation against the Braze REST API that survives campaign edits, exclusion rules and all.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ State-regulated retail platform &middot; Braze REST API &middot; Python</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="case-argument">
+            The four-person demand-marketing team was spending ~2 hours per month manually extracting Braze campaign metrics for monthly readouts. Designed and shipped a Python automation that authenticates against the Braze REST API, resolves campaign IDs dynamically by name pattern (so campaign clones and rebuilds don't silently break the report), excludes a known-noisy luxury form-submission campaign from aggregates, and writes send volume, open rate, click rate, unsubscribe rate, and revenue attribution directly to a Google Sheet tab ready for the team's template. <strong>Dynamic name-matching with exclusion rules was the key engineering decision</strong> &mdash; hard-coded IDs would have failed silently on every campaign edit.
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-value">~2h</div>
+              <div class="metric-label">Saved per month for the DMM team</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">0</div>
+              <div class="metric-label">Braze UI clicks required per cycle</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">May 26</div>
+              <div class="metric-label">First automated delivery</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Braze REST API</span>
+            <span class="tag">Python</span>
+            <span class="tag">Google Sheets API</span>
+            <span class="tag">Reporting ops</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="../work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Full case library &mdash; <em>seventeen cases, seven topics</em>.</span>
+              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
+              <span class="deeper-cta">Open the library &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

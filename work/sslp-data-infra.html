@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The pipeline layer behind the mobile instrumentation &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="The scheduled Dataform pipeline transforming raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards. Topic 07 · Data Engineering." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The pipeline layer behind the mobile instrumentation &mdash; case study" />
+  <meta property="og:description" content="Scheduled Dataform pipeline feeding production Looker Studio dashboards." />
+  <meta property="og:url" content="https://fredericlabadie.com/work/sslp-data-infra.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The pipeline layer behind the mobile instrumentation &mdash; case study" />
+  <meta name="twitter:description" content="Scheduled Dataform pipeline feeding production Looker Studio dashboards." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; Topic 07 &middot; Data Engineering &middot; Pipeline build</p>
+        <h1>The pipeline layer behind the mobile instrumentation.</h1>
+        <p class="hero-subtitle">Scheduled Dataform pipelines transforming raw GA4 events into analysis-ready BigQuery tables &mdash; with query rights transferred to the client at rolloff.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ State-regulated retail platform &middot; BigQuery + Dataform &middot; production</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="case-argument">
+            Built the scheduled Dataform pipeline that transforms raw GA4 events into analysis-ready BigQuery tables &mdash; <code>GA4_Event_Params</code>, <code>GA4_Event_Users</code>, <code>GA4_Events</code> &mdash; feeding production Looker Studio dashboards.
+          </div>
+
+          <p>Authored production SQL scripts (<code>bq_product_revenue_inserts.sql</code>, <code>bq_sales_product_data_table_inserts.sql</code>) maintained in the agency-client analytics repo, powering revenue-linked product reporting used in executive readouts. Scoped a separate product-inventory pipeline modelled against existing product tables. <strong>Query rights formally transferred to the client analytics lead at engagement rolloff</strong> &mdash; reporting continuity preserved after the engagement ended.</p>
+
+          <div class="tags">
+            <span class="tag">BigQuery / GCP</span>
+            <span class="tag">Dataform</span>
+            <span class="tag">Scheduled queries</span>
+            <span class="tag">SQL pipeline ownership</span>
+            <span class="tag">Repo + PR workflow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="../work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Full case library &mdash; <em>seventeen cases, seven topics</em>.</span>
+              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
+              <span class="deeper-cta">Open the library &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

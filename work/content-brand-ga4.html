@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When the homepage isn't the front door &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="A discovery process for a content brand that surfaced six tracking gaps the client didn't know existed — and one finding that reframed the editorial strategy. Topic 01 · Question Formulation." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="../favicon.svg" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="When the homepage isn't the front door &mdash; case study" />
+  <meta property="og:description" content="GA4 discovery for a content brand: six tracking gaps surfaced, the editorial premise reframed." />
+  <meta property="og:url" content="https://fredericlabadie.com/work/content-brand-ga4.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When the homepage isn't the front door &mdash; case study" />
+  <meta name="twitter:description" content="GA4 discovery for a content brand: six tracking gaps surfaced, the editorial premise reframed." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../work/" aria-current="page">Work</a></li>
+        <li><a href="../notebook/">Notebook</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; Topic 01 &middot; Question Formulation</p>
+        <h1>When the homepage isn't the front door.</h1>
+        <p class="hero-subtitle">A discovery process that surfaced six tracking gaps the client didn't know existed &mdash; and one finding that reframed the editorial strategy.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ Content brand &middot; freelance &middot; 2022&ndash;2024</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="case-argument">
+            A high-profile content brand &mdash; podcasts, newsletter, events, books &mdash; had Google Analytics installed and could see traffic numbers. They could not answer the questions that drove their business: <strong>were people actually listening to episodes, what drove newsletter signups, which pages were genuinely performing.</strong> They had data. They did not have answers.
+          </div>
+
+          <div class="flow">
+            <div class="flow-step">
+              <div class="flow-num">01</div>
+              <div class="flow-label">Structured discovery</div>
+              <div class="flow-desc">Documented Q&amp;A with agency and client: what the data was and wasn't doing, what decisions it should be informing, what they thought was stopping conversions.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">02</div>
+              <div class="flow-label">Audit against the questions</div>
+              <div class="flow-desc">Six technical gaps surfaced: double-firing pageviews, broken UTMs, no conversion tracking, podcast engagement entirely unmeasured, event taxonomy misaligned, iframe player events firing incorrectly.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">03</div>
+              <div class="flow-label">Rebuild around real goals</div>
+              <div class="flow-desc">Full GA4 implementation with scroll depth, episode engagement, 2-min engaged-session conversion, newsletter signups, content-level custom dimensions, source/medium fixed.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">04</div>
+              <div class="flow-label">Build for adoption</div>
+              <div class="flow-desc">Loom training video library (custom dimensions, conversions, explorations, entrances/exits, real-time) so the team could operate the implementation without the analyst.</div>
+            </div>
+          </div>
+
+          <div class="card-row card-row-2">
+            <div class="card amber">
+              <div class="card-label">The assumption</div>
+              <div class="card-body">The homepage was the primary entry point. Audience experience was centred on it. Editorial decisions and optimisation effort followed from that premise.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">What behaviour showed</div>
+              <div class="card-body">Once the instrumentation was honest, <strong>podcast episode pages</strong> were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed.</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Outcome</div>
+              <div class="outcome-body">The agency returned in October 2022 with substantive usage questions &mdash; signal that the implementation was being used, not shelved. <strong>Two years later, in April 2024, the same agency came back unprompted with a GTM issue.</strong> The relationship was still live. That's the only adoption metric that matters.</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">GA4 migration</span>
+            <span class="tag">Discovery facilitation</span>
+            <span class="tag">GTM</span>
+            <span class="tag">Conversion modelling</span>
+            <span class="tag">Loom training library</span>
+            <span class="tag">Long-tail adoption</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="../work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Full case library &mdash; <em>seventeen cases, seven topics</em>.</span>
+              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
+              <span class="deeper-cta">Open the library &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
