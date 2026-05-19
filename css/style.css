@@ -2067,3 +2067,32 @@ section.alt { background: var(--c-bg-alt); }
   .first-90 { padding: 16px 18px; }
   .ai-human-legend { gap: 12px; }
 }
+
+/* ============================================================
+   PHILIPS MICROSITE — scoped accent override
+   ───────────────────────────────────────────────────────────
+   Body class .philips-microsite is set on every page under
+   /philips/. The override swaps --c-accent to Philips blue
+   (Pantone 300 C, #005EB8) so every uppercase mono accent
+   (eyebrows, brand dot, section eyebrows, case meta, post
+   meta, currently band, etc.) picks up the Philips palette
+   without disturbing the main-site design.
+
+   Plus: a thin Philips-blue bar at the very top of the nav
+   as a brand cue, and the nav brand-role label coloured in
+   the same blue so the "Philips · UX Telemetry Expert pitch"
+   tag reads as a Philips microsite signature.
+   ============================================================ */
+
+.philips-microsite {
+  --c-accent: #005EB8;
+}
+
+.philips-microsite .nav {
+  border-top: 3px solid #005EB8;
+}
+
+.philips-microsite .nav-brand-role {
+  color: #005EB8;
+}
+
