@@ -14,12 +14,12 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Work &mdash; Frederic Labadie" />
-  <meta property="og:description" content="Sixteen case studies across seven topic groups — the full proof-of-work library for an analytics architect." />
+  <meta property="og:description" content="Seventeen case studies across seven topic groups — the full proof-of-work library for an analytics architect." />
   <meta property="og:url" content="https://fredericlabadie.com/work/" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Work &mdash; Frederic Labadie" />
-  <meta name="twitter:description" content="Sixteen case studies across seven topic groups." />
+  <meta name="twitter:description" content="Seventeen case studies across seven topic groups." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -66,7 +66,7 @@
       <div class="section-head">
         <div class="num">00</div>
         <div class="label">Topic index</div>
-        <div class="title">Seven topic groups &middot; sixteen cases</div>
+        <div class="title">Seven topic groups &middot; seventeen cases</div>
       </div>
       <div class="section-body">
         <div class="container">
@@ -103,7 +103,7 @@
             <a class="case-toc-item" href="#topic-marketing">
               <div class="case-toc-num">06</div>
               <div class="case-toc-title">Marketing Analytics &amp; Lifecycle</div>
-              <div class="case-toc-meta">Braze automation &middot; identity stitching &middot; candidate funnel</div>
+              <div class="case-toc-meta">Bloomreach CDP migration &middot; Braze automation &middot; identity stitching &middot; candidate funnel</div>
             </a>
             <a class="case-toc-item" href="#topic-data-eng">
               <div class="case-toc-num">07</div>
@@ -185,7 +185,7 @@
         </div>
 
         <div class="container case-study" id="cs-shadow-it">
-          <p class="case-meta">Case <span class="case-context">/ Consumer electronics retailer &middot; analytics architect &middot; under NDA</span></p>
+          <p class="case-meta">Case <span class="case-context">/ Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span></p>
           <h3 class="case-title">A workaround broke. The transaction data confessed.</h3>
           <p class="case-subtitle">An anomaly surfaced inside an unrelated lifecycle model &mdash; and led to a product capability that's now central to the business.</p>
 
@@ -370,6 +370,14 @@
             </div>
           </div>
 
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Where the engagement ended</div>
+              <div class="outcome-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead; test ownership and rollout decision held by the client team. <strong>The architectural deliverable was the measurement framework that turned a planned straight cutover into a controlled experiment</strong> &mdash; the post-launch result and rollout decision sit under client confidentiality.</div>
+            </div>
+          </div>
+
           <div class="tags">
             <span class="tag">Amplitude</span>
             <span class="tag">Segment CDP</span>
@@ -388,7 +396,7 @@
             </div>
             <h4 class="case-card-title">Introducing A/B testing as a leadership practice.</h4>
             <p class="case-card-body">
-              Joined a brand with no experimentation culture and an ageing BI stack on the way out. Built marketing analytics from scratch across 280 franchise locations on a BigQuery-backed foundation, and introduced A/B testing as a tool for leadership decision-making rather than a marketing tactic. <strong>By year two, leadership was actively requesting data-informed decisions</strong> &mdash; the culture had shifted from intuition-first to test-first, and the original A/B framework was still in use when I left. Adoption proven by the leadership behaviour change, not the tests themselves.
+              Joined a brand with no experimentation culture and an ageing BI stack on the way out. Built marketing analytics from scratch across 280 franchise locations on a BigQuery-backed foundation &mdash; including the <strong>single-customer concept and householding data model</strong> that gave the business its first reliable identity resolution across the multi-location estate, enabling marketing automation and CRM strategy where neither existed before. Introduced A/B testing as a tool for leadership decision-making rather than a marketing tactic. <strong>By year two, leadership was actively requesting data-informed decisions</strong> &mdash; the culture had shifted from intuition-first to test-first, and the original A/B framework was still in use when I left.
             </p>
             <div class="case-card-stats">
               <div class="case-card-stat">
@@ -446,7 +454,7 @@
           <p class="case-subtitle">A production alert-triage system with explicit decisions about where AI assists and where human judgement is preserved &mdash; and why those lines are where they are.</p>
 
           <div class="case-argument">
-            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post.
+            The risk in AI-assisted analytics isn't automation &mdash; it's <strong>outsourced thinking</strong>. A workflow that delegates diagnosis to a model removes the human judgement step that makes triage meaningful. This system is documented around explicit gates: surface, suppress, escalate when warranted, never silence a worsening issue with its own earlier post. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume; currently offline pending V2 build.
           </div>
 
           <div class="flow">
@@ -485,8 +493,8 @@
 
           <div class="metrics">
             <div class="metric">
-              <div class="metric-value">100&rarr;4</div>
-              <div class="metric-label">Raw alert firings reduced to grouped findings per cycle</div>
+              <div class="metric-value">230 &rarr; 39</div>
+              <div class="metric-label">Raw alerts compressed to AI-posted findings across the two-week production run (13&ndash;26 April) &mdash; <strong>83% reduction</strong></div>
             </div>
             <div class="metric">
               <div class="metric-value">Hourly</div>
@@ -495,6 +503,14 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Critical issues silenceable by their own prior suppression</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Outcome</div>
+              <div class="outcome-body">Within the two-week run, the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; a signal that would have continued silently otherwise. That single catch is the case for the design: the AI made a signal readable that human review had filtered out as noise, and the human still made the call to act. V2 build in progress.</div>
             </div>
           </div>
 
@@ -667,9 +683,67 @@
           <header class="case-group-header">
             <p class="case-group-eyebrow">Topic 06</p>
             <h3 class="case-group-title">Marketing Analytics &amp; Lifecycle</h3>
-            <p class="case-group-sub">Email, CRM, identity stitching, and funnel analytics &mdash; the cross-channel layer that connects message to behaviour. Background includes a five-year build at Stanley Steemer covering greenfield marketing analytics across 280 franchise locations.</p>
+            <p class="case-group-sub">Email, CRM, identity stitching, and funnel analytics &mdash; the cross-channel layer that connects message to behaviour. Background includes a five-year build at Stanley Steemer covering greenfield marketing analytics across 280 franchise locations and a full Oracle Responsys &rarr; Bloomreach CDP migration at a US consumer-electronics retailer.</p>
             <p class="case-group-roles">For: Marketing Analytics &middot; CRM / Lifecycle &middot; Product Analytics</p>
           </header>
+        </div>
+
+        <div class="container case-study" id="cs-cdp-migration">
+          <p class="case-meta">Case <span class="case-context">/ Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span></p>
+          <h3 class="case-title">Replatformed the CRM. The campaigns didn't notice.</h3>
+          <p class="case-subtitle">Full Oracle Responsys &rarr; Bloomreach CDP migration &mdash; customer data model, event schemas, segmentation, and triggered-campaign architecture all redesigned. Zero campaign downtime through cutover.</p>
+
+          <div class="case-argument">
+            Marketing-platform migrations fail two ways: by breaking campaign continuity (data gaps that don't close cleanly post-migration), or by carrying the previous platform's data model forward unchanged (winning the migration, losing the architectural opportunity). The work here did neither. <strong>The migration was the moment to redesign the customer data model, not the moment to deploy a fresh copy of the old one.</strong>
+          </div>
+
+          <div class="card-row card-row-3">
+            <div class="card accent">
+              <div class="card-label">Customer data model</div>
+              <div class="card-body">Redesigned from scratch for Bloomreach's CDP primitives &mdash; not lifted from the Responsys schema. Customer identity stitched cleanly across email, SMS, and on-site behavioural events, with consent state carried through the model rather than bolted on after.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Event schemas &amp; segmentation</div>
+              <div class="card-body">Lifecycle event taxonomy authored from product, transactional, and engagement signals. Segmentation logic rewritten to be queryable rather than enumerated &mdash; cohorts defined by behaviour rather than by static list membership.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Triggered campaign architecture</div>
+              <div class="card-body">Triggered-campaign automation built on the new lifecycle event tracking &mdash; the behavioural signal the segmentation logic queries against. GDPR-compliant consent management maintained through cutover via the same configuration regime.</div>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-value">+10.8%</div>
+              <div class="metric-label">CTR YoY in first year post-migration &mdash; the lift validated the new data model, not just the platform change</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">+5.8%</div>
+              <div class="metric-label">Open rate YoY in first year post-migration</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">0</div>
+              <div class="metric-label">Campaign downtime during cutover &mdash; full continuity through the platform swap</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Outcome</div>
+              <div class="outcome-body">A CRM platform on a customer data model designed for the new platform's strengths, not ported from the previous one. CTR and open-rate lift in year one were the evidence that the architectural decisions held &mdash; not that the platform itself moved the numbers. Same engagement included managing a team of two designers on the campaign-creative side of the migration: real, scoped people-management experience.</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Bloomreach CDP</span>
+            <span class="tag">Oracle Responsys</span>
+            <span class="tag">CDP migration</span>
+            <span class="tag">Customer data model</span>
+            <span class="tag">Lifecycle automation</span>
+            <span class="tag">Email &amp; SMS</span>
+            <span class="tag">GDPR consent</span>
+          </div>
         </div>
 
         <div class="container">

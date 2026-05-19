@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frederic Labadie — CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Frederic Labadie — Senior Data Analyst and Analytics Architect. Amsterdam." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --c-bg: #ffffff;
+      --c-ink: #15181d;
+      --c-ink-soft: #565b66;
+      --c-rule-strong: #15181d;
+      --c-rule-light: #d7d4ce;
+      --c-primary: #2c3e50;
+      --c-accent: #c0392b;
+      --f-sans: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --f-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; background: #eef0f2; }
+
+    body {
+      font-family: var(--f-sans);
+      color: var(--c-ink);
+      font-size: 9.5pt;
+      line-height: 1.45;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      background: var(--c-bg);
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 16mm 18mm 14mm;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ===== HEADER ===== */
+    .cv-head {
+      border-bottom: 1.5px solid var(--c-rule-strong);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+    .cv-name {
+      font-family: var(--f-sans);
+      font-weight: 600;
+      font-size: 22pt;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin: 0 0 4px;
+      color: var(--c-ink);
+    }
+    .cv-role {
+      font-family: var(--f-mono);
+      font-size: 8.5pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--c-accent);
+      margin: 0 0 10px;
+    }
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+      font-size: 8.5pt;
+      color: var(--c-ink-soft);
+    }
+    .cv-contact a { color: inherit; text-decoration: none; }
+    .cv-contact a:hover { color: var(--c-accent); }
+
+    /* ===== SECTION ===== */
+    .cv-section { margin-top: 14px; }
+    .cv-section:first-of-type { margin-top: 0; }
+    .cv-section-title {
+      font-family: var(--f-mono);
+      font-size: 8pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--c-primary);
+      margin: 0 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 0.75px solid var(--c-rule-light);
+    }
+
+    /* ===== PROFILE ===== */
+    .cv-profile p { margin: 0; font-size: 9.5pt; line-height: 1.5; }
+    .cv-profile strong { font-weight: 600; }
+
+    /* ===== SKILLS ===== */
+    .cv-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; font-size: 9pt; }
+    .cv-skill-row { padding: 2px 0; }
+    .cv-skill-label {
+      font-family: var(--f-mono);
+      font-size: 7.5pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--c-primary);
+      margin-right: 4px;
+    }
+    .cv-skill-body { color: var(--c-ink); }
+
+    /* ===== EXPERIENCE ===== */
+    .cv-role-block { margin-bottom: 10px; page-break-inside: avoid; }
+    .cv-role-block:last-child { margin-bottom: 0; }
+    .cv-role-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 1px;
+    }
+    .cv-role-title {
+      font-size: 10pt;
+      font-weight: 600;
+      margin: 0;
+      color: var(--c-ink);
+    }
+    .cv-role-title .at { color: var(--c-ink-soft); font-weight: 400; }
+    .cv-role-dates {
+      font-family: var(--f-mono);
+      font-size: 8pt;
+      color: var(--c-ink-soft);
+      white-space: nowrap;
+    }
+    .cv-role-meta {
+      font-size: 8.5pt;
+      color: var(--c-ink-soft);
+      margin: 0 0 3px;
+      font-style: italic;
+    }
+    .cv-role-context {
+      font-size: 9pt;
+      margin: 2px 0 4px;
+      color: var(--c-ink);
+    }
+    .cv-bullets {
+      list-style: none;
+      margin: 2px 0 0;
+      padding: 0;
+    }
+    .cv-bullets li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2px;
+      font-size: 9pt;
+      line-height: 1.42;
+    }
+    .cv-bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--c-accent);
+      font-weight: 500;
+    }
+    .cv-bullets strong { font-weight: 600; color: var(--c-ink); }
+
+    /* ===== EDUCATION ===== */
+    .cv-edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .cv-edu-main { font-size: 9.25pt; }
+    .cv-edu-main strong { font-weight: 600; }
+    .cv-edu-main .school { color: var(--c-ink-soft); }
+    .cv-edu-dates {
+      font-family: var(--f-mono);
+      font-size: 8pt;
+      color: var(--c-ink-soft);
+      white-space: nowrap;
+    }
+    .cv-edu-sub {
+      font-size: 8.25pt;
+      color: var(--c-ink-soft);
+      margin: 0 0 4px;
+    }
+
+    /* ===== CERTS ===== */
+    .cv-certs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+    .cv-cert-group .cv-cert-group-title {
+      font-family: var(--f-mono);
+      font-size: 7.5pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--c-primary);
+      margin: 0 0 2px;
+    }
+    .cv-cert-list { list-style: none; margin: 0; padding: 0; font-size: 8.5pt; line-height: 1.4; }
+    .cv-cert-list li { margin-bottom: 1px; }
+    .cv-cert-list .cert-meta { color: var(--c-ink-soft); }
+
+    /* ===== LANGUAGES ===== */
+    .cv-lang { font-size: 9pt; }
+
+    /* ===== FOOTER ===== */
+    .cv-foot {
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 0.75px solid var(--c-rule-light);
+      font-family: var(--f-mono);
+      font-size: 7.5pt;
+      color: var(--c-ink-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .cv-foot a { color: inherit; text-decoration: none; }
+
+    /* ===== PRINT ===== */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      html, body { background: #fff; }
+      .page {
+        box-shadow: none;
+        margin: 0 auto;
+        max-width: none;
+        min-height: 0;
+        padding: 13mm 16mm 11mm;
+      }
+      a { color: inherit; text-decoration: none; }
+      .cv-role-block { page-break-inside: avoid; }
+      .cv-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<article class="page" role="document">
+
+  <header class="cv-head">
+    <h1 class="cv-name">Frederic Labadie</h1>
+    <p class="cv-role">Senior Data Analyst &middot; Analytics Architect</p>
+    <div class="cv-contact">
+      <span>Amsterdam, Netherlands</span>
+      <span>EU work authorisation</span>
+      <span>MSc Data Analytics</span>
+      <span>+31 6 13 82 86 35</span>
+      <a href="mailto:Frederic.Labadie@gmail.com">Frederic.Labadie@gmail.com</a>
+      <a href="https://linkedin.com/in/frederic-labadie">linkedin.com/in/frederic-labadie</a>
+      <a href="https://fredericlabadie.com">fredericlabadie.com</a>
+    </div>
+  </header>
+
+  <section class="cv-section cv-profile">
+    <h2 class="cv-section-title">Profile</h2>
+    <p>Senior data analyst and analytics architect with 14+ years building measurement infrastructure from scratch. Specialist in the gap between <strong>instrumentation</strong> and <strong>human behaviour</strong> &mdash; designing the tracking that surfaces what users can't or won't tell you directly, and the frameworks that translate it into decisions. Eleven Amplitude certifications across every tier, including both Expert credentials (Analysis and Data Management).</p>
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Skills</h2>
+    <div class="cv-skills">
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">Analytics</span>
+        <span class="cv-skill-body">GA4 (certified) &middot; Adobe Analytics (Business Practitioner) &middot; Amplitude (11 certs incl. both Experts) &middot; GTM client- &amp; server-side &middot; Adobe Launch &middot; Mixpanel (vendor evaluation)</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">Data eng.</span>
+        <span class="cv-skill-body">BigQuery (advanced) &middot; SQL (advanced, daily) &middot; Python (pandas, numpy, scipy) &middot; dbt Fundamentals &middot; Snowflake &middot; Databricks Fundamentals &middot; GitHub &middot; Data Mesh Architecture</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">BI</span>
+        <span class="cv-skill-body">Looker Studio (advanced) &middot; SSRS (advanced) &middot; Tableau &middot; Power BI (developing) &middot; BigQuery-native dashboarding</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">MarTech / CDP</span>
+        <span class="cv-skill-body">Bloomreach CDP (Foundations, SMS, Jinja, Engagement) &middot; Oracle Responsys &middot; OneTrust (3 orgs) &middot; Marketing automation analytics</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">Research</span>
+        <span class="cv-skill-body">Sense-Making Methodology (Dervin) &mdash; focus groups, UX question design, user testing &middot; A/B test design &amp; statistical evaluation &middot; Hotjar &middot; SurveyMonkey</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">AI in analytics</span>
+        <span class="cv-skill-body">Claude API &middot; LLM-assisted SQL, documentation, anomaly detection &middot; Prompt Design in Vertex AI (certified) &middot; AI workflow design with human-judgement gates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Experience</h2>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Analytics Architect <span class="at">&middot; Telus Digital</span></p>
+        <p class="cv-role-dates">2024 &mdash; Present</p>
+      </div>
+      <p class="cv-role-meta">100% remote &middot; multi-client enterprise consultancy &middot; clients in consumer electronics, B2B SaaS, e-commerce, travel &middot; currently FTE, standard notice period</p>
+      <ul class="cv-bullets">
+        <li>Lead end-to-end analytics implementation engagements: measurement planning, SDR creation, GTM deployment (client- and server-side), QA, and reporting infrastructure.</li>
+        <li>Built and operated an <strong>AI-assisted alert triage system</strong> for client product telemetry. V1 ran in production 13&ndash;26 April 2026, compressing <strong>230 raw Amplitude alerts to 39 AI-posted findings (83% reduction)</strong> while preserving human-judgement gates (surface, suppress, escalate when warranted, never silence a worsening issue). <strong>Surfaced one critical feature failure the on-call team had missed in human-only review</strong> &mdash; a signal that would have continued silently otherwise. V2 build in progress.</li>
+        <li>Automated 12+ hours per week of manual reporting per client through SQL pipeline development; built standardised Looker Studio and BigQuery dashboards aligned to client KPI frameworks.</li>
+        <li>Designed event schemas and tracking plans tailored to each client's MarTech ecosystem (GA4, Adobe Analytics, Amplitude); led vendor evaluation work including Mixpanel comparison.</li>
+        <li>Lead A/B testing programmes end-to-end: success criteria, guardrails, sample sizing, statistical analysis, and stakeholder-ready synthesis.</li>
+      </ul>
+    </div>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Email &amp; SMS Marketing Manager <span class="at">&middot; Micro Center Inc.</span></p>
+        <p class="cv-role-dates">2023 &mdash; 2025</p>
+      </div>
+      <p class="cv-role-meta">Remote contract (concurrent with Telus Digital) &middot; consumer electronics retail</p>
+      <ul class="cv-bullets">
+        <li>Led the full <strong>migration from Oracle Responsys to Bloomreach CDP</strong> &mdash; redesigned customer data model, event schemas, segmentation logic, and marketing data flows with <strong>zero campaign downtime</strong> and GDPR-compliant consent throughout.</li>
+        <li>Designed lifecycle event tracking architecture and customer identity data model supporting triggered campaign automation. <strong>+10.8% YoY CTR, +5.8% YoY open rate</strong> in the first year on the new platform.</li>
+        <li>Built automated SQL reporting pipelines integrating data from multiple MarTech platforms into unified Looker Studio dashboards.</li>
+        <li>Designed and executed A/B tests across lifecycle campaign touchpoints; analysed results and implemented data-driven optimisations.</li>
+        <li><strong>Managed a team of two designers</strong>, providing strategic direction on campaign design, creative assessment, and performance optimisation.</li>
+      </ul>
+    </div>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Analytics Architect / BI Developer <span class="at">&middot; Stanley Steemer Inc.</span></p>
+        <p class="cv-role-dates">2018 &mdash; 2023</p>
+      </div>
+      <p class="cv-role-meta">National franchise service, 280 locations &middot; Dublin, OH</p>
+      <p class="cv-role-context">Walked into an organisation with mature operations data but no marketing measurement capability. Built the entire marketing analytics and BI layer from scratch.</p>
+      <ul class="cv-bullets">
+        <li>Designed the data architecture; built automated SQL/BigQuery pipelines, SSRS suites, and Looker Studio dashboards; established the KPI framework that gave leadership its first reliable view of performance across 280 locations.</li>
+        <li>Introduced the <strong>single-customer concept and householding data model</strong>, enabling accurate identity resolution across the multi-location estate and unlocking marketing automation and CRM strategy for the first time.</li>
+        <li>Led GA4 beta implementation &mdash; measurement plan, SDR, data layer spec, GTM, and full QA against production data before migration from Universal Analytics.</li>
+        <li>Applied <strong>Sense-Making Methodology (Dervin)</strong> in user-testing sessions; combined with Hotjar and SurveyMonkey to build triangulated user-needs evidence that fed directly into tracking specifications and UX recommendations.</li>
+        <li>Established <strong>A/B testing culture from zero</strong> with previously intuition-driven leadership; by year two, leadership routinely requested data ahead of decisions rather than after.</li>
+        <li>Implemented OneTrust across the full digital estate for GDPR- and CCPA-compliant data collection.</li>
+      </ul>
+    </div>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Digital Business Analyst <span class="at">&middot; Xivic, Inc.</span></p>
+        <p class="cv-role-dates">2018 &mdash; 2019</p>
+      </div>
+      <p class="cv-role-meta">Digital agency &middot; Los Angeles, CA</p>
+      <ul class="cv-bullets">
+        <li>End-to-end analytics tracking for SPA client products: data layer specs, GTM configuration with custom JavaScript, Enhanced Ecommerce, and SDR-driven QA.</li>
+        <li>Built cross-domain tracking, custom dimension mapping, and conversion event schemas; troubleshot using browser dev tools and Omnibug. Implemented OneTrust.</li>
+      </ul>
+    </div>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Web Analyst <span class="at">&middot; Designory / TBWA Worldwide</span></p>
+        <p class="cv-role-dates">2015 &mdash; 2018</p>
+      </div>
+      <p class="cv-role-meta">Premium automotive brand analytics &middot; Long Beach, CA &middot; primary clients: Subaru (primary), Audi (partial)</p>
+      <ul class="cv-bullets">
+        <li>Led GTM migrations and analytics tracking architecture upgrades; wrote data layer specifications and deployed custom tag implementations across multiple client digital estates.</li>
+        <li>Developed custom JavaScript tracking for complex interaction events including video, form abandonment, and cross-domain journeys.</li>
+        <li>Applied <strong>Sense-Making Methodology (Dervin)</strong> in UX question design and user testing for brand clients. Implemented OneTrust at agency level for GDPR-compliant consent management.</li>
+      </ul>
+    </div>
+
+    <div class="cv-role-block">
+      <div class="cv-role-head">
+        <p class="cv-role-title">Digital Communication Specialist <span class="at">&middot; Melody Health / Planned Parenthood</span></p>
+        <p class="cv-role-dates">2011 &mdash; 2015</p>
+      </div>
+      <p class="cv-role-meta">National nonprofit &middot; Santa Ana, CA &middot; Melody Health was a new brand launched within Planned Parenthood</p>
+      <ul class="cv-bullets">
+        <li>Built analytics and BI reporting infrastructure from scratch for the brand launch; defined KPIs and reporting cadences.</li>
+        <li>Facilitated focus groups using <strong>Sense-Making Methodology (Dervin)</strong> to inform brand positioning and content strategy.</li>
+        <li><strong>Grew digital subscriber base from 20,000 to 50,000</strong> through data-driven acquisition funnel analysis and channel-performance optimisation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Education</h2>
+    <div class="cv-edu-row">
+      <div class="cv-edu-main"><strong>MSc, Data Analytics</strong> <span class="school">&middot; Western Governors University</span></div>
+      <span class="cv-edu-dates">2020 &mdash; 2023</span>
+    </div>
+    <p class="cv-edu-sub">Credential ID: 24D4O1C0FTE6</p>
+    <div class="cv-edu-row">
+      <div class="cv-edu-main"><strong>BA, Strategic Communications</strong> <span class="school">&middot; The Ohio State University</span></div>
+      <span class="cv-edu-dates">2006 &mdash; 2011</span>
+    </div>
+    <p class="cv-edu-sub">Minors: Professional Writing, Philosophy</p>
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Certifications</h2>
+    <div class="cv-certs">
+      <div class="cv-cert-group">
+        <p class="cv-cert-group-title">Amplitude (11)</p>
+        <ul class="cv-cert-list">
+          <li><strong>Expert &mdash; Analysis</strong> <span class="cert-meta">&middot; May 2026</span></li>
+          <li><strong>Expert &mdash; Data Management</strong> <span class="cert-meta">&middot; May 2026</span></li>
+          <li>Specialist: Marketing Analytics, Experiment, Data Cleanup <span class="cert-meta">&middot; Mar 2026</span></li>
+          <li>Practitioner: Retention, Acquisition, Monetization <span class="cert-meta">&middot; Mar 2026</span></li>
+          <li>Foundations: Analytics, Experiment, Data Management <span class="cert-meta">&middot; Mar 2026</span></li>
+        </ul>
+      </div>
+
+      <div class="cv-cert-group">
+        <p class="cv-cert-group-title">Analytics &amp; engineering</p>
+        <ul class="cv-cert-list">
+          <li>dbt Fundamentals <span class="cert-meta">&middot; dbt Labs &middot; Apr 2026</span></li>
+          <li>Databricks Fundamentals <span class="cert-meta">&middot; Databricks &middot; Feb 2026</span></li>
+          <li>Adobe Analytics Business Practitioner <span class="cert-meta">&middot; Adobe &middot; Nov 2024</span></li>
+          <li>Google Analytics &middot; Conversion Optimization <span class="cert-meta">&middot; Google &middot; 2015, 2025</span></li>
+          <li>Data Mesh Architecture &middot; SQL: Reporting &amp; Analysis <span class="cert-meta">&middot; LinkedIn &middot; Mar 2026</span></li>
+          <li>Prompt Design in Vertex AI <span class="cert-meta">&middot; Google Cloud &middot; Feb 2026</span></li>
+        </ul>
+      </div>
+
+      <div class="cv-cert-group">
+        <p class="cv-cert-group-title">MarTech / CDP</p>
+        <ul class="cv-cert-list">
+          <li>Bloomreach Engagement: Foundations, SMS, Jinja, Engagement Crash Course <span class="cert-meta">&middot; Bloomreach &middot; Jul&ndash;Aug 2024</span></li>
+        </ul>
+      </div>
+
+      <div class="cv-cert-group">
+        <p class="cv-cert-group-title">Research methodology</p>
+        <ul class="cv-cert-list">
+          <li><strong>Sense-Making Methodology (Dervin)</strong> <span class="cert-meta">&middot; The Ohio State University &middot; Mar 2011</span></li>
+          <li>Decision Science Fundamentals <span class="cert-meta">&middot; LinkedIn &middot; Aug 2025</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Languages</h2>
+    <p class="cv-lang">English (native) &middot; French (A2 spoken, B1 written) &middot; Dutch (A2, actively studying &mdash; Babbel A1 certified Aug 2025)</p>
+  </section>
+
+  <footer class="cv-foot">
+    <span>Full case-study library: <a href="https://fredericlabadie.com">fredericlabadie.com</a></span>
+    <span>Updated May 2026</span>
+  </footer>
+
+</article>
+
+</body>
+</html>

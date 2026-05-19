@@ -73,7 +73,7 @@
           <div class="diff-side">
             <div class="diff-label">Instrumentation</div>
             <div class="diff-title">GTM &middot; Event schema &middot; GA4 &middot; Amplitude &middot; Adobe &middot; BigQuery &middot; dbt</div>
-            <div class="diff-body">14 years designing and deploying measurement infrastructure from scratch &mdash; tracking plans, data layer specs, server-side pipelines, dashboards, and the analytics architecture that makes data trustworthy before anyone analyses it. Eleven Amplitude certifications including Expert &mdash; Data Management.</div>
+            <div class="diff-body">14 years designing and deploying measurement infrastructure from scratch &mdash; tracking plans, data layer specs, server-side pipelines, dashboards, and the analytics architecture that makes data trustworthy before anyone analyses it. Eleven Amplitude certifications spanning every tier, including both Expert credentials (Analysis + Data Management).</div>
           </div>
           <div class="diff-side">
             <div class="diff-label">Methodology &amp; Usability</div>
@@ -178,7 +178,7 @@
 
         <!-- CASE 01 — Question formulation -->
         <div class="container case-study" id="cs-question">
-          <p class="case-meta">Case 01 <span class="case-context">/ Consumer electronics retailer &middot; analytics architect &middot; under NDA</span></p>
+          <p class="case-meta">Case 01 <span class="case-context">/ Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span></p>
           <h3 class="case-title">A workaround broke. The transaction data confessed.</h3>
           <p class="case-subtitle">Quantitative signal &rarr; observation &rarr; Sense-Making questioning &rarr; product capability that shipped.</p>
 
@@ -307,7 +307,7 @@
           <p class="case-subtitle">A production alert-triage system on Claude API + Amplitude, with explicit decisions about where the AI assists and where human judgement is preserved.</p>
 
           <div class="case-argument">
-            The role asks for <strong>AI-enabled telemetry use cases</strong>. The interesting design problem in AI-assisted analytics isn't the model &mdash; it's the <em>gates</em>. A workflow that delegates diagnosis to AI removes the human judgement step that makes triage meaningful. The risk isn't automation; it's <strong>outsourced thinking</strong>.
+            The role asks for <strong>AI-enabled telemetry use cases</strong>. The interesting design problem in AI-assisted analytics isn't the model &mdash; it's the <em>gates</em>. A workflow that delegates diagnosis to AI removes the human judgement step that makes triage meaningful. The risk isn't automation; it's <strong>outsourced thinking</strong>. <strong>V1 ran in production from 13&ndash;26 April 2026</strong> on real on-call volume; currently offline pending V2 build.
           </div>
 
           <p class="ai-human-legend">
@@ -356,8 +356,8 @@
 
           <div class="metrics">
             <div class="metric">
-              <div class="metric-value">100&rarr;4</div>
-              <div class="metric-label">Raw alert firings reduced to grouped findings per cycle</div>
+              <div class="metric-value">230 &rarr; 39</div>
+              <div class="metric-label">Raw alerts compressed to AI-posted findings across the two-week production run (13&ndash;26 April) &mdash; <strong>83% reduction</strong></div>
             </div>
             <div class="metric">
               <div class="metric-value">Hourly</div>
@@ -366,6 +366,14 @@
             <div class="metric">
               <div class="metric-value">0</div>
               <div class="metric-label">Critical issues silenceable by their own prior suppression</div>
+            </div>
+          </div>
+
+          <div class="outcome">
+            <div class="outcome-icon">&rarr;</div>
+            <div>
+              <div class="outcome-title">Outcome &middot; the catch that validated the design</div>
+              <div class="outcome-body">Within the two-week run, the AI surfaced <strong>one critical feature failure the on-call team had missed</strong> in their human-only review &mdash; a signal that would have continued silently otherwise. That single catch is the case for the design: the AI made a signal readable that human review had filtered out as noise, and the human still made the call to act. V2 build in progress.</div>
             </div>
           </div>
 

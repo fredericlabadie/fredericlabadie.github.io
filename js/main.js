@@ -27,7 +27,6 @@ if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const id = entry.target.id;
-      // Only sections that have a matching nav anchor
       if (!anchorMap.has(id)) return;
       navAnchors.forEach(a => a.classList.remove('active'));
       anchorMap.get(id).classList.add('active');
@@ -35,4 +34,33 @@ if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
   }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
 
   sections.forEach(section => observer.observe(section));
+}
+
+// Active-topic highlight in /work/ case TOC
+const tocItems = document.querySelectorAll('.case-toc .case-toc-item[href^="#"]');
+if (tocItems.length && 'IntersectionObserver' in window) {
+  const tocMap = new Map();
+  const topicGroups = [];
+  tocItems.forEach(item => {
+    const id = item.getAttribute('href').slice(1);
+    const group = document.getElementById(id);
+    if (group) {
+      tocMap.set(id, item);
+      topicGroups.push(group);
+    }
+  });
+
+  if (topicGroups.length) {
+    const tocObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        if (!tocMap.has(id)) return;
+        tocItems.forEach(a => a.classList.remove('active'));
+        tocMap.get(id).classList.add('active');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    topicGroups.forEach(g => tocObserver.observe(g));
+  }
 }

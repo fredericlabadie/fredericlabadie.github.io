@@ -685,6 +685,11 @@ section.alt { background: var(--c-bg-alt); }
   background: var(--c-bg-alt);
   text-decoration: none;
 }
+.case-toc-item.active {
+  background: var(--c-bg-alt);
+  box-shadow: inset 3px 0 0 var(--c-accent);
+}
+.case-toc-item.active .case-toc-num { color: var(--c-accent); }
 .case-toc-num {
   font-family: var(--font-sans); font-weight: 600;
   font-size: 32px; line-height: 0.9;
