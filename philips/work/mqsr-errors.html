@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean taxonomy, trustworthy alerts, enriched context &mdash; case study &mdash; Philips pitch</title>
+  <meta name="description" content="Three layers of remediation on a noisy alert channel — threshold redesign, hierarchical error-category IDs, and context enrichment. The Philips brief explicitly names this kind of work." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Clean taxonomy, trustworthy alerts, enriched context &mdash; for the Philips brief" />
+  <meta property="og:description" content="Three layers of remediation on a noisy alert channel." />
+  <meta property="og:url" content="https://fredericlabadie.com/philips/work/mqsr-errors.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clean taxonomy, trustworthy alerts, enriched context &mdash; for the Philips brief" />
+  <meta name="twitter:description" content="Three layers of remediation on a noisy alert channel." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="philips-microsite">
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/philips/" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Philips &middot; UX Telemetry Expert pitch</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="/philips/">Home</a></li>
+        <li><a href="/philips/work/" aria-current="page">Work</a></li>
+        <li><a href="/philips/about/">About</a></li>
+        <li><a href="/philips/contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; for the Philips brief &middot; Topic 02 &middot; Error taxonomy</p>
+        <h1>Clean taxonomy, trustworthy alerts, enriched context.</h1>
+        <p class="hero-subtitle">Three layers of remediation on an alert channel where genuine checkout failures were buried in noise from low-traffic Active% triggers.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ Major quick-service restaurant &middot; Amplitude monitors</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="callout">
+            <div class="callout-label">Why this is in the Philips selection</div>
+            <div class="callout-body">
+              <strong>The Philips brief explicitly names error taxonomy and alert engineering.</strong> This is the case behind that claim &mdash; the hierarchical category IDs, threshold redesign, and the principle that error events must carry the same context as their success counterparts. The discipline transfers directly to clinical telemetry, where an alert that doesn't carry enough context to action is worse than no alert at all.
+            </div>
+          </div>
+
+          <div class="case-argument">
+            Three layers of remediation on an alert channel where genuine checkout failures were buried in noise from low-traffic Active% triggers. <strong>Error events must carry the same context as their success counterparts</strong> &mdash; otherwise alerting is correct but actionable only with detective work.
+          </div>
+
+          <div class="flow">
+            <div class="flow-step">
+              <div class="flow-num">01</div>
+              <div class="flow-label">Threshold redesign</div>
+              <div class="flow-desc">Redesigned alert thresholds (absolute rate + rate-of-change) and added engineering-facing troubleshooting guidance directly on each chart, so the alert itself carries the start of the diagnosis.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">02</div>
+              <div class="flow-label">Error-category ID scheme</div>
+              <div class="flow-desc">Designed a hierarchical, stable error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with deterministic mapping rules and governance guidelines to prevent schema drift over time.</div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-num">03</div>
+              <div class="flow-label">Context enrichment</div>
+              <div class="flow-desc">Added <code>cart_id</code> to <code>Checkout Started Error Received</code> events so engineering could correlate specific basket instances to checkout failures &mdash; same context level as success events.</div>
+            </div>
+          </div>
+
+          <p>The taxonomy work directly reduces false positives in the AI alert triage system &mdash; see <a href="/philips/work/ai-alert-triage.html">the AI workflow case &rarr;</a>.</p>
+
+          <div class="tags">
+            <span class="tag">Amplitude monitors</span>
+            <span class="tag">Error taxonomy design</span>
+            <span class="tag">Alert engineering</span>
+            <span class="tag">Schema governance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the Philips selection &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="/philips/work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Philips selection &mdash; <em>ten cases, six topics</em>.</span>
+              <span class="deeper-body">The curated case library, mapped against the UX Telemetry Expert brief.</span>
+              <span class="deeper-cta">Open the selection &rarr;</span>
+            </a>
+            <a class="deeper-card" href="/philips/about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and the clinical-domain calibration paragraph.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="/philips/contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Pre-filled subject for role 579397.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

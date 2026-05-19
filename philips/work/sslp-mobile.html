@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From "what should we measure?" to 30+ shipped tickets &mdash; case study &mdash; Philips pitch</title>
+  <meta name="description" content="Greenfield mobile UX-telemetry layer across iOS and Android with consent management built in — directly mapped to the Philips UX Telemetry Expert instrumentation responsibilities." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="From &quot;what should we measure?&quot; to 30+ shipped tickets &mdash; for the Philips brief" />
+  <meta property="og:description" content="Greenfield mobile UX-telemetry layer across iOS and Android with consent management built in." />
+  <meta property="og:url" content="https://fredericlabadie.com/philips/work/sslp-mobile.html" />
+  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="From &quot;what should we measure?&quot; to 30+ shipped tickets &mdash; for the Philips brief" />
+  <meta name="twitter:description" content="Greenfield mobile UX-telemetry layer across iOS and Android with consent management built in." />
+  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="philips-microsite">
+  <a class="skip-link" href="#case">Skip to case</a>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/philips/" class="nav-brand">
+        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Philips &middot; UX Telemetry Expert pitch</span>
+      </a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="/philips/">Home</a></li>
+        <li><a href="/philips/work/" aria-current="page">Work</a></li>
+        <li><a href="/philips/about/">About</a></li>
+        <li><a href="/philips/contact/">Contact</a></li>
+      </ul>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="page-intro hero">
+      <div class="container">
+        <p class="eyebrow">Case study &middot; for the Philips brief &middot; Topic 02 &middot; Instrumentation</p>
+        <h1>From "what should we measure?" to 30+ shipped tickets.</h1>
+        <p class="hero-subtitle">Greenfield mobile UX-telemetry layer across iOS and Android &mdash; spec to production, with cross-platform parity and consent built in.</p>
+        <p class="case-meta" style="margin-top: 28px;">
+          <span class="case-context">/ State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="case">
+      <div class="section-body">
+        <div class="container">
+
+          <div class="callout">
+            <div class="callout-label">Why this is in the Philips selection</div>
+            <div class="callout-body">
+              <strong>Direct mapping to the UX Telemetry Expert instrumentation responsibilities.</strong> Cross-platform telemetry architecture with consent management built in from the start (TrustArc, OneTrust). The shape of the work &mdash; schema design, SDK implementation, QA, production deployment with privacy guardrails &mdash; is the same shape Philips needs across its product estate. The state-regulated context here forced consent-aware tagging discipline that translates directly to a clinical/regulated environment.
+            </div>
+          </div>
+
+          <div class="case-argument">
+            A brand-new mobile app with zero prior instrumentation. The deliverable wasn't a dashboard &mdash; it was the analytics layer the dashboards run on, end to end: taxonomy, schema, SDK implementation, QA, and production deployment across both platforms.
+          </div>
+
+          <div class="card-row card-row-3">
+            <div class="card accent">
+              <div class="card-label">Event schema design</div>
+              <div class="card-body">Full GA4 e-commerce taxonomy (<code>purchase</code>, <code>add_to_cart</code>, <code>view_item</code>, <code>begin_checkout</code>, <code>view_cart</code>, <code>refund</code>) with required <code>items</code> array, <code>value</code>, <code>currency</code>, <code>transaction_id</code>. Screen-view coverage across core, auth, permission, and system-state screens.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">Interaction telemetry</div>
+              <div class="card-body">Bottom-nav events, search-query submission with results count, PDP product metadata on every event, barcode-scanner interactions with full payload, account-management flows, retention cohorts in GA4 Explore.</div>
+            </div>
+            <div class="card accent">
+              <div class="card-label">QA &amp; governance</div>
+              <div class="card-body">GA4 DebugView for real-time event validation, real-device testing iOS + Android, regression QA checklists per sprint, privacy-compliance review before any PII-adjacent property was specced, data-governance sign-off from client stakeholders.</div>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-value">30+</div>
+              <div class="metric-label">Jira tickets authored, owned, and shipped to production for the mobile greenfield instrumentation</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">iOS &middot; Android &middot; Web</div>
+              <div class="metric-label">Cross-platform schema parity, audited and ticketed where gaps existed</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">TrustArc &middot; OneTrust</div>
+              <div class="metric-label">Consent management integrated with tag configuration in production</div>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">GA4 (web + app)</span>
+            <span class="tag">Firebase SDK</span>
+            <span class="tag">Segment CDP</span>
+            <span class="tag">GTM</span>
+            <span class="tag">Solution Design References</span>
+            <span class="tag">Cross-platform parity</span>
+            <span class="tag">Consent management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="alt">
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Next</p>
+          <h2 class="section-heading">More from the Philips selection &middot; or get in touch.</h2>
+
+          <div class="deeper deeper-three">
+            <a class="deeper-card" href="/philips/work/">
+              <span class="deeper-label">More cases</span>
+              <span class="deeper-title">Philips selection &mdash; <em>ten cases, six topics</em>.</span>
+              <span class="deeper-body">The curated case library, mapped against the UX Telemetry Expert brief.</span>
+              <span class="deeper-cta">Open the selection &rarr;</span>
+            </a>
+            <a class="deeper-card" href="/philips/about/">
+              <span class="deeper-label">About</span>
+              <span class="deeper-title">Bio, skills, certifications.</span>
+              <span class="deeper-body">The longer version &mdash; methodology, credentials, and the clinical-domain calibration paragraph.</span>
+              <span class="deeper-cta">Read more &rarr;</span>
+            </a>
+            <a class="deeper-card" href="/philips/contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Pre-filled subject for role 579397.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>Set in IBM Plex Sans &amp; Mono</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
