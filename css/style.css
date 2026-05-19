@@ -759,9 +759,15 @@ section.alt { background: var(--c-bg-alt); }
 .about-portrait-grid,
 .about-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
   gap: 48px;
   margin-bottom: 56px;
+}
+.about-portrait-grid {
+  grid-template-columns: 280px 1fr;
+}
+.about-grid {
+  grid-template-columns: 1fr 280px;
+  align-items: start;
 }
 .portrait {
   margin: 0;
@@ -1297,8 +1303,8 @@ section.alt { background: var(--c-bg-alt); }
   .cert-grid { grid-template-columns: 1fr 1fr; }
   .project-grid { grid-template-columns: 1fr 1fr; }
   .case-toc { grid-template-columns: 1fr; }
-  .about-portrait-grid,
-  .about-grid { grid-template-columns: 220px 1fr; gap: 32px; }
+  .about-portrait-grid { grid-template-columns: 220px 1fr; gap: 32px; }
+  .about-grid { grid-template-columns: 1fr 220px; gap: 32px; }
   .flow { grid-template-columns: 1fr 1fr; }
   .card-row-3 { grid-template-columns: 1fr; }
   .dash-mock-kpis { grid-template-columns: 1fr 1fr; }
