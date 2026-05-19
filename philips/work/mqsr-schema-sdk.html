@@ -79,7 +79,7 @@
           </div>
 
           <div class="case-argument">
-            iOS was systematically undercounting <code>Application Opened</code> events compared to Android. Investigation traced the root cause to the app's initialisation sequence: <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed. The Segment SDK 1.9.1 <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code> &mdash; cold-launch events fired before the gate flipped were <strong>silently dropped</strong>, not queued.
+            Cross-platform parity failures almost always trace back to <strong>startup-order assumptions inside a vendor SDK</strong> &mdash; the kind of detail that only shows up at runtime, on cold launch, in one OS. The fix isn't reading the docs. It's reading the SDK source, version-pinned to what actually ships, until the silent drop becomes visible.
           </div>
 
           <div class="card-row card-row-2">
