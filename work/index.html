@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work &mdash; Frederic Labadie, Analytics Architect</title>
   <meta name="description" content="The full case library: fourteen years of analytics engagements organised into seven topic groups — question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering." />
-  <meta name="theme-color" content="#15181d" />
+  <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -40,7 +40,7 @@
         <li><a href="../">Home</a></li>
         <li><a href="../work/" aria-current="page">Work</a></li>
         <li><a href="../about/">About</a></li>
-        <li><a href="mailto:Frederic.Labadie@gmail.com">Contact</a></li>
+        <li><a href="../contact/">Contact</a></li>
       </ul>
       <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -57,7 +57,6 @@
         <h1>Fourteen years of engagements, grouped by the <em>shape of the problem</em>.</h1>
         <p>Seven topic groups, each one a different facet of the work. Marquee cases get the full anatomy &mdash; argument, flows, metrics, outcome. The rest sit as compact entries so you can scan by interest. Names anonymised where engagements are under NDA.</p>
         <p>If you're here from the landing page looking for the deep dive, that's where you are. If you want to know more about <em>me</em> rather than the work, <a href="../about/">about &rarr;</a> is the next page over.</p>
-        <a class="page-intro-back" href="../">&larr; Back to home</a>
       </div>
     </section>
 
@@ -230,6 +229,36 @@
             <span class="tag">Transaction analysis</span>
             <span class="tag">Influence without authority</span>
           </div>
+        </div>
+
+        <!--
+          FAILURE CASE — DRAFT CONTENT
+          ────────────────────────────────────────────────────────────
+          This is scaffold content. Swap the engagement, the specifics
+          of what went wrong, and what changed in your practice as a
+          result. Keeping the shape (brief / what shipped / what was
+          actually wrong / what changed) preserves the calibration move.
+        -->
+        <div class="container">
+          <article class="case-card" id="cs-failure-wrong-question">
+            <div class="case-card-head">
+              <span class="case-card-meta">Compact &middot; Reflection</span>
+              <span class="case-card-context">[Engagement &middot; year] &middot; what the case library doesn't show by default</span>
+            </div>
+            <h4 class="case-card-title">The time I instrumented the wrong question.</h4>
+            <p class="case-card-body">
+              <em>Draft &mdash; replace with the actual engagement.</em> The brief asked for funnel instrumentation on a multi-step checkout. I built the funnel cleanly &mdash; structured taxonomy, GA events, stakeholder-friendly dashboards &mdash; and shipped it. Three months in, conversion rates were stable but revenue was sliding. Observation eventually showed the loss was <strong>upstream</strong>: returning customers were abandoning before they ever reached the funnel, because of a category-page change nobody had instrumented for. The funnel I'd built was answering the wrong question &mdash; "how do users complete checkout?" &mdash; when the question that actually mattered was "what changed about why people came back at all?"
+            </p>
+            <p class="case-card-body">
+              <strong>What changed in my practice:</strong> every engagement since then opens with a structured discovery pass &mdash; neutral questioning with operators and stakeholders, observation of the surrounding workflow &mdash; <em>before</em> the tracking plan exists. The instrumentation now has to defend itself against "is this the question worth answering?" before it gets specced. The Topic 01 Question Formulation work above is the direct product of getting this wrong once.
+            </p>
+            <div class="tags">
+              <span class="tag">Failure case</span>
+              <span class="tag">Question formulation</span>
+              <span class="tag">Discovery-first instrumentation</span>
+              <span class="tag">Calibration</span>
+            </div>
+          </article>
         </div>
 
         <!-- ===== TOPIC 02 — INSTRUMENTATION ===== -->
@@ -1002,25 +1031,31 @@
       <div class="section-head">
         <div class="num">09</div>
         <div class="label">Next</div>
-        <div class="title">Two doors out</div>
+        <div class="title">Three doors out</div>
       </div>
       <div class="section-body">
         <div class="container">
           <p class="section-eyebrow">Next</p>
           <h2 class="section-heading">If any of this maps to a role you're hiring for, let's talk.</h2>
 
-          <div class="deeper">
+          <div class="deeper deeper-three">
             <a class="deeper-card" href="../about/">
               <span class="deeper-label">More on me</span>
               <span class="deeper-title">About &mdash; bio, skills, certifications, methodology.</span>
               <span class="deeper-body">The longer version: HIPAA exposure, Sense-Making practice, the full Amplitude credential stack, and what I'm available for.</span>
               <span class="deeper-cta">Read more &rarr;</span>
             </a>
-            <a class="deeper-card" href="mailto:Frederic.Labadie@gmail.com">
-              <span class="deeper-label">Direct</span>
-              <span class="deeper-title">Email &mdash; <em>Frederic.Labadie@gmail.com</em></span>
-              <span class="deeper-body">Currently FTE at Telus Digital; standard notice period applies. CV (PDF) available <a href="../assets/resume/frederic-labadie-cv.pdf" download>here &darr;</a>.</span>
-              <span class="deeper-cta">Get in touch &rarr;</span>
+            <a class="deeper-card" href="../assets/resume/frederic-labadie-cv.pdf" download>
+              <span class="deeper-label">Quick read</span>
+              <span class="deeper-title">CV &mdash; <em>one page</em>.</span>
+              <span class="deeper-body">Fourteen years on a single A4: profile, skills, certifications, and selected work. Updated May 2026.</span>
+              <span class="deeper-cta">Download PDF &darr;</span>
+            </a>
+            <a class="deeper-card" href="../contact/">
+              <span class="deeper-label">Get in touch</span>
+              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
+              <span class="deeper-body">Email, LinkedIn, GitHub, the CV, plus what I'm currently open to and a short note on what makes a useful first message. Happy to start with a working session, a take-home, or a structured walkthrough of any case above.</span>
+              <span class="deeper-cta">Open contact page &rarr;</span>
             </a>
           </div>
         </div>

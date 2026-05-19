@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frederic Labadie &mdash; Analytics Architect, Amsterdam</title>
   <meta name="description" content="Analytics architect in Amsterdam. I sit at the intersection of instrumentation and qualitative methodology — designing the tracking that surfaces what users can't or won't tell you directly, and the frameworks that help teams make decisions from it." />
-  <meta name="theme-color" content="#15181d" />
+  <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -33,14 +33,14 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="" class="nav-brand">
+      <a href="/" class="nav-brand">
         Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
       </a>
       <ul class="nav-links" id="primary-nav">
-        <li><a href="" aria-current="page">Home</a></li>
+        <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="work/">Work</a></li>
         <li><a href="about/">About</a></li>
-        <li><a href="mailto:Frederic.Labadie@gmail.com">Contact</a></li>
+        <li><a href="contact/">Contact</a></li>
       </ul>
       <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -82,6 +82,24 @@
         </div>
       </div>
     </section>
+
+    <!-- CURRENTLY BAND -->
+    <aside class="currently-band" aria-label="Current and recent work">
+      <div class="currently-band-inner">
+        <div class="currently-band-item">
+          <span class="currently-band-label">Now building</span>
+          <span class="currently-band-value">Hospital Readmissions dbt &mdash; Snowflake + CMS HRRP &middot; target 30 May 2026</span>
+        </div>
+        <div class="currently-band-item">
+          <span class="currently-band-label">Last shipped</span>
+          <span class="currently-band-value">AI Alert Triage V1 &mdash; production 13&ndash;26 April 2026</span>
+        </div>
+        <div class="currently-band-item">
+          <span class="currently-band-label">Site updated</span>
+          <span class="currently-band-value">19 May 2026</span>
+        </div>
+      </div>
+    </aside>
 
     <!-- APPROACH -->
     <section id="approach">
@@ -174,10 +192,80 @@
       </div>
     </section>
 
+    <!-- PUBLIC PROJECTS preview -->
+    <section id="projects-preview">
+      <div class="section-head">
+        <div class="num">03</div>
+        <div class="label">Public projects</div>
+        <div class="title">Independent builds &middot; live, open source</div>
+      </div>
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Public projects</p>
+          <h2 class="section-heading">What I build when no one's briefed me.</h2>
+          <p class="section-sub">Three live independent projects. The code is open, the deployment is mine, and the argument lives in the project itself. Full write-ups on the <a href="work/#projects">work page</a>.</p>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Quarto &middot; Hugging Face &middot; Vercel</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>Dervin's SMM &mdash; a Sense-Making study guide</h3>
+              <p>A practitioner's guide and live question rewriter for Brenda Dervin's Sense-Making Methodology &mdash; the qualitative framework that pairs with quantitative analytics. Includes a Hugging Face&ndash;routed neutral-question rewriter you can run on your own survey copy.</p>
+              <div class="project-links">
+                <a href="https://smm.fredericlabadie.com" target="_blank" rel="noopener">Live site &rarr;</a>
+                <a href="https://github.com/fredericlabadie/DervinsSMM_Course" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Next.js &middot; claude-sonnet-4-5 &middot; Supabase + pgvector</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>Writers Room &mdash; multi-agent collaborative workspace</h3>
+              <p>Four room types, five specialist agents per room, parallel and sequential agent chains, vector RAG over uploaded documents. Where I work through what AI-assisted workflow design looks like when the human stays as director.</p>
+              <div class="project-links">
+                <a href="https://writersroom.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
+                <a href="https://github.com/fredericlabadie/Writers-room" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Next.js &middot; Claude (Sonnet + Haiku) &middot; Spotify API</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>VibeReader &mdash; book &harr; song</h3>
+              <p>Book &rarr; curated tracklist; song &rarr; matching novels. Claude reasons about mood and thematic resonance rather than genre tags. Sonnet for the creative call, Haiku for fast author disambiguation &mdash; as much a model-selection exercise as a product.</p>
+              <div class="project-links">
+                <a href="https://vibereader.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
+                <a href="https://github.com/fredericlabadie/VibeReader" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="gh-activity" aria-label="GitHub contribution graph">
+            <div class="gh-activity-head">
+              <span class="gh-activity-label">Recent activity</span>
+              <span class="gh-activity-meta">Public commits, last 12 months &middot; <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">github.com/fredericlabadie &rarr;</a></span>
+            </div>
+            <div class="gh-activity-graph">
+              <img src="https://ghchart.rshah.org/2c3e50/fredericlabadie"
+                   alt="GitHub contribution graph for fredericlabadie — public commits over the last twelve months"
+                   loading="lazy"
+                   width="700" height="110" />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- SELECTED WORK -->
     <section id="selected-work">
       <div class="section-head">
-        <div class="num">03</div>
+        <div class="num">04</div>
         <div class="label">Selected work</div>
         <div class="title">Three pieces &middot; one per principle</div>
       </div>
@@ -326,7 +414,7 @@
     <!-- ABOUT preview -->
     <section id="about" class="alt">
       <div class="section-head">
-        <div class="num">04</div>
+        <div class="num">05</div>
         <div class="label">About</div>
         <div class="title">Analyst, architect &middot; Amsterdam</div>
       </div>
@@ -347,6 +435,14 @@
               <p>Fourteen years building the analytics layer that lets organisations stop guessing &mdash; data models, tracking instrumentation, KPI frameworks, dashboards, and the experimentation culture that makes any of it useful. Most recently as <strong>Analytics Architect at Telus Digital</strong>; before that, five years at <strong>Stanley Steemer</strong> building marketing analytics from scratch across 280 franchise locations.</p>
               <p>I've worked under <strong>HIPAA on protected data</strong>, alongside enterprise consent regimes (OneTrust, TrustArc). My usability research practice is built on Sense-Making Methodology paired with the standard practitioner toolkit &mdash; the qualitative side of the work, not an afterthought to the quantitative side.</p>
               <p>Based in Amsterdam. EU work authorisation. Currently FTE at Telus Digital; standard notice period applies. The longer version &mdash; bio, skills, eleven Amplitude credentials, two warehouses, endorsements &mdash; lives on the <a href="about/">about page &rarr;</a>.</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="callout-label">Calibration &middot; what I bring, what I'm still growing into</div>
+            <div class="callout-body">
+              <strong>What I bring:</strong> fourteen years of measurement infrastructure across the full stack (GTM &rarr; BigQuery &rarr; Amplitude &rarr; dbt), Sense-Making Methodology paired with the standard usability practitioner toolkit, eleven Amplitude credentials including both Expert tracks, HIPAA exposure on protected data, and a track record of building analytics layers that survive the people who built them.<br><br>
+              <strong>What I'm still growing into:</strong> people management at scale (real but scoped experience to date &mdash; two designers and informal mentoring of junior analysts), a deeper Data Science model-attached practice (foundations from the MSc are there; no production-deployed model attribution to point to yet), and Dutch fluency above conversational (currently A2). Said plainly so you can weight the rest honestly.
             </div>
           </div>
 
@@ -371,7 +467,7 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-head">
-        <div class="num">05</div>
+        <div class="num">06</div>
         <div class="label">Contact</div>
         <div class="title">Open to senior roles &middot; Amsterdam</div>
       </div>
@@ -385,9 +481,9 @@
               Open to senior analytics architect, product analytics, analytics engineering, and UX-telemetry roles in Amsterdam &mdash; ideally where the measurement layer is treated as a research instrument, not a reporting one. Currently FTE at Telus Digital; standard notice period applies.
             </p>
             <div class="contact-list">
-              <a href="mailto:Frederic.Labadie@gmail.com">
-                <span class="label">Email</span>
-                <span>Frederic.Labadie@gmail.com</span>
+              <a href="contact/">
+                <span class="label">Get in touch</span>
+                <span>Email, LinkedIn, GitHub &rarr;</span>
               </a>
               <a href="assets/resume/frederic-labadie-cv.pdf" download>
                 <span class="label">CV / Resume</span>
