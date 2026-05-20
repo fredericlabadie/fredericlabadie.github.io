@@ -25,7 +25,7 @@ Drop the exported PDF in this folder using that exact filename.
 2. `Cmd+P` &rarr; Destination: **Save as PDF** &rarr; Layout: Portrait, Paper size: A4, Margins: **None** (the HTML has its own `@page` margins), Scale: 100%, Headers and footers: **Off**, Background graphics: **On**.
 3. Save as `frederic-labadie-cv.pdf` in this folder.
 
-The HTML mirrors the markdown source and uses the same design system as the site (IBM Plex on white, slate + crimson hairlines). Output should fit on 1&ndash;2 A4 pages.
+The HTML mirrors the markdown source and uses the same design system as the site (IBM Plex on white, slate + crimson hairlines). Output should fit on 2 A4 pages.
 
 **Alternative routes:**
 
@@ -40,7 +40,7 @@ The HTML mirrors the markdown source and uses the same design system as the site
     -V colorlinks=true \
     -V linkcolor=NavyBlue
   ```
-- **VS Code Markdown PDF extension** or **Typora / Obsidian export**: also fine. Aim for a 1&ndash;2 page output.
+- **VS Code Markdown PDF extension** or **Typora / Obsidian export**: also fine. Aim for a 2-page output.
 
 Keep the file size reasonable (under 1&nbsp;MB).
 
