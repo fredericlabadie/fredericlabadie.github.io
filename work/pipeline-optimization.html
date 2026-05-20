@@ -94,7 +94,7 @@
             </div>
             <div class="card accent">
               <div class="card-label">Result</div>
-              <div class="card-body"><strong>~50% cost reduction</strong> across both pipeline and dashboard queries. Heavy-usage dashboard query cost halved (~$200 &rarr; ~$100/day). The 1.2 TB <code>GA4_Event_Params</code> intermediate table and the <code>pdp_pageview_params</code> table both retired. A pipeline that's cheaper, faster, easier to maintain, and more consistent in its output &mdash; with the channel-grouping logic now defined in one place instead of three. The optimisation here wasn't about writing faster queries; it was about <strong>understanding the full data flow, identifying where costs were actually coming from, and redesigning around a single shared computation rather than repeated independent ones</strong>.</div>
+              <div class="card-body">The optimisation wasn't about writing faster queries &mdash; it was about <strong>understanding the full data flow, identifying where costs were actually coming from, and redesigning around a single shared computation rather than repeated independent ones</strong>. The pipeline ended cheaper, faster, easier to maintain, and more consistent in its output: channel-grouping logic now defined in one place instead of three, two intermediate tables retired without information loss. The decision pattern transfers to any cost-conscious analytics rebuild &mdash; spend the modelling work once.</div>
             </div>
           </div>
 

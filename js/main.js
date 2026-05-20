@@ -31,7 +31,10 @@ if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
       navAnchors.forEach(a => a.classList.remove('active'));
       anchorMap.get(id).classList.add('active');
     });
-  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    // Threshold array catches short sections (e.g. Contact at page bottom)
+    // that would otherwise pass through the 5%-tall detection band before
+    // tripping the observer.
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.1, 0.25, 0.5] });
 
   sections.forEach(section => observer.observe(section));
 }
@@ -59,7 +62,7 @@ if (tocItems.length && 'IntersectionObserver' in window) {
         tocItems.forEach(a => a.classList.remove('active'));
         tocMap.get(id).classList.add('active');
       });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.1, 0.25, 0.5] });
 
     topicGroups.forEach(g => tocObserver.observe(g));
   }

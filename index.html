@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -55,12 +55,10 @@
     <section class="hero" id="hero">
       <div class="container">
         <p class="eyebrow">Amsterdam &middot; Open to next role</p>
+        <p class="hero-currently"><span class="hero-currently-label">Now building</span> Hospital Readmissions dbt (target 30 May 2026) &middot; <span class="hero-currently-label">last shipped</span> AI Alert Triage V1 (Apr 2026)</p>
         <h1>The gap between what users <em class="say">say</em> and what they <em class="do">do</em> is where the work lives.</h1>
         <p class="hero-body">
-          I'm a data analyst and analytics architect. What I do specifically is sit at the intersection of <strong>instrumentation</strong> and <strong>human behaviour</strong> &mdash; designing the tracking that surfaces what users can't or won't tell you directly, and the frameworks that help teams make decisions from it.
-        </p>
-        <p class="hero-body">
-          My background covers both sides: technical implementation from GTM to BigQuery to Amplitude, and qualitative research through <strong>Sense-Making Methodology</strong>. Most practitioners are strong on one side. I work across both.
+          Analytics architect in Amsterdam. I work across <strong>instrumentation</strong> and <strong>qualitative methodology</strong> &mdash; the two sides most practitioners pick one of.
         </p>
 
         <div class="hero-actions">
@@ -84,28 +82,142 @@
       </div>
     </section>
 
-    <!-- CURRENTLY BAND -->
-    <aside class="currently-band" aria-label="Current and recent work">
-      <div class="currently-band-inner">
-        <div class="currently-band-item">
-          <span class="currently-band-label">Now building</span>
-          <span class="currently-band-value">Hospital Readmissions dbt &mdash; BigQuery + CMS HRRP &middot; target 30 May 2026</span>
+    <!-- SELECTED WORK -->
+    <section id="selected-work">
+      <div class="section-head">
+        <div class="num">01</div>
+        <div class="label">Selected work</div>
+        <div class="title">Three pieces &middot; one per principle</div>
+      </div>
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Selected work</p>
+          <h2 class="section-heading">Three pieces, one from each side of the philosophy.</h2>
+          <p class="section-sub">A question-first discovery that became a product capability. An adoption-first engagement that survived the team that built it. An AI workflow designed to preserve the human judgement step, not replace it. The <a href="work/">full case library</a> has fifteen more across seven topic groups.</p>
+
+          <a class="callout callout-link" href="work/ux-research-home-services.html">
+            <div class="callout-label">Featured methodology piece &middot; standalone case study</div>
+            <div class="callout-body">
+              <strong>Mixed-Methods UX Research &mdash; quantitative telemetry paired with SMM-informed qualitative research at a national home services franchise.</strong> A method for diagnosing <em>gap type</em>, not just gap location &mdash; the case study behind the talk "Finding the Hypothesis When You Only Know the Question". <span class="callout-cta">Read the case &rarr;</span>
+            </div>
+          </a>
         </div>
-        <div class="currently-band-item">
-          <span class="currently-band-label">Last shipped</span>
-          <span class="currently-band-value">AI Alert Triage V1 &mdash; production 13&ndash;26 April 2026</span>
+
+        <!-- MARQUEE 01: Shadow IT -->
+        <div class="container" id="cs-shadow-it">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case 01 &middot; Question formulation</span>
+              <span class="case-card-context">Consumer electronics retailer &middot; 2023&ndash;2025</span>
+            </div>
+            <h4 class="case-card-title"><a href="work/shadow-it.html">A workaround broke. The transaction data confessed.</a></h4>
+            <p class="case-card-body">An anomaly inside an unrelated lifecycle build led to a Sense-Making conversation with floor staff, surfacing a broken shadow IT tool the designed system never supported. The client built and shipped a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with a second iteration underway.</p>
+            <p class="case-card-body"><a href="work/shadow-it.html">Read the full case &rarr;</a></p>
+          </article>
         </div>
-        <div class="currently-band-item">
-          <span class="currently-band-label">Site updated</span>
-          <span class="currently-band-value">19 May 2026</span>
+
+        <!-- MARQUEE 02: SSLP Client Enablement -->
+        <div class="container" id="cs-enablement">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case 02 &middot; Adoption</span>
+              <span class="case-card-context">State-regulated retail platform &middot; 2025&ndash;2026</span>
+            </div>
+            <h4 class="case-card-title"><a href="work/sslp-enablement.html">The system survived the people who built it.</a></h4>
+            <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM, with a three-session structured handoff designed so the client team could maintain and extend it independently. <strong>38 analyst hours recovered per month; zero ramp-up time when the team turned over.</strong></p>
+            <p class="case-card-body"><a href="work/sslp-enablement.html">Read the full case &rarr;</a></p>
+          </article>
+        </div>
+
+        <!-- MARQUEE 03: AI Alert Triage -->
+        <div class="container" id="cs-ai-triage">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case 03 &middot; AI workflow design</span>
+              <span class="case-card-context">Major quick-service restaurant brand &middot; production</span>
+            </div>
+            <h4 class="case-card-title"><a href="work/ai-alert-triage.html">Designing AI workflows that don't outsource the thinking.</a></h4>
+            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran on real on-call volume (13&ndash;26 April 2026): <strong>230 alerts &rarr; 39 posts, 83% reduction</strong>, surfacing one critical feature failure human-only review had missed. V2 build in progress.</p>
+            <p class="case-card-body"><a href="work/ai-alert-triage.html">Read the full case &rarr;</a></p>
+          </article>
         </div>
       </div>
-    </aside>
+    </section>
+
+    <!-- PUBLIC PROJECTS preview -->
+    <section id="projects-preview" class="alt">
+      <div class="section-head">
+        <div class="num">02</div>
+        <div class="label">Public projects</div>
+        <div class="title">Independent builds &middot; live, open source</div>
+      </div>
+      <div class="section-body">
+        <div class="container">
+          <p class="section-eyebrow">Public projects</p>
+          <h2 class="section-heading">What I build when no one's briefed me.</h2>
+          <p class="section-sub">Three live independent projects. The code is open, the deployment is mine, and the argument lives in the project itself. Full write-ups on the <a href="work/#projects">work page</a>.</p>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Quarto &middot; Hugging Face &middot; Vercel</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>Dervin's SMM &mdash; a Sense-Making study guide</h3>
+              <p>A practitioner's guide to Brenda Dervin's Sense-Making Methodology, paired with a live Hugging Face&ndash;routed question rewriter you can run on your own survey copy.</p>
+              <div class="project-links">
+                <a href="https://smm.fredericlabadie.com" target="_blank" rel="noopener">Live site &rarr;</a>
+                <a href="https://github.com/fredericlabadie/DervinsSMM_Course" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Next.js &middot; claude-sonnet-4-5 &middot; Supabase + pgvector</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>Writers Room &mdash; multi-agent collaborative workspace</h3>
+              <p>Four room types, five specialist agents per room, parallel and sequential agent chains, vector RAG over uploaded documents. Where I work through what AI-assisted workflow design looks like when the human stays as director.</p>
+              <div class="project-links">
+                <a href="https://writersroom.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
+                <a href="https://github.com/fredericlabadie/Writers-room" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-head">
+                <span class="project-stack">Next.js &middot; Claude (Sonnet + Haiku) &middot; Spotify API</span>
+                <span class="project-status live">Live</span>
+              </div>
+              <h3>VibeReader &mdash; book &harr; song</h3>
+              <p>Book &rarr; curated tracklist; song &rarr; matching novels. Claude reasons about mood and thematic resonance rather than genre tags &mdash; as much a model-selection exercise as a product.</p>
+              <div class="project-links">
+                <a href="https://vibereader.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
+                <a href="https://github.com/fredericlabadie/VibeReader" target="_blank" rel="noopener">Source</a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="gh-activity" aria-label="GitHub contribution graph">
+            <div class="gh-activity-head">
+              <span class="gh-activity-label">Recent activity</span>
+              <span class="gh-activity-meta">Public commits, last 12 months &middot; <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">github.com/fredericlabadie &rarr;</a></span>
+            </div>
+            <div class="gh-activity-graph">
+              <img src="https://ghchart.rshah.org/2c3e50/fredericlabadie"
+                   alt="GitHub contribution graph for fredericlabadie — public commits over the last twelve months"
+                   loading="lazy"
+                   width="700" height="110" />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
     <!-- APPROACH -->
     <section id="approach">
       <div class="section-head">
-        <div class="num">01</div>
+        <div class="num">03</div>
         <div class="label">Approach</div>
         <div class="title">Three principles · the working position</div>
       </div>
@@ -116,7 +228,7 @@
           <p class="section-sub">Not what people say, not what they intend &mdash; what they actually do, and the gap between the two.</p>
 
           <blockquote class="approach-quote">
-            People make their problems visible through their actions without realising it. The doctor who builds a workaround. The audience that ignores the homepage and goes straight to episode pages. The leadership team that keeps requesting the same report in five different formats because the underlying question has never been properly answered.
+            People make their problems visible through their actions. The doctor who builds a workaround. The leadership team that keeps requesting the same report in five different formats because the underlying question has never been answered.
           </blockquote>
 
           <div class="principles">
@@ -133,7 +245,7 @@
             <article class="principle">
               <div class="principle-num">Principle 03</div>
               <h3 class="principle-title">Work across the boundary.</h3>
-              <p class="principle-body">Instrumentation is a technical discipline. User research is a qualitative one. Most people are strong on one side. Sense-Making Methodology training plus eleven Amplitude certifications is the combination that lets a measurement layer surface the human question underneath the number.</p>
+              <p class="principle-body">Instrumentation is a technical discipline. User research is a qualitative one. Most people are strong on one side. Sense-Making Methodology training plus the full Amplitude credential stack is the combination that lets a measurement layer surface the human question underneath the number.</p>
             </article>
           </div>
         </div>
@@ -143,7 +255,7 @@
     <!-- STACK AT A GLANCE -->
     <section id="stack" class="alt">
       <div class="section-head">
-        <div class="num">02</div>
+        <div class="num">04</div>
         <div class="label">Stack</div>
         <div class="title">A scanning shortcut &middot; everything below is in active use</div>
       </div>
@@ -193,140 +305,8 @@
       </div>
     </section>
 
-    <!-- PUBLIC PROJECTS preview -->
-    <section id="projects-preview">
-      <div class="section-head">
-        <div class="num">03</div>
-        <div class="label">Public projects</div>
-        <div class="title">Independent builds &middot; live, open source</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Public projects</p>
-          <h2 class="section-heading">What I build when no one's briefed me.</h2>
-          <p class="section-sub">Three live independent projects. The code is open, the deployment is mine, and the argument lives in the project itself. Full write-ups on the <a href="work/#projects">work page</a>.</p>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Quarto &middot; Hugging Face &middot; Vercel</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>Dervin's SMM &mdash; a Sense-Making study guide</h3>
-              <p>A practitioner's guide and live question rewriter for Brenda Dervin's Sense-Making Methodology &mdash; the qualitative framework that pairs with quantitative analytics. Includes a Hugging Face&ndash;routed neutral-question rewriter you can run on your own survey copy.</p>
-              <div class="project-links">
-                <a href="https://smm.fredericlabadie.com" target="_blank" rel="noopener">Live site &rarr;</a>
-                <a href="https://github.com/fredericlabadie/DervinsSMM_Course" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Next.js &middot; claude-sonnet-4-5 &middot; Supabase + pgvector</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>Writers Room &mdash; multi-agent collaborative workspace</h3>
-              <p>Four room types, five specialist agents per room, parallel and sequential agent chains, vector RAG over uploaded documents. Where I work through what AI-assisted workflow design looks like when the human stays as director.</p>
-              <div class="project-links">
-                <a href="https://writersroom.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
-                <a href="https://github.com/fredericlabadie/Writers-room" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Next.js &middot; Claude (Sonnet + Haiku) &middot; Spotify API</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>VibeReader &mdash; book &harr; song</h3>
-              <p>Book &rarr; curated tracklist; song &rarr; matching novels. Claude reasons about mood and thematic resonance rather than genre tags. Sonnet for the creative call, Haiku for fast author disambiguation &mdash; as much a model-selection exercise as a product.</p>
-              <div class="project-links">
-                <a href="https://vibereader.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
-                <a href="https://github.com/fredericlabadie/VibeReader" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
-          </div>
-
-          <aside class="gh-activity" aria-label="GitHub contribution graph">
-            <div class="gh-activity-head">
-              <span class="gh-activity-label">Recent activity</span>
-              <span class="gh-activity-meta">Public commits, last 12 months &middot; <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">github.com/fredericlabadie &rarr;</a></span>
-            </div>
-            <div class="gh-activity-graph">
-              <img src="https://ghchart.rshah.org/2c3e50/fredericlabadie"
-                   alt="GitHub contribution graph for fredericlabadie — public commits over the last twelve months"
-                   loading="lazy"
-                   width="700" height="110" />
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED WORK -->
-    <section id="selected-work">
-      <div class="section-head">
-        <div class="num">04</div>
-        <div class="label">Selected work</div>
-        <div class="title">Three pieces &middot; one per principle</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Selected work</p>
-          <h2 class="section-heading">Three pieces, one from each side of the philosophy.</h2>
-          <p class="section-sub">A question-first discovery that became a product capability. An adoption-first engagement that survived the team that built it. An AI workflow designed to preserve the human judgement step, not replace it. The <a href="work/">full case library</a> has fifteen more across seven topic groups.</p>
-
-          <a class="callout" href="work/ux-research-home-services.html" style="display: block; text-decoration: none; color: inherit; margin-top: 32px;">
-            <div class="callout-label">Featured methodology piece &middot; standalone case study</div>
-            <div class="callout-body">
-              <strong>Mixed-Methods UX Research &mdash; quantitative telemetry paired with SMM-informed qualitative research at a national home services franchise.</strong> A method for diagnosing <em>gap type</em>, not just gap location &mdash; the case study behind the talk "Finding the Hypothesis When You Only Know the Question". <span style="color: var(--c-accent);">Read the case &rarr;</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- MARQUEE 01: Shadow IT -->
-        <div class="container" id="cs-shadow-it">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 01 &middot; Question formulation</span>
-              <span class="case-card-context">Consumer electronics retailer &middot; 2023&ndash;2025</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/shadow-it.html" style="color: inherit; text-decoration: none;">A workaround broke. The transaction data confessed.</a></h4>
-            <p class="case-card-body">An anomaly inside an unrelated lifecycle build led to a Sense-Making conversation with floor staff, surfacing a broken shadow IT tool the designed system never supported. The client built and shipped a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with a second iteration underway.</p>
-            <p class="case-card-body"><a href="work/shadow-it.html">Read the full case &rarr;</a></p>
-          </article>
-        </div>
-
-        <!-- MARQUEE 02: SSLP Client Enablement -->
-        <div class="container" id="cs-enablement">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 02 &middot; Adoption</span>
-              <span class="case-card-context">State-regulated retail platform &middot; 2025&ndash;2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/sslp-enablement.html" style="color: inherit; text-decoration: none;">The system survived the people who built it.</a></h4>
-            <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM, with a three-session structured handoff designed so the client team could maintain and extend it independently. <strong>38 analyst hours recovered per month; zero ramp-up time when the team turned over.</strong></p>
-            <p class="case-card-body"><a href="work/sslp-enablement.html">Read the full case &rarr;</a></p>
-          </article>
-        </div>
-
-        <!-- MARQUEE 03: AI Alert Triage -->
-        <div class="container" id="cs-ai-triage">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 03 &middot; AI workflow design</span>
-              <span class="case-card-context">Major quick-service restaurant brand &middot; production</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/ai-alert-triage.html" style="color: inherit; text-decoration: none;">Designing AI workflows that don't outsource the thinking.</a></h4>
-            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran on real on-call volume (13&ndash;26 April 2026): <strong>230 alerts &rarr; 39 posts, 83% reduction</strong>, surfacing one critical feature failure human-only review had missed. V2 build in progress.</p>
-            <p class="case-card-body"><a href="work/ai-alert-triage.html">Read the full case &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ABOUT preview -->
-    <section id="about" class="alt">
+    <section id="about">
       <div class="section-head">
         <div class="num">05</div>
         <div class="label">About</div>
@@ -348,15 +328,19 @@
             <div class="about-portrait-body">
               <p>Fourteen years building the analytics layer that lets organisations stop guessing &mdash; data models, tracking instrumentation, KPI frameworks, dashboards, and the experimentation culture that makes any of it useful. Most recently as <strong>Analytics Architect at Telus Digital</strong>; before that, five years at <strong>Stanley Steemer</strong> building marketing analytics from scratch across 280 franchise locations.</p>
               <p>I've worked under <strong>HIPAA on protected data</strong>, alongside enterprise consent regimes (OneTrust, TrustArc). My usability research practice is built on Sense-Making Methodology paired with the standard practitioner toolkit &mdash; the qualitative side of the work, not an afterthought to the quantitative side.</p>
-              <p>Based in Amsterdam. EU work authorisation. Currently FTE at Telus Digital; standard notice period applies. The longer version &mdash; bio, skills, eleven Amplitude credentials, two warehouses, endorsements &mdash; lives on the <a href="about/">about page &rarr;</a>.</p>
+              <p>Based in Amsterdam. EU work authorisation. Currently FTE at Telus Digital; standard notice period applies. The longer version &mdash; bio, skills, credentials, endorsements &mdash; lives on the <a href="about/">about page &rarr;</a>.</p>
             </div>
           </div>
 
           <div class="callout">
             <div class="callout-label">Calibration &middot; what I bring, what I'm still growing into</div>
             <div class="callout-body">
-              <strong>What I bring:</strong> fourteen years of measurement infrastructure across the full stack (GTM &rarr; BigQuery &rarr; Amplitude &rarr; dbt), Sense-Making Methodology paired with the standard usability practitioner toolkit, eleven Amplitude credentials including both Expert tracks, HIPAA exposure on protected data, and a track record of building analytics layers that survive the people who built them.<br><br>
-              <strong>What I'm still growing into:</strong> people management at scale (real but scoped experience to date &mdash; two designers and informal mentoring of junior analysts), a deeper Data Science model-attached practice (foundations from the MSc are there; no production-deployed model attribution to point to yet), and Dutch fluency above conversational (currently A2). Said plainly so you can weight the rest honestly.
+              <dl class="calibration-dl">
+                <dt>What I bring</dt>
+                <dd>Fourteen years of measurement infrastructure across the full stack (GTM &rarr; BigQuery &rarr; Amplitude &rarr; dbt), Sense-Making Methodology paired with the standard usability practitioner toolkit, the full Amplitude credential stack including both Expert tracks, HIPAA exposure on protected data, and a track record of building analytics layers that survive the people who built them.</dd>
+                <dt>What I'm still growing into</dt>
+                <dd>People management at scale (real but scoped experience to date &mdash; two designers and informal mentoring of junior analysts), a deeper Data Science model-attached practice (foundations from the MSc are there; no production-deployed model attribution to point to yet), and Dutch fluency above conversational (currently A2). Said plainly so you can weight the rest honestly.</dd>
+              </dl>
             </div>
           </div>
 
@@ -370,7 +354,7 @@
             <a class="deeper-card" href="about/">
               <span class="deeper-label">More on me</span>
               <span class="deeper-title">About &mdash; bio, methodology, skills, certifications.</span>
-              <span class="deeper-body">Telus Digital, Stanley Steemer, HIPAA exposure, Sense-Making Methodology, eleven Amplitude certifications, MSc Data Analytics, and what people I've worked with say.</span>
+              <span class="deeper-body">Telus Digital, Stanley Steemer, HIPAA exposure, Sense-Making Methodology, the full Amplitude credential stack, MSc Data Analytics, and what people I've worked with say.</span>
               <span class="deeper-cta">Read more &rarr;</span>
             </a>
           </div>
@@ -379,7 +363,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="alt">
       <div class="section-head">
         <div class="num">06</div>
         <div class="label">Contact</div>
@@ -422,8 +406,8 @@
   <footer class="footer">
     <div class="footer-inner">
       <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
+      <span>Site updated 20 May 2026</span>
+      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages &middot; Set in IBM Plex</span>
     </div>
   </footer>
 

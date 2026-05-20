@@ -253,10 +253,13 @@ section.alt { background: var(--c-bg-alt); }
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: clamp(40px, 8.5vw, 120px);
-  line-height: 0.94;
+  line-height: 1.0;
   letter-spacing: -0.028em;
   color: var(--c-ink);
   margin-bottom: 36px;
+}
+@media (min-width: 900px) {
+  .hero h1 { line-height: 1.04; }
 }
 .hero h1 em {
   font-style: italic;
@@ -267,10 +270,16 @@ section.alt { background: var(--c-bg-alt); }
   text-underline-offset: 0.14em;
 }
 .hero h1 em.say {
+  /* Bold + saturated blue + thin under-rule = three signals, not one.
+     Avoids the colour-only distinction critique while preserving the
+     user-set "blue bold say" treatment. */
   font-style: normal;
   font-weight: 700;
-  color: var(--c-primary);
-  text-decoration: none;
+  color: #1f5fa8;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 95, 168, 0.32);
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.18em;
 }
 .hero h1 em.do {
   font-style: normal;
@@ -281,6 +290,26 @@ section.alt { background: var(--c-bg-alt); }
   text-decoration-thickness: 0.06em;
   text-underline-offset: 0.14em;
 }
+
+/* Inline status line right under the eyebrow — collapses the old
+   currently-band into the hero so it never blocks the path to work. */
+.hero-currently {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--c-ink-soft);
+  margin-bottom: 22px;
+  max-width: 72ch;
+}
+.hero-currently-label {
+  color: var(--c-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
 .hero-body {
   font-size: 18px;
   line-height: 1.55;
@@ -288,7 +317,6 @@ section.alt { background: var(--c-bg-alt); }
   max-width: 60ch;
   margin-bottom: 18px;
 }
-.hero-body:last-of-type { color: var(--c-ink-soft); }
 
 .hero-actions {
   display: flex; flex-wrap: wrap; gap: 10px;
@@ -374,7 +402,7 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-accent);
   margin-bottom: 22px;
 }
-.principle:nth-child(2) .principle-num { color: var(--c-primary-on-dark); }
+/* (override below increases contrast — see audit T2.3) */
 .principle-title {
   font-family: var(--font-sans); font-weight: 600;
   font-size: 22px; line-height: 1.18;
@@ -382,10 +410,13 @@ section.alt { background: var(--c-bg-alt); }
   margin-bottom: 12px;
 }
 .principle-body {
-  font-size: 14.5px; line-height: 1.55;
-  color: var(--c-ink-soft);
+  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. Body content
+     longer than ~30 words shouldn't read as supplementary metadata. */
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
 }
-.principle:nth-child(2) .principle-body { color: rgba(255,255,255,0.78); }
+.principle:nth-child(2) .principle-num { color: #b0c8dd; }
+.principle:nth-child(2) .principle-body { color: rgba(255,255,255,0.93); }
 
 /* ============================================================
    STACK STRIP
@@ -464,7 +495,8 @@ section.alt { background: var(--c-bg-alt); }
   margin: 0 0 32px;
   font-size: 16.5px; line-height: 1.55;
   color: var(--c-ink);
-  max-width: 78ch;
+  /* Pulled in from 78ch to 66ch to stay inside the 50–75 char reading band. */
+  max-width: 66ch;
 }
 .case-argument.amber {
   border-left-color: var(--c-accent);
@@ -499,7 +531,8 @@ section.alt { background: var(--c-bg-alt); }
 .card.accent .card-label { color: var(--c-accent); }
 .card.amber  .card-label { color: var(--c-primary); }
 .card-body {
-  font-size: 14.5px; line-height: 1.55;
+  /* Bumped from 14.5px to 15.5px so STAR card bodies read as primary content. */
+  font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
 
@@ -642,12 +675,26 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-ink);
   margin-bottom: 14px;
 }
+/* Replaces inline `color: inherit; text-decoration: none;` once carried by
+   every marquee case-card-title <a>. The card itself is the affordance;
+   the title link picks up the underline only on hover. */
+.case-card-title a {
+  color: var(--c-ink);
+  text-decoration: none;
+}
+.case-card-title a:hover {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .case-card-body {
-  font-size: 14.5px; line-height: 1.6;
-  color: var(--c-ink-soft);
+  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. These are the
+     teaser paragraphs people are scanning to decide whether to click in. */
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
   margin-bottom: 14px;
 }
-.case-card-body strong { color: var(--c-ink); }
+.case-card-body strong { color: var(--c-ink); font-weight: 600; }
 
 .case-card-stats {
   display: grid;
@@ -717,8 +764,10 @@ section.alt { background: var(--c-bg-alt); }
   margin-bottom: 8px;
 }
 .case-toc-meta {
+  /* These strings often run 60–90 chars. Dropping the uppercase transform
+     keeps them legible without breaking the mono-metadata voice. */
   font-family: var(--font-mono);
-  font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.01em;
   color: var(--c-ink-soft);
   line-height: 1.5;
 }
@@ -859,8 +908,9 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-ink);
 }
 .deeper-body {
-  font-size: 14.5px; line-height: 1.55;
-  color: var(--c-ink-soft);
+  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. */
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
 }
 .deeper-cta {
   font-family: var(--font-mono);
@@ -1031,8 +1081,10 @@ section.alt { background: var(--c-bg-alt); }
   margin: 6px 0 8px;
 }
 .project-card p {
-  font-size: 14px; line-height: 1.55;
-  color: var(--c-ink-soft);
+  /* Bumped from 14px / soft-ink to 15.5px / full ink — these descriptions
+     are the primary scan target inside the card. */
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
 }
 .project-card p code { background: var(--c-bg-alt); }
 .project-links {
@@ -1696,12 +1748,57 @@ section.alt { background: var(--c-bg-alt); }
   margin-bottom: 10px;
 }
 .callout-body {
-  font-size: 15px; line-height: 1.6;
+  /* Bumped from 15px to 15.5px so this content reads at the same weight
+     as the case-card teasers it sits among. */
+  font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
 .callout-body strong { color: var(--c-ink); font-weight: 600; }
 .callout-body a { color: var(--c-ink); border-bottom: 1px solid var(--c-rule-light); }
 .callout-body a:hover { text-decoration: none; border-bottom-color: var(--c-ink); }
+
+/* Whole-callout link variant — used on the featured methodology piece.
+   Replaces the inline `style="display: block; text-decoration: none;
+   color: inherit; margin-top: 32px;"` previously carried on the <a>. */
+a.callout-link,
+.callout-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 32px;
+  transition: background .15s ease;
+}
+a.callout-link:hover {
+  text-decoration: none;
+  background: #ebe8e1;
+}
+.callout-cta {
+  color: var(--c-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Semantic dt/dd structure for the "what I bring / still growing into"
+   calibration block — replaces fragile <br><br> markup with proper
+   labelled definitions. */
+.calibration-dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 0;
+}
+.calibration-dl dt {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--c-accent);
+  font-weight: 500;
+  margin-top: 14px;
+}
+.calibration-dl dt:first-child { margin-top: 0; }
+.calibration-dl dd {
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
+  margin: 0;
+}
 
 /* Clinical layer table — completion / omission / workaround */
 .layer-table {
@@ -1864,7 +1961,9 @@ section.alt { background: var(--c-bg-alt); }
     text-shadow: none !important;
   }
 
-  /* Strip interactive chrome */
+  /* Strip interactive chrome. Note: .deeper is kept so the printed page
+     still surfaces "Work / About" navigation as outlined cards with the
+     resolved URL appended (see a[href^="http"] rule below). */
   .nav,
   .nav-toggle,
   .skip-link,
@@ -1874,7 +1973,6 @@ section.alt { background: var(--c-bg-alt); }
   .footer,
   .dash-mock,
   .gh-activity,
-  .deeper,
   .currently-band { display: none !important; }
 
   /* Force-open <details> so the full Amplitude cert list prints */
@@ -1971,6 +2069,18 @@ section.alt { background: var(--c-bg-alt); }
   .stack-cta a::after,
   .project-links a::after { content: none !important; }
 
+  /* Cross-page nav cards keep their destination visible in print so the
+     "Work / About" jumps stay actionable on paper. */
+  a.deeper-card::after {
+    content: " — fredericlabadie.com/" attr(href);
+    display: block;
+    margin-top: 4pt;
+    font-family: var(--font-mono);
+    font-size: 8pt;
+    color: var(--c-ink-soft);
+    word-break: break-all;
+  }
+
   /* Page break hints */
   .case-study,
   .case-group { page-break-before: auto; page-break-inside: auto; }
@@ -2050,7 +2160,10 @@ section.alt { background: var(--c-bg-alt); }
   .case-card-stats { grid-template-columns: 1fr; }
   .case-card-context { text-align: left; }
 
-  .stack-strip-row { grid-template-columns: 1fr; gap: 6px; }
+  /* Mobile: collapse to single column, tighten label↔items, breathe rows.
+     The uppercase mono label already pops; what was missing was air
+     between rows, not between label and items. */
+  .stack-strip-row { grid-template-columns: 1fr; gap: 2px; padding: 18px 0; }
 
   .contact-list a { grid-template-columns: 100px 1fr; }
   .meta-list { padding: 18px; }
