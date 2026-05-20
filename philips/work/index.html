@@ -57,6 +57,7 @@
         <h1>Curated case library &mdash; <em>ten cases</em>, ordered by importance to the brief.</h1>
         <p>Fourteen years across the full instrumentation stack, distilled to the cases that map most directly to the UX Telemetry Expert responsibilities in the Adoption &amp; Insights division. The cases most directly mapped to the brief &mdash; <a href="#topic-instrumentation">Lens 02 (Instrumentation &amp; cross-platform telemetry)</a> and <a href="#topic-ai">Lens 04 (AI alert triage)</a> &mdash; lead the page below; both ran in production, both shipped with consent-aware tagging, both surfaced findings the team had missed. The question-formulation methodology, adoption practice, experimentation framework, and architectural cost-engineering follow, in that order. Each card carries a Philips-relevance line; click through for the full anatomy.</p>
         <p>Marketing &amp; lifecycle cases, the campaign-analytics extension, the podcast-brand GA4 piece, and the enterprise-AI-platform pipeline have been omitted from this view as off-brief; <a href="/work/">the full eighteen-case library lives here</a> for context if useful. The Philips-specific pitch lives on the <a href="/philips/">Home page</a>; the longer bio + clinical-domain calibration lives on <a href="/philips/about/">About</a>.</p>
+        <p class="page-intro-note">Case pages are designed to print cleanly &mdash; <kbd>Cmd/Ctrl + P</kbd> on any case gives you a clean one-up document with resolved URLs in the footnotes.</p>
       </div>
     </section>
 
@@ -123,7 +124,7 @@
               <span class="case-card-meta">Compact &middot; Error taxonomy</span>
               <span class="case-card-context">Major quick-service restaurant &middot; Amplitude monitors</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/mqsr-errors.html" style="color: inherit; text-decoration: none;">Clean taxonomy, trustworthy alerts, enriched context.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/mqsr-errors.html">Clean taxonomy, trustworthy alerts, enriched context.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The brief explicitly names error taxonomy and alert engineering. This is the case behind that claim &mdash; hierarchical category IDs, threshold redesign, and the principle that error events must carry the same context as their success counterparts.</p>
             <p class="case-card-body">Three layers of remediation on a noisy alert channel: threshold redesign, a hierarchical error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>), and <code>cart_id</code> context enrichment. Directly reduces false positives in the AI alert triage system.</p>
             <p class="case-card-body"><a href="/philips/work/mqsr-errors.html">Read the full case &rarr;</a></p>
@@ -142,7 +143,7 @@
               <span class="case-card-meta">Case &middot; Greenfield instrumentation</span>
               <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/sslp-mobile.html" style="color: inherit; text-decoration: none;">From "what should we measure?" to 30+ shipped tickets.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/sslp-mobile.html">From "what should we measure?" to 30+ shipped tickets.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> Cross-platform telemetry architecture with consent management built in from the start (TrustArc, OneTrust). Same shape as the Philips UX Telemetry Expert work: schema design, SDK implementation, QA, production deployment with privacy guardrails.</p>
             <p class="case-card-body">Greenfield mobile UX-telemetry layer across iOS and Android &mdash; spec to production, 30+ tickets shipped, cross-platform parity audited, GA4 e-commerce taxonomy with consent management integrated.</p>
             <p class="case-card-body"><a href="/philips/work/sslp-mobile.html">Read the full case &rarr;</a></p>
@@ -162,7 +163,7 @@
               <span class="case-card-meta">Compact &middot; SDK debugging</span>
               <span class="case-card-context">Major quick-service restaurant &middot; Segment &middot; analytics-swift 1.9.1</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/mqsr-schema-sdk.html" style="color: inherit; text-decoration: none;">A silent iOS data-loss bug, traced to the initialisation sequence.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/mqsr-schema-sdk.html">A silent iOS data-loss bug, traced to the initialisation sequence.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The kind of failure mode that matters when clinical or operational data has to be trustworthy &mdash; an SDK-level gate silently dropping cold-launch events. Telemetry that undercounts is worse than telemetry that's missing; this case is the SDK-debugging discipline behind catching it.</p>
             <p class="case-card-body">An iOS undercount of <code>Application Opened</code> events vs. Android &mdash; root-caused to a Segment SDK 1.9.1 gate that silently drops events when <code>enabled = false</code>. Same engagement surfaced cross-platform parity gaps and GTM container governance issues.</p>
             <p class="case-card-body"><a href="/philips/work/mqsr-schema-sdk.html">Read the full case &rarr;</a></p>
@@ -191,7 +192,7 @@
               <span class="case-card-meta">Case &middot; AI workflow design</span>
               <span class="case-card-context">Major quick-service restaurant brand &middot; analytics architect</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/ai-alert-triage.html" style="color: inherit; text-decoration: none;">Designing AI workflows that don't outsource the thinking.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/ai-alert-triage.html">Designing AI workflows that don't outsource the thinking.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The most directly transferable case in the library. AI surfaces and ranks &mdash; it does not diagnose or decide. The same gate-design discipline applies to any clinical-context AI workflow where outsourced thinking is the failure mode.</p>
             <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13&ndash;26 April 2026; compressed 230 raw alerts to 39 posts (<strong>83% reduction</strong>), surfaced one critical feature failure the on-call team had missed in their human-only review.</p>
             <p class="case-card-body"><a href="/philips/work/ai-alert-triage.html">Read the full case &rarr;</a></p>
@@ -221,7 +222,7 @@
               <span class="case-card-meta">Case &middot; Methodology piece</span>
               <span class="case-card-context">National home services franchise (Stanley Steemer, anonymised) &middot; 2021&ndash;2022</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/ux-research-home-services.html" style="color: inherit; text-decoration: none;">Mixed-Methods UX Research &mdash; diagnosing <em>gap type</em>, not just gap location.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/ux-research-home-services.html">Mixed-Methods UX Research &mdash; diagnosing <em>gap type</em>, not just gap location.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The methodology piece. SMM-informed neutral questioning paired with quantitative telemetry &mdash; the four protocol design rules transfer directly to clinical UX research practice. This is the single most-relevant case for the UX side of the brief.</p>
             <p class="case-card-body">GA4/A-B telemetry locating <em>where</em> users fell out, paired with a UserZoom protocol that was ~90% SMM-informed neutral questioning. The protocol surfaced findings the funnel could not. The argument: analytics and qualitative research are not competing methods &mdash; they are sequential ones.</p>
             <p class="case-card-body"><a href="/philips/work/ux-research-home-services.html">Read the full case &rarr;</a></p>
@@ -240,7 +241,7 @@
               <span class="case-card-meta">Case &middot; Sense-Making applied</span>
               <span class="case-card-context">Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/shadow-it.html" style="color: inherit; text-decoration: none;">A workaround broke. The transaction data confessed.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/shadow-it.html">A workaround broke. The transaction data confessed.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> Observational research + neutral questioning surfacing a gap the designed system never knew it had. Directly transferable to clinical-context discovery, where the gap between designed workflow and lived practice is exactly what UX research needs to surface.</p>
             <p class="case-card-body">A meaningful cohort returning post-purchase for additional components, surfaced while building lifecycle segments for something else &mdash; root cause was a shadow-IT compatibility tool that had stopped working. The product capability that grew out of the finding is now central to the business.</p>
             <p class="case-card-body"><a href="/philips/work/shadow-it.html">Read the full case &rarr;</a></p>
@@ -269,7 +270,7 @@
               <span class="case-card-meta">Case &middot; Enablement &amp; handoff</span>
               <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/sslp-enablement.html" style="color: inherit; text-decoration: none;">The system survived the people who built it.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/sslp-enablement.html">The system survived the people who built it.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> Same shape as enabling internal Philips teams to own their measurement &mdash; documentation built for the team that inherits the system, not for the team that built it. Zero ramp-up after turnover is the right benchmark for any handoff into a permanent organisation.</p>
             <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM &mdash; then a three-session structured handoff designed so the client team could maintain and extend it independently. 38 analyst hours recovered per month, zero ramp-up time when the team turned over.</p>
             <p class="case-card-body"><a href="/philips/work/sslp-enablement.html">Read the full case &rarr;</a></p>
@@ -299,7 +300,7 @@
               <span class="case-card-meta">Case &middot; A/B framework</span>
               <span class="case-card-context">Major quick-service restaurant &middot; analytics architect &middot; navigation redesign</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/mqsr-release-ab.html" style="color: inherit; text-decoration: none;">The measurement plan written before the code.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/mqsr-release-ab.html">The measurement plan written before the code.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The measurement framework is the architectural deliverable. Turning a planned cutover into a controlled experiment is the practice that translates directly to any product change at scale &mdash; clinical workflow or otherwise.</p>
             <p class="case-card-body">Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign &mdash; turning a planned straight-cutover into a controlled experiment with pre-defined success criteria and rollback options.</p>
             <p class="case-card-body"><a href="/philips/work/mqsr-release-ab.html">Read the full case &rarr;</a></p>
@@ -319,7 +320,7 @@
               <span class="case-card-meta">Compact &middot; Culture change</span>
               <span class="case-card-context">Stanley Steemer &middot; 280 franchise locations &middot; five years</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/stanley-ab.html" style="color: inherit; text-decoration: none;">Introducing A/B testing as a leadership practice.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/stanley-ab.html">Introducing A/B testing as a leadership practice.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> The adoption story. Five years of building measurement practice as a leadership-decision tool &mdash; the same long-arc work the Adoption &amp; Insights division does internally at Philips.</p>
             <p class="case-card-body">Five years building marketing analytics from scratch across 280 franchise locations &mdash; including the householding data model and the introduction of A/B testing as a leadership-decision tool. By year two, leadership was actively requesting data-informed decisions.</p>
             <p class="case-card-body"><a href="/philips/work/stanley-ab.html">Read the full case &rarr;</a></p>
@@ -347,7 +348,7 @@
               <span class="case-card-meta">Case &middot; Cost engineering</span>
               <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; April 2026</span>
             </div>
-            <h4 class="case-card-title"><a href="/philips/work/pipeline-optimization.html" style="color: inherit; text-decoration: none;">Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction.</a></h4>
+            <h4 class="case-card-title"><a href="/philips/work/pipeline-optimization.html">Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction.</a></h4>
             <p class="case-card-body"><strong>Philips relevance &middot;</strong> Architectural redesign of a GA4 &rarr; BigQuery pipeline through cost-thinking and DAG restructuring. The same systems-thinking and economic discipline scale to any large telemetry estate &mdash; Philips included.</p>
             <p class="case-card-body">An audit and architectural redesign of a GA4 &rarr; BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaces ~18 TB of repeated scans. ~50% cost reduction across pipeline and dashboard queries.</p>
             <p class="case-card-body"><a href="/philips/work/pipeline-optimization.html">Read the full case &rarr;</a></p>
@@ -404,7 +405,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
+      <span>&copy; 2026 Frederic Labadie &middot; Targeted pitch for Philips UX Telemetry Expert &middot; 579397</span>
       <span>Set in IBM Plex Sans &amp; Mono</span>
       <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
     </div>
