@@ -56,7 +56,7 @@ Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently F
 
 Walked into an organisation with mature operations data but no marketing measurement capability. Built the entire marketing analytics and BI layer from scratch.
 
-- Designed the data architecture; built automated T-SQL pipelines on SSMS / Azure SQL Server, SSRS reporting suites, and Looker Studio dashboards; established the KPI framework that gave leadership its first reliable view of performance across 280 locations.
+- Designed the data architecture on Azure SQL Server (SSMS for development, SSRS for reporting — even on GA4 data); built a Python ingestion layer for Universal Analytics and later a server-side bridge from the GA4 → BigQuery export back into Azure; established the KPI framework that gave leadership its first reliable view of performance across 280 locations.
 - Introduced the **single-customer concept and householding data model**, enabling accurate identity resolution across the multi-location estate and unlocking marketing automation and CRM strategy for the first time.
 - Led GA4 beta implementation — wrote the measurement plan and SDR, designed the data layer spec, configured GTM, and QA'd all tracking against production data before migration from Universal Analytics.
 - Applied **Sense-Making Methodology (Dervin)** in user-testing sessions; combined with Hotjar and SurveyMonkey to build triangulated user-needs evidence that fed directly into tracking specifications and UX recommendations.
