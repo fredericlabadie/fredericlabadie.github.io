@@ -6,8 +6,8 @@ Live at [fredericlabadie.com](https://fredericlabadie.com).
 The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It's organised as a three-page portfolio:
 
 - [`/`](https://fredericlabadie.com/) &mdash; **landing**: hero, approach (philosophy + three principles), stack at-a-glance, three selected case studies (one per principle), a brief about-with-portrait, and contact. Designed for a 60-second recruiter scan.
-- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library teaser directory**: seven topic groups (question formulation, instrumentation, experimentation, AI workflow design, adoption, marketing analytics, data engineering) linking out to standalone case-study pages at `/work/<slug>.html`. Eighteen standalone case studies in total, plus the public project work and a GitHub-activity graph.
-- [`/notebook/`](https://fredericlabadie.com/notebook/) &mdash; **open notebook**: working entries on methodology, AI-assisted workflows, schema design, and the gaps the official measurement layer doesn't see. Drafts, working theories, open questions.
+- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library teaser directory**: seven lenses (question formulation, instrumentation, experimentation, AI workflow design, adoption, marketing analytics, data engineering) linking out to standalone case-study pages at `/work/<slug>.html`. Eighteen standalone case studies in total, plus the public project work and a GitHub-activity graph.
+- [`/notebook/`](https://fredericlabadie.com/notebook/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and the gaps the official measurement layer doesn't see.
 - [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, endorsements, full skills cluster, eleven Amplitude credentials plus the rest of the certification stack.
 - [`/contact/`](https://fredericlabadie.com/contact/) &mdash; **contact**: status, response-time expectations, channels (email, LinkedIn, GitHub), and the resume.
 
@@ -43,7 +43,7 @@ The previous design system bundle remains in `_drafts/new-design.zip` for refere
 ├── work/
 │   ├── index.html          # case library teaser directory + projects + GitHub activity graph
 │   └── <slug>.html         # 18 standalone case-study pages
-├── notebook/index.html     # open notebook (drafts, working theories, open questions)
+├── notebook/index.html     # Current Meditations (drafts, working theories, open questions)
 ├── about/index.html        # extended bio + testimonials + skills + certifications
 ├── contact/index.html      # contact channels + status + response-time expectations
 ├── philips/
@@ -79,7 +79,7 @@ URLs to spot-check during dev:
 
 - `/` &mdash; landing
 - `/work/` &mdash; case library teaser directory (and any `/work/<slug>.html` standalone case)
-- `/notebook/` &mdash; open notebook
+- `/notebook/` &mdash; Current Meditations
 - `/about/` &mdash; bio depth
 - `/contact/` &mdash; contact page
 - `/philips/` &mdash; Philips microsite landing (also `/philips/work/`, `/philips/about/`, `/philips/contact/`)
@@ -90,14 +90,14 @@ Active development on the site itself, ordered loosely by leverage. Mirrors the 
 
 ### In flight
 
-- **Hospital Readmissions dbt project** &mdash; three-layer dbt project on Snowflake using CMS Hospital Readmissions Reduction Program data; architectural sketch in `_drafts/project-ideas/Health-Portfolio-Project/`. **Target: 30 May 2026.** Returns to `/work/` as a Topic 07 case once shipped, and re-enters the Philips microsite's clinical-domain section.
-- **Self-instrumented portfolio meta-case** &mdash; instrument this site (GA4 + Segment + Amplitude, full stack, consent-aware), run two weeks, write up the gap between design assumptions and visitor behaviour. Doubles as a published artifact in own voice. Goes on `/work/` as a Topic 01 case once written.
+- **Hospital Readmissions dbt project** &mdash; three-layer dbt project on Snowflake using CMS Hospital Readmissions Reduction Program data; architectural sketch in `_drafts/project-ideas/Health-Portfolio-Project/`. **Target: 30 May 2026.** Returns to `/work/` as a Lens 07 case once shipped, and re-enters the Philips microsite's clinical-domain section.
+- **Self-instrumented portfolio meta-case** &mdash; instrument this site (GA4 + Segment + Amplitude, full stack, consent-aware), run two weeks, write up the gap between design assumptions and visitor behaviour. Doubles as a published artifact in own voice. Goes on `/work/` as a Lens 01 case once written.
 - **Resume PDF refresh** &mdash; re-export `assets/resume/frederic-labadie-cv.md` to `frederic-labadie-cv.pdf` on each substantive CV update; export workflow documented in `assets/resume/README.md`.
 
 ### Planned case studies
 
 - **Failure case &mdash; "the time I instrumented the wrong question."** Previously a scaffolded card on `/work/`; hidden as of 19 May 2026 until the real engagement narrative is written. Will return as a standalone `/work/failure-wrong-question.html` matching the other case templates.
-- **Marketing-mix modelling write-up** &mdash; pick a past engagement and write it up; rounds out Topic 06 for marketing-analytics-leaning readers.
+- **Marketing-mix modelling write-up** &mdash; pick a past engagement and write it up; rounds out Lens 06 for marketing-analytics-leaning readers.
 - **Stanley Steemer A/B narrative** &mdash; the specific A/B test that moved leadership toward measurement-first decisions deserves a short narrative card on `/work/` rather than a one-line claim inside the Stanley compact card.
 - **Re-add Data Science framing** &mdash; deliberately removed; returns once a model-attached project ships (causal inference, propensity scoring, uplift, time-series &mdash; anything statistically modelled rather than SQL-aggregated).
 

@@ -402,7 +402,8 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-accent);
   margin-bottom: 22px;
 }
-/* (override below increases contrast — see audit T2.3) */
+/* On the inverted (dark) middle principle, the accent crimson loses contrast;
+   the two overrides below lift the eyebrow tint and body alpha for legibility. */
 .principle-title {
   font-family: var(--font-sans); font-weight: 600;
   font-size: 22px; line-height: 1.18;
@@ -410,8 +411,8 @@ section.alt { background: var(--c-bg-alt); }
   margin-bottom: 12px;
 }
 .principle-body {
-  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. Body content
-     longer than ~30 words shouldn't read as supplementary metadata. */
+  /* Principle bodies carry the actual argument of the approach section,
+     so they're held at body-reading weight, not metadata weight. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
@@ -531,7 +532,8 @@ section.alt { background: var(--c-bg-alt); }
 .card.accent .card-label { color: var(--c-accent); }
 .card.amber  .card-label { color: var(--c-primary); }
 .card-body {
-  /* Bumped from 14.5px to 15.5px so STAR card bodies read as primary content. */
+  /* STAR cards are the structured spine of each case study —
+     held at body-reading weight rather than caption weight. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
@@ -675,9 +677,8 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-ink);
   margin-bottom: 14px;
 }
-/* Replaces inline `color: inherit; text-decoration: none;` once carried by
-   every marquee case-card-title <a>. The card itself is the affordance;
-   the title link picks up the underline only on hover. */
+/* On marquee case cards the whole card is the affordance, so the title
+   link stays visually quiet and only picks up the underline on hover. */
 .case-card-title a {
   color: var(--c-ink);
   text-decoration: none;
@@ -688,8 +689,8 @@ section.alt { background: var(--c-bg-alt); }
   text-underline-offset: 4px;
 }
 .case-card-body {
-  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. These are the
-     teaser paragraphs people are scanning to decide whether to click in. */
+  /* Case-card teasers are the primary scan target on /work/ and the
+     homepage marquee — kept at body-reading weight, not caption weight. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
   margin-bottom: 14px;
@@ -908,7 +909,8 @@ section.alt { background: var(--c-bg-alt); }
   color: var(--c-ink);
 }
 .deeper-body {
-  /* Bumped from 14.5px / soft-ink to 15.5px / full ink. */
+  /* "Deeper" cards link out to standalone case pages; their body copy is
+     primary scan content, not metadata, so it reads at full body weight. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
@@ -1050,7 +1052,7 @@ section.alt { background: var(--c-bg-alt); }
   border-bottom: 1px solid var(--c-rule);
   background: var(--c-bg);
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto auto;
   gap: 10px;
 }
 .project-card-head {
@@ -1081,8 +1083,8 @@ section.alt { background: var(--c-bg-alt); }
   margin: 6px 0 8px;
 }
 .project-card p {
-  /* Bumped from 14px / soft-ink to 15.5px / full ink — these descriptions
-     are the primary scan target inside the card. */
+  /* The project description is the primary scan target inside each card —
+     held at body-reading weight, not caption weight. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }
@@ -1098,6 +1100,25 @@ section.alt { background: var(--c-bg-alt); }
 .project-links a { color: var(--c-ink); }
 .project-links a:hover { color: var(--c-accent); text-decoration: none; }
 .project-links a:nth-child(2) { color: var(--c-ink-soft); }
+
+/* Bridges each public project to a piece of paid client work, so a reader
+   can read the side projects as professional signal rather than hobby. */
+.project-signal {
+  margin-top: 6px;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--c-rule-light);
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.04em;
+  color: var(--c-ink);
+  line-height: 1.55;
+}
+.project-signal-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-accent);
+  margin-right: 6px;
+}
+.project-signal-body { color: var(--c-ink-soft); }
 
 /* ============================================================
    GITHUB ACTIVITY
@@ -1316,6 +1337,27 @@ section.alt { background: var(--c-bg-alt); }
   font-style: italic;
   color: var(--c-primary);
 }
+/* Quiet aside under a page intro — e.g. the print-friendly note on /work/.
+   Kept smaller and mono-tinged so it reads as utility, not body content. */
+.page-intro-note {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px; letter-spacing: 0.02em;
+  color: var(--c-ink-soft);
+  line-height: 1.55;
+}
+.page-intro-note kbd {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid var(--c-rule);
+  background: var(--c-bg-alt);
+  color: var(--c-ink);
+}
+@media print {
+  .page-intro-note { display: none !important; }
+}
+
 .page-intro p {
   font-size: 17px; line-height: 1.55;
   color: var(--c-ink-soft);
@@ -1360,6 +1402,36 @@ section.alt { background: var(--c-bg-alt); }
   font-family: var(--font-mono);
   font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--c-accent);
+}
+
+/* Sits above the contact grid on /about/ — gives a reader the role-type
+   answer up front so the contact step is a "yes, this matches" rather than
+   a "let me re-read the bio to check". */
+.best-fit {
+  margin-bottom: 32px;
+  padding: 22px 26px;
+  border: 1px solid var(--c-rule);
+  border-left: 3px solid var(--c-accent);
+  background: var(--c-bg);
+}
+.best-fit-label {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--c-accent);
+  margin: 0 0 6px;
+}
+.best-fit-body {
+  font-size: 17px; line-height: 1.45;
+  color: var(--c-ink);
+  font-weight: 500;
+  margin: 0 0 10px;
+  max-width: 60ch;
+}
+.best-fit-meta {
+  font-size: 14px; line-height: 1.55;
+  color: var(--c-ink-soft);
+  margin: 0;
+  max-width: 64ch;
 }
 
 /* ============================================================
@@ -1570,6 +1642,29 @@ section.alt { background: var(--c-bg-alt); }
   font-weight: 500;
 }
 
+/* Reinforces fit at the conversion point — sits between the primary email
+   CTA and the secondary channels so a reader who arrived from a recruiter
+   blast can self-screen before composing. */
+.contact-fit {
+  margin: 28px 0 0;
+  padding: 20px 24px;
+  border: 1px solid var(--c-rule);
+  border-left: 3px solid var(--c-accent);
+  background: var(--c-bg);
+}
+.contact-fit-label {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--c-accent);
+  margin: 0 0 8px;
+}
+.contact-fit-body {
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--c-ink);
+  margin: 0;
+  max-width: 68ch;
+}
+
 .channel-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1748,8 +1843,8 @@ section.alt { background: var(--c-bg-alt); }
   margin-bottom: 10px;
 }
 .callout-body {
-  /* Bumped from 15px to 15.5px so this content reads at the same weight
-     as the case-card teasers it sits among. */
+  /* Callout body should read at the same weight as the case-card teasers
+     it sits among — they're peers on the page, not metadata vs. body. */
   font-size: 15.5px; line-height: 1.6;
   color: var(--c-ink);
 }

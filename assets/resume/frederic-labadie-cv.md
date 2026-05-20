@@ -1,7 +1,7 @@
 # Frederic Labadie
 **Senior Data Analyst · Analytics Architect**
 
-+31 6 13 82 86 35 · Frederic.Labadie@gmail.com · linkedin.com/in/frederic-labadie · fredericlabadie.com
++31 6 13 82 86 35 · frederic.labadie@gmail.com · linkedin.com/in/frederic-labadie · fredericlabadie.com
 Amsterdam, Netherlands · EU work authorisation · MSc Data Analytics
 
 ---
@@ -33,7 +33,7 @@ Senior data analyst and analytics architect with 14+ years building measurement 
 ### Analytics Architect — Telus Digital
 *2024 – Present · 100% remote · Multi-client enterprise consultancy*
 
-Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently FTE; standard notice period applies.
+Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently full-time; standard notice applies.
 
 - Lead end-to-end analytics implementation engagements for enterprise clients — measurement planning, SDR creation, GTM deployment (client and server-side), QA, and reporting infrastructure.
 - Built and operated an **AI-assisted alert triage system** for client product telemetry. V1 ran in production 13–26 April 2026, compressing **230 raw Amplitude alerts to 39 AI-posted findings (83% reduction)** while preserving human-judgement gates throughout (surface, suppress, escalate when warranted, never silence a worsening issue). **Surfaced one critical feature failure the on-call team had missed in human-only review** — a signal that would have continued silently otherwise. V2 build in progress.
