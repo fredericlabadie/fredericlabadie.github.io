@@ -310,6 +310,34 @@ section.alt { background: var(--c-bg-alt); }
   margin-right: 4px;
 }
 
+/* Audience-shortcut line sitting under the hero CTAs — same mono register
+   as .hero-currently, with a small top rule to mark it as a separate
+   register from the primary CTAs above. Surfaces the /recruiters/ landing
+   page on the homepage only; other pages keep the recruiter link nav-only. */
+.hero-audiences {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--c-rule-light);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--c-ink-soft);
+  max-width: 78ch;
+}
+.hero-audiences-label {
+  color: var(--c-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.hero-audiences a {
+  color: var(--c-ink);
+  border-bottom: 1px solid var(--c-rule-light);
+}
+.hero-audiences a:hover { color: var(--c-accent); }
+
 .hero-body {
   font-size: 18px;
   line-height: 1.55;
