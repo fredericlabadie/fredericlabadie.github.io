@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction. &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Audit and architectural redesign of a GA4 → BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaces 18 TB of repeated scans. Lens 07 · Data Engineering." />
-  <meta name="theme-color" content="#ffffff" />
+  <title>Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction. &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="Audit and architectural redesign of a GA4 to BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaced repeated scans and cut costs by roughly half." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -14,161 +14,177 @@
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction. &mdash; case study" />
-  <meta property="og:description" content="GA4 → BigQuery pipeline redesign cutting ~$112/run to roughly half." />
+  <meta property="og:title" content="Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction. &mdash; case study" />
+  <meta property="og:description" content="GA4 to BigQuery pipeline redesign cutting roughly $112/run to half." />
   <meta property="og:url" content="https://fredericlabadie.com/work/pipeline-optimization.html" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction." />
-  <meta name="twitter:description" content="GA4 → BigQuery pipeline redesign cutting ~$112/run to roughly half." />
+  <meta name="twitter:title" content="Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction." />
+  <meta name="twitter:description" content="GA4 to BigQuery pipeline redesign cutting roughly $112/run to half." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../notebook/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 07 &middot; Data Engineering &amp; Architecture</p>
-        <h1>Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction.</h1>
-        <p class="hero-subtitle">An audit and architectural redesign of a GA4 &rarr; BigQuery pipeline that had grown organically into a 1.2 TB intermediate table and a $112/run cascading CTE chain.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ State-regulated retail platform &middot; analytics architect &middot; April 2026</span>
-        </p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 07 / Data Engineering &amp; Architecture</p>
+        <h1>Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction.</h1>
+        <p class="bp-case-dek">An audit and architectural redesign of a GA4 to BigQuery pipeline that had grown organically into a 1.2 TB intermediate table and a $112/run cascading CTE chain.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / analytics architecture engagement</p></div>
+        <div class="bp-case-panel-row"><span>Project timing</span><strong>Apr 2026</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>Pipeline audit, SQL redesign, DAG simplification, migration planning</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>~50%</strong><span>cost reduction</span></article>
+      <article><strong>1.2 TB</strong><span>intermediate table retired</span></article>
+      <article><strong>$112</strong><span>approximate cost per old run</span></article>
+      <article><strong>15+</strong><span>independent CTE scans removed</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>pipeline debt / system view</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>The optimisation was architectural, not query-level.</h2>
+        <p>Pipeline debt accumulates one reasonable decision at a time. The work was not to tune a single query; it was to step back and redesign the shape of the system.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>A repeated-scan pipeline became one shared computation.</h3>
+          <p>A GA4 to BigQuery analytics pipeline had grown into a <strong>roughly $112/run CTE chain</strong> processing approximately <strong>18 TB per execution</strong>. I redesigned the pipeline around a single conditional-aggregation pass, retiring the 1.2 TB <code>GA4_Event_Params</code> intermediate table and cutting costs by roughly half.</p>
+          <p>The result was cheaper, faster, easier to maintain, and more consistent: channel-grouping logic defined once instead of repeated in slightly different forms, and two intermediate tables retired without information loss.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Situation</p>
+          <h3>Each individual decision made sense. The system no longer did.</h3>
+          <p>The pipeline scanned <code>events_*</code> three separate times, unnested every event type into a generic key-value table, then ran 15+ separate CTEs over that 1.2 TB table and full-outer-joined them back together. Additional debt came from <code>SELECT DISTINCT</code> on 30-50 columns, duplicated channel-grouping logic, and a 429 GB unpartitioned table that forced full scans downstream.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Find the actual cost source and redesign around it.</h3>
+          <p>The brief was to audit the whole data flow, identify where the costs were really coming from, and propose a migration plan that the team could execute without freezing the reporting layer. Cost reduction was the visible target. Maintainability and consistency were the real ones.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A GA4 &rarr; BigQuery analytics pipeline that had grown organically into a <strong>~$112/run CTE chain processing ~18 TB per execution</strong> was redesigned around a single shared computation: <strong>~50% cost reduction across pipeline and dashboard queries</strong>, the 1.2 TB <code>GA4_Event_Params</code> intermediate table retired, heavy dashboards halved from ~$200 to ~$100/day. Delivered as a 4-phase migration plan with a 2&ndash;4 week validation window. The optimisation was architectural, not query-level.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / architecture</span><span>before / after / migration</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Redesign</p>
+        <h2>Spend the modelling work once.</h2>
+        <p>The key move was replacing repeated independent scans with a single event-level computation that produced a flat, analysis-ready row.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="Pipeline architecture before and after">
+          <figcaption><span>fig. 01 / architecture shift</span><span>repeated scans to shared computation</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Before</span><strong>15+ CTEs</strong><p>Independent scans over the same 1.2 TB key-value table, stitched back together with full outer joins.</p></div>
+            <div><span>Move</span><strong>1 pass</strong><p>Conditional aggregation pivots 25+ event parameter keys into columns in one grouped computation.</p></div>
+            <div><span>After</span><strong>6-step DAG</strong><p>Sequential chain restructured into a three-tier DAG with parallel execution where dependencies allowed it.</p></div>
           </div>
+        </figure>
 
-          <div class="case-argument">
-            Pipeline debt accumulates the same way technical debt does &mdash; one reasonable decision at a time, each solving an immediate problem without visibility into the cumulative architecture. The 1.2 TB <code>GA4_Event_Params</code> table was a reasonable intermediate step when first introduced. The 15-CTE PDP extraction was a reasonable way to get the data. <strong>The problem was that no one had stepped back to look at the whole system.</strong>
-          </div>
+        <div class="bp-case-gates" aria-label="Pipeline redesign stages">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Single raw scan</strong><p>Read the needed GA4 event rows once instead of repeating the same scan for each parameter extraction.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Conditional aggregation</strong><p>Use <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code> to pivot 25+ event parameters simultaneously.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Canonical logic</strong><p>Move channel grouping into one definition instead of maintaining three slightly different CASE statements.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Partition + migrate</strong><p>Add partitioning to large reporting tables and deliver a four-phase rollout with a 2-4 week validation window.</p></article>
+        </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Situation</div>
-              <div class="card-body">A state-regulated retail platform's GA4 &rarr; BigQuery analytics pipeline, grown organically over several engagements: <code>events_*</code> scanned three separate times (200&ndash;400 GB each at $6.25/TB); Step 02.25 unnested every event type into a generic key-value table (<code>GA4_Event_Params</code> &mdash; 1.2 TB, 4.67 billion rows); Step 02.5 ran 15+ separate CTEs each independently scanning that 1.2 TB table and FULL OUTER JOIN-ed them together. Total: <strong>~18 TB processed per run, ~$112/run</strong>. On top of that, <code>SELECT DISTINCT</code> on 30&ndash;50 columns in three steps, duplicated and slightly inconsistent channel-grouping CASE logic, and a 429 GB unpartitioned table forcing full scans on every downstream query.</div>
-            </div>
-            <div class="card">
-              <div class="card-label">Task</div>
-              <div class="card-body">Audit the whole pipeline, find where the cost was actually coming from, and redesign &mdash; not optimise queries in place. The brief was implicit: surface architectural waste, then propose a migration plan the team could execute against without a freeze. Cost reduction was the visible target; <strong>maintainability and consistency</strong> were the real ones.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Migration plan</p>
+          <h3>No freeze required.</h3>
+          <p>The rollout was designed as four phases: schema preparation, historical backfill, scheduled-query deployment, and table cleanup. The validation window let the team compare outputs before retiring the older intermediate tables.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Action</div>
-              <div class="card-body"><strong>Single raw event scan via conditional aggregation</strong> &mdash; one <code>GROUP BY</code> with <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code> for each of 25+ event parameter keys simultaneously, producing a flat analysis-ready row per <code>page_view</code> event with all parameters pivoted into columns. 8-step sequential pipeline restructured as a <strong>6-step DAG with three tiers of parallel execution</strong>. <code>SELECT DISTINCT</code> replaced with <code>ROW_NUMBER</code> dedup and <code>GROUP BY</code>. Channel grouping unified into a single canonical CASE definition. Partitioning added to the largest reporting tables, converting full-table scans into pruned daily reads. Migration plan delivered as a 4-phase rollout: schema preparation, historical backfill, scheduled-query deployment, table cleanup &mdash; with a 2&ndash;4 week validation window.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Result</div>
-              <div class="card-body">The optimisation wasn't about writing faster queries &mdash; it was about <strong>understanding the full data flow, identifying where costs were actually coming from, and redesigning around a single shared computation rather than repeated independent ones</strong>. The pipeline ended cheaper, faster, easier to maintain, and more consistent in its output: channel-grouping logic now defined in one place instead of three, two intermediate tables retired without information loss. The decision pattern transfers to any cost-conscious analytics rebuild &mdash; spend the modelling work once.</div>
-            </div>
-          </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>cost / maintainability / transfer pattern</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>Cost reduction was the visible win. Architecture was the durable one.</h2>
+        <p>The same decision pattern transfers to other analytics rebuilds: model the expensive thing once, make downstream surfaces consume the shared result.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>The pipeline became cheaper and easier to reason about.</h3>
+          <ul>
+            <li><strong>~50% cost reduction</strong> across pipeline and dashboard queries.</li>
+            <li><strong>Heavy dashboards reduced from roughly $200/day to $100/day</strong> in query cost.</li>
+            <li><strong>1.2 TB intermediate table retired</strong>, along with the redundant <code>pdp_pageview_params</code> layer.</li>
+            <li><strong>15+ independent CTE scans removed</strong> by replacing repeated extraction with one shared computation.</li>
+            <li><strong>Channel grouping unified</strong> into one canonical definition instead of duplicated CASE logic.</li>
+          </ul>
+        </article>
 
-          <div class="metrics">
-            <div class="metric">
-              <div class="metric-value">~50%</div>
-              <div class="metric-label">Cost reduction across both pipeline and dashboard queries</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">$200&rarr;$100</div>
-              <div class="metric-label">Heavy-usage dashboard query cost per day</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">1.2 TB</div>
-              <div class="metric-label">Intermediate storage retired (<code>GA4_Event_Params</code> + <code>pdp_pageview_params</code>)</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>Optimise the system boundary, not the symptom.</h3>
+          <p>Most of the waste lived between queries, not inside any single query. The durable fix was to redraw the boundary between raw event ingestion, parameter extraction, reporting tables, and dashboards so that the expensive modelling work happened once.</p>
+        </article>
 
-          <div class="tags">
-            <span class="tag">BigQuery</span>
-            <span class="tag">SQL (advanced)</span>
-            <span class="tag">DAG redesign</span>
-            <span class="tag">Conditional aggregation</span>
-            <span class="tag">Partitioning</span>
-            <span class="tag">Cost engineering</span>
-            <span class="tag">Migration planning</span>
-          </div>
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">BigQuery</span>
+          <span class="bp-case-tag">SQL</span>
+          <span class="bp-case-tag">DAG redesign</span>
+          <span class="bp-case-tag">Conditional aggregation</span>
+          <span class="bp-case-tag">Partitioning</span>
+          <span class="bp-case-tag">Cost engineering</span>
+          <span class="bp-case-tag">Migration planning</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="sslp-data-infra.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>The pipeline layer behind mobile instrumentation.</strong><span>Scheduled Dataform pipelines, BigQuery modelling, and dashboard-ready tables for a state-regulated retail platform.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
