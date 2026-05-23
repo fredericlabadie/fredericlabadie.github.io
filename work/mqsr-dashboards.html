@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A campaign dashboard, a schema decomposition, and a North Star that holds &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Extending an Amplitude measurement architecture: a BOGO seasonal-promotion dashboard, an Android-isolated error spike surfaced, and a schema decomposition that unlocked revenue-by-size, upsell, customisation, and combo analysis. Lens 03 · Experimentation." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Amplitude campaign analytics for a major QSR: BOGO seasonal-promotion dashboard, Android-isolated error spike surfaced, and products.variant decomposed into five sub-properties for richer analysis." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -15,127 +15,174 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="A campaign dashboard, a schema decomposition, and a North Star that holds &mdash; case study" />
-  <meta property="og:description" content="Amplitude measurement architecture with schema decomposition for richer downstream analysis." />
+  <meta property="og:description" content="Amplitude measurement architecture with campaign dashboarding and schema decomposition." />
   <meta property="og:url" content="https://fredericlabadie.com/work/mqsr-dashboards.html" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="A campaign dashboard, a schema decomposition, and a North Star that holds" />
-  <meta name="twitter:description" content="Amplitude measurement architecture with schema decomposition for richer downstream analysis." />
+  <meta name="twitter:description" content="Amplitude measurement architecture with campaign dashboarding and schema decomposition." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 03 &middot; Experimentation &middot; Campaign analytics</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 03 / Experimentation &amp; Campaign Analytics</p>
         <h1>A campaign dashboard, a schema decomposition, and a North Star that holds.</h1>
-        <p class="hero-subtitle">Extending an existing Amplitude architecture &mdash; with a schema decomposition that unlocked the analysis the mixed field had been hiding.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Major quick-service restaurant &middot; Amplitude &middot; North Star (Transactions)</span>
-        </p>
+        <p class="bp-case-dek">Extending an existing Amplitude measurement architecture so campaign performance, platform errors, and product-level revenue questions could be analysed without collapsing into mixed fields.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Major quick-service restaurant brand / Amplitude measurement architecture</p></div>
+        <div class="bp-case-panel-row"><span>North Star</span><strong>Transactions</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>Amplitude dashboarding, campaign funnel design, platform error breakdown, schema decomposition recommendation</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>1</strong><span>BOGO campaign dashboard built</span></article>
+      <article><strong>1</strong><span>Android-isolated error spike surfaced</span></article>
+      <article><strong>5</strong><span>variant sub-properties proposed</span></article>
+      <article><strong>4</strong><span>analysis paths unlocked</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>dashboarding exposes schema debt</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>A dashboard can surface more than campaign performance.</h2>
+        <p>The dashboard answered campaign questions, but it also revealed where aggregate views and overloaded properties were hiding operational and revenue signals.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>The campaign view exposed a platform issue and a schema limitation.</h3>
+          <p>A major QSR's Amplitude architecture, anchored on a <strong>Transactions North Star</strong>, gained a <strong>BOGO seasonal-promotion dashboard</strong> with deal-conversion funnel, year-over-year comparison, loyalty-acquisition lift analysis, and platform-level error breakdown.</p>
+          <p>The platform breakdown surfaced an <strong>Android-isolated error spike</strong> that was invisible in aggregate. The same engagement also produced a schema recommendation: decompose the overloaded <code>products.variant</code> property into <strong>five discrete sub-properties</strong>, unlocking revenue-by-size, upsell attachment, customisation, and combo-penetration analysis.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Context</p>
+          <h3>The North Star was stable, but the supporting schema was doing too much.</h3>
+          <p>The existing Amplitude architecture used Transactions as the North Star, combining Order Completed, Store Loyalty Checkin Completed, and Receipt Scan Checkin Completed. That was a durable anchor. The problem was downstream detail: campaign, platform, and product-variant questions needed more structured supporting data.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Extend the architecture without breaking the measurement model.</h3>
+          <p>The work was to build a seasonal-promotion dashboard inside the existing Amplitude architecture and identify where the schema needed to be made more granular for future analysis.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A major QSR's Amplitude measurement architecture (anchored on a Transactions North Star) gained a <strong>BOGO seasonal-promotion dashboard</strong> with full deal-conversion funnel, year-over-year comparison, loyalty-acquisition lift, and platform-level error breakdown &mdash; the last of which surfaced an Android-isolated error spike that was invisible in the aggregate. Same engagement also proposed a <strong>decomposition of an overloaded <code>products.variant</code> property into five discrete sub-properties</strong>, unlocking revenue-by-size, upsell attachment, customisation, and combo-penetration analysis that the original mixed field had made impossible.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / measurement architecture</span><span>campaign / platform / schema</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Build layer</p>
+        <h2>Three layers of evidence in one engagement.</h2>
+        <p>Campaign funnel, platform diagnostics, and schema design each answered a different question.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="Amplitude campaign analytics architecture">
+          <figcaption><span>fig. 01 / campaign analytics architecture</span><span>dashboard to schema recommendation</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Campaign</span><strong>BOGO funnel</strong><p>Deal conversion, year-over-year comparison, and loyalty-acquisition lift analysis.</p></div>
+            <div><span>Platform</span><strong>Error breakdown</strong><p>Platform-level error views surfaced an Android-specific spike hidden in aggregate.</p></div>
+            <div><span>Schema</span><strong>Variant split</strong><p>Overloaded <code>products.variant</code> decomposed into five proposed sub-properties.</p></div>
           </div>
+        </figure>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Context</div>
-              <div class="card-body">A major quick-service restaurant with an existing Amplitude architecture anchored on a <strong>Transactions North Star</strong> (Order Completed + Store Loyalty Checkin Completed + Receipt Scan Checkin Completed) and a BOGO seasonal promotion to measure. Two problems sat alongside: the existing dashboards couldn't decompose platform-level error patterns, and an overloaded <code>products.variant</code> property was hiding revenue-by-size, upsell attachment, customisation, and combo-penetration analysis.</div>
-            </div>
-            <div class="card amber">
-              <div class="card-label">What I did</div>
-              <div class="card-body">Built the BOGO seasonal-promotion dashboard with full deal-conversion funnel, year-over-year comparison, loyalty-acquisition lift analysis, and platform-level error breakdown &mdash; the last of which surfaced an <strong>Android-isolated error spike invisible in the aggregate</strong>. Separately proposed the decomposition of <code>products.variant</code> into five discrete sub-properties, unlocking the analyses the mixed field had made impossible.</div>
-            </div>
-          </div>
+        <div class="bp-case-gates" aria-label="Dashboard and schema components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>North Star anchor</strong><p>Worked within the Transactions framework: order completed, store loyalty check-in, and receipt scan check-in.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Campaign funnel</strong><p>Built seasonal-promotion funnel analysis across deal exposure, engagement, conversion, and loyalty acquisition.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Error breakdown</strong><p>Added platform-level error visibility so Android-specific issues did not disappear in the aggregate.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Schema decomposition</strong><p>Proposed splitting mixed product-variant data into discrete fields for size, upsell, customisation, and combo analysis.</p></article>
+        </div>
 
-          <div class="tags">
-            <span class="tag">Amplitude dashboards</span>
-            <span class="tag">North Star framework</span>
-            <span class="tag">Campaign funnel design</span>
-            <span class="tag">Schema decomposition</span>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The dashboard became a diagnostic surface.</h3>
+          <p>I built the BOGO seasonal-promotion dashboard with deal-conversion funnel, year-over-year comparison, loyalty-acquisition lift, and platform-level error breakdown. Separately, I proposed decomposing <code>products.variant</code> into five discrete sub-properties so future revenue and product-behaviour analysis would not remain trapped inside one overloaded field.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>error visibility / richer product analysis</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The dashboard answered the campaign question and revealed the next architecture question.</h2>
+        <p>The strongest output was not a single chart. It was clearer visibility into which future questions the current schema could not answer.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>Campaign, platform, and product questions became more separable.</h3>
+          <ul>
+            <li><strong>BOGO seasonal-promotion dashboard</strong> delivered in Amplitude.</li>
+            <li><strong>Android-isolated error spike</strong> surfaced through platform-level breakdown.</li>
+            <li><strong>Five sub-properties proposed</strong> for the overloaded <code>products.variant</code> field.</li>
+            <li><strong>Four richer analysis paths unlocked</strong>: revenue-by-size, upsell attachment, customisation, and combo penetration.</li>
+          </ul>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>A stable North Star still needs usable detail underneath.</h3>
+          <p>The Transactions North Star held. The work was making sure the supporting instrumentation could answer the more specific questions teams ask once they trust the top-level metric.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">Amplitude dashboards</span>
+          <span class="bp-case-tag">North Star framework</span>
+          <span class="bp-case-tag">Campaign funnel design</span>
+          <span class="bp-case-tag">Schema decomposition</span>
+          <span class="bp-case-tag">Platform diagnostics</span>
+          <span class="bp-case-tag">Product analytics</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="mqsr-errors.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Clean taxonomy, trustworthy alerts, enriched context.</strong><span>Error taxonomy and alert engineering for the same QSR analytics environment.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
