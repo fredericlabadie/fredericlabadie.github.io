@@ -1,191 +1,419 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From what should we measure to 30+ shipped tickets &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production with cross-platform parity and consent built in." />
-  <meta name="theme-color" content="#eef2f5" />
-  <meta name="robots" content="noindex, nofollow" />
+  <head>
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      From what should we measure to 30+ shipped tickets &mdash; case study
+      &mdash; Frederic Labadie
+    </title>
+    <meta
+      name="description"
+      content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production with cross-platform parity and consent built in."
+    />
+    <meta name="theme-color" content="#eef2f5" />
+    <meta name="robots" content="noindex, nofollow" />
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="../favicon.svg" />
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../favicon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="From what should we measure to 30+ shipped tickets &mdash; case study" />
-  <meta property="og:description" content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production." />
-  <meta property="og:url" content="https://fredericlabadie.com/work/sslp-mobile.html" />
-  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="From what should we measure to 30+ shipped tickets &mdash; case study" />
-  <meta name="twitter:description" content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production." />
-  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="From what should we measure to 30+ shipped tickets &mdash; case study"
+    />
+    <meta
+      property="og:description"
+      content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production."
+    />
+    <meta
+      property="og:url"
+      content="https://fredericlabadie.com/work/sslp-mobile.html"
+    />
+    <meta
+      property="og:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="From what should we measure to 30+ shipped tickets &mdash; case study"
+    />
+    <meta
+      name="twitter:description"
+      content="Greenfield mobile UX-telemetry layer across iOS and Android: spec to production."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/case-blueprint.css" />
-</head>
-<body class="bp-case-body">
-  <a class="skip-link" href="#case">Skip to case</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-blueprint.css" />
+  </head>
+  <body class="bp-case-body">
+    <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="bp-case-nav" aria-label="Primary">
-    <a class="bp-case-nav-brand" href="../">
-      <span class="bp-case-dot" aria-hidden="true"></span>
-      <span>fredericlabadie.com</span>
-      <span class="bp-case-nav-muted">/ case study</span>
-    </a>
-    <ul class="bp-case-nav-links" id="primary-nav">
-      <li><a href="../">/ home</a></li>
-      <li><a href="../work/" aria-current="page">// work</a></li>
-      <li><a href="../thoughts/">/ current meditations</a></li>
-      <li><a href="../about/">/ about</a></li>
-      <li><a href="../recruiters/">/ recruiters</a></li>
-      <li><a href="../contact/">/ contact</a></li>
-    </ul>
-  </nav>
+    <nav class="bp-case-nav" aria-label="Primary">
+      <a class="bp-case-nav-brand" href="../">
+        <span class="bp-case-dot" aria-hidden="true"></span>
+        <span>fredericlabadie.com</span>
+        <span class="bp-case-nav-muted">/ case study</span>
+      </a>
+      <ul class="bp-case-nav-links" id="primary-nav">
+        <li><a href="../">/ home</a></li>
+        <li><a href="../work/" aria-current="page">// work</a></li>
+        <li><a href="../thoughts/">/ current meditations</a></li>
+        <li><a href="../about/">/ about</a></li>
+        <li><a href="../recruiters/">/ recruiters</a></li>
+        <li><a href="../contact/">/ contact</a></li>
+      </ul>
+    </nav>
 
-  <main class="bp-case-shell" id="top">
-    <header class="bp-case-hero">
-      <div>
-        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 02 / Instrumentation</p>
-        <h1>From "what should we measure?" to 30+ shipped tickets.</h1>
-        <p class="bp-case-dek">A greenfield mobile UX-telemetry layer across iOS and Android: spec to production, with cross-platform parity and consent built in before launch.</p>
-      </div>
-      <aside class="bp-case-hero-panel" aria-label="Case summary">
-        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
-        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / analytics architecture engagement</p></div>
-        <div class="bp-case-panel-row"><span>Project timing</span><strong>2025-2026</strong></div>
-        <div class="bp-case-panel-row"><span>Role</span><p>Event taxonomy, SDK implementation support, QA, parity audit, consent governance</p></div>
-      </aside>
-    </header>
-
-    <section class="bp-case-receipts" aria-label="Case proof points">
-      <article><strong>30+</strong><span>tracking tickets shipped</span></article>
-      <article><strong>iOS + Android</strong><span>cross-platform parity audited</span></article>
-      <article><strong>GA4</strong><span>e-commerce taxonomy live</span></article>
-      <article><strong>TrustArc + OneTrust</strong><span>consent built in</span></article>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>instrumentation before dashboarding</span></div>
-    <section class="bp-case-content" id="case">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Core argument</p>
-        <h2>The deliverable was the layer the dashboards eventually run on.</h2>
-        <p>Taxonomy, schema, SDK implementation, QA, parity, and consent governance are not setup chores. They are the analytics product.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-proof-panel">
-          <p class="bp-case-mono bp-case-accent">What happened</p>
-          <h3>A mobile app launched with trustworthy telemetry on day one.</h3>
-          <p>A state-regulated retail platform shipped a brand-new mobile app with a full UX-telemetry layer underneath it: <strong>30+ tickets authored, owned, and deployed</strong> across iOS and Android, cross-platform schema parity audited and closed, GA4 e-commerce taxonomy live, and consent management integrated through <strong>TrustArc + OneTrust</strong> before launch.</p>
-          <p>The dashboards that now run on this stack work because the instrumentation layer was built deliberately rather than retrofitted after release.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Situation</p>
-          <h3>Zero prior mobile instrumentation.</h3>
-          <p>The client was building a mobile app from scratch. There was no mobile taxonomy, no event schema, no SDK integration, and no production telemetry deployment story. Downstream marketing, product, and compliance work all depended on the layer being right the first time.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Task</p>
-          <h3>Stand up the measurement layer end to end.</h3>
-          <p>The goal was full mobile UX telemetry across iOS and Android, from tracking specification to production deployment, with explicit cross-platform parity and consent governance integrated before launch. In a state-regulated context, privacy review could not be an after-the-fact bolt-on.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / implementation</span><span>schema / telemetry / QA / consent</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Build layer</p>
-        <h2>Schema, implementation, validation, governance.</h2>
-        <p>The work moved from measurement question to ticket to SDK behaviour to validated event stream.</p>
-      </aside>
-      <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="Mobile instrumentation delivery chain">
-          <figcaption><span>fig. 01 / delivery chain</span><span>question to production event stream</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Design</span><strong>Taxonomy</strong><p>GA4 e-commerce taxonomy, screen coverage, interaction events, and event-level product metadata.</p></div>
-            <div><span>Ship</span><strong>Tickets</strong><p>30+ Jira tickets authored, owned, validated, and shipped across iOS and Android.</p></div>
-            <div><span>Govern</span><strong>Consent</strong><p>TrustArc and OneTrust integrated with tag configuration before production launch.</p></div>
+    <main class="bp-case-shell" id="top">
+      <header class="bp-case-hero">
+        <div>
+          <p class="bp-case-kicker bp-case-accent">
+            // Case study / Lens 02 / Instrumentation
+          </p>
+          <h1>From "what should we measure?" to 30+ shipped tickets.</h1>
+          <p class="bp-case-dek">
+            A greenfield mobile UX-telemetry layer across iOS and Android: spec
+            to production, with cross-platform parity and consent built in
+            before launch.
+          </p>
+        </div>
+        <aside class="bp-case-hero-panel" aria-label="Case summary">
+          <div class="bp-case-panel-head">
+            <span>Case file</span><span>Static / anonymised</span>
           </div>
-        </figure>
+          <div class="bp-case-panel-row">
+            <span>Client context</span>
+            <p>
+              State-regulated retail platform / analytics architecture
+              engagement
+            </p>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Project timing</span><strong>2025-2026</strong>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Role</span>
+            <p>
+              Event taxonomy, SDK implementation support, QA, parity audit,
+              consent governance
+            </p>
+          </div>
+        </aside>
+      </header>
 
-        <div class="bp-case-gates" aria-label="Mobile instrumentation components">
-          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Event schema design</strong><p>Full GA4 e-commerce taxonomy: purchase, add_to_cart, view_item, begin_checkout, view_cart, refund, items array, value, currency, transaction_id.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Interaction telemetry</strong><p>Bottom navigation, search-query submission with results count, PDP metadata on every event, barcode-scanner interactions, and account-management flows.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Parity and QA</strong><p>Real-device testing across iOS and Android, GA4 DebugView validation, regression QA checklists per sprint, and ticketed parity gaps.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Privacy governance</strong><p>Privacy-compliance review before any PII-adjacent property was specified, plus data-governance sign-off from client stakeholders.</p></article>
-        </div>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Action</p>
-          <h3>The mobile layer was built as production infrastructure.</h3>
-          <p>I designed the event taxonomy, wrote the implementation tickets, validated event behaviour in DebugView and on real devices, audited iOS and Android schema parity, and connected the production telemetry layer to the consent setup before launch.</p>
-          <p>The work also created the data foundation for later analysis: retention cohorts in GA4 Explore, product metadata on interaction events, and a consistent mobile event shape that could be connected to the broader web/app/CRM reporting layer.</p>
+      <section class="bp-case-receipts" aria-label="Case proof points">
+        <article>
+          <strong>30+</strong><span>tracking tickets shipped</span>
         </article>
+        <article>
+          <strong>iOS + Android</strong
+          ><span>cross-platform parity audited</span>
+        </article>
+        <article>
+          <strong>GA4</strong><span>e-commerce taxonomy live</span>
+        </article>
+        <article>
+          <strong>TrustArc</strong><span>consent built in</span>
+        </article>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 01 / thesis</span
+        ><span>instrumentation before dashboarding</span>
       </div>
-    </section>
+      <section class="bp-case-content" id="case">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Core argument</p>
+          <h2>
+            The deliverable was the layer the dashboards eventually run on.
+          </h2>
+          <p>
+            Taxonomy, schema, SDK implementation, QA, parity, and consent
+            governance are not setup chores. They are the analytics product.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-proof-panel">
+            <p class="bp-case-mono bp-case-accent">What happened</p>
+            <h3>
+              A mobile app launched with trustworthy telemetry on day one.
+            </h3>
+            <p>
+              A state-regulated retail platform shipped a brand-new mobile app
+              with a full UX-telemetry layer underneath it:
+              <strong>30+ tickets authored, owned, and deployed</strong> across
+              iOS and Android, cross-platform schema parity audited and closed,
+              GA4 e-commerce taxonomy live, and consent management integrated
+              through <strong>TrustArc</strong> before launch.
+            </p>
+            <p>
+              The dashboards that now run on this stack work because the
+              instrumentation layer was built deliberately rather than
+              retrofitted after release.
+            </p>
+          </article>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>day-one trust / avoided retroactive debt</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Result</p>
-        <h2>The cost avoided was six to twelve months of reconciliation debt.</h2>
-        <p>Pre-launch schema and consent work prevents the kind of measurement debt that disqualifies data later when product asks for attribution or cohort analysis.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Outcome</p>
-          <h3>The analytics team could trust the mobile stream from launch.</h3>
-          <ul>
-            <li><strong>30+ Jira tickets</strong> authored, owned, and shipped to production for mobile greenfield instrumentation.</li>
-            <li><strong>Cross-platform schema parity</strong> audited across iOS, Android, and web, with gaps ticketed and closed.</li>
-            <li><strong>Consent management</strong> integrated with tag configuration in production through TrustArc and OneTrust.</li>
-            <li><strong>GA4 e-commerce taxonomy</strong> and screen/interaction coverage available for downstream product and marketing work.</li>
-          </ul>
-        </article>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Situation</p>
+            <h3>Zero prior mobile instrumentation.</h3>
+            <p>
+              The client was building a mobile app from scratch. There was no
+              mobile taxonomy, no event schema, no SDK integration, and no
+              production telemetry deployment story. Downstream marketing,
+              product, and compliance work all depended on the layer being right
+              the first time.
+            </p>
+          </article>
 
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Design lesson</p>
-          <h3>Instrumentation is cheapest before launch.</h3>
-          <p>When a product team asks for attribution, cohort analysis, or funnel visibility after launch, the answer depends on decisions made months earlier. The practical value of this engagement was not only what it measured, but what it prevented: retrospective cleanup, mismatched platform semantics, and consent ambiguity.</p>
-        </article>
-
-        <div class="bp-case-tags" aria-label="Technologies and methods">
-          <span class="bp-case-tag">GA4 web + app</span>
-          <span class="bp-case-tag">Firebase SDK</span>
-          <span class="bp-case-tag">Segment CDP</span>
-          <span class="bp-case-tag">GTM</span>
-          <span class="bp-case-tag">Solution Design References</span>
-          <span class="bp-case-tag">Cross-platform parity</span>
-          <span class="bp-case-tag">TrustArc</span>
-          <span class="bp-case-tag">OneTrust</span>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Task</p>
+            <h3>Stand up the measurement layer end to end.</h3>
+            <p>
+              The goal was full mobile UX telemetry across iOS and Android, from
+              tracking specification to production deployment, with explicit
+              cross-platform parity and consent governance integrated before
+              launch. In a state-regulated context, privacy review could not be
+              an after-the-fact bolt-on.
+            </p>
+          </article>
         </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 02 / implementation</span
+        ><span>schema / telemetry / QA / consent</span>
       </div>
-    </section>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Build layer</p>
+          <h2>Schema, implementation, validation, governance.</h2>
+          <p>
+            The work moved from measurement question to ticket to SDK behaviour
+            to validated event stream.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <figure
+            class="bp-case-figure"
+            aria-label="Mobile instrumentation delivery chain"
+          >
+            <figcaption>
+              <span>fig. 01 / delivery chain</span
+              ><span>question to production event stream</span>
+            </figcaption>
+            <div class="bp-case-figure-grid">
+              <div>
+                <span>Design</span><strong>Taxonomy</strong>
+                <p>
+                  GA4 e-commerce taxonomy, screen coverage, interaction events,
+                  and event-level product metadata.
+                </p>
+              </div>
+              <div>
+                <span>Ship</span><strong>Tickets</strong>
+                <p>
+                  30+ Jira tickets authored, owned, validated, and shipped
+                  across iOS and Android.
+                </p>
+              </div>
+              <div>
+                <span>Govern</span><strong>Consent</strong>
+                <p>
+                  TrustArc integrated with tag configuration before production
+                  launch.
+                </p>
+              </div>
+            </div>
+          </figure>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
-    <section class="bp-case-next">
-      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
-      <a href="sslp-data-infra.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>The pipeline layer behind mobile instrumentation.</strong><span>Scheduled Dataform pipelines, BigQuery modelling, and dashboard-ready tables for the same platform.</span></a>
-      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
-    </section>
-  </main>
+          <div
+            class="bp-case-gates"
+            aria-label="Mobile instrumentation components"
+          >
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">1</span
+              ><strong>Event schema design</strong>
+              <p>
+                Full GA4 e-commerce taxonomy: purchase, add_to_cart, view_item,
+                begin_checkout, view_cart, refund, items array, value, currency,
+                transaction_id.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">2</span
+              ><strong>Interaction telemetry</strong>
+              <p>
+                Bottom navigation, search-query submission with results count,
+                PDP metadata on every event, barcode-scanner interactions, and
+                account-management flows.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">3</span
+              ><strong>Parity and QA</strong>
+              <p>
+                Real-device testing across iOS and Android, GA4 DebugView
+                validation, regression QA checklists per sprint, and ticketed
+                parity gaps.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">4</span
+              ><strong>Privacy governance</strong>
+              <p>
+                Privacy-compliance review before any PII-adjacent property was
+                specified, plus data-governance sign-off from client
+                stakeholders.
+              </p>
+            </article>
+          </div>
 
-  <footer class="bp-footer">
-    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
-    <span>Plain HTML + CSS / GitHub Pages</span>
-    <span>Case study / static portfolio</span>
-  </footer>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Action</p>
+            <h3>The mobile layer was built as production infrastructure.</h3>
+            <p>
+              I designed the event taxonomy, wrote the implementation tickets,
+              validated event behaviour in DebugView and on real devices,
+              audited iOS and Android schema parity, and connected the
+              production telemetry layer to the consent setup before launch.
+            </p>
+            <p>
+              The work also created the data foundation for later analysis:
+              retention cohorts in GA4 Explore, product metadata on interaction
+              events, and a consistent mobile event shape that could be
+              connected to the broader web/app/CRM reporting layer.
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <script src="../js/main.js"></script>
-  <script type="module" src="/js/amplitude-init.js"></script>
-  <script type="module" src="/js/analytics.js"></script>
-</body>
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 03 / result</span
+        ><span>day-one trust / avoided retroactive debt</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Result</p>
+          <h2>
+            The cost avoided was six to twelve months of reconciliation debt.
+          </h2>
+          <p>
+            Pre-launch schema and consent work prevents the kind of measurement
+            debt that disqualifies data later when product asks for attribution
+            or cohort analysis.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Outcome</p>
+            <h3>
+              The analytics team could trust the mobile stream from launch.
+            </h3>
+            <ul>
+              <li>
+                <strong>30+ Jira tickets</strong> authored, owned, and shipped
+                to production for mobile greenfield instrumentation.
+              </li>
+              <li>
+                <strong>Cross-platform schema parity</strong> audited across
+                iOS, Android, and web, with gaps ticketed and closed.
+              </li>
+              <li>
+                <strong>Consent management</strong> integrated with tag
+                configuration in production through TrustArc.
+              </li>
+              <li>
+                <strong>GA4 e-commerce taxonomy</strong> and screen/interaction
+                coverage available for downstream product and marketing work.
+              </li>
+            </ul>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Design lesson</p>
+            <h3>Instrumentation is cheapest before launch.</h3>
+            <p>
+              When a product team asks for attribution, cohort analysis, or
+              funnel visibility after launch, the answer depends on decisions
+              made months earlier. The practical value of this engagement was
+              not only what it measured, but what it prevented: retrospective
+              cleanup, mismatched platform semantics, and consent ambiguity.
+            </p>
+          </article>
+
+          <div class="bp-case-tags" aria-label="Technologies and methods">
+            <span class="bp-case-tag">GA4 web + app</span>
+            <span class="bp-case-tag">Firebase SDK</span>
+            <span class="bp-case-tag">Segment CDP</span>
+            <span class="bp-case-tag">GTM</span>
+            <span class="bp-case-tag">Solution Design References</span>
+            <span class="bp-case-tag">Cross-platform parity</span>
+            <span class="bp-case-tag">TrustArc</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 04 / next</span
+        ><span>case library / adjacent evidence / contact</span>
+      </div>
+      <section class="bp-case-next">
+        <a href="../work/"
+          ><span class="bp-case-mono bp-case-accent">More cases</span
+          ><strong>Full case library.</strong
+          ><span
+            >Eighteen cases across seven lenses: question formulation,
+            instrumentation, experimentation, AI workflows, adoption, marketing
+            analytics, and data engineering.</span
+          ></a
+        >
+        <a href="sslp-data-infra.html"
+          ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+          ><strong>The pipeline layer behind mobile instrumentation.</strong
+          ><span
+            >Scheduled Dataform pipelines, BigQuery modelling, and
+            dashboard-ready tables for the same platform.</span
+          ></a
+        >
+        <a href="../contact/"
+          ><span class="bp-case-mono bp-case-accent">Get in touch</span
+          ><strong>Contact and context.</strong
+          ><span
+            >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or
+            any other in detail.</span
+          ></a
+        >
+      </section>
+    </main>
+
+    <footer class="bp-footer">
+      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+      <span>Plain HTML + CSS / GitHub Pages</span>
+      <span>Case study / static portfolio</span>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script type="module" src="/js/amplitude-init.js"></script>
+    <script type="module" src="/js/analytics.js"></script>
+  </body>
 </html>

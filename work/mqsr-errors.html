@@ -1,189 +1,413 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean taxonomy, trustworthy alerts, enriched context &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Three layers of remediation on a noisy Amplitude alert channel: threshold redesign, hierarchical error-category IDs, and cart_id enrichment for checkout error events." />
-  <meta name="theme-color" content="#eef2f5" />
-  <meta name="robots" content="noindex, nofollow" />
+  <head>
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Clean taxonomy, trustworthy alerts, enriched context &mdash; case study
+      &mdash; Frederic Labadie
+    </title>
+    <meta
+      name="description"
+      content="Three layers of remediation on a noisy Amplitude alert channel: threshold redesign, hierarchical error-category IDs, and cart_id enrichment for checkout error events."
+    />
+    <meta name="theme-color" content="#eef2f5" />
+    <meta name="robots" content="noindex, nofollow" />
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="../favicon.svg" />
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../favicon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Clean taxonomy, trustworthy alerts, enriched context &mdash; case study" />
-  <meta property="og:description" content="Three layers of remediation on a noisy alert channel." />
-  <meta property="og:url" content="https://fredericlabadie.com/work/mqsr-errors.html" />
-  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Clean taxonomy, trustworthy alerts, enriched context &mdash; case study" />
-  <meta name="twitter:description" content="Three layers of remediation on a noisy alert channel." />
-  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Clean taxonomy, trustworthy alerts, enriched context &mdash; case study"
+    />
+    <meta
+      property="og:description"
+      content="Three layers of remediation on a noisy alert channel."
+    />
+    <meta
+      property="og:url"
+      content="https://fredericlabadie.com/work/mqsr-errors.html"
+    />
+    <meta
+      property="og:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Clean taxonomy, trustworthy alerts, enriched context &mdash; case study"
+    />
+    <meta
+      name="twitter:description"
+      content="Three layers of remediation on a noisy alert channel."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/case-blueprint.css" />
-</head>
-<body class="bp-case-body">
-  <a class="skip-link" href="#case">Skip to case</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-blueprint.css" />
+  </head>
+  <body class="bp-case-body">
+    <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="bp-case-nav" aria-label="Primary">
-    <a class="bp-case-nav-brand" href="../">
-      <span class="bp-case-dot" aria-hidden="true"></span>
-      <span>fredericlabadie.com</span>
-      <span class="bp-case-nav-muted">/ case study</span>
-    </a>
-    <ul class="bp-case-nav-links" id="primary-nav">
-      <li><a href="../">/ home</a></li>
-      <li><a href="../work/" aria-current="page">// work</a></li>
-      <li><a href="../thoughts/">/ current meditations</a></li>
-      <li><a href="../about/">/ about</a></li>
-      <li><a href="../recruiters/">/ recruiters</a></li>
-      <li><a href="../contact/">/ contact</a></li>
-    </ul>
-  </nav>
+    <nav class="bp-case-nav" aria-label="Primary">
+      <a class="bp-case-nav-brand" href="../">
+        <span class="bp-case-dot" aria-hidden="true"></span>
+        <span>fredericlabadie.com</span>
+        <span class="bp-case-nav-muted">/ case study</span>
+      </a>
+      <ul class="bp-case-nav-links" id="primary-nav">
+        <li><a href="../">/ home</a></li>
+        <li><a href="../work/" aria-current="page">// work</a></li>
+        <li><a href="../thoughts/">/ current meditations</a></li>
+        <li><a href="../about/">/ about</a></li>
+        <li><a href="../recruiters/">/ recruiters</a></li>
+        <li><a href="../contact/">/ contact</a></li>
+      </ul>
+    </nav>
 
-  <main class="bp-case-shell" id="top">
-    <header class="bp-case-hero">
-      <div>
-        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 02 / Instrumentation &amp; Alert Engineering</p>
-        <h1>Clean taxonomy, trustworthy alerts, enriched context.</h1>
-        <p class="bp-case-dek">Three layers of remediation on an alert channel where genuine checkout failures were buried in noise from low-traffic Active% triggers.</p>
-      </div>
-      <aside class="bp-case-hero-panel" aria-label="Case summary">
-        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
-        <div class="bp-case-panel-row"><span>Client context</span><p>Major quick-service restaurant brand / Amplitude monitors / checkout telemetry</p></div>
-        <div class="bp-case-panel-row"><span>Downstream link</span><strong>AI triage</strong></div>
-        <div class="bp-case-panel-row"><span>Role</span><p>Threshold redesign, error taxonomy design, schema governance, checkout-event context enrichment</p></div>
-      </aside>
-    </header>
-
-    <section class="bp-case-receipts" aria-label="Case proof points">
-      <article><strong>3</strong><span>remediation layers</span></article>
-      <article><strong>2</strong><span>threshold modes combined</span></article>
-      <article><strong>1</strong><span>hierarchical error taxonomy</span></article>
-      <article><strong>cart_id</strong><span>added to checkout error events</span></article>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>alert quality starts in schema</span></div>
-    <section class="bp-case-content" id="case">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Core argument</p>
-        <h2>Error events must carry the same context as their success counterparts.</h2>
-        <p>Otherwise alerting can be technically correct but still require detective work before anyone can act on it.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-proof-panel">
-          <p class="bp-case-mono bp-case-accent">What happened</p>
-          <h3>A noisy alert channel became a more trustworthy operating surface.</h3>
-          <p>A major QSR's Amplitude alert channel was firing on too many low-signal events. Genuine checkout failures were buried in low-traffic Active% noise. I added three layers of remediation: redesigned thresholds with troubleshooting guidance, a hierarchical error-category ID scheme, and <code>cart_id</code> enrichment so checkout error events carried the same contextual anchor as their success counterparts.</p>
-          <p>The taxonomy work directly reduces false positives in the AI alert-triage system because the model has cleaner categories and richer context to reason from.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Context</p>
-          <h3>The alert channel was correct but exhausting.</h3>
-          <p>Low-traffic monitors produced noisy Active% triggers that drowned out genuinely important checkout failures. On-call responders had to do detective work before they could know whether an alert represented a real checkout problem, which basket was affected, or how the error should be categorised.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Task</p>
-          <h3>Make the alert itself carry the start of the diagnosis.</h3>
-          <p>The work needed to reduce false positives while improving diagnostic context. That required changes at the monitor threshold layer, the error taxonomy layer, and the event-schema layer.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / remediation</span><span>thresholds / taxonomy / context</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Remediation</p>
-        <h2>Three fixes, one operating principle.</h2>
-        <p>Trustworthy alerting depends on threshold design, stable categorisation, and event context that lets engineers move from alert to diagnosis.</p>
-      </aside>
-      <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="Alert remediation architecture">
-          <figcaption><span>fig. 01 / alert remediation</span><span>threshold / taxonomy / context</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Threshold</span><strong>Rate + change</strong><p>Combined absolute rate with rate-of-change so low-traffic volatility did not dominate the channel.</p></div>
-            <div><span>Taxonomy</span><strong>Stable IDs</strong><p>Hierarchical IDs such as <code>SYS-INF-001</code> and <code>SYS-APP-VAL-010</code> made errors governable.</p></div>
-            <div><span>Context</span><strong>cart_id</strong><p>Checkout error events gained cart context so engineering could correlate failures to specific basket instances.</p></div>
+    <main class="bp-case-shell" id="top">
+      <header class="bp-case-hero">
+        <div>
+          <p class="bp-case-kicker bp-case-accent">
+            // Case study / Lens 02 / Instrumentation &amp; Alert Engineering
+          </p>
+          <h1>Clean taxonomy, trustworthy alerts, enriched context.</h1>
+          <p class="bp-case-dek">
+            Three layers of remediation on an alert channel where genuine
+            checkout failures were buried in noise from low-traffic Active%
+            triggers.
+          </p>
+        </div>
+        <aside class="bp-case-hero-panel" aria-label="Case summary">
+          <div class="bp-case-panel-head">
+            <span>Case file</span><span>Static / anonymised</span>
           </div>
-        </figure>
+          <div class="bp-case-panel-row">
+            <span>Client context</span>
+            <p>
+              Major quick-service restaurant brand / Amplitude monitors /
+              checkout telemetry
+            </p>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Downstream link</span><strong>AI triage</strong>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Role</span>
+            <p>
+              Threshold redesign, error taxonomy design, schema governance,
+              checkout-event context enrichment
+            </p>
+          </div>
+        </aside>
+      </header>
 
-        <div class="bp-case-gates" aria-label="Alert remediation layers">
-          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Threshold redesign</strong><p>Redesigned monitors around absolute rate plus rate-of-change, reducing overreaction to low-traffic Active% volatility.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Chart-level guidance</strong><p>Added engineering-facing troubleshooting guidance directly on each chart so the alert carried the start of the diagnosis.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Error taxonomy</strong><p>Designed hierarchical error-category IDs with deterministic mapping rules and governance guidelines against schema drift.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Context enrichment</strong><p>Added <code>cart_id</code> to <code>Checkout Started Error Received</code> so error and success events shared the same context level.</p></article>
-        </div>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Action</p>
-          <h3>The alert channel was redesigned across layers, not just muted.</h3>
-          <p>I redesigned alert thresholds, added troubleshooting guidance to the relevant Amplitude charts, created a hierarchical error-category ID scheme with governance rules, and enriched checkout error events with <code>cart_id</code>. The goal was not fewer alerts for its own sake. It was alerts that responders could interpret and act on without recreating the context from scratch.</p>
+      <section class="bp-case-receipts" aria-label="Case proof points">
+        <article><strong>3</strong><span>remediation layers</span></article>
+        <article>
+          <strong>2</strong><span>threshold modes combined</span>
         </article>
+        <article>
+          <strong>1</strong><span>hierarchical error taxonomy</span>
+        </article>
+        <article>
+          <strong>cart_id</strong><span>added to checkout error events</span>
+        </article>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 01 / thesis</span><span>alert quality starts in schema</span>
       </div>
-    </section>
+      <section class="bp-case-content" id="case">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Core argument</p>
+          <h2>
+            Error events must carry the same context as their success
+            counterparts.
+          </h2>
+          <p>
+            Otherwise alerting can be technically correct but still require
+            detective work before anyone can act on it.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-proof-panel">
+            <p class="bp-case-mono bp-case-accent">What happened</p>
+            <h3>
+              A noisy alert channel became a more trustworthy operating surface.
+            </h3>
+            <p>
+              A major QSR's Amplitude alert channel was firing on too many
+              low-signal events. Genuine checkout failures were buried in
+              low-traffic Active% noise. I delivered three layers of
+              remediation: redesigned thresholds with troubleshooting guidance
+              (shipped); a hierarchical error-category ID scheme designed and
+              proposed for implementation; and a <code>cart_id</code> enrichment
+              specification so checkout error events would carry the same
+              contextual anchor as their success counterparts.
+            </p>
+            <p>
+              The taxonomy work directly reduces false positives in the AI
+              alert-triage system because the model has cleaner categories and
+              richer context to reason from.
+            </p>
+          </article>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>trustworthy alerts / cleaner AI triage</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Result</p>
-        <h2>Better alerting made the AI workflow safer downstream.</h2>
-        <p>The AI triage system is only as useful as the categories and context it reads. Cleaner upstream taxonomy reduces downstream guesswork.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Outcome</p>
-          <h3>Alerts became more actionable before AI entered the loop.</h3>
-          <ul>
-            <li><strong>Thresholds redesigned</strong> around absolute rate plus rate-of-change.</li>
-            <li><strong>Engineering-facing troubleshooting guidance</strong> added directly to charts.</li>
-            <li><strong>Hierarchical error-category IDs</strong> introduced with deterministic mapping and governance rules.</li>
-            <li><strong><code>cart_id</code> added</strong> to checkout error events so failures could be correlated to basket instances.</li>
-            <li><strong>False-positive reduction support</strong> created for the AI alert-triage workflow.</li>
-          </ul>
-        </article>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Context</p>
+            <h3>The alert channel was correct but exhausting.</h3>
+            <p>
+              Low-traffic monitors produced noisy Active% triggers that drowned
+              out genuinely important checkout failures. On-call responders had
+              to do detective work before they could know whether an alert
+              represented a real checkout problem, which basket was affected, or
+              how the error should be categorised.
+            </p>
+          </article>
 
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Design lesson</p>
-          <h3>Alerting problems are often taxonomy problems wearing an operations costume.</h3>
-          <p>If errors are inconsistently categorised or stripped of the context success events carry, the alert channel forces humans to reconstruct basic facts. Fixing that starts upstream in instrumentation and schema governance.</p>
-        </article>
-
-        <div class="bp-case-tags" aria-label="Technologies and methods">
-          <span class="bp-case-tag">Amplitude monitors</span>
-          <span class="bp-case-tag">Error taxonomy design</span>
-          <span class="bp-case-tag">Alert engineering</span>
-          <span class="bp-case-tag">Schema governance</span>
-          <span class="bp-case-tag">Checkout telemetry</span>
-          <span class="bp-case-tag">AI triage input quality</span>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Task</p>
+            <h3>Make the alert itself carry the start of the diagnosis.</h3>
+            <p>
+              The work needed to reduce false positives while improving
+              diagnostic context. That required changes at the monitor threshold
+              layer, the error taxonomy layer, and the event-schema layer.
+            </p>
+          </article>
         </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 02 / remediation</span
+        ><span>thresholds / taxonomy / context</span>
       </div>
-    </section>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Remediation</p>
+          <h2>Three fixes, one operating principle.</h2>
+          <p>
+            Trustworthy alerting depends on threshold design, stable
+            categorisation, and event context that lets engineers move from
+            alert to diagnosis.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <figure
+            class="bp-case-figure"
+            aria-label="Alert remediation architecture"
+          >
+            <figcaption>
+              <span>fig. 01 / alert remediation</span
+              ><span>threshold / taxonomy / context</span>
+            </figcaption>
+            <div class="bp-case-figure-grid">
+              <div>
+                <span>Threshold</span><strong>Rate + change</strong>
+                <p>
+                  Combined absolute rate with rate-of-change so low-traffic
+                  volatility did not dominate the channel.
+                </p>
+              </div>
+              <div>
+                <span>Taxonomy</span><strong>Stable IDs</strong>
+                <p>
+                  Hierarchical IDs such as <code>SYS-INF-001</code> and
+                  <code>SYS-APP-VAL-010</code> made errors governable.
+                </p>
+              </div>
+              <div>
+                <span>Context</span><strong>cart_id</strong>
+                <p>
+                  Checkout error events gained cart context so engineering could
+                  correlate failures to specific basket instances.
+                </p>
+              </div>
+            </div>
+          </figure>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
-    <section class="bp-case-next">
-      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
-      <a href="ai-alert-triage.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Designing AI workflows that don't outsource the thinking.</strong><span>The downstream AI alert-triage workflow that benefits from cleaner alert taxonomy and context.</span></a>
-      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
-    </section>
-  </main>
+          <div class="bp-case-gates" aria-label="Alert remediation layers">
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">1</span
+              ><strong>Threshold redesign</strong>
+              <p>
+                Redesigned monitors around absolute rate plus rate-of-change,
+                reducing overreaction to low-traffic Active% volatility.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">2</span
+              ><strong>Chart-level guidance</strong>
+              <p>
+                Added engineering-facing troubleshooting guidance directly on
+                each chart so the alert carried the start of the diagnosis.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">3</span
+              ><strong>Error taxonomy</strong>
+              <p>
+                Designed hierarchical error-category IDs with deterministic
+                mapping rules and governance guidelines against schema drift.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">4</span
+              ><strong>Context enrichment</strong>
+              <p>
+                Authored the specification to add <code>cart_id</code> to
+                <code>Checkout Started Error Received</code> — ready for dev —
+                so error and success events would share the same context level.
+              </p>
+            </article>
+          </div>
 
-  <footer class="bp-footer">
-    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
-    <span>Plain HTML + CSS / GitHub Pages</span>
-    <span>Case study / static portfolio</span>
-  </footer>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Action</p>
+            <h3>
+              The alert channel was redesigned across layers, not just muted.
+            </h3>
+            <p>
+              I redesigned alert thresholds, added troubleshooting guidance to
+              the relevant Amplitude charts, designed a hierarchical
+              error-category ID scheme with governance rules, and authored the
+              specification to enrich checkout error events with
+              <code>cart_id</code>. The goal was not fewer alerts for its own
+              sake. It was alerts that responders could interpret and act on
+              without recreating the context from scratch.
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <script src="../js/main.js"></script>
-  <script type="module" src="/js/amplitude-init.js"></script>
-  <script type="module" src="/js/analytics.js"></script>
-</body>
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 03 / result</span
+        ><span>trustworthy alerts / cleaner AI triage</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Result</p>
+          <h2>Better alerting made the AI workflow safer downstream.</h2>
+          <p>
+            The AI triage system is only as useful as the categories and context
+            it reads. Cleaner upstream taxonomy reduces downstream guesswork.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Outcome</p>
+            <h3>Alerts became more actionable before AI entered the loop.</h3>
+            <ul>
+              <li>
+                <strong>Thresholds redesigned</strong> around absolute rate plus
+                rate-of-change.
+              </li>
+              <li>
+                <strong>Engineering-facing troubleshooting guidance</strong>
+                added directly to charts.
+              </li>
+              <li>
+                <strong>Hierarchical error-category ID scheme</strong> designed
+                and proposed, with deterministic mapping rules and governance
+                guidelines.
+              </li>
+              <li>
+                <strong><code>cart_id</code> enrichment specified</strong> for
+                checkout error events — authored as a ready-for-dev ticket so
+                failures could be correlated to basket instances.
+              </li>
+              <li>
+                <strong>False-positive reduction support</strong> created for
+                the AI alert-triage workflow.
+              </li>
+            </ul>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Design lesson</p>
+            <h3>
+              Alerting problems are often taxonomy problems wearing an
+              operations costume.
+            </h3>
+            <p>
+              If errors are inconsistently categorised or stripped of the
+              context success events carry, the alert channel forces humans to
+              reconstruct basic facts. Fixing that starts upstream in
+              instrumentation and schema governance.
+            </p>
+          </article>
+
+          <div class="bp-case-tags" aria-label="Technologies and methods">
+            <span class="bp-case-tag">Amplitude monitors</span>
+            <span class="bp-case-tag">Error taxonomy design</span>
+            <span class="bp-case-tag">Alert engineering</span>
+            <span class="bp-case-tag">Schema governance</span>
+            <span class="bp-case-tag">Checkout telemetry</span>
+            <span class="bp-case-tag">AI triage input quality</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 04 / next</span
+        ><span>case library / adjacent evidence / contact</span>
+      </div>
+      <section class="bp-case-next">
+        <a href="../work/"
+          ><span class="bp-case-mono bp-case-accent">More cases</span
+          ><strong>Full case library.</strong
+          ><span
+            >Eighteen cases across seven lenses: question formulation,
+            instrumentation, experimentation, AI workflows, adoption, marketing
+            analytics, and data engineering.</span
+          ></a
+        >
+        <a href="ai-alert-triage.html"
+          ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+          ><strong
+            >Designing AI workflows that don't outsource the thinking.</strong
+          ><span
+            >The downstream AI alert-triage workflow that benefits from cleaner
+            alert taxonomy and context.</span
+          ></a
+        >
+        <a href="../contact/"
+          ><span class="bp-case-mono bp-case-accent">Get in touch</span
+          ><strong>Contact and context.</strong
+          ><span
+            >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or
+            any other in detail.</span
+          ></a
+        >
+      </section>
+    </main>
+
+    <footer class="bp-footer">
+      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+      <span>Plain HTML + CSS / GitHub Pages</span>
+      <span>Case study / static portfolio</span>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script type="module" src="/js/amplitude-init.js"></script>
+    <script type="module" src="/js/analytics.js"></script>
+  </body>
 </html>
