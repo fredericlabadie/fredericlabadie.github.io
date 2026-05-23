@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The pipeline layer behind the mobile instrumentation &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="The scheduled Dataform pipeline transforming raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards. Lens 07 · Data Engineering." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="The scheduled Dataform pipeline transforming raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards, with query rights transferred at rolloff." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -25,118 +25,166 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 07 &middot; Data Engineering &middot; Pipeline build</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 07 / Data Engineering &amp; Architecture</p>
         <h1>The pipeline layer behind the mobile instrumentation.</h1>
-        <p class="hero-subtitle">Scheduled Dataform pipelines transforming raw GA4 events into analysis-ready BigQuery tables &mdash; with query rights transferred to the client at rolloff.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ State-regulated retail platform &middot; BigQuery + Dataform &middot; production</span>
-        </p>
+        <p class="bp-case-dek">Scheduled Dataform pipelines transformed raw GA4 events into analysis-ready BigQuery tables feeding production Looker Studio dashboards, with query ownership transferred to the client at rolloff.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / BigQuery + Dataform / production reporting layer</p></div>
+        <div class="bp-case-panel-row"><span>Project timing</span><strong>2025-2026</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>Pipeline build, production SQL, repo workflow, dashboard data modelling, client handoff</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>3</strong><span>core GA4 tables produced</span></article>
+      <article><strong>2</strong><span>production SQL scripts authored</span></article>
+      <article><strong>1</strong><span>product-inventory pipeline scoped</span></article>
+      <article><strong>100%</strong><span>query rights transferred at rolloff</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>instrumentation needs a data layer</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>Raw GA4 events are not an analytics product.</h2>
+        <p>The mobile instrumentation was only useful once the data layer made it analysis-ready and transferable to the client.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>A production pipeline made mobile telemetry usable after rolloff.</h3>
+          <p>A state-regulated retail platform now runs production Looker Studio dashboards, including executive revenue-linked product reporting, on a <strong>scheduled Dataform pipeline</strong> that transforms raw GA4 events into analysis-ready BigQuery tables.</p>
+          <p>The production SQL was authored, maintained in the agency-client analytics repo, and formally transferred to the client analytics lead at engagement rolloff so reporting continuity did not depend on the agency retaining query ownership.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Context</p>
+          <h3>The app had instrumentation, but reporting still needed a model.</h3>
+          <p>The client's mobile instrumentation needed an analysis-ready data layer underneath it. Raw GA4 events in BigQuery were not directly usable for executive Looker Studio dashboards. No production pipeline existed for the new app data.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Risk</p>
+          <h3>Reporting would stall if ownership stayed with the agency.</h3>
+          <p>The data layer needed to survive the engagement. That meant production SQL had to live in the repo, be understandable by the client analytics lead, and be transferred before rolloff.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A state-regulated retail platform now runs production Looker Studio dashboards (including executive revenue-linked product reporting) on a <strong>scheduled Dataform pipeline</strong> that transforms raw GA4 events into analysis-ready BigQuery tables. Production SQL scripts authored, maintained in the agency-client analytics repo, with <strong>query rights formally transferred to the client analytics lead at engagement rolloff</strong> &mdash; reporting continuity preserved after the engagement ended.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / pipeline</span><span>raw GA4 / Dataform / Looker Studio / handoff</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Build layer</p>
+        <h2>The dashboard layer depended on three tables and explicit ownership.</h2>
+        <p>The pipeline was not only a transformation job. It was a handoff object.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="Dataform pipeline diagram">
+          <figcaption><span>fig. 01 / pipeline layer</span><span>raw events to production reporting</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Input</span><strong>Raw GA4</strong><p>Mobile and web event streams exported to BigQuery as raw GA4 event tables.</p></div>
+            <div><span>Transform</span><strong>Dataform</strong><p>Scheduled SQL transforms raw events into analysis-ready event, user, and parameter tables.</p></div>
+            <div><span>Output</span><strong>Dashboards</strong><p>Looker Studio dashboards consume modelled tables for revenue-linked product reporting.</p></div>
           </div>
+        </figure>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Context</div>
-              <div class="card-body">State-regulated retail platform's mobile instrumentation needed an analysis-ready data layer underneath it &mdash; raw GA4 events out of BigQuery were not directly usable for the executive Looker Studio dashboards. No production pipeline existed for the new app data, and reporting was at risk of stalling at rolloff if the agency held query ownership.</div>
-            </div>
-            <div class="card amber">
-              <div class="card-label">What I did</div>
-              <div class="card-body">Built the scheduled <strong>Dataform pipeline</strong> producing <code>GA4_Event_Params</code>, <code>GA4_Event_Users</code>, and <code>GA4_Events</code> &mdash; the foundation the production Looker Studio dashboards run on. Authored production SQL scripts (<code>bq_product_revenue_inserts.sql</code>, <code>bq_sales_product_data_table_inserts.sql</code>) maintained in the agency-client analytics repo, powering revenue-linked product reporting used in executive readouts. Scoped a separate product-inventory pipeline modelled against existing product tables. <strong>Formal query-rights transfer</strong> to the client analytics lead at rolloff.</div>
-            </div>
-          </div>
+        <div class="bp-case-gates" aria-label="Pipeline components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>GA4_Event_Params</strong><p>Transforms raw event parameter structures into a table usable for downstream product and event analysis.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>GA4_Event_Users</strong><p>Produces user-level event context for dashboarding and product reporting.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>GA4_Events</strong><p>Creates the analysis-ready event table that powers production reporting.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Rolloff transfer</strong><p>Query rights formally transferred to the client analytics lead so ownership moved with the system.</p></article>
+        </div>
 
-          <div class="tags">
-            <span class="tag">BigQuery / GCP</span>
-            <span class="tag">Dataform</span>
-            <span class="tag">Scheduled queries</span>
-            <span class="tag">SQL pipeline ownership</span>
-            <span class="tag">Repo + PR workflow</span>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>Production SQL moved from build artifact to client-owned infrastructure.</h3>
+          <p>I built the scheduled Dataform pipeline producing <code>GA4_Event_Params</code>, <code>GA4_Event_Users</code>, and <code>GA4_Events</code>. I also authored production SQL scripts including <code>bq_product_revenue_inserts.sql</code> and <code>bq_sales_product_data_table_inserts.sql</code>, maintained in the agency-client analytics repo and used for revenue-linked product reporting in executive readouts.</p>
+          <p>I also scoped a separate product-inventory pipeline modelled against existing product tables, keeping it aligned with the same reporting architecture.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>continuity / dashboards / client ownership</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The system stayed useful after the engagement ended.</h2>
+        <p>The proof is not only that dashboards ran. It is that the client could own the query layer after rolloff.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>Reporting continuity was preserved.</h3>
+          <ul>
+            <li><strong>Production Looker Studio dashboards</strong> fed by scheduled Dataform transformations.</li>
+            <li><strong>Executive revenue-linked product reporting</strong> powered by authored BigQuery SQL scripts.</li>
+            <li><strong>Agency-client analytics repo</strong> used as the working home for production SQL.</li>
+            <li><strong>Query rights transferred</strong> to the client analytics lead at rolloff.</li>
+          </ul>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>Ownership is part of pipeline design.</h3>
+          <p>A pipeline is not complete when it runs. It is complete when the team that needs it can find it, read it, validate it, and operate it without the builder sitting beside them.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">BigQuery / GCP</span>
+          <span class="bp-case-tag">Dataform</span>
+          <span class="bp-case-tag">Scheduled queries</span>
+          <span class="bp-case-tag">SQL pipeline ownership</span>
+          <span class="bp-case-tag">Repo + PR workflow</span>
+          <span class="bp-case-tag">Looker Studio</span>
+          <span class="bp-case-tag">Client handoff</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="sslp-mobile.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>From what should we measure to 30+ shipped tickets.</strong><span>The mobile instrumentation layer that this data infrastructure made reportable.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
