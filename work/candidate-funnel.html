@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A 50%+ candidate drop-off, decomposed step by step &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Front-end behavioural instrumentation of a global AI services firm's Candidate Management Platform — turning a qualitative problem ('we're losing candidates somewhere') into a solvable product question ('step 4 has a 43% abandonment rate'). Lens 06 · Marketing Analytics." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Front-end behavioural instrumentation of a global AI services firm's Candidate Management Platform, turning a vague 50%+ candidate drop-off into a step-level product question." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -25,117 +25,165 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 06 &middot; Marketing Analytics &middot; Funnel analytics</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 06 / Marketing Analytics &amp; Lifecycle</p>
         <h1>A 50%+ candidate drop-off, decomposed step by step.</h1>
-        <p class="hero-subtitle">Turning a qualitative problem into a solvable product question.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Global AI services firm &middot; candidate sourcing platform &middot; 2025</span>
-        </p>
+        <p class="bp-case-dek">Front-end behavioural instrumentation turned a vague sourcing problem into a solvable product question: where, exactly, are candidates abandoning the flow?</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Global AI services firm / candidate sourcing platform</p></div>
+        <div class="bp-case-panel-row"><span>Project timing</span><strong>2025</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>GA4 instrumentation, user-identity parameters, BigQuery pipeline, Looker Studio dashboard, stakeholder enablement</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>50%+</strong><span>known candidate drop-off</span></article>
+      <article><strong>43%</strong><span>example step-four abandonment surfaced</span></article>
+      <article><strong>2</strong><span>web engineers partnered</span></article>
+      <article><strong>1</strong><span>manual Excel workflow replaced</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>vague problem to product question</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>"We're losing candidates somewhere" is not a product question.</h2>
+        <p>The measurement layer needed to make the candidate journey decomposable before sourcing stakeholders could decide where to intervene.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>The sourcing team moved from narrative to step-level evidence.</h3>
+          <p>A global AI services firm's sourcing team knew there was a <strong>50%+ drop-off</strong> between candidate selection and start of work, but could not tell where the loss happened. Full GA4 instrumentation of the Candidate Management Platform and a Looker Studio dashboard on the GA4 to BigQuery pipeline decomposed the vague problem into a step-level view.</p>
+          <p>The example outcome was the conversation shifting from "we're losing candidates somewhere" to <strong>"step 4 has a 43% abandonment rate; let's look at what's happening there."</strong></p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Context</p>
+          <h3>The team had a drop-off problem, not a location.</h3>
+          <p>Metrics lived in Excel spreadsheets hand-populated from the operational system. No funnel decomposition was possible, and any conversation about fixing the drop-off was stuck at the qualitative level.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Instrument the candidate journey without over-prescribing the finding.</h3>
+          <p>The goal was to make the journey measurable across application start, exam steps, compliance checkpoints, and selection status. The stakeholder framing mattered: this was presented as new data available for sourcing decisions, not as a premature conclusion to react to.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A global AI services firm's sourcing team moved from <strong>"we're losing candidates somewhere"</strong> to <strong>"step 4 has a 43% abandonment rate; let's look at what's happening there"</strong> &mdash; via full GA4 instrumentation of the Candidate Management Platform and a Looker Studio dashboard on the GA4 &rarr; BigQuery pipeline that replaced the manual Excel workflow. Presented to sourcing stakeholders in a May 2025 sync framed as "an update on what data is now available for sourcing decisions." Qualitative problem decomposed into a solvable product question.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / instrumentation</span><span>GA4 / BigQuery / Looker Studio</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Build layer</p>
+        <h2>The funnel had to be made queryable before it could be fixed.</h2>
+        <p>The work turned a candidate-management flow into measurable steps with identity parameters and dashboard-ready outputs.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="Candidate funnel measurement architecture">
+          <figcaption><span>fig. 01 / measurement layer</span><span>operational flow to product question</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Instrument</span><strong>GA4 events</strong><p>Application start, exam steps, compliance checkpoints, and selection status captured as behavioural events.</p></div>
+            <div><span>Model</span><strong>BigQuery</strong><p>GA4 export made candidate-flow events queryable by candidate and programme context.</p></div>
+            <div><span>Surface</span><strong>Looker Studio</strong><p>Dashboard replaced manual Excel workflow with a view of step-level abandonment.</p></div>
           </div>
+        </figure>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Context</div>
-              <div class="card-body">A global AI services firm's sourcing team knew there was a <strong>50%+ drop-off between candidate selection and start of work</strong> but couldn't tell <em>where</em>. Metrics lived in Excel spreadsheets hand-populated from the operational system &mdash; no funnel decomposition was possible, and any conversation about fixing the drop-off was stuck at the qualitative level.</div>
-            </div>
-            <div class="card amber">
-              <div class="card-label">What I did</div>
-              <div class="card-body">Led front-end behavioural instrumentation of the Candidate Management Platform with two web engineers. <strong>GA4 event capture</strong> across application start, exam steps, compliance checkpoints, and selection status, with user-identity parameters enabling per-candidate and per-programme segmentation. Built a Looker Studio dashboard on the GA4 &rarr; BigQuery pipeline that replaced the manual Excel workflow with a queryable view of candidate flow. Presented to sourcing stakeholders as available data for sourcing decisions, not as a finding to react to.</div>
-            </div>
-          </div>
+        <div class="bp-case-gates" aria-label="Candidate funnel instrumentation components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Application start</strong><p>Captured the entry point into the candidate-management flow so the denominator was explicit.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Exam steps</strong><p>Instrumented exam-stage behaviour to locate where candidates slowed, stopped, or abandoned.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Compliance checkpoints</strong><p>Tracked required checkpoints so operational friction could be separated from candidate intent.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Selection status</strong><p>Connected funnel progress to selection state, enabling per-candidate and per-programme segmentation.</p></article>
+        </div>
 
-          <div class="tags">
-            <span class="tag">GA4 instrumentation</span>
-            <span class="tag">BigQuery + Looker Studio</span>
-            <span class="tag">Funnel decomposition</span>
-            <span class="tag">Stakeholder enablement</span>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The instrumentation replaced a manual reporting workaround.</h3>
+          <p>I led front-end behavioural instrumentation of the Candidate Management Platform with two web engineers. GA4 event capture covered application start, exam steps, compliance checkpoints, and selection status, with user-identity parameters enabling per-candidate and per-programme segmentation.</p>
+          <p>I then built a Looker Studio dashboard on the GA4 to BigQuery pipeline that replaced the manual Excel workflow with a queryable view of candidate flow.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>step-level evidence / stakeholder enablement</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The data changed the conversation before it changed the product.</h2>
+        <p>The first win was not a redesign. It was giving sourcing stakeholders a precise place to start investigating.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>A qualitative concern became a measurable funnel.</h3>
+          <ul>
+            <li><strong>50%+ candidate drop-off</strong> decomposed into step-level abandonment analysis.</li>
+            <li><strong>Step-four abandonment example</strong> surfaced as a concrete investigation point.</li>
+            <li><strong>Manual Excel workflow replaced</strong> with a Looker Studio dashboard on the GA4 to BigQuery pipeline.</li>
+            <li><strong>Stakeholder sync in May 2025</strong> framed the work as new data available for sourcing decisions.</li>
+          </ul>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>Measurement can make an organisational problem actionable without pretending to solve it alone.</h3>
+          <p>The instrumentation did not explain why candidates left at step four. It made the abandonment visible enough that the sourcing team could investigate the right moment instead of debating the whole journey at once.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">GA4 instrumentation</span>
+          <span class="bp-case-tag">BigQuery</span>
+          <span class="bp-case-tag">Looker Studio</span>
+          <span class="bp-case-tag">Funnel decomposition</span>
+          <span class="bp-case-tag">Stakeholder enablement</span>
+          <span class="bp-case-tag">Candidate journey analytics</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="content-brand-ga4.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>When the homepage is not the front door.</strong><span>Another GA4 discovery where the measurement layer changed what the team thought the journey was.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
