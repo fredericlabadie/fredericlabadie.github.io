@@ -1,164 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Current Meditations &mdash; Frederic Labadie, Analytics Architect</title>
-  <meta name="description" content="What I've been thinking about lately — open questions on analytics methodology, AI-assisted workflows, instrumentation design, and the gaps the official measurement layer doesn't see. A practitioner's working-thinking archive." />
-  <meta name="theme-color" content="#ffffff" />
+  <title>Redirecting to Current Meditations &mdash; Frederic Labadie</title>
+  <meta name="description" content="Current Meditations has moved to /thoughts/." />
   <meta name="robots" content="noindex, nofollow" />
-
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="../favicon.svg" />
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Current Meditations &mdash; Frederic Labadie" />
-  <meta property="og:description" content="What I've been thinking about lately. A practitioner's working-thinking archive." />
-  <meta property="og:url" content="https://fredericlabadie.com/notebook/" />
-  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Current Meditations &mdash; Frederic Labadie" />
-  <meta name="twitter:description" content="What I've been thinking about lately. A practitioner's working-thinking archive." />
-  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <meta http-equiv="refresh" content="0; url=../thoughts/" />
+  <link rel="canonical" href="https://fredericlabadie.com/thoughts/" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#posts">Skip to posts</a>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/">Work</a></li>
-        <li><a href="../notebook/" aria-current="page">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="top">
-
-    <!-- PAGE INTRO -->
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Current Meditations</p>
-        <h1>What I've been thinking about lately.</h1>
-        <p>A practitioner's working-thinking archive &mdash; drafts, working theories, open questions on methodology, AI-assisted workflows, schema design, and the gaps the official measurement layer doesn't see. Reflective, not finished. If any of these resonate, <a href="../contact/">get in touch</a>.</p>
-      </div>
-    </section>
-
-    <!-- POSTS -->
-    <section id="posts" class="alt">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="post-feed">
-            <article class="post-entry" id="q-qualitative-replaces-quantitative">
-              <p class="post-meta">
-                <time datetime="2026-04-04">Posted 4 Apr 2026</time>
-                <span class="post-tags">Methodology &middot; Sense-Making</span>
-              </p>
-              <h2 class="post-title">
-                <a href="#q-qualitative-replaces-quantitative">Where does qualitative methodology <em>replace</em> quantitative instrumentation, not just supplement it?</a>
-              </h2>
-              <div class="post-body">
-                <p>The standard order is "instrument first, qualitative for the why". Cases like the shadow-IT discovery suggest the order sometimes inverts &mdash; observation first, instrumentation last. What's the rule for which way around it should go?</p>
-                <p><strong>Working theory:</strong> the order inverts when the workflow is <em>unauthorised</em>, because instrumentation only sees what the system was designed to surface and never the workarounds users build on top. Quantitative discovery would only show the gap as silence.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-ai-gate-structure">
-              <p class="post-meta">
-                <time datetime="2026-04-18">Posted 18 Apr 2026</time>
-                <span class="post-tags">AI-assisted workflows &middot; Alert design</span>
-              </p>
-              <h2 class="post-title">
-                <a href="#q-ai-gate-structure">What's the right gate-structure for AI-assisted analytics workflows when human judgement is the bottleneck, not the model?</a>
-              </h2>
-              <div class="post-body">
-                <p>The V1 alert-triage system caught a critical issue humans had missed and still kept the human as the actor. V2 needs the same logic in a different shape. Where do the gates go when the AI is good enough that suppression becomes the harder design problem?</p>
-                <p><strong>Working theory:</strong> the interesting design moves <em>up</em> the stack &mdash; taxonomy, schema, what counts as "the same error" &mdash; not down into the model. The model is fine. The thing that needs design attention is the data layer the model is reading from.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-ab-tests-die-before-shipping">
-              <p class="post-meta">
-                <time datetime="2026-05-01">Posted 1 May 2026</time>
-                <span class="post-tags">A/B testing &middot; Pre-mortems</span>
-              </p>
-              <h2 class="post-title">
-                <a href="#q-ab-tests-die-before-shipping">Why do most A/B tests die before they ship?</a>
-              </h2>
-              <div class="post-body">
-                <p>Working hypothesis: the question wasn't worth the test, and the cost of figuring that out post-spec is what kills the rollout. What's the upstream instrumentation that would have surfaced "not worth testing" <em>before</em> the spec was written?</p>
-                <p>Most test kills look like budget kills or scope kills, but those are downstream symptoms. The actual kill is a discovery gap. The instrumentation question is whether you can measure your way to "this isn't worth testing" without running the test.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-deliberate-omission">
-              <p class="post-meta">
-                <time datetime="2026-05-06">Posted 6 May 2026</time>
-                <span class="post-tags">Schema design &middot; Behavioural signals</span>
-              </p>
-              <h2 class="post-title">
-                <a href="#q-deliberate-omission">How do you instrument for <em>deliberate omission</em> &mdash; a step the user actively skipped?</a>
-              </h2>
-              <div class="post-body">
-                <p>An expected event that doesn't fire reads as silence by default. The skip itself disappears into the gap. What's the schema-level move that makes "the user chose not to do this" a first-class signal rather than an absence?</p>
-                <p><strong>Suspect:</strong> the answer lives in the <em>surrounding context</em> &mdash; dwell time on the option, hover, back-out pattern, sequence of competing actions &mdash; not the missing event itself. The omission becomes visible as a positive signal once you instrument the choices made around it.</p>
-              </div>
-            </article>
-
-            <article class="post-entry" id="q-analytics-shadow-it">
-              <p class="post-meta">
-                <time datetime="2026-05-15">Posted 15 May 2026</time>
-                <span class="post-tags">Practitioner observation &middot; Discovery</span>
-              </p>
-              <h2 class="post-title">
-                <a href="#q-analytics-shadow-it">What's the analytics function's own shadow IT?</a>
-              </h2>
-              <div class="post-body">
-                <p>If shadow IT in product teams is a signal that the designed system doesn't support a real workflow, where does the same pattern live <em>inside</em> the analytics function &mdash; the spreadsheets, the manual pulls, the workarounds practitioners build because the official measurement layer doesn't cover the question?</p>
-                <p>Suspect the answer is uncomfortably close to "everywhere." Open question: what would it mean to instrument the analytics function for its own gaps the way we instrument products for theirs?</p>
-              </div>
-            </article>
-          </div>
-
-          <p class="post-feed-footer">
-            New entries posted as the questions shift. Want to talk through one? <a href="../contact/">Send a note</a>.
-          </p>
-
-        </div>
-      </div>
-    </section>
-
+  <main class="container" style="padding: 80px 24px;">
+    <p class="eyebrow">Moved</p>
+    <h1>Current Meditations has moved.</h1>
+    <p>The working-thinking archive now lives at <a href="../thoughts/">/thoughts/</a>.</p>
   </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
