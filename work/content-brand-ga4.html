@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>When the homepage isn't the front door &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="A discovery process for a content brand that surfaced six tracking gaps the client didn't know existed — and one finding that reframed the editorial strategy. Lens 01 · Question Formulation." />
-  <meta name="theme-color" content="#ffffff" />
+  <title>When the homepage is not the front door &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="A GA4 discovery and rebuild for a content brand that surfaced six tracking gaps, reframed the editorial premise around podcast episode pages, and shipped with a Loom training library for long-tail adoption." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -14,179 +14,177 @@
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="When the homepage isn't the front door &mdash; case study" />
+  <meta property="og:title" content="When the homepage is not the front door &mdash; case study" />
   <meta property="og:description" content="GA4 discovery for a content brand: six tracking gaps surfaced, the editorial premise reframed." />
   <meta property="og:url" content="https://fredericlabadie.com/work/content-brand-ga4.html" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="When the homepage isn't the front door &mdash; case study" />
+  <meta name="twitter:title" content="When the homepage is not the front door &mdash; case study" />
   <meta name="twitter:description" content="GA4 discovery for a content brand: six tracking gaps surfaced, the editorial premise reframed." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 01 &middot; Question Formulation</p>
-        <h1>When the homepage isn't the front door.</h1>
-        <p class="hero-subtitle">A discovery process that surfaced six tracking gaps the client didn't know existed &mdash; and one finding that reframed the editorial strategy.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Content brand &middot; freelance &middot; 2022&ndash;2024</span>
-        </p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 01 / Question Formulation</p>
+        <h1>When the homepage is not the front door.</h1>
+        <p class="bp-case-dek">A GA4 discovery and rebuild for a content brand that surfaced six tracking gaps, overturned a homepage-first editorial assumption, and shipped with training so the team could keep using it.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Content brand / podcasts, newsletter, events, books / freelance engagement</p></div>
+        <div class="bp-case-panel-row"><span>Project timing</span><strong>2022-2024</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>Discovery facilitation, GA4 rebuild, GTM audit, conversion modelling, Loom training library</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>6</strong><span>tracking gaps surfaced</span></article>
+      <article><strong>1</strong><span>editorial premise reframed</span></article>
+      <article><strong>5</strong><span>Loom training topics</span></article>
+      <article><strong>2 yrs</strong><span>later, agency returned unprompted</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>traffic numbers are not answers</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>Most analytics installations are correct without being useful.</h2>
+        <p>The gap between traffic numbers and answers is rarely about data volume. It is whether the schema maps to the questions the business actually asks.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>The site stopped treating the homepage as the default story.</h3>
+          <p>A high-profile content brand's GA installation went from traffic numbers without answers to a GA4 stack that surfaced <strong>six tracking gaps</strong> the client did not know existed. Once the data was collected honestly, the editorial premise reframed: <strong>podcast episode pages, not the homepage, were where the most engaged audience actually lived</strong>.</p>
+          <p>The implementation shipped with a Loom training library so the team could operate it without the analyst. Adoption signal: the agency returned with substantive usage questions in October 2022, and came back unprompted two years later in April 2024 with a GTM issue.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Situation</p>
+          <h3>GA was installed, but the business questions were still unanswered.</h3>
+          <p>The content brand had podcasts, newsletter, events, and books. GA was installed, but the team could not reliably answer whether people were listening, what drove newsletter signups, or which pages were genuinely performing. The implicit editorial model treated the homepage as the primary entry point.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Move from data without answers to instrumentation mapped to real editorial goals.</h3>
+          <p>The work had two layers: surface the technical gaps where the data was not being collected honestly, then rebuild around actual editorial goals: podcast engagement, newsletter conversion, content-level dimensions, and a small-team training model.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A high-profile content brand's GA installation went from <strong>traffic numbers without answers</strong> to a GA4 stack that surfaced six tracking gaps the client did not know existed, reframed the editorial premise (podcast pages &mdash; not the homepage &mdash; were where the most engaged audience actually lived), and shipped with a Loom training library so the team could operate it without the analyst. Adoption signal: the agency returned with substantive questions in October 2022, and came back <strong>unprompted two years later</strong> (April 2024) with a GTM issue. The relationship was still live &mdash; the only adoption metric that matters.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / discovery protocol</span><span>questions / gaps / rebuild / adoption</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Method</p>
+        <h2>Audit the implementation against the questions, not the checklist.</h2>
+        <p>The implementation was evaluated against the decisions it needed to support.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="GA4 discovery and rebuild sequence">
+          <figcaption><span>fig. 01 / discovery to adoption</span><span>questions to usable instrumentation</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Discover</span><strong>Questions</strong><p>Documented what the data was and was not doing, and what decisions it should inform.</p></div>
+            <div><span>Audit</span><strong>Gaps</strong><p>Compared the implementation to the business questions and surfaced six tracking gaps.</p></div>
+            <div><span>Adopt</span><strong>Training</strong><p>Rebuilt the measurement layer and shipped Loom training so the team could operate it.</p></div>
           </div>
+        </figure>
 
-          <div class="case-argument">
-            Most analytics installations are correct without being useful. The gap between traffic numbers and answers is rarely about data volume &mdash; it's about whether the schema you instrumented maps to the questions the business actually asks. <strong>Adoption, not the dashboard, is the deliverable.</strong>
-          </div>
+        <div class="bp-case-gates" aria-label="Content brand GA4 rebuild steps">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Structured discovery</strong><p>Documented Q&amp;A with agency and client: what the data was doing, what it was not doing, and what decisions it should inform.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Audit against questions</strong><p>Six gaps surfaced: double-firing pageviews, broken UTMs, no conversion tracking, no podcast engagement measurement, misaligned event taxonomy, and incorrect iframe player events.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Rebuild around goals</strong><p>GA4 implementation rebuilt around scroll depth, episode engagement, two-minute engaged-session conversion, newsletter signups, content dimensions, and fixed source/medium.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Build for adoption</strong><p>Loom training covered custom dimensions, conversions, explorations, entrances/exits, and real-time reporting.</p></article>
+        </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Situation</div>
-              <div class="card-body">A high-profile content brand (podcasts, newsletter, events, books) with GA installed but unable to answer the questions that drove its business &mdash; whether people were actually listening, what drove newsletter signups, which pages were genuinely performing. The implicit editorial model treated the homepage as the primary entry point. Optimisation effort and content decisions both flowed from that premise.</div>
-            </div>
-            <div class="card">
-              <div class="card-label">Task</div>
-              <div class="card-body">Move the client from <strong>data without answers</strong> to instrumentation that mapped to the questions actually being asked &mdash; and design it so a small editorial team could operate the implementation without the analyst. Two layers: surface the technical gaps (the data not being collected honestly), then rebuild around real editorial goals (podcast engagement, newsletter conversion, content-level dimensions). Adoption was the deliverable, not the dashboard.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The rebuild was designed around editorial questions.</h3>
+          <p>I facilitated structured discovery with the agency and client, audited the existing installation against the questions the business actually needed to answer, rebuilt GA4 around podcast and newsletter goals, and created a Loom training library so the team could continue using the implementation without me sitting beside them.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Action</div>
-              <div class="card-body">Four-step protocol (detail in the flow below). <strong>Structured discovery</strong> &mdash; documented Q&amp;A with agency and client on what the data was/wasn't doing and what decisions it should inform. <strong>Audit against the questions</strong> &mdash; six technical gaps surfaced (double-firing pageviews, broken UTMs, no conversion tracking, podcast engagement entirely unmeasured, event taxonomy misaligned, iframe player events firing incorrectly). <strong>Full GA4 rebuild around real goals</strong> &mdash; scroll depth, episode engagement, 2-min engaged-session conversion, newsletter signups, content-level custom dimensions, source/medium fixed. <strong>Loom training library</strong> &mdash; custom dimensions, conversions, explorations, entrances/exits, real-time &mdash; so the team could operate the implementation without the analyst.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Result</div>
-              <div class="card-body">Once the instrumentation was honest, the editorial premise reframed: <strong>podcast episode pages</strong> (not the homepage) were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed. Adoption signal: the agency returned in October 2022 with substantive usage questions &mdash; not service-questions, usage-questions. <strong>Two years later (April 2024), the same agency came back unprompted with a GTM issue.</strong> The implementation was being used, not shelved. That's the only adoption metric that matters.</div>
-            </div>
-          </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>podcast pages / adoption / long tail</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The real front door was not the homepage.</h2>
+        <p>The discovery mattered because it changed the editorial premise, not because it produced prettier reports.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>The audience model shifted toward podcast episode pages.</h3>
+          <ul>
+            <li><strong>Six tracking gaps surfaced</strong>, including double-firing pageviews, broken UTMs, missing conversion tracking, and unmeasured podcast engagement.</li>
+            <li><strong>Podcast episode pages reframed the editorial strategy</strong>: they were where the most engaged users entered, stayed longer, and took more actions.</li>
+            <li><strong>Loom training library shipped</strong> so the agency and client could use the new implementation without the analyst.</li>
+            <li><strong>October 2022 follow-up</strong> produced substantive usage questions, not service questions.</li>
+            <li><strong>April 2024 unprompted return</strong> with a GTM issue showed the implementation was still in use two years later.</li>
+          </ul>
+        </article>
 
-          <div class="flow">
-            <div class="flow-step">
-              <div class="flow-num">01</div>
-              <div class="flow-label">Structured discovery</div>
-              <div class="flow-desc">Documented Q&amp;A with agency and client: what the data was and wasn't doing, what decisions it should be informing, what they thought was stopping conversions.</div>
-            </div>
-            <div class="flow-step">
-              <div class="flow-num">02</div>
-              <div class="flow-label">Audit against the questions</div>
-              <div class="flow-desc">Six technical gaps surfaced: double-firing pageviews, broken UTMs, no conversion tracking, podcast engagement entirely unmeasured, event taxonomy misaligned, iframe player events firing incorrectly.</div>
-            </div>
-            <div class="flow-step">
-              <div class="flow-num">03</div>
-              <div class="flow-label">Rebuild around real goals</div>
-              <div class="flow-desc">Full GA4 implementation with scroll depth, episode engagement, 2-min engaged-session conversion, newsletter signups, content-level custom dimensions, source/medium fixed.</div>
-            </div>
-            <div class="flow-step">
-              <div class="flow-num">04</div>
-              <div class="flow-label">Build for adoption</div>
-              <div class="flow-desc">Loom training video library (custom dimensions, conversions, explorations, entrances/exits, real-time) so the team could operate the implementation without the analyst.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>Adoption is the deliverable.</h3>
+          <p>A dashboard can be technically correct and still fail if the team cannot use it. The useful signal here was long-tail adoption: the same agency returned years later because the implementation was still operational, not shelved.</p>
+        </article>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">The assumption (before instrumentation)</div>
-              <div class="card-body">The homepage was the primary entry point. Audience experience was centred on it. Editorial decisions and optimisation effort followed from that premise.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">What honest instrumentation showed</div>
-              <div class="card-body">Once the data was collected honestly, <strong>podcast episode pages</strong> were where the most engaged users were spending time &mdash; entering directly, staying longer, taking more actions than homepage visitors. The homepage-first model didn't match the audience that actually existed.</div>
-            </div>
-          </div>
-
-          <div class="tags">
-            <span class="tag">GA4 migration</span>
-            <span class="tag">Discovery facilitation</span>
-            <span class="tag">GTM</span>
-            <span class="tag">Conversion modelling</span>
-            <span class="tag">Loom training library</span>
-            <span class="tag">Long-tail adoption</span>
-          </div>
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">GA4 migration</span>
+          <span class="bp-case-tag">Discovery facilitation</span>
+          <span class="bp-case-tag">GTM</span>
+          <span class="bp-case-tag">Conversion modelling</span>
+          <span class="bp-case-tag">Loom training library</span>
+          <span class="bp-case-tag">Long-tail adoption</span>
+          <span class="bp-case-tag">Content analytics</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="candidate-funnel.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>A 50%+ candidate drop-off, decomposed step by step.</strong><span>Another GA4 and BigQuery case where instrumentation made the actual journey queryable.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
