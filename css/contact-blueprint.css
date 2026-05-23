@@ -5,12 +5,15 @@
 
 .bp-contact-body {
   background:
-    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
     #eef2f5;
   color: #16263a;
 }
 
-.bp-contact-body strong { color: inherit; }
+.bp-contact-body strong {
+  color: inherit;
+}
 
 .bp-contact-nav {
   position: sticky;
@@ -30,14 +33,30 @@
   text-transform: uppercase;
 }
 
-.bp-contact-nav a:hover { text-decoration: none; }
+.bp-contact-nav a:hover {
+  text-decoration: none;
+}
 
 .bp-contact-nav-brand,
-.bp-contact-nav-links { display: flex; align-items: center; gap: 14px; }
-.bp-contact-nav-links { list-style: none; flex-wrap: wrap; justify-content: flex-end; }
-.bp-contact-nav-links a { color: #ffffff; }
-.bp-contact-nav-links a[aria-current="page"] { color: #b9412a; }
-.bp-contact-nav-muted { color: #a3b4c7; }
+.bp-contact-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.bp-contact-nav-links {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.bp-contact-nav-links a {
+  color: #ffffff;
+}
+.bp-contact-nav-links a[aria-current="page"] {
+  color: #b9412a;
+}
+.bp-contact-nav-muted {
+  color: #a3b4c7;
+}
 
 .bp-contact-dot {
   width: 8px;
@@ -51,7 +70,8 @@
 .bp-contact-page {
   min-height: calc(100vh - 48px);
   background:
-    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
     #eef2f5;
 }
 
@@ -74,13 +94,15 @@
   font-weight: 500;
 }
 
-.bp-contact-accent { color: #b9412a; }
+.bp-contact-accent {
+  color: #b9412a;
+}
 
 .bp-contact-hero h1 {
   max-width: 860px;
   margin: 14px 0 0;
   color: #16263a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: clamp(46px, 7vw, 88px);
   font-weight: 500;
   line-height: 0.96;
@@ -91,7 +113,7 @@
   max-width: 680px;
   margin-top: 18px;
   color: #52617a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 19px;
   line-height: 1.48;
 }
@@ -103,7 +125,10 @@
 }
 
 .bp-contact-panel-head,
-.bp-contact-panel-row { padding: 15px 18px; border-bottom: 1px solid rgba(255,255,255,0.16); }
+.bp-contact-panel-row {
+  padding: 15px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
 .bp-contact-panel-head {
   display: flex;
   justify-content: space-between;
@@ -114,8 +139,21 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.bp-contact-panel-row span { display: block; color: #a3b4c7; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-.bp-contact-panel-row p { margin: 0; color: rgba(255,255,255,0.84); font-size: 13px; line-height: 1.5; }
+.bp-contact-panel-row span {
+  display: block;
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.bp-contact-panel-row p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  line-height: 1.5;
+}
 
 .bp-contact-section-tag {
   display: flex;
@@ -131,7 +169,9 @@
   text-transform: uppercase;
 }
 
-.bp-contact-section-tag span:first-child { color: #b9412a; }
+.bp-contact-section-tag span:first-child {
+  color: #b9412a;
+}
 
 .bp-contact-main {
   display: grid;
@@ -149,7 +189,7 @@
 .bp-contact-sidebar h2 {
   margin-top: 8px;
   color: #16263a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 30px;
   font-weight: 500;
   line-height: 1.08;
@@ -159,7 +199,7 @@
 .bp-contact-sidebar p {
   margin-top: 12px;
   color: #52617a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 14px;
   font-style: italic;
   line-height: 1.6;
@@ -184,7 +224,10 @@
   gap: 10px;
 }
 
-.bp-contact-card:hover { text-decoration: none; background: #f8fafc; }
+.bp-contact-card:hover {
+  text-decoration: none;
+  background: #f8fafc;
+}
 
 .bp-contact-card-primary {
   grid-column: span 2;
@@ -196,7 +239,7 @@
 
 .bp-contact-card strong {
   color: #16263a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 26px;
   font-weight: 500;
   line-height: 1.12;
@@ -217,7 +260,7 @@
 
 .bp-contact-card-primary span:last-child,
 .bp-contact-card-primary p {
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .bp-contact-fit {
@@ -230,7 +273,7 @@
 .bp-contact-fit h3 {
   margin: 0;
   color: #16263a;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: "Newsreader", Georgia, serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.12;
@@ -243,20 +286,128 @@
   line-height: 1.62;
 }
 
+/* ============================================================
+   Primary email card — full-width navy, dominant.
+   Sits above the secondary channel grid.
+   ============================================================ */
+
+.bp-contact-primary-card {
+  display: block;
+  padding: 36px 40px 32px;
+  background: #16263a;
+  color: #ffffff;
+  border: 1px solid #16263a;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.bp-contact-primary-card:hover {
+  background: #1c2f48;
+  text-decoration: none;
+}
+
+.bp-contact-primary-card:focus-visible {
+  outline: 2px solid #b9412a;
+  outline-offset: -2px;
+}
+
+.bp-contact-primary-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+.bp-contact-primary-address {
+  display: block;
+  margin: 14px 0 0;
+  color: #ffffff;
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-size: clamp(34px, 5.8vw, 64px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  word-break: break-word;
+}
+
+.bp-contact-primary-meta {
+  display: block;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.bp-contact-primary-cta {
+  display: inline-block;
+  margin-top: 22px;
+  color: #b9412a;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bp-contact-primary-card:hover .bp-contact-primary-cta {
+  color: #ff7551;
+}
+
+/* Secondary grid: 4 channels in 2 cols, snug under the primary card */
+
+.bp-contact-grid.bp-contact-grid-secondary {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bp-contact-grid.bp-contact-grid-secondary .bp-contact-card-primary {
+  grid-column: span 1;
+  background: #ffffff;
+  color: #16263a;
+  min-height: 168px;
+}
+
 @media (max-width: 1040px) {
   .bp-contact-hero,
   .bp-contact-main,
-  .bp-contact-grid { grid-template-columns: 1fr; }
-  .bp-contact-sidebar { position: static; }
-  .bp-contact-card-primary { grid-column: span 1; }
+  .bp-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .bp-contact-sidebar {
+    position: static;
+  }
+  .bp-contact-card-primary {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 720px) {
-  .bp-contact-nav { position: static; align-items: flex-start; flex-direction: column; padding: 14px 20px; }
-  .bp-contact-nav-links { justify-content: flex-start; gap: 12px 18px; }
+  .bp-contact-primary-card {
+    padding: 28px 22px 24px;
+  }
+  .bp-contact-grid.bp-contact-grid-secondary {
+    grid-template-columns: 1fr;
+  }
+  .bp-contact-nav {
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 20px;
+  }
+  .bp-contact-nav-links {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
   .bp-contact-hero,
   .bp-contact-main,
-  .bp-contact-section-tag { padding-left: 20px; padding-right: 20px; }
-  .bp-contact-section-tag { flex-direction: column; gap: 6px; }
-  .bp-contact-hero h1 { font-size: 44px; }
+  .bp-contact-section-tag {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .bp-contact-section-tag {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .bp-contact-hero h1 {
+    font-size: 44px;
+  }
 }

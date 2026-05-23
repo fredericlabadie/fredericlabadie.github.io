@@ -1,4 +1,3 @@
-
 /* ============================================================
    Blueprint /work/ slice
    Append this block to css/style.css after the homepage Blueprint styles.
@@ -18,13 +17,14 @@
   --bp-ok: #3e7f5b;
   --bp-rule: #cdd3da;
   --bp-rule-strong: #16263a;
-  --font-serif: 'Newsreader', Georgia, serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-display: "Fraunces", Georgia, serif;
 }
 
 .bp-work-body {
   background:
-    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
     var(--bp-canvas);
   color: var(--bp-ink);
 }
@@ -92,7 +92,8 @@
 
 .bp-work-page {
   background:
-    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
     var(--bp-canvas);
 }
 
@@ -171,6 +172,62 @@
   font-size: 10.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* ============================================================
+   Work-page receipts (six-tile variant of the homepage bp-receipts
+   pattern). Inherits .bp-receipt structure from style.css; only the
+   grid columns, page-flush margins, and oldstyle-numeral treatment
+   are added here.
+   ============================================================ */
+
+.bp-receipts.bp-receipts-six {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid var(--bp-ink);
+  border-bottom: 1px solid var(--bp-ink);
+  background: var(--bp-card);
+}
+
+.bp-receipts.bp-receipts-six .bp-receipt {
+  padding: 22px 22px 24px;
+  border-right: 1px solid var(--bp-rule);
+}
+
+.bp-receipts.bp-receipts-six .bp-receipt:last-child {
+  border-right: 0;
+}
+
+.bp-receipts.bp-receipts-six .bp-receipt p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bp-ink-soft);
+}
+
+.bp-receipts.bp-receipts-six .bp-receipt strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--bp-ink);
+  font-family: var(--font-display);
+  font-variant-numeric: oldstyle-nums;
+  font-size: clamp(30px, 3.6vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.022em;
+}
+
+.bp-receipts.bp-receipts-six .bp-receipt span {
+  display: block;
+  margin-top: 12px;
+  color: var(--bp-ink-soft);
+  font-family: var(--font-serif);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .bp-work-note {
@@ -271,7 +328,8 @@
   align-items: start;
   padding: 24px 48px 32px;
   background:
-    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
     var(--bp-canvas);
 }
 
@@ -478,6 +536,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .bp-receipts.bp-receipts-six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .bp-receipts.bp-receipts-six .bp-receipt:nth-child(3n) {
+    border-right: 0;
+  }
+  .bp-receipts.bp-receipts-six .bp-receipt:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--bp-rule);
+  }
+
   .bp-lens-section,
   .bp-work-note,
   .bp-case-row {
@@ -527,6 +595,19 @@
   .bp-lens-index,
   .bp-next {
     grid-template-columns: 1fr;
+  }
+
+  .bp-receipts.bp-receipts-six {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bp-receipts.bp-receipts-six .bp-receipt {
+    border-right: 0;
+  }
+  .bp-receipts.bp-receipts-six .bp-receipt:nth-child(odd) {
+    border-right: 1px solid var(--bp-rule);
+  }
+  .bp-receipts.bp-receipts-six .bp-receipt:nth-last-child(-n + 2) {
+    border-bottom: 0;
   }
 
   .bp-stat-strip article,
