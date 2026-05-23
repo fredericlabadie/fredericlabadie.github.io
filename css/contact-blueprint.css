@@ -1,0 +1,262 @@
+/* ============================================================
+   Blueprint contact page
+   Scoped to .bp-contact-body for gradual migration.
+   ============================================================ */
+
+.bp-contact-body {
+  background:
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    #eef2f5;
+  color: #16263a;
+}
+
+.bp-contact-body strong { color: inherit; }
+
+.bp-contact-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 48px;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #16263a;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bp-contact-nav a:hover { text-decoration: none; }
+
+.bp-contact-nav-brand,
+.bp-contact-nav-links { display: flex; align-items: center; gap: 14px; }
+.bp-contact-nav-links { list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+.bp-contact-nav-links a { color: #ffffff; }
+.bp-contact-nav-links a[aria-current="page"] { color: #b9412a; }
+.bp-contact-nav-muted { color: #a3b4c7; }
+
+.bp-contact-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 999px;
+  background: #3e7f5b;
+  box-shadow: 0 0 0 2px rgba(62, 127, 91, 0.25);
+}
+
+.bp-contact-page {
+  min-height: calc(100vh - 48px);
+  background:
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 / 24px 24px,
+    #eef2f5;
+}
+
+.bp-contact-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+  gap: 48px;
+  padding: 44px 48px 36px;
+  border-bottom: 1px solid #cdd3da;
+}
+
+.bp-contact-mono,
+.bp-contact-kicker {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #52617a;
+  font-weight: 500;
+}
+
+.bp-contact-accent { color: #b9412a; }
+
+.bp-contact-hero h1 {
+  max-width: 860px;
+  margin: 14px 0 0;
+  color: #16263a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(46px, 7vw, 88px);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+.bp-contact-dek {
+  max-width: 680px;
+  margin-top: 18px;
+  color: #52617a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.48;
+}
+
+.bp-contact-panel {
+  background: #16263a;
+  color: #ffffff;
+  border: 1px solid #16263a;
+}
+
+.bp-contact-panel-head,
+.bp-contact-panel-row { padding: 15px 18px; border-bottom: 1px solid rgba(255,255,255,0.16); }
+.bp-contact-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bp-contact-panel-row span { display: block; color: #a3b4c7; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.bp-contact-panel-row p { margin: 0; color: rgba(255,255,255,0.84); font-size: 13px; line-height: 1.5; }
+
+.bp-contact-section-tag {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 48px;
+  border-top: 1px solid #16263a;
+  border-bottom: 1px solid #cdd3da;
+  color: #52617a;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bp-contact-section-tag span:first-child { color: #b9412a; }
+
+.bp-contact-main {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 42px;
+  padding: 32px 48px 48px;
+}
+
+.bp-contact-sidebar {
+  position: sticky;
+  top: 72px;
+  align-self: start;
+}
+
+.bp-contact-sidebar h2 {
+  margin-top: 8px;
+  color: #16263a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.018em;
+}
+
+.bp-contact-sidebar p {
+  margin-top: 12px;
+  color: #52617a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.bp-contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 0;
+  border-top: 1px solid #cdd3da;
+  border-left: 1px solid #cdd3da;
+}
+
+.bp-contact-card {
+  min-height: 168px;
+  padding: 24px;
+  background: #ffffff;
+  border-right: 1px solid #cdd3da;
+  border-bottom: 1px solid #cdd3da;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bp-contact-card:hover { text-decoration: none; background: #f8fafc; }
+
+.bp-contact-card-primary {
+  grid-column: span 2;
+  min-height: 210px;
+  background: #16263a;
+  color: #ffffff;
+  border-color: #16263a;
+}
+
+.bp-contact-card strong {
+  color: #16263a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.12;
+  word-break: break-word;
+}
+
+.bp-contact-card-primary strong {
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.bp-contact-card span:last-child,
+.bp-contact-card p {
+  color: #52617a;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.bp-contact-card-primary span:last-child,
+.bp-contact-card-primary p {
+  color: rgba(255,255,255,0.78);
+}
+
+.bp-contact-fit {
+  margin-top: 18px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #cdd3da;
+}
+
+.bp-contact-fit h3 {
+  margin: 0;
+  color: #16263a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.bp-contact-fit p {
+  margin-top: 12px;
+  color: #16263a;
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+@media (max-width: 1040px) {
+  .bp-contact-hero,
+  .bp-contact-main,
+  .bp-contact-grid { grid-template-columns: 1fr; }
+  .bp-contact-sidebar { position: static; }
+  .bp-contact-card-primary { grid-column: span 1; }
+}
+
+@media (max-width: 720px) {
+  .bp-contact-nav { position: static; align-items: flex-start; flex-direction: column; padding: 14px 20px; }
+  .bp-contact-nav-links { justify-content: flex-start; gap: 12px 18px; }
+  .bp-contact-hero,
+  .bp-contact-main,
+  .bp-contact-section-tag { padding-left: 20px; padding-right: 20px; }
+  .bp-contact-section-tag { flex-direction: column; gap: 6px; }
+  .bp-contact-hero h1 { font-size: 44px; }
+}
