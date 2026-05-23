@@ -2,8 +2,18 @@ import * as amplitude from "https://cdn.jsdelivr.net/npm/@amplitude/unified/+esm
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
+function hasAnalyticsConsent() {
+  return window.Cookiebot?.consent?.statistics === true;
+}
+
 function track(event, props) {
+  if (!hasAnalyticsConsent()) return;
   amplitude.track(event, { Domain: window.location.hostname, ...props });
+}
+
+function identifyUser(identify) {
+  if (!hasAnalyticsConsent()) return;
+  amplitude.identify(identify);
 }
 
 const path = () => window.location.pathname;
@@ -63,7 +73,7 @@ function initUserProperties() {
     identify.setOnce("Is Recruiter", "true");
   }
 
-  amplitude.identify(identify);
+  identifyUser(identify);
 }
 
 // ── Engagement tracking ────────────────────────────────────────────────────────
@@ -271,7 +281,7 @@ function attachResumeTracking() {
     link.addEventListener("click", () => {
       const identify = new amplitude.Identify();
       identify.setOnce("CV Downloaded", "true");
-      amplitude.identify(identify);
+      identifyUser(identify);
 
       track("resumeDownloaded", {
         AssetPath: href,
@@ -299,7 +309,7 @@ function attachContactTracking() {
         const identify = new amplitude.Identify();
         identify.setOnce("Has Contacted", "true");
         identify.set("Primary Contact Channel", "email");
-        amplitude.identify(identify);
+        identifyUser(identify);
 
         track("emailComposeStarted", {
           SourcePagePath: path(),
@@ -324,7 +334,7 @@ function attachContactTracking() {
         const identify = new amplitude.Identify();
         identify.setOnce("Has Contacted", "true");
         identify.set("Primary Contact Channel", "linkedin");
-        amplitude.identify(identify);
+        identifyUser(identify);
 
         track("linkedinProfileOpened", {
           SourcePagePath: path(),
