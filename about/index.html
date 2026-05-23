@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About &mdash; Frederic Labadie, Analytics Architect</title>
-  <meta name="description" content="The longer version. Fourteen years across enterprise analytics, Sense-Making Methodology training, HIPAA exposure, eleven Amplitude credentials, two warehouses, and an MSc — plus the skills, certifications, and endorsements that back it up." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="The longer version: fourteen years across analytics architecture, instrumentation, Sense-Making methodology, HIPAA exposure, eleven Amplitude credentials, two warehouses, and an MSc." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -25,360 +25,170 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/about-blueprint.css" />
 </head>
-<body>
+<body class="bp-about-body">
   <a class="skip-link" href="#about">Skip to about</a>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/" aria-current="page">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-about-nav" aria-label="Primary">
+    <a class="bp-about-nav-brand" href="../">
+      <span class="bp-about-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-about-nav-muted">/ about</span>
+    </a>
+    <ul class="bp-about-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/">/ work</a></li>
+      <li><a href="../notebook/">/ Current Meditations</a></li>
+      <li><a href="../about/" aria-current="page">// about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
+  <main class="bp-about-page" id="top">
+    <header class="bp-about-hero">
+      <div>
+        <p class="bp-about-kicker bp-about-accent">// About / longer version</p>
+        <h1>Who, how, and the credentials behind the work.</h1>
+        <p class="bp-about-dek">The landing page covers what I do. The work library covers what I have done. This page is the supporting dossier: bio, methodology, stack, credentials, and how people describe working with me.</p>
+      </div>
+      <aside class="bp-about-panel" aria-label="Profile summary">
+        <div class="bp-about-panel-head"><span>Profile</span><span>Amsterdam</span></div>
+        <div class="bp-about-panel-row"><span>Current role</span><p>Full-time Analytics Architect at Telus Digital; standard notice applies.</p></div>
+        <div class="bp-about-panel-row"><span>Authorisation</span><p>EU work authorisation. No visa sponsorship required.</p></div>
+        <div class="bp-about-panel-row"><span>Languages</span><p>English native / French B1 / Dutch A2.</p></div>
+        <div class="bp-about-panel-row"><span>Best fit</span><p>Analytics architecture, product telemetry, analytics engineering, UX telemetry, and marketing analytics.</p></div>
+      </aside>
+    </header>
 
-    <!-- PAGE INTRO -->
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">About</p>
-        <h1>The longer version &mdash; who, how, and the credentials behind it.</h1>
-        <p>If the landing page covered what I do and the work page covered what I've done, this is the rest: bio, methodology, the full skills and certifications stack, and what people I've worked with say from the other side of the table.</p>
+    <section class="bp-about-receipts" aria-label="Profile receipts">
+      <article><strong>14 yrs</strong><span>analytics experience</span></article>
+      <article><strong>11</strong><span>Amplitude credentials</span></article>
+      <article><strong>MSc</strong><span>Data Analytics</span></article>
+      <article><strong>280</strong><span>franchise locations supported</span></article>
+      <article><strong>38h</strong><span>monthly analyst hours recovered</span></article>
+      <article><strong>EU</strong><span>work authorisation</span></article>
+    </section>
+
+    <div class="bp-about-section-tag" aria-hidden="true"><span>// 01 / bio</span><span>analytics architecture / methodology / adoption</span></div>
+    <section class="bp-about-content" id="about">
+      <aside class="bp-about-sidebar">
+        <p class="bp-about-mono bp-about-accent">Bio</p>
+        <h2>Analyst, architect, and the person you call when the data will not behave.</h2>
+        <p>Fourteen years across analytics systems, instrumentation, stakeholder adoption, and the qualitative questions that reveal what measurement alone misses.</p>
+      </aside>
+      <div class="bp-about-main">
+        <article class="bp-about-proof-card">
+          <p class="bp-about-mono bp-about-accent">Positioning</p>
+          <h3>I build the analytics layer that lets organisations stop guessing.</h3>
+          <p>That means data models, tracking instrumentation, KPI frameworks, dashboards, and the experimentation culture that makes any of it useful. Most recently, I have done that as <strong>Analytics Architect at Telus Digital</strong>, working across enterprise clients in consumer electronics, B2B SaaS, e-commerce, and travel.</p>
+        </article>
+
+        <article class="bp-about-card">
+          <p class="bp-about-mono bp-about-accent">Enterprise analytics</p>
+          <h3>From warehouse foundations to decision practice.</h3>
+          <p>Before Telus, I spent five years at <strong>Stanley Steemer</strong> building marketing analytics from scratch across 280 franchise locations: a greenfield SSMS / Azure SQL Server foundation, retirement of an ageing BI stack, and identity-resolution work through a single-customer concept and householding data model.</p>
+          <p>I also introduced A/B testing as a leadership practice; by year two, leadership was actively requesting data-informed decisions.</p>
+        </article>
+
+        <article class="bp-about-card">
+          <p class="bp-about-mono bp-about-accent">Methodology</p>
+          <h3>Sense-Making sits beside the instrumentation, not behind it.</h3>
+          <p>My usability research practice is built on <strong>Sense-Making Methodology</strong> paired with task-based testing, think-aloud protocols, heuristic evaluation, SUS, and task-success metrics. The qualitative side of the work is not an afterthought to the quantitative side.</p>
+          <p>That practice runs through focus group facilitation at Planned Parenthood, UX question design at Designory/TBWA, and user testing at Stanley Steemer.</p>
+        </article>
+
+        <article class="bp-about-card">
+          <p class="bp-about-mono bp-about-accent">Operating context</p>
+          <h3>High-stakes settings make signal visible.</h3>
+          <p>I have worked under HIPAA on protected data and alongside enterprise consent and privacy regimes including OneTrust and TrustArc. Compliance and consent design sit inside the instrumentation work, not as an after-the-fact bolt-on.</p>
+          <p>On the people side, I managed two designers at Micro Center during the CRM migration and have mentored junior analysts informally across several engagements. That is real but scoped people-management experience; team leadership at scale is the next thing to grow into, not something I overclaim.</p>
+        </article>
       </div>
     </section>
 
-    <!-- BIO -->
-    <section id="about">
-      <div class="section-head">
-        <div class="num">01</div>
-        <div class="label">Bio</div>
-        <div class="title">Fourteen years &middot; Telus Digital &middot; Stanley Steemer</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Bio</p>
-          <h2 class="section-heading">Analyst, architect, and the person you call when the data won't behave.</h2>
-
-          <div class="about-grid">
-            <div class="about-body">
-              <p>Fourteen years building the analytics layer that lets organisations stop guessing &mdash; data models, tracking instrumentation, KPI frameworks, dashboards, and the experimentation culture that makes any of it useful.</p>
-              <p>Most recently as <strong>Analytics Architect at Telus Digital</strong>, working across enterprise clients in consumer electronics, B2B SaaS, e-commerce, and travel &mdash; typically automating 12+ hours per week of manual reporting per client through SQL pipeline development.</p>
-              <p>Before Telus, five years at <strong>Stanley Steemer</strong> building marketing analytics from scratch across 280 franchise locations: greenfield, built on an SSMS / Azure SQL Server foundation, with the ageing BI stack retired. Introduced the single-customer concept and householding data model that gave the business its first reliable identity resolution across the multi-location estate. Introduced A/B testing as a leadership practice; by year two, leadership was actively requesting data-informed decisions.</p>
-              <p>I've worked under <strong>HIPAA on protected data</strong>, alongside enterprise consent and privacy regimes including OneTrust and TrustArc. Compliance and consent design sit inside the instrumentation work, not as an after-the-fact bolt-on.</p>
-              <p>My usability research practice is built on <strong>Sense-Making Methodology</strong> paired with the standard practitioner toolkit &mdash; task-based testing, think-aloud protocols, heuristic evaluation, SUS and task-success metrics. The qualitative side of the work, not an afterthought to the quantitative side. Applied across three employers: focus group facilitation at Planned Parenthood (informing the Melody Health brand launch, where the subscriber base grew from 20k to 50k), UX question design at Designory/TBWA, and user testing at Stanley Steemer.</p>
-              <p>I'm drawn to high-stakes contexts because stress and constraint strip away performance &mdash; what remains is signal. I work with teams that want their data to <strong>change their decisions</strong>, not just confirm them.</p>
-              <p>On the people side: managed two designers at Micro Center on the CRM migration, and mentored junior analysts informally across several other engagements. Real but scoped people-management experience; team leadership at scale is the next thing to grow into, not something already done.</p>
-              <p>Based in Amsterdam. EU work authorisation. Currently full-time; open to the right next role with standard notice.</p>
-            </div>
-
-            <aside>
-              <dl class="meta-list">
-                <dt>Location</dt>
-                <dd>Amsterdam, Netherlands</dd>
-
-                <dt>Current role</dt>
-                <dd>Full-time Analytics Architect at <strong>Telus Digital</strong> &middot; standard notice applies</dd>
-
-                <dt>Core stack</dt>
-                <dd>BigQuery &middot; SQL &middot; dbt &middot; GA4 &middot; Amplitude &middot; Adobe Analytics &middot; Looker Studio &middot; Python</dd>
-
-                <dt>Methodology</dt>
-                <dd>Sense-Making (Dervin) &middot; Neutral questioning &middot; Observational research &middot; A/B experimentation</dd>
-
-                <dt>Communities</dt>
-                <dd>Measure Slack &middot; <span style="color: var(--c-ink-soft);">more on the way</span></dd>
-
-                <dt>Languages</dt>
-                <dd>English (native) &middot; French (B1) &middot; Dutch (A2)</dd>
-
-                <dt>Authorisation</dt>
-                <dd>EU work authorisation</dd>
-              </dl>
-            </aside>
-          </div>
+    <div class="bp-about-section-tag" aria-hidden="true"><span>// 02 / stack</span><span>platforms / engineering / research / privacy</span></div>
+    <section class="bp-about-content" id="skills">
+      <aside class="bp-about-sidebar">
+        <p class="bp-about-mono bp-about-accent">Skills</p>
+        <h2>Across the boundary, top to bottom.</h2>
+        <p>From event schema to BigQuery model to stakeholder handoff; from qualitative protocol to dashboard adoption.</p>
+      </aside>
+      <div class="bp-about-main">
+        <div class="bp-about-grid">
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Analytics platforms</p><h3>GA4 / Adobe / Amplitude</h3><p>GA4, Adobe Analytics, Amplitude, Segment CDP, GTM client- and server-side, Adobe Launch / AEP Tags.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Data engineering</p><h3>Warehouses and pipelines</h3><p>BigQuery, GCP, Snowflake, Databricks, SQL, dbt, Dataform, Python, and API integrations.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">BI</p><h3>Decision surfaces</h3><p>Looker Studio, Tableau, Power BI, SSRS, Confluence knowledge bases, and handoff documentation.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Methods</p><h3>Experimentation and discovery</h3><p>A/B testing, attribution, cohorts, retention, funnel analysis, audience segmentation, and Sense-Making.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">UX research</p><h3>Qualitative practice</h3><p>Task-based testing, think-aloud protocols, heuristic evaluation, SUS, task-success, observational research, and neutral questioning.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Privacy + AI</p><h3>Consent and AI workflows</h3><p>OneTrust, TrustArc, Bloomreach, Braze REST API, Oracle Responsys, Claude / Anthropic API, and Vertex AI prompt design.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="alt">
-      <div class="section-head">
-        <div class="num">02</div>
-        <div class="label">Endorsements</div>
-        <div class="title">From the other side of the table</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Endorsements</p>
-          <h2 class="section-heading">What it looks like from the other side of the table.</h2>
-        </div>
-
-        <div class="container">
-          <div class="testimonial-row">
-            <blockquote class="testimonial">
-              <p>Frederic's abilities with analytics are so good, they seem like dark magic. The insights he extracts from data are fantastic, the testing and business strategies he devises are best-in-class, and he could present complex findings to a 3-year-old.</p>
-              <div class="testimonial-cite">
-                <strong>Karim Merchant</strong><br />Principal Product Designer, Dell
-              </div>
-            </blockquote>
-            <blockquote class="testimonial">
-              <p>He helps me with data issues I didn't even know I had. He is especially quick to link marketing with IT and all of the data in between.</p>
-              <div class="testimonial-cite">
-                <strong>Elizabeth Schilling</strong><br />Data &amp; Digital Strategy, Geben Communications &middot; former colleague at Stanley Steemer
-              </div>
-            </blockquote>
-          </div>
+    <div class="bp-about-section-tag" aria-hidden="true"><span>// 03 / credentials</span><span>Amplitude / warehouses / methodology / education</span></div>
+    <section class="bp-about-content" id="certifications">
+      <aside class="bp-about-sidebar">
+        <p class="bp-about-mono bp-about-accent">Credentials</p>
+        <h2>Eleven Amplitude credentials, two warehouses, and an MSc.</h2>
+        <p>Credential density is not the argument by itself. It is supporting evidence for the hands-on architecture work in the case library.</p>
+      </aside>
+      <div class="bp-about-main">
+        <div class="bp-about-grid">
+          <article class="bp-about-mini-card bp-about-dark"><p class="bp-about-mono bp-about-accent">Amplitude</p><h3>11 credentials</h3><p>Both Expert tracks: Analysis and Data Management. Three Specialist, three Practitioner, and three Foundations credentials.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Analytics + engineering</p><h3>dbt / Databricks / Adobe</h3><p>dbt Fundamentals, Databricks Fundamentals, Adobe Analytics Business Practitioner, Conversion Optimization, Google Analytics.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">AI + cloud</p><h3>Prompt and architecture</h3><p>Prompt Design in Vertex AI, Data Mesh Architecture, and Bloomreach Engagement credentials.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Research</p><h3>Sense-Making Methodology</h3><p>Dervin Sense-Making Methodology training through Ohio State, plus Decision Science Fundamentals.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Education</p><h3>MSc Data Analytics</h3><p>Western Governors University, 2023. UC Irvine Data Science Certificate, 2018. BA Strategic Communications, Ohio State, 2011.</p></article>
+          <article class="bp-about-mini-card"><p class="bp-about-mono bp-about-accent">Practical signal</p><h3>Case-backed, not badge-only</h3><p>Credentials point back to shipped work: AI triage, BigQuery cost engineering, UX telemetry, CDP migration, and adoption handoff.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-head">
-        <div class="num">03</div>
-        <div class="label">Skills</div>
-        <div class="title">Across the boundary, top to bottom</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Skills</p>
-          <h2 class="section-heading">Across the boundary, top to bottom.</h2>
-
-          <div class="skills-grid">
-            <div>
-              <h3 class="skill-group-title">Analytics Platforms</h3>
-              <ul class="skill-list">
-                <li>Google Analytics 4</li>
-                <li>Adobe Analytics</li>
-                <li>Amplitude</li>
-                <li>Segment CDP</li>
-                <li>GTM (client- &amp; server-side)</li>
-                <li>Adobe Launch / AEP Tags</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">Data Engineering</h3>
-              <ul class="skill-list">
-                <li>BigQuery &middot; GCP</li>
-                <li>Snowflake &middot; Databricks</li>
-                <li>SQL (advanced)</li>
-                <li>dbt &middot; Dataform</li>
-                <li>Python (pandas, numpy, requests)</li>
-                <li>API integration (Braze, Spotify, Anthropic)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">BI &amp; Dashboarding</h3>
-              <ul class="skill-list">
-                <li>Looker Studio</li>
-                <li>Tableau</li>
-                <li>Power BI</li>
-                <li>SSRS</li>
-                <li>Confluence knowledge bases</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">Methods</h3>
-              <ul class="skill-list">
-                <li>A/B testing &amp; experimentation</li>
-                <li>Multi-touch attribution</li>
-                <li>Cohort &amp; retention modelling</li>
-                <li>Funnel analysis</li>
-                <li>Audience segmentation</li>
-                <li>Sense-Making (Dervin)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">Usability &amp; UX Research</h3>
-              <ul class="skill-list">
-                <li>Sense-Making Methodology (Dervin)</li>
-                <li>Task-based usability testing</li>
-                <li>Think-aloud protocols</li>
-                <li>Heuristic evaluation (Nielsen, ISO 9241-110)</li>
-                <li>SUS &middot; task-success &middot; time-on-task</li>
-                <li>Observational research &middot; neutral questioning</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">Tracking &amp; Instrumentation</h3>
-              <ul class="skill-list">
-                <li>Solution Design References (SDR)</li>
-                <li>Event schema architecture</li>
-                <li>Data-layer specification</li>
-                <li>Custom JavaScript tracking</li>
-                <li>Tag QA (ObservePoint, Omnibug, DebugView)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="skill-group-title">MarTech, Privacy &amp; AI</h3>
-              <ul class="skill-list">
-                <li>Bloomreach Engagement (CDP)</li>
-                <li>Braze REST API</li>
-                <li>Oracle Responsys</li>
-                <li>OneTrust &middot; TrustArc consent management</li>
-                <li>Claude / Anthropic API integration</li>
-              </ul>
-            </div>
-          </div>
+    <div class="bp-about-section-tag" aria-hidden="true"><span>// 04 / endorsements</span><span>from the other side of the table</span></div>
+    <section class="bp-about-content" id="testimonials">
+      <aside class="bp-about-sidebar">
+        <p class="bp-about-mono bp-about-accent">Endorsements</p>
+        <h2>What it looks like from the other side of the table.</h2>
+        <p>Two outside descriptions that map back to the central promise: explain the complexity, connect the teams, make the work useful.</p>
+      </aside>
+      <div class="bp-about-main">
+        <div class="bp-about-quote-grid">
+          <blockquote class="bp-about-quote"><p>Frederic's abilities with analytics are so good, they seem like dark magic. The insights he extracts from data are fantastic, the testing and business strategies he devises are best-in-class, and he could present complex findings to a 3-year-old.</p><cite>Karim Merchant / Principal Product Designer, Dell</cite></blockquote>
+          <blockquote class="bp-about-quote"><p>He helps me with data issues I didn't even know I had. He is especially quick to link marketing with IT and all of the data in between.</p><cite>Elizabeth Schilling / Data &amp; Digital Strategy, Geben Communications / former colleague at Stanley Steemer</cite></blockquote>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="alt">
-      <div class="section-head">
-        <div class="num">04</div>
-        <div class="label">Certifications</div>
-        <div class="title">Certification stack &middot; both Expert tracks &middot; an MSc</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Certifications</p>
-          <h2 class="section-heading">Eleven Amplitude credentials including both Expert tracks, two warehouses, and an MSc.</h2>
-
-          <div class="cert-grid">
-            <div>
-              <h3 class="cert-group-title">Analytics &amp; Engineering</h3>
-              <ul class="cert-list">
-                <li><span class="cert-name">dbt Fundamentals</span><span class="cert-issuer">dbt Labs &middot; Apr 2026</span></li>
-                <li><span class="cert-name">Databricks Fundamentals</span><span class="cert-issuer">Databricks &middot; Feb 2026</span></li>
-                <li><span class="cert-name">Adobe Analytics Business Practitioner</span><span class="cert-issuer">Adobe &middot; Nov 2024</span></li>
-                <li><span class="cert-name">Conversion Optimization</span><span class="cert-issuer">Google &middot; Aug 2025</span></li>
-                <li><span class="cert-name">Google Analytics</span><span class="cert-issuer">Google &middot; Oct 2015, renewed</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="cert-group-title">Amplitude (11)</h3>
-              <p class="cert-summary">
-                Both <strong>Expert</strong> tracks (Analysis + Data Management) &middot; three Specialists &middot; three Practitioners &middot; three Foundations. Issued Mar&ndash;May 2026.
-              </p>
-              <details class="cert-collapsible">
-                <summary>Full credential list</summary>
-                <ul class="cert-list">
-                  <li><span class="cert-name">Expert &mdash; Analysis</span><span class="cert-issuer">Amplitude &middot; May 2026</span></li>
-                  <li><span class="cert-name">Expert &mdash; Data Management</span><span class="cert-issuer">Amplitude &middot; May 2026</span></li>
-                  <li><span class="cert-name">Specialist &mdash; Marketing Analytics</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Specialist &mdash; Experiment</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Specialist &mdash; Data Cleanup</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Practitioner &mdash; Retention</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Practitioner &mdash; Acquisition</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Practitioner &mdash; Monetization</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Foundations &mdash; Analytics</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Foundations &mdash; Experiment</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                  <li><span class="cert-name">Foundations &mdash; Data Management</span><span class="cert-issuer">Amplitude &middot; Mar 2026</span></li>
-                </ul>
-              </details>
-            </div>
-
-            <div>
-              <h3 class="cert-group-title">AI, Cloud &amp; MarTech</h3>
-              <ul class="cert-list">
-                <li><span class="cert-name">Prompt Design in Vertex AI</span><span class="cert-issuer">Google Cloud &middot; Feb 2026</span></li>
-                <li><span class="cert-name">Data Mesh Architecture</span><span class="cert-issuer">LinkedIn &middot; Mar 2026</span></li>
-                <li><span class="cert-name">Bloomreach Engagement &mdash; Foundations, SMS, Jinja, Engagement Crash Course</span><span class="cert-issuer">Bloomreach &middot; Jul&ndash;Aug 2024</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="cert-group-title">Research Methodology</h3>
-              <ul class="cert-list">
-                <li><span class="cert-name">Sense-Making Methodology (Dervin)</span><span class="cert-issuer">Ohio State University &middot; Mar 2011</span></li>
-                <li><span class="cert-name">Decision Science Fundamentals</span><span class="cert-issuer">LinkedIn &middot; Aug 2025</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="cert-group-title">Education</h3>
-              <ul class="cert-list">
-                <li><span class="cert-name">MSc, Data Analytics</span><span class="cert-issuer">Western Governors University &middot; 2023</span></li>
-                <li><span class="cert-name">Data Science Certificate</span><span class="cert-issuer">UC Irvine &middot; 2018</span></li>
-                <li><span class="cert-name">BA, Strategic Communications</span><span class="cert-issuer">Ohio State University &middot; 2011</span></li>
-              </ul>
-            </div>
-          </div>
+    <div class="bp-about-section-tag" aria-hidden="true"><span>// 05 / contact</span><span>senior IC / Amsterdam / standard notice</span></div>
+    <section class="bp-about-content" id="contact">
+      <aside class="bp-about-sidebar">
+        <p class="bp-about-mono bp-about-accent">Contact</p>
+        <h2>Open to the right senior IC role.</h2>
+        <p>Best fit when instrumentation, qualitative methodology, and stakeholder enablement sit inside the same person's remit.</p>
+      </aside>
+      <div class="bp-about-main">
+        <div class="bp-about-contact">
+          <article><p class="bp-about-mono bp-about-accent">Availability</p><strong>Currently full-time at Telus Digital.</strong><p>Standard notice applies. Amsterdam-based, EU work authorised, not blocked by visa.</p></article>
+          <a href="../contact/"><span class="bp-about-mono bp-about-accent">Get in touch</span><strong>Email, LinkedIn, GitHub.</strong><span>Open the contact page for channels and context.</span></a>
+          <a href="../assets/resume/frederic-labadie-cv.pdf" download><span class="bp-about-mono bp-about-accent">CV / Resume</span><strong>Download the two-page PDF.</strong><span>Profile, skills, experience, education, and credentials.</span></a>
+          <a href="../work/"><span class="bp-about-mono bp-about-accent">Evidence</span><strong>Open the case library.</strong><span>Eighteen cases across seven lenses.</span></a>
         </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="section-head">
-        <div class="num">05</div>
-        <div class="label">Contact</div>
-        <div class="title">Open to senior roles &middot; Amsterdam</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Contact</p>
-          <h2 class="section-heading">If the credentials and the work match what you're hiring for, I'm easy to reach.</h2>
-
-          <div class="best-fit">
-            <p class="best-fit-label">Strongest match</p>
-            <p class="best-fit-body">Analytics Architect &middot; Senior Product Analyst &middot; Analytics Engineer &middot; UX Telemetry Lead &middot; Marketing Analytics Lead.</p>
-            <p class="best-fit-meta">Senior IC, hybrid or remote, Amsterdam-based. Strong fit when instrumentation, qualitative methodology, and stakeholder enablement sit inside the same person's remit.</p>
-          </div>
-
-          <div class="contact-grid">
-            <p class="contact-body">
-              Currently full-time at Telus Digital; standard notice applies. EU work authorisation; not blocked by visa.
-            </p>
-            <div class="contact-list">
-              <a href="../contact/">
-                <span class="label">Get in touch</span>
-                <span>Email, LinkedIn, GitHub &rarr;</span>
-              </a>
-              <a href="../assets/resume/frederic-labadie-cv.pdf" download>
-                <span class="label">CV / Resume</span>
-                <span>Download PDF &darr;</span>
-              </a>
-              <a href="https://linkedin.com/in/frederic-labadie" target="_blank" rel="noopener">
-                <span class="label">LinkedIn</span>
-                <span>/in/frederic-labadie</span>
-              </a>
-              <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">
-                <span class="label">GitHub</span>
-                <span>/fredericlabadie</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>About / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
