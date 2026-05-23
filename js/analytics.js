@@ -31,7 +31,7 @@ function referrerType() {
 function landingSection() {
   const p = path();
   if (p.includes("/work")) return "work";
-  if (p.includes("/notebook")) return "notebook";
+  if (p.includes("/thoughts")) return "thoughts";
   if (p.includes("/contact")) return "contact";
   if (p.includes("/recruiters")) return "recruiters";
   if (p.includes("/about")) return "about";
@@ -43,7 +43,7 @@ function visitorIntent() {
   if (path().includes("/recruiters")) return "recruiter";
   if (path().includes("/work") || path().includes("/philips"))
     return "portfolio";
-  if (path().includes("/notebook")) return "content";
+  if (path().includes("/thoughts")) return "content";
   return "general";
 }
 
@@ -97,14 +97,18 @@ function recordEngagedAction(trigger) {
 // ── Event: portfolioLensSelected ──────────────────────────────────────────────
 
 function attachLensTracking() {
-  document.querySelectorAll(".case-toc-item a").forEach((link) => {
-    link.addEventListener("click", () => {
-      const href = link.getAttribute("href") || "";
-      const lensName = href.replace("#topic-", "").replace(/-/g, " ") || href;
+  // Blueprint work page uses a.bp-lens-card elements in the lens index grid
+  document.querySelectorAll("a.bp-lens-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const lensName =
+        card.querySelector("h2")?.textContent?.trim() ||
+        (card.getAttribute("href") || "")
+          .replace("#topic-", "")
+          .replace(/-/g, " ");
       track("portfolioLensSelected", {
         LensName: lensName,
         SourcePagePath: path(),
-        UiLocation: "sidebar",
+        UiLocation: "lens_index",
       });
     });
   });
@@ -113,6 +117,8 @@ function attachLensTracking() {
 // ── Event: caseStudyOpened ────────────────────────────────────────────────────
 
 function attachCaseStudyTracking() {
+  // /philips/ is a direct-link-only sub-site (not in main nav); retained here so
+  // any legacy deep-links to /philips/ case pages are still tracked.
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href") || "";
     const isCaseStudy =
@@ -132,6 +138,7 @@ function attachCaseStudyTracking() {
 // ── Event: caseStudyCompleted (scroll depth) ──────────────────────────────────
 
 function attachCaseStudyCompletionTracking() {
+  // /philips/ retained — see note in attachCaseStudyTracking
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
   if (!isCasePage) return;
 
@@ -176,6 +183,7 @@ function attachCaseStudyCompletionTracking() {
 // ── Event: caseLibraryContinued ───────────────────────────────────────────────
 
 function attachCaseLibraryTracking() {
+  // /philips/ retained — see note in attachCaseStudyTracking
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
   if (!isCasePage) return;
 
@@ -203,26 +211,31 @@ function attachCaseLibraryTracking() {
 // ── Event: notebookTopicOpened ────────────────────────────────────────────────
 
 function attachNotebookTracking() {
+  // Thoughts page uses .bp-thought h3 a anchor links
   document
-    .querySelectorAll(".post-entry .post-title a, .post-title a")
+    .querySelectorAll(
+      ".post-entry .post-title a, .post-title a, .bp-thought h3 a",
+    )
     .forEach((link) => {
       link.addEventListener("click", () => {
         track("notebookTopicOpened", {
-          TopicId: (link.getAttribute("href") || "").replace("#", ""),
-          TopicTitle: link.textContent?.trim() || "",
+          TopicLabel:
+            (link.getAttribute("href") || "").replace("#", "") ||
+            link.textContent?.trim() ||
+            "",
           SourcePagePath: path(),
         });
       });
     });
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    const isNotebook = path().includes("/notebook");
-    if (!isNotebook) return;
+    const isThoughts = path().includes("/thoughts");
+    if (!isThoughts) return;
     link.addEventListener("click", () => {
-      const anchor = (link.getAttribute("href") || "").replace("#", "");
       track("notebookTopicOpened", {
-        TopicId: anchor,
-        TopicTitle: link.textContent?.trim() || anchor,
+        TopicLabel:
+          link.textContent?.trim() ||
+          (link.getAttribute("href") || "").replace("#", ""),
         SourcePagePath: path(),
       });
     });
@@ -232,7 +245,11 @@ function attachNotebookTracking() {
 // ── Event: notebookSectionReached (scroll) ────────────────────────────────────
 
 function attachNotebookSectionTracking() {
-  if (!path().includes("/notebook")) return;
+  if (!path().includes("/thoughts")) return;
+
+  // TopicLabel: derive from the nearest ancestor .bp-thought id, falling back to page h1
+  const pageTopicLabel =
+    document.querySelector("h1")?.textContent?.trim() || "";
 
   const sections = Array.from(document.querySelectorAll("h2, h3"));
   if (!sections.length) return;
@@ -244,20 +261,18 @@ function attachNotebookSectionTracking() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const id =
-          entry.target.id ||
-          entry.target.textContent?.trim().toLowerCase().replace(/\s+/g, "-") ||
-          "";
-        if (fired.has(id)) return;
-        fired.add(id);
+        const sectionLabel =
+          entry.target.textContent?.trim() || entry.target.id || "";
+        if (fired.has(sectionLabel)) return;
+        fired.add(sectionLabel);
 
         const total = document.documentElement.scrollHeight;
         const top = entry.target.getBoundingClientRect().top + window.scrollY;
         const scrollPct = Math.round((top / total) * 100);
 
         track("notebookSectionReached", {
-          SectionId: id,
-          SectionTitle: entry.target.textContent?.trim() || "",
+          SectionLabel: sectionLabel,
+          TopicLabel: entry.target.closest(".bp-thought")?.id || pageTopicLabel,
           ScrollPercent: String(scrollPct),
           TimeOnPageSeconds: String(
             Math.round((Date.now() - startTime) / 1000),
@@ -286,7 +301,7 @@ function attachResumeTracking() {
       track("resumeDownloaded", {
         AssetPath: href,
         FileType: href.split(".").pop() || "pdf",
-        ResumeVersion: "2025",
+        ResumeVersion: "2026",
         SourcePagePath: path(),
         DownloadContext: path().includes("/recruiters")
           ? "recruiters"

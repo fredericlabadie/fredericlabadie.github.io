@@ -1,191 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The system survived the people who built it &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Greenfield UX telemetry across web, app, and CRM, followed by a structured handoff designed so the client team could maintain and extend it independently. 38 hours per month recovered and zero infrastructure ramp-up after turnover." />
-  <meta name="theme-color" content="#eef2f5" />
-  <meta name="robots" content="noindex, nofollow" />
+  <head>
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The system survived the people who built it &mdash; case study &mdash;
+      Frederic Labadie
+    </title>
+    <meta
+      name="description"
+      content="Greenfield UX telemetry across web, app, and CRM, followed by a structured handoff designed so the client team could maintain and extend it independently. 38 hours per month recovered and zero infrastructure ramp-up after turnover."
+    />
+    <meta name="theme-color" content="#eef2f5" />
+    <meta name="robots" content="noindex, nofollow" />
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="../favicon.svg" />
-  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../favicon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="The system survived the people who built it &mdash; case study" />
-  <meta property="og:description" content="Greenfield UX telemetry plus a structured handoff designed for independence." />
-  <meta property="og:url" content="https://fredericlabadie.com/work/sslp-enablement.html" />
-  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The system survived the people who built it &mdash; case study" />
-  <meta name="twitter:description" content="Greenfield UX telemetry plus a structured handoff designed for independence." />
-  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="The system survived the people who built it &mdash; case study"
+    />
+    <meta
+      property="og:description"
+      content="Greenfield UX telemetry plus a structured handoff designed for independence."
+    />
+    <meta
+      property="og:url"
+      content="https://fredericlabadie.com/work/sslp-enablement.html"
+    />
+    <meta
+      property="og:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="The system survived the people who built it &mdash; case study"
+    />
+    <meta
+      name="twitter:description"
+      content="Greenfield UX telemetry plus a structured handoff designed for independence."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fredericlabadie.com/assets/og/og-image.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/case-blueprint.css" />
-</head>
-<body class="bp-case-body">
-  <a class="skip-link" href="#case">Skip to case</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/case-blueprint.css" />
+  </head>
+  <body class="bp-case-body">
+    <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="bp-case-nav" aria-label="Primary">
-    <a class="bp-case-nav-brand" href="../">
-      <span class="bp-case-dot" aria-hidden="true"></span>
-      <span>fredericlabadie.com</span>
-      <span class="bp-case-nav-muted">/ case study</span>
-    </a>
-    <ul class="bp-case-nav-links" id="primary-nav">
-      <li><a href="../">/ home</a></li>
-      <li><a href="../work/" aria-current="page">// work</a></li>
-      <li><a href="../notebook/">/ Current Meditations</a></li>
-      <li><a href="../about/">/ about</a></li>
-      <li><a href="../recruiters/">/ recruiters</a></li>
-      <li><a href="../contact/">/ contact</a></li>
-    </ul>
-  </nav>
+    <nav class="bp-case-nav" aria-label="Primary">
+      <a class="bp-case-nav-brand" href="../">
+        <span class="bp-case-dot" aria-hidden="true"></span>
+        <span>fredericlabadie.com</span>
+        <span class="bp-case-nav-muted">/ case study</span>
+      </a>
+      <ul class="bp-case-nav-links" id="primary-nav">
+        <li><a href="../">/ home</a></li>
+        <li><a href="../work/" aria-current="page">// work</a></li>
+        <li><a href="../thoughts/">/ current meditations</a></li>
+        <li><a href="../about/">/ about</a></li>
+        <li><a href="../recruiters/">/ recruiters</a></li>
+        <li><a href="../contact/">/ contact</a></li>
+      </ul>
+    </nav>
 
-  <main class="bp-case-shell" id="top">
-    <header class="bp-case-hero">
-      <div>
-        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 05 / Adoption &amp; Cultural Transition</p>
-        <h1>The system survived the people who built it.</h1>
-        <p class="bp-case-dek">Greenfield UX telemetry across web, app, and CRM, followed by a structured handoff designed so the client team could maintain and extend it independently.</p>
-      </div>
-      <aside class="bp-case-hero-panel" aria-label="Case summary">
-        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
-        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / analytics architecture engagement</p></div>
-        <div class="bp-case-panel-row"><span>Project timing</span><strong>2025-2026</strong></div>
-        <div class="bp-case-panel-row"><span>Role</span><p>Data infrastructure, telemetry enablement, documentation, client handoff</p></div>
-      </aside>
-    </header>
-
-    <section class="bp-case-receipts" aria-label="Case proof points">
-      <article><strong>38h</strong><span>analyst hours recovered / month</span></article>
-      <article><strong>3</strong><span>structured handoff sessions</span></article>
-      <article><strong>0</strong><span>infrastructure ramp-up after turnover</span></article>
-      <article><strong>4</strong><span>data surfaces unified</span></article>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>adoption / independence / handoff</span></div>
-    <section class="bp-case-content" id="case">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Core argument</p>
-        <h2>The deliverable was not a dashboard. It was independence.</h2>
-        <p>The final measure of an analytics engagement is whether the client team changes how they work after the builder leaves.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-proof-panel">
-          <p class="bp-case-mono bp-case-accent">What happened</p>
-          <h3>A manual reporting cycle became a maintained analytics system.</h3>
-          <p>A state-regulated retail platform moved from two analysts spending the equivalent of <strong>two combined work-weeks per month</strong> manually pulling data to a unified BigQuery, Dataform, and Looker Studio stack with structured enablement behind it.</p>
-          <p>The visible metric was <strong>38 analyst hours recovered per month</strong>. The more important result was durability: when the client team turned over, new analysts required <strong>zero ramp-up time</strong> on the data infrastructure.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Situation</p>
-          <h3>The data existed, but ownership was trapped in manual work.</h3>
-          <p>Web, app, Google Search Console, and Braze data lived in disconnected sources with no shared infrastructure. A monthly reporting cycle required manual extraction, reconciliation, and formatting. Domain specialists had no clean self-serve path into their own data.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Task</p>
-          <h3>Build the system and the conditions for adoption.</h3>
-          <p>The work was not only to unify the data layer. It was to design a handoff that would survive team turnover: clear documentation, repo access, branching and review practices, data dictionaries, ERD summaries, and training sessions built for the analysts who would inherit the system.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / enablement architecture</span><span>build / document / transfer</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Handoff design</p>
-        <h2>Adoption was engineered into the project plan.</h2>
-        <p>The pipeline mattered because it changed the work. The handoff mattered because it kept the change from depending on one person.</p>
-      </aside>
-      <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="Enablement architecture diagram">
-          <figcaption><span>fig. 01 / adoption chain</span><span>infrastructure to independent use</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Build</span><strong>Unified layer</strong><p>GA4, GSC, and Braze data unified through BigQuery and scheduled Dataform pipelines.</p></div>
-            <div><span>Expose</span><strong>Dashboards</strong><p>Looker Studio surfaces gave domain specialists cross-channel visibility without manual pulling.</p></div>
-            <div><span>Transfer</span><strong>Ownership</strong><p>Three handoff sessions, documentation, repo practices, checklist, ERD, and data dictionary.</p></div>
+    <main class="bp-case-shell" id="top">
+      <header class="bp-case-hero">
+        <div>
+          <p class="bp-case-kicker bp-case-accent">
+            // Case study / Lens 05 / Adoption &amp; Cultural Transition
+          </p>
+          <h1>The system survived the people who built it.</h1>
+          <p class="bp-case-dek">
+            Greenfield UX telemetry across web, app, and CRM, followed by a
+            structured handoff designed so the client team could maintain and
+            extend it independently.
+          </p>
+        </div>
+        <aside class="bp-case-hero-panel" aria-label="Case summary">
+          <div class="bp-case-panel-head">
+            <span>Case file</span><span>Static / anonymised</span>
           </div>
-        </figure>
+          <div class="bp-case-panel-row">
+            <span>Client context</span>
+            <p>
+              State-regulated retail platform / analytics architecture
+              engagement
+            </p>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Project timing</span><strong>2025-2026</strong>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Role</span>
+            <p>
+              Data infrastructure, telemetry enablement, documentation, client
+              handoff
+            </p>
+          </div>
+        </aside>
+      </header>
 
-        <div class="bp-case-gates" aria-label="Structured handoff sessions">
-          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Web handoff</strong><p>GTM container structure, GA4 event taxonomy, Looker Studio architecture, and BigQuery web pipeline from end to end.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>App handoff</strong><p>Firebase SDK patterns, GA4 DebugView QA, BigQuery app schema, and line-by-line walkthrough of production SQL.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>CRM handoff</strong><p>Braze dashboard orientation, Python automation walkthrough, API key rotation, and operational checklist.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Ownership layer</strong><p>Confluence knowledge base, ERD summary, data dictionary, repo access, branching strategy, and PR review process.</p></article>
-        </div>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Action</p>
-          <h3>The reporting layer was redesigned around self-service.</h3>
-          <p>I unified GA4, GSC, and Braze into BigQuery via scheduled Dataform pipelines; built Looker Studio dashboards for cross-channel visibility; and added a Python automation against the Braze REST API to remove another small but persistent manual CRM reporting task.</p>
-          <p>Then I documented the system for a client analyst audience, not an agency audience. The goal was operational clarity: what runs, where it lives, how to validate it, and what to do when ownership changes.</p>
+      <section class="bp-case-receipts" aria-label="Case proof points">
+        <article>
+          <strong>38h</strong><span>analyst hours recovered / month</span>
         </article>
+        <article>
+          <strong>3</strong><span>structured handoff sessions</span>
+        </article>
+        <article>
+          <strong>0</strong><span>infrastructure ramp-up after turnover</span>
+        </article>
+        <article><strong>4</strong><span>data surfaces unified</span></article>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 01 / thesis</span
+        ><span>adoption / independence / handoff</span>
       </div>
-    </section>
+      <section class="bp-case-content" id="case">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Core argument</p>
+          <h2>The deliverable was not a dashboard. It was independence.</h2>
+          <p>
+            The final measure of an analytics engagement is whether the client
+            team changes how they work after the builder leaves.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-proof-panel">
+            <p class="bp-case-mono bp-case-accent">What happened</p>
+            <h3>
+              A manual reporting cycle became a maintained analytics system.
+            </h3>
+            <p>
+              A state-regulated retail platform moved from two analysts spending
+              the equivalent of
+              <strong>two combined work-weeks per month</strong> manually
+              pulling data to a unified BigQuery, Dataform, and Looker Studio
+              stack with structured enablement behind it.
+            </p>
+            <p>
+              The visible metric was
+              <strong>38 analyst hours recovered per month</strong>. The more
+              important result was durability: when the client team turned over,
+              new analysts required <strong>zero ramp-up time</strong> on the
+              data infrastructure.
+            </p>
+          </article>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>hours recovered / turnover test / durable adoption</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Result</p>
-        <h2>The system passed the turnover test.</h2>
-        <p>The recovered hours were valuable. The stronger proof was that those hours did not snap back when the team changed.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Outcome</p>
-          <h3>The client team could work from domain expertise on day one.</h3>
-          <ul>
-            <li><strong>38 analyst hours recovered per month</strong>, redirected from data pulling to analysis.</li>
-            <li><strong>Three structured handoff sessions</strong> across web, app, and CRM layers.</li>
-            <li><strong>Zero data-infrastructure ramp-up</strong> required when the client analyst team turned over.</li>
-            <li><strong>Self-serve access</strong> improved for domain specialists who previously depended on manual reporting cycles.</li>
-          </ul>
-        </article>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Situation</p>
+            <h3>The data existed, but ownership was trapped in manual work.</h3>
+            <p>
+              Web, app, Google Search Console, and Braze data lived in
+              disconnected sources with no shared infrastructure. A monthly
+              reporting cycle required manual extraction, reconciliation, and
+              formatting. Domain specialists had no clean self-serve path into
+              their own data.
+            </p>
+          </article>
 
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Design lesson</p>
-          <h3>A handoff is part of the architecture.</h3>
-          <p>Documentation, repo practices, and training design are not administrative leftovers. They are the adoption layer of the analytics system. Without them, the pipeline works only while its builder is nearby.</p>
-        </article>
-
-        <div class="bp-case-tags" aria-label="Technologies and methods">
-          <span class="bp-case-tag">BigQuery / GCP</span>
-          <span class="bp-case-tag">Dataform</span>
-          <span class="bp-case-tag">GA4 web + app</span>
-          <span class="bp-case-tag">Looker Studio</span>
-          <span class="bp-case-tag">Braze REST API</span>
-          <span class="bp-case-tag">Python</span>
-          <span class="bp-case-tag">Confluence</span>
-          <span class="bp-case-tag">Client enablement</span>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Task</p>
+            <h3>Build the system and the conditions for adoption.</h3>
+            <p>
+              The work was not only to unify the data layer. It was to design a
+              handoff that would survive team turnover: clear documentation,
+              repo access, branching and review practices, data dictionaries,
+              ERD summaries, and training sessions built for the analysts who
+              would inherit the system.
+            </p>
+          </article>
         </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 02 / enablement architecture</span
+        ><span>build / document / transfer</span>
       </div>
-    </section>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Handoff design</p>
+          <h2>Adoption was engineered into the project plan.</h2>
+          <p>
+            The pipeline mattered because it changed the work. The handoff
+            mattered because it kept the change from depending on one person.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <figure
+            class="bp-case-figure"
+            aria-label="Enablement architecture diagram"
+          >
+            <figcaption>
+              <span>fig. 01 / adoption chain</span
+              ><span>infrastructure to independent use</span>
+            </figcaption>
+            <div class="bp-case-figure-grid">
+              <div>
+                <span>Build</span><strong>Unified layer</strong>
+                <p>
+                  GA4, GSC, and Braze data unified through BigQuery and
+                  scheduled Dataform pipelines.
+                </p>
+              </div>
+              <div>
+                <span>Expose</span><strong>Dashboards</strong>
+                <p>
+                  Looker Studio surfaces gave domain specialists cross-channel
+                  visibility without manual pulling.
+                </p>
+              </div>
+              <div>
+                <span>Transfer</span><strong>Ownership</strong>
+                <p>
+                  Three handoff sessions, documentation, repo practices,
+                  checklist, ERD, and data dictionary.
+                </p>
+              </div>
+            </div>
+          </figure>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
-    <section class="bp-case-next">
-      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
-      <a href="sslp-data-infra.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>The pipeline layer behind mobile instrumentation.</strong><span>Scheduled Dataform pipelines, BigQuery modelling, and dashboard-ready tables for the same state-regulated retail platform.</span></a>
-      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
-    </section>
-  </main>
+          <div class="bp-case-gates" aria-label="Structured handoff sessions">
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">1</span
+              ><strong>Web handoff</strong>
+              <p>
+                GTM container structure, GA4 event taxonomy, Looker Studio
+                architecture, and BigQuery web pipeline from end to end.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">2</span
+              ><strong>App handoff</strong>
+              <p>
+                Firebase SDK patterns, GA4 DebugView QA, BigQuery app schema,
+                and line-by-line walkthrough of production SQL.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">3</span
+              ><strong>CRM handoff</strong>
+              <p>
+                Braze dashboard orientation, Python automation walkthrough, API
+                key rotation, and operational checklist.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">4</span
+              ><strong>Ownership layer</strong>
+              <p>
+                Confluence knowledge base, ERD summary, data dictionary, repo
+                access, branching strategy, and PR review process.
+              </p>
+            </article>
+          </div>
 
-  <footer class="bp-footer">
-    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
-    <span>Plain HTML + CSS / GitHub Pages</span>
-    <span>Case study / static portfolio</span>
-  </footer>
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Action</p>
+            <h3>The reporting layer was redesigned around self-service.</h3>
+            <p>
+              I unified GA4, GSC, and Braze into BigQuery via scheduled Dataform
+              pipelines; built Looker Studio dashboards for cross-channel
+              visibility; and added a Python automation against the Braze REST
+              API to remove another small but persistent manual CRM reporting
+              task.
+            </p>
+            <p>
+              Then I documented the system for a client analyst audience, not an
+              agency audience. The goal was operational clarity: what runs,
+              where it lives, how to validate it, and what to do when ownership
+              changes.
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <script src="../js/main.js"></script>
-  <script type="module" src="/js/amplitude-init.js"></script>
-  <script type="module" src="/js/analytics.js"></script>
-</body>
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 03 / result</span
+        ><span>hours recovered / turnover test / durable adoption</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Result</p>
+          <h2>The system passed the turnover test.</h2>
+          <p>
+            The recovered hours were valuable. The stronger proof was that those
+            hours did not snap back when the team changed.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Outcome</p>
+            <h3>
+              The client team could work from domain expertise on day one.
+            </h3>
+            <ul>
+              <li>
+                <strong>38 analyst hours recovered per month</strong>,
+                redirected from data pulling to analysis.
+              </li>
+              <li>
+                <strong>Three structured handoff sessions</strong> across web,
+                app, and CRM layers.
+              </li>
+              <li>
+                <strong>Zero data-infrastructure ramp-up</strong> required when
+                the client analyst team turned over.
+              </li>
+              <li>
+                <strong>Self-serve access</strong> improved for domain
+                specialists who previously depended on manual reporting cycles.
+              </li>
+            </ul>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Design lesson</p>
+            <h3>A handoff is part of the architecture.</h3>
+            <p>
+              Documentation, repo practices, and training design are not
+              administrative leftovers. They are the adoption layer of the
+              analytics system. Without them, the pipeline works only while its
+              builder is nearby.
+            </p>
+          </article>
+
+          <div class="bp-case-tags" aria-label="Technologies and methods">
+            <span class="bp-case-tag">BigQuery / GCP</span>
+            <span class="bp-case-tag">Dataform</span>
+            <span class="bp-case-tag">GA4 web + app</span>
+            <span class="bp-case-tag">Looker Studio</span>
+            <span class="bp-case-tag">Braze REST API</span>
+            <span class="bp-case-tag">Python</span>
+            <span class="bp-case-tag">Confluence</span>
+            <span class="bp-case-tag">Client enablement</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 04 / next</span
+        ><span>case library / adjacent evidence / contact</span>
+      </div>
+      <section class="bp-case-next">
+        <a href="../work/"
+          ><span class="bp-case-mono bp-case-accent">More cases</span
+          ><strong>Full case library.</strong
+          ><span
+            >Eighteen cases across seven lenses: question formulation,
+            instrumentation, experimentation, AI workflows, adoption, marketing
+            analytics, and data engineering.</span
+          ></a
+        >
+        <a href="sslp-data-infra.html"
+          ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+          ><strong>The pipeline layer behind mobile instrumentation.</strong
+          ><span
+            >Scheduled Dataform pipelines, BigQuery modelling, and
+            dashboard-ready tables for the same state-regulated retail
+            platform.</span
+          ></a
+        >
+        <a href="../contact/"
+          ><span class="bp-case-mono bp-case-accent">Get in touch</span
+          ><strong>Contact and context.</strong
+          ><span
+            >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or
+            any other in detail.</span
+          ></a
+        >
+      </section>
+    </main>
+
+    <footer class="bp-footer">
+      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+      <span>Plain HTML + CSS / GitHub Pages</span>
+      <span>Case study / static portfolio</span>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script type="module" src="/js/amplitude-init.js"></script>
+    <script type="module" src="/js/analytics.js"></script>
+  </body>
 </html>
