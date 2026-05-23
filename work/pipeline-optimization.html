@@ -95,8 +95,10 @@
           </h1>
           <p class="bp-case-dek">
             An audit and architectural redesign of a GA4 to BigQuery pipeline
-            that had grown organically into a 1.2 TB intermediate table and a
-            $112/run cascading CTE chain.
+            that had grown into a 1.2 TB intermediate table and a $112/run
+            cascading CTE chain — plus a separate Looker Studio fix that halved
+            per-user scan cost by scoping the data window from all-time to two
+            years.
           </p>
         </div>
         <aside class="bp-case-hero-panel" aria-label="Case summary">
@@ -317,15 +319,16 @@
             <h3>The pipeline became cheaper and easier to reason about.</h3>
             <ul>
               <li>
-                <strong>~50% cost reduction</strong> across pipeline and
-                dashboard queries.
+                <strong>Scheduled query cost halved</strong> — the pipeline had
+                grown from negligible to ~$300/month after app and web data were
+                added; the CTE redesign cut that by roughly half.
               </li>
               <li>
-                <strong
-                  >Heavy dashboards reduced from roughly $200/day to
-                  $100/day</strong
-                >
-                in query cost.
+                <strong>Looker Studio scan cost halved separately</strong> —
+                each user triggered a full-table scan at ~$30/scan across a
+                6-person team (~$180 at full load). Scoping the data window from
+                all-time to two years brought that to ~$15/scan (~$90 at full
+                load).
               </li>
               <li>
                 <strong>1.2 TB intermediate table retired</strong>, along with
