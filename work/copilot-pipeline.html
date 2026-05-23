@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Front-end behavioural signal for a commercial Claude-powered platform &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="GA4 event collection and BigQuery export pipeline for an enterprise AI copilot platform — adding the front-end behavioural signal layer to a system that had only backend metering. Lens 07 · Data Engineering." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="GA4 event collection and BigQuery export pipeline for an enterprise AI copilot platform, adding front-end behavioural signal to a system that previously had only backend billing metering." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -25,117 +25,165 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 07 &middot; Data Engineering &middot; AI platform analytics</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 07 / Data Engineering &amp; AI Platform Analytics</p>
         <h1>Front-end behavioural signal for a commercial Claude-powered platform.</h1>
-        <p class="hero-subtitle">Adding the front-end measurement layer to an enterprise platform that had only backend metering for billing.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Enterprise AI copilot platform &middot; agency-client engagement</span>
-        </p>
+        <p class="bp-case-dek">Adding the front-end measurement layer to an enterprise AI copilot platform that had backend metering for billing, but not behavioural telemetry for product and engineering questions.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Enterprise AI copilot platform / agency-client engagement</p></div>
+        <div class="bp-case-panel-row"><span>Platform</span><strong>Claude-powered</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>GA4 event design, BigQuery export, engineering enablement, query primer, measurement advisory</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>GA4</strong><span>front-end event layer added</span></article>
+      <article><strong>BigQuery</strong><span>export pipeline delivered</span></article>
+      <article><strong>weeks</strong><span>pipeline live and in use</span></article>
+      <article><strong>1</strong><span>engineering query primer created</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>billing metering is not product analytics</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>Backend metering could bill usage. It could not explain behaviour.</h2>
+        <p>The platform needed a front-end signal layer to answer which copilots were used, by whom, how often, and what product behaviour looked like.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>An enterprise AI platform gained a behavioural analytics pipeline.</h3>
+          <p>An enterprise AI copilot platform built on Anthropic's Claude had scaled from internal tool to commercial product but had only backend metering for billing. I designed and delivered the front-end behavioural signal layer: <strong>GA4 event collection and BigQuery export</strong> covering platform-wide and organisation-specific events.</p>
+          <p>The pipeline was confirmed live and in use by engineering teams within weeks. I continued afterward as an internal BigQuery SME, including a GA4-querying primer for engineers beginning to work with the data.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Context</p>
+          <h3>The product had usage metering, not product behaviour.</h3>
+          <p>Backend billing metering could support commercial operations, but it could not answer product questions about which copilots were being used, how often, by whom, or how behaviour differed across organisations.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Add a front-end behavioural layer without making engineering dependent on analytics.</h3>
+          <p>The work needed to produce usable event data, export it to BigQuery, and equip the engineering team to query it directly rather than waiting on an analyst for every answer.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">An enterprise AI copilot platform built on Anthropic's Claude gained a <strong>full front-end behavioural signal layer</strong> &mdash; GA4 event collection and BigQuery export covering platform-wide and org-specific events (which copilots are being used, how often, by whom). <strong>Pipeline confirmed live and in use by engineering teams within weeks</strong> of delivery. Continued afterwards as internal BigQuery SME, including a GA4-querying primer for the engineering team, plus advisory input to the platform's adversarial-testing tool on its own measurement layer.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / pipeline</span><span>front end / GA4 / BigQuery / engineering enablement</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Build layer</p>
+        <h2>The pipeline was only half the deliverable.</h2>
+        <p>The other half was making the data legible to the people building the platform.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="AI copilot analytics pipeline diagram">
+          <figcaption><span>fig. 01 / behavioural signal layer</span><span>product events to engineering questions</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Collect</span><strong>GA4 events</strong><p>Platform-wide and organisation-specific front-end behavioural events captured from the copilot product.</p></div>
+            <div><span>Export</span><strong>BigQuery</strong><p>GA4 export made the event stream queryable for engineering and product analysis.</p></div>
+            <div><span>Enable</span><strong>Query primer</strong><p>Engineering enablement covered schema, event-parameter unnesting, and KPI query examples.</p></div>
           </div>
+        </figure>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Context</div>
-              <div class="card-body">An enterprise AI copilot platform built on Anthropic's Claude had scaled from internal tool to commercial product but had <strong>only backend metering for billing</strong>. No front-end behavioural signal layer existed &mdash; the engineering team couldn't answer which copilots were being used, by whom, how often, or what shape user behaviour was taking inside the product.</div>
-            </div>
-            <div class="card amber">
-              <div class="card-label">What I did</div>
-              <div class="card-body">Joined as Analytics Architect for front-end measurement. Designed and delivered the full <strong>GA4 event collection and BigQuery export pipeline</strong> &mdash; platform-wide and org-specific behavioural events. Pipeline live and in use within weeks. Then served as internal BigQuery SME including a querying primer for the engineering team beginning to work with the data (unnesting event parameters, schema model, KPI queries: total copilot count, conversations per user, Custom Copilot access-type distribution). Later, advisory input to the platform's adversarial-testing tool on its own measurement layer.</div>
-            </div>
-          </div>
+        <div class="bp-case-gates" aria-label="Copilot pipeline components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Event layer</strong><p>Designed GA4 event collection for platform-wide and organisation-specific behavioural events.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>BigQuery export</strong><p>Delivered the export pipeline that made front-end events available for deeper analysis.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>KPI queries</strong><p>Prepared examples including total copilot count, conversations per user, and Custom Copilot access-type distribution.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Advisory layer</strong><p>Provided advisory input to the platform's adversarial-testing tool on its own measurement layer.</p></article>
+        </div>
 
-          <div class="tags">
-            <span class="tag">GA4 &rarr; BigQuery</span>
-            <span class="tag">Looker Studio</span>
-            <span class="tag">Enterprise AI</span>
-            <span class="tag">Engineering enablement</span>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The data layer was designed for engineers to use.</h3>
+          <p>I delivered the GA4 event collection and BigQuery export pipeline, then supported engineering adoption with a querying primer covering event-parameter unnesting, the schema model, and KPI queries. The goal was not only to capture behaviour but to make it available to the team building the platform.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>live pipeline / engineering adoption / platform measurement</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The product gained the behavioural layer billing data could not provide.</h2>
+        <p>Commercial usage metering and product analytics answer different questions. This work added the latter.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>Engineering could query how the platform was actually being used.</h3>
+          <ul>
+            <li><strong>GA4 event layer delivered</strong> for platform-wide and organisation-specific behavioural events.</li>
+            <li><strong>BigQuery export pipeline</strong> confirmed live and in use by engineering within weeks.</li>
+            <li><strong>GA4 querying primer</strong> created for the engineering team.</li>
+            <li><strong>Internal BigQuery SME support</strong> continued after delivery.</li>
+            <li><strong>Measurement advisory</strong> extended to the platform's adversarial-testing tool.</li>
+          </ul>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>AI product analytics still starts with ordinary behavioural questions.</h3>
+          <p>Even on a Claude-powered product, the core questions are familiar: who used what, how often, in which context, and what changed after release. The platform may be novel; the need for trustworthy behavioural telemetry is not.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">GA4 to BigQuery</span>
+          <span class="bp-case-tag">Enterprise AI</span>
+          <span class="bp-case-tag">Claude-powered platform</span>
+          <span class="bp-case-tag">Engineering enablement</span>
+          <span class="bp-case-tag">BigQuery SME</span>
+          <span class="bp-case-tag">Product analytics</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="ai-alert-triage.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Designing AI workflows that don't outsource the thinking.</strong><span>Another AI-adjacent analytics case, focused on alert triage and human-in-the-loop workflow design.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
