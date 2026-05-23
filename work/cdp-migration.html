@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Replatformed the CRM. The campaigns didn't notice. &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Full Oracle Responsys → Bloomreach CDP migration — customer data model, event schemas, segmentation, and triggered-campaign architecture all redesigned. Zero campaign downtime, +10.8% CTR YoY first year. Lens 06 · Marketing Analytics." />
-  <meta name="theme-color" content="#ffffff" />
+  <title>Replatformed the CRM. The campaigns did not notice. &mdash; case study &mdash; Frederic Labadie</title>
+  <meta name="description" content="Oracle Responsys to Bloomreach CDP migration: customer data model, event schemas, segmentation, and triggered-campaign architecture redesigned with zero campaign downtime and year-one engagement lift." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -14,176 +14,179 @@
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Replatformed the CRM. The campaigns didn't notice. &mdash; case study" />
-  <meta property="og:description" content="Oracle Responsys → Bloomreach migration with the data model redesigned, not ported." />
+  <meta property="og:title" content="Replatformed the CRM. The campaigns did not notice. &mdash; case study" />
+  <meta property="og:description" content="Oracle Responsys to Bloomreach CDP migration with the data model redesigned, not ported." />
   <meta property="og:url" content="https://fredericlabadie.com/work/cdp-migration.html" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Replatformed the CRM. The campaigns didn't notice. &mdash; case study" />
-  <meta name="twitter:description" content="Oracle Responsys → Bloomreach migration with the data model redesigned, not ported." />
+  <meta name="twitter:title" content="Replatformed the CRM. The campaigns did not notice. &mdash; case study" />
+  <meta name="twitter:description" content="Oracle Responsys to Bloomreach CDP migration with the data model redesigned, not ported." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 06 &middot; Marketing Analytics &amp; Lifecycle</p>
-        <h1>Replatformed the CRM. The campaigns didn't notice.</h1>
-        <p class="hero-subtitle">Full Oracle Responsys &rarr; Bloomreach CDP migration &mdash; customer data model, event schemas, segmentation, and triggered-campaign architecture all redesigned. Zero campaign downtime through cutover.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
-        </p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 06 / Marketing Analytics &amp; Lifecycle</p>
+        <h1>Replatformed the CRM. The campaigns did not notice.</h1>
+        <p class="bp-case-dek">A full Oracle Responsys to Bloomreach CDP migration where the customer data model, event schemas, segmentation, and triggered-campaign architecture were redesigned instead of copied forward.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Consumer electronics retailer / lifecycle marketing and CRM platform migration</p></div>
+        <div class="bp-case-panel-row"><span>Project timing</span><strong>2023-2025</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>CDP migration architecture, customer data model, segmentation, lifecycle event design, scoped creative-team management</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>0</strong><span>campaign downtime through cutover</span></article>
+      <article><strong>+10.8%</strong><span>CTR YoY in first year</span></article>
+      <article><strong>+5.8%</strong><span>open rate YoY in first year</span></article>
+      <article><strong>2</strong><span>designers managed in scoped campaign-creative work</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>migration as model redesign</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>The migration was the architectural opportunity.</h2>
+        <p>Marketing platform migrations fail when they either break continuity or copy yesterday's data model into tomorrow's platform.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>The CRM moved platforms without campaigns noticing the cutover.</h3>
+          <p>A consumer-electronics retailer moved from <strong>Oracle Responsys</strong> to <strong>Bloomreach CDP</strong> with the customer data model redesigned for the new platform's primitives, not lifted from the old schema. The migration preserved <strong>zero campaign downtime</strong> through cutover.</p>
+          <p>Year-one post-migration results were <strong>+10.8% CTR YoY</strong> and <strong>+5.8% open rate YoY</strong>. The lift validated the architecture decision, not just the platform change.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Situation</p>
+          <h3>The old platform shaped the old data model.</h3>
+          <p>The retailer was running lifecycle marketing on Oracle Responsys, with a customer data model shaped by the platform's constraints: static list-based segmentation, identity stitching glued on, and consent state managed sideways. The decision to move to Bloomreach created a risk: a fresh copy of the old architecture in a new house.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Task</p>
+          <h3>Preserve continuity while refusing to port the old model forward.</h3>
+          <p>Two outcomes had to hold simultaneously: no campaign downtime through cutover, and no uncritical port of the Responsys-era data architecture. The migration needed to become a data-model redesign, not a platform swap.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A consumer-electronics retailer's CRM moved from Oracle Responsys to Bloomreach with the <strong>customer data model redesigned</strong> for the new platform's primitives, not lifted from the old schema &mdash; and with <strong>zero campaign downtime</strong> through cutover. Year-one results post-migration: <strong>+10.8% CTR YoY</strong> and <strong>+5.8% open rate YoY</strong>. The lift validated the architectural decision, not just the platform change. Same engagement included managing a team of two designers on the campaign-creative side.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / architecture</span><span>identity / events / campaigns / consent</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Redesign</p>
+        <h2>Build the model around the new platform's primitives.</h2>
+        <p>Identity, consent, lifecycle events, and campaign triggers were treated as architecture, not migration afterthoughts.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="CDP migration architecture shift">
+          <figcaption><span>fig. 01 / migration shift</span><span>ported schema to redesigned model</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Before</span><strong>Responsys constraints</strong><p>Static lists, glued-on identity stitching, and consent state managed around the old platform shape.</p></div>
+            <div><span>Move</span><strong>Model redesign</strong><p>Customer identity, lifecycle events, consent, and segmentation rebuilt around Bloomreach CDP primitives.</p></div>
+            <div><span>After</span><strong>Queryable cohorts</strong><p>Segments defined by behaviour and consent-aware event state instead of static list membership.</p></div>
           </div>
+        </figure>
 
-          <div class="case-argument">
-            Marketing-platform migrations fail two ways: by breaking campaign continuity (data gaps that don't close cleanly post-migration), or by carrying the previous platform's data model forward unchanged (winning the migration, losing the architectural opportunity). The work here did neither. <strong>The migration was the moment to redesign the customer data model, not the moment to deploy a fresh copy of the old one.</strong>
-          </div>
+        <div class="bp-case-gates" aria-label="CDP migration components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Customer data model</strong><p>Redesigned from scratch for Bloomreach CDP primitives, with identity stitched across email, SMS, and on-site behavioural events.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Event schemas</strong><p>Lifecycle event taxonomy authored from product, transactional, and engagement signals.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Segmentation</strong><p>Segmentation logic rewritten to be queryable rather than enumerated: cohorts defined by behaviour, not static list membership.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Triggered campaigns</strong><p>Triggered-campaign automation built on new lifecycle event tracking with GDPR-compliant consent maintained through cutover.</p></article>
+        </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Situation</div>
-              <div class="card-body">A consumer-electronics retailer running lifecycle marketing on <strong>Oracle Responsys</strong>, with a customer data model shaped by the platform's constraints &mdash; static list-based segmentation, identity stitching glued on, consent state managed sideways. The decision had been taken to move to Bloomreach. The risk: a fresh copy of the old schema in a new house.</div>
-            </div>
-            <div class="card">
-              <div class="card-label">Task</div>
-              <div class="card-body">Run the migration without breaking campaign continuity <em>and</em> use the moment to redesign the customer data model around Bloomreach's CDP primitives. Two outcomes had to hold simultaneously: <strong>no campaign downtime through cutover</strong>, and <strong>no porting of the old architecture forward</strong>. The migration was the architectural opportunity; treating it as a platform swap would have squandered it.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The platform migration became a lifecycle architecture rebuild.</h3>
+          <p>I rebuilt the customer data model for Bloomreach, authored the lifecycle event taxonomy, rewrote segmentation logic around behavioural cohorts, and supported triggered-campaign automation on the new event layer while maintaining GDPR-compliant consent during the cutover.</p>
+          <p>The same engagement also included managing a team of two designers on the campaign-creative side: real, scoped people-management rather than a broad people-leadership claim.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Action</div>
-              <div class="card-body">Customer data model rebuilt from scratch for Bloomreach &mdash; customer identity stitched cleanly across email, SMS, and on-site behavioural events, with consent state carried through the model rather than bolted on after. Lifecycle event taxonomy authored from product, transactional, and engagement signals. Segmentation logic rewritten to be <strong>queryable rather than enumerated</strong> &mdash; cohorts defined by behaviour rather than by static list membership. Triggered-campaign automation built on the new lifecycle event tracking, with GDPR-compliant consent maintained through cutover. Detail in the three-card breakdown below. Same engagement included managing a team of two designers on the campaign-creative side: real, scoped people-management.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Result</div>
-              <div class="card-body">Year-one engagement lift was the evidence that the architectural call held: the platform swap on its own would not have moved the numbers &mdash; the data model designed for Bloomreach's primitives did. The CRM ended on infrastructure designed for what it now does, not what its predecessor used to do; the team that owned it could speak Bloomreach instead of translating from Responsys every release.</div>
-            </div>
-          </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>continuity / lift / durable model</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The campaigns stayed live. The model changed underneath them.</h2>
+        <p>The goal was not merely to survive a cutover. It was to leave the CRM on infrastructure designed for what it now needed to do.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>The team could speak Bloomreach instead of translating from Responsys.</h3>
+          <ul>
+            <li><strong>Zero campaign downtime</strong> during the platform cutover.</li>
+            <li><strong>+10.8% CTR YoY</strong> in the first year post-migration.</li>
+            <li><strong>+5.8% open rate YoY</strong> in the first year post-migration.</li>
+            <li><strong>Customer identity stitched</strong> across email, SMS, and on-site behavioural events.</li>
+            <li><strong>Consent state carried through the model</strong> rather than bolted on after migration.</li>
+          </ul>
+        </article>
 
-          <div class="card-row card-row-3">
-            <div class="card accent">
-              <div class="card-label">Customer data model</div>
-              <div class="card-body">Redesigned from scratch for Bloomreach's CDP primitives &mdash; not lifted from the Responsys schema. Customer identity stitched cleanly across email, SMS, and on-site behavioural events, with consent state carried through the model rather than bolted on after.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Event schemas &amp; segmentation</div>
-              <div class="card-body">Lifecycle event taxonomy authored from product, transactional, and engagement signals. Segmentation logic rewritten to be queryable rather than enumerated &mdash; cohorts defined by behaviour rather than by static list membership.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Triggered campaign architecture</div>
-              <div class="card-body">Triggered-campaign automation built on the new lifecycle event tracking &mdash; the behavioural signal the segmentation logic queries against. GDPR-compliant consent management maintained through cutover via the same configuration regime.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>A migration is a rare chance to refuse inherited architecture.</h3>
+          <p>The safest migration is not always the one that copies the old system most faithfully. Sometimes the lower-risk path is to preserve operational continuity while redesigning the data model underneath, so the new platform is not forced to behave like the old one.</p>
+        </article>
 
-          <div class="metrics">
-            <div class="metric">
-              <div class="metric-value">+10.8%</div>
-              <div class="metric-label">CTR YoY in first year post-migration &mdash; the lift validated the new data model, not just the platform change</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">+5.8%</div>
-              <div class="metric-label">Open rate YoY in first year post-migration</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">0</div>
-              <div class="metric-label">Campaign downtime during cutover &mdash; full continuity through the platform swap</div>
-            </div>
-          </div>
-
-          <div class="tags">
-            <span class="tag">Bloomreach CDP</span>
-            <span class="tag">Oracle Responsys</span>
-            <span class="tag">CDP migration</span>
-            <span class="tag">Customer data model</span>
-            <span class="tag">Lifecycle automation</span>
-            <span class="tag">Email &amp; SMS</span>
-            <span class="tag">GDPR consent</span>
-          </div>
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">Bloomreach CDP</span>
+          <span class="bp-case-tag">Oracle Responsys</span>
+          <span class="bp-case-tag">CDP migration</span>
+          <span class="bp-case-tag">Customer data model</span>
+          <span class="bp-case-tag">Lifecycle automation</span>
+          <span class="bp-case-tag">Email + SMS</span>
+          <span class="bp-case-tag">GDPR consent</span>
+          <span class="bp-case-tag">Segmentation</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="cross-channel-identity.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Connecting email behaviour to in-app sessions.</strong><span>Cross-channel identity stitching across Braze, GA4, and web/app behaviour.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
