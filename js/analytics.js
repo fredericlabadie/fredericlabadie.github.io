@@ -2,6 +2,10 @@ import * as amplitude from "https://cdn.jsdelivr.net/npm/@amplitude/unified/+esm
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
+function track(event, props) {
+  amplitude.track(event, { domain: window.location.hostname, ...props });
+}
+
 const path = () => window.location.pathname;
 
 function referrerType() {
@@ -72,7 +76,7 @@ function recordEngagedAction(trigger) {
   engagedActionsCount += 1;
   if (engagedActionsCount >= 2) {
     engagedSessionFired = true;
-    amplitude.track("Engaged Session Started", {
+    track("Engaged Session Started", {
       engagement_trigger: trigger,
       engaged_actions_count: String(engagedActionsCount),
       source_page_path: path(),
@@ -87,7 +91,7 @@ function attachLensTracking() {
     link.addEventListener("click", () => {
       const href = link.getAttribute("href") || "";
       const lensName = href.replace("#topic-", "").replace(/-/g, " ") || href;
-      amplitude.track("Portfolio Lens Selected", {
+      track("Portfolio Lens Selected", {
         lens_name: lensName,
         source_page_path: path(),
         ui_location: "sidebar",
@@ -106,7 +110,7 @@ function attachCaseStudyTracking() {
       /\/(philips|work)\/[a-z]/.test(href) && !href.endsWith("/");
     if (!isCaseStudy) return;
     link.addEventListener("click", () => {
-      amplitude.track("Case Study Opened", {
+      track("Case Study Opened", {
         case_study_slug: href.split("/").filter(Boolean).pop() || href,
         case_study_title: link.textContent?.trim() || "",
         source_page_path: path(),
@@ -135,7 +139,7 @@ function attachCaseStudyCompletionTracking() {
 
     if (pct >= 50 && !fired50) {
       fired50 = true;
-      amplitude.track("Case Study Completed", {
+      track("Case Study Completed", {
         case_study_slug: slug,
         case_study_title: title,
         completion_threshold_percent: "50",
@@ -148,7 +152,7 @@ function attachCaseStudyCompletionTracking() {
     }
     if (pct >= 90 && !fired90) {
       fired90 = true;
-      amplitude.track("Case Study Completed", {
+      track("Case Study Completed", {
         case_study_slug: slug,
         case_study_title: title,
         completion_threshold_percent: "90",
@@ -181,7 +185,7 @@ function attachCaseLibraryTracking() {
     if (!isLibrary) return;
 
     link.addEventListener("click", () => {
-      amplitude.track("Case Library Continued", {
+      track("Case Library Continued", {
         from_case_study_slug: fromSlug,
         from_case_study_title: fromTitle,
         destination_type: /\/work\/?$/.test(href)
@@ -200,7 +204,7 @@ function attachNotebookTracking() {
     .querySelectorAll(".post-entry .post-title a, .post-title a")
     .forEach((link) => {
       link.addEventListener("click", () => {
-        amplitude.track("Notebook Topic Opened", {
+        track("Notebook Topic Opened", {
           topic_id: (link.getAttribute("href") || "").replace("#", ""),
           topic_title: link.textContent?.trim() || "",
           source_page_path: path(),
@@ -214,7 +218,7 @@ function attachNotebookTracking() {
     if (!isNotebook) return;
     link.addEventListener("click", () => {
       const anchor = (link.getAttribute("href") || "").replace("#", "");
-      amplitude.track("Notebook Topic Opened", {
+      track("Notebook Topic Opened", {
         topic_id: anchor,
         topic_title: link.textContent?.trim() || anchor,
         source_page_path: path(),
@@ -249,7 +253,7 @@ function attachNotebookSectionTracking() {
         const top = entry.target.getBoundingClientRect().top + window.scrollY;
         const scrollPct = Math.round((top / total) * 100);
 
-        amplitude.track("Notebook Section Reached", {
+        track("Notebook Section Reached", {
           section_id: id,
           section_title: entry.target.textContent?.trim() || "",
           scroll_percent: String(scrollPct),
@@ -277,7 +281,7 @@ function attachResumeTracking() {
       identify.setOnce("CV Downloaded", "true");
       amplitude.identify(identify);
 
-      amplitude.track("Resume Downloaded", {
+      track("Resume Downloaded", {
         asset_path: href,
         file_type: href.split(".").pop() || "pdf",
         resume_version: "2025",
@@ -306,14 +310,14 @@ function attachContactTracking() {
         identify.set("Primary Contact Channel", "email");
         amplitude.identify(identify);
 
-        amplitude.track("Email Compose Started", {
+        track("Email Compose Started", {
           source_page_path: path(),
           email_context: path().includes("/recruiters")
             ? "recruiter_outreach"
             : "general",
           mailto_template_used: href.includes("?") ? "prefilled" : "plain",
         });
-        amplitude.track("Contact Channel Selected", {
+        track("Contact Channel Selected", {
           contact_channel: "email",
           source_page_path: path(),
           source_section: cls.includes("primary") ? "primary" : "card",
@@ -331,12 +335,12 @@ function attachContactTracking() {
         identify.set("Primary Contact Channel", "linkedin");
         amplitude.identify(identify);
 
-        amplitude.track("LinkedIn Profile Opened", {
+        track("LinkedIn Profile Opened", {
           source_page_path: path(),
           source_section: cls.includes("primary") ? "primary" : "card",
           destination_url: href,
         });
-        amplitude.track("Contact Channel Selected", {
+        track("Contact Channel Selected", {
           contact_channel: "linkedin",
           source_page_path: path(),
           source_section: cls.includes("primary") ? "primary" : "card",
@@ -349,12 +353,12 @@ function attachContactTracking() {
 
     if (/github\.com\/fredericlabadie\/?$/i.test(href)) {
       link.addEventListener("click", () => {
-        amplitude.track("GitHub Profile Opened", {
+        track("GitHub Profile Opened", {
           source_page_path: path(),
           source_section: cls.includes("card") ? "card" : "inline",
           destination_url: href,
         });
-        amplitude.track("Contact Channel Selected", {
+        track("Contact Channel Selected", {
           contact_channel: "github",
           source_page_path: path(),
           source_section: cls.includes("card") ? "card" : "inline",
@@ -375,7 +379,7 @@ function attachProjectSourceTracking() {
     link.addEventListener("click", () => {
       const parts = href.split("/");
       const repoName = parts[parts.length - 1] || parts[parts.length - 2] || "";
-      amplitude.track("Project Source Opened", {
+      track("Project Source Opened", {
         repository_name: repoName,
         destination_url: href,
         source_page_path: path(),
@@ -404,7 +408,7 @@ function attachExternalResourceTracking() {
     }
 
     link.addEventListener("click", () => {
-      amplitude.track("External Resource Opened", {
+      track("External Resource Opened", {
         resource_type: /resume|cv|pdf/i.test(href) ? "document" : "website",
         destination_domain: domain,
         destination_url: href,
