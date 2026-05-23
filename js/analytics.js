@@ -3,7 +3,7 @@ import * as amplitude from "https://cdn.jsdelivr.net/npm/@amplitude/unified/+esm
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
 function track(event, props) {
-  amplitude.track(event, { domain: window.location.hostname, ...props });
+  amplitude.track(event, { Domain: window.location.hostname, ...props });
 }
 
 const path = () => window.location.pathname;
@@ -76,51 +76,50 @@ function recordEngagedAction(trigger) {
   engagedActionsCount += 1;
   if (engagedActionsCount >= 2) {
     engagedSessionFired = true;
-    track("Engaged Session Started", {
-      engagement_trigger: trigger,
-      engaged_actions_count: String(engagedActionsCount),
-      source_page_path: path(),
+    track("engagedSessionStarted", {
+      EngagementTrigger: trigger,
+      EngagedActionsCount: String(engagedActionsCount),
+      SourcePagePath: path(),
     });
   }
 }
 
-// ── Event: Portfolio Lens Selected ────────────────────────────────────────────
+// ── Event: portfolioLensSelected ──────────────────────────────────────────────
 
 function attachLensTracking() {
   document.querySelectorAll(".case-toc-item a").forEach((link) => {
     link.addEventListener("click", () => {
       const href = link.getAttribute("href") || "";
       const lensName = href.replace("#topic-", "").replace(/-/g, " ") || href;
-      track("Portfolio Lens Selected", {
-        lens_name: lensName,
-        source_page_path: path(),
-        ui_location: "sidebar",
+      track("portfolioLensSelected", {
+        LensName: lensName,
+        SourcePagePath: path(),
+        UiLocation: "sidebar",
       });
     });
   });
 }
 
-// ── Event: Case Study Opened ──────────────────────────────────────────────────
+// ── Event: caseStudyOpened ────────────────────────────────────────────────────
 
 function attachCaseStudyTracking() {
-  // Links that navigate to case study pages
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href") || "";
     const isCaseStudy =
       /\/(philips|work)\/[a-z]/.test(href) && !href.endsWith("/");
     if (!isCaseStudy) return;
     link.addEventListener("click", () => {
-      track("Case Study Opened", {
-        case_study_slug: href.split("/").filter(Boolean).pop() || href,
-        case_study_title: link.textContent?.trim() || "",
-        source_page_path: path(),
-        entry_context: "work_list",
+      track("caseStudyOpened", {
+        CaseStudySlug: href.split("/").filter(Boolean).pop() || href,
+        CaseStudyTitle: link.textContent?.trim() || "",
+        SourcePagePath: path(),
+        EntryContext: "work_list",
       });
     });
   });
 }
 
-// ── Event: Case Study Completed (scroll depth on case study pages) ────────────
+// ── Event: caseStudyCompleted (scroll depth) ──────────────────────────────────
 
 function attachCaseStudyCompletionTracking() {
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
@@ -139,27 +138,23 @@ function attachCaseStudyCompletionTracking() {
 
     if (pct >= 50 && !fired50) {
       fired50 = true;
-      track("Case Study Completed", {
-        case_study_slug: slug,
-        case_study_title: title,
-        completion_threshold_percent: "50",
-        time_on_page_seconds: String(
-          Math.round((Date.now() - startTime) / 1000),
-        ),
-        source_page_path: path(),
+      track("caseStudyCompleted", {
+        CaseStudySlug: slug,
+        CaseStudyTitle: title,
+        CompletionThresholdPercent: "50",
+        TimeOnPageSeconds: String(Math.round((Date.now() - startTime) / 1000)),
+        SourcePagePath: path(),
       });
       recordEngagedAction("case_study_50pct");
     }
     if (pct >= 90 && !fired90) {
       fired90 = true;
-      track("Case Study Completed", {
-        case_study_slug: slug,
-        case_study_title: title,
-        completion_threshold_percent: "90",
-        time_on_page_seconds: String(
-          Math.round((Date.now() - startTime) / 1000),
-        ),
-        source_page_path: path(),
+      track("caseStudyCompleted", {
+        CaseStudySlug: slug,
+        CaseStudyTitle: title,
+        CompletionThresholdPercent: "90",
+        TimeOnPageSeconds: String(Math.round((Date.now() - startTime) / 1000)),
+        SourcePagePath: path(),
       });
       recordEngagedAction("case_study_90pct");
     }
@@ -168,7 +163,7 @@ function attachCaseStudyCompletionTracking() {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-// ── Event: Case Library Continued (from case study back to work) ──────────────
+// ── Event: caseLibraryContinued ───────────────────────────────────────────────
 
 function attachCaseLibraryTracking() {
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
@@ -185,49 +180,46 @@ function attachCaseLibraryTracking() {
     if (!isLibrary) return;
 
     link.addEventListener("click", () => {
-      track("Case Library Continued", {
-        from_case_study_slug: fromSlug,
-        from_case_study_title: fromTitle,
-        destination_type: /\/work\/?$/.test(href)
-          ? "work_list"
-          : "another_case",
-        source_page_path: path(),
+      track("caseLibraryContinued", {
+        FromCaseStudySlug: fromSlug,
+        FromCaseStudyTitle: fromTitle,
+        DestinationType: /\/work\/?$/.test(href) ? "work_list" : "another_case",
+        SourcePagePath: path(),
       });
     });
   });
 }
 
-// ── Event: Notebook Topic Opened ──────────────────────────────────────────────
+// ── Event: notebookTopicOpened ────────────────────────────────────────────────
 
 function attachNotebookTracking() {
   document
     .querySelectorAll(".post-entry .post-title a, .post-title a")
     .forEach((link) => {
       link.addEventListener("click", () => {
-        track("Notebook Topic Opened", {
-          topic_id: (link.getAttribute("href") || "").replace("#", ""),
-          topic_title: link.textContent?.trim() || "",
-          source_page_path: path(),
+        track("notebookTopicOpened", {
+          TopicId: (link.getAttribute("href") || "").replace("#", ""),
+          TopicTitle: link.textContent?.trim() || "",
+          SourcePagePath: path(),
         });
       });
     });
 
-  // Anchor links within notebook pages
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const isNotebook = path().includes("/notebook");
     if (!isNotebook) return;
     link.addEventListener("click", () => {
       const anchor = (link.getAttribute("href") || "").replace("#", "");
-      track("Notebook Topic Opened", {
-        topic_id: anchor,
-        topic_title: link.textContent?.trim() || anchor,
-        source_page_path: path(),
+      track("notebookTopicOpened", {
+        TopicId: anchor,
+        TopicTitle: link.textContent?.trim() || anchor,
+        SourcePagePath: path(),
       });
     });
   });
 }
 
-// ── Event: Notebook Section Reached (scroll tracking) ────────────────────────
+// ── Event: notebookSectionReached (scroll) ────────────────────────────────────
 
 function attachNotebookSectionTracking() {
   if (!path().includes("/notebook")) return;
@@ -253,14 +245,14 @@ function attachNotebookSectionTracking() {
         const top = entry.target.getBoundingClientRect().top + window.scrollY;
         const scrollPct = Math.round((top / total) * 100);
 
-        track("Notebook Section Reached", {
-          section_id: id,
-          section_title: entry.target.textContent?.trim() || "",
-          scroll_percent: String(scrollPct),
-          time_on_page_seconds: String(
+        track("notebookSectionReached", {
+          SectionId: id,
+          SectionTitle: entry.target.textContent?.trim() || "",
+          ScrollPercent: String(scrollPct),
+          TimeOnPageSeconds: String(
             Math.round((Date.now() - startTime) / 1000),
           ),
-          source_page_path: path(),
+          SourcePagePath: path(),
         });
       });
     },
@@ -270,7 +262,7 @@ function attachNotebookSectionTracking() {
   sections.forEach((s) => observer.observe(s));
 }
 
-// ── Event: Resume Downloaded ───────────────────────────────────────────────────
+// ── Event: resumeDownloaded ────────────────────────────────────────────────────
 
 function attachResumeTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -281,12 +273,12 @@ function attachResumeTracking() {
       identify.setOnce("CV Downloaded", "true");
       amplitude.identify(identify);
 
-      track("Resume Downloaded", {
-        asset_path: href,
-        file_type: href.split(".").pop() || "pdf",
-        resume_version: "2025",
-        source_page_path: path(),
-        download_context: path().includes("/recruiters")
+      track("resumeDownloaded", {
+        AssetPath: href,
+        FileType: href.split(".").pop() || "pdf",
+        ResumeVersion: "2025",
+        SourcePagePath: path(),
+        DownloadContext: path().includes("/recruiters")
           ? "recruiters"
           : "general",
       });
@@ -295,12 +287,11 @@ function attachResumeTracking() {
   });
 }
 
-// ── Event: Contact Channel Selected / Email Compose Started ───────────────────
+// ── Events: contactChannelSelected / emailComposeStarted ──────────────────────
 
 function attachContactTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href") || "";
-    const text = link.textContent?.trim() || "";
     const cls = link.className || "";
 
     if (href.startsWith("mailto:")) {
@@ -310,18 +301,18 @@ function attachContactTracking() {
         identify.set("Primary Contact Channel", "email");
         amplitude.identify(identify);
 
-        track("Email Compose Started", {
-          source_page_path: path(),
-          email_context: path().includes("/recruiters")
+        track("emailComposeStarted", {
+          SourcePagePath: path(),
+          EmailContext: path().includes("/recruiters")
             ? "recruiter_outreach"
             : "general",
-          mailto_template_used: href.includes("?") ? "prefilled" : "plain",
+          MailtoTemplateUsed: href.includes("?") ? "prefilled" : "plain",
         });
-        track("Contact Channel Selected", {
-          contact_channel: "email",
-          source_page_path: path(),
-          source_section: cls.includes("primary") ? "primary" : "card",
-          destination_domain: "mail",
+        track("contactChannelSelected", {
+          ContactChannel: "email",
+          SourcePagePath: path(),
+          SourceSection: cls.includes("primary") ? "primary" : "card",
+          DestinationDomain: "mail",
         });
         recordEngagedAction("contact_email");
       });
@@ -335,16 +326,16 @@ function attachContactTracking() {
         identify.set("Primary Contact Channel", "linkedin");
         amplitude.identify(identify);
 
-        track("LinkedIn Profile Opened", {
-          source_page_path: path(),
-          source_section: cls.includes("primary") ? "primary" : "card",
-          destination_url: href,
+        track("linkedinProfileOpened", {
+          SourcePagePath: path(),
+          SourceSection: cls.includes("primary") ? "primary" : "card",
+          DestinationUrl: href,
         });
-        track("Contact Channel Selected", {
-          contact_channel: "linkedin",
-          source_page_path: path(),
-          source_section: cls.includes("primary") ? "primary" : "card",
-          destination_domain: "linkedin.com",
+        track("contactChannelSelected", {
+          ContactChannel: "linkedin",
+          SourcePagePath: path(),
+          SourceSection: cls.includes("primary") ? "primary" : "card",
+          DestinationDomain: "linkedin.com",
         });
         recordEngagedAction("contact_linkedin");
       });
@@ -353,23 +344,23 @@ function attachContactTracking() {
 
     if (/github\.com\/fredericlabadie\/?$/i.test(href)) {
       link.addEventListener("click", () => {
-        track("GitHub Profile Opened", {
-          source_page_path: path(),
-          source_section: cls.includes("card") ? "card" : "inline",
-          destination_url: href,
+        track("githubProfileOpened", {
+          SourcePagePath: path(),
+          SourceSection: cls.includes("card") ? "card" : "inline",
+          DestinationUrl: href,
         });
-        track("Contact Channel Selected", {
-          contact_channel: "github",
-          source_page_path: path(),
-          source_section: cls.includes("card") ? "card" : "inline",
-          destination_domain: "github.com",
+        track("contactChannelSelected", {
+          ContactChannel: "github",
+          SourcePagePath: path(),
+          SourceSection: cls.includes("card") ? "card" : "inline",
+          DestinationDomain: "github.com",
         });
       });
     }
   });
 }
 
-// ── Event: Project Source Opened ──────────────────────────────────────────────
+// ── Event: projectSourceOpened ────────────────────────────────────────────────
 
 function attachProjectSourceTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -379,17 +370,17 @@ function attachProjectSourceTracking() {
     link.addEventListener("click", () => {
       const parts = href.split("/");
       const repoName = parts[parts.length - 1] || parts[parts.length - 2] || "";
-      track("Project Source Opened", {
-        repository_name: repoName,
-        destination_url: href,
-        source_page_path: path(),
-        source_module: link.closest("[class]")?.className || "inline",
+      track("projectSourceOpened", {
+        RepositoryName: repoName,
+        DestinationUrl: href,
+        SourcePagePath: path(),
+        SourceModule: link.closest("[class]")?.className || "inline",
       });
     });
   });
 }
 
-// ── Event: External Resource Opened ───────────────────────────────────────────
+// ── Event: externalResourceOpened ────────────────────────────────────────────
 
 function attachExternalResourceTracking() {
   const SOCIAL = /linkedin\.com|github\.com|twitter\.com|x\.com|t\.co/i;
@@ -408,11 +399,11 @@ function attachExternalResourceTracking() {
     }
 
     link.addEventListener("click", () => {
-      track("External Resource Opened", {
-        resource_type: /resume|cv|pdf/i.test(href) ? "document" : "website",
-        destination_domain: domain,
-        destination_url: href,
-        source_page_path: path(),
+      track("externalResourceOpened", {
+        ResourceType: /resume|cv|pdf/i.test(href) ? "document" : "website",
+        DestinationDomain: domain,
+        DestinationUrl: href,
+        SourcePagePath: path(),
       });
     });
   });
