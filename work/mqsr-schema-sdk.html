@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A silent iOS data-loss bug, traced to the initialisation sequence &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="SDK-level debugging traced a silent iOS undercount to a Segment SDK 1.9.1 initialisation-gate bug. Cross-platform parity and GTM container governance surfaced alongside. Lens 02 · Instrumentation." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="SDK-level debugging traced a silent iOS Application Opened undercount to Segment analytics-swift 1.9.1 initialisation behavior, alongside cross-platform parity and GTM container governance findings." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -15,131 +15,174 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="A silent iOS data-loss bug &mdash; case study" />
-  <meta property="og:description" content="SDK-level debugging traced a silent iOS undercount to a Segment SDK initialisation-gate bug." />
+  <meta property="og:description" content="SDK-level debugging traced a silent iOS undercount to Segment SDK initialisation behavior." />
   <meta property="og:url" content="https://fredericlabadie.com/work/mqsr-schema-sdk.html" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="A silent iOS data-loss bug &mdash; case study" />
-  <meta name="twitter:description" content="SDK-level debugging traced a silent iOS undercount to a Segment SDK initialisation-gate bug." />
+  <meta name="twitter:description" content="SDK-level debugging traced a silent iOS undercount to Segment SDK initialisation behavior." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 02 &middot; Instrumentation &middot; SDK debugging</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 02 / Instrumentation &amp; SDK Debugging</p>
         <h1>A silent iOS data-loss bug, traced to the initialisation sequence.</h1>
-        <p class="hero-subtitle">An iOS undercount of <code>Application Opened</code> events vs. Android &mdash; root-caused to a Segment SDK 1.9.1 gate that silently drops events when <code>enabled = false</code>.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Major quick-service restaurant &middot; Segment &middot; analytics-swift 1.9.1</span>
-        </p>
+        <p class="bp-case-dek">A systematic iOS undercount of <code>Application Opened</code> events versus Android was root-caused to runtime SDK behaviour on cold launch, not to a dashboard or documentation mismatch.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Major quick-service restaurant brand / Segment CDP / mobile app telemetry</p></div>
+        <div class="bp-case-panel-row"><span>SDK version</span><strong>analytics-swift 1.9.1</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>SDK-level debugging, cross-platform parity review, GTM container governance, root-cause framing</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>iOS</strong><span>silent undercount found</span></article>
+      <article><strong>1.9.1</strong><span>Segment SDK version traced</span></article>
+      <article><strong>2</strong><span>international locales misrouted</span></article>
+      <article><strong>1</strong><span>initialisation gate identified</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>runtime parity beats documentation parity</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>Telemetry that undercounts silently is worse than telemetry that is missing.</h2>
+        <p>A missing event can be investigated. A silent undercount looks trustworthy while skewing every downstream funnel.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>A cross-platform count gap became an SDK initialisation finding.</h3>
+          <p>A major QSR had a systematic iOS undercount of <code>Application Opened</code> events versus Android. The bug was silent: no visible errors, no obvious dropped-event logs, only a stable undercount. I traced the issue to the app's initialisation sequence and Segment analytics-swift <strong>1.9.1</strong>: <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>, so cold-launch events fired before remote config re-enabled the SDK were dropped rather than queued.</p>
+          <p>The same engagement surfaced broader cross-platform tracking-plan parity gaps and a GTM container governance issue where two international locales were feeding the main analytics container.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Context</p>
+          <h3>The dashboards showed a gap. The instrumentation did not explain it.</h3>
+          <p>Mobile analytics showed a stable difference between iOS and Android <code>Application Opened</code> counts. Downstream funnel reading was being skewed, but there was no explicit error pointing to the source of the loss.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Risk</p>
+          <h3>The undercount looked like real user behaviour.</h3>
+          <p>Because the loss was silent, stakeholders could read the difference as platform behaviour rather than measurement failure. That made root-cause discipline essential: read the app startup sequence and the SDK source path actually running in production.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A major QSR's systematic <strong>iOS undercount of <code>Application Opened</code> events</strong> versus Android was root-caused to a Segment SDK 1.9.1 gate in the app's initialisation sequence (<code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>, silently dropping cold-launch events fired before remote config flipped the gate). Same engagement surfaced cross-platform tracking-plan parity gaps and a GTM misconfiguration where two international locales were feeding the main analytics container. Telemetry that undercounts is worse than telemetry that's missing &mdash; this is the SDK-level discipline behind catching it.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / diagnosis</span><span>startup order / SDK gate / parity / governance</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Diagnosis</p>
+        <h2>The bug lived between startup order and SDK behaviour.</h2>
+        <p>Cross-platform parity failures often only appear at runtime, on cold launch, in one operating system.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="SDK debugging sequence diagram">
+          <figcaption><span>fig. 01 / silent-loss path</span><span>cold launch to dropped event</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Startup</span><strong>Disabled gate</strong><p><code>rawSegment.enabled = false</code> at startup while remote config is unresolved.</p></div>
+            <div><span>Event</span><strong>Cold launch</strong><p><code>Application Opened</code> fires before remote config flips the SDK back on.</p></div>
+            <div><span>SDK</span><strong>Drop path</strong><p><code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>.</p></div>
           </div>
+        </figure>
 
-          <div class="case-argument">
-            Cross-platform parity failures almost always trace back to <strong>startup-order assumptions inside a vendor SDK</strong> &mdash; the kind of detail that only shows up at runtime, on cold launch, in one OS. The fix isn't reading the docs. It's reading the SDK source, version-pinned to what actually ships, until the silent drop becomes visible.
-          </div>
+        <div class="bp-case-gates" aria-label="SDK debugging components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Count gap</strong><p>Systematic iOS undercount of <code>Application Opened</code> versus Android surfaced in mobile analytics.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Startup trace</strong><p>Initialisation sequence showed <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>SDK source read</strong><p>Segment analytics-swift 1.9.1 returned immediately when disabled, dropping cold-launch events instead of queueing them.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Governance sweep</strong><p>Broader review surfaced tracking-plan parity gaps and two international locales feeding the main GTM analytics container.</p></article>
+        </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Context</div>
-              <div class="card-body">A major quick-service restaurant's mobile analytics showed a systematic gap between iOS and Android <code>Application Opened</code> counts. The bug was <strong>silent</strong>: no errors, no dropped-event logs &mdash; just a stable undercount. Downstream funnel reading was being skewed and nobody was sure why. The engagement also raised broader concerns about cross-platform tracking-plan parity and GTM container governance.</div>
-            </div>
-            <div class="card amber">
-              <div class="card-label">What I did</div>
-              <div class="card-body">SDK-level debugging. Traced the iOS undercount through the app's initialisation sequence: <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed. Identified that Segment SDK 1.9.1 <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code> &mdash; cold-launch events were dropped, not queued. Surfaced the same engagement's cross-platform parity gaps (web on legacy <code>dataLayer</code>/GA naming; apps on a unified Title Case Segment model) and the <strong>GTM misconfiguration</strong> where two international locales were feeding the main analytics container.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>The fix path required reading what actually shipped.</h3>
+          <p>I traced the undercount through runtime behaviour rather than treating it as a reporting discrepancy. That meant mapping the app's startup order, identifying when <code>Application Opened</code> fired, reading the version-pinned SDK source, and showing why those events were being dropped silently.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="tags">
-            <span class="tag">Segment CDP</span>
-            <span class="tag">analytics-swift 1.9.1</span>
-            <span class="tag">GTM container governance</span>
-            <span class="tag">Cross-platform parity</span>
-          </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>root cause / parity / governance</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The issue moved from mysterious platform difference to explainable data loss.</h2>
+        <p>That distinction matters because the next action changes: do not optimise the funnel until the funnel counts are trustworthy.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>The root cause became actionable.</h3>
+          <ul>
+            <li><strong>Silent iOS undercount</strong> traced to cold-launch event loss.</li>
+            <li><strong>Segment analytics-swift 1.9.1</strong> initialisation behavior identified as the drop path.</li>
+            <li><strong>Cross-platform tracking-plan parity gaps</strong> surfaced in the same engagement.</li>
+            <li><strong>Two international locales</strong> found feeding the main analytics GTM container.</li>
+          </ul>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>Parity is a runtime property.</h3>
+          <p>It is not enough for iOS and Android to share the same tracking plan on paper. If one SDK drops cold-launch events before remote config resolves, the platforms are not equivalent in production, no matter how clean the documentation looks.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">Segment CDP</span>
+          <span class="bp-case-tag">analytics-swift 1.9.1</span>
+          <span class="bp-case-tag">SDK debugging</span>
+          <span class="bp-case-tag">Cross-platform parity</span>
+          <span class="bp-case-tag">GTM container governance</span>
+          <span class="bp-case-tag">Mobile telemetry</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="mqsr-errors.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Clean taxonomy, trustworthy alerts, enriched context.</strong><span>Another QSR instrumentation case focused on alert reliability and error-event context.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
