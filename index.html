@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frederic Labadie &mdash; Analytics Architect, Amsterdam</title>
-  <meta name="description" content="Analytics architect in Amsterdam. I sit at the intersection of instrumentation and qualitative methodology — designing the tracking that surfaces what users can't or won't tell you directly, and the frameworks that help teams make decisions from it." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Analytics architect in Amsterdam. I build instrumentation, pipelines, and qualitative practice so product, marketing, and UX teams can stop guessing." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -15,35 +15,35 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Frederic Labadie &mdash; Analytics Architect" />
-  <meta property="og:description" content="The gap between what users say and what they do is where the work lives. Analytics architect in Amsterdam, working across instrumentation and Sense-Making Methodology." />
+  <meta property="og:description" content="Senior analytics architect in Amsterdam. Instrumentation, pipelines, and qualitative practice for product, marketing, and UX teams." />
   <meta property="og:url" content="https://fredericlabadie.com" />
   <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Frederic Labadie &mdash; Analytics Architect" />
-  <meta name="twitter:description" content="The gap between what users say and what they do is where the work lives." />
+  <meta name="twitter:description" content="Instrumentation, pipelines, and qualitative practice for teams that need to stop guessing." />
   <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="blueprint-home">
   <a class="skip-link" href="#selected-work">Skip to selected work</a>
 
-  <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav bp-nav">
     <div class="nav-inner">
       <a href="/" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
+        <span class="bp-status-dot" aria-hidden="true"></span>
+        Frederic Labadie<span class="nav-brand-role">Analytics Architect</span>
       </a>
       <ul class="nav-links" id="primary-nav">
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="work/">Work</a></li>
-        <li><a href="notebook/">Current Meditations</a></li>
-        <li><a href="about/">About</a></li>
-        <li><a href="recruiters/">Recruiters</a></li>
-        <li><a href="contact/">Contact</a></li>
+        <li><a href="/" aria-current="page">// Home</a></li>
+        <li><a href="work/">/ Work</a></li>
+        <li><a href="notebook/">/ Current Meditations</a></li>
+        <li><a href="about/">/ About</a></li>
+        <li><a href="recruiters/">/ Recruiters</a></li>
+        <li><a href="contact/">/ Contact</a></li>
       </ul>
       <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -52,374 +52,308 @@
   </nav>
 
   <main id="top">
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="container">
-        <p class="eyebrow">Amsterdam &middot; Open to next role</p>
-        <p class="hero-currently"><span class="hero-currently-label">Now building</span> Hospital Readmissions dbt (target 30 May 2026) &middot; <span class="hero-currently-label">last shipped</span> AI Alert Triage V1 (Apr 2026)</p>
-        <h1>The gap between what users <em class="say">say</em> and what they <em class="do">do</em> is where the work lives.</h1>
-        <p class="hero-body">
-          Analytics architect in Amsterdam. I work across <strong>instrumentation</strong> and <strong>qualitative methodology</strong> &mdash; the two sides most practitioners pick one of.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#selected-work" class="btn btn-primary">See selected work</a>
-          <a href="work/" class="btn btn-secondary">Full case library &rarr;</a>
-          <a href="assets/resume/frederic-labadie-cv.pdf" class="btn btn-secondary" download>&darr; CV (PDF)</a>
-        </div>
-
-        <p class="hero-audiences"><span class="hero-audiences-label">For recruiters</span> 60-second triage version at <a href="recruiters/">/recruiters/</a> &mdash; snapshot, role types, eight cases in expandable accordions.</p>
-
-        <div class="diff-grid">
-          <div class="diff-side">
-            <div class="diff-label">Instrumentation</div>
-            <div class="diff-title">GTM &middot; Event schema &middot; GA4 &middot; Amplitude &middot; Adobe &middot; BigQuery &middot; dbt</div>
-            <div class="diff-body">14 years designing and deploying measurement infrastructure from scratch &mdash; tracking plans, data layer specs, server-side pipelines, and the analytics architecture that makes data trustworthy before anyone analyses it.</div>
+    <section class="bp-hero" id="hero">
+      <div class="bp-hero-grid">
+        <div class="bp-hero-copy">
+          <div class="bp-line-label">
+            <span>// position</span>
+            <span>Frederic Labadie / Amsterdam</span>
           </div>
-          <div class="diff-side">
-            <div class="diff-label">Methodology</div>
-            <div class="diff-title">Sense-Making (Dervin) &middot; Observational research &middot; Neutral questioning</div>
-            <div class="diff-body">Applied qualitative methodology used in practice across healthcare, retail, content, and consumer contexts &mdash; designed to surface what quantitative data cannot: the cognitive gap between what the system does and what the user actually needs.</div>
+          <h1>Where users <em>say</em> meets what they actually do, that is the measurement problem.</h1>
+          <p class="bp-hero-dek">
+            Senior analytics architect, 14 years in. I build the tracking, pipelines, and research practice that make product, marketing, and UX teams stop guessing.
+          </p>
+          <div class="bp-tags" aria-label="Professional signals">
+            <span>14 yrs analytics</span>
+            <span>Telus Digital</span>
+            <span>11 Amplitude certs</span>
+            <span>MSc Data Analytics</span>
+            <span>HIPAA-exposed</span>
+            <span>EU work auth</span>
+          </div>
+          <div class="bp-actions">
+            <a class="bp-btn bp-btn-primary" href="work/">Open the case library</a>
+            <a class="bp-btn bp-btn-secondary" href="assets/resume/frederic-labadie-cv.pdf" download>Download CV</a>
           </div>
         </div>
+
+        <aside class="bp-now-panel" aria-label="Current portfolio status">
+          <div class="bp-now-head">
+            <span>Current status</span>
+            <span>Updated 23 May 2026</span>
+          </div>
+          <div class="bp-now-item">
+            <p class="bp-kicker">In flight</p>
+            <h2>Hospital Readmissions dbt</h2>
+            <p>Three-layer Snowflake project on CMS Hospital Readmissions Reduction Program data.</p>
+            <span>Target: 30 May 2026</span>
+          </div>
+          <div class="bp-now-item">
+            <p class="bp-kicker">Last shipped</p>
+            <h2>AI Alert Triage V1</h2>
+            <p>Production workflow for a major quick-service restaurant brand; 13-26 April 2026 run.</p>
+            <span>230 alerts to 39 posts</span>
+          </div>
+          <div class="bp-now-item">
+            <p class="bp-kicker">On bench</p>
+            <p>Self-instrumented portfolio meta-case, MMM write-up, and failure-case essay.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="bp-receipts" aria-label="Selected proof points">
+        <article class="bp-receipt">
+          <p>alert noise</p>
+          <strong>83%</strong>
+          <span>V1 production: 230 alerts to 39 posts across 13-26 April 2026.</span>
+        </article>
+        <article class="bp-receipt">
+          <p>analyst hours</p>
+          <strong>38h</strong>
+          <span>Recovered per month in a state-regulated retail platform handoff.</span>
+        </article>
+        <article class="bp-receipt">
+          <p>BQ pipeline cost</p>
+          <strong>~50%</strong>
+          <span>Reduction from repeated-scan collapse in a BigQuery pipeline redesign.</span>
+        </article>
+        <article class="bp-receipt">
+          <p>Amplitude certs</p>
+          <strong>11</strong>
+          <span>Including both Expert credentials: Analysis and Data Management.</span>
+        </article>
       </div>
     </section>
 
-    <!-- SELECTED WORK -->
-    <section id="selected-work">
-      <div class="section-head">
-        <div class="num">01</div>
-        <div class="label">Selected work</div>
-        <div class="title">Three pieces &middot; one per principle</div>
+    <section class="bp-section" id="selected-work">
+      <div class="bp-section-strip">
+        <span>Section 01 / selected work</span>
+        <span>three engagements / three different problem shapes / fifteen more on work</span>
       </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Selected work</p>
-          <h2 class="section-heading">Three pieces, one from each side of the philosophy.</h2>
-          <p class="section-sub">A question-first discovery that became a product capability. An adoption-first engagement that survived the team that built it. An AI workflow designed to preserve the human judgement step, not replace it. The <a href="work/">full case library</a> has fifteen more across seven lenses.</p>
 
-          <a class="callout callout-link" href="work/ux-research-home-services.html">
-            <div class="callout-label">Featured methodology piece &middot; standalone case study</div>
-            <div class="callout-body">
-              <strong>Mixed-Methods UX Research &mdash; quantitative telemetry paired with SMM-informed qualitative research at a national home services franchise.</strong> A method for diagnosing <em>gap type</em>, not just gap location &mdash; the case study behind the talk "Finding the Hypothesis When You Only Know the Question". <span class="callout-cta">Read the case &rarr;</span>
-            </div>
-          </a>
+      <article class="bp-case-row">
+        <div class="bp-case-copy">
+          <p class="bp-kicker">Case / Question formulation</p>
+          <p class="bp-case-meta">Consumer electronics retailer / 2023-2025 / under NDA</p>
+          <h2>A workaround broke. The data confessed.</h2>
+          <p>
+            I was building a lifecycle segmentation model when an anomaly caught my eye: a cohort returning shortly after purchase to buy specific components. A Sense-Making conversation with floor staff surfaced the cause: a shadow IT compatibility tool had quietly stopped working.
+          </p>
+          <blockquote>
+            Most interesting findings in analytics arrive while you are doing something else. The role of instrumentation is to make the gap visible enough that the question becomes worth asking.
+          </blockquote>
+          <p>
+            The client subsequently shipped a compatibility configurator. It is now central to the business, with a second iteration underway.
+          </p>
+          <a href="work/shadow-it.html">Read the case</a>
         </div>
 
-        <!-- MARQUEE 01: Shadow IT -->
-        <div class="container" id="cs-shadow-it">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 01 &middot; Question formulation</span>
-              <span class="case-card-context">Consumer electronics retailer &middot; 2023&ndash;2025</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/shadow-it.html">A workaround broke. The transaction data confessed.</a></h4>
-            <p class="case-card-body">An anomaly inside an unrelated lifecycle build led to a Sense-Making conversation with floor staff, surfacing a broken shadow IT tool the designed system never supported. The client built and shipped a full <strong>compatibility-checking configurator</strong> &mdash; now central to the business, with a second iteration underway.</p>
-            <p class="case-card-body"><a href="work/shadow-it.html">Read the full case &rarr;</a></p>
-          </article>
+        <figure class="bp-figure bp-flow-figure" aria-label="Discovery chain diagram">
+          <figcaption>
+            <span>fig. 01 / how the question surfaced</span>
+            <span>discovery chain / not a chart</span>
+          </figcaption>
+          <ol class="bp-flow">
+            <li><span>Building</span><strong>Lifecycle segmentation model</strong></li>
+            <li><span>Noticed</span><strong>Small returning-cohort pattern</strong></li>
+            <li><span>Conversation</span><strong>Shop-floor staff / SMM neutral protocol</strong></li>
+            <li><span>Root cause found</span><strong>Shadow IT compatibility tool, broken</strong></li>
+            <li><span>Client shipped</span><strong>Compatibility configurator</strong></li>
+          </ol>
+          <p>The chart you usually want here does not exist: the engagement is under NDA and the transaction series is confidential. Shown instead: the actual sequence of beats. The proof is the product that shipped.</p>
+        </figure>
+      </article>
+
+      <article class="bp-case-row">
+        <div class="bp-case-copy">
+          <p class="bp-kicker">Case / Adoption</p>
+          <p class="bp-case-meta">State-regulated retail platform / 2025-2026</p>
+          <h2>The system outlived the team that built it.</h2>
+          <p>
+            Greenfield UX telemetry across web, app, and CRM, plus a three-session structured handoff so the client could maintain and extend it independently. They did, through a full team turnover. The new analysts onboarded with zero data-infrastructure ramp.
+          </p>
+          <blockquote>
+            The 38 hours recovered per month is not the point. The point is what those hours got redirected to, and that the redirection survived the people who started it.
+          </blockquote>
+          <a href="work/sslp-enablement.html">Read the case</a>
         </div>
 
-        <!-- MARQUEE 02: SSLP Client Enablement -->
-        <div class="container" id="cs-enablement">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 02 &middot; Adoption</span>
-              <span class="case-card-context">State-regulated retail platform &middot; 2025&ndash;2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/sslp-enablement.html">The system survived the people who built it.</a></h4>
-            <p class="case-card-body">Greenfield UX telemetry across web, app, and CRM, with a three-session structured handoff designed so the client team could maintain and extend it independently. <strong>38 analyst hours recovered per month; zero ramp-up time when the team turned over.</strong></p>
-            <p class="case-card-body"><a href="work/sslp-enablement.html">Read the full case &rarr;</a></p>
-          </article>
-        </div>
-
-        <!-- MARQUEE 03: AI Alert Triage -->
-        <div class="container" id="cs-ai-triage">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case 03 &middot; AI workflow design</span>
-              <span class="case-card-context">Major quick-service restaurant brand &middot; production</span>
-            </div>
-            <h4 class="case-card-title"><a href="work/ai-alert-triage.html">Designing AI workflows that don't outsource the thinking.</a></h4>
-            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran on real on-call volume (13&ndash;26 April 2026): <strong>230 alerts &rarr; 39 posts, 83% reduction</strong>, surfacing one critical feature failure human-only review had missed. V2 build in progress.</p>
-            <p class="case-card-body"><a href="work/ai-alert-triage.html">Read the full case &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PUBLIC PROJECTS preview -->
-    <section id="projects-preview" class="alt">
-      <div class="section-head">
-        <div class="num">02</div>
-        <div class="label">Public projects</div>
-        <div class="title">Independent builds &middot; live, open source</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Public projects</p>
-          <h2 class="section-heading">What I build when no one's briefed me.</h2>
-          <p class="section-sub">Three live independent projects. The code is open, the deployment is mine, and the argument lives in the project itself. Full write-ups on the <a href="work/#projects">work page</a>.</p>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Quarto &middot; Hugging Face &middot; Vercel</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>Dervin's SMM &mdash; a Sense-Making study guide</h3>
-              <p>A practitioner's guide to Brenda Dervin's Sense-Making Methodology, paired with a live Hugging Face&ndash;routed question rewriter you can run on your own survey copy.</p>
-              <p class="project-signal"><span class="project-signal-label">Professional signal</span><span class="project-signal-body">Same neutral-questioning protocol I ran with floor staff at Stanley Steemer &mdash; productionised as a working tool, not just a write-up.</span></p>
-              <div class="project-links">
-                <a href="https://smm.fredericlabadie.com" target="_blank" rel="noopener">Live site &rarr;</a>
-                <a href="https://github.com/fredericlabadie/DervinsSMM_Course" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Next.js &middot; claude-sonnet-4-5 &middot; Supabase + pgvector</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>Writers Room &mdash; multi-agent collaborative workspace</h3>
-              <p>Four room types, five specialist agents per room, parallel and sequential agent chains, vector RAG over uploaded documents. Where I work through what AI-assisted workflow design looks like when the human stays as director.</p>
-              <p class="project-signal"><span class="project-signal-label">Professional signal</span><span class="project-signal-body">The orchestration pattern behind the AI alert triage at Telus &mdash; structured agent handoffs, humans-in-the-loop, audit trail by construction.</span></p>
-              <div class="project-links">
-                <a href="https://writersroom.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
-                <a href="https://github.com/fredericlabadie/Writers-room" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card-head">
-                <span class="project-stack">Next.js &middot; Claude (Sonnet + Haiku) &middot; Spotify API</span>
-                <span class="project-status live">Live</span>
-              </div>
-              <h3>VibeReader &mdash; book &harr; song</h3>
-              <p>Book &rarr; curated tracklist; song &rarr; matching novels. Claude reasons about mood and thematic resonance rather than genre tags &mdash; as much a model-selection exercise as a product.</p>
-              <p class="project-signal"><span class="project-signal-label">Professional signal</span><span class="project-signal-body">Model-routing practice that informed the alert-classification work &mdash; when to spend Sonnet, when Haiku is enough.</span></p>
-              <div class="project-links">
-                <a href="https://vibereader.fredericlabadie.com" target="_blank" rel="noopener">Live app &rarr;</a>
-                <a href="https://github.com/fredericlabadie/VibeReader" target="_blank" rel="noopener">Source</a>
-              </div>
-            </article>
+        <figure class="bp-figure bp-query-figure" aria-label="SQL result panel showing adoption handoff outcomes">
+          <figcaption>
+            <span>query / adoption_handoff_v3.sql</span>
+            <span>success / 142 ms</span>
+          </figcaption>
+          <pre><code>SELECT hours_recovered, sessions, ramp_up_days
+FROM   engagement.adoption_handoff
+WHERE  client = 'sslp_retail'</code></pre>
+          <div class="bp-result-grid">
+            <div><span>hours_recovered</span><strong>38 / mo</strong></div>
+            <div><span>sessions</span><strong>3</strong></div>
+            <div><span>ramp_up_days</span><strong>0</strong></div>
           </div>
+        </figure>
+      </article>
 
-          <aside class="gh-activity" aria-label="GitHub contribution graph">
-            <div class="gh-activity-head">
-              <span class="gh-activity-label">Recent activity</span>
-              <span class="gh-activity-meta">Public commits, last 12 months &middot; <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">github.com/fredericlabadie &rarr;</a></span>
-            </div>
-            <div class="gh-activity-graph">
-              <img src="https://ghchart.rshah.org/2c3e50/fredericlabadie"
-                   alt="GitHub contribution graph for fredericlabadie — public commits over the last twelve months"
-                   loading="lazy"
-                   width="700" height="110" />
-            </div>
-          </aside>
+      <article class="bp-case-row">
+        <div class="bp-case-copy">
+          <p class="bp-kicker">Case / Methodology / UX research</p>
+          <p class="bp-case-meta">National home services franchise / Stanley Steemer / 2021-2022</p>
+          <h2>Telemetry locates. Method diagnoses.</h2>
+          <p>
+            Quantitative GA4 telemetry paired with a UserZoom protocol built on Dervin's neutral-questioning. The funnel knew where users dropped off. It could not say what kind of gap they were experiencing.
+          </p>
+          <blockquote>
+            A winning A/B variant was winning despite a vocabulary problem, not because of clean messaging. Optimising on the quant signal alone would have entrenched the wrong message.
+          </blockquote>
+          <p>
+            This is the case behind the talk "Finding the Hypothesis When You Only Know the Question," and the methodology piece the Sense-Making references point back to.
+          </p>
+          <a href="work/ux-research-home-services.html">Read the case</a>
         </div>
+
+        <figure class="bp-figure bp-method-figure" aria-label="Mixed-methods protocol diagram">
+          <figcaption>
+            <span>fig. 03 / mixed-methods protocol</span>
+            <span>three findings / three gap types</span>
+          </figcaption>
+          <div class="bp-streams">
+            <div><span>Quant</span><strong>GA4 / A/B / funnel</strong><small>locates where</small></div>
+            <div><span>Qual</span><strong>SMM / UserZoom</strong><small>diagnoses what</small></div>
+            <div><span>Diagnosis</span><strong>Gap-type diagnosis</strong><small>design responds</small></div>
+          </div>
+          <div class="bp-finding-grid">
+            <div><span>F1 / Problematic gap</span><p>Cleaning categorised as treat, not maintenance: gap is pre-funnel.</p></div>
+            <div><span>F2 / Confusion gap</span><p>Promo Code was not the same thing as Online Specials.</p></div>
+            <div><span>F3 / Pre-arrival</span><p>The funnel begins upstream of the homepage.</p></div>
+          </div>
+        </figure>
+      </article>
+    </section>
+
+    <section class="bp-section bp-inset" id="projects-preview">
+      <div class="bp-section-strip">
+        <span>Section 02 / public projects</span>
+        <span>live builds / open source / no brief</span>
+      </div>
+      <div class="bp-narrow">
+        <p class="bp-kicker">Public projects</p>
+        <h2>What I build when no one has briefed me.</h2>
+        <p>Three live independent projects. The code is open, the deployment is mine, and the argument lives in the project itself.</p>
+      </div>
+      <div class="bp-project-grid">
+        <article>
+          <p>Quarto / Hugging Face / Vercel</p>
+          <h3>Dervin's SMM</h3>
+          <p>A practitioner's guide to Brenda Dervin's Sense-Making Methodology, paired with a live question rewriter for survey copy.</p>
+          <a href="https://smm.fredericlabadie.com" target="_blank" rel="noopener">Live site</a>
+          <a href="https://github.com/fredericlabadie/DervinsSMM_Course" target="_blank" rel="noopener">Source</a>
+        </article>
+        <article>
+          <p>Next.js / Claude / Supabase + pgvector</p>
+          <h3>Writers Room</h3>
+          <p>Multi-agent collaborative workspace with specialist agents, chained calls, document RAG, and read-only review links.</p>
+          <a href="https://writersroom.fredericlabadie.com" target="_blank" rel="noopener">Live app</a>
+          <a href="https://github.com/fredericlabadie/Writers-room" target="_blank" rel="noopener">Source</a>
+        </article>
+        <article>
+          <p>Next.js / Claude / Spotify API</p>
+          <h3>VibeReader</h3>
+          <p>Book-to-song and song-to-book recommendations based on mood, texture, and thematic resonance rather than genre tags.</p>
+          <a href="https://vibereader.fredericlabadie.com" target="_blank" rel="noopener">Live app</a>
+          <a href="https://github.com/fredericlabadie/VibeReader" target="_blank" rel="noopener">Source</a>
+        </article>
       </div>
     </section>
 
-    <!-- APPROACH -->
-    <section id="approach">
-      <div class="section-head">
-        <div class="num">03</div>
-        <div class="label">Approach</div>
-        <div class="title">Three principles · the working position</div>
+    <section class="bp-section" id="approach">
+      <div class="bp-section-strip">
+        <span>Section 03 / approach</span>
+        <span>the working position</span>
       </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Approach</p>
-          <h2 class="section-heading">Behaviour is the most honest data source available.</h2>
-          <p class="section-sub">Not what people say, not what they intend &mdash; what they actually do, and the gap between the two.</p>
-
-          <blockquote class="approach-quote">
+      <div class="bp-approach">
+        <figure class="bp-portrait">
+          <img src="assets/photo/frederic-portrait.jpg"
+               srcset="assets/photo/frederic-portrait.jpg 1x, assets/photo/frederic-portrait@2x.jpg 2x"
+               width="480" height="640"
+               alt="Frederic Labadie, analytics architect in Amsterdam"
+               loading="lazy" />
+          <figcaption>Amsterdam / 2026</figcaption>
+        </figure>
+        <div>
+          <p class="bp-kicker">Approach</p>
+          <h2>Behaviour is the most honest data source available.</h2>
+          <blockquote>
             People make their problems visible through their actions. The doctor who builds a workaround. The leadership team that keeps requesting the same report in five different formats because the underlying question has never been answered.
           </blockquote>
-
-          <div class="principles">
-            <article class="principle">
-              <div class="principle-num">Principle 01</div>
-              <h3 class="principle-title">Start with the question, not the tool.</h3>
-              <p class="principle-body">Before any implementation I run a structured discovery: what is the data not doing for you, what decisions are you trying to make, what do you think is stopping you. Most analysts start with the data they have. I start with the question the data should answer.</p>
+          <div class="bp-principles">
+            <article>
+              <p>Principle 01</p>
+              <h3>Start with the question.</h3>
+              <span>Before implementation: what decision are you trying to make, and what is the data not doing for you?</span>
             </article>
-            <article class="principle">
-              <div class="principle-num">Principle 02</div>
-              <h3 class="principle-title">Build for adoption, not delivery.</h3>
-              <p class="principle-body">A Loom training library, an A/B result that converts leadership, a pipeline that retires eight hours of manual work. The job isn't done when the implementation is live. It's done when the people around it can use it independently.</p>
+            <article>
+              <p>Principle 02</p>
+              <h3>Build for adoption.</h3>
+              <span>The job is done when the people around the system can use it independently.</span>
             </article>
-            <article class="principle">
-              <div class="principle-num">Principle 03</div>
-              <h3 class="principle-title">Work across the boundary.</h3>
-              <p class="principle-body">Instrumentation is a technical discipline. User research is a qualitative one. Most people are strong on one side. Sense-Making Methodology training plus the full Amplitude credential stack is the combination that lets a measurement layer surface the human question underneath the number.</p>
+            <article>
+              <p>Principle 03</p>
+              <h3>Work across the boundary.</h3>
+              <span>Instrumentation and qualitative method belong together when the measurement layer needs to surface human questions.</span>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STACK AT A GLANCE -->
-    <section id="stack" class="alt">
-      <div class="section-head">
-        <div class="num">04</div>
-        <div class="label">Stack</div>
-        <div class="title">A scanning shortcut &middot; everything below is in active use</div>
+    <section class="bp-section bp-inset" id="stack">
+      <div class="bp-section-strip">
+        <span>Section 04 / stack</span>
+        <span>a scanning shortcut</span>
       </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Stack</p>
-          <h2 class="section-heading">What I work with, day to day.</h2>
-          <p class="section-sub">A scanning shortcut. Everything below is in active use across the engagements on the work page.</p>
+      <div class="bp-narrow">
+        <p class="bp-kicker">Stack</p>
+        <h2>What I work with, day to day.</h2>
+      </div>
+      <div class="bp-stack">
+        <div><span>Analytics</span><p>GA4 / Adobe Analytics / Amplitude / Segment CDP / Mixpanel evaluation</p></div>
+        <div><span>Data</span><p>BigQuery / Snowflake / Databricks / dbt / Dataform / SQL / Python</p></div>
+        <div><span>AI and method</span><p>Claude / Hugging Face / Vertex AI prompt design / pgvector / Sense-Making / A/B testing</p></div>
+      </div>
+      <p class="bp-stack-link"><a href="about/#skills">Full skills and certifications breakdown</a></p>
+    </section>
 
-          <div class="stack-strip">
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">Analytics</span>
-              <span class="stack-strip-items">GA4 &middot; Adobe Analytics &middot; Amplitude &middot; Segment CDP &middot; Mixpanel (vendor evaluation)</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">Tag &amp; Privacy</span>
-              <span class="stack-strip-items">GTM (client + server) &middot; Adobe Launch / AEP Tags &middot; TrustArc &middot; OneTrust &middot; HIPAA-exposed</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">Data &amp; Pipeline</span>
-              <span class="stack-strip-items">BigQuery &middot; Snowflake &middot; Databricks &middot; <strong>dbt</strong> &middot; Dataform &middot; SQL (advanced) &middot; Python (pandas, numpy, requests)</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">BI &amp; Storytelling</span>
-              <span class="stack-strip-items">Looker Studio &middot; Tableau &middot; Power BI &middot; SSRS &middot; Confluence knowledge bases</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">CRM &amp; Lifecycle</span>
-              <span class="stack-strip-items">Bloomreach Engagement (CDP) &middot; Braze (REST API + SDK) &middot; Oracle Responsys</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">AI / LLM</span>
-              <span class="stack-strip-items">Anthropic Claude (Sonnet + Haiku tiers) &middot; Hugging Face Inference Providers &middot; Vertex AI (Prompt Design) &middot; pgvector</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">Methods</span>
-              <span class="stack-strip-items">A/B testing &amp; experimentation &middot; multi-touch attribution &middot; cohort &amp; retention modelling &middot; funnel analysis &middot; <strong>Sense-Making (Dervin)</strong> &middot; usability heuristics (Nielsen, ISO 9241-110)</span>
-            </div>
-            <div class="stack-strip-row">
-              <span class="stack-strip-label">Credentials</span>
-              <span class="stack-strip-items"><strong>11 Amplitude certs</strong> incl. both Expert credentials (Analysis + Data Management) &middot; dbt Fundamentals &middot; Databricks Fundamentals &middot; Adobe Analytics Business Practitioner &middot; MSc Data Analytics</span>
-            </div>
-          </div>
-
-          <p class="stack-cta">Full breakdown on the <a href="about/#skills">about page</a> (skills, certifications, methodology). CV: <a href="assets/resume/frederic-labadie-cv.pdf" download>download PDF &darr;</a>.</p>
+    <section class="bp-section" id="contact">
+      <div class="bp-section-strip">
+        <span>Section 05 / contact</span>
+        <span>open to senior roles / Amsterdam</span>
+      </div>
+      <div class="bp-contact">
+        <div>
+          <p class="bp-kicker">Contact</p>
+          <h2>Open to senior IC roles in Amsterdam.</h2>
+          <p>Best fit: analytics architecture, product telemetry, analytics engineering, and UX telemetry roles where the measurement layer is treated as a research instrument. Currently full-time at Telus Digital; standard notice applies.</p>
+        </div>
+        <div class="bp-contact-links">
+          <a href="contact/"><span>Email</span><strong>frederic.labadie@gmail.com</strong></a>
+          <a href="assets/resume/frederic-labadie-cv.pdf" download><span>CV</span><strong>Download PDF</strong></a>
+          <a href="https://linkedin.com/in/frederic-labadie" target="_blank" rel="noopener"><span>LinkedIn</span><strong>/in/frederic-labadie</strong></a>
+          <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener"><span>GitHub</span><strong>/fredericlabadie</strong></a>
         </div>
       </div>
     </section>
-
-    <!-- ABOUT preview -->
-    <section id="about">
-      <div class="section-head">
-        <div class="num">05</div>
-        <div class="label">About</div>
-        <div class="title">Analyst, architect &middot; Amsterdam</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">About</p>
-          <h2 class="section-heading">Analyst, architect, and the person you call when the data won't behave.</h2>
-
-          <div class="about-portrait-grid">
-            <figure class="portrait">
-              <img src="assets/photo/frederic-portrait.jpg"
-                   srcset="assets/photo/frederic-portrait.jpg 1x, assets/photo/frederic-portrait@2x.jpg 2x"
-                   width="480" height="640"
-                   alt="Frederic Labadie — analytics architect, Amsterdam"
-                   loading="lazy" />
-            </figure>
-            <div class="about-portrait-body">
-              <p>Fourteen years building the analytics layer that lets organisations stop guessing &mdash; data models, tracking instrumentation, KPI frameworks, dashboards, and the experimentation culture that makes any of it useful. Most recently as <strong>Analytics Architect at Telus Digital</strong>; before that, five years at <strong>Stanley Steemer</strong> building marketing analytics from scratch across 280 franchise locations.</p>
-              <p>I've worked under <strong>HIPAA on protected data</strong>, alongside enterprise consent regimes (OneTrust, TrustArc). My usability research practice is built on Sense-Making Methodology paired with the standard practitioner toolkit &mdash; the qualitative side of the work, not an afterthought to the quantitative side.</p>
-              <p>Based in Amsterdam. EU work authorisation. Currently full-time at Telus Digital; standard notice applies. The longer version &mdash; bio, skills, credentials, endorsements &mdash; lives on the <a href="about/">about page &rarr;</a>.</p>
-            </div>
-          </div>
-
-          <div class="callout">
-            <div class="callout-label">Role calibration &middot; strongest fit, growth edges</div>
-            <div class="callout-body">
-              <dl class="calibration-dl">
-                <dt>Strongest fit</dt>
-                <dd>Senior IC analytics architecture, product telemetry, analytics engineering, and research-informed measurement design &mdash; roles where instrumentation, qualitative methodology, and stakeholder enablement all sit inside the same person's remit. Strongest matches: Analytics Architect, Senior Product Analyst, Analytics Engineer, UX Telemetry Lead.</dd>
-                <dt>Growth edges</dt>
-                <dd>People management at larger scale (real but scoped experience to date &mdash; two designers and informal mentoring of junior analysts), production-ML ownership (foundations from the MSc are there; no model-deployed work to point to yet), and Dutch fluency above conversational (currently A2).</dd>
-              </dl>
-            </div>
-          </div>
-
-          <div class="deeper">
-            <a class="deeper-card" href="work/">
-              <span class="deeper-label">Deep dive</span>
-              <span class="deeper-title">Work &mdash; the full case library.</span>
-              <span class="deeper-body">Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering. Plus the public project work.</span>
-              <span class="deeper-cta">See all work &rarr;</span>
-            </a>
-            <a class="deeper-card" href="about/">
-              <span class="deeper-label">More on me</span>
-              <span class="deeper-title">About &mdash; bio, methodology, skills, certifications.</span>
-              <span class="deeper-body">Telus Digital, Stanley Steemer, HIPAA exposure, Sense-Making Methodology, the full Amplitude credential stack, MSc Data Analytics, and what people I've worked with say.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="alt">
-      <div class="section-head">
-        <div class="num">06</div>
-        <div class="label">Contact</div>
-        <div class="title">Open to senior roles &middot; Amsterdam</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Contact</p>
-          <h2 class="section-heading">If you want a measurement layer that surfaces the question, not just the number, let's talk.</h2>
-
-          <div class="contact-grid">
-            <p class="contact-body">
-              Open to senior analytics architect, product analytics, analytics engineering, and UX-telemetry roles in Amsterdam &mdash; ideally where the measurement layer is treated as a research instrument, not a reporting one. Currently full-time at Telus Digital; standard notice applies.
-            </p>
-            <div class="contact-list">
-              <a href="contact/">
-                <span class="label">Get in touch</span>
-                <span>Email, LinkedIn, GitHub &rarr;</span>
-              </a>
-              <a href="assets/resume/frederic-labadie-cv.pdf" download>
-                <span class="label">CV / Resume</span>
-                <span>Download PDF &darr;</span>
-              </a>
-              <a href="https://linkedin.com/in/frederic-labadie" target="_blank" rel="noopener">
-                <span class="label">LinkedIn</span>
-                <span>/in/frederic-labadie</span>
-              </a>
-              <a href="https://github.com/fredericlabadie" target="_blank" rel="noopener">
-                <span class="label">GitHub</span>
-                <span>/fredericlabadie</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer class="footer">
+  <footer class="footer bp-footer">
     <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Site updated 20 May 2026</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages &middot; Set in IBM Plex</span>
+      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+      <span>Built in plain HTML / GitHub Pages / noindex by design</span>
+      <span>EU work authorisation</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
