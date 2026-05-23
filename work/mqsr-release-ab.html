@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The measurement plan written before the code &mdash; case study &mdash; Frederic Labadie</title>
-  <meta name="description" content="Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign — turning a planned straight-cutover into a controlled experiment. Lens 03 · Experimentation." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Release measurement and A/B test framework for a major mobile-nav redesign: event tagging, tracking plan, guardrails, confounding-risk rationale, and client-owned rollout decision." />
+  <meta name="theme-color" content="#eef2f5" />
   <meta name="robots" content="noindex, nofollow" />
 
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -25,134 +25,165 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/case-blueprint.css" />
 </head>
-<body>
+<body class="bp-case-body">
   <a class="skip-link" href="#case">Skip to case</a>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Analytics Architect</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="../">Home</a></li>
-        <li><a href="../work/" aria-current="page">Work</a></li>
-        <li><a href="../notebook/">Current Meditations</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="../recruiters/">Recruiters</a></li>
-        <li><a href="../contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <nav class="bp-case-nav" aria-label="Primary">
+    <a class="bp-case-nav-brand" href="../">
+      <span class="bp-case-dot" aria-hidden="true"></span>
+      <span>fredericlabadie.com</span>
+      <span class="bp-case-nav-muted">/ case study</span>
+    </a>
+    <ul class="bp-case-nav-links" id="primary-nav">
+      <li><a href="../">/ home</a></li>
+      <li><a href="../work/" aria-current="page">// work</a></li>
+      <li><a href="../thoughts/">/ Current Meditations</a></li>
+      <li><a href="../about/">/ about</a></li>
+      <li><a href="../recruiters/">/ recruiters</a></li>
+      <li><a href="../contact/">/ contact</a></li>
+    </ul>
   </nav>
 
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; Lens 03 &middot; Experimentation</p>
+  <main class="bp-case-shell" id="top">
+    <header class="bp-case-hero">
+      <div>
+        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 03 / Experimentation</p>
         <h1>The measurement plan written before the code.</h1>
-        <p class="hero-subtitle">Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign &mdash; turning a planned straight-cutover into a controlled experiment.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Major quick-service restaurant &middot; analytics architect &middot; navigation redesign</span>
-        </p>
+        <p class="bp-case-dek">A planned straight-cutover mobile navigation redesign became a controlled release with event tagging, guardrails, and an A/B rationale written before development began.</p>
+      </div>
+      <aside class="bp-case-hero-panel" aria-label="Case summary">
+        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
+        <div class="bp-case-panel-row"><span>Client context</span><p>Major quick-service restaurant brand / mobile app navigation redesign</p></div>
+        <div class="bp-case-panel-row"><span>Confidentiality</span><strong>Results withheld</strong></div>
+        <div class="bp-case-panel-row"><span>Role</span><p>Release measurement framework, event tagging requirements, A/B rationale, guardrail metrics, causal-risk framing</p></div>
+      </aside>
+    </header>
+
+    <section class="bp-case-receipts" aria-label="Case proof points">
+      <article><strong>1</strong><span>straight cutover reframed</span></article>
+      <article><strong>3</strong><span>required nav event properties</span></article>
+      <article><strong>4</strong><span>guardrail metric families</span></article>
+      <article><strong>1</strong><span>confounding release called out</span></article>
+    </section>
+
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>measurement before launch</span></div>
+    <section class="bp-case-content" id="case">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Core argument</p>
+        <h2>Without a measurement plan, a product launch can fool its own team.</h2>
+        <p>Baselines, event coverage, success criteria, and confounds have to be named before the redesign ships, not after the data starts telling convenient stories.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-proof-panel">
+          <p class="bp-case-mono bp-case-accent">What happened</p>
+          <h3>A planned cutover became a controlled experiment.</h3>
+          <p>A major quick-service restaurant brand was preparing a significant mobile navigation redesign as a straight cutover. I proposed and owned the release measurement and A/B framework before development began: event tagging requirements, tracking plan, and an A/B-rationale one-pager that isolated the navigation change as the causal variable.</p>
+          <p>The architectural deliverable was the framework itself. Specs, tracking plan, and rationale were handed to engineering and the client analytics lead. Test ownership and rollout decision stayed with the client team. Post-launch readings and the eventual rollout decision remain confidential.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Situation</p>
+          <h3>The redesign was too large to evaluate casually.</h3>
+          <p>The mobile app was heading into a significant navigation redesign, initially planned as a straight cutover. Baselines had not been captured, the right events were not yet instrumented for the new information architecture, and there was no shared contract for what would count as success or failure.</p>
+        </article>
+
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Risk</p>
+          <h3>A concurrent release could contaminate the readout.</h3>
+          <p>An Upsells v1.0 release was running concurrently, raising the risk that post-launch changes would be attributed to the navigation redesign even if another release had influenced the result. The rationale needed to call that out before the test ran.</p>
+        </article>
       </div>
     </section>
 
-    <section id="case">
-      <div class="section-body">
-        <div class="container">
-
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A major QSR's planned <strong>straight-cutover nav redesign was reshaped into a controlled A/B release</strong> by proposing and owning the measurement framework before development began &mdash; event tagging spec, written tracking plan, and an A/B-rationale one-pager that isolated the nav change as the causal variable. The <strong>architectural deliverable was the framework itself</strong>; specs, tracking plan, and rationale handed to engineering and the client analytics lead, with test ownership and rollout decision held by the client team. Post-launch results sit under client confidentiality.</div>
-            </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / framework</span><span>events / metrics / guardrails / rationale</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Framework</p>
+        <h2>The deliverable was a decision contract.</h2>
+        <p>The framework defined what should be instrumented, what should be watched, and what could invalidate a clean interpretation.</p>
+      </aside>
+      <div class="bp-case-main">
+        <figure class="bp-case-figure" aria-label="Release measurement framework diagram">
+          <figcaption><span>fig. 01 / release measurement</span><span>before / during / after launch</span></figcaption>
+          <div class="bp-case-figure-grid">
+            <div><span>Before</span><strong>Baseline + spec</strong><p>Event tagging requirements, existing screen_view audit, metric definitions, and success criteria written before build.</p></div>
+            <div><span>During</span><strong>Guardrails</strong><p>Transactions, funnel movement, nav-specific interaction, session health, crash rate, and error rate monitored during release.</p></div>
+            <div><span>After</span><strong>Decision</strong><p>Client-owned rollout decision supported by predefined threshold, minimum run duration, and rollback options.</p></div>
           </div>
+        </figure>
 
-          <div class="case-argument">
-            UX changes of this scale are impossible to evaluate fairly without a pre-defined measurement plan: baselines haven't been captured, the right events aren't instrumented, and success criteria get defined retroactively to match whatever the data shows. The argument for an A/B test is also an argument for <strong>not being fooled by your own product launch</strong>.
-          </div>
+        <div class="bp-case-gates" aria-label="Measurement framework components">
+          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Event tagging</strong><p>Specified new events for tab taps, nav state changes, and back-navigation patterns.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Required properties</strong><p>Required <code>tab_name</code>, <code>previous_tab</code>, and <code>platform</code>, plus screen_view audit against the new nav destinations.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Metrics + guardrails</strong><p>Primary transaction/North Star metric, funnel metrics, nav-specific metrics, and guardrails for session length, crash rate, and error rate.</p></article>
+          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>A/B rationale</strong><p>One-pager defined causal isolation, confounding risk, statistical threshold, and minimum run duration before the release.</p></article>
+        </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Situation</div>
-              <div class="card-body">A major quick-service restaurant brand's mobile app heading into a <strong>significant navigation redesign</strong> &mdash; planned as a straight cutover with no controlled-release framing. Baselines hadn't been captured, the right events weren't instrumented for the new IA, and there was no contract for what would count as success or failure. An Upsells v1.0 release was running concurrently, raising the risk of confounding any post-launch reading.</div>
-            </div>
-            <div class="card">
-              <div class="card-label">Task</div>
-              <div class="card-body">Propose and own the release measurement framework that turned the planned cutover into a controlled experiment &mdash; written before code. Three things had to be true: the right events had to be specced and instrumented <em>before</em> the redesign shipped; metrics, guardrails, and success criteria had to be agreed up front; and the confounding risk from concurrent releases had to be called out explicitly in the rationale.</div>
-            </div>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Action</p>
+          <h3>Two written deliverables moved the release from opinion to evaluation.</h3>
+          <p>The first deliverable was an engineering-ready event-tagging spec with Jira acceptance criteria tied to dev tickets. The second was a release tracking plan plus A/B-rationale one-pager covering primary metrics, funnel metrics, navigation-specific signals, guardrails, statistical confidence, minimum run duration, and the Upsells v1.0 confounding risk.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Action</div>
-              <div class="card-body">Two written deliverables. <strong>Event tagging requirements</strong>: new events for tab taps, nav state changes, back-navigation patterns; required properties <code>tab_name</code>, <code>previous_tab</code>, <code>platform</code>; an audit of existing <code>screen_view</code> coverage against the new nav destinations &mdash; engineering-ready Jira story with acceptance criteria tied to dev tickets. <strong>Release tracking plan + A/B-rationale one-pager</strong>: metrics to monitor before, during, and after launch (Primary: Transactions / North Star; Funnel: <code>screen_view &rarr; add_to_cart &rarr; order_placed</code>; Nav-specific: tap distribution, time-to-first-order, deals/loyalty discovery; Guardrails: session length, crash rate, error rate). The rationale called out the Upsells v1.0 confounding risk and defined statistical significance threshold and minimum run duration up front.</div>
-            </div>
-            <div class="card accent">
-              <div class="card-label">Result</div>
-              <div class="card-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead. The planned straight-cutover became a <strong>controlled release with rollback options and statistical confidence</strong>. Test ownership and rollout decision held by the client team; the architectural deliverable was the measurement framework itself, not the result of any single experiment. Post-launch readings and the eventual rollout decision sit under client confidentiality.</div>
-            </div>
-          </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>controlled release / client-owned decision</span></div>
+    <section class="bp-case-content">
+      <aside class="bp-case-sidebar">
+        <p class="bp-case-mono bp-case-accent">Result</p>
+        <h2>The result I can show is the test architecture, not the client outcome.</h2>
+        <p>Because post-launch readings are confidential, the case demonstrates the measurement system that made a valid rollout decision possible.</p>
+      </aside>
+      <div class="bp-case-main">
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Outcome</p>
+          <h3>The release had rollback options and statistical confidence.</h3>
+          <ul>
+            <li><strong>Planned straight-cutover reframed</strong> into a controlled release.</li>
+            <li><strong>Engineering-ready tagging spec</strong> delivered with acceptance criteria.</li>
+            <li><strong>A/B rationale one-pager</strong> delivered to engineering and client analytics lead.</li>
+            <li><strong>Confounding risk documented</strong> before launch, not rationalised afterward.</li>
+            <li><strong>Client team retained ownership</strong> of test execution and rollout decision.</li>
+          </ul>
+        </article>
 
-          <div class="tags">
-            <span class="tag">Amplitude</span>
-            <span class="tag">Segment CDP</span>
-            <span class="tag">A/B test design</span>
-            <span class="tag">Release measurement</span>
-            <span class="tag">Jira (spec authorship)</span>
-            <span class="tag">Causal isolation</span>
-          </div>
+        <article class="bp-case-block">
+          <p class="bp-case-mono bp-case-accent">Design lesson</p>
+          <h3>The A/B test is a governance tool.</h3>
+          <p>For a large UX change, an A/B framework is not only a statistical method. It is a governance structure that prevents teams from inventing success criteria after the product has already shipped.</p>
+        </article>
+
+        <div class="bp-case-tags" aria-label="Technologies and methods">
+          <span class="bp-case-tag">Amplitude</span>
+          <span class="bp-case-tag">Segment CDP</span>
+          <span class="bp-case-tag">A/B test design</span>
+          <span class="bp-case-tag">Release measurement</span>
+          <span class="bp-case-tag">Jira spec authorship</span>
+          <span class="bp-case-tag">Causal isolation</span>
         </div>
       </div>
     </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the case library &middot; or get in touch.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="../work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Full case library &mdash; <em>eighteen cases, seven topics</em>.</span>
-              <span class="deeper-body">The complete index. Question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, data engineering.</span>
-              <span class="deeper-cta">Open the library &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and what I'm available for.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="../contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
+    <section class="bp-case-next">
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
+      <a href="mqsr-dashboards.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>A campaign dashboard, a schema decomposition, and a North Star that holds.</strong><span>Amplitude dashboarding and schema work for the same QSR analytics environment.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this framework or any other case.</span></a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
+  <footer class="bp-footer">
+    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
+    <span>Plain HTML + CSS / GitHub Pages</span>
+    <span>Case study / static portfolio</span>
   </footer>
 
   <script src="../js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/amplitude-init.js"></script>
+  <script type="module" src="/js/analytics.js"></script>
 </body>
 </html>
