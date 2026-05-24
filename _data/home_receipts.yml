@@ -1,0 +1,15 @@
+- kicker: "alert noise"
+  value: "83%"
+  label: "V1 production: 230 alerts to 39 posts across 13-26 April 2026."
+
+- kicker: "analyst hours"
+  value: "38h"
+  label: "Recovered per month in a state-regulated retail platform handoff."
+
+- kicker: "BQ pipeline cost"
+  value: "~50%"
+  label: "Reduction from repeated-scan collapse in a BigQuery pipeline redesign."
+
+- kicker: "CDP migration CTR"
+  value: "+10.8%"
+  label: "YoY CTR lift from Responsys to Bloomreach migration with zero campaign downtime."
