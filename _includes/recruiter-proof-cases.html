@@ -1,0 +1,14 @@
+<div class="bp-rec-case-list">
+  {% for selected in site.data.recruiter_cases %}
+    {% assign matches = site.data.cases | where: 'slug', selected.slug %}
+    {% assign case = matches | first %}
+    <article class="bp-rec-case">
+      <div><p class="bp-rec-mono bp-rec-accent">{{ selected.category }}</p></div>
+      <div>
+        <h3>{{ selected.headline | default: case.title }}</h3>
+        <p>{{ selected.summary | default: case.short_description | default: case.description }}</p>
+      </div>
+      <a href="{{ case.url | relative_url }}">Read case</a>
+    </article>
+  {% endfor %}
+</div>
