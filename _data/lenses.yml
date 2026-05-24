@@ -1,0 +1,48 @@
+- number: "04"
+  slug: ai
+  id: topic-ai
+  title: "AI Workflow Design"
+  summary: "Where AI assists, where humans still decide."
+  roles: "Product Analytics / UX Telemetry / AI workflow design"
+
+- number: "07"
+  slug: data-eng
+  id: topic-data-eng
+  title: "Data Engineering & Architecture"
+  summary: "Pipeline architecture, cost-thinking, schema design, and the patient work of stepping back to look at the whole system."
+  roles: "Analytics Engineering / Data Architecture / Platform Analytics"
+
+- number: "02"
+  slug: instrumentation
+  id: topic-instrumentation
+  title: "Instrumentation & Cross-Platform Telemetry"
+  summary: "The technical layer the measurement stack runs on."
+  roles: "Product Analytics / Analytics Engineering / UX Telemetry"
+
+- number: "05"
+  slug: adoption
+  id: topic-adoption
+  title: "Adoption & Cultural Transition"
+  summary: "The final measure of an engagement is whether the team changed how they work."
+  roles: "Insight roles / Product Analytics / Consulting"
+
+- number: "06"
+  slug: marketing
+  id: topic-marketing
+  title: "Marketing Analytics & Lifecycle"
+  summary: "CDP architecture, identity stitching, lifecycle automation, attribution, and the operational data layer behind campaigns."
+  roles: "Marketing Analytics / CRM Analytics / Lifecycle"
+
+- number: "03"
+  slug: experimentation
+  id: topic-experimentation
+  title: "Experimentation & Release Measurement"
+  summary: "Designing the measurement framework before the change ships, so product decisions can be evaluated rather than narrated afterward."
+  roles: "Product Analytics / Marketing Analytics / UX Telemetry"
+
+- number: "01"
+  slug: question
+  id: topic-question
+  title: "Question Formulation & Discovery"
+  summary: "The methodology underneath everything else: identifying the right question before optimizing the wrong system."
+  roles: "UX Research / Insight / Analytics Strategy"
