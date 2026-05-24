@@ -1,3 +1,6 @@
+---
+nav_key: about
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -56,22 +59,7 @@
   <body class="bp-about-body">
     <a class="skip-link" href="#about">Skip to about</a>
 
-    <nav class="bp-about-nav" aria-label="Primary">
-      <a class="bp-about-nav-brand" href="../">
-        <span class="bp-about-dot" aria-hidden="true"></span>
-        <span>fredericlabadie.com</span>
-        <span class="bp-about-nav-muted">/ about</span>
-      </a>
-      <ul class="bp-about-nav-links" id="primary-nav">
-        <li><a href="../">/ home</a></li>
-        <li><a href="../work/">/ work</a></li>
-        <li><a href="../thoughts/">/ current meditations</a></li>
-        <li><a href="../about/" aria-current="page">// about</a></li>
-        <li><a href="../recruiters/">/ recruiters</a></li>
-        <li><a href="../credentials/">/ credentials</a></li>
-        <li><a href="../contact/">/ contact</a></li>
-      </ul>
-    </nav>
+    {% include site-nav.html %}
 
     <main class="bp-about-page" id="top">
       <header class="bp-about-hero">
