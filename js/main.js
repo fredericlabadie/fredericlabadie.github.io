@@ -1,3 +1,67 @@
+// Primary nav normalisation
+// Most pages are static HTML, and several page families carry copied nav
+// blocks. Keep the rendered primary nav consistent without needing a build step
+// or shared template include.
+const primaryNav = document.getElementById('primary-nav');
+
+if (primaryNav) {
+  const linkSpecs = [
+    { key: 'home', label: 'home' },
+    { key: 'work', label: 'work' },
+    { key: 'thoughts', label: 'current meditations' },
+    { key: 'about', label: 'about' },
+    { key: 'recruiters', label: 'recruiters' },
+    { key: 'credentials', label: 'credentials' },
+    { key: 'contact', label: 'contact' },
+  ];
+
+  const links = Array.from(primaryNav.querySelectorAll('a'));
+  const hrefs = links.map(link => link.getAttribute('href') || '');
+  const firstHref = hrefs[0] || '';
+  const usesRootRelative = firstHref.startsWith('/');
+  const usesParentRelative = hrefs.some(href => href.startsWith('../'));
+  const hrefPrefix = usesRootRelative ? '/' : usesParentRelative ? '../' : '';
+
+  const makeHref = key => {
+    if (key === 'home') return usesRootRelative ? '/' : hrefPrefix || './';
+    return `${hrefPrefix}${key}/`;
+  };
+
+  const hasCredentials = links.some(link =>
+    (link.getAttribute('href') || '').includes('credentials')
+  );
+
+  if (!hasCredentials) {
+    const contactItem = Array.from(primaryNav.querySelectorAll('li')).find(item => {
+      const link = item.querySelector('a');
+      return link && (link.getAttribute('href') || '').includes('contact');
+    });
+    const credentialsItem = document.createElement('li');
+    const credentialsLink = document.createElement('a');
+    credentialsLink.href = makeHref('credentials');
+    credentialsLink.textContent = '/ credentials';
+    credentialsItem.appendChild(credentialsLink);
+
+    if (contactItem) {
+      primaryNav.insertBefore(credentialsItem, contactItem);
+    } else {
+      primaryNav.appendChild(credentialsItem);
+    }
+  }
+
+  Array.from(primaryNav.querySelectorAll('a')).forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const spec = linkSpecs.find(item => {
+      if (item.key === 'home') return href === '/' || href === '../' || href === './' || href === '';
+      return href.includes(item.key);
+    });
+    if (!spec) return;
+
+    const isCurrent = link.getAttribute('aria-current') === 'page';
+    link.textContent = `${isCurrent ? '//' : '/'} ${spec.label}`;
+  });
+}
+
 // Mobile nav toggle
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
