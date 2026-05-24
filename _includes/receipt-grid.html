@@ -1,4 +1,5 @@
-<section class="{{ include.class | default: 'bp-receipts' }}"{% if include.aria_label %} aria-label="{{ include.aria_label }}"{% endif %}>
+{% assign wrapper = include.element | default: 'div' %}
+<{{ wrapper }} class="{{ include.class | default: 'bp-receipts' }}"{% if include.aria_label %} aria-label="{{ include.aria_label }}"{% endif %}>
   {% for receipt in include.receipts %}
     <article class="{{ include.item_class | default: 'bp-receipt' }}">
       {% if receipt.kicker %}<p>{{ receipt.kicker }}</p>{% endif %}
@@ -6,4 +7,4 @@
       <span>{{ receipt.label }}</span>
     </article>
   {% endfor %}
-</section>
+</{{ wrapper }}>
