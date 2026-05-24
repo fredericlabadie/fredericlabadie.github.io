@@ -1,6 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Frederic Labadie favicon">
   <rect width="32" height="32" rx="6" fill="#16263a"/>
-  <text x="11.3" y="24" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#eef2f5">F</text>
-  <circle cx="16" cy="17.5" r="1.8" fill="#b9412a"/>
-  <text x="21.3" y="24" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#eef2f5">L</text>
+  <text x="16" y="25" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#b9412a">F</text>
 </svg>
