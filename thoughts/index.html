@@ -113,7 +113,7 @@
             <span>Topics</span>
             <p>
               Mixed-methods feedback loops, AI workflow gates, session continuity,
-              schema design, analytics shadow IT.
+              choice-set instrumentation, analytics shadow IT.
             </p>
           </div>
         </aside>
@@ -234,26 +234,27 @@
           <article class="bp-thought" id="q-deliberate-omission">
             <div class="bp-thought-meta">
               <time datetime="2026-05-06">Posted 6 May 2026</time
-              ><span>Schema design / Behavioural signals</span>
+              ><span>Schema design / Choice-set instrumentation</span>
             </div>
             <div>
               <h3>
                 <a href="#q-deliberate-omission"
-                  >How do you instrument for deliberate omission: a step the
-                  user actively skipped?</a
+                  >How do you measure a step the user chose not to take?</a
                 >
               </h3>
               <p>
                 An expected event that does not fire reads as silence by
-                default. The skip itself disappears into the gap. What
-                schema-level move makes "the user chose not to do this" a
-                first-class signal rather than an absence?
+                default. But silence is ambiguous: the user may never have seen
+                the option, may have seen it and rejected it, or may have taken
+                another path that made the step irrelevant. The skipped step only
+                becomes measurable when the choice set around it is instrumented.
               </p>
               <p>
-                <strong>Suspect:</strong> the answer lives in the surrounding
-                context: dwell time on the option, hover, back-out pattern,
-                sequence of competing actions. The omission becomes visible as a
-                positive signal once you instrument the choices made around it.
+                <strong>Working theory:</strong> absence is not an event unless
+                the choice set is instrumented. To measure a deliberate skip, the
+                schema has to capture the option presented, the surrounding
+                actions, and the competing path the user chose instead. The
+                signal is not the missing step; it is the visible alternative.
               </p>
             </div>
           </article>
@@ -261,26 +262,29 @@
           <article class="bp-thought" id="q-analytics-shadow-it">
             <div class="bp-thought-meta">
               <time datetime="2026-05-15">Posted 15 May 2026</time
-              ><span>Practitioner observation / Discovery</span>
+              ><span>Practitioner observation / Unmet demand</span>
             </div>
             <div>
               <h3>
                 <a href="#q-analytics-shadow-it"
-                  >What is the analytics function's own shadow IT?</a
+                  >What unmet demand does the analytics function's shadow IT
+                  reveal?</a
                 >
               </h3>
               <p>
-                If shadow IT in product teams is a signal that the designed
-                system does not support a real workflow, where does the same
-                pattern live inside the analytics function: the spreadsheets,
-                the manual pulls, the workarounds practitioners build because
-                the official measurement layer does not cover the question?
+                Spreadsheets, manual pulls, copied queries, and private
+                dashboards are usually treated as governance risk. They are that,
+                but they are also evidence: someone needed an answer badly enough
+                to build around the official measurement layer. The workaround is
+                not only a control problem. It is a map of demand the system did
+                not satisfy.
               </p>
               <p>
-                Suspect the answer is uncomfortably close to "everywhere." Open
-                question: what would it mean to instrument the analytics
-                function for its own gaps the way we instrument products for
-                theirs?
+                <strong>Working theory:</strong> the analytics function's
+                shadow IT is the backlog made visible. The task is not to
+                eliminate the workaround first; it is to ask what question
+                created it, which official system failed to answer it, and which
+                part of the workaround should become supported infrastructure.
               </p>
             </div>
           </article>
