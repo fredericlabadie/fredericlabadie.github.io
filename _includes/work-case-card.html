@@ -1,0 +1,28 @@
+<article class="bp-case-row">
+  <div>
+    <span class="bp-kind-badge {% if include.case.kind == 'compact' %}bp-badge-compact{% else %}bp-badge-case{% endif %}">
+      {% if include.case.kind == 'compact' %}Compact{% else %}Case{% endif %}
+    </span>
+    <p class="bp-case-meta">{{ include.case.lens }}</p>
+    {% if include.case.context %}
+      <p class="bp-case-context">{{ include.case.context }}</p>
+    {% endif %}
+  </div>
+  <div class="bp-case-main">
+    <h3>
+      <a href="{{ include.case.url | relative_url }}">{{ include.case.title }}</a>
+    </h3>
+    <p>
+      {{ include.case.short_description | default: include.case.description }}
+    </p>
+  </div>
+  <div class="bp-case-tags">
+    <span class="bp-mono">Receipts</span>
+    <div class="bp-tag-list">
+      {% for receipt in include.case.receipts limit: 3 %}
+        <span class="bp-tag">{{ receipt.value }} {{ receipt.label }}</span>
+      {% endfor %}
+    </div>
+    <a class="bp-case-cta" href="{{ include.case.url | relative_url }}">Read the case &rarr;</a>
+  </div>
+</article>
