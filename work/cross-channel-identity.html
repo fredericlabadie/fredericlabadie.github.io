@@ -1,137 +1,47 @@
 ---
 nav_key: work
-footer_label: Case study
+footer_label: Archived case
 layout: case
-title: "Connecting email behaviour to in-app sessions"
-description: "Cross-channel identity stitching between Braze, GA4, app, and web: Braze ID and Account GUID in the GA data layer, email URL parameters, and consent-aware tag configuration."
-og_title: "Connecting email behaviour to in-app sessions &mdash; case study"
-og_description: "Cross-channel identity stitching between Braze, GA4, app, and web."
+title: "Archived supporting case: cross-channel identity spec"
+description: "Archived supporting case. This OHLQ cross-channel identity spec has been demoted while a stronger Stanley/Bronto customer identity case is developed."
+robots: "noindex, nofollow"
+og_title: "Archived supporting case: cross-channel identity spec"
+og_description: "This supporting case has been demoted from the primary case library."
 og_url: "https://fredericlabadie.com/work/cross-channel-identity.html"
-twitter_title: "Connecting email behaviour to in-app sessions &mdash; case study"
-twitter_description: "Cross-channel identity stitching between Braze, GA4, app, and web."
+twitter_title: "Archived supporting case: cross-channel identity spec"
+twitter_description: "This supporting case has been demoted from the primary case library."
 ---
     <header class="bp-case-hero">
       <div>
-        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 06 / Marketing Analytics &amp; Lifecycle</p>
-        <h1>Connecting email behaviour to in-app sessions.</h1>
-        <p class="bp-case-dek">The instrumentation backbone behind every "did this campaign actually drive product interaction, or just a click?" question.</p>
+        <p class="bp-case-kicker bp-case-accent">// Archived supporting case / noindex</p>
+        <h1>Cross-channel identity has been archived as supporting evidence.</h1>
+        <p class="bp-case-dek">This page is kept as an internal archive/reference only. The OHLQ cross-channel identity work is useful as a supporting spec, but it has been removed from the primary case library while a stronger Stanley/Bronto customer identity case is developed.</p>
       </div>
-      <aside class="bp-case-hero-panel" aria-label="Case summary">
-        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
-        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / Braze + GA4 + web and app sessions</p></div>
-        <div class="bp-case-panel-row"><span>Project timing</span><strong>2025-2026</strong></div>
-        <div class="bp-case-panel-row"><span>Role</span><p>Identity-stitching specification, GA data-layer design, GTM audit, consent-aware tag configuration</p></div>
+      <aside class="bp-case-hero-panel" aria-label="Archive summary">
+        <div class="bp-case-panel-head"><span>Status</span><span>Archived</span></div>
+        <div class="bp-case-panel-row"><span>Primary replacement</span><p>Future Stanley/Bronto customer identity architecture case.</p></div>
+        <div class="bp-case-panel-row"><span>Archive reason</span><p>Useful identity spec, but weaker as a standalone case than the shipped Stanley/Bronto identity layer.</p></div>
+        <div class="bp-case-panel-row"><span>SEO</span><strong>noindex, nofollow</strong></div>
       </aside>
     </header>
 
-    <section class="bp-case-receipts" aria-label="Case proof points">
-      <article><strong>2</strong><span>identity keys specified</span></article>
-      <article><strong>Braze</strong><span>ID carried in email URL parameters</span></article>
-      <article><strong>GA4</strong><span>product sessions joined to CRM context</span></article>
-      <article><strong>TrustArc</strong><span>consent-aware tag configuration</span></article>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>clicks are not the full journey</span></div>
     <section class="bp-case-content" id="case">
       <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Core argument</p>
-        <h2>A campaign click is not a product outcome.</h2>
-        <p>The measurement layer needed to connect CRM behaviour to what users actually did after they landed in the product.</p>
+        <p class="bp-case-mono bp-case-accent">Archived note</p>
+        <h2>Preserve as evidence, not as a flagship case.</h2>
       </aside>
       <div class="bp-case-main">
         <article class="bp-case-proof-panel">
-          <p class="bp-case-mono bp-case-accent">What happened</p>
-          <h3>The campaign and product analytics layers got a shared identity spine.</h3>
-          <p>A state-regulated retail platform's email campaigns and product analytics now share a unified identity layer: <strong>Braze ID</strong> and <strong>Account GUID</strong> pushed into the GA data layer, with Braze ID also carried in email URL parameters.</p>
-          <p>This made it possible to answer whether a campaign drove product interaction after the click, not only whether the email generated a click. The spec became the basis for recurring monthly executive readouts on user behaviour and product-engagement trends.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Context</p>
-          <h3>The trail fragmented after the click.</h3>
-          <p>The client used Braze for email and GA4 for product behaviour. Campaign clicks ended at the click. Once the user landed in the app or on the web, the trail of who they were and what they did fragmented across systems.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Task</p>
-          <h3>Design a consent-aware bridge between CRM and product analytics.</h3>
-          <p>The work was to specify the identity fields, URL parameter behaviour, data-layer placement, and tag configuration needed to connect email behaviour to app and web sessions without bypassing consent governance.</p>
+          <p class="bp-case-mono bp-case-accent">Supporting proof retained</p>
+          <h3>The spec remains useful context for identity work.</h3>
+          <p>The preserved proof point: a cross-channel identity spec connecting Braze, GA4, app, and web through Braze ID, Account GUID, email URL parameters, and consent-aware tag configuration.</p>
+          <p>The primary library now prioritises shipped or stronger architecture stories. This page remains available only as archived support.</p>
         </article>
       </div>
     </section>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / identity architecture</span><span>Braze / GA4 / data layer / consent</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Architecture</p>
-        <h2>The bridge lived in the data layer.</h2>
-        <p>Identity stitching is not a dashboard trick. It has to be designed upstream, in the events and parameters that make the dashboard possible.</p>
-      </aside>
-      <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="Cross-channel identity architecture diagram">
-          <figcaption><span>fig. 01 / identity bridge</span><span>CRM behaviour to product sessions</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>CRM</span><strong>Braze</strong><p>Email opens, clicks, campaign context, and Braze ID carried forward in URL parameters.</p></div>
-            <div><span>Bridge</span><strong>Data layer</strong><p>Braze ID and Account GUID pushed into the GA data layer for web and app context.</p></div>
-            <div><span>Product</span><strong>GA4</strong><p>Web and app sessions analysed with CRM context attached to the user journey.</p></div>
-          </div>
-        </figure>
-
-        <div class="bp-case-gates" aria-label="Cross-channel identity components">
-          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Braze ID in URLs</strong><p>Specified Braze ID carriage in email URL parameters so the campaign identity could persist beyond the email click.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Account GUID in GA</strong><p>Specified Account GUID and Braze ID in the GA data layer to connect product sessions to CRM identity context.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>GTM audit</strong><p>Audited tag configuration so the new identity fields could move through the measurement layer cleanly.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Consent guardrail</strong><p>Kept tag configuration consent-aware under TrustArc so the identity bridge respected governance requirements.</p></article>
-        </div>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Action</p>
-          <h3>The spec made executive user-journey questions answerable.</h3>
-          <p>I authored the specification to push Braze ID and Account GUID into the GA data layer and to carry Braze ID in email URL parameters. The same engagement covered GTM audit, TrustArc consent-aware tag configuration, and the recurring monthly executive readout cycle the new identity layer powered.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>unified journey / executive readouts / consent-aware</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Result</p>
-        <h2>The question changed from did they click to what did they do next.</h2>
-        <p>The identity layer gave campaign analytics a product-behaviour endpoint, not just email-platform metrics.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Outcome</p>
-          <h3>CRM and product analytics could speak to the same journey.</h3>
-          <ul>
-            <li><strong>Braze ID and Account GUID</strong> specified for the GA data layer.</li>
-            <li><strong>Braze ID carried in email URL parameters</strong> to preserve campaign context.</li>
-            <li><strong>GTM audit complete</strong> for the relevant tag configuration.</li>
-            <li><strong>Consent-aware configuration under TrustArc</strong> built into the measurement plan.</li>
-            <li><strong>Recurring executive readouts</strong> supported on user behaviour and product engagement trends.</li>
-          </ul>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Design lesson</p>
-          <h3>Lifecycle analytics needs an identity spine.</h3>
-          <p>Without a cross-channel identity bridge, CRM analytics stops at open and click metrics while product analytics starts after arrival. The business question lives between those systems, so the measurement design has to connect them before the dashboard can.</p>
-        </article>
-
-        <div class="bp-case-tags" aria-label="Technologies and methods">
-          <span class="bp-case-tag">Identity stitching</span>
-          <span class="bp-case-tag">Braze + GA4</span>
-          <span class="bp-case-tag">TrustArc consent</span>
-          <span class="bp-case-tag">GTM audit</span>
-          <span class="bp-case-tag">Executive readouts</span>
-          <span class="bp-case-tag">Cross-channel measurement</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
     <section class="bp-case-next">
-      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
-      <a href="cdp-migration.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Replatformed the CRM. The campaigns did not notice.</strong><span>Oracle Responsys to Bloomreach CDP migration with customer data model redesign and zero campaign downtime.</span></a>
-      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">Back to Work</span><strong>Primary case library.</strong><span>Sixteen primary cases across seven categories.</span></a>
+      <a href="cdp-migration.html"><span class="bp-case-mono bp-case-accent">Related case</span><strong>Replatformed the CDP. The campaigns did not notice.</strong><span>A stronger primary marketing-analytics case around lifecycle data architecture and platform migration.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Contact</span><strong>Context and follow-up.</strong><span>Happy to walk through the archived detail if useful.</span></a>
     </section>
