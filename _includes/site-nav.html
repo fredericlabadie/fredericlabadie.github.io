@@ -1,0 +1,32 @@
+{% assign current_nav = page.nav_key | default: page.collection | default: page.dir | remove: '/' %}
+{% if page.url == '/' %}
+  {% assign current_nav = 'home' %}
+{% elsif page.url contains '/work/' %}
+  {% assign current_nav = 'work' %}
+{% endif %}
+
+{% assign current_label = 'home' %}
+{% for item in site.data.navigation.links %}
+  {% if item.key == current_nav %}
+    {% assign current_label = item.label %}
+  {% endif %}
+{% endfor %}
+
+<nav class="bp-site-nav" aria-label="Primary">
+  <a class="bp-site-nav-brand" href="{{ '/' | relative_url }}">
+    <span class="bp-site-dot" aria-hidden="true"></span>
+    <span>{{ site.data.navigation.brand }}</span>
+    <span class="bp-site-nav-muted">/ {{ current_label }}</span>
+  </a>
+  <ul class="bp-site-nav-links" id="primary-nav">
+    {% for item in site.data.navigation.links %}
+      {% assign active = false %}
+      {% if item.key == current_nav %}
+        {% assign active = true %}
+      {% endif %}
+      <li>
+        <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{% if active %}//{% else %}/{% endif %} {{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
