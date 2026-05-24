@@ -3,27 +3,29 @@ nav_key: work
 footer_label: Case study
 layout: case
 title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction."
-description: "Audit and architectural redesign of a GA4 to BigQuery pipeline that had grown into a 1.2 TB intermediate table and a $112/run cascading CTE chain. Single conditional aggregation replaced repeated scans and cut costs by roughly half."
+description: "Second-pass audit and architectural redesign of a GA4-to-BigQuery reporting layer. Claude and BigQuery MCP supported inspection of repeated scans, a 1.2 TB intermediate table, and an approximately $112/run cascading CTE chain before scheduled-query costs were cut roughly in half."
 og_title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction. &mdash; case study"
-og_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run to half."
+og_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query cost by roughly half."
 og_url: "https://fredericlabadie.com/work/pipeline-optimization.html"
 twitter_title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction."
-twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run to half."
+twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query cost by roughly half."
 ---
       <header class="bp-case-hero">
         <div>
           <p class="bp-case-kicker bp-case-accent">
-            // Case study / Lens 07 / Data Engineering &amp; Architecture
+            // Case study / Data engineering
           </p>
           <h1>
             Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction.
           </h1>
           <p class="bp-case-dek">
-            An audit and architectural redesign of a GA4 to BigQuery pipeline
-            that had grown into a 1.2 TB intermediate table and a $112/run
-            cascading CTE chain — plus a separate Looker Studio fix that halved
-            per-user scan cost by scoping the data window from all-time to two
-            years.
+            A second-pass audit of the GA4-to-BigQuery reporting layer built
+            after the initial 38-hours/month BI enablement work. When the
+            company signed an Anthropic contract, I used Claude with BigQuery
+            MCP as an analysis collaborator to trace repeated scans, a 1.2 TB
+            intermediate table, and an approximately $112/run cascading CTE
+            chain. Redesigning the scan pattern cut scheduled-query costs by
+            roughly half.
           </p>
         </div>
         <aside class="bp-case-hero-panel" aria-label="Case summary">
@@ -43,20 +45,20 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
           <div class="bp-case-panel-row">
             <span>Role</span>
             <p>
-              Pipeline audit, SQL redesign, DAG simplification, migration
-              planning
+              Pipeline audit, SQL redesign, BigQuery MCP-assisted analysis,
+              DAG simplification, migration planning
             </p>
           </div>
         </aside>
       </header>
 
       <section class="bp-case-receipts" aria-label="Case proof points">
-        <article><strong>~50%</strong><span>cost reduction</span></article>
+        <article><strong>~50%</strong><span>pipeline cost reduction</span></article>
         <article>
           <strong>1.2 TB</strong><span>intermediate table retired</span>
         </article>
         <article>
-          <strong>$112</strong><span>approximate cost per old run</span>
+          <strong>$112</strong><span>approximate old run cost</span>
         </article>
         <article>
           <strong>15+</strong><span>independent CTE scans removed</span>
@@ -81,7 +83,7 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
             <p class="bp-case-mono bp-case-accent">What happened</p>
             <h3>A repeated-scan pipeline became one shared computation.</h3>
             <p>
-              A GA4 to BigQuery analytics pipeline had grown into a
+              A GA4-to-BigQuery analytics pipeline had grown into a
               <strong>roughly $112/run CTE chain</strong> processing
               approximately <strong>18 TB per execution</strong>. I redesigned
               the pipeline around a single conditional-aggregation pass,
@@ -101,6 +103,15 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
             <h3>
               Each individual decision made sense. The system no longer did.
             </h3>
+            <p>
+              The first pass had already replaced the recurring manual reporting
+              cycle with a BigQuery, Dataform, and Looker Studio reporting
+              layer. The next question was cost and maintainability. I had been
+              watching places where the pipeline could be simplified, and when
+              the company signed an Anthropic contract, it created the opening
+              to test a more collaborative audit process using Claude and
+              BigQuery MCP.
+            </p>
             <p>
               The pipeline scanned <code>events_*</code> three separate times,
               unnested every event type into a generic key-value table, then ran
@@ -139,6 +150,17 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
           </p>
         </aside>
         <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Method</p>
+            <h3>Claude and BigQuery MCP turned the audit into a collaborative inspection process.</h3>
+            <p>
+              I used Claude with BigQuery MCP to inspect schema shape, query
+              structure, scan patterns, and candidate simplifications while
+              keeping the architectural decisions, validation plan, and migration
+              sequence human-owned.
+            </p>
+          </article>
+
           <figure
             class="bp-case-figure"
             aria-label="Pipeline architecture before and after"
@@ -235,7 +257,8 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
           <p>
             The same decision pattern transfers to other analytics rebuilds:
             model the expensive thing once, make downstream surfaces consume the
-            shared result.
+            shared result. BigQuery MCP helped accelerate the audit, but the
+            durable value was the architecture it made easier to reason about.
           </p>
         </aside>
         <div class="bp-case-main">
@@ -283,7 +306,8 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
 
           <div class="bp-case-tags" aria-label="Technologies and methods">
             <span class="bp-case-tag">BigQuery</span>
-            <span class="bp-case-tag">SQL</span>
+            <span class="bp-case-tag">BigQuery MCP</span>
+            <span class="bp-case-tag">Claude-assisted analysis</span>
             <span class="bp-case-tag">DAG redesign</span>
             <span class="bp-case-tag">Conditional aggregation</span>
             <span class="bp-case-tag">Partitioning</span>
@@ -302,17 +326,17 @@ twitter_description: "GA4 to BigQuery pipeline redesign cutting roughly $112/run
           ><span class="bp-case-mono bp-case-accent">More cases</span
           ><strong>Full case library.</strong
           ><span
-            >Eighteen cases across seven lenses: question formulation,
+            >Sixteen primary cases across seven categories: question discovery,
             instrumentation, experimentation, AI workflows, adoption, marketing
             analytics, and data engineering.</span
           ></a
         >
-        <a href="sslp-data-infra.html"
+        <a href="sslp-enablement.html"
           ><span class="bp-case-mono bp-case-accent">Adjacent case</span
-          ><strong>The pipeline layer behind mobile instrumentation.</strong
+          ><strong>The reporting layer this optimisation followed.</strong
           ><span
-            >Scheduled Dataform pipelines, BigQuery modelling, and
-            dashboard-ready tables for a state-regulated retail platform.</span
+            >BigQuery, Dataform, and Looker Studio reporting infrastructure that
+            recovered 38 analyst hours per month before the cost pass.</span
           ></a
         >
         <a href="../contact/"
