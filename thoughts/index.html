@@ -113,7 +113,7 @@
             <span>Topics</span>
             <p>
               Mixed-methods feedback loops, AI workflow gates, session continuity,
-              choice-set instrumentation, analytics shadow IT.
+              event taxonomy, analytics shadow IT.
             </p>
           </div>
         </aside>
@@ -234,27 +234,32 @@
           <article class="bp-thought" id="q-deliberate-omission">
             <div class="bp-thought-meta">
               <time datetime="2026-05-06">Posted 6 May 2026</time
-              ><span>Schema design / Choice-set instrumentation</span>
+              ><span>Schema design / Event taxonomy</span>
             </div>
             <div>
               <h3>
                 <a href="#q-deliberate-omission"
-                  >How do you measure a step the user chose not to take?</a
+                  >What deserves to be an event, and what should only be a
+                  parameter?</a
                 >
               </h3>
               <p>
-                An expected event that does not fire reads as silence by
-                default. But silence is ambiguous: the user may never have seen
-                the option, may have seen it and rejected it, or may have taken
-                another path that made the step irrelevant. The skipped step only
-                becomes measurable when the choice set around it is instrumented.
+                Older analytics habits encouraged tracking across explicit
+                steps: the user saw this, clicked this, skipped this, continued
+                here. Newer event models make a different question more
+                important: did a distinct action occur, or is this just context
+                for the action that did occur? A skipped step may not need to
+                become its own event if the next event can carry the prompt,
+                offer, path, or choice set that shaped it.
               </p>
               <p>
-                <strong>Working theory:</strong> absence is not an event unless
-                the choice set is instrumented. To measure a deliberate skip, the
-                schema has to capture the option presented, the surrounding
-                actions, and the competing path the user chose instead. The
-                signal is not the missing step; it is the visible alternative.
+                <strong>Working theory:</strong> event minimalism only works
+                when parameter richness is strong enough to preserve meaning. The
+                event should name the user action; the parameter should explain
+                the conditions that made the action meaningful. A skipped step
+                becomes an event only when the skip itself is an intentional
+                action. Otherwise, it belongs as context on the event that
+                followed.
               </p>
             </div>
           </article>
