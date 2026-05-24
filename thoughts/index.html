@@ -112,7 +112,7 @@
           <div class="bp-thoughts-panel-row">
             <span>Topics</span>
             <p>
-              Sense-Making, AI workflow gates, A/B test pre-mortems, schema
+              Sense-Making, AI workflow gates, session continuity, schema
               design, analytics shadow IT.
             </p>
           </div>
@@ -191,28 +191,31 @@
             </div>
           </article>
 
-          <article class="bp-thought" id="q-ab-tests-die-before-shipping">
+          <article class="bp-thought" id="q-replace-sessions">
             <div class="bp-thought-meta">
               <time datetime="2026-05-01">Posted 1 May 2026</time
-              ><span>A/B testing / Pre-mortems</span>
+              ><span>Measurement design / Session continuity</span>
             </div>
             <div>
               <h3>
-                <a href="#q-ab-tests-die-before-shipping"
-                  >Why do most A/B tests die before they ship?</a
+                <a href="#q-replace-sessions"
+                  >What replaces sessions when users stop and start their visits
+                  across hours and days instead of minutes?</a
                 >
               </h3>
               <p>
-                Working hypothesis: the question was not worth the test, and the
-                cost of figuring that out post-spec is what kills the rollout.
-                What upstream instrumentation would have surfaced "not worth
-                testing" before the spec was written?
+                The session was useful when a visit looked like a bounded
+                sitting: arrive, browse, convert or leave. Increasingly, the
+                journey looks more like a thread picked up across tabs, devices,
+                messages, notifications, saved carts, and delayed decisions.
+                What unit of measurement survives when the user's actual visit
+                no longer fits inside the analytics platform's clock?
               </p>
               <p>
-                Most test kills look like budget kills or scope kills, but those
-                are downstream symptoms. The actual kill is a discovery gap. The
-                instrumentation question is whether you can measure your way to
-                "this is not worth testing" without running the test.
+                <strong>Working theory:</strong> the replacement is not a longer
+                session timeout. It is a task-state model: intent, interruption,
+                resumption, and completion stitched across events. The unit is
+                less "visit" than "open loop."
               </p>
             </div>
           </article>
