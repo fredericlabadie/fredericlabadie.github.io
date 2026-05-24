@@ -1,3 +1,6 @@
+---
+nav_key: home
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -60,35 +63,7 @@
   </head>
   <body class="blueprint-home">
     <a class="skip-link" href="#selected-work">Skip to selected work</a>
-
-    <nav class="nav bp-nav">
-      <div class="nav-inner">
-        <a href="/" class="nav-brand">
-          <span class="bp-status-dot" aria-hidden="true"></span>
-          Frederic Labadie<span class="nav-brand-role"
-            >Analytics Architect</span
-          >
-        </a>
-        <ul class="nav-links" id="primary-nav">
-          <li><a href="/" aria-current="page">// home</a></li>
-          <li><a href="work/">/ work</a></li>
-          <li><a href="thoughts/">/ current meditations</a></li>
-          <li><a href="about/">/ about</a></li>
-          <li><a href="recruiters/">/ recruiters</a></li>
-          <li><a href="credentials/">/ credentials</a></li>
-          <li><a href="contact/">/ contact</a></li>
-        </ul>
-        <button
-          type="button"
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
+    {% include site-nav.html %}
 
     <main id="top">
       <section class="bp-hero" id="hero">
