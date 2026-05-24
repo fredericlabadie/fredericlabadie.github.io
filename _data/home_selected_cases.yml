@@ -1,21 +1,21 @@
 - slug: shadow-it
-  kicker: "Case / Question formulation"
-  meta: "Consumer electronics retailer / 2023-2025 / under NDA"
-  headline: "A workaround broke. The data confessed."
-  body: "I was building a lifecycle segmentation model when an anomaly caught my eye: a cohort returning shortly after purchase to buy specific components. A Sense-Making conversation with floor staff surfaced the cause: a shadow IT compatibility tool had quietly stopped working."
+  kicker: "Case / Question discovery"
+  meta: "Consumer electronics retailer / 2023–2025 / under NDA"
+  headline: "The workaround broke. The data showed the gap. Frontline staff knew why."
+  body: "I was building a lifecycle segmentation model when an anomaly caught my eye: a cohort returning shortly after purchase to buy specific components. A Sense-Making-informed conversation with floor staff surfaced the cause: the designed system had never supported the informal compatibility workflow they depended on."
   quote: "Most interesting findings in analytics arrive while you are doing something else. The role of instrumentation is to make the gap visible enough that the question becomes worth asking."
-  outcome: "The client subsequently shipped a compatibility configurator. It is now central to the business, with a second iteration underway."
+  outcome: "The client subsequently shipped a compatibility configurator. It is now central to the business, with a second iteration planned for 2026."
 
 - slug: sslp-enablement
-  kicker: "Case / Adoption"
-  meta: "State-regulated retail platform / 2025-2026"
-  headline: "The system outlived the team that built it."
-  body: "Greenfield UX telemetry across web, app, and CRM, paired with a three-session structured handoff so the client could maintain and extend it independently. When the full team rolled off in June 2025, incoming analysts were operational on day one. The system has been running independently since March 2026."
+  kicker: "Case / BI enablement"
+  meta: "State-regulated retail platform / 2025–2026"
+  headline: "The reporting layer survived the people who built it."
+  body: "BigQuery, Dataform, and Looker Studio reporting infrastructure replaced recurring manual report pulls, paired with a three-session structured handoff so the client could maintain and extend it independently. When the full team rolled off in June 2025, incoming analysts were operational on day one. The system has run independently since March 2026."
   quote: "The 38 hours recovered per month is not the point. The point is what those hours were redirected to, and that the redirection survived the people who started it."
 
 - slug: ux-research-home-services
-  kicker: "Case / Methodology / UX research"
-  meta: "National home services franchise / Stanley Steemer / 2021-2022"
+  kicker: "Case / Mixed-methods research"
+  meta: "National home services franchise / Stanley Steemer / 2021–2022"
   headline: "Telemetry locates. Method diagnoses."
   body: "Quantitative GA4 telemetry paired with a UserZoom protocol built on Dervin's neutral-questioning. The funnel showed where users dropped off. It could not say what kind of gap they were experiencing."
   quote: "A winning A/B variant was winning despite a vocabulary problem, not because of clean messaging. Optimising on the quantitative signal alone would have entrenched the wrong message."
