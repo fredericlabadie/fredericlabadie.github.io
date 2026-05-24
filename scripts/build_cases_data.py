@@ -9,7 +9,13 @@ FM_RE = re.compile(r"^---\s*\n([\s\S]*?)\n---\s*\n")
 KICKER_RE = re.compile(r"<p\s+class=[\"']bp-case-kicker[^\"']*[\"']>\s*([\s\S]*?)\s*</p>", re.IGNORECASE)
 H1_RE = re.compile(r"<h1>\s*([\s\S]*?)\s*</h1>", re.IGNORECASE)
 DEK_RE = re.compile(r"<p\s+class=[\"']bp-case-dek[^\"']*[\"']>\s*([\s\S]*?)\s*</p>", re.IGNORECASE)
-RECEIPT_RE = re.compile(r"<article>\s*<strong>([\s\S]*?)</strong>\s*<span>([\s\S]*?)</span>\s*</article>", re.IGNORECASE)
+RECEIPTS_SECTION_RE = re.compile(
+    r"<section\s+class=[\"']bp-case-receipts[\"'][^>]*>([\s\S]*?)</section>",
+    re.IGNORECASE,
+)
+ARTICLE_RE = re.compile(r"<article[^>]*>([\s\S]*?)</article>", re.IGNORECASE)
+STRONG_RE = re.compile(r"<strong[^>]*>([\s\S]*?)</strong\s*>", re.IGNORECASE)
+SPAN_RE = re.compile(r"<span[^>]*>([\s\S]*?)</span\s*>", re.IGNORECASE)
 CONTEXT_RE = re.compile(r"<div\s+class=[\"']bp-case-panel-row[\"']>\s*<span>Client context</span>\s*<p>([\s\S]*?)</p>\s*</div>", re.IGNORECASE)
 ROLE_RE = re.compile(r"<div\s+class=[\"']bp-case-panel-row[\"']>\s*<span>Role</span>\s*<p>([\s\S]*?)</p>\s*</div>", re.IGNORECASE)
 
@@ -63,7 +69,23 @@ def lens_from_kicker(kicker: str):
 
 
 def receipts(text: str) -> list[tuple[str, str]]:
-    return [(clean_html(a), clean_html(b)) for a, b in RECEIPT_RE.findall(text)[:4]]
+    section_match = RECEIPTS_SECTION_RE.search(text)
+    if not section_match:
+        return []
+
+    found = []
+    for article in ARTICLE_RE.findall(section_match.group(1)):
+        strong_match = STRONG_RE.search(article)
+        span_match = SPAN_RE.search(article)
+        if not strong_match or not span_match:
+            continue
+
+        value = clean_html(strong_match.group(1))
+        label = clean_html(span_match.group(1))
+        if value and label:
+            found.append((value, label))
+
+    return found[:4]
 
 
 def render_case(path: Path) -> str:
