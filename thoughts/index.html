@@ -1,3 +1,6 @@
+---
+nav_key: thoughts
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -64,24 +67,7 @@
   <body class="bp-thoughts-body">
     <a class="skip-link" href="#posts">Skip to posts</a>
 
-    <nav class="bp-thoughts-nav" aria-label="Primary">
-      <a class="bp-thoughts-nav-brand" href="../">
-        <span class="bp-thoughts-dot" aria-hidden="true"></span>
-        <span>fredericlabadie.com</span>
-        <span class="bp-thoughts-nav-muted">/ thoughts</span>
-      </a>
-      <ul class="bp-thoughts-nav-links" id="primary-nav">
-        <li><a href="../">/ home</a></li>
-        <li><a href="../work/">/ work</a></li>
-        <li>
-          <a href="../thoughts/" aria-current="page">// current meditations</a>
-        </li>
-        <li><a href="../about/">/ about</a></li>
-        <li><a href="../recruiters/">/ recruiters</a></li>
-        <li><a href="../credentials/">/ credentials</a></li>
-        <li><a href="../contact/">/ contact</a></li>
-      </ul>
-    </nav>
+    {% include site-nav.html %}
 
     <main class="bp-thoughts-page" id="top">
       <header class="bp-thoughts-hero">
