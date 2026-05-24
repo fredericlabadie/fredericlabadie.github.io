@@ -10,13 +10,13 @@
   kicker: "Case / Adoption"
   meta: "State-regulated retail platform / 2025-2026"
   headline: "The system outlived the team that built it."
-  body: "Greenfield UX telemetry across web, app, and CRM, plus a three-session structured handoff so the client could maintain and extend it independently. They did — when the full team rolled off in June 2025, incoming analysts were operational on day one. The system has been running independently since March 2026."
-  quote: "The 38 hours recovered per month is not the point. The point is what those hours got redirected to, and that the redirection survived the people who started it."
+  body: "Greenfield UX telemetry across web, app, and CRM, paired with a three-session structured handoff so the client could maintain and extend it independently. When the full team rolled off in June 2025, incoming analysts were operational on day one. The system has been running independently since March 2026."
+  quote: "The 38 hours recovered per month is not the point. The point is what those hours were redirected to, and that the redirection survived the people who started it."
 
 - slug: ux-research-home-services
   kicker: "Case / Methodology / UX research"
   meta: "National home services franchise / Stanley Steemer / 2021-2022"
   headline: "Telemetry locates. Method diagnoses."
-  body: "Quantitative GA4 telemetry paired with a UserZoom protocol built on Dervin's neutral-questioning. The funnel knew where users dropped off. It could not say what kind of gap they were experiencing."
-  quote: "A winning A/B variant was winning despite a vocabulary problem, not because of clean messaging. Optimising on the quant signal alone would have entrenched the wrong message."
+  body: "Quantitative GA4 telemetry paired with a UserZoom protocol built on Dervin's neutral-questioning. The funnel showed where users dropped off. It could not say what kind of gap they were experiencing."
+  quote: "A winning A/B variant was winning despite a vocabulary problem, not because of clean messaging. Optimizing on the quantitative signal alone would have entrenched the wrong message."
   outcome: "This is the case behind the talk \"Finding the Hypothesis When You Only Know the Question,\" and the methodology piece the Sense-Making references point back to."
