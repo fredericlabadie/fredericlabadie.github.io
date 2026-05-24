@@ -1,167 +1,75 @@
 [1mdiff --git a/work/index.html b/work/index.html[m
-[1mindex 7c67e70..8925770 100644[m
+[1mindex 8925770..e091e71 100644[m
 [1m--- a/work/index.html[m
 [1m+++ b/work/index.html[m
-[36m@@ -158,798 +158,12 @@[m [mextra_css:[m
-         >[m
-       </section>[m
- [m
-[31m-      <div class="bp-section-tag" aria-hidden="true">[m
-[31m-        <span>// 02 / Lens 04 / AI Workflow Design</span><span>1 case</span>[m
-[31m-      </div>[m
-[31m-      <section class="bp-lens-section" id="topic-ai">[m
-[31m-        <div class="bp-lens-copy">[m
-[31m-          <p class="bp-mono bp-accent">Lens 04</p>[m
-[31m-          <h2>AI Workflow Design</h2>[m
-[31m-          <p>Where AI assists, where humans still decide.</p>[m
-[31m-          <p class="bp-lens-roles">[m
-[31m-            For: Product Analytics / UX Telemetry / AI workflow design[m
-[31m-          </p>[m
-[31m-        </div>[m
-[31m-        <div class="bp-case-list">[m
-[31m-          <article class="bp-case-row">[m
-[31m-            <div>[m
-[31m-              <span class="bp-kind-badge bp-badge-case">Case</span>[m
-[31m-              <p class="bp-case-meta">AI workflow design</p>[m
-[31m-              <p class="bp-case-context">[m
-[31m-                Major quick-service restaurant brand / production / V2 in build[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-main">[m
-[31m-              <h3>[m
-[31m-                <a href="ai-alert-triage.html"[m
-[31m-                  >Designing AI workflows that don't outsource the thinking.</a[m
-[31m-                >[m
-[31m-              </h3>[m
-[31m-              <p>[m
-[31m-                Production alert triage compressed 230 raw alerts to 39 posts[m
-[31m-                (83% reduction) across 13-26 April 2026. Caught one critical[m
-[31m-                feature failure that human-only review had missed.[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-tags">[m
-[31m-              <span class="bp-mono">Tags</span>[m
-[31m-              <div class="bp-tag-list">[m
-[31m-                <span class="bp-tag">Claude API</span[m
-[31m-                ><span class="bp-tag">Amplitude</span[m
-[31m-                ><span class="bp-tag">Human-AI collaboration</span[m
-[31m-                ><span class="bp-tag">Alert triage</span>[m
-[31m-              </div>[m
-[31m-              <a class="bp-case-cta" href="ai-alert-triage.html"[m
-[31m-                >Read the case &rarr;</a[m
-[31m-              >[m
-[31m-            </div>[m
-[31m-          </article>[m
-[31m-        </div>[m
-[31m-      </section>[m
+[36m@@ -94,69 +94,7 @@[m [mextra_css:[m
+         <span>// 01 / lens index / seven shapes</span[m
+         ><span>ordered by impact</span>[m
+       </div>[m
 [31m-[m
-[31m-      <div class="bp-section-tag" aria-hidden="true">[m
-[31m-        <span>// 03 / Lens 07 / Data Engineering &amp; Architecture</span[m
-[31m-        ><span>3 cases</span>[m
-[31m-      </div>[m
-[31m-      <section class="bp-lens-section" id="topic-data-eng">[m
-[31m-        <div class="bp-lens-copy">[m
-[31m-          <p class="bp-mono bp-accent">Lens 07</p>[m
+[31m-      <section[m
+[31m-        class="bp-lens-index"[m
+[31m-        id="case-library"[m
+[31m-        aria-label="Case study lens index"[m
+[31m-      >[m
+[31m-        <a class="bp-lens-card" href="#topic-ai"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 04</span[m
+[31m-            ><span class="bp-mono">1 case</span>[m
+[31m-          </div>[m
+[31m-          <h2>AI Workflow Design</h2>[m
+[31m-          <p>Where AI assists, where humans still decide.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-data-eng"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 07</span[m
+[31m-            ><span class="bp-mono">3 cases</span>[m
+[31m-          </div>[m
 [31m-          <h2>Data Engineering &amp; Architecture</h2>[m
-[31m-          <p>[m
-[31m-            Pipeline architecture, cost-thinking, schema design, and the patient[m
-[31m-            work of stepping back to look at the whole system.[m
-[31m-          </p>[m
-[31m-          <p class="bp-lens-roles">[m
-[31m-            For: Data Engineer / Analytics Engineer / Architect[m
-[31m-          </p>[m
-[31m-        </div>[m
-[31m-        <div class="bp-case-list">[m
-[31m-          <article class="bp-case-row">[m
-[31m-            <div>[m
-[31m-              <span class="bp-kind-badge bp-badge-featured">Featured</span>[m
-[31m-              <p class="bp-case-meta">Cost engineering</p>[m
-[31m-              <p class="bp-case-context">[m
-[31m-                State-regulated retail platform / April 2026[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-main">[m
-[31m-              <h3>[m
-[31m-                <a href="pipeline-optimization.html"[m
-[31m-                  >Three raw scans to one. Fifteen CTEs to zero. ~50% cost[m
-[31m-                  reduction.</a[m
-[31m-                >[m
-[31m-              </h3>[m
-[31m-              <p>[m
-[31m-                Redesigned a GA4 to BigQuery pipeline that had grown into a 1.2[m
-[31m-                TB intermediate table and a $112/run cascading CTE chain. Single[m
-[31m-                conditional aggregation replaced repeated scans.[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-tags">[m
-[31m-              <span class="bp-mono">Tags</span>[m
-[31m-              <div class="bp-tag-list">[m
-[31m-                <span class="bp-tag">BigQuery</span[m
-[31m-                ><span class="bp-tag">SQL</span[m
-[31m-                ><span class="bp-tag">DAG redesign</span[m
-[31m-                ><span class="bp-tag">Cost engineering</span>[m
-[31m-              </div>[m
-[31m-              <a class="bp-case-cta" href="pipeline-optimization.html"[m
-[31m-                >Read the case &rarr;</a[m
-[31m-              >[m
-[31m-            </div>[m
-[31m-          </article>[m
-[31m-          <article class="bp-case-row">[m
-[31m-            <div>[m
-[31m-              <span class="bp-kind-badge bp-badge-compact">Compact</span>[m
-[31m-              <p class="bp-case-meta">Pipeline build</p>[m
-[31m-              <p class="bp-case-context">[m
-[31m-                State-regulated retail platform / BigQuery + Dataform[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-main">[m
-[31m-              <h3>[m
-[31m-                <a href="sslp-data-infra.html"[m
-[31m-                  >The pipeline layer behind the mobile instrumentation.</a[m
-[31m-                >[m
-[31m-              </h3>[m
-[31m-              <p>[m
-[31m-                Built the scheduled Dataform pipeline that transforms raw GA4[m
-[31m-                events into analysis-ready BigQuery tables feeding production[m
-[31m-                Looker Studio dashboards.[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-tags">[m
-[31m-              <span class="bp-mono">Tags</span>[m
-[31m-              <div class="bp-tag-list">[m
-[31m-                <span class="bp-tag">BigQuery / GCP</span[m
-[31m-                ><span class="bp-tag">Dataform</span[m
-[31m-                ><span class="bp-tag">Scheduled queries</span>[m
-[31m-              </div>[m
-[31m-              <a class="bp-case-cta" href="sslp-data-infra.html"[m
-[31m-                >Read the case &rarr;</a[m
-[31m-              >[m
-[31m-            </div>[m
-[31m-          </article>[m
-[31m-          <article class="bp-case-row">[m
-[31m-            <div>[m
-[31m-              <span class="bp-kind-badge bp-badge-compact">Compact</span>[m
-[31m-              <p class="bp-case-meta">AI platform analytics</p>[m
-[31m-              <p class="bp-case-context">[m
-[31m-                Enterprise AI copilot platform / agency-client engagement[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-main">[m
-[31m-              <h3>[m
-[31m-                <a href="copilot-pipeline.html"[m
-[31m-                  >Front-end behavioural signal for a commercial Claude-powered[m
-[31m-                  platform.</a[m
-[31m-                >[m
-[31m-              </h3>[m
-[31m-              <p>[m
-[31m-                Designed and delivered the full GA4 event collection and[m
-[31m-                BigQuery export pipeline for an enterprise AI copilot platform[m
-[31m-                that had only backend metering for billing.[m
-[31m-              </p>[m
-[31m-            </div>[m
-[31m-            <div class="bp-case-tags">[m
-[31m-              <span class="bp-mono">Tags</span>[m
-[31m-              <div class="bp-tag-list">[m
-[31m-                <span class="bp-tag">GA4 to BigQuery</span[m
-[31m-                ><span class="bp-tag">Looker Studio</span[m
-[31m-                >
+[31m-          <p>Pipeline architecture, cost-thinking, schema design.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-instrumentation"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 02</span[m
+[31m-            ><span class="bp-mono">4 cases</span>[m
+[31m-          </div>[m
+[31m-          <h2>Instrumentation &amp; Cross-Platform Telemetry</h2>[m
+[31m-          <p>The technical layer the measurement stack runs on.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-adoption"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 05</span[m
+[31m-            ><span class="bp-mono">1 case</span>[m
+[31m-          </div>[m
+[31m-          <h2>Adoption &amp; Cultural Transition</h2>[m
+[31m-          <p>The system surviving the people who built it.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-marketing"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 06</span[m
+[31m-            ><span class="bp-mono">5 cases</span>[m
+[31m-          </div>[m
+[31m-          <h2>Marketing Analytics &amp; Lifecycle</h2>[m
+[31m-          <p>CDP architecture, identity stitching, lifecycle automation.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-experimentation"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 03</span[m
+[31m-            ><span class="bp-mono">3 cases</span>[m
+[31m-          </div>[m
+[31m-          <h2>Experimentation &amp; Release Measurement</h2>[m
+[31m-          <p>Measurement frameworks before the change ships.</p></a[m
+[31m-        >[m
+[31m-        <a class="bp-lens-card" href="#topic-question"[m
+[31m-          ><div class="bp-lens-card-top">[m
+[31m-            <span class="bp-mono bp-accent">Lens 01</span[m
+[31m-            ><span class="bp-mono">3 cases</span>[m
+[31m-          </div>[m
+[31m-          <h2>Question Formulation &amp; Discovery</h2>[m
+[31m-          <p>The methodology underneath everything else.</p></a[m
+[31m-        >[m
+[31m-      </section>[m
+[32m+[m[32m      {% include work-lens-index.html %}[m
+ [m
+       {% for lens in site.data.lenses %}[m
+         {% assign section_index = forloop.index | plus: 1 | prepend: '0' | slice: -2, 2 %}[m

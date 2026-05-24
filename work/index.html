@@ -94,69 +94,7 @@ extra_css:
         <span>// 01 / lens index / seven shapes</span
         ><span>ordered by impact</span>
       </div>
-
-      <section
-        class="bp-lens-index"
-        id="case-library"
-        aria-label="Case study lens index"
-      >
-        <a class="bp-lens-card" href="#topic-ai"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 04</span
-            ><span class="bp-mono">1 case</span>
-          </div>
-          <h2>AI Workflow Design</h2>
-          <p>Where AI assists, where humans still decide.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-data-eng"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 07</span
-            ><span class="bp-mono">3 cases</span>
-          </div>
-          <h2>Data Engineering &amp; Architecture</h2>
-          <p>Pipeline architecture, cost-thinking, schema design.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-instrumentation"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 02</span
-            ><span class="bp-mono">4 cases</span>
-          </div>
-          <h2>Instrumentation &amp; Cross-Platform Telemetry</h2>
-          <p>The technical layer the measurement stack runs on.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-adoption"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 05</span
-            ><span class="bp-mono">1 case</span>
-          </div>
-          <h2>Adoption &amp; Cultural Transition</h2>
-          <p>The system surviving the people who built it.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-marketing"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 06</span
-            ><span class="bp-mono">5 cases</span>
-          </div>
-          <h2>Marketing Analytics &amp; Lifecycle</h2>
-          <p>CDP architecture, identity stitching, lifecycle automation.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-experimentation"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 03</span
-            ><span class="bp-mono">3 cases</span>
-          </div>
-          <h2>Experimentation &amp; Release Measurement</h2>
-          <p>Measurement frameworks before the change ships.</p></a
-        >
-        <a class="bp-lens-card" href="#topic-question"
-          ><div class="bp-lens-card-top">
-            <span class="bp-mono bp-accent">Lens 01</span
-            ><span class="bp-mono">3 cases</span>
-          </div>
-          <h2>Question Formulation &amp; Discovery</h2>
-          <p>The methodology underneath everything else.</p></a
-        >
-      </section>
+      {% include work-lens-index.html %}
 
       {% for lens in site.data.lenses %}
         {% assign section_index = forloop.index | plus: 1 | prepend: '0' | slice: -2, 2 %}
