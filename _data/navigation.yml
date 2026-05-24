@@ -1,0 +1,23 @@
+brand: fredericlabadie.com
+links:
+  - key: home
+    label: home
+    url: /
+  - key: work
+    label: work
+    url: /work/
+  - key: thoughts
+    label: current meditations
+    url: /thoughts/
+  - key: about
+    label: about
+    url: /about/
+  - key: recruiters
+    label: recruiters
+    url: /recruiters/
+  - key: credentials
+    label: credentials
+    url: /credentials/
+  - key: contact
+    label: contact
+    url: /contact/
