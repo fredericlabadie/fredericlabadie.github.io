@@ -54,7 +54,9 @@
   receipts:
     - value: "50%+"
       label: "known candidate drop-off"
-    - value: "43%example step-four abandonment surfaced 2"
+    - value: "43%"
+      label: "example step-four abandonment surfaced"
+    - value: "2"
       label: "web engineers partnered"
     - value: "1"
       label: "manual Excel workflow replaced"
@@ -136,6 +138,8 @@
       label: "domains migrated under deadline"
     - value: "48 hrs"
       label: "analytics live by Monday"
+    - value: "Rush fee"
+      label: "paid — implementation worth protecting"
 - slug: cross-channel-identity
   title: "Connecting email behaviour to in-app sessions"
   url: "/work/cross-channel-identity.html"
@@ -174,6 +178,8 @@
       label: "platform types (Shopify + WordPress)"
     - value: "&lt;2 wks"
       label: "access to agency handoff"
+    - value: "Same day"
+      label: "post-launch data question resolved"
 - slug: mqsr-dashboards
   title: "A campaign dashboard, a schema decomposition, and a North Star that holds"
   url: "/work/mqsr-dashboards.html"
@@ -348,7 +354,9 @@
   receipts:
     - value: "30+"
       label: "tracking tickets shipped"
-    - value: "iOS + Androidcross-platform parity audited GA4"
+    - value: "iOS + Android"
+      label: "cross-platform parity audited"
+    - value: "GA4"
       label: "e-commerce taxonomy live"
     - value: "TrustArc"
       label: "consent built in"
