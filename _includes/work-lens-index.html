@@ -1,0 +1,17 @@
+<section
+  class="bp-lens-index"
+  id="case-library"
+  aria-label="Case study lens index"
+>
+  {% for lens in site.data.lenses %}
+    {% assign lens_cases = site.data.cases | where: 'lens_number', lens.number %}
+    <a class="bp-lens-card" href="#{{ lens.id }}">
+      <div class="bp-lens-card-top">
+        <span class="bp-mono bp-accent">Lens {{ lens.number }}</span>
+        <span class="bp-mono">{{ lens_cases.size }} {% if lens_cases.size == 1 %}case{% else %}cases{% endif %}</span>
+      </div>
+      <h2>{{ lens.title }}</h2>
+      <p>{{ lens.summary }}</p>
+    </a>
+  {% endfor %}
+</section>
