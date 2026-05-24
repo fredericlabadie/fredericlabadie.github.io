@@ -1,8 +1,7 @@
-// Universal site navigation
-// Static GitHub Pages has no server-side include. Each page keeps its existing
-// nav as a no-JS fallback, then this renderer replaces it with one shared nav
-// object so labels, order, active states, links, and visual treatment stay
-// consistent across the site.
+// Universal site navigation bridge
+// Jekyll pages should use _includes/site-nav.html at build time. Older static
+// pages still keep copied nav blocks as fallbacks; this bridge replaces those
+// legacy navs with the same shared nav definition until every page is migrated.
 const SITE_NAV = {
   brand: 'fredericlabadie.com',
   links: [
@@ -120,12 +119,12 @@ function injectSiteNavStyles() {
   document.head.appendChild(style);
 }
 
-function renderSiteNav() {
+function renderSiteNavBridge() {
   const fallbackNavList = document.getElementById('primary-nav');
   if (!fallbackNavList) return;
 
   const fallbackNav = fallbackNavList.closest('nav');
-  if (!fallbackNav) return;
+  if (!fallbackNav || fallbackNav.classList.contains('bp-site-nav')) return;
 
   injectSiteNavStyles();
 
@@ -168,7 +167,7 @@ function renderSiteNav() {
   fallbackNav.replaceWith(nav);
 }
 
-renderSiteNav();
+renderSiteNavBridge();
 
 // Mobile nav toggle for older fallback navs only.
 const toggle = document.querySelector('.nav-toggle');
