@@ -1,233 +1,206 @@
 [1mdiff --git a/about/index.html b/about/index.html[m
-[1mindex 4de7d88..ec7f45f 100644[m
+[1mindex ec7f45f..d4ef5fa 100644[m
 [1m--- a/about/index.html[m
 [1m+++ b/about/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: about[m
-[32m+[m[32mfooter_label: About[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -475,12 +476,7 @@[m [mnav_key: about[m
-         </div>[m
+[36m@@ -477,9 +477,6 @@[m [mfooter_label: About[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>About / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/contact/index.html b/contact/index.html[m
-[1mindex 5130576..b47c849 100644[m
+[1mindex b47c849..64eded0 100644[m
 [1m--- a/contact/index.html[m
 [1m+++ b/contact/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: contact[m
-[32m+[m[32mfooter_label: Contact[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -192,12 +193,7 @@[m [mnav_key: contact[m
-         </div>[m
+[36m@@ -194,9 +194,6 @@[m [mfooter_label: Contact[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Contact / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/credentials/index.html b/credentials/index.html[m
-[1mindex 9c531fa..ee916b1 100644[m
+[1mindex ee916b1..3d990cd 100644[m
 [1m--- a/credentials/index.html[m
 [1m+++ b/credentials/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: credentials[m
-[32m+[m[32mfooter_label: Credentials[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -561,12 +562,7 @@[m [mnav_key: credentials[m
-         </div>[m
+[36m@@ -563,9 +563,6 @@[m [mfooter_label: Credentials[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Credentials / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/index.html b/index.html[m
-[1mindex 2af2a0b..ccb2184 100644[m
+[1mindex ccb2184..a3a2712 100644[m
 [1m--- a/index.html[m
 [1m+++ b/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: home[m
-[32m+[m[32mfooter_label: Homepage[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -567,14 +568,7 @@[m [mWHERE  client = 'sslp_retail'</code></pre>[m
-         </div>[m
+[36m@@ -569,9 +569,6 @@[m [mWHERE  client = 'sslp_retail'</code></pre>[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="footer bp-footer">[m
-[31m-      <div class="footer-inner">[m
-[31m-        <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-        <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-        <span>Homepage / noindex by design</span>[m
-[31m-      </div>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/recruiters/index.html b/recruiters/index.html[m
-[1mindex a2b7691..f518b13 100644[m
+[1mindex f518b13..d2161bf 100644[m
 [1m--- a/recruiters/index.html[m
 [1m+++ b/recruiters/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: recruiters[m
-[32m+[m[32mfooter_label: Recruiter quick scan[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -746,12 +747,7 @@[m [mnav_key: recruiters[m
-         </div>[m
+[36m@@ -748,9 +748,6 @@[m [mfooter_label: Recruiter quick scan[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Recruiter quick scan / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="/js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="/js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/thoughts/index.html b/thoughts/index.html[m
-[1mindex b4adf03..774bb83 100644[m
+[1mindex 774bb83..9ad6ca7 100644[m
 [1m--- a/thoughts/index.html[m
 [1m+++ b/thoughts/index.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: thoughts[m
-[32m+[m[32mfooter_label: Current Meditations[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -292,12 +293,7 @@[m [mnav_key: thoughts[m
-         </div>[m
+[36m@@ -294,9 +294,6 @@[m [mfooter_label: Current Meditations[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Current Meditations / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/work/ai-alert-triage.html b/work/ai-alert-triage.html[m
-[1mindex 78e5fb2..5e6f302 100644[m
+[1mindex 5e6f302..6a51830 100644[m
 [1m--- a/work/ai-alert-triage.html[m
 [1m+++ b/work/ai-alert-triage.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: work[m
-[32m+[m[32mfooter_label: Case study[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -356,12 +357,7 @@[m [mnav_key: work[m
-         >[m
+[36m@@ -358,9 +358,6 @@[m [mfooter_label: Case study[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Case study / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/work/braze-automation.html b/work/braze-automation.html[m
-[1mindex 32a2e0f..fcd6cec 100644[m
+[1mindex fcd6cec..8fd659d 100644[m
 [1m--- a/work/braze-automation.html[m
 [1m+++ b/work/braze-automation.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: work[m
-[32m+[m[32mfooter_label: Case study[m
- ---[m
- <!DOCTYPE html>[m
- <html lang="en">[m
-[36m@@ -163,12 +164,7 @@[m [mnav_key: work[m
-       <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>[m
+[36m@@ -165,9 +165,6 @@[m [mfooter_label: Case study[m
      </section>[m
    </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-  <footer class="bp-footer">[m
-[31m-    <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-    <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-    <span>Case study / static portfolio</span>[m
-[31m-  </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-   <script src="../js/main.js"></script>[m
-   <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-  <script src="../js/main.js"></script>[m
+[31m-  <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-  <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+ </body>[m
+ </html>[m
 [1mdiff --git a/work/candidate-funnel.html b/work/candidate-funnel.html[m
-[1mindex 4dfbd05..f6d288c 100644[m
+[1mindex f6d288c..aa587ab 100644[m
 [1m--- a/work/candidate-funnel.html[m
 [1m+++ b/work/candidate-funnel.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
- nav_key: work[m
-[32m+[m[32mfooter_label: Case study[m
- ---[m
- <!doctype html>[m
- <html lang="en">[m
-[36m@@ -394,12 +395,7 @@[m [mnav_key: work[m
-         >[m
+[36m@@ -396,9 +396,6 @@[m [mfooter_label: Case study[m
        </section>[m
      </main>[m
+     {% include site-footer.html %}[m
 [31m-[m
-[31m-    <footer class="bp-footer">[m
-[31m-      <span>&copy; 2026 Frederic Labadie / Amsterdam</span>[m
-[31m-      <span>Plain HTML + CSS / GitHub Pages</span>[m
-[31m-      <span>Case study / static portfolio</span>[m
-[31m-    </footer>[m
-[32m+[m[32m    {% include site-footer.html %}[m
- [m
-     <script src="../js/main.js"></script>[m
-     <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
 [1mdiff --git a/work/cdp-migration.html b/work/cdp-migration.html[m
-[1mindex 50d1d93..7fc976f 100644[m
+[1mindex 7fc976f..a0a59d1 100644[m
 [1m--- a/work/cdp-migration.html[m
 [1m+++ b/work/cdp-migration.html[m
-[36m@@ -1,5 +1,6 @@[m
- ---[m
+[36m@@ -168,9 +168,6 @@[m [mfooter_label: Case study[m
+     </section>[m
+   </main>[m
+     {% include site-footer.html %}[m
+[31m-[m
+[31m-  <script src="../js/main.js"></script>[m
+[31m-  <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-  <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+ </body>[m
+ </html>[m
+[1mdiff --git a/work/content-brand-ga4.html b/work/content-brand-ga4.html[m
+[1mindex a5abbd2..1d27023 100644[m
+[1m--- a/work/content-brand-ga4.html[m
+[1m+++ b/work/content-brand-ga4.html[m
+[36m@@ -405,9 +405,6 @@[m [mfooter_label: Case study[m
+       </section>[m
+     </main>[m
+     {% include site-footer.html %}[m
+[31m-[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
+[1mdiff --git a/work/copilot-pipeline.html b/work/copilot-pipeline.html[m
+[1mindex eff2842..d165688 100644[m
+[1m--- a/work/copilot-pipeline.html[m
+[1m+++ b/work/copilot-pipeline.html[m
+[36m@@ -165,9 +165,6 @@[m [mfooter_label: Case study[m
+     </section>[m
+   </main>[m
+     {% include site-footer.html %}[m
+[31m-[m
+[31m-  <script src="../js/main.js"></script>[m
+[31m-  <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-  <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+ </body>[m
+ </html>[m
+[1mdiff --git a/work/creator-brand-dashboard.html b/work/creator-brand-dashboard.html[m
+[1mindex 5404514..65c43b2 100644[m
+[1m--- a/work/creator-brand-dashboard.html[m
+[1m+++ b/work/creator-brand-dashboard.html[m
+[36m@@ -414,9 +414,6 @@[m [mfooter_label: Case study[m
+       </section>[m
+     </main>[m
+     {% include site-footer.html %}[m
+[31m-[m
+[31m-    <script src="../js/main.js"></script>[m
+[31m-    <script type="module" src="/js/amplitude-init.js"></script>[m
+[31m-    <script type="module" src="/js/analytics.js"></script>[m
+[32m+[m[32m    {% include site-scripts.html %}[m
+   </body>[m
+ </html>[m
+[1mdiff --git a/work/cross-channel-identity.html b/work/cross-channel-identity.html[m
+[1mindex e319bc2..73ad80e 100644[m
+[1m--- a/work/cross-channel-identity.html[m
+[1m+++ b/work/cross-channel-identity.html[m
+[36m@@ -165,9 +165,6 @@[m [mfooter_label: Case study[m
+     </section>[m
+   </main>[m
+     {% include site-footer.html %}[m
+[31m-[m
+[31m-  <script src="../js/main.js"></script>[m
+[31m-  <script type="module" src="/js/amplitude-init.js"></scr
