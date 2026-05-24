@@ -1,0 +1,29 @@
+- slug: ai-alert-triage
+  category: "AI workflow"
+  headline: "AI Alert Triage: 230 alerts to 39 posts."
+  summary: "Production V1 reduced alert noise by 83% and caught one critical issue human-only review had missed."
+
+- slug: pipeline-optimization
+  category: "Data engineering"
+  headline: "Pipeline Optimization: ~50% BigQuery cost reduction."
+  summary: "Three raw scans to one, 15+ CTEs to zero, 1.2 TB intermediate table retired."
+
+- slug: sslp-enablement
+  category: "Adoption"
+  headline: "SSLP Enablement: 38 analyst hours/month recovered."
+  summary: "Three-session handoff; zero infrastructure ramp-up after client team turnover."
+
+- slug: sslp-mobile
+  category: "Product telemetry"
+  headline: "SSLP Mobile: 30+ tracking tickets shipped from scratch."
+  summary: "Cross-platform UX telemetry, GA4 e-commerce taxonomy, iOS/Android parity, and consent built in."
+
+- slug: cdp-migration
+  category: "Marketing analytics"
+  headline: "CDP Migration: Responsys to Bloomreach."
+  summary: "Zero campaign downtime, redesigned data model, +10.8% CTR YoY and +5.8% open rate YoY."
+
+- slug: shadow-it
+  category: "UX research"
+  headline: "Shadow IT Discovery: workaround became product capability."
+  summary: "Sense-Making conversation and transaction anomaly surfaced a missing compatibility workflow."
