@@ -1,137 +1,47 @@
 ---
 nav_key: work
-footer_label: Case study
+footer_label: Archived case
 layout: case
-title: "Email telemetry that stops being a copy-paste job"
-description: "A Python automation against the Braze REST API that eliminates roughly two hours per month of manual campaign-metric extraction using dynamic campaign-name matching and exclusion rules."
-og_title: "Email telemetry that stops being a copy-paste job &mdash; case study"
-og_description: "Python automation against the Braze REST API with dynamic campaign-name matching."
+title: "Archived supporting case: Braze reporting automation"
+description: "Archived supporting case. This Braze REST API automation proof point has been rolled into the BI Enablement case."
+robots: "noindex, nofollow"
+og_title: "Archived supporting case: Braze reporting automation"
+og_description: "This supporting case has been rolled into the BI Enablement case."
 og_url: "https://fredericlabadie.com/work/braze-automation.html"
-twitter_title: "Email telemetry that stops being a copy-paste job &mdash; case study"
-twitter_description: "Python automation against the Braze REST API with dynamic campaign-name matching."
+twitter_title: "Archived supporting case: Braze reporting automation"
+twitter_description: "This supporting case has been rolled into the BI Enablement case."
 ---
     <header class="bp-case-hero">
       <div>
-        <p class="bp-case-kicker bp-case-accent">// Case study / Lens 06 / Marketing Analytics &amp; Lifecycle</p>
-        <h1>Email telemetry that stops being a copy-paste job.</h1>
-        <p class="bp-case-dek">A Python automation against the Braze REST API that survives campaign edits, clone rebuilds, and exclusion rules because it resolves campaigns dynamically instead of hard-coding IDs.</p>
+        <p class="bp-case-kicker bp-case-accent">// Archived supporting case / noindex</p>
+        <h1>Braze reporting automation has been rolled into BI Enablement.</h1>
+        <p class="bp-case-dek">This page is kept as an internal archive/reference only. The Braze REST API automation proof point now lives inside the primary BI Enablement case, where it supports the larger reporting-layer and handoff story.</p>
       </div>
-      <aside class="bp-case-hero-panel" aria-label="Case summary">
-        <div class="bp-case-panel-head"><span>Case file</span><span>Static / anonymised</span></div>
-        <div class="bp-case-panel-row"><span>Client context</span><p>State-regulated retail platform / demand marketing reporting operations</p></div>
-        <div class="bp-case-panel-row"><span>First delivery</span><strong>May 26</strong></div>
-        <div class="bp-case-panel-row"><span>Role</span><p>Python automation, Braze REST API, Google Sheets output, dynamic matching logic, reporting operations</p></div>
+      <aside class="bp-case-hero-panel" aria-label="Archive summary">
+        <div class="bp-case-panel-head"><span>Status</span><span>Archived</span></div>
+        <div class="bp-case-panel-row"><span>Primary case</span><p><a href="sslp-enablement.html">The reporting layer survived the people who built it.</a></p></div>
+        <div class="bp-case-panel-row"><span>Archive reason</span><p>Useful proof point, but too small as a standalone primary case.</p></div>
+        <div class="bp-case-panel-row"><span>SEO</span><strong>noindex, nofollow</strong></div>
       </aside>
     </header>
 
-    <section class="bp-case-receipts" aria-label="Case proof points">
-      <article><strong>~2h</strong><span>saved per month</span></article>
-      <article><strong>0</strong><span>Braze UI clicks per cycle</span></article>
-      <article><strong>5</strong><span>campaign metrics written</span></article>
-      <article><strong>May 26</strong><span>first automated delivery</span></article>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 01 / thesis</span><span>automation that survives edits</span></div>
     <section class="bp-case-content" id="case">
       <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Core argument</p>
-        <h2>The difference between a script and an operating system is whether it survives normal work.</h2>
-        <p>The hard part was not pulling Braze metrics. It was designing the matching rules so the automation kept working after campaigns were cloned, rebuilt, renamed, or excluded.</p>
+        <p class="bp-case-mono bp-case-accent">Archived note</p>
+        <h2>Preserve the detail, not the standalone page.</h2>
       </aside>
       <div class="bp-case-main">
         <article class="bp-case-proof-panel">
-          <p class="bp-case-mono bp-case-accent">What happened</p>
-          <h3>Manual monthly extraction became zero-click reporting.</h3>
-          <p>A four-person demand-marketing team went from roughly <strong>two hours of manual Braze data extraction per month</strong> to <strong>zero Braze UI clicks per cycle</strong>. A Python automation against the Braze REST API now writes send volume, open rate, click rate, unsubscribe rate, and revenue attribution directly to the team's Google Sheet template.</p>
-          <p>The key engineering decision was <strong>dynamic campaign-name matching with explicit exclusion rules</strong>, rather than hard-coded campaign IDs. That is what lets the automation survive campaign clones and rebuilds.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Context</p>
-          <h3>The recurring task was small enough to ignore and frequent enough to matter.</h3>
-          <p>The demand-marketing team spent roughly two hours per month extracting campaign metrics from Braze for the monthly readout. The time cost was not huge, but the task repeated, pulled skilled attention into copy-paste work, and introduced fragility into a recurring reporting cycle.</p>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Risk</p>
-          <h3>Hard-coded campaign IDs would have made the automation brittle.</h3>
-          <p>Campaigns were often cloned or rebuilt. Any automation tied to fixed campaign IDs could silently fail or drift from the intended reporting set. A known-noisy luxury form-submission campaign also needed to be excluded from aggregates without manual triage every cycle.</p>
+          <p class="bp-case-mono bp-case-accent">Supporting proof retained</p>
+          <h3>Braze automation remains part of the larger enablement story.</h3>
+          <p>The preserved proof point: a Braze REST API automation with dynamic campaign-name matching, explicit exclusion rules, Google Sheets output, roughly two hours saved per month, and zero Braze UI clicks per reporting cycle.</p>
+          <p>That detail is now included in the primary BI Enablement page instead of being presented as a separate flagship case.</p>
         </article>
       </div>
     </section>
 
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 02 / automation design</span><span>Braze API / matching rules / Google Sheets</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Build layer</p>
-        <h2>The durable part was the campaign-resolution logic.</h2>
-        <p>Automation quality depends less on the API call and more on how the script handles normal marketing operations.</p>
-      </aside>
-      <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="Braze automation architecture diagram">
-          <figcaption><span>fig. 01 / reporting automation</span><span>Braze REST API to Google Sheets</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Source</span><strong>Braze</strong><p>Campaign performance data pulled from the REST API instead of the UI.</p></div>
-            <div><span>Logic</span><strong>Match + exclude</strong><p>Dynamic campaign-name matching resolves IDs and explicit rules remove known-noisy campaign patterns.</p></div>
-            <div><span>Output</span><strong>Sheets</strong><p>Metrics written directly to the team's Google Sheet tab, ready for the monthly template.</p></div>
-          </div>
-        </figure>
-
-        <div class="bp-case-gates" aria-label="Automation components">
-          <article class="bp-case-gate"><span class="bp-case-flow-label">1</span><strong>Campaign discovery</strong><p>Resolve campaigns by name pattern rather than static ID so cloned and rebuilt campaigns continue to map correctly.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">2</span><strong>Exclusion rules</strong><p>Explicitly exclude known-noisy luxury form-submission campaigns from aggregate reporting.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">3</span><strong>Metric extraction</strong><p>Pull send volume, open rate, click rate, unsubscribe rate, and revenue attribution from the Braze REST API.</p></article>
-          <article class="bp-case-gate"><span class="bp-case-flow-label">4</span><strong>Sheet writeback</strong><p>Write the reporting output directly into the Google Sheet tab the team already used for the monthly readout.</p></article>
-        </div>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Action</p>
-          <h3>The script was designed around campaign-maintenance reality.</h3>
-          <p>I shipped a Python automation against the Braze REST API with dynamic campaign-ID resolution by name pattern, explicit exclusion rules, and Google Sheets output. The automation writes the recurring readout metrics directly into the team's existing reporting template.</p>
-        </article>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 03 / result</span><span>time recovered / no UI clicks / durable logic</span></div>
-    <section class="bp-case-content">
-      <aside class="bp-case-sidebar">
-        <p class="bp-case-mono bp-case-accent">Result</p>
-        <h2>The win was attention, not just minutes.</h2>
-        <p>Two hours a month is modest. Removing the recurring manual task gave the team one fewer reporting chore to remember, repeat, and verify.</p>
-      </aside>
-      <div class="bp-case-main">
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Outcome</p>
-          <h3>Monthly campaign reporting became a generated output.</h3>
-          <ul>
-            <li><strong>~2 hours saved per month</strong> for the four-person demand-marketing team.</li>
-            <li><strong>Zero Braze UI clicks required</strong> per reporting cycle.</li>
-            <li><strong>Five recurring metrics</strong> written to the monthly sheet: send volume, open rate, click rate, unsubscribe rate, and revenue attribution.</li>
-            <li><strong>First automated delivery</strong> shipped on May 26.</li>
-            <li><strong>Dynamic matching rules</strong> reduce the risk of silent report breakage when campaigns are cloned or rebuilt.</li>
-          </ul>
-        </article>
-
-        <article class="bp-case-block">
-          <p class="bp-case-mono bp-case-accent">Design lesson</p>
-          <h3>Small automations still need product thinking.</h3>
-          <p>A script that saves two hours once is useful. A script that keeps saving those hours after the campaign library changes is an operational asset. The engineering decision that mattered was designing for the way marketers actually maintain campaigns.</p>
-        </article>
-
-        <div class="bp-case-tags" aria-label="Technologies and methods">
-          <span class="bp-case-tag">Braze REST API</span>
-          <span class="bp-case-tag">Python</span>
-          <span class="bp-case-tag">Google Sheets API</span>
-          <span class="bp-case-tag">Reporting ops</span>
-          <span class="bp-case-tag">Lifecycle analytics</span>
-          <span class="bp-case-tag">Automation design</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="bp-case-section-tag" aria-hidden="true"><span>// 04 / next</span><span>case library / adjacent evidence / contact</span></div>
     <section class="bp-case-next">
-      <a href="../work/"><span class="bp-case-mono bp-case-accent">More cases</span><strong>Full case library.</strong><span>Eighteen cases across seven lenses: question formulation, instrumentation, experimentation, AI workflows, adoption, marketing analytics, and data engineering.</span></a>
-      <a href="cross-channel-identity.html"><span class="bp-case-mono bp-case-accent">Adjacent case</span><strong>Connecting email behaviour to in-app sessions.</strong><span>The identity layer that connects CRM behaviour to product sessions and executive readouts.</span></a>
-      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Get in touch</span><strong>Contact and context.</strong><span>Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any other in detail.</span></a>
+      <a href="sslp-enablement.html"><span class="bp-case-mono bp-case-accent">Primary case</span><strong>The reporting layer survived the people who built it.</strong><span>BI enablement, BigQuery reporting infrastructure, Braze automation support, handoff, and BigQuery MCP follow-on.</span></a>
+      <a href="../work/"><span class="bp-case-mono bp-case-accent">Back to Work</span><strong>Primary case library.</strong><span>Sixteen primary cases across seven categories.</span></a>
+      <a href="../contact/"><span class="bp-case-mono bp-case-accent">Contact</span><strong>Context and follow-up.</strong><span>Happy to walk through the archived detail if useful.</span></a>
     </section>
