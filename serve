@@ -1,75 +1,93 @@
-[1mdiff --git a/work/index.html b/work/index.html[m
-[1mindex 8925770..e091e71 100644[m
-[1m--- a/work/index.html[m
-[1m+++ b/work/index.html[m
-[36m@@ -94,69 +94,7 @@[m [mextra_css:[m
-         <span>// 01 / lens index / seven shapes</span[m
-         ><span>ordered by impact</span>[m
-       </div>[m
-[31m-[m
-[31m-      <section[m
-[31m-        class="bp-lens-index"[m
-[31m-        id="case-library"[m
-[31m-        aria-label="Case study lens index"[m
-[31m-      >[m
-[31m-        <a class="bp-lens-card" href="#topic-ai"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 04</span[m
-[31m-            ><span class="bp-mono">1 case</span>[m
+[1mdiff --git a/recruiters/index.html b/recruiters/index.html[m
+[1mindex b35ab07..9bd49e6 100644[m
+[1m--- a/recruiters/index.html[m
+[1m+++ b/recruiters/index.html[m
+[36m@@ -248,85 +248,12 @@[m [mextra_css:[m
+           </p>[m
+         </aside>[m
+         <div class="bp-rec-main">[m
+[31m-          <div class="bp-rec-case-list">[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div><p class="bp-rec-mono bp-rec-accent">AI workflow</p></div>[m
+[31m-              <div>[m
+[31m-                <h3>AI Alert Triage: 230 alerts to 39 posts.</h3>[m
+[31m-                <p>[m
+[31m-                  Production V1 reduced alert noise by 83% and caught one[m
+[31m-                  critical issue human-only review had missed.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/ai-alert-triage.html">Read case</a>[m
+[31m-            </article>[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div>[m
+[31m-                <p class="bp-rec-mono bp-rec-accent">Data engineering</p>[m
+[31m-              </div>[m
+[31m-              <div>[m
+[31m-                <h3>Pipeline Optimization: ~50% BigQuery cost reduction.</h3>[m
+[31m-                <p>[m
+[31m-                  Three raw scans to one, 15+ CTEs to zero, 1.2 TB intermediate[m
+[31m-                  table retired.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/pipeline-optimization.html">Read case</a>[m
+[31m-            </article>[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div><p class="bp-rec-mono bp-rec-accent">Adoption</p></div>[m
+[31m-              <div>[m
+[31m-                <h3>SSLP Enablement: 38 analyst hours/month recovered.</h3>[m
+[31m-                <p>[m
+[31m-                  Three-session handoff; zero infrastructure ramp-up after[m
+[31m-                  client team turnover.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/sslp-enablement.html">Read case</a>[m
+[31m-            </article>[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div>[m
+[31m-                <p class="bp-rec-mono bp-rec-accent">Product telemetry</p>[m
+[31m-              </div>[m
+[31m-              <div>[m
+[31m-                <h3>SSLP Mobile: 30+ tracking tickets shipped from scratch.</h3>[m
+[31m-                <p>[m
+[31m-                  Cross-platform UX telemetry, GA4 e-commerce taxonomy,[m
+[31m-                  iOS/Android parity, and consent built in.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/sslp-mobile.html">Read case</a>[m
+[31m-            </article>[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div>[m
+[31m-                <p class="bp-rec-mono bp-rec-accent">Marketing analytics</p>[m
+[31m-              </div>[m
+[31m-              <div>[m
+[31m-                <h3>CDP Migration: Responsys to Bloomreach.</h3>[m
+[31m-                <p>[m
+[31m-                  Zero campaign downtime, redesigned data model, +10.8% CTR YoY[m
+[31m-                  and +5.8% open rate YoY.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/cdp-migration.html">Read case</a>[m
+[31m-            </article>[m
+[31m-            <article class="bp-rec-case">[m
+[31m-              <div><p class="bp-rec-mono bp-rec-accent">UX research</p></div>[m
+[31m-              <div>[m
+[31m-                <h3>[m
+[31m-                  Shadow IT Discovery: workaround became product capability.[m
+[31m-                </h3>[m
+[31m-                <p>[m
+[31m-                  Sense-Making conversation and transaction anomaly surfaced a[m
+[31m-                  missing compatibility workflow.[m
+[31m-                </p>[m
+[31m-              </div>[m
+[31m-              <a href="/work/shadow-it.html">Read case</a>[m
+[31m-            </article>[m
 [31m-          </div>[m
-[31m-          <h2>AI Workflow Design</h2>[m
-[31m-          <p>Where AI assists, where humans still decide.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-data-eng"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 07</span[m
-[31m-            ><span class="bp-mono">3 cases</span>[m
-[31m-          </div>[m
-[31m-          <h2>Data Engineering &amp; Architecture</h2>[m
-[31m-          <p>Pipeline architecture, cost-thinking, schema design.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-instrumentation"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 02</span[m
-[31m-            ><span class="bp-mono">4 cases</span>[m
-[31m-          </div>[m
-[31m-          <h2>Instrumentation &amp; Cross-Platform Telemetry</h2>[m
-[31m-          <p>The technical layer the measurement stack runs on.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-adoption"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 05</span[m
-[31m-            ><span class="bp-mono">1 case</span>[m
-[31m-          </div>[m
-[31m-          <h2>Adoption &amp; Cultural Transition</h2>[m
-[31m-          <p>The system surviving the people who built it.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-marketing"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 06</span[m
-[31m-            ><span class="bp-mono">5 cases</span>[m
-[31m-          </div>[m
-[31m-          <h2>Marketing Analytics &amp; Lifecycle</h2>[m
-[31m-          <p>CDP architecture, identity stitching, lifecycle automation.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-experimentation"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 03</span[m
-[31m-            ><span class="bp-mono">3 cases</span>[m
-[31m-          </div>[m
-[31m-          <h2>Experimentation &amp; Release Measurement</h2>[m
-[31m-          <p>Measurement frameworks before the change ships.</p></a[m
-[31m-        >[m
-[31m-        <a class="bp-lens-card" href="#topic-question"[m
-[31m-          ><div class="bp-lens-card-top">[m
-[31m-            <span class="bp-mono bp-accent">Lens 01</span[m
-[31m-            ><span class="bp-mono">3 cases</span>[m
-[31m-          </div>[m
-[31m-          <h2>Question Formulation &amp; Discovery</h2>[m
-[31m-          <p>The methodology underneath everything else.</p></a[m
-[31m-        >[m
-[31m-      </section>[m
-[32m+[m[32m      {% include work-lens-index.html %}[m
+[32m+[m[32m        <div class="bp-rec-main">[m
+[32m+[m[32m          {% include recruiter-proof-cases.html %}[m
+         </div>[m
+       </section>[m
  [m
-       {% for lens in site.data.lenses %}[m
-         {% assign section_index = forloop.index | plus: 1 | prepend: '0' | slice: -2, 2 %}[m
+[32m+[m
+       <div class="bp-rec-section-tag" aria-hidden="true">[m
+         <span>// 04 / stack</span[m
+         ><span>what to match against job descriptions</span>[m
