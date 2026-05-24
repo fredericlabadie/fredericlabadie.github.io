@@ -92,41 +92,7 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
             </div>
           </aside>
         </div>
-
-        <div class="bp-receipts" aria-label="Selected proof points">
-          <article class="bp-receipt">
-            <p>alert noise</p>
-            <strong>83%</strong>
-            <span
-              >V1 production: 230 alerts to 39 posts across 13-26 April
-              2026.</span
-            >
-          </article>
-          <article class="bp-receipt">
-            <p>analyst hours</p>
-            <strong>38h</strong>
-            <span
-              >Recovered per month in a state-regulated retail platform
-              handoff.</span
-            >
-          </article>
-          <article class="bp-receipt">
-            <p>BQ pipeline cost</p>
-            <strong>~50%</strong>
-            <span
-              >Reduction from repeated-scan collapse in a BigQuery pipeline
-              redesign.</span
-            >
-          </article>
-          <article class="bp-receipt">
-            <p>CDP migration CTR</p>
-            <strong>+10.8%</strong>
-            <span
-              >YoY CTR lift from Responsys&rarr;Bloomreach migration with zero
-              campaign downtime.</span
-            >
-          </article>
-        </div>
+        {% include receipt-grid.html receipts=site.data.home_receipts class="bp-receipts" aria_label="Selected proof points" %}
       </section>
 
       <section class="bp-section" id="selected-work">

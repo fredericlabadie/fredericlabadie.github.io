@@ -1,96 +1,47 @@
 [1mdiff --git a/index.html b/index.html[m
-[1mindex 06daab1..3a1acc9 100644[m
+[1mindex 3a1acc9..d8d3d88 100644[m
 [1m--- a/index.html[m
 [1m+++ b/index.html[m
-[36m@@ -139,30 +139,7 @@[m [mtwitter_description: "Instrumentation, pipelines, and qualitative practice for t[m
+[36m@@ -92,41 +92,7 @@[m [mtwitter_description: "Instrumentation, pipelines, and qualitative practice for t[m
+             </div>[m
+           </aside>[m
          </div>[m
+[31m-[m
+[31m-        <div class="bp-receipts" aria-label="Selected proof points">[m
+[31m-          <article class="bp-receipt">[m
+[31m-            <p>alert noise</p>[m
+[31m-            <strong>83%</strong>[m
+[31m-            <span[m
+[31m-              >V1 production: 230 alerts to 39 posts across 13-26 April[m
+[31m-              2026.</span[m
+[31m-            >[m
+[31m-          </article>[m
+[31m-          <article class="bp-receipt">[m
+[31m-            <p>analyst hours</p>[m
+[31m-            <strong>38h</strong>[m
+[31m-            <span[m
+[31m-              >Recovered per month in a state-regulated retail platform[m
+[31m-              handoff.</span[m
+[31m-            >[m
+[31m-          </article>[m
+[31m-          <article class="bp-receipt">[m
+[31m-            <p>BQ pipeline cost</p>[m
+[31m-            <strong>~50%</strong>[m
+[31m-            <span[m
+[31m-              >Reduction from repeated-scan collapse in a BigQuery pipeline[m
+[31m-              redesign.</span[m
+[31m-            >[m
+[31m-          </article>[m
+[31m-          <article class="bp-receipt">[m
+[31m-            <p>CDP migration CTR</p>[m
+[31m-            <strong>+10.8%</strong>[m
+[31m-            <span[m
+[31m-              >YoY CTR lift from Responsys&rarr;Bloomreach migration with zero[m
+[31m-              campaign downtime.</span[m
+[31m-            >[m
+[31m-          </article>[m
+[31m-        </div>[m
+[32m+[m[32m        {% include receipt-grid.html receipts=site.data.home_receipts class="bp-receipts" aria_label="Selected proof points" %}[m
+       </section>[m
  [m
-         <article class="bp-case-row">[m
-[31m-          <div class="bp-case-copy">[m
-[31m-            <p class="bp-kicker">Case / Question formulation</p>[m
-[31m-            <p class="bp-case-meta">[m
-[31m-              Consumer electronics retailer / 2023-2025 / under NDA[m
-[31m-            </p>[m
-[31m-            <h2>A workaround broke. The data confessed.</h2>[m
-[31m-            <p>[m
-[31m-              I was building a lifecycle segmentation model when an anomaly[m
-[31m-              caught my eye: a cohort returning shortly after purchase to buy[m
-[31m-              specific components. A Sense-Making conversation with floor staff[m
-[31m-              surfaced the cause: a shadow IT compatibility tool had quietly[m
-[31m-              stopped working.[m
-[31m-            </p>[m
-[31m-            <blockquote>[m
-[31m-              Most interesting findings in analytics arrive while you are doing[m
-[31m-              something else. The role of instrumentation is to make the gap[m
-[31m-              visible enough that the question becomes worth asking.[m
-[31m-            </blockquote>[m
-[31m-            <p>[m
-[31m-              The client subsequently shipped a compatibility configurator. It[m
-[31m-              is now central to the business, with a second iteration underway.[m
-[31m-            </p>[m
-[31m-            <a href="work/shadow-it.html">Read the case</a>[m
-[31m-          </div>[m
-[32m+[m[32m          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[0] %}[m
- [m
-           <figure[m
-             class="bp-figure bp-flow-figure"[m
-[36m@@ -204,26 +181,7 @@[m [mtwitter_description: "Instrumentation, pipelines, and qualitative practice for t[m
-         </article>[m
- [m
-         <article class="bp-case-row">[m
-[31m-          <div class="bp-case-copy">[m
-[31m-            <p class="bp-kicker">Case / Adoption</p>[m
-[31m-            <p class="bp-case-meta">[m
-[31m-              State-regulated retail platform / 2025-2026[m
-[31m-            </p>[m
-[31m-            <h2>The system outlived the team that built it.</h2>[m
-[31m-            <p>[m
-[31m-              Greenfield UX telemetry across web, app, and CRM, plus a[m
-[31m-              three-session structured handoff so the client could maintain and[m
-[31m-              extend it independently. They did — when the full team rolled off[m
-[31m-              in June 2025, incoming analysts were operational on day one. The[m
-[31m-              system has been running independently since March 2026.[m
-[31m-            </p>[m
-[31m-            <blockquote>[m
-[31m-              The 38 hours recovered per month is not the point. The point is[m
-[31m-              what those hours got redirected to, and that the redirection[m
-[31m-              survived the people who started it.[m
-[31m-            </blockquote>[m
-[31m-            <a href="work/sslp-enablement.html">Read the case</a>[m
-[31m-          </div>[m
-[32m+[m[32m          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[1] %}[m
- [m
-           <figure[m
-             class="bp-figure bp-query-figure"[m
-[36m@@ -245,30 +203,7 @@[m [mWHERE  client = 'sslp_retail'</code></pre>[m
-         </article>[m
- [m
-         <article class="bp-case-row">[m
-[31m-          <div class="bp-case-copy">[m
-[31m-            <p class="bp-kicker">Case / Methodology / UX research</p>[m
-[31m-            <p class="bp-case-meta">[m
-[31m-              National home services franchise / Stanley Steemer / 2021-2022[m
-[31m-            </p>[m
-[31m-            <h2>Telemetry locates. Method diagnoses.</h2>[m
-[31m-            <p>[m
-[31m-              Quantitative GA4 telemetry paired with a UserZoom protocol built[m
-[31m-              on Dervin's neutral-questioning. The funnel knew where users[m
-[31m-              dropped off. It could not say what kind of gap they were[m
-[31m-              experiencing.[m
-[31m-            </p>[m
-[31m-            <blockquote>[m
-[31m-              A winning A/B variant was winning despite a vocabulary problem,[m
-[31m-              not because of clean messaging. Optimising on the quant signal[m
-[31m-              alone would have entrenched the wrong message.[m
-[31m-            </blockquote>[m
-[31m-            <p>[m
-[31m-              This is the case behind the talk "Finding the Hypothesis When You[m
-[31m-              Only Know the Question," and the methodology piece the[m
-[31m-              Sense-Making references point back to.[m
-[31m-            </p>[m
-[31m-            <a href="work/ux-research-home-services.html">Read the case</a>[m
-[31m-          </div>[m
-[32m+[m[32m          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[2] %}[m
- [m
-           <figure[m
-             class="bp-figure bp-method-figure"[m
+       <section class="bp-section" id="selected-work">[m
