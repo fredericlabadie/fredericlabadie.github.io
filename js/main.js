@@ -1,68 +1,176 @@
-// Primary nav normalisation
-// Most pages are static HTML, and several page families carry copied nav
-// blocks. Keep the rendered primary nav consistent without needing a build step
-// or shared template include.
-const primaryNav = document.getElementById('primary-nav');
+// Universal site navigation
+// Static GitHub Pages has no server-side include. Each page keeps its existing
+// nav as a no-JS fallback, then this renderer replaces it with one shared nav
+// object so labels, order, active states, links, and visual treatment stay
+// consistent across the site.
+const SITE_NAV = {
+  brand: 'fredericlabadie.com',
+  links: [
+    { key: 'home', label: 'home', href: '/' },
+    { key: 'work', label: 'work', href: '/work/' },
+    { key: 'thoughts', label: 'current meditations', href: '/thoughts/' },
+    { key: 'about', label: 'about', href: '/about/' },
+    { key: 'recruiters', label: 'recruiters', href: '/recruiters/' },
+    { key: 'credentials', label: 'credentials', href: '/credentials/' },
+    { key: 'contact', label: 'contact', href: '/contact/' },
+  ],
+};
 
-if (primaryNav) {
-  const linkSpecs = [
-    { key: 'home', label: 'home' },
-    { key: 'work', label: 'work' },
-    { key: 'thoughts', label: 'current meditations' },
-    { key: 'about', label: 'about' },
-    { key: 'recruiters', label: 'recruiters' },
-    { key: 'credentials', label: 'credentials' },
-    { key: 'contact', label: 'contact' },
-  ];
+function getCurrentNavKey(pathname) {
+  const path = pathname.replace(/\/index\.html$/, '/');
+  if (path === '/' || path === '') return 'home';
+  if (path.startsWith('/work/')) return 'work';
 
-  const links = Array.from(primaryNav.querySelectorAll('a'));
-  const hrefs = links.map(link => link.getAttribute('href') || '');
-  const firstHref = hrefs[0] || '';
-  const usesRootRelative = firstHref.startsWith('/');
-  const usesParentRelative = hrefs.some(href => href.startsWith('../'));
-  const hrefPrefix = usesRootRelative ? '/' : usesParentRelative ? '../' : '';
-
-  const makeHref = key => {
-    if (key === 'home') return usesRootRelative ? '/' : hrefPrefix || './';
-    return `${hrefPrefix}${key}/`;
-  };
-
-  const hasCredentials = links.some(link =>
-    (link.getAttribute('href') || '').includes('credentials')
-  );
-
-  if (!hasCredentials) {
-    const contactItem = Array.from(primaryNav.querySelectorAll('li')).find(item => {
-      const link = item.querySelector('a');
-      return link && (link.getAttribute('href') || '').includes('contact');
-    });
-    const credentialsItem = document.createElement('li');
-    const credentialsLink = document.createElement('a');
-    credentialsLink.href = makeHref('credentials');
-    credentialsLink.textContent = '/ credentials';
-    credentialsItem.appendChild(credentialsLink);
-
-    if (contactItem) {
-      primaryNav.insertBefore(credentialsItem, contactItem);
-    } else {
-      primaryNav.appendChild(credentialsItem);
-    }
-  }
-
-  Array.from(primaryNav.querySelectorAll('a')).forEach(link => {
-    const href = link.getAttribute('href') || '';
-    const spec = linkSpecs.find(item => {
-      if (item.key === 'home') return href === '/' || href === '../' || href === './' || href === '';
-      return href.includes(item.key);
-    });
-    if (!spec) return;
-
-    const isCurrent = link.getAttribute('aria-current') === 'page';
-    link.textContent = `${isCurrent ? '//' : '/'} ${spec.label}`;
-  });
+  const firstSegment = path.split('/').filter(Boolean)[0];
+  return SITE_NAV.links.some(link => link.key === firstSegment)
+    ? firstSegment
+    : 'home';
 }
 
-// Mobile nav toggle
+function injectSiteNavStyles() {
+  if (document.getElementById('site-nav-styles')) return;
+
+  const style = document.createElement('style');
+  style.id = 'site-nav-styles';
+  style.textContent = `
+    .bp-site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: 48px;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: #16263a;
+      color: #ffffff;
+      border-bottom: 1px solid #16263a;
+      font-family: var(--font-mono, 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .bp-site-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .bp-site-nav a:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .bp-site-nav-brand,
+    .bp-site-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .bp-site-nav-brand {
+      white-space: nowrap;
+    }
+
+    .bp-site-nav-links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .bp-site-nav-links a[aria-current='page'] {
+      color: #b9412a;
+    }
+
+    .bp-site-nav-muted {
+      color: #a3b4c7;
+    }
+
+    .bp-site-dot {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      border-radius: 999px;
+      background: #3e7f5b;
+      box-shadow: 0 0 0 2px rgba(62, 127, 91, 0.25);
+    }
+
+    @media (max-width: 860px) {
+      .bp-site-nav {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 20px;
+      }
+
+      .bp-site-nav-brand,
+      .bp-site-nav-links {
+        width: 100%;
+      }
+
+      .bp-site-nav-links {
+        justify-content: flex-start;
+        row-gap: 10px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function renderSiteNav() {
+  const fallbackNavList = document.getElementById('primary-nav');
+  if (!fallbackNavList) return;
+
+  const fallbackNav = fallbackNavList.closest('nav');
+  if (!fallbackNav) return;
+
+  injectSiteNavStyles();
+
+  const currentKey = getCurrentNavKey(window.location.pathname);
+  const currentLabel =
+    SITE_NAV.links.find(link => link.key === currentKey)?.label || 'home';
+
+  const nav = document.createElement('nav');
+  nav.className = 'bp-site-nav';
+  nav.setAttribute('aria-label', 'Primary');
+
+  const brand = document.createElement('a');
+  brand.className = 'bp-site-nav-brand';
+  brand.href = '/';
+  brand.innerHTML = `
+    <span class="bp-site-dot" aria-hidden="true"></span>
+    <span>${SITE_NAV.brand}</span>
+    <span class="bp-site-nav-muted">/ ${currentLabel}</span>
+  `;
+
+  const list = document.createElement('ul');
+  list.className = 'bp-site-nav-links';
+  list.id = 'primary-nav';
+
+  SITE_NAV.links.forEach(link => {
+    const item = document.createElement('li');
+    const anchor = document.createElement('a');
+    const isCurrent = link.key === currentKey;
+
+    anchor.href = link.href;
+    anchor.textContent = `${isCurrent ? '//' : '/'} ${link.label}`;
+    if (isCurrent) anchor.setAttribute('aria-current', 'page');
+
+    item.appendChild(anchor);
+    list.appendChild(item);
+  });
+
+  nav.appendChild(brand);
+  nav.appendChild(list);
+  fallbackNav.replaceWith(nav);
+}
+
+renderSiteNav();
+
+// Mobile nav toggle for older fallback navs only.
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
