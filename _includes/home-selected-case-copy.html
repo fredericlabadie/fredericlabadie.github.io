@@ -1,0 +1,17 @@
+{% assign selected = include.selected %}
+{% assign matches = site.data.cases | where: 'slug', selected.slug %}
+{% assign case = matches | first %}
+
+<div class="bp-case-copy">
+  <p class="bp-kicker">{{ selected.kicker }}</p>
+  <p class="bp-case-meta">{{ selected.meta | default: case.context }}</p>
+  <h2>{{ selected.headline | default: case.title }}</h2>
+  <p>{{ selected.body | default: case.short_description | default: case.description }}</p>
+  {% if selected.quote %}
+    <blockquote>{{ selected.quote }}</blockquote>
+  {% endif %}
+  {% if selected.outcome %}
+    <p>{{ selected.outcome }}</p>
+  {% endif %}
+  <a href="{{ case.url | relative_url }}">Read the case</a>
+</div>
