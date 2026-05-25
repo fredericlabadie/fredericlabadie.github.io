@@ -3,11 +3,11 @@ layout: philips
 philips_nav: work
 skip_link: "#case"
 skip_label: "Skip to case"
-title: "Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost reduction. &mdash; case study &mdash; Philips role fit"
-description: "An audit and architectural redesign of a GA4 &rarr; BigQuery pipeline through cost-thinking and DAG restructuring. The systems-thinking that scales to large telemetry estates."
+title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction. &mdash; case study"
+description: "Second-pass audit and architectural redesign of a GA4-to-BigQuery reporting layer, cutting scheduled-query costs roughly in half and retiring a 1.2 TB intermediate table."
 og_type: article
-og_title: "Three raw scans &rarr; one. ~50% cost reduction. &mdash; for the Philips brief"
-og_description: "GA4 &rarr; BigQuery pipeline redesign cutting ~$112/run to roughly half."
+og_title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction."
+og_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query cost by roughly half."
 og_url: "https://fredericlabadie.com/philips/work/pipeline-optimization.html"
 ---
 
@@ -15,23 +15,14 @@ og_url: "https://fredericlabadie.com/philips/work/pipeline-optimization.html"
       <section class="page-intro hero">
         <div class="container">
           <p class="eyebrow">
-            Case study &middot; for the Philips brief &middot; Topic 07 &middot;
-            Data Engineering &amp; Architecture
+            Case study &middot; Path 07 &middot; Data engineering &amp; architecture
           </p>
-          <h1>
-            Three raw scans &rarr; one. Fifteen CTEs &rarr; zero. ~50% cost
-            reduction.
-          </h1>
+          <h1>Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction.</h1>
           <p class="hero-subtitle">
-            An audit and architectural redesign of a GA4 &rarr; BigQuery
-            pipeline that had grown organically into a 1.2 TB intermediate table
-            and a $112/run cascading CTE chain.
+            A second-pass audit of a GA4-to-BigQuery reporting layer built after the initial BI enablement work. Claude and BigQuery MCP supported inspection of repeated scans, a 1.2 TB intermediate table, and an approximately $112/run cascading CTE chain; the architectural decisions and migration plan stayed human-owned.
           </p>
           <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context"
-              >/ State-regulated retail platform &middot; analytics architect
-              &middot; April 2026</span
-            >
+            <span class="case-context">/ State-regulated retail platform &middot; analytics architect &middot; April 2026</span>
           </p>
         </div>
       </section>
@@ -40,24 +31,10 @@ og_url: "https://fredericlabadie.com/philips/work/pipeline-optimization.html"
         <div class="section-body">
           <div class="container">
             <div class="callout">
-              <div class="callout-label">
-                Why this is in the Philips selection
-              </div>
+              <div class="callout-label">Role-fit signal</div>
               <div class="callout-body">
-                <strong
-                  >The systems-thinking that scales to large telemetry
-                  estates.</strong
-                >
-                Pipeline debt accumulates the same way technical debt does
-                &mdash; one reasonable decision at a time, each solving an
-                immediate problem without visibility into the cumulative
-                architecture. The optimisation here is the discipline of
-                stepping back to look at the whole system, identifying where
-                costs are actually coming from, and redesigning around a single
-                shared computation rather than repeated independent ones. Same
-                discipline applies to any telemetry estate at Philips scale
-                &mdash; cost-thinking that respects both the analytics needs and
-                the infrastructure budget.
+                <strong>Scalable telemetry needs architectural cost thinking.</strong>
+                The Philips role depends on telemetry estates that remain reliable as usage grows. This case shows the systems layer under dashboard scale: find where the cost really lives, model the expensive thing once, and make downstream surfaces consume the shared result.
               </div>
             </div>
 
@@ -66,144 +43,87 @@ og_url: "https://fredericlabadie.com/philips/work/pipeline-optimization.html"
               <div>
                 <div class="outcome-title">What happened</div>
                 <div class="outcome-body">
-                  A GA4 &rarr; BigQuery analytics pipeline that had grown
-                  organically into a
-                  <strong
-                    >~$112/run CTE chain processing ~18 TB per execution</strong
-                  >
-                  was redesigned around a single shared computation:
-                  <strong
-                    >~50% cost reduction across pipeline and dashboard
-                    queries</strong
-                  >, the 1.2 TB <code>GA4_Event_Params</code> intermediate table
-                  retired, heavy dashboards halved from ~$200 to ~$100/day.
-                  Delivered as a 4-phase migration plan with a 2&ndash;4 week
-                  validation window. The optimisation was architectural, not
-                  query-level.
+                  A GA4-to-BigQuery analytics pipeline had grown into a <strong>roughly $112/run CTE chain</strong> processing approximately <strong>18 TB per execution</strong>. I redesigned the pipeline around a single conditional-aggregation pass, retired the 1.2 TB <code>GA4_Event_Params</code> intermediate table, and cut scheduled-query costs by roughly half.
                 </div>
               </div>
             </div>
 
             <div class="case-argument">
-              Pipeline debt accumulates the same way technical debt does &mdash;
-              one reasonable decision at a time, each solving an immediate
-              problem without visibility into the cumulative architecture. The
-              1.2 TB <code>GA4_Event_Params</code> table was a reasonable
-              intermediate step when first introduced. The 15-CTE PDP extraction
-              was a reasonable way to get the data.
-              <strong
-                >The problem was that no one had stepped back to look at the
-                whole system.</strong
-              >
+              <strong>The optimisation was architectural, not query-level.</strong> Pipeline debt accumulates one reasonable decision at a time. The work was not to tune a single query; it was to step back and redesign the shape of the system.
             </div>
 
             <div class="card-row card-row-2">
               <div class="card">
                 <div class="card-label">Situation</div>
                 <div class="card-body">
-                  A state-regulated retail platform's GA4 &rarr; BigQuery
-                  analytics pipeline, grown organically over several
-                  engagements: <code>events_*</code> scanned three separate
-                  times (200&ndash;400 GB each at $6.25/TB); Step 02.25 unnested
-                  every event type into a generic key-value table (<code
-                    >GA4_Event_Params</code
-                  >
-                  &mdash; 1.2 TB, 4.67 billion rows); Step 02.5 ran 15+ separate
-                  CTEs each independently scanning that 1.2 TB table and FULL
-                  OUTER JOIN-ed them together. Total:
-                  <strong>~18 TB processed per run, ~$112/run</strong>. On top
-                  of that, <code>SELECT DISTINCT</code> on 30&ndash;50 columns
-                  in three steps, duplicated and slightly inconsistent
-                  channel-grouping CASE logic, and a 429 GB unpartitioned table
-                  forcing full scans on every downstream query.
+                  The first pass had already replaced a recurring manual reporting cycle with a BigQuery, Dataform, and Looker Studio reporting layer. The next question was cost and maintainability. The pipeline scanned <code>events_*</code> three separate times, unnested every event type into a generic key-value table, then ran 15+ separate CTEs over that 1.2 TB table and full-outer-joined them back together.
                 </div>
               </div>
               <div class="card">
                 <div class="card-label">Task</div>
                 <div class="card-body">
-                  Audit the whole pipeline, find where the cost was actually
-                  coming from, and redesign &mdash; not optimise queries in
-                  place. The brief was implicit: surface architectural waste,
-                  then propose a migration plan the team could execute against
-                  without a freeze. Cost reduction was the visible target;
-                  <strong>maintainability and consistency</strong> were the real
-                  ones.
+                  Audit the whole data flow, identify where the costs were really coming from, and propose a migration plan the team could execute without freezing the reporting layer. Cost reduction was the visible target; maintainability and consistency were the real ones.
                 </div>
               </div>
             </div>
 
             <div class="card-row card-row-2">
               <div class="card amber">
-                <div class="card-label">Action</div>
+                <div class="card-label">Method</div>
                 <div class="card-body">
-                  <strong
-                    >Single raw event scan via conditional aggregation</strong
-                  >
-                  &mdash; one <code>GROUP BY</code> with
-                  <code
-                    >MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code
-                  >
-                  for each of 25+ event parameter keys simultaneously, producing
-                  a flat analysis-ready row per <code>page_view</code> event
-                  with all parameters pivoted into columns. 8-step sequential
-                  pipeline restructured as a
-                  <strong
-                    >6-step DAG with three tiers of parallel execution</strong
-                  >. <code>SELECT DISTINCT</code> replaced with
-                  <code>ROW_NUMBER</code> dedup and <code>GROUP BY</code>.
-                  Channel grouping unified into a single canonical CASE
-                  definition. Partitioning added to the largest reporting
-                  tables, converting full-table scans into pruned daily reads.
-                  Migration plan delivered as a 4-phase rollout: schema
-                  preparation, historical backfill, scheduled-query deployment,
-                  table cleanup &mdash; with a 2&ndash;4 week validation window.
+                  Used Claude with BigQuery MCP to inspect schema shape, query structure, scan patterns, and candidate simplifications while keeping the architecture, validation plan, and migration sequence human-owned. The key move was replacing repeated independent scans with a single event-level computation that produced a flat, analysis-ready row.
                 </div>
               </div>
               <div class="card accent">
                 <div class="card-label">Result</div>
                 <div class="card-body">
-                  The optimisation wasn't about writing faster queries &mdash;
-                  it was about
-                  <strong
-                    >understanding the full data flow, identifying where costs
-                    were actually coming from, and redesigning around a single
-                    shared computation rather than repeated independent
-                    ones</strong
-                  >. The pipeline ended cheaper, faster, easier to maintain, and
-                  more consistent in its output: channel-grouping logic now
-                  defined in one place instead of three, two intermediate tables
-                  retired without information loss. The decision pattern
-                  transfers to any cost-conscious analytics rebuild &mdash;
-                  spend the modelling work once.
+                  The result was cheaper, faster, easier to maintain, and more consistent: channel-grouping logic defined once instead of repeated in slightly different forms, and two intermediate tables retired without information loss. Cost reduction was the visible win; architecture was the durable one.
                 </div>
+              </div>
+            </div>
+
+            <div class="flow">
+              <div class="flow-step">
+                <div class="flow-num">01</div>
+                <div class="flow-label">Single raw scan</div>
+                <div class="flow-desc">Read the needed GA4 event rows once instead of repeating the same scan for each parameter extraction.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">02</div>
+                <div class="flow-label">Conditional aggregation</div>
+                <div class="flow-desc">Used <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code> to pivot 25+ event parameters simultaneously.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">03</div>
+                <div class="flow-label">Canonical logic</div>
+                <div class="flow-desc">Moved channel grouping into one definition instead of maintaining three slightly different CASE statements.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">04</div>
+                <div class="flow-label">Partition + migrate</div>
+                <div class="flow-desc">Added partitioning to large reporting tables and delivered a four-phase rollout with a 2–4 week validation window.</div>
               </div>
             </div>
 
             <div class="metrics">
               <div class="metric">
                 <div class="metric-value">~50%</div>
-                <div class="metric-label">
-                  Cost reduction across both pipeline and dashboard queries
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">$200&rarr;$100</div>
-                <div class="metric-label">
-                  Heavy-usage dashboard query cost per day
-                </div>
+                <div class="metric-label">Pipeline cost reduction</div>
               </div>
               <div class="metric">
                 <div class="metric-value">1.2 TB</div>
-                <div class="metric-label">
-                  Intermediate storage retired (<code>GA4_Event_Params</code> +
-                  <code>pdp_pageview_params</code>)
-                </div>
+                <div class="metric-label">Intermediate table retired</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Independent CTE scans removed</div>
               </div>
             </div>
 
             <div class="tags">
               <span class="tag">BigQuery</span>
-              <span class="tag">SQL (advanced)</span>
+              <span class="tag">BigQuery MCP</span>
+              <span class="tag">Claude-assisted analysis</span>
               <span class="tag">DAG redesign</span>
               <span class="tag">Conditional aggregation</span>
               <span class="tag">Partitioning</span>
@@ -219,40 +139,26 @@ og_url: "https://fredericlabadie.com/philips/work/pipeline-optimization.html"
           <div class="container">
             <p class="section-eyebrow">Next</p>
             <h2 class="section-heading">
-              More from the Philips selection &middot; or get in touch.
+              More from the Philips selection, or get in touch.
             </h2>
 
             <div class="deeper deeper-three">
               <a class="deeper-card" href="/philips/work/">
                 <span class="deeper-label">More cases</span>
-                <span class="deeper-title"
-                  >Philips selection &mdash;
-                  <em>ten cases, six topics</em>.</span
-                >
-                <span class="deeper-body"
-                  >The curated case library, mapped against the UX Telemetry
-                  Expert brief.</span
-                >
+                <span class="deeper-title">Philips selection &mdash; <em>nine cases, six evidence paths</em>.</span>
+                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
                 <span class="deeper-cta">Open the selection &rarr;</span>
               </a>
-              <a class="deeper-card" href="/philips/about/">
-                <span class="deeper-label">About</span>
-                <span class="deeper-title">Bio, skills, certifications.</span>
-                <span class="deeper-body"
-                  >The longer version &mdash; methodology, credentials, and the
-                  clinical-domain calibration paragraph.</span
-                >
-                <span class="deeper-cta">Read more &rarr;</span>
+              <a class="deeper-card" href="/philips/work/sslp-enablement.html">
+                <span class="deeper-label">Adjacent case</span>
+                <span class="deeper-title">The reporting layer this optimisation followed.</span>
+                <span class="deeper-body">BigQuery, Dataform, and Looker Studio reporting infrastructure that recovered 38 analyst hours per month before the cost pass.</span>
+                <span class="deeper-cta">Read adjacent case &rarr;</span>
               </a>
               <a class="deeper-card" href="/philips/contact/">
                 <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title"
-                  >Contact &mdash; <em>channels &amp; context</em>.</span
-                >
-                <span class="deeper-body"
-                  >Email, LinkedIn, GitHub, the CV. Pre-filled subject for role
-                  579397.</span
-                >
+                <span class="deeper-title">Contact &mdash; channels and context.</span>
+                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for role 579397.</span>
                 <span class="deeper-cta">Open contact page &rarr;</span>
               </a>
             </div>
