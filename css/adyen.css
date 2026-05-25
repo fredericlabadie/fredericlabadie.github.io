@@ -1,0 +1,160 @@
+/* ============================================================
+   Adyen Senior Product Data Analyst microsite
+   Separate role-specific layer. Reuses the main portfolio grammar but
+   shifts emphasis toward product data systems, source of truth, and
+   senior ownership rather than UX telemetry.
+   ============================================================ */
+
+.adyen-microsite {
+  --adyen-green: #0abf53;
+  --adyen-green-soft: #dff8e8;
+  --adyen-ink: #09131f;
+  --adyen-navy: #101c2b;
+  --adyen-muted: #536174;
+  --adyen-line: #c9d2dc;
+  --adyen-paper: #f7faf8;
+  --adyen-panel: #eef4f1;
+
+  --c-accent: var(--adyen-green);
+  --c-primary: var(--adyen-ink);
+  --c-ink: var(--adyen-ink);
+  --c-ink-soft: var(--adyen-muted);
+  --c-bg: var(--adyen-paper);
+  --c-border: var(--adyen-line);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(10, 191, 83, 0.12) 1px, transparent 0) 0 0 / 22px 22px,
+    var(--adyen-paper);
+}
+
+.adyen-microsite .nav {
+  background: var(--adyen-navy);
+  border-top: 3px solid var(--adyen-green);
+  border-bottom: 1px solid #09131f;
+}
+
+.adyen-microsite .nav-brand-dot {
+  background: var(--adyen-green);
+  box-shadow: 0 0 0 4px rgba(10, 191, 83, 0.14);
+}
+
+.adyen-microsite .nav a:hover,
+.adyen-microsite .nav a[aria-current="page"],
+.adyen-microsite a {
+  color: var(--adyen-green);
+}
+
+.adyen-microsite .hero,
+.adyen-microsite .page-intro.hero {
+  padding: 0;
+}
+
+.adyen-microsite .hero .container,
+.adyen-microsite .page-intro.hero .container {
+  padding-top: 68px;
+  padding-bottom: 58px;
+}
+
+.adyen-microsite .hero h1,
+.adyen-microsite .page-intro.hero h1 {
+  max-width: 1100px;
+  font-size: clamp(52px, 7vw, 110px);
+  line-height: 0.95;
+}
+
+.adyen-microsite .hero-subtitle,
+.adyen-microsite .page-intro p {
+  max-width: 70ch;
+}
+
+.adyen-microsite .eyebrow,
+.adyen-microsite .section-eyebrow,
+.adyen-microsite .card-label,
+.adyen-microsite .case-card-meta,
+.adyen-microsite .deeper-label,
+.adyen-microsite .tag,
+.adyen-microsite .metric-label {
+  color: var(--adyen-green);
+}
+
+.adyen-microsite .section-head {
+  background: #edf4f0;
+  border-top: 1px solid var(--adyen-line);
+  border-bottom: 1px solid var(--adyen-line);
+}
+
+.adyen-microsite .section-body {
+  background: transparent;
+}
+
+.adyen-microsite .alt .section-body,
+.adyen-microsite section.alt {
+  background: var(--adyen-panel);
+}
+
+.adyen-microsite .callout,
+.adyen-microsite .card,
+.adyen-microsite .case-card,
+.adyen-microsite .deeper-card,
+.adyen-microsite .metric,
+.adyen-microsite .flow-step {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--adyen-line);
+}
+
+.adyen-microsite .callout {
+  max-width: 780px;
+}
+
+.adyen-microsite .case-argument,
+.adyen-microsite .outcome {
+  background: var(--adyen-navy);
+  color: #fff;
+  border-color: var(--adyen-navy);
+}
+
+.adyen-microsite .outcome-title,
+.adyen-microsite .outcome-icon {
+  color: var(--adyen-green);
+}
+
+.adyen-microsite .metric:nth-child(even),
+.adyen-microsite .card.accent,
+.adyen-microsite .case-toc-item:hover,
+.adyen-microsite .case-toc-item:focus {
+  background: var(--adyen-green-soft);
+}
+
+.adyen-microsite .case-toc-item:hover,
+.adyen-microsite .case-toc-item:focus {
+  border-left-color: var(--adyen-green);
+}
+
+.adyen-microsite .metric-value,
+.adyen-microsite .flow-num,
+.adyen-microsite .case-toc-num {
+  color: var(--adyen-green);
+}
+
+.adyen-microsite .tag {
+  border-color: var(--adyen-line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.adyen-microsite .footer {
+  background: #fff;
+  border-top: 1px solid var(--adyen-line);
+}
+
+@media (max-width: 720px) {
+  .adyen-microsite .hero .container,
+  .adyen-microsite .page-intro.hero .container {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .adyen-microsite .hero h1,
+  .adyen-microsite .page-intro.hero h1 {
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 1.0;
+  }
+}
