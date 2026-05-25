@@ -1,59 +1,9 @@
-{% assign fallback_title = site.title | default: 'Frederic Labadie' %}
-{% assign page_title = page.title | default: fallback_title %}
-{% assign title_tag = page.title_tag | default: page_title %}
-{% assign description = page.description | default: 'Targeted role-fit overview for Frederic Labadie.' %}
-{% assign og_type = page.og_type | default: 'website' %}
+{% comment %}
+Deprecated include retained only as a historical stub.
 
-<script
-  id="Cookiebot"
-  src="https://consent.cookiebot.com/uc.js"
-  data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42"
-  data-blockingmode="auto"
-  type="text/javascript"
-></script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ title_tag }}</title>
-<meta name="description" content="{{ description | escape }}" />
-<meta name="theme-color" content="{{ page.theme_color | default: '#eef2f5' }}" />
-<meta name="robots" content="{{ page.robots | default: 'noindex, nofollow' }}" />
+Philips pages now use the shared site head via _layouts/philips.html:
+  {% include head.html %}
 
-<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml" />
-<link rel="alternate icon" href="{{ '/favicon.svg' | relative_url }}" />
-<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}" />
-
-<meta property="og:type" content="{{ og_type }}" />
-<meta property="og:title" content="{{ page.og_title | default: page_title | escape }}" />
-<meta
-  property="og:description"
-  content="{{ page.og_description | default: description | escape }}"
-/>
-<meta property="og:url" content="{{ page.og_url | default: page.url | absolute_url }}" />
-<meta
-  property="og:image"
-  content="{{ page.og_image | default: '/assets/og/og-image.png' | absolute_url }}"
-/>
-<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary_large_image' }}" />
-<meta
-  name="twitter:title"
-  content="{{ page.twitter_title | default: page.og_title | default: page_title | escape }}"
-/>
-<meta
-  name="twitter:description"
-  content="{{ page.twitter_description | default: page.og_description | default: description | escape }}"
-/>
-<meta
-  name="twitter:image"
-  content="{{ page.twitter_image | default: page.og_image | default: '/assets/og/og-image.png' | absolute_url }}"
-/>
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}" />
-{% for stylesheet in page.extra_css %}
-  <link rel="stylesheet" href="{{ stylesheet | relative_url }}" />
-{% endfor %}
+Do not add new metadata, font, robots, Open Graph, or stylesheet logic here.
+Keep all shared head behaviour in _includes/head.html so the Philips microsite stays aligned with the main portfolio.
+{% endcomment %}
