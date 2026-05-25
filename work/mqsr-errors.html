@@ -3,7 +3,7 @@ nav_key: work
 footer_label: Case study
 layout: case
 title: "Clean taxonomy, trustworthy alerts, enriched context"
-description: "Three layers of remediation on a noisy Amplitude alert channel: threshold redesign, hierarchical error-category IDs, and cart_id enrichment for checkout error events."
+description: "Alert-engineering remediation on a noisy Amplitude channel: shipped threshold redesign, hierarchical error taxonomy design, and cart_id enrichment specified for checkout error events."
 og_title: "Clean taxonomy, trustworthy alerts, enriched context &mdash; case study"
 og_description: "Three layers of remediation on a noisy alert channel."
 og_url: "https://fredericlabadie.com/work/mqsr-errors.html"
@@ -13,7 +13,7 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
       <header class="bp-case-hero">
         <div>
           <p class="bp-case-kicker bp-case-accent">
-            // Case study / Lens 02 / Instrumentation &amp; Alert Engineering
+            // Case study / Alert engineering
           </p>
           <h1>Clean taxonomy, trustworthy alerts, enriched context.</h1>
           <p class="bp-case-dek">
@@ -52,10 +52,10 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
           <strong>2</strong><span>threshold modes combined</span>
         </article>
         <article>
-          <strong>1</strong><span>hierarchical error taxonomy</span>
+          <strong>1</strong><span>hierarchical error taxonomy designed</span>
         </article>
         <article>
-          <strong>cart_id</strong><span>added to checkout error events</span>
+          <strong>cart_id</strong><span>specified for checkout error events</span>
         </article>
       </section>
 
@@ -83,16 +83,15 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
             <p>
               A major QSR's Amplitude alert channel was firing on too many
               low-signal events. Genuine checkout failures were buried in
-              low-traffic Active% noise. I delivered three layers of
-              remediation: redesigned thresholds with troubleshooting guidance
-              (shipped); a hierarchical error-category ID scheme designed and
-              proposed for implementation; and a <code>cart_id</code> enrichment
-              specification so checkout error events would carry the same
-              contextual anchor as their success counterparts.
+              low-traffic Active% noise. I shipped redesigned thresholds with
+              troubleshooting guidance, then authored two implementation-ready
+              improvements: a hierarchical error-category ID scheme and a
+              <code>cart_id</code> enrichment specification for checkout error
+              events.
             </p>
             <p>
-              The taxonomy work directly reduces false positives in the AI
-              alert-triage system because the model has cleaner categories and
+              The taxonomy work was designed to reduce false positives in the AI
+              alert-triage system by giving the model cleaner categories and
               richer context to reason from.
             </p>
           </article>
@@ -162,8 +161,8 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
               <div>
                 <span>Context</span><strong>cart_id</strong>
                 <p>
-                  Checkout error events gained cart context so engineering could
-                  correlate failures to specific basket instances.
+                  Checkout error events would gain cart context so engineering
+                  could correlate failures to specific basket instances.
                 </p>
               </div>
             </div>
@@ -199,8 +198,9 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
               ><strong>Context enrichment</strong>
               <p>
                 Authored the specification to add <code>cart_id</code> to
-                <code>Checkout Started Error Received</code> — ready for dev —
-                so error and success events would share the same context level.
+                <code>Checkout Started Error Received</code> as a ready-for-dev
+                ticket, so error and success events would share the same context
+                level.
               </p>
             </article>
           </div>
@@ -256,8 +256,8 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
               </li>
               <li>
                 <strong><code>cart_id</code> enrichment specified</strong> for
-                checkout error events — authored as a ready-for-dev ticket so
-                failures could be correlated to basket instances.
+                checkout error events as a ready-for-dev ticket, so failures
+                could be correlated to basket instances.
               </li>
               <li>
                 <strong>False-positive reduction support</strong> created for
@@ -300,7 +300,7 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
           ><span class="bp-case-mono bp-case-accent">More cases</span
           ><strong>Full case library.</strong
           ><span
-            >Eighteen cases across seven lenses: question formulation,
+            >Sixteen primary cases across seven categories: question discovery,
             instrumentation, experimentation, AI workflows, adoption, marketing
             analytics, and data engineering.</span
           ></a
