@@ -23,6 +23,37 @@
   font-size: clamp(42px, 5.8vw, 78px);
 }
 
+/* Individual case pages need a tighter rhythm than the Work/About intros.
+   The screenshots showed too much vertical air before the case content. */
+.philips-microsite .page-intro.hero:has(.case-meta) .container {
+  padding-top: 46px;
+  padding-bottom: 36px;
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) h1 {
+  max-width: 920px;
+  font-size: clamp(44px, 5.6vw, 84px);
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) .hero-subtitle {
+  margin-top: 22px;
+  max-width: 62ch;
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) .case-meta {
+  margin-top: 22px !important;
+}
+
+/* Tighten case-page content spacing without changing the homepage or Work index. */
+.philips-microsite .page-intro.hero:has(.case-meta) + #case .section-body {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.philips-microsite #case .section-body > .container > * + * {
+  margin-top: 26px;
+}
+
 /* The print note is useful but should not compete with the case-library
    thesis in the first viewport. */
 .philips-microsite .page-intro.hero .page-intro-note {
@@ -55,6 +86,22 @@
   max-width: 112ch;
 }
 
+/* The Next block is utility navigation, not another hero. Keep it useful but
+   visibly lighter than the case thesis. */
+.philips-microsite #next .section-body {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.philips-microsite #next .section-heading {
+  max-width: 860px;
+  font-size: clamp(40px, 5vw, 72px);
+}
+
+.philips-microsite #next .deeper {
+  margin-top: 28px;
+}
+
 /* The browser screenshots showed the mobile page intros reading well but a
    little deep below the nav. Tighten without flattening the editorial feel. */
 @media (max-width: 720px) {
@@ -68,9 +115,23 @@
     line-height: 1.02;
   }
 
+  .philips-microsite .page-intro.hero:has(.case-meta) .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .philips-microsite .page-intro.hero:has(.case-meta) h1 {
+    font-size: clamp(38px, 11vw, 56px);
+  }
+
   .philips-microsite .page-intro.hero .page-intro-note {
     margin-top: 14px;
     font-size: 10px;
+  }
+
+  .philips-microsite #next .section-body {
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 }
 
