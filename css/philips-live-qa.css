@@ -40,6 +40,21 @@
   padding: 1px 5px;
 }
 
+/* Keep the table-like card width while constraining long prose lines.
+   The screenshots showed desktop case-card text stretching too wide. */
+.philips-microsite .case-card-title,
+.philips-microsite .case-card-body {
+  max-width: 112ch;
+}
+
+.philips-microsite .case-card-body {
+  margin-right: auto;
+}
+
+.philips-microsite .case-card .tags {
+  max-width: 112ch;
+}
+
 /* The browser screenshots showed the mobile page intros reading well but a
    little deep below the nav. Tighten without flattening the editorial feel. */
 @media (max-width: 720px) {
