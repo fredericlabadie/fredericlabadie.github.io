@@ -3,10 +3,10 @@ layout: philips
 philips_nav: work
 skip_link: "#case"
 skip_label: "Skip to case"
-title: "Clean taxonomy, trustworthy alerts, enriched context &mdash; case study &mdash; Philips role fit"
-description: "Three layers of remediation on a noisy alert channel &mdash; threshold redesign, hierarchical error-category IDs, and context enrichment. The Philips brief explicitly names this kind of work."
+title: "Clean taxonomy, trustworthy alerts, enriched context &mdash; case study"
+description: "Alert-engineering remediation on a noisy Amplitude channel: threshold redesign, hierarchical error taxonomy design, and cart_id enrichment specified for checkout error events."
 og_type: article
-og_title: "Clean taxonomy, trustworthy alerts, enriched context &mdash; for the Philips brief"
+og_title: "Clean taxonomy, trustworthy alerts, enriched context"
 og_description: "Three layers of remediation on a noisy alert channel."
 og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
 ---
@@ -15,20 +15,14 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
       <section class="page-intro hero">
         <div class="container">
           <p class="eyebrow">
-            Case study &middot; for the Philips brief &middot; Topic 02 &middot;
-            Error taxonomy
+            Case study &middot; Path 02 &middot; Error taxonomy &amp; alert engineering
           </p>
           <h1>Clean taxonomy, trustworthy alerts, enriched context.</h1>
           <p class="hero-subtitle">
-            Three layers of remediation on an alert channel where genuine
-            checkout failures were buried in noise from low-traffic Active%
-            triggers.
+            Three layers of remediation on an alert channel where genuine checkout failures were buried in noise from low-traffic Active% triggers.
           </p>
           <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context"
-              >/ Major quick-service restaurant &middot; Amplitude
-              monitors</span
-            >
+            <span class="case-context">/ Major quick-service restaurant &middot; Amplitude monitors</span>
           </p>
         </div>
       </section>
@@ -37,20 +31,10 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
         <div class="section-body">
           <div class="container">
             <div class="callout">
-              <div class="callout-label">
-                Why this is in the Philips selection
-              </div>
+              <div class="callout-label">Role-fit signal</div>
               <div class="callout-body">
-                <strong
-                  >The Philips brief explicitly names error taxonomy and alert
-                  engineering.</strong
-                >
-                This is the case behind that claim &mdash; the hierarchical
-                category IDs, threshold redesign, and the principle that error
-                events must carry the same context as their success
-                counterparts. The discipline transfers directly to clinical
-                telemetry, where an alert that doesn't carry enough context to
-                action is worse than no alert at all.
+                <strong>Telemetry quality starts upstream of the dashboard.</strong>
+                The Philips role depends on event definitions, tracking plans, and meaningful dashboards. This case shows the schema and alerting layer behind that work: stable categories, diagnostic context, and alert surfaces that product and engineering teams can act on.
               </div>
             </div>
 
@@ -59,61 +43,41 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
               <div>
                 <div class="outcome-title">What happened</div>
                 <div class="outcome-body">
-                  A noisy Amplitude alert channel where genuine checkout
-                  failures were buried in low-traffic Active% noise gained
-                  <strong>three layers of remediation</strong>: redesigned
-                  thresholds with troubleshooting guidance on each chart, a
-                  hierarchical error-category ID scheme
-                  (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with
-                  governance rules against schema drift, and
-                  <code>cart_id</code> enrichment so error events carry the same
-                  context as their success counterparts. Alerts became
-                  trustworthy enough to drive action without detective work
-                  &mdash; and the taxonomy directly reduces false positives in
-                  the AI alert-triage system.
+                  A major QSR's Amplitude alert channel was firing on too many low-signal events. Genuine checkout failures were buried in low-traffic Active% noise. I shipped redesigned thresholds with troubleshooting guidance, then authored two implementation-ready improvements: a hierarchical error-category ID scheme and a <code>cart_id</code> enrichment specification for checkout error events.
                 </div>
               </div>
             </div>
 
             <div class="case-argument">
-              <strong
-                >Error events must carry the same context as their success
-                counterparts.</strong
-              >
-              Otherwise alerting is correct but actionable only with detective
-              work &mdash; and on-call learns to silence the channel.
+              <strong>Error events must carry the same context as their success counterparts.</strong> Otherwise alerting can be technically correct but still require detective work before anyone can act on it.
             </div>
 
             <div class="card-row card-row-2">
               <div class="card">
                 <div class="card-label">Context</div>
                 <div class="card-body">
-                  An Amplitude alert channel at a major QSR firing on too many
-                  low-signal events &mdash; Active% triggers from low-traffic
-                  monitors drowning out genuine checkout failures. Error events
-                  did not carry the context their success counterparts had,
-                  which meant every alert kicked off detective work just to know
-                  <em>which basket</em> had failed. The alert engineering needed
-                  to be made trustworthy, and the schema needed to stop
-                  drifting.
+                  Low-traffic monitors produced noisy Active% triggers that drowned out genuinely important checkout failures. On-call responders had to do detective work before they could know whether an alert represented a real checkout problem, which basket was affected, or how the error should be categorised.
                 </div>
               </div>
-              <div class="card amber">
-                <div class="card-label">What I did</div>
+              <div class="card">
+                <div class="card-label">Task</div>
                 <div class="card-body">
-                  Three layers (detail in the flow below).
-                  <strong>Threshold redesign</strong> &mdash; absolute rate +
-                  rate-of-change, with engineering-facing troubleshooting
-                  guidance directly on each chart so the alert itself carries
-                  the start of the diagnosis.
-                  <strong>Hierarchical error-category ID scheme</strong>
-                  (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with
-                  deterministic mapping rules and governance guidelines against
-                  schema drift. <strong>Context enrichment</strong> &mdash;
-                  added <code>cart_id</code> to
-                  <code>Checkout Started Error Received</code> so engineering
-                  could correlate specific basket instances to checkout
-                  failures.
+                  Make the alert itself carry the start of the diagnosis. The work needed to reduce false positives while improving diagnostic context across the monitor threshold layer, the error taxonomy layer, and the event-schema layer.
+                </div>
+              </div>
+            </div>
+
+            <div class="card-row card-row-2">
+              <div class="card amber">
+                <div class="card-label">Action</div>
+                <div class="card-body">
+                  Redesigned alert thresholds, added engineering-facing troubleshooting guidance directly to the relevant Amplitude charts, designed a hierarchical error-category ID scheme with deterministic mapping rules, and authored the specification to enrich checkout error events with <code>cart_id</code>.
+                </div>
+              </div>
+              <div class="card accent">
+                <div class="card-label">Result</div>
+                <div class="card-body">
+                  The alert channel became a more trustworthy operating surface before AI entered the loop. Cleaner upstream taxonomy and richer event context reduced downstream guesswork for the AI alert-triage workflow and for the humans accountable for acting on it.
                 </div>
               </div>
             </div>
@@ -123,41 +87,49 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
                 <div class="flow-num">01</div>
                 <div class="flow-label">Threshold redesign</div>
                 <div class="flow-desc">
-                  Redesigned alert thresholds (absolute rate + rate-of-change)
-                  and added engineering-facing troubleshooting guidance directly
-                  on each chart, so the alert itself carries the start of the
-                  diagnosis.
+                  Combined absolute rate with rate-of-change so low-traffic volatility did not dominate the alert channel.
                 </div>
               </div>
               <div class="flow-step">
                 <div class="flow-num">02</div>
-                <div class="flow-label">Error-category ID scheme</div>
+                <div class="flow-label">Chart-level guidance</div>
                 <div class="flow-desc">
-                  Designed a hierarchical, stable error-category ID scheme
-                  (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>) with
-                  deterministic mapping rules and governance guidelines to
-                  prevent schema drift over time.
+                  Added engineering-facing troubleshooting guidance directly on each chart so the alert carried the start of the diagnosis.
                 </div>
               </div>
               <div class="flow-step">
                 <div class="flow-num">03</div>
+                <div class="flow-label">Error taxonomy</div>
+                <div class="flow-desc">
+                  Designed hierarchical error-category IDs such as <code>SYS-INF-001</code> and <code>SYS-APP-VAL-010</code> with governance rules against schema drift.
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">04</div>
                 <div class="flow-label">Context enrichment</div>
                 <div class="flow-desc">
-                  Added <code>cart_id</code> to
-                  <code>Checkout Started Error Received</code> events so
-                  engineering could correlate specific basket instances to
-                  checkout failures &mdash; same context level as success
-                  events.
+                  Specified <code>cart_id</code> enrichment for checkout error events so engineering could correlate failures to specific basket instances.
                 </div>
               </div>
             </div>
 
+            <div class="metrics">
+              <div class="metric">
+                <div class="metric-value">3</div>
+                <div class="metric-label">Remediation layers: thresholds, taxonomy, context</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">2</div>
+                <div class="metric-label">Threshold modes combined: absolute rate and rate-of-change</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">cart_id</div>
+                <div class="metric-label">Specified for checkout error events</div>
+              </div>
+            </div>
+
             <p>
-              The taxonomy work directly reduces false positives in the AI alert
-              triage system &mdash; see
-              <a href="/philips/work/ai-alert-triage.html"
-                >the AI workflow case &rarr;</a
-              >.
+              The taxonomy work directly supports the downstream AI alert triage workflow &mdash; see <a href="/philips/work/ai-alert-triage.html">the AI workflow case &rarr;</a>.
             </p>
 
             <div class="tags">
@@ -165,6 +137,8 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
               <span class="tag">Error taxonomy design</span>
               <span class="tag">Alert engineering</span>
               <span class="tag">Schema governance</span>
+              <span class="tag">Checkout telemetry</span>
+              <span class="tag">AI triage input quality</span>
             </div>
           </div>
         </div>
@@ -175,40 +149,26 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-errors.html"
           <div class="container">
             <p class="section-eyebrow">Next</p>
             <h2 class="section-heading">
-              More from the Philips selection &middot; or get in touch.
+              More from the Philips selection, or get in touch.
             </h2>
 
             <div class="deeper deeper-three">
               <a class="deeper-card" href="/philips/work/">
                 <span class="deeper-label">More cases</span>
-                <span class="deeper-title"
-                  >Philips selection &mdash;
-                  <em>ten cases, six topics</em>.</span
-                >
-                <span class="deeper-body"
-                  >The curated case library, mapped against the UX Telemetry
-                  Expert brief.</span
-                >
+                <span class="deeper-title">Philips selection &mdash; <em>ten cases, six evidence paths</em>.</span>
+                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
                 <span class="deeper-cta">Open the selection &rarr;</span>
               </a>
-              <a class="deeper-card" href="/philips/about/">
-                <span class="deeper-label">About</span>
-                <span class="deeper-title">Bio, skills, certifications.</span>
-                <span class="deeper-body"
-                  >The longer version &mdash; methodology, credentials, and the
-                  clinical-domain calibration paragraph.</span
-                >
-                <span class="deeper-cta">Read more &rarr;</span>
+              <a class="deeper-card" href="/philips/work/ai-alert-triage.html">
+                <span class="deeper-label">Adjacent case</span>
+                <span class="deeper-title">Designing AI workflows that don't outsource the thinking.</span>
+                <span class="deeper-body">The downstream AI alert-triage workflow that benefits from cleaner alert taxonomy and context.</span>
+                <span class="deeper-cta">Read adjacent case &rarr;</span>
               </a>
               <a class="deeper-card" href="/philips/contact/">
                 <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title"
-                  >Contact &mdash; <em>channels &amp; context</em>.</span
-                >
-                <span class="deeper-body"
-                  >Email, LinkedIn, GitHub, the CV. Pre-filled subject for role
-                  579397.</span
-                >
+                <span class="deeper-title">Contact &mdash; channels and context.</span>
+                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for role 579397.</span>
                 <span class="deeper-cta">Open contact page &rarr;</span>
               </a>
             </div>
