@@ -50,7 +50,12 @@
   box-shadow: 0 0 0 4px rgba(10, 191, 83, 0.14);
 }
 
+.adyen-microsite .nav-links a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 .adyen-microsite .nav a:hover,
+.adyen-microsite .nav a:focus,
 .adyen-microsite .nav a[aria-current="page"] {
   color: var(--adyen-green);
 }
