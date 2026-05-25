@@ -1,12 +1,12 @@
 {% assign lens_cases = site.data.cases | where: 'lens_number', include.lens.number %}
 
 <div class="bp-section-tag" aria-hidden="true">
-  <span>// {{ include.index }} / Lens {{ include.lens.number }} / {{ include.lens.title }}</span
+  <span>// {{ include.index }} / {{ include.lens.title }}</span
   ><span>{{ lens_cases.size }} {% if lens_cases.size == 1 %}case{% else %}cases{% endif %}</span>
 </div>
 <section class="bp-lens-section" id="{{ include.lens.id }}">
   <div class="bp-lens-copy">
-    <p class="bp-mono bp-accent">Lens {{ include.lens.number }}</p>
+    <p class="bp-mono bp-accent">Category {{ include.lens.number }}</p>
     <h2>{{ include.lens.title }}</h2>
     <p>{{ include.lens.summary }}</p>
     <p class="bp-lens-roles">For: {{ include.lens.roles }}</p>
