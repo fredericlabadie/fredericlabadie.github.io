@@ -15,3 +15,37 @@
   text-decoration: none;
   box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.42);
 }
+
+.adyen-microsite .channel-card,
+.adyen-microsite .channel-card:visited {
+  color: var(--adyen-ink);
+  text-decoration: none;
+}
+
+.adyen-microsite .channel-card .channel-title,
+.adyen-microsite .channel-card .channel-body {
+  color: var(--adyen-ink);
+}
+
+.adyen-microsite .channel-card:hover,
+.adyen-microsite .channel-card:focus {
+  color: var(--adyen-ink);
+  text-decoration: none;
+}
+
+.adyen-microsite .channel-card:hover .channel-title,
+.adyen-microsite .channel-card:focus .channel-title {
+  box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.42);
+}
+
+.adyen-microsite .channel-primary a,
+.adyen-microsite .channel-primary a:visited {
+  color: var(--adyen-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 rgba(10, 191, 83, 0.36);
+}
+
+.adyen-microsite .channel-primary a:hover,
+.adyen-microsite .channel-primary a:focus {
+  box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.5);
+}
