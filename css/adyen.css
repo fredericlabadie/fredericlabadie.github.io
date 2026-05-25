@@ -7,7 +7,9 @@
 
 .adyen-microsite {
   --adyen-green: #0abf53;
+  --adyen-green-dark: #07883c;
   --adyen-green-soft: #dff8e8;
+  --adyen-green-wash: #f1fbf5;
   --adyen-ink: #09131f;
   --adyen-navy: #101c2b;
   --adyen-muted: #536174;
@@ -16,11 +18,13 @@
   --adyen-panel: #eef4f1;
 
   --c-accent: var(--adyen-green);
+  --c-accent-dark: var(--adyen-green-dark);
   --c-primary: var(--adyen-ink);
   --c-ink: var(--adyen-ink);
   --c-ink-soft: var(--adyen-muted);
   --c-bg: var(--adyen-paper);
   --c-border: var(--adyen-line);
+  --c-card-border: var(--adyen-line);
   background:
     radial-gradient(circle at 1px 1px, rgba(10, 191, 83, 0.12) 1px, transparent 0) 0 0 / 22px 22px,
     var(--adyen-paper);
@@ -96,13 +100,44 @@
 .adyen-microsite .case-card,
 .adyen-microsite .deeper-card,
 .adyen-microsite .metric,
-.adyen-microsite .flow-step {
+.adyen-microsite .flow-step,
+.adyen-microsite .case-toc-item,
+.adyen-microsite .channel-primary,
+.adyen-microsite .channel-card {
   background: rgba(255, 255, 255, 0.9);
   border-color: var(--adyen-line);
 }
 
 .adyen-microsite .callout {
   max-width: 780px;
+  border-left: 4px solid var(--adyen-green);
+}
+
+.adyen-microsite .btn,
+.adyen-microsite .btn:visited {
+  background: var(--adyen-green);
+  border-color: var(--adyen-green);
+  color: #06120b;
+}
+
+.adyen-microsite .btn:hover,
+.adyen-microsite .btn:focus {
+  background: var(--adyen-green-dark);
+  border-color: var(--adyen-green-dark);
+  color: #fff;
+}
+
+.adyen-microsite .btn-secondary,
+.adyen-microsite .btn-secondary:visited {
+  background: transparent;
+  border-color: var(--adyen-green);
+  color: var(--adyen-green);
+}
+
+.adyen-microsite .btn-secondary:hover,
+.adyen-microsite .btn-secondary:focus {
+  background: var(--adyen-green-soft);
+  color: var(--adyen-green-dark);
 }
 
 .adyen-microsite .case-argument,
@@ -120,24 +155,62 @@
 .adyen-microsite .metric:nth-child(even),
 .adyen-microsite .card.accent,
 .adyen-microsite .case-toc-item:hover,
-.adyen-microsite .case-toc-item:focus {
+.adyen-microsite .case-toc-item:focus,
+.adyen-microsite .channel-card:hover,
+.adyen-microsite .channel-card:focus {
   background: var(--adyen-green-soft);
 }
 
 .adyen-microsite .case-toc-item:hover,
-.adyen-microsite .case-toc-item:focus {
+.adyen-microsite .case-toc-item:focus,
+.adyen-microsite .channel-card:hover,
+.adyen-microsite .channel-card:focus,
+.adyen-microsite .deeper-card:hover,
+.adyen-microsite .deeper-card:focus {
   border-left-color: var(--adyen-green);
 }
 
 .adyen-microsite .metric-value,
 .adyen-microsite .flow-num,
-.adyen-microsite .case-toc-num {
+.adyen-microsite .case-toc-num,
+.adyen-microsite .channel-label,
+.adyen-microsite .channel-primary .channel-label {
   color: var(--adyen-green);
 }
 
+.adyen-microsite .case-card {
+  border-top: 3px solid var(--adyen-green);
+}
+
+.adyen-microsite .case-card + .case-card {
+  border-top-width: 1px;
+}
+
+.adyen-microsite .card.accent,
+.adyen-microsite .metric:nth-child(even) {
+  box-shadow: inset 0 3px 0 var(--adyen-green);
+}
+
+.adyen-microsite .card.amber {
+  background: var(--adyen-green-wash);
+  border-color: rgba(10, 191, 83, 0.32);
+}
+
 .adyen-microsite .tag {
-  border-color: var(--adyen-line);
+  border-color: rgba(10, 191, 83, 0.32);
   background: rgba(255, 255, 255, 0.72);
+}
+
+.adyen-microsite code,
+.adyen-microsite kbd {
+  border-color: rgba(10, 191, 83, 0.28);
+  background: var(--adyen-green-wash);
+  color: var(--adyen-green-dark);
+}
+
+.adyen-microsite ::selection {
+  background: var(--adyen-green);
+  color: #06120b;
 }
 
 .adyen-microsite .footer {
