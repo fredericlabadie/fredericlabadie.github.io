@@ -1,0 +1,48 @@
+/* ============================================================
+   Philips live-QA polish
+   Small overrides from browser screenshots. Keep this file narrow:
+   spacing and component polish only, loaded after philips-blueprint.css.
+   ============================================================ */
+
+/* Work/About pages use both `.page-intro` and `.hero`. The base rules were
+   stacking section padding and hero container padding, creating too much air
+   between the nav and page title. */
+.philips-microsite .page-intro.hero {
+  padding: 0;
+}
+
+.philips-microsite .page-intro.hero .container {
+  padding-top: 56px;
+  padding-bottom: 46px;
+}
+
+/* Keep the homepage hero grand, but prevent the Work/About page intros from
+   feeling quite as oversized as the main landing thesis. */
+.philips-microsite .page-intro.hero h1 {
+  max-width: 980px;
+  font-size: clamp(42px, 5.8vw, 78px);
+}
+
+/* The browser screenshots showed the mobile page intros reading well but a
+   little deep below the nav. Tighten without flattening the editorial feel. */
+@media (max-width: 720px) {
+  .philips-microsite .page-intro.hero .container {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .philips-microsite .page-intro.hero h1 {
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: 1.02;
+  }
+}
+
+/* At very small widths the homepage thesis is intentionally large, but it was
+   approaching the edge of readability. This keeps the same hierarchy while
+   avoiding a too-cramped first impression. */
+@media (max-width: 430px) {
+  .philips-microsite .hero:not(.page-intro) h1 {
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 1.02;
+  }
+}
