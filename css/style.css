@@ -1582,7 +1582,7 @@ section.alt { background: var(--c-bg-alt); }
   padding: 14px var(--pad-x-lg);
 }
 .currently-band-inner {
-  max-width: var(--max-container);
+  max-width: var(--container-max);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
