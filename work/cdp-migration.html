@@ -49,14 +49,15 @@ twitter_description: "Oracle Responsys to Bloomreach CDP migration with the cust
         <article class="bp-case-block">
           <p class="bp-case-mono bp-case-accent">Situation</p>
           <h3>The old stack could not produce a stable audience truth.</h3>
-          <p>The retailer was running lifecycle marketing through an Acquia-to-Responsys implementation where audience counts, timing, deduplication, and channel consent did not line up cleanly. Acquia and Responsys could disagree on who qualified for a campaign, so final recipient counts were not knowable until after approvals and campaign documentation.</p>
-          <p>SMS made the problem worse. Responsys maintained SMS in a separate list, so unsubscribe state and eligibility could fall out of sync between email and SMS.</p>
+          <p>The retailer was running lifecycle marketing through an Acquia-to-Responsys implementation where audience counts, timing, deduplication, and channel consent did not line up cleanly. Acquia and Responsys could disagree on who qualified for a campaign, so final recipient counts were not knowable until after approvals and campaign documentation. Batched uploads created lag: an email could still go out after an upstream list definition had changed or failed to refresh.</p>
+          <p>SMS made the problem worse. Responsys maintained SMS in a separate list, so unsubscribe state and eligibility could fall out of sync between email and SMS. IT uploads were not one-to-one across Acquia and Responsys because the systems used different API builds, and Acquia applied different deduplication definitions across mail, email, and SMS.</p>
         </article>
 
         <article class="bp-case-block">
           <p class="bp-case-mono bp-case-accent">Task</p>
           <h3>Evaluate the new platform as an architecture decision, not just a vendor swap.</h3>
-          <p>I was part of the Bloomreach evaluation process and sat in the platform demo. Afterward, I translated the implications internally: Bloomreach could collapse recurring failure points by making audience definition, consent state, lifecycle events, and segmentation operate from a more coherent customer model.</p>
+          <p>I was part of the Bloomreach evaluation process and sat in the platform demo. Afterward, I translated the implications internally: Bloomreach could collapse several recurring failure points in the Acquia + Responsys setup by making audience definition, consent state, lifecycle events, and segmentation operate from a more coherent customer model.</p>
+          <p>The task was then to preserve campaign continuity while refusing to port the old failure modes forward. The migration needed to become a data-model and marketing-automation redesign, not a platform swap.</p>
         </article>
       </div>
     </section>
