@@ -84,6 +84,13 @@
   align-items: center;
 }
 
+.bp-contact-hero-simple {
+  max-width: 1516px;
+  margin: 0 auto;
+  padding: 56px 48px 34px;
+  border-bottom: 0;
+}
+
 .bp-contact-mono,
 .bp-contact-kicker {
   font-family: var(--font-mono);
@@ -230,6 +237,12 @@
   padding: 32px 48px 48px;
 }
 
+.bp-contact-channels {
+  max-width: 1516px;
+  margin: 0 auto;
+  padding: 0 48px 56px;
+}
+
 .bp-contact-sidebar {
   position: sticky;
   top: 72px;
@@ -264,7 +277,7 @@
 }
 
 .bp-contact-card {
-  min-height: 168px;
+  min-height: 138px;
   padding: 24px;
   background: #ffffff;
   border-right: 1px solid #cdd3da;
@@ -291,7 +304,7 @@
 .bp-contact-card strong {
   color: #16263a;
   font-family: "Newsreader", Georgia, serif;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.12;
   word-break: break-word;
@@ -341,11 +354,6 @@
   font-size: 15px;
   line-height: 1.62;
 }
-
-/* ============================================================
-   Primary email card — full-width navy, dominant.
-   Sits above the secondary channel grid.
-   ============================================================ */
 
 .bp-contact-primary-card {
   display: block;
@@ -409,8 +417,6 @@
   color: #ff7551;
 }
 
-/* Secondary grid: 4 channels in 2 cols, snug under the primary card */
-
 .bp-contact-grid.bp-contact-grid-secondary {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -464,7 +470,8 @@
   }
   .bp-contact-hero,
   .bp-contact-main,
-  .bp-contact-section-tag {
+  .bp-contact-section-tag,
+  .bp-contact-channels {
     padding-left: 20px;
     padding-right: 20px;
   }
