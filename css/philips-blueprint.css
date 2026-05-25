@@ -1,69 +1,109 @@
 /* ============================================================
-   Philips microsite — blueprint alignment layer
-   Scoped overrides only. Keeps the role-fit microsite structure while
-   matching the current portfolio design language with Philips blue as signal.
+   Philips microsite — base-site convergence layer
+   Scoped to .philips-microsite. The goal is not a separate skin;
+   it is the current blueprint portfolio language with Philips blue as signal.
    ============================================================ */
 
 .philips-microsite {
+  --philips-blue: #0b5ed7;
+  --philips-blue-dark: #16263a;
+  --philips-blue-soft: #9fc8ff;
+  --philips-paper: #eef2f5;
+  --philips-paper-alt: #f8fafc;
+  --philips-rule: #cdd3da;
+  --philips-rule-dark: #16263a;
+
   --c-bg: #ffffff;
-  --c-bg-alt: #eef4fb;
-  --c-ink: #15181d;
-  --c-ink-soft: #596574;
-  --c-rule: #16263a;
-  --c-rule-light: #c9d7e8;
-  --c-primary: #16263a;
-  --c-primary-on-dark: #9fc8ff;
-  --c-accent: #0b5ed7;
+  --c-bg-alt: var(--philips-paper);
+  --c-ink: #16263a;
+  --c-ink-soft: #52617a;
+  --c-rule: var(--philips-rule-dark);
+  --c-rule-light: var(--philips-rule);
+  --c-primary: var(--philips-blue-dark);
+  --c-primary-on-dark: var(--philips-blue-soft);
+  --c-accent: var(--philips-blue);
   --c-on-primary: #ffffff;
   --c-on-accent: #ffffff;
   --c-on-ink: #ffffff;
-}
 
-.philips-microsite body,
-body.philips-microsite {
-  background: var(--c-bg);
+  background:
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
+    var(--philips-paper);
   color: var(--c-ink);
 }
 
-/* Navigation: align the Philips microsite with the current dark blueprint nav. */
+.philips-microsite strong {
+  color: inherit;
+}
+
+.philips-microsite main {
+  background:
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
+    var(--philips-paper);
+}
+
+/* Navigation: match the current site-nav visual language while preserving
+   the Philips-specific information architecture. */
 .philips-microsite .nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   min-height: 48px;
   height: auto;
   padding: 0;
-  background: var(--c-primary);
-  color: var(--c-on-primary);
-  border-bottom: 1px solid var(--c-primary);
+  display: flex;
+  align-items: center;
+  background: var(--philips-blue-dark);
+  color: #ffffff;
+  border-bottom: 1px solid var(--philips-blue-dark);
 }
 
 .philips-microsite .nav-inner {
+  width: 100%;
   max-width: none;
+  margin: 0;
   padding: 12px 32px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.philips-microsite .nav-brand,
+.philips-microsite .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .philips-microsite .nav-brand,
 .philips-microsite .nav-links a {
   color: inherit;
+  text-decoration: none;
 }
 
 .philips-microsite .nav-brand {
   font-size: 11px;
   letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .philips-microsite .nav-brand-dot {
+  order: -1;
   width: 8px;
   height: 8px;
-  background: var(--c-accent);
-  box-shadow: 0 0 0 2px rgba(11, 94, 215, 0.22);
+  background: var(--philips-blue);
+  box-shadow: 0 0 0 2px rgba(11, 94, 215, 0.25);
 }
 
 .philips-microsite .nav-brand-role {
-  color: #b9c9dd;
+  color: #a3b4c7;
 }
 
 .philips-microsite .nav-links {
-  gap: 18px;
+  gap: 14px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -75,160 +115,389 @@ body.philips-microsite {
 }
 
 .philips-microsite .nav-links a:hover {
-  color: var(--c-on-primary);
+  color: #ffffff;
   text-decoration: none;
 }
 
 .philips-microsite .nav-links a[aria-current='page'] {
-  color: #9fc8ff;
+  color: var(--philips-blue-soft);
 }
 
 .philips-microsite .nav-toggle span {
-  background: var(--c-on-primary);
+  background: #ffffff;
 }
 
-/* Sections and hero: keep the microsite architecture, tune the surface language. */
+/* Base page surfaces */
 .philips-microsite section {
-  border-top-color: var(--c-rule);
+  background: #ffffff;
+  border-top: 1px solid var(--philips-rule-dark);
 }
 
 .philips-microsite section.alt {
-  background: var(--c-bg-alt);
+  background: var(--philips-paper);
 }
 
+.philips-microsite .container {
+  max-width: none;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+/* Hero: closer to the current blueprint/recruiter family, with the same
+   editorial serif headline treatment used on newer pages. */
 .philips-microsite .hero {
+  border-top: 0;
   background:
-    linear-gradient(180deg, rgba(238, 244, 251, 0.78), rgba(255, 255, 255, 0) 58%),
-    var(--c-bg);
+    radial-gradient(circle at 1px 1px, #c6cdd5 0.6px, transparent 0.7px) 0 0 /
+      24px 24px,
+    var(--philips-paper);
 }
 
-.philips-microsite .eyebrow,
-.philips-microsite .section-eyebrow,
+.philips-microsite .hero .container {
+  padding: 44px 48px 40px;
+}
+
+.philips-microsite .eyebrow {
+  margin-bottom: 18px;
+  color: var(--philips-blue);
+  font-size: 10.5px;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.philips-microsite .eyebrow::before {
+  background: var(--philips-blue);
+}
+
+.philips-microsite .hero h1 {
+  max-width: 1120px;
+  margin-bottom: 24px;
+  color: var(--philips-blue-dark);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(44px, 6.4vw, 86px);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.034em;
+}
+
+.philips-microsite .hero h1 em {
+  color: var(--philips-blue);
+  text-decoration: none;
+}
+
+.philips-microsite .hero-body {
+  max-width: 760px;
+  color: var(--c-ink-soft);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.philips-microsite .hero-actions {
+  margin-top: 24px;
+  margin-bottom: 34px;
+}
+
+.philips-microsite .btn {
+  padding: 11px 14px;
+  border: 1px solid var(--philips-blue-dark);
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+}
+
+.philips-microsite .btn-primary {
+  background: var(--philips-blue-dark);
+  border-color: var(--philips-blue-dark);
+  color: #ffffff;
+}
+
+.philips-microsite .btn-secondary {
+  background: #ffffff;
+  color: var(--philips-blue-dark);
+}
+
+.philips-microsite .btn:hover,
+.philips-microsite .btn-primary:hover,
+.philips-microsite .btn-secondary:hover {
+  background: var(--philips-blue);
+  border-color: var(--philips-blue);
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Diff panel now behaves like a newer proof/card strip rather than the
+   older split-panel homepage treatment. */
+.philips-microsite .diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--philips-rule);
+  border-left: 1px solid var(--philips-rule);
+  background: #ffffff;
+}
+
+.philips-microsite .diff-side {
+  padding: 24px 22px;
+  background: #ffffff;
+  border-right: 1px solid var(--philips-rule);
+  border-bottom: 1px solid var(--philips-rule);
+}
+
+.philips-microsite .diff-side:nth-child(2) {
+  background: var(--philips-paper-alt);
+}
+
 .philips-microsite .diff-label,
+.philips-microsite .section-eyebrow,
 .philips-microsite .card-label,
 .philips-microsite .case-card-meta,
 .philips-microsite .fit-ref a,
 .philips-microsite .callout-label,
 .philips-microsite .first-90-label,
 .philips-microsite .contact-list .label {
-  color: var(--c-accent);
+  color: var(--philips-blue);
 }
 
-.philips-microsite .eyebrow::before {
-  background: var(--c-accent);
+.philips-microsite .diff-title {
+  color: var(--philips-blue-dark);
+  font-weight: 600;
 }
 
-.philips-microsite .hero h1 em {
-  color: var(--c-primary);
-  text-decoration-color: rgba(11, 94, 215, 0.42);
-}
-
-.philips-microsite .section-head {
-  border-bottom-color: var(--c-rule);
-}
-
-.philips-microsite .section-head .num {
-  color: var(--c-accent);
-}
-
-.philips-microsite .section-head .title,
-.philips-microsite .section-sub,
-.philips-microsite .diff-body,
-.philips-microsite .case-card-context,
-.philips-microsite .footer-inner {
+.philips-microsite .diff-body {
   color: var(--c-ink-soft);
 }
 
-/* Buttons: current portfolio shape, Philips blue signal. */
-.philips-microsite .btn {
-  border-color: var(--c-rule);
+/* Section openers: closer to bp-section-strip / recruiter section-tag. */
+.philips-microsite .section-head {
+  padding: 14px 48px;
+  display: grid;
+  grid-template-columns: 72px minmax(170px, 260px) 1fr;
+  gap: 24px;
+  align-items: baseline;
+  background: var(--philips-paper);
+  border-top: 1px solid var(--philips-blue-dark);
+  border-bottom: 1px solid var(--philips-rule);
+  color: var(--c-ink-soft);
 }
 
-.philips-microsite .btn-primary {
-  background: var(--c-primary);
-  border-color: var(--c-primary);
-  color: var(--c-on-primary);
+.philips-microsite .section-head .num,
+.philips-microsite .section-head .label,
+.philips-microsite .section-head .title {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
 }
 
-.philips-microsite .btn-primary:hover {
-  background: var(--c-accent);
-  border-color: var(--c-accent);
+.philips-microsite .section-head .num {
+  color: var(--philips-blue);
 }
 
-.philips-microsite .btn-secondary:hover {
-  color: var(--c-accent);
-  border-color: var(--c-accent);
+.philips-microsite .section-head .label {
+  color: var(--philips-blue-dark);
 }
 
-/* Cards, grids, and tables: blueprint hairlines with lighter alternate surfaces. */
-.philips-microsite .diff-grid,
+.philips-microsite .section-head .title {
+  color: var(--c-ink-soft);
+}
+
+.philips-microsite .section-body {
+  padding: 32px 0 44px;
+}
+
+.philips-microsite .section-heading {
+  max-width: 900px;
+  color: var(--philips-blue-dark);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(34px, 4.8vw, 62px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.032em;
+}
+
+.philips-microsite .section-sub,
+.philips-microsite .case-subtitle {
+  color: var(--c-ink-soft);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* Grids and cards */
 .philips-microsite .card-row,
 .philips-microsite .fit-grid,
 .philips-microsite .layer-table {
-  border-top-color: var(--c-rule);
-  border-left-color: var(--c-rule);
+  border-top: 1px solid var(--philips-rule);
+  border-left: 1px solid var(--philips-rule);
 }
 
-.philips-microsite .diff-side,
 .philips-microsite .card,
-.philips-microsite .case-card,
 .philips-microsite .fit-row,
 .philips-microsite .layer-row,
-.philips-microsite .layer-table-header,
-.philips-microsite .contact-list a,
-.philips-microsite .callout,
-.philips-microsite .first-90 {
-  border-color: var(--c-rule);
+.philips-microsite .layer-table-header {
+  background: #ffffff;
+  border-color: var(--philips-rule);
 }
 
-.philips-microsite .diff-side:nth-child(2),
-.philips-microsite .card.amber,
-.philips-microsite .fit-header,
-.philips-microsite .layer-table-header,
-.philips-microsite .callout,
-.philips-microsite .first-90,
-.philips-microsite .contact-list a:hover {
-  background: var(--c-bg-alt);
+.philips-microsite .card {
+  min-height: 172px;
+  padding: 20px 18px;
 }
 
-.philips-microsite .card.accent {
-  background: var(--c-bg);
+.philips-microsite .card.accent,
+.philips-microsite .card.amber {
+  background: #ffffff;
 }
 
 .philips-microsite .card.amber .card-label,
-.philips-microsite .amber,
-.philips-microsite .layer-name {
-  color: var(--c-primary);
+.philips-microsite .amber {
+  color: var(--philips-blue);
 }
 
-.philips-microsite .case-card-title a:hover,
-.philips-microsite .contact-list a:hover span:last-child {
-  color: var(--c-accent);
+.philips-microsite .card-body {
+  color: var(--c-ink-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.philips-microsite .fit-grid {
+  background: #ffffff;
+}
+
+.philips-microsite .fit-header,
+.philips-microsite .layer-table-header {
+  background: var(--philips-paper-alt);
+}
+
+.philips-microsite .fit-row {
+  border-right: 1px solid var(--philips-rule);
+  border-bottom: 1px solid var(--philips-rule);
+}
+
+.philips-microsite .fit-need,
+.philips-microsite .fit-bring,
+.philips-microsite .fit-ref {
+  color: var(--c-ink);
+}
+
+.philips-microsite .fit-bring,
+.philips-microsite .fit-need {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.philips-microsite .fit-ref a {
+  border-bottom: 1px solid var(--philips-rule);
 }
 
 .philips-microsite .fit-ref a:hover,
 .philips-microsite .callout a:hover {
-  border-bottom-color: var(--c-accent);
-  color: var(--c-accent);
+  color: var(--philips-blue);
+  border-bottom-color: var(--philips-blue);
+  text-decoration: none;
 }
 
-/* Clinical table labels keep hierarchy without the old amber/orange cue. */
+/* Case cards: closer to current work/recruiter card scale. */
+.philips-microsite .case-card {
+  margin-bottom: 0;
+  padding: 22px 24px;
+  background: #ffffff;
+  border: 1px solid var(--philips-rule);
+}
+
+.philips-microsite .case-card-head {
+  margin-bottom: 12px;
+}
+
+.philips-microsite .case-card-title {
+  color: var(--philips-blue-dark);
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.philips-microsite .case-card-title a:hover {
+  color: var(--philips-blue);
+}
+
+.philips-microsite .case-card-body {
+  color: var(--c-ink-soft);
+  font-size: 14.5px;
+  line-height: 1.58;
+}
+
+/* Clinical domain / callouts */
+.philips-microsite .callout,
+.philips-microsite .first-90 {
+  background: #ffffff;
+  border: 1px solid var(--philips-rule);
+}
+
+.philips-microsite .callout-body,
+.philips-microsite .first-90-item {
+  color: var(--c-ink-soft);
+}
+
 .philips-microsite .layer-name.l1,
 .philips-microsite .layer-name.l2,
 .philips-microsite .layer-name.l3 {
-  background: var(--c-primary);
-  color: var(--c-on-primary);
+  background: var(--philips-blue-dark);
+  color: #ffffff;
 }
 
-/* Footer: same structural rhythm, Philips-blue signal on hover only. */
+.philips-microsite .layer-cell {
+  color: var(--c-ink-soft);
+}
+
+.philips-microsite .layer-cell strong {
+  color: var(--philips-blue-dark);
+}
+
+/* Contact and footer */
+.philips-microsite .contact-list a,
+.philips-microsite .contact-grid,
 .philips-microsite .footer {
-  background: var(--c-bg);
-  border-top: 1px solid var(--c-rule);
+  border-color: var(--philips-rule);
+}
+
+.philips-microsite .contact-list a {
+  background: #ffffff;
+}
+
+.philips-microsite .contact-list a:hover {
+  background: var(--philips-paper-alt);
+  text-decoration: none;
+}
+
+.philips-microsite .contact-list a:hover span:last-child {
+  color: var(--philips-blue);
+}
+
+.philips-microsite .footer {
+  background: #ffffff;
+  border-top: 1px solid var(--philips-blue-dark);
 }
 
 .philips-microsite .footer-inner {
   max-width: none;
   padding: 18px 32px;
+  color: var(--c-ink-soft);
+}
+
+/* Mobile convergence with current blueprint pages. */
+@media (max-width: 980px) {
+  .philips-microsite .card-row-3,
+  .philips-microsite .card-row-2,
+  .philips-microsite .diff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philips-microsite .section-head {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .philips-microsite .section-head .title {
+    text-align: left;
+  }
 }
 
 @media (max-width: 860px) {
@@ -242,13 +511,35 @@ body.philips-microsite {
   }
 
   .philips-microsite .nav-links {
-    background: var(--c-primary);
+    width: 100%;
+    background: var(--philips-blue-dark);
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     margin-top: 12px;
     padding-top: 12px;
+    justify-content: flex-start;
+    row-gap: 10px;
   }
 
   .philips-microsite .nav-links.open {
     display: flex;
+  }
+}
+
+@media (max-width: 720px) {
+  .philips-microsite .container,
+  .philips-microsite .hero .container,
+  .philips-microsite .section-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .philips-microsite .hero .container {
+    padding-top: 36px;
+    padding-bottom: 34px;
+  }
+
+  .philips-microsite .section-body {
+    padding-top: 28px;
+    padding-bottom: 36px;
   }
 }
