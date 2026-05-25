@@ -1,0 +1,17 @@
+/* Adyen live QA overrides.
+   Loaded after adyen.css for small visual fixes from browser screenshots. */
+
+.adyen-microsite .case-card-title a,
+.adyen-microsite .case-card-title a:visited {
+  color: var(--adyen-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: box-shadow 160ms ease, color 160ms ease;
+}
+
+.adyen-microsite .case-card-title a:hover,
+.adyen-microsite .case-card-title a:focus {
+  color: var(--adyen-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.42);
+}
