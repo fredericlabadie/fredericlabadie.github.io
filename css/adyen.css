@@ -64,6 +64,16 @@
   color: var(--adyen-green-text);
 }
 
+.adyen-microsite .case-card-title a,
+.adyen-microsite .case-card-title a:visited {
+  color: var(--adyen-ink);
+}
+
+.adyen-microsite .case-card-title a:hover,
+.adyen-microsite .case-card-title a:focus {
+  color: var(--adyen-green-text);
+}
+
 .adyen-microsite .hero,
 .adyen-microsite .page-intro.hero {
   padding: 0;
