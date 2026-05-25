@@ -50,6 +50,18 @@
   padding-bottom: 34px;
 }
 
+/* Sectioned case pages, like the UX research case, do not start with `#case`.
+   Give their first content blocks the same compact rhythm as standard cases. */
+.philips-microsite .page-intro.hero:has(.case-meta) + section:not(#case) .section-body {
+  padding-top: 32px;
+  padding-bottom: 28px;
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) + section + section .section-body {
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+
 .philips-microsite #case .section-body > .container > * + * {
   margin-top: 26px;
 }
@@ -122,6 +134,12 @@
 
   .philips-microsite .page-intro.hero:has(.case-meta) h1 {
     font-size: clamp(38px, 11vw, 56px);
+  }
+
+  .philips-microsite .page-intro.hero:has(.case-meta) + section:not(#case) .section-body,
+  .philips-microsite .page-intro.hero:has(.case-meta) + section + section .section-body {
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   .philips-microsite .page-intro.hero .page-intro-note {
