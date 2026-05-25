@@ -1,163 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The measurement plan written before the code &mdash; case study &mdash; Philips role fit</title>
-  <meta name="description" content="Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign — the architectural deliverable was the framework that turned a planned cutover into a controlled experiment." />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="noindex, nofollow" />
+---
+layout: philips
+philips_nav: work
+skip_link: "#case"
+skip_label: "Skip to case"
+title: "The measurement plan written before the code &mdash; case study &mdash; Philips role fit"
+description: "Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign &mdash; the architectural deliverable was the framework that turned a planned cutover into a controlled experiment."
+og_type: article
+og_title: "The measurement plan written before the code &mdash; for the Philips brief"
+og_description: "Turning a planned straight-cutover into a controlled experiment with a pre-written tracking plan."
+og_url: "https://fredericlabadie.com/philips/work/mqsr-release-ab.html"
+---
 
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="The measurement plan written before the code &mdash; for the Philips brief" />
-  <meta property="og:description" content="Turning a planned straight-cutover into a controlled experiment with a pre-written tracking plan." />
-  <meta property="og:url" content="https://fredericlabadie.com/philips/work/mqsr-release-ab.html" />
-  <meta property="og:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The measurement plan written before the code &mdash; for the Philips brief" />
-  <meta name="twitter:description" content="Turning a planned straight-cutover into a controlled experiment with a pre-written tracking plan." />
-  <meta name="twitter:image" content="https://fredericlabadie.com/assets/og/og-image.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body class="philips-microsite">
-  <a class="skip-link" href="#case">Skip to case</a>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/philips/" class="nav-brand">
-        Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Philips &middot; UX Telemetry Expert role fit</span>
-      </a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="/philips/">Home</a></li>
-        <li><a href="/philips/work/" aria-current="page">Work</a></li>
-        <li><a href="/philips/about/">About</a></li>
-        <li><a href="/philips/contact/">Contact</a></li>
-      </ul>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <main id="top">
-    <section class="page-intro hero">
-      <div class="container">
-        <p class="eyebrow">Case study &middot; for the Philips brief &middot; Lens 03 &middot; Experimentation</p>
-        <h1>The measurement plan written before the code.</h1>
-        <p class="hero-subtitle">Proposed and owned the release measurement and A/B test framework for a major mobile-nav redesign &mdash; turning a planned straight-cutover into a controlled experiment.</p>
-        <p class="case-meta" style="margin-top: 28px;">
-          <span class="case-context">/ Major quick-service restaurant &middot; analytics architect &middot; navigation redesign</span>
-        </p>
-      </div>
-    </section>
-
-    <section id="case">
-      <div class="section-body">
+<main id="top">
+      <section class="page-intro hero">
         <div class="container">
+          <p class="eyebrow">
+            Case study &middot; for the Philips brief &middot; Topic 03 &middot;
+            Experimentation
+          </p>
+          <h1>The measurement plan written before the code.</h1>
+          <p class="hero-subtitle">
+            Proposed and owned the release measurement and A/B test framework
+            for a major mobile-nav redesign &mdash; turning a planned
+            straight-cutover into a controlled experiment.
+          </p>
+          <p class="case-meta" style="margin-top: 28px">
+            <span class="case-context"
+              >/ Major quick-service restaurant &middot; analytics architect
+              &middot; navigation redesign</span
+            >
+          </p>
+        </div>
+      </section>
 
-          <div class="callout">
-            <div class="callout-label">Why this is in the Philips selection</div>
-            <div class="callout-body">
-              <strong>The measurement framework is the architectural deliverable.</strong> Turning a planned cutover into a controlled experiment is the practice that translates directly to any product change at scale &mdash; clinical workflow rollouts included. The discipline of writing the tracking plan before the code (so baselines exist, success criteria are pre-defined, and confounders are named explicitly) is the right shape for any regulated-context product change.
+      <section id="case">
+        <div class="section-body">
+          <div class="container">
+            <div class="callout">
+              <div class="callout-label">
+                Why this is in the Philips selection
+              </div>
+              <div class="callout-body">
+                <strong
+                  >The measurement framework is the architectural
+                  deliverable.</strong
+                >
+                Turning a planned cutover into a controlled experiment is the
+                practice that translates directly to any product change at scale
+                &mdash; clinical workflow rollouts included. The discipline of
+                writing the tracking plan before the code (so baselines exist,
+                success criteria are pre-defined, and confounders are named
+                explicitly) is the right shape for any regulated-context product
+                change.
+              </div>
             </div>
-          </div>
 
-          <div class="outcome">
-            <div class="outcome-icon">&rarr;</div>
-            <div>
-              <div class="outcome-title">What happened</div>
-              <div class="outcome-body">A major QSR's planned <strong>straight-cutover nav redesign was reshaped into a controlled A/B release</strong> by proposing and owning the measurement framework before development began &mdash; event tagging spec, written tracking plan, and an A/B-rationale one-pager that isolated the nav change as the causal variable. The <strong>architectural deliverable was the framework itself</strong>; specs, tracking plan, and rationale handed to engineering and the client analytics lead, with test ownership and rollout decision held by the client team. Post-launch results sit under client confidentiality.</div>
+            <div class="outcome">
+              <div class="outcome-icon">&rarr;</div>
+              <div>
+                <div class="outcome-title">What happened</div>
+                <div class="outcome-body">
+                  A major QSR's planned
+                  <strong
+                    >straight-cutover nav redesign was reshaped into a
+                    controlled A/B release</strong
+                  >
+                  by proposing and owning the measurement framework before
+                  development began &mdash; event tagging spec, written tracking
+                  plan, and an A/B-rationale one-pager that isolated the nav
+                  change as the causal variable. The
+                  <strong
+                    >architectural deliverable was the framework itself</strong
+                  >; specs, tracking plan, and rationale handed to engineering
+                  and the client analytics lead, with test ownership and rollout
+                  decision held by the client team. Post-launch results sit
+                  under client confidentiality.
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="case-argument">
-            UX changes of this scale are impossible to evaluate fairly without a pre-defined measurement plan: baselines haven't been captured, the right events aren't instrumented, and success criteria get defined retroactively to match whatever the data shows. The argument for an A/B test is also an argument for <strong>not being fooled by your own product launch</strong>.
-          </div>
+            <div class="case-argument">
+              UX changes of this scale are impossible to evaluate fairly without
+              a pre-defined measurement plan: baselines haven't been captured,
+              the right events aren't instrumented, and success criteria get
+              defined retroactively to match whatever the data shows. The
+              argument for an A/B test is also an argument for
+              <strong>not being fooled by your own product launch</strong>.
+            </div>
 
-          <div class="card-row card-row-2">
-            <div class="card">
-              <div class="card-label">Situation</div>
-              <div class="card-body">A major quick-service restaurant brand's mobile app heading into a <strong>significant navigation redesign</strong> &mdash; planned as a straight cutover with no controlled-release framing. Baselines hadn't been captured, the right events weren't instrumented for the new IA, and there was no contract for what would count as success or failure. An Upsells v1.0 release was running concurrently, raising the risk of confounding any post-launch reading.</div>
+            <div class="card-row card-row-2">
+              <div class="card">
+                <div class="card-label">Situation</div>
+                <div class="card-body">
+                  A major quick-service restaurant brand's mobile app heading
+                  into a
+                  <strong>significant navigation redesign</strong> &mdash;
+                  planned as a straight cutover with no controlled-release
+                  framing. Baselines hadn't been captured, the right events
+                  weren't instrumented for the new IA, and there was no contract
+                  for what would count as success or failure. An Upsells v1.0
+                  release was running concurrently, raising the risk of
+                  confounding any post-launch reading.
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-label">Task</div>
+                <div class="card-body">
+                  Propose and own the release measurement framework that turned
+                  the planned cutover into a controlled experiment &mdash;
+                  written before code. Three things had to be true: the right
+                  events had to be specced and instrumented <em>before</em> the
+                  redesign shipped; metrics, guardrails, and success criteria
+                  had to be agreed up front; and the confounding risk from
+                  concurrent releases had to be called out explicitly in the
+                  rationale.
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <div class="card-label">Task</div>
-              <div class="card-body">Propose and own the release measurement framework that turned the planned cutover into a controlled experiment &mdash; written before code. Three things had to be true: the right events had to be specced and instrumented <em>before</em> the redesign shipped; metrics, guardrails, and success criteria had to be agreed up front; and the confounding risk from concurrent releases had to be called out explicitly in the rationale.</div>
-            </div>
-          </div>
 
-          <div class="card-row card-row-2">
-            <div class="card amber">
-              <div class="card-label">Action</div>
-              <div class="card-body">Two written deliverables. <strong>Event tagging requirements</strong>: new events for tab taps, nav state changes, back-navigation patterns; required properties <code>tab_name</code>, <code>previous_tab</code>, <code>platform</code>; an audit of existing <code>screen_view</code> coverage against the new nav destinations &mdash; engineering-ready Jira story with acceptance criteria tied to dev tickets. <strong>Release tracking plan + A/B-rationale one-pager</strong>: metrics to monitor before, during, and after launch (Primary: Transactions / North Star; Funnel: <code>screen_view &rarr; add_to_cart &rarr; order_placed</code>; Nav-specific: tap distribution, time-to-first-order, deals/loyalty discovery; Guardrails: session length, crash rate, error rate). The rationale called out the Upsells v1.0 confounding risk and defined statistical significance threshold and minimum run duration up front.</div>
+            <div class="card-row card-row-2">
+              <div class="card amber">
+                <div class="card-label">Action</div>
+                <div class="card-body">
+                  Two written deliverables.
+                  <strong>Event tagging requirements</strong>: new events for
+                  tab taps, nav state changes, back-navigation patterns;
+                  required properties <code>tab_name</code>,
+                  <code>previous_tab</code>, <code>platform</code>; an audit of
+                  existing <code>screen_view</code> coverage against the new nav
+                  destinations &mdash; engineering-ready Jira story with
+                  acceptance criteria tied to dev tickets.
+                  <strong
+                    >Release tracking plan + A/B-rationale one-pager</strong
+                  >: metrics to monitor before, during, and after launch
+                  (Primary: Transactions / North Star; Funnel:
+                  <code>screen_view &rarr; add_to_cart &rarr; order_placed</code
+                  >; Nav-specific: tap distribution, time-to-first-order,
+                  deals/loyalty discovery; Guardrails: session length, crash
+                  rate, error rate). The rationale called out the Upsells v1.0
+                  confounding risk and defined statistical significance
+                  threshold and minimum run duration up front.
+                </div>
+              </div>
+              <div class="card accent">
+                <div class="card-label">Result</div>
+                <div class="card-body">
+                  Specs, tracking plan, and A/B-rationale one-pager delivered to
+                  engineering and the client analytics lead. The planned
+                  straight-cutover became a
+                  <strong
+                    >controlled release with rollback options and statistical
+                    confidence</strong
+                  >. Test ownership and rollout decision held by the client
+                  team; the architectural deliverable was the measurement
+                  framework itself, not the result of any single experiment.
+                  Post-launch readings and the eventual rollout decision sit
+                  under client confidentiality.
+                </div>
+              </div>
             </div>
-            <div class="card accent">
-              <div class="card-label">Result</div>
-              <div class="card-body">Specs, tracking plan, and A/B-rationale one-pager delivered to engineering and the client analytics lead. The planned straight-cutover became a <strong>controlled release with rollback options and statistical confidence</strong>. Test ownership and rollout decision held by the client team; the architectural deliverable was the measurement framework itself, not the result of any single experiment. Post-launch readings and the eventual rollout decision sit under client confidentiality.</div>
-            </div>
-          </div>
 
-          <div class="tags">
-            <span class="tag">Amplitude</span>
-            <span class="tag">Segment CDP</span>
-            <span class="tag">A/B test design</span>
-            <span class="tag">Release measurement</span>
-            <span class="tag">Jira (spec authorship)</span>
-            <span class="tag">Causal isolation</span>
+            <div class="tags">
+              <span class="tag">Amplitude</span>
+              <span class="tag">Segment CDP</span>
+              <span class="tag">A/B test design</span>
+              <span class="tag">Release measurement</span>
+              <span class="tag">Jira (spec authorship)</span>
+              <span class="tag">Causal isolation</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="next" class="alt">
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">More from the Philips selection &middot; or get in touch.</h2>
+      <section id="next" class="alt">
+        <div class="section-body">
+          <div class="container">
+            <p class="section-eyebrow">Next</p>
+            <h2 class="section-heading">
+              More from the Philips selection &middot; or get in touch.
+            </h2>
 
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="/philips/work/">
-              <span class="deeper-label">More cases</span>
-              <span class="deeper-title">Philips selection &mdash; <em>ten cases, six topics</em>.</span>
-              <span class="deeper-body">The curated case library, mapped against the UX Telemetry Expert brief.</span>
-              <span class="deeper-cta">Open the selection &rarr;</span>
-            </a>
-            <a class="deeper-card" href="/philips/about/">
-              <span class="deeper-label">About</span>
-              <span class="deeper-title">Bio, skills, certifications.</span>
-              <span class="deeper-body">The longer version &mdash; methodology, credentials, and the clinical-domain calibration paragraph.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="/philips/contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; <em>channels &amp; context</em>.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, the CV. Pre-filled subject for role 579397.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
+            <div class="deeper deeper-three">
+              <a class="deeper-card" href="/philips/work/">
+                <span class="deeper-label">More cases</span>
+                <span class="deeper-title"
+                  >Philips selection &mdash;
+                  <em>ten cases, six topics</em>.</span
+                >
+                <span class="deeper-body"
+                  >The curated case library, mapped against the UX Telemetry
+                  Expert brief.</span
+                >
+                <span class="deeper-cta">Open the selection &rarr;</span>
+              </a>
+              <a class="deeper-card" href="/philips/about/">
+                <span class="deeper-label">About</span>
+                <span class="deeper-title">Bio, skills, certifications.</span>
+                <span class="deeper-body"
+                  >The longer version &mdash; methodology, credentials, and the
+                  clinical-domain calibration paragraph.</span
+                >
+                <span class="deeper-cta">Read more &rarr;</span>
+              </a>
+              <a class="deeper-card" href="/philips/contact/">
+                <span class="deeper-label">Get in touch</span>
+                <span class="deeper-title"
+                  >Contact &mdash; <em>channels &amp; context</em>.</span
+                >
+                <span class="deeper-body"
+                  >Email, LinkedIn, GitHub, the CV. Pre-filled subject for role
+                  579397.</span
+                >
+                <span class="deeper-cta">Open contact page &rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Frederic Labadie &middot; Amsterdam</span>
-      <span>Set in IBM Plex Sans &amp; Mono</span>
-      <span>Built in plain HTML &amp; CSS &middot; GitHub Pages</span>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-    <script type="module" src="/js/amplitude-init.js"></script>
-    <script type="module" src="/js/analytics.js"></script>
-</body>
-</html>
+      </section>
+    </main>

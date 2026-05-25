@@ -1,0 +1,34 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/philips/" class="nav-brand">
+      Frederic Labadie<span class="nav-brand-dot"></span
+      ><span class="nav-brand-role"
+        >Philips &middot; UX Telemetry Expert role fit</span
+      >
+    </a>
+    <!-- prettier-ignore -->
+    <ul class="nav-links" id="primary-nav">
+      {% if page.philips_nav == "home" %}<li><a href="/philips/" aria-current="page">Home</a></li>{% else %}<li><a href="/philips/">Home</a></li>{% endif %}
+      {% if page.philips_nav == "work" %}<li><a href="/philips/work/" aria-current="page">Work</a></li>{% else %}<li><a href="/philips/work/">Work</a></li>{% endif %}
+      {% if page.philips_nav == "about" %}<li><a href="/philips/about/" aria-current="page">About</a></li>{% else %}<li><a href="/philips/about/">About</a></li>{% endif %}
+      {% if page.philips_nav == "contact" %}<li><a href="/philips/contact/" aria-current="page">Contact</a></li>{% else %}<li><a href="/philips/contact/">Contact</a></li>{% endif %}
+    </ul>
+    <button
+      type="button"
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click", function () {
+    const open = document
+      .getElementById("primary-nav")
+      .classList.toggle("open");
+    this.setAttribute("aria-expanded", String(open));
+  });
+</script>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include philips-head.html %}
+  </head>
+  <body class="philips-microsite">
+    <a class="skip-link" href="{{ page.skip_link | default: '#top' }}"
+      >{{ page.skip_label | default: "Skip to content" }}</a
+    >
+    {% include philips-nav.html %} {{ content }} {% include philips-footer.html
+    %} {% include site-scripts.html %}
+  </body>
+</html>

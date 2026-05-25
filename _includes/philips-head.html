@@ -1,0 +1,53 @@
+<script
+  id="Cookiebot"
+  src="https://consent.cookiebot.com/uc.js"
+  data-cbid="d8d8cb40-e8e6-4ca0-852d-bfb6cd1aac42"
+  data-blockingmode="auto"
+  type="text/javascript"
+></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}" />
+<meta
+  name="theme-color"
+  content="{{ page.theme_color | default: '#ffffff' }}"
+/>
+<meta name="robots" content="noindex, nofollow" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}" />
+<meta property="og:title" content="{{ page.og_title | default: page.title }}" />
+<meta
+  property="og:description"
+  content="{{ page.og_description | default: page.description }}"
+/>
+<meta property="og:url" content="{{ page.og_url }}" />
+<meta
+  property="og:image"
+  content="https://fredericlabadie.com/assets/og/og-image.png"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:title"
+  content="{{ page.twitter_title | default: page.og_title | default: page.title }}"
+/>
+<meta
+  name="twitter:description"
+  content="{{ page.twitter_description | default: page.og_description | default: page.description }}"
+/>
+<meta
+  name="twitter:image"
+  content="https://fredericlabadie.com/assets/og/og-image.png"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="/css/style.css" />
