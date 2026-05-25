@@ -105,7 +105,8 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
         </div>
 
         <article class="bp-case-row">
-          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[0] %}
+          {% assign selected_case = site.data.home_selected_cases | first %}
+          {% include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-flow-figure"
@@ -147,7 +148,8 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
         </article>
 
         <article class="bp-case-row">
-          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[1] %}
+          {% assign selected_case = site.data.home_selected_cases[1] %}
+          {% include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-query-figure"
@@ -169,7 +171,8 @@ WHERE  client = 'sslp_retail'</code></pre>
         </article>
 
         <article class="bp-case-row">
-          {% include home-selected-case-copy.html selected=site.data.home_selected_cases[2] %}
+          {% assign selected_case = site.data.home_selected_cases[2] %}
+          {% include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-method-figure"
