@@ -3,11 +3,11 @@ layout: philips
 philips_nav: work
 skip_link: "#case"
 skip_label: "Skip to case"
-title: "A silent iOS data-loss bug, traced to the initialisation sequence &mdash; case study &mdash; Philips role fit"
-description: "SDK-level debugging traced an iOS undercount to a Segment SDK 1.9.1 initialisation-gate bug. The kind of failure mode that matters when clinical or operational data has to be trustworthy."
+title: "A silent iOS data-loss bug, traced to the initialisation sequence &mdash; case study"
+description: "Human-led anomaly detection and proof gathering flagged a silent iOS Application Opened undercount; AI-assisted SDK source review helped trace the cause to Segment analytics-swift 1.9.1 initialisation behaviour."
 og_type: article
-og_title: "A silent iOS data-loss bug &mdash; for the Philips brief"
-og_description: "SDK-level debugging traced a silent iOS undercount to a Segment SDK initialisation-gate bug."
+og_title: "A silent iOS data-loss bug"
+og_description: "Human-led anomaly detection plus AI-assisted SDK source review for a silent iOS undercount."
 og_url: "https://fredericlabadie.com/philips/work/mqsr-schema-sdk.html"
 ---
 
@@ -15,22 +15,14 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-schema-sdk.html"
       <section class="page-intro hero">
         <div class="container">
           <p class="eyebrow">
-            Case study &middot; for the Philips brief &middot; Topic 02 &middot;
-            SDK debugging
+            Case study &middot; Path 02 &middot; SDK debugging &amp; cross-platform parity
           </p>
-          <h1>
-            A silent iOS data-loss bug, traced to the initialisation sequence.
-          </h1>
+          <h1>A silent iOS data-loss bug, traced to the initialisation sequence.</h1>
           <p class="hero-subtitle">
-            An iOS undercount of <code>Application Opened</code> events vs.
-            Android &mdash; root-caused to a Segment SDK 1.9.1 gate that
-            silently drops events when <code>enabled = false</code>.
+            Human-led anomaly detection flagged a systematic iOS undercount of <code>Application Opened</code> events versus Android; AI-assisted SDK source review helped trace the runtime behaviour causing silent cold-launch event loss.
           </p>
           <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context"
-              >/ Major quick-service restaurant &middot; Segment &middot;
-              analytics-swift 1.9.1</span
-            >
+            <span class="case-context">/ Major quick-service restaurant &middot; Segment &middot; analytics-swift 1.9.1</span>
           </p>
         </div>
       </section>
@@ -39,21 +31,10 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-schema-sdk.html"
         <div class="section-body">
           <div class="container">
             <div class="callout">
-              <div class="callout-label">
-                Why this is in the Philips selection
-              </div>
+              <div class="callout-label">Role-fit signal</div>
               <div class="callout-body">
-                <strong
-                  >The kind of failure mode that matters when clinical or
-                  operational data has to be trustworthy.</strong
-                >
-                An SDK-level gate silently dropping cold-launch events looks
-                fine on every dashboard until you compare platforms. Telemetry
-                that undercounts is worse than telemetry that's missing &mdash;
-                the dashboards stay green while the truth degrades quietly. This
-                case is the SDK-debugging discipline behind catching it:
-                comparing platforms, reading the SDK source, finding the gate,
-                fixing the sequence.
+                <strong>Runtime parity beats documentation parity.</strong>
+                UX telemetry only works when product teams can trust the counts underneath the dashboard. This case shows the implementation discipline behind that trust: compare platforms, gather proof, read the startup sequence, inspect the SDK path, and separate user behaviour from measurement failure.
               </div>
             </div>
 
@@ -62,74 +43,91 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-schema-sdk.html"
               <div>
                 <div class="outcome-title">What happened</div>
                 <div class="outcome-body">
-                  A major QSR's systematic
-                  <strong
-                    >iOS undercount of
-                    <code>Application Opened</code> events</strong
-                  >
-                  versus Android was root-caused to a Segment SDK 1.9.1 gate in
-                  the app's initialisation sequence (<code
-                    >process(incomingEvent:)</code
-                  >
-                  returns immediately when <code>enabled == false</code>,
-                  silently dropping cold-launch events fired before remote
-                  config flipped the gate). Same engagement surfaced
-                  cross-platform tracking-plan parity gaps and a GTM
-                  misconfiguration where two international locales were feeding
-                  the main analytics container. Telemetry that undercounts is
-                  worse than telemetry that's missing &mdash; this is the
-                  SDK-level discipline behind catching it.
+                  A major QSR had a systematic iOS undercount of <code>Application Opened</code> events versus Android. The bug was silent: no visible errors, no obvious dropped-event logs, only a stable undercount. I traced the issue to the app's initialisation sequence and Segment analytics-swift <strong>1.9.1</strong>: <code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>, so cold-launch events fired before remote config re-enabled the SDK were dropped rather than queued.
                 </div>
               </div>
             </div>
 
             <div class="case-argument">
-              Cross-platform parity failures almost always trace back to
-              <strong>startup-order assumptions inside a vendor SDK</strong>
-              &mdash; the kind of detail that only shows up at runtime, on cold
-              launch, in one OS. The fix isn't reading the docs. It's reading
-              the SDK source, version-pinned to what actually ships, until the
-              silent drop becomes visible.
+              <strong>Telemetry that undercounts silently is worse than telemetry that is missing.</strong> A missing event can be investigated. A silent undercount looks trustworthy while skewing every downstream funnel.
             </div>
 
             <div class="card-row card-row-2">
               <div class="card">
                 <div class="card-label">Context</div>
                 <div class="card-body">
-                  A major quick-service restaurant's mobile analytics showed a
-                  systematic gap between iOS and Android
-                  <code>Application Opened</code> counts. The bug was
-                  <strong>silent</strong>: no errors, no dropped-event logs
-                  &mdash; just a stable undercount. Downstream funnel reading
-                  was being skewed and nobody was sure why. The engagement also
-                  raised broader concerns about cross-platform tracking-plan
-                  parity and GTM container governance.
+                  Mobile analytics showed a stable difference between iOS and Android <code>Application Opened</code> counts. Downstream funnel reading was being skewed, but there was no explicit error pointing to the source of the loss. The undercount looked like real user behaviour.
                 </div>
               </div>
-              <div class="card amber">
-                <div class="card-label">What I did</div>
+              <div class="card">
+                <div class="card-label">Risk</div>
                 <div class="card-body">
-                  SDK-level debugging. Traced the iOS undercount through the
-                  app's initialisation sequence:
-                  <code>rawSegment.enabled = false</code> at startup, re-enabled
-                  only after remote config completed. Identified that Segment
-                  SDK 1.9.1 <code>process(incomingEvent:)</code> returns
-                  immediately when <code>enabled == false</code> &mdash;
-                  cold-launch events were dropped, not queued. Surfaced the same
-                  engagement's cross-platform parity gaps (web on legacy
-                  <code>dataLayer</code>/GA naming; apps on a unified Title Case
-                  Segment model) and the
-                  <strong>GTM misconfiguration</strong> where two international
-                  locales were feeding the main analytics container.
+                  Because the loss was silent, stakeholders could read the difference as platform behaviour rather than measurement failure. That made root-cause discipline essential: read the app startup sequence and the SDK source path actually running in production.
                 </div>
+              </div>
+            </div>
+
+            <div class="card-row card-row-2">
+              <div class="card amber">
+                <div class="card-label">Method</div>
+                <div class="card-body">
+                  First, I identified the cross-platform count gap and gathered proof that the issue was not a dashboard mismatch. Then I used AI assistance to inspect the Segment analytics-swift source path, compare candidate failure modes, and narrow where the cold-launch event loss lived.
+                </div>
+              </div>
+              <div class="card accent">
+                <div class="card-label">Result</div>
+                <div class="card-body">
+                  The issue moved from suspected platform difference to explainable data loss. The same engagement also surfaced cross-platform tracking-plan parity gaps and a GTM container governance issue where two international locales were feeding the main analytics container.
+                </div>
+              </div>
+            </div>
+
+            <div class="flow">
+              <div class="flow-step">
+                <div class="flow-num">01</div>
+                <div class="flow-label">Count gap</div>
+                <div class="flow-desc">Systematic iOS undercount of <code>Application Opened</code> versus Android surfaced in mobile analytics.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">02</div>
+                <div class="flow-label">Startup trace</div>
+                <div class="flow-desc">Initialisation sequence showed <code>rawSegment.enabled = false</code> at startup, re-enabled only after remote config completed.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">03</div>
+                <div class="flow-label">SDK source read</div>
+                <div class="flow-desc">Segment analytics-swift 1.9.1 returned immediately when disabled, dropping cold-launch events instead of queueing them.</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">04</div>
+                <div class="flow-label">Governance sweep</div>
+                <div class="flow-desc">Broader review surfaced tracking-plan parity gaps and two international locales feeding the main GTM analytics container.</div>
+              </div>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <div class="metric-value">iOS</div>
+                <div class="metric-label">Silent undercount found</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">1.9.1</div>
+                <div class="metric-label">Segment SDK version traced</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">2</div>
+                <div class="metric-label">International locales misrouted to the main analytics container</div>
               </div>
             </div>
 
             <div class="tags">
               <span class="tag">Segment CDP</span>
               <span class="tag">analytics-swift 1.9.1</span>
-              <span class="tag">GTM container governance</span>
+              <span class="tag">SDK debugging</span>
+              <span class="tag">AI-assisted source review</span>
               <span class="tag">Cross-platform parity</span>
+              <span class="tag">GTM container governance</span>
+              <span class="tag">Mobile telemetry</span>
             </div>
           </div>
         </div>
@@ -140,40 +138,26 @@ og_url: "https://fredericlabadie.com/philips/work/mqsr-schema-sdk.html"
           <div class="container">
             <p class="section-eyebrow">Next</p>
             <h2 class="section-heading">
-              More from the Philips selection &middot; or get in touch.
+              More from the Philips selection, or get in touch.
             </h2>
 
             <div class="deeper deeper-three">
               <a class="deeper-card" href="/philips/work/">
                 <span class="deeper-label">More cases</span>
-                <span class="deeper-title"
-                  >Philips selection &mdash;
-                  <em>ten cases, six topics</em>.</span
-                >
-                <span class="deeper-body"
-                  >The curated case library, mapped against the UX Telemetry
-                  Expert brief.</span
-                >
+                <span class="deeper-title">Philips selection &mdash; <em>ten cases, six evidence paths</em>.</span>
+                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
                 <span class="deeper-cta">Open the selection &rarr;</span>
               </a>
-              <a class="deeper-card" href="/philips/about/">
-                <span class="deeper-label">About</span>
-                <span class="deeper-title">Bio, skills, certifications.</span>
-                <span class="deeper-body"
-                  >The longer version &mdash; methodology, credentials, and the
-                  clinical-domain calibration paragraph.</span
-                >
-                <span class="deeper-cta">Read more &rarr;</span>
+              <a class="deeper-card" href="/philips/work/mqsr-errors.html">
+                <span class="deeper-label">Adjacent case</span>
+                <span class="deeper-title">Clean taxonomy, trustworthy alerts, enriched context.</span>
+                <span class="deeper-body">Another instrumentation case focused on alert reliability and error-event context.</span>
+                <span class="deeper-cta">Read adjacent case &rarr;</span>
               </a>
               <a class="deeper-card" href="/philips/contact/">
                 <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title"
-                  >Contact &mdash; <em>channels &amp; context</em>.</span
-                >
-                <span class="deeper-body"
-                  >Email, LinkedIn, GitHub, the CV. Pre-filled subject for role
-                  579397.</span
-                >
+                <span class="deeper-title">Contact &mdash; channels and context.</span>
+                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for role 579397.</span>
                 <span class="deeper-cta">Open contact page &rarr;</span>
               </a>
             </div>
