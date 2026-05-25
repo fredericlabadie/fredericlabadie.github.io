@@ -26,7 +26,7 @@ extra_css:
     {% include site-nav.html %}
 
     <main class="bp-contact-page" id="top">
-      <header class="bp-contact-hero">
+      <header class="bp-contact-hero bp-contact-hero-simple">
         <div>
           <p class="bp-contact-kicker bp-contact-accent">
             // Contact / primary channel
@@ -44,94 +44,75 @@ extra_css:
             <span>Frederic Labadie</span>
             <span>Data &amp; analytics leader &middot; Amsterdam</span>
           </div>
-          <div class="bp-contact-panel-row">
-            <span>Best fit</span>
-            <p>
-              Senior IC roles in analytics architecture, product telemetry,
-              analytics engineering, UX telemetry, or marketing analytics.
-            </p>
-          </div>
         </aside>
       </header>
 
-      <div class="bp-contact-section-tag" aria-hidden="true">
-        <span>// 01 / channels</span><span>email / linkedin / github / cv</span>
-      </div>
-      <section class="bp-contact-main" id="channels">
-        <aside class="bp-contact-sidebar">
-          <p class="bp-contact-mono bp-contact-accent">Channels</p>
-          <h2>Email first. Context helps.</h2>
+      <section class="bp-contact-channels" id="channels">
+        <div class="bp-contact-grid bp-contact-grid-four">
+          <a
+            class="bp-contact-card bp-contact-email-card"
+            href="mailto:frederic.labadie@gmail.com"
+            aria-label="Compose email to frederic.labadie@gmail.com"
+          >
+            <span class="bp-contact-mono bp-contact-accent">Email</span>
+            <strong>frederic.labadie@gmail.com</strong>
+            <span>Typical reply within 1&ndash;2 working days &middot; English &middot; Amsterdam time</span>
+          </a>
+          <a
+            class="bp-contact-card"
+            href="https://linkedin.com/in/frederic-labadie"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="bp-contact-mono bp-contact-accent">LinkedIn</span>
+            <strong>/in/frederic-labadie</strong>
+            <span>Open profile &rarr;</span>
+          </a>
+          <a
+            class="bp-contact-card"
+            href="https://github.com/fredericlabadie"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="bp-contact-mono bp-contact-accent">GitHub</span>
+            <strong>/fredericlabadie</strong>
+            <span>Open profile &rarr;</span>
+          </a>
+          <a
+            class="bp-contact-card"
+            href="../assets/resume/frederic-labadie-cv.pdf"
+            download
+          >
+            <span class="bp-contact-mono bp-contact-accent">CV / Resume</span>
+            <strong>Two-page PDF</strong>
+            <span>Download &darr;</span>
+          </a>
+        </div>
+
+        <aside class="bp-contact-fit" aria-label="What to write about">
+          <p class="bp-contact-mono bp-contact-accent">
+            What I am best to talk to about
+          </p>
+          <h3>Roles where measurement, architecture, and adoption meet.</h3>
           <p>
             Useful outreach includes role title, location or remote setup,
             salary band if available, and why the role needs both analytics
-            architecture and judgement.
+            architecture and judgement. Strongest-fit conversations are senior
+            IC roles in
+            <strong
+              >analytics architecture, product telemetry, analytics
+              engineering, UX telemetry, or marketing analytics</strong
+            >
+            in Amsterdam or remote-EU.
+          </p>
+          <p>
+            Also relevant: speaking, podcast, or workshop invitations on
+            instrumentation paired with qualitative methodology, AI-assisted
+            analytics workflows, or how Sense-Making methodology changes
+            question design in measurement. Recruiter notes are welcome when
+            the role itself is the fit. Please skip generic outreach.
           </p>
         </aside>
-
-        <div>
-          <div class="bp-contact-grid bp-contact-grid-secondary bp-contact-grid-four">
-            <a
-              class="bp-contact-card bp-contact-email-card"
-              href="mailto:frederic.labadie@gmail.com"
-              aria-label="Compose email to frederic.labadie@gmail.com"
-            >
-              <span class="bp-contact-mono bp-contact-accent">Email</span>
-              <strong>frederic.labadie@gmail.com</strong>
-              <span>Typical reply within 1&ndash;2 working days &middot; English &middot; Amsterdam time</span>
-            </a>
-            <a
-              class="bp-contact-card"
-              href="https://linkedin.com/in/frederic-labadie"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="bp-contact-mono bp-contact-accent">LinkedIn</span>
-              <strong>/in/frederic-labadie</strong>
-              <span>Open profile &rarr;</span>
-            </a>
-            <a
-              class="bp-contact-card"
-              href="https://github.com/fredericlabadie"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="bp-contact-mono bp-contact-accent">GitHub</span>
-              <strong>/fredericlabadie</strong>
-              <span>Open profile &rarr;</span>
-            </a>
-            <a
-              class="bp-contact-card"
-              href="../assets/resume/frederic-labadie-cv.pdf"
-              download
-            >
-              <span class="bp-contact-mono bp-contact-accent">CV / Resume</span>
-              <strong>Two-page PDF</strong>
-              <span>Download &darr;</span>
-            </a>
-          </div>
-
-          <aside class="bp-contact-fit" aria-label="What to write about">
-            <p class="bp-contact-mono bp-contact-accent">
-              What I am best to talk to about
-            </p>
-            <h3>Roles where measurement, architecture, and adoption meet.</h3>
-            <p>
-              Senior IC roles in
-              <strong
-                >analytics architecture, product telemetry, analytics
-                engineering, UX telemetry, or marketing analytics</strong
-              >
-              in Amsterdam or remote-EU. Also: speaking, podcast, or workshop
-              invitations on instrumentation paired with qualitative
-              methodology, AI-assisted analytics workflows, or how Sense-Making
-              methodology changes question design in measurement.
-            </p>
-            <p>
-              Recruiter notes are welcome when the role itself is the fit.
-              Please skip generic outreach.
-            </p>
-          </aside>
-        </div>
       </section>
     </main>
     {% include site-footer.html %}
