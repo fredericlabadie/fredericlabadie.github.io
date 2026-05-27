@@ -331,10 +331,17 @@
 
 /* Case cards: closer to current work/recruiter card scale. */
 .philips-microsite .case-card {
+  position: relative;
   margin-bottom: 0;
   padding: 22px 24px;
   background: #ffffff;
   border: 1px solid var(--philips-rule);
+}
+
+.philips-microsite .case-card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .philips-microsite .case-card-head {
