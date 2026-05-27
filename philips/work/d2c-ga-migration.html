@@ -1,0 +1,180 @@
+---
+layout: philips
+philips_nav: work
+skip_link: "#case"
+skip_label: "Skip to case"
+title: "Off Adobe, onto Google. Three phases and a cleared backlog. — case study"
+description: "Adobe Analytics to GA/GTM migration on a Meteor.js SPA: data layer push architecture solved the pre-render problem, platform migration cleared the immediate debt, and three phases unlocked capabilities Adobe had made impractical."
+og_type: article
+og_title: "Off Adobe, onto Google. Three phases and a cleared backlog."
+og_description: "Adobe Analytics to GA/GTM migration on a Meteor.js SPA in three phases."
+og_url: "https://fredericlabadie.com/philips/work/d2c-ga-migration.html"
+---
+
+<main id="top">
+      <section class="page-intro hero">
+        <div class="container">
+          <p class="eyebrow">
+            Case study &middot; Path 02 &middot; Analytics platform migration
+          </p>
+          <h1>Off Adobe, onto Google. Three phases and a cleared backlog.</h1>
+          <p class="hero-subtitle">
+            A D2C brand was running Adobe Analytics on a Meteor.js SPA. Every tracking change required developer lift, so requirements had accumulated for years. The migration to GA/GTM required solving a non-standard data layer problem first &mdash; then it unlocked a backlog clearance and a round of capabilities Adobe had made impractical.
+          </p>
+          <p class="case-meta" style="margin-top: 28px">
+            <span class="case-context">/ D2C health &amp; beverage brand &middot; Adobe Analytics to GA migration &middot; 2019</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="case">
+        <div class="section-body">
+          <div class="container">
+            <div class="callout">
+              <div class="callout-label">Role-fit signal</div>
+              <div class="callout-body">
+                <strong>Adobe made every analytics change a developer ticket. Requirements accumulated.</strong>
+                The Philips role describes translating data needs into event specifications, implementation requirements, and production telemetry. This case shows what that looks like when the existing platform has made requirements undeliverable: the migration wasn&rsquo;t just a tool change &mdash; it was the precondition for a backlog clearance and a more maintainable measurement architecture.
+              </div>
+            </div>
+
+            <div class="outcome">
+              <div class="outcome-icon">&rarr;</div>
+              <div>
+                <div class="outcome-title">What happened</div>
+                <div class="outcome-body">
+                  A D2C health and beverage brand was running Adobe Analytics on a Meteor.js Single Page Application. The platform required heavy developer involvement for every analytics change, so tracking requirements had accumulated without shipping. The brief was to migrate to GA via GTM. The challenge was a non-standard Meteor.js pre-render pattern that required a custom data layer push architecture. Three phases followed: migrate the Adobe implementation, clear the deferred requirements backlog, then add capabilities the platform had never supported.
+                </div>
+              </div>
+            </div>
+
+            <div class="case-argument">
+              <strong>A measurement platform that requires developer involvement for every change is not a measurement platform &mdash; it is a queue.</strong>
+            </div>
+
+            <div class="card-row card-row-2">
+              <div class="card">
+                <div class="card-label">Context</div>
+                <div class="card-body">
+                  The Meteor.js SPA pre-rendered a shell before rendering page content, which meant DOM-ready triggers fired before relevant elements existed. Standard GTM trigger logic was unreliable. Adobe Analytics had compounded this by requiring developer involvement for every tracking change &mdash; tags couldn&rsquo;t be managed independently. A backlog of deferred requirements had accumulated over years: AdWords tracking, partially-implemented technologies, and enhancements that had been deprioritised because the overhead made them impractical.
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-label">Task</div>
+                <div class="card-body">
+                  Full implementation: audit the Adobe implementation, design the Meteor.js data layer push architecture, write and build GTM tags, migrate applicable Adobe components, clear the requirements backlog across phases, and ship Phase 3 capabilities the client had not originally specified. QA throughout.
+                </div>
+              </div>
+            </div>
+
+            <div class="card-row card-row-2">
+              <div class="card amber">
+                <div class="card-label">Action</div>
+                <div class="card-body">
+                  Designed a data layer push architecture &mdash; custom events and variables pushed from the application to the GTM data layer, so tags fired only after page content was confirmed loaded. Phase 1 migrated Adobe to GA. Phase 2 cleared deferred requirements including AdWords and partially-functional tech. Phase 3 added Facebook Ads conversion tracking, JSON-LD SEO schema, and additional enhancements now possible because the platform supported rapid iteration.
+                </div>
+              </div>
+              <div class="card accent">
+                <div class="card-label">Result</div>
+                <div class="card-body">
+                  Adobe Analytics replaced by GA with full feature parity. Meteor.js pre-render problem solved. Backlog cleared. Facebook conversion tracking, JSON-LD schema, and additional capabilities shipped. Operating model changed: analytics requirements no longer bottlenecked by development cadence for the majority of tracking updates.
+                </div>
+              </div>
+            </div>
+
+            <div class="flow">
+              <div class="flow-step">
+                <div class="flow-num">01</div>
+                <div class="flow-label">Audit and data layer design</div>
+                <div class="flow-desc">
+                  Reviewed the Adobe implementation, identified reusable components. Designed the Meteor.js data layer push architecture: custom events and variables from the application, fired only after content confirmed loaded.
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">02</div>
+                <div class="flow-label">Phase 1 &mdash; Platform migration</div>
+                <div class="flow-desc">
+                  Migrated Adobe Analytics to GA. Reused applicable webhooks and code components. Established GA as the tracking baseline with full data layer architecture in place.
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">03</div>
+                <div class="flow-label">Phase 2 &mdash; Backlog clearance</div>
+                <div class="flow-desc">
+                  Cleared deferred requirements: AdWords tracking, partially-implemented technologies that had been rolled out but were not functioning correctly. Requirements that previously needed developer tickets now managed independently in GTM.
+                </div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-num">04</div>
+                <div class="flow-label">Phase 3 &mdash; Proactive enhancements</div>
+                <div class="flow-desc">
+                  Added capabilities the client had not originally specified: Facebook Ads conversion tracking, JSON-LD SEO schema, and additional layers now possible because the platform supported rapid iteration without developer involvement.
+                </div>
+              </div>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <div class="metric-value">3</div>
+                <div class="metric-label">Delivery phases: migrate, clear, enhance</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">1</div>
+                <div class="metric-label">Platform migration (Adobe Analytics &rarr; GA)</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">4+</div>
+                <div class="metric-label">New tracking capabilities shipped in Phase 3</div>
+              </div>
+            </div>
+
+            <p>
+              The GTM-isolation architecture used in this engagement shares its core principle with a parallel security-constrained build &mdash; see <a href="/philips/work/hardware-ecommerce-gtm.html">the hardware brand GTM case &rarr;</a>.
+            </p>
+
+            <div class="tags">
+              <span class="tag">GTM</span>
+              <span class="tag">Google Analytics (UA)</span>
+              <span class="tag">Adobe Analytics migration</span>
+              <span class="tag">Meteor.js SPA</span>
+              <span class="tag">Data layer architecture</span>
+              <span class="tag">Facebook Ads conversion tracking</span>
+              <span class="tag">JSON-LD schema</span>
+              <span class="tag">Enhanced ecommerce</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="next" class="alt">
+        <div class="section-body">
+          <div class="container">
+            <p class="section-eyebrow">Next</p>
+            <h2 class="section-heading">
+              More from the Philips selection, or get in touch.
+            </h2>
+
+            <div class="deeper deeper-three">
+              <a class="deeper-card" href="/philips/work/">
+                <span class="deeper-label">More cases</span>
+                <span class="deeper-title">Philips selection &mdash; <em>twelve cases, six evidence paths</em>.</span>
+                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
+                <span class="deeper-cta">Open the selection &rarr;</span>
+              </a>
+              <a class="deeper-card" href="/philips/work/hardware-ecommerce-gtm.html">
+                <span class="deeper-label">Adjacent case</span>
+                <span class="deeper-title">All analytics in the tag manager. Not one line in the site code.</span>
+                <span class="deeper-body">Same GTM-implementation methodology, different constraint: security isolation on a Magento/SPA storefront.</span>
+                <span class="deeper-cta">Read adjacent case &rarr;</span>
+              </a>
+              <a class="deeper-card" href="/philips/contact/">
+                <span class="deeper-label">Get in touch</span>
+                <span class="deeper-title">Contact &mdash; channels and context.</span>
+                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for the UX Telemetry Expert role.</span>
+                <span class="deeper-cta">Open contact page &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>

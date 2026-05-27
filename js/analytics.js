@@ -35,13 +35,13 @@ function landingSection() {
   if (p.includes("/contact")) return "contact";
   if (p.includes("/recruiters")) return "recruiters";
   if (p.includes("/about")) return "about";
-  if (p.includes("/philips")) return "case-study";
+  if (p.includes("/philips") || p.includes("/adyen")) return "case-study";
   return "home";
 }
 
 function visitorIntent() {
   if (path().includes("/recruiters")) return "recruiter";
-  if (path().includes("/work") || path().includes("/philips"))
+  if (path().includes("/work") || path().includes("/philips") || path().includes("/adyen"))
     return "portfolio";
   if (path().includes("/thoughts")) return "content";
   return "general";
@@ -71,6 +71,12 @@ function initUserProperties() {
 
   if (path().includes("/recruiters")) {
     identify.setOnce("Is Recruiter", "true");
+  }
+
+  if (path().includes("/adyen")) {
+    identify.setOnce("Microsite", "adyen");
+  } else if (path().includes("/philips")) {
+    identify.setOnce("Microsite", "philips");
   }
 
   identifyUser(identify);

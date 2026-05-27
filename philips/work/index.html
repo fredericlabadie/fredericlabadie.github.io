@@ -4,10 +4,10 @@ philips_nav: work
 skip_link: "#case-studies"
 skip_label: "Skip to case studies"
 title: "Work &mdash; Frederic Labadie for Philips UX Telemetry"
-description: "Curated case library for the Philips UX Telemetry Expert role: nine cases organised around end-to-end telemetry delivery, AI workflow design, question framing, adoption, experimentation culture, and telemetry architecture."
+description: "Curated case library for the Philips UX Telemetry Expert role: twelve cases organised around end-to-end telemetry delivery, AI workflow design, question framing, adoption, experimentation culture, and telemetry architecture."
 og_type: website
 og_title: "Work &mdash; Frederic Labadie for Philips UX Telemetry"
-og_description: "Nine cases curated against the Philips UX Telemetry Expert role."
+og_description: "Twelve cases curated against the Philips UX Telemetry Expert role."
 og_url: "https://fredericlabadie.com/philips/work/"
 ---
 
@@ -17,7 +17,7 @@ og_url: "https://fredericlabadie.com/philips/work/"
     <section class="page-intro hero">
       <div class="container">
         <p class="eyebrow">Work &middot; Philips UX Telemetry</p>
-        <h1>Nine cases, organised around the telemetry cycle.</h1>
+        <h1>Twelve cases, organised around the telemetry cycle.</h1>
         <p>
           This is the Philips-facing cut of the larger case library: instrumentation first, because the role is explicitly about end-to-end UX telemetry implementation; AI workflow design next, because the brief calls for AI-enabled analytical opportunities; then question formulation, adoption, experimentation culture, and telemetry architecture.
         </p>
@@ -33,7 +33,7 @@ og_url: "https://fredericlabadie.com/philips/work/"
       <div class="section-head">
         <div class="num">00</div>
         <div class="label">Evidence paths</div>
-        <div class="title">Six paths &middot; nine cases &middot; Philips-facing order</div>
+        <div class="title">Six paths &middot; twelve cases &middot; Philips-facing order</div>
       </div>
       <div class="section-body">
         <div class="container">
@@ -45,7 +45,7 @@ og_url: "https://fredericlabadie.com/philips/work/"
             <a class="case-toc-item" href="#topic-instrumentation">
               <div class="case-toc-num">02</div>
               <div class="case-toc-title">Instrumentation &amp; Cross-Platform Telemetry</div>
-              <div class="case-toc-meta">Error taxonomy &middot; greenfield mobile &middot; SDK debugging</div>
+              <div class="case-toc-meta">Error taxonomy &middot; greenfield mobile &middot; SDK debugging &middot; GTM architecture &middot; platform migration</div>
             </a>
             <a class="case-toc-item" href="#topic-ai">
               <div class="case-toc-num">04</div>
@@ -65,7 +65,7 @@ og_url: "https://fredericlabadie.com/philips/work/"
             <a class="case-toc-item" href="#topic-experimentation">
               <div class="case-toc-num">03</div>
               <div class="case-toc-title">Experimentation Culture</div>
-              <div class="case-toc-meta">Introducing A/B testing as leadership practice</div>
+              <div class="case-toc-meta">A/B testing as leadership practice &middot; placement testing</div>
             </a>
             <a class="case-toc-item" href="#topic-data-eng">
               <div class="case-toc-num">07</div>
@@ -139,6 +139,44 @@ og_url: "https://fredericlabadie.com/philips/work/"
               <span class="tag">analytics-swift 1.9.1</span>
               <span class="tag">GTM container governance</span>
               <span class="tag">Cross-platform parity</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case &middot; GTM architecture</span>
+              <span class="case-card-context">B2B/B2C hardware authentication brand &middot; e-commerce instrumentation &middot; 2016</span>
+            </div>
+            <h4 class="case-card-title"><a href="/philips/work/hardware-ecommerce-gtm.html">All analytics in the tag manager. Not one line in the site code.</a></h4>
+            <p class="case-card-body">Security requirements banned analytics code from the site codebase entirely &mdash; all tags, variables, and triggers had to live in GTM. When the purchase funnel became a Single Page Application mid-build, the constraint stayed fixed: DOM-based variables, wildcard matching, history-state pageviews, and enhanced ecommerce delivered from the container alone.</p>
+            <p class="case-card-body"><strong>Role fit &middot;</strong> Advanced GTM architecture under constraints: the same design discipline behind translating data requirements into production telemetry without coupling the measurement layer to the site build cycle.</p>
+            <p class="case-card-body"><a href="/philips/work/hardware-ecommerce-gtm.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">GTM</span>
+              <span class="tag">Enhanced ecommerce</span>
+              <span class="tag">SPA instrumentation</span>
+              <span class="tag">Security-constrained implementation</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case &middot; Platform migration</span>
+              <span class="case-card-context">D2C health &amp; beverage brand &middot; Adobe Analytics to GA migration &middot; 2019</span>
+            </div>
+            <h4 class="case-card-title"><a href="/philips/work/d2c-ga-migration.html">Off Adobe, onto Google. Three phases and a cleared backlog.</a></h4>
+            <p class="case-card-body">Adobe Analytics had made the client&rsquo;s tracking backlog unmanageable &mdash; every change required developer lift. Three-phase GTM-led migration to GA on a Meteor.js SPA: port the Adobe implementation, solve the pre-render data layer problem, clear years of deferred requirements, then add capabilities Adobe had made impractical.</p>
+            <p class="case-card-body"><strong>Role fit &middot;</strong> Platform migration as instrumentation rebuild: the data layer push architecture for the Meteor.js SPA is the same challenge as implementing telemetry on any non-standard runtime &mdash; translate requirements into a delivery model that works within the platform&rsquo;s constraints.</p>
+            <p class="case-card-body"><a href="/philips/work/d2c-ga-migration.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">GTM</span>
+              <span class="tag">Adobe Analytics migration</span>
+              <span class="tag">Meteor.js SPA</span>
+              <span class="tag">Data layer architecture</span>
             </div>
           </article>
         </div>
@@ -275,6 +313,26 @@ og_url: "https://fredericlabadie.com/philips/work/"
               <span class="tag">A/B testing introduction</span>
               <span class="tag">Azure SQL Server (greenfield)</span>
               <span class="tag">Leadership enablement</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="container">
+          <article class="case-card">
+            <div class="case-card-head">
+              <span class="case-card-meta">Case &middot; Placement A/B testing</span>
+              <span class="case-card-context">B2B/B2C hardware authentication brand &middot; 2016</span>
+            </div>
+            <h4 class="case-card-title"><a href="/philips/work/product-quiz-placement.html">The quiz worked. The question was where to put it.</a></h4>
+            <p class="case-card-body">A product selection quiz was quietly driving conversion &mdash; but only for users who found it. Phase&nbsp;1 GA instrumentation confirmed the signal. Phase&nbsp;2 VWO A/B testing across four store-page placement variants confirmed that prominence was the variable: the prominent entry-point variant roughly doubled the pathed conversion rate.</p>
+            <p class="case-card-body"><strong>Role fit &middot;</strong> A/B test design and instrumentation that translates a UX hypothesis into a measurable outcome. The method &mdash; confirm the signal, then test the surface &mdash; transfers to placement decisions in any telemetry-equipped product.</p>
+            <p class="case-card-body"><a href="/philips/work/product-quiz-placement.html">Read the full case &rarr;</a></p>
+            <div class="tags">
+              <span class="tag">VWO</span>
+              <span class="tag">Google Analytics (UA)</span>
+              <span class="tag">A/B testing</span>
+              <span class="tag">Placement testing</span>
+              <span class="tag">Conversion instrumentation</span>
             </div>
           </article>
         </div>

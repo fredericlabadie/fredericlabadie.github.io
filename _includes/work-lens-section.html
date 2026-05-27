@@ -1,4 +1,5 @@
-{% assign lens_cases = site.data.cases | where: 'lens_number', include.lens.number %}
+{% assign all_lens_cases = site.data.cases | where: 'lens_number', include.lens.number %}
+{% assign lens_cases = all_lens_cases | where_exp: 'case', 'case.deprecated != true' %}
 
 <div class="bp-section-tag" aria-hidden="true">
   <span>// {{ include.index }} / {{ include.lens.title }}</span

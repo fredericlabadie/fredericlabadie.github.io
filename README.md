@@ -6,12 +6,12 @@ Live at [fredericlabadie.com](https://fredericlabadie.com).
 The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It's organised as a three-page portfolio:
 
 - [`/`](https://fredericlabadie.com/) &mdash; **landing**: hero, approach (philosophy + three principles), stack at-a-glance, three selected case studies (one per principle), a brief about-with-portrait, and contact. Designed for a 60-second recruiter scan.
-- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library teaser directory**: seven lenses (question formulation, instrumentation, experimentation, AI workflow design, adoption, marketing analytics, data engineering) linking out to standalone case-study pages at `/work/<slug>.html`. Eighteen standalone case studies in total, plus the public project work and a GitHub-activity graph.
+- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library teaser directory**: seven lenses (question formulation, instrumentation, experimentation, AI workflow design, adoption, marketing analytics, data engineering) linking out to standalone case-study pages at `/work/<slug>.html`. Fourteen active case studies in total (six deprecated, files preserved — see [Deprecation convention](#deprecation-convention) below), plus the public project work and a GitHub-activity graph.
 - [`/notebook/`](https://fredericlabadie.com/notebook/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and the gaps the official measurement layer doesn't see.
 - [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, endorsements, full skills cluster, eleven Amplitude credentials plus the rest of the certification stack.
 - [`/contact/`](https://fredericlabadie.com/contact/) &mdash; **contact**: status, response-time expectations, channels (email, LinkedIn, GitHub), and the resume.
 
-A targeted **four-page microsite** for the Philips UX Telemetry Expert role lives at [`/philips/`](https://fredericlabadie.com/philips/) (Home &middot; Work &middot; About &middot; Contact). The microsite carries Philips-blue accents and a curated ten-case selection at [`/philips/work/`](https://fredericlabadie.com/philips/work/), each with a per-case "Why this is in the Philips selection" relevance callout above the case body.
+A targeted **four-page microsite** for the Philips UX Telemetry Expert role lives at [`/philips/`](https://fredericlabadie.com/philips/) (Home &middot; Work &middot; About &middot; Contact). The microsite carries Philips-blue accents and a curated twelve-case selection at [`/philips/work/`](https://fredericlabadie.com/philips/work/), each with a per-case "Why this is in the Philips selection" relevance callout above the case body. Note: `d2c-ga-migration` is deprecated from the main site work index but remains active in the Philips selection where the platform migration pattern is specifically relevant.
 
 ## Featured projects
 
@@ -20,6 +20,29 @@ A targeted **four-page microsite** for the Philips UX Telemetry Expert role live
 - **[VibeReader](https://vibereader.fredericlabadie.com)** &mdash; book &harr; song recommendations that reason about mood, texture, and thematic resonance rather than genre tags. [source](https://github.com/fredericlabadie/VibeReader)
 
 Active reminders &mdash; planned case studies, deferred narratives, design polish &mdash; are tracked in the [Status &amp; roadmap](#status--roadmap) section below. Private grooming notes (anonymisation audits, source-document deltas, individual edit-tone questions) stay in `_drafts/project-ideas/TODO.md`, which is gitignored.
+
+## Deprecation convention
+
+Cases can be deprecated without deletion. Deprecated cases are:
+- Removed from the work index navigation (filtered via `deprecated: true` in `_data/cases.yml`)
+- Preserved at their original URL — no redirect, no 404
+- Documented with a reason comment inside their front matter (`# DEPRECATED [date]: [reason]`)
+- Listed below for maintainability
+
+The `work-lens-section.html` template filters out `deprecated: true` entries automatically. Per-lens case counts update accordingly. The work index receipt strip and body copy reflect active cases only.
+
+To un-deprecate a case: remove `deprecated: true` and `deprecated_reason` from `_data/cases.yml`, remove the `# DEPRECATED` comment from the file's front matter, and update the work index count.
+
+### Deprecated cases (2026-05-27)
+
+| Slug | Lens | Reason |
+|------|------|--------|
+| `content-brand-ga4` | Question discovery | Redundant with shadow-it; execution-level, no distinct signal. |
+| `creator-brand-dashboard` | Adoption/enablement | Execution-under-deadline; no measurable business outcome. |
+| `interior-designer-multisite` | Instrumentation | Procedural GA4 setup; covered by sslp-mobile and hardware-ecommerce-gtm. |
+| `mqsr-dashboards` | Experimentation | Third case on same client; mqsr-schema-sdk and mqsr-errors cover the engagement more strongly. |
+| `d2c-ga-migration` | Instrumentation | 2019; weaker than hardware-ecommerce-gtm. Active in Philips microsite. |
+| `oem-ebrochure-analytics` | Question discovery | 2017-18; soft outcome. Preserved for automotive/OEM-adjacent role reference. |
 
 ## Stack
 

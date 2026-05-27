@@ -43,6 +43,27 @@
     - value: "2nd"
       label: "iteration planned for 2026"
 
+- slug: failure-wrong-question
+  title: "The CTA worked. The question it answered was too shallow."
+  url: "/work/failure-wrong-question.html"
+  kind: "case"
+  lens_number: "01"
+  lens: "Question discovery"
+  kicker: "// Case study / Question formulation"
+  context: "Tattoo studio / small business / freelance engagement"
+  role: "Analytics setup, search visibility review, consultation-path CRO, GTM-compatible intervention"
+  description: "An analytics engagement for a tattoo studio that accepted the stated brief at face value — and found the real problem only after implementation. The CTA fix worked; a later redesign buried it again because the understanding never transferred."
+  short_description: "A failure case: accepted the wrong brief, the fix worked, but the understanding didn't transfer."
+  receipts:
+    - value: "~1,400"
+      label: "organic clicks — demand existed"
+    - value: "1"
+      label: "buried consultation CTA found and surfaced"
+    - value: "0"
+      label: "developer tickets needed — Google Optimize"
+    - value: "1 redesign"
+      label: "buried it again"
+
 - slug: sslp-enablement
   title: "The reporting layer survived the people who built it"
   url: "/work/sslp-enablement.html"
@@ -164,7 +185,7 @@
       label: "front-end event layer added"
     - value: "BigQuery"
       label: "export pipeline delivered"
-    - value: "Weeks"
+    - value: "&lt;1 wk"
       label: "to live engineering use"
     - value: "1"
       label: "engineering query primer created"
@@ -180,6 +201,8 @@
   role: "Discovery facilitation, GA4 rebuild, GTM audit, conversion modelling, Loom training library"
   description: "A GA4 discovery and rebuild for a content brand that surfaced six tracking gaps, challenged a homepage-first editorial assumption, and shipped with a Loom training library for long-tail adoption."
   short_description: "GA4 discovery for a content brand: six tracking gaps surfaced, the audience model reframed."
+  deprecated: true
+  deprecated_reason: "Question discovery is covered more strongly by shadow-it. This case is execution-level and does not add a distinct signal to the lens."
   receipts:
     - value: "6"
       label: "tracking gaps surfaced"
@@ -201,6 +224,8 @@
   role: "KPI discovery, GTM implementation, UTM architecture, dashboard build, agency training, emergency Squarespace migration"
   description: "A two-phase analytics engagement for a creator business education brand: KPI discovery, GTM, UTM architecture, and dashboard in 2021 — then called back fourteen months later for emergency four-domain Squarespace migration support."
   short_description: "Two-phase analytics engagement: dashboard built in 2021, emergency four-domain migration in 2022."
+  deprecated: true
+  deprecated_reason: "Execution-under-deadline proof. The callback is soft evidence (trust signal, not impact). No measurable business outcome. Below the evidence threshold for a senior architecture hire."
   receipts:
     - value: "14 mo"
       label: "sustained relationship"
@@ -222,6 +247,8 @@
   role: "GA4 multi-property setup, Search Console ownership, agency walkthrough, post-launch support"
   description: "GA4 and Search Console setup across a Shopify store and two new WordPress sites for a well-known interior design brand — configured, verified, and handed off to the agency in under two weeks."
   short_description: "GA4 multi-property setup across Shopify and WordPress, handed off to the agency in under two weeks."
+  deprecated: true
+  deprecated_reason: "Procedural execution — GA4 property setup and handoff. No business outcome shown. Breadth of instrumentation lens already covered by stronger cases (sslp-mobile, hardware-ecommerce-gtm, mqsr-schema-sdk)."
   receipts:
     - value: "3"
       label: "sites unified in GA4"
@@ -285,6 +312,8 @@
   role: "Amplitude dashboarding, campaign funnel design, platform error breakdown, schema decomposition recommendation"
   description: "Amplitude campaign analytics for a major QSR: a BOGO seasonal-promotion dashboard surfaced an Android-isolated error spike and exposed an overloaded products.variant field that needed decomposition for richer analysis."
   short_description: "Amplitude campaign analytics where a dashboard exposed schema debt."
+  deprecated: true
+  deprecated_reason: "The MQSR engagement is already represented more strongly by mqsr-schema-sdk (SDK debugging) and mqsr-errors (alert taxonomy). This case adds a third angle on the same client without a distinct outcome beyond the schema proposal."
   receipts:
     - value: "1"
       label: "BOGO campaign dashboard built"
@@ -316,6 +345,27 @@
     - value: "cart_id"
       label: "specified for checkout error events"
 
+- slug: product-quiz-placement
+  title: "The quiz worked. The question was where to put it."
+  url: "/work/product-quiz-placement.html"
+  kind: "case"
+  lens_number: "03"
+  lens: "Experimentation"
+  kicker: "// Case study / Experimentation"
+  context: "B2B/B2C hardware authentication brand / conversion optimisation / agency engagement"
+  role: "Analytics instrumentation, GA analysis, VWO A/B test implementation and measurement, conversion insights, UX telemetry data"
+  description: "A product selection quiz was already driving purchase intent — it just wasn't visible enough. GA instrumentation confirmed the conversion signal in Phase 1; VWO A/B testing across four store-page placement variants found the optimal surface in Phase 2."
+  short_description: "GA instrumentation confirmed a product quiz's conversion signal; VWO A/B testing found the store-page placement."
+  receipts:
+    - value: "2"
+      label: "engagement phases"
+    - value: "4"
+      label: "store-page A/B variants tested"
+    - value: "~2×"
+      label: "pathed CVR, winning variant vs control"
+    - value: "VWO + UA"
+      label: "test and analytics stack"
+
 - slug: mqsr-schema-sdk
   title: "A silent iOS data-loss bug, traced to the initialisation sequence"
   url: "/work/mqsr-schema-sdk.html"
@@ -336,3 +386,70 @@
       label: "international locales misrouted"
     - value: "1"
       label: "initialisation gate identified"
+
+- slug: hardware-ecommerce-gtm
+  title: "All analytics in the tag manager. Not one line in the site code."
+  url: "/work/hardware-ecommerce-gtm.html"
+  kind: "case"
+  lens_number: "02"
+  lens: "Instrumentation"
+  kicker: "// Case study / Instrumentation"
+  context: "B2B/B2C hardware authentication brand / e-commerce instrumentation / agency engagement"
+  role: "GTM architecture, container implementation, requirements design, SPA pageview handling, enhanced ecommerce tagging, form fallout tracking, QA, downstream GA analysis"
+  description: "Security requirements banned analytics code from the site codebase entirely — all tags, variables, and triggers had to live in GTM. When the purchase funnel became a Single Page Application mid-build, the constraint stayed the same but the implementation got harder: wildcard matching, history-state pageviews, and enhanced ecommerce delivered from a container alone."
+  short_description: "GTM-only analytics architecture on a Magento/SPA e-commerce storefront, driven by a security requirement that banned analytics code from the codebase."
+  receipts:
+    - value: "0"
+      label: "analytics lines in site codebase"
+    - value: "2"
+      label: "GTM containers deployed"
+    - value: "SPA"
+      label: "history-state pageview handling"
+    - value: "Enhanced"
+      label: "ecommerce + full form fallout tracking"
+
+- slug: d2c-ga-migration
+  title: "Off Adobe, onto Google. Three phases and a cleared backlog."
+  url: "/work/d2c-ga-migration.html"
+  kind: "case"
+  lens_number: "02"
+  lens: "Instrumentation"
+  kicker: "// Case study / Instrumentation"
+  context: "D2C health & beverage brand / Adobe Analytics to GA migration / agency engagement"
+  role: "GTM architecture, data layer design, Adobe Analytics migration, Meteor.js SPA event handling, enhanced ecommerce, Facebook Ads conversion tracking, QA, downstream GA analysis"
+  description: "Adobe Analytics had made the client's tracking backlog unmanageable — every change required heavy developer lift. Three-phase GTM-led migration to GA on a Meteor.js SPA: port the Adobe implementation, clear years of deferred requirements, then add capabilities the platform had never supported."
+  short_description: "Adobe Analytics to GA/GTM migration on a Meteor.js SPA, delivering platform migration plus a cleared multi-year analytics backlog in three phases."
+  deprecated: true
+  deprecated_reason: "2019 engagement. Instrumentation lens is covered more distinctively by hardware-ecommerce-gtm (constraint architecture) and sslp-mobile (greenfield mobile). This case remains active in the Philips microsite where the migration pattern is specifically relevant."
+  receipts:
+    - value: "3"
+      label: "delivery phases"
+    - value: "1"
+      label: "platform migration (Adobe → GA)"
+    - value: "SPA"
+      label: "Meteor.js data layer architecture"
+    - value: "4+"
+      label: "new tracking capabilities shipped"
+
+- slug: oem-ebrochure-analytics
+  title: "Global brochure analytics. The critical finding was in the load time."
+  url: "/work/oem-ebrochure-analytics.html"
+  kind: "case"
+  lens_number: "01"
+  lens: "Question discovery"
+  kicker: "// Case study / Question discovery"
+  context: "Global automotive OEM / digital eBrochure programme / agency engagement"
+  role: "GA analytics, multi-region reporting, distributor performance analysis, engagement diagnostics, data-informed personalization strategy"
+  description: "GA analytics for a global automotive OEM's digital eBrochure programme across distributor regions worldwide. MY18 retrospective analysis surfaced a load-time issue producing a 67% desktop exit rate before users entered the Guided Tour — a finding that moved from the analytics report to the platform roadmap."
+  short_description: "GA analytics for a global automotive eBrochure programme: distributor reach, engagement diagnostics, and the load-time finding that drove platform decisions."
+  deprecated: true
+  deprecated_reason: "2017–18 engagement. Outcome is 'informed platform decisions' — soft. Question discovery is covered more strongly by shadow-it and ux-research-home-services. Preserved for possible reference in automotive/OEM-adjacent role applications."
+  receipts:
+    - value: "Global"
+      label: "distributor reach measured"
+    - value: "67%"
+      label: "desktop tour exit rate before entry"
+    - value: "~45%"
+      label: "YoY reach growth in MY18"
+    - value: "MY19"
+      label: "platform decisions informed"

@@ -2760,6 +2760,20 @@ a.callout-link:hover {
   margin-top: 30px;
 }
 
+.bp-recruiter-flag {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--bp-muted, #6b7280);
+}
+
+.bp-recruiter-flag a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .bp-btn {
   display: inline-flex;
   min-height: 42px;
