@@ -119,12 +119,8 @@
   text-decoration: none;
 }
 
-.philips-microsite .nav-links a[aria-current='page'] {
+.philips-microsite .nav-links a[aria-current="page"] {
   color: var(--philips-blue-soft);
-}
-
-.philips-microsite .nav-toggle span {
-  background: #ffffff;
 }
 
 /* Base page surfaces */
@@ -507,21 +503,18 @@
 
   .philips-microsite .nav-inner {
     align-items: flex-start;
+    flex-direction: column;
     padding: 14px 20px;
   }
 
+  .philips-microsite .nav-brand,
   .philips-microsite .nav-links {
     width: 100%;
-    background: var(--philips-blue-dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    margin-top: 12px;
-    padding-top: 12px;
-    justify-content: flex-start;
-    row-gap: 10px;
   }
 
-  .philips-microsite .nav-links.open {
-    display: flex;
+  .philips-microsite .nav-links {
+    justify-content: flex-start;
+    row-gap: 10px;
   }
 }
 
