@@ -54,6 +54,12 @@
   color: var(--philips-blue-soft);
 }
 
+@media (max-width: 860px) {
+  .philips-microsite .bp-site-nav-muted {
+    display: none;
+  }
+}
+
 /* Base page surfaces */
 .philips-microsite section {
   background: #ffffff;
