@@ -2,3 +2,15 @@ title: Frederic Labadie
 url: "https://fredericlabadie.com"
 baseurl: ""
 markdown: kramdown
+exclude:
+  - fix_progress.md
+  - portfolio_and_philips_claude_code_handoff_verified.md
+  - portfolio_design_review_blueprint_2026-05-23.md
+  - portfolio_readability_strategic_alignment_brief.md
+  - portfolio_review_2026-05-23.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - serve.js
+  - playwright.config.ts
+  - tests
