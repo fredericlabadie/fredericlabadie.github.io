@@ -1,0 +1,296 @@
+---
+layout: adyen
+adyen_nav: work
+skip_link: "#case"
+skip_label: "Skip to case study"
+robots: "noindex, nofollow"
+extra_css:
+  - "/css/case-blueprint.css"
+title: "Designing AI workflows that don't outsource the thinking"
+description: "A production AI alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13–26 April 2026, compressed 230 raw alerts to 39 posts (83% reduction), and surfaced one critical failure human review had missed."
+og_description: "A production AI alert-triage system with explicit human-judgement gates."
+og_url: "https://fredericlabadie.com/adyen/work/ai-alert-triage.html"
+twitter_description: "A production AI alert-triage system with explicit human-judgement gates."
+---
+      <header class="bp-case-hero">
+        <div>
+          <p class="bp-case-kicker bp-case-accent">
+            // Case study / AI workflows
+          </p>
+          <h1>Designing AI workflows that don't outsource the thinking.</h1>
+          <p class="bp-case-dek">
+            A production alert-triage system with explicit decisions about where
+            AI assists and where human judgement is preserved &mdash; and why
+            those lines are where they are.
+          </p>
+        </div>
+        <aside class="bp-case-hero-panel" aria-label="Case summary">
+          <div class="bp-case-panel-head">
+            <span>Case file</span><span>Static / anonymised</span>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Client context</span>
+            <p>
+              Major quick-service restaurant brand / analytics architecture
+              engagement
+            </p>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Run window</span><strong>13–26 Apr 2026</strong>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Role</span>
+            <p>
+              Workflow design, analytics architecture, alert taxonomy,
+              human-in-the-loop gates
+            </p>
+          </div>
+        </aside>
+      </header>
+
+      <section class="bp-case-receipts" aria-label="Case proof points">
+        <article><strong>230</strong><span>raw alerts reviewed</span></article>
+        <article><strong>39</strong><span>posts after triage</span></article>
+        <article>
+          <strong>83%</strong><span>alert noise reduction</span>
+        </article>
+        <article><strong>1</strong><span>critical miss surfaced</span></article>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 01 / thesis</span><span>AI assists / humans judge</span>
+      </div>
+      <section class="bp-case-content" id="case">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Core argument</p>
+          <h2>The model is not the hard part. The gates are.</h2>
+          <p>
+            The risk in AI-assisted analytics is outsourced thinking. The work
+            is deciding where the model helps, where it must stop, and how
+            humans get enough context to act.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-proof-panel">
+            <p class="bp-case-mono bp-case-accent">What happened</p>
+            <h3>
+              A production triage workflow compressed noise and surfaced a miss.
+            </h3>
+            <p>
+              A production AI alert-triage system compressed
+              <strong>230 raw alerts to 39 posts</strong> across a two-week run
+              on real on-call volume. That is an
+              <strong>83% reduction</strong> in alert noise. More importantly,
+              it surfaced <strong>one critical feature failure</strong> that the
+              human review had missed.
+            </p>
+            <p>
+              The architecture is deliberately conservative: AI surfaces and
+              ranks; humans still diagnose and act. The system is designed to
+              make the human judgement step clearer, not to remove it.
+            </p>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Situation</p>
+            <h3>The signal was present, but not readable.</h3>
+            <p>
+              A noisy alert channel at a major QSR analytics stack was producing
+              roughly 230 alerts per fortnight from production and staging
+              monitors. The known failure mode was not absence of data. It was
+              legibility: a prior critical checkout regression had gone
+              unactioned because technical percentages obscured the signal.
+            </p>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Task</p>
+            <h3>Compress the noise without removing the human gate.</h3>
+            <p>
+              The brief was to surface what matters, suppress what does not,
+              escalate when a suppressed signal worsens, and never delegate the
+              diagnose-and-act decision to the model. The workflow needed to
+              reduce review burden while preserving accountability.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 02 / workflow</span><span>four gates / hourly review</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Pipeline</p>
+          <h2>Four stages, two explicit judgement boundaries.</h2>
+          <p>
+            The system runs hourly. It automates collection, grouping,
+            enrichment, and summarisation. It does not automate ownership.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <div class="bp-case-gates" aria-label="AI triage workflow gates">
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">1</span
+              ><strong>Suppress known issues</strong>
+              <p>
+                Reads the alert channel, records monitors already posted today,
+                and suppresses repeats unless a signal escalates significantly.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">2</span
+              ><strong>Pull, dedupe, pre-screen</strong>
+              <p>
+                Pulls the last hour of production and staging alerts, groups
+                firings by monitor name, and drops known low-signal monitor
+                errors before expensive review.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">3</span
+              ><strong>Trend + error breakdown</strong>
+              <p>
+                Queries Amplitude for each surviving monitor's seven-day chart
+                and surfaces error-type breakdown so the summary has context.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">4</span
+              ><strong>Gate, group, post</strong>
+              <p>
+                Posts Critical or Warning findings only. Suppressed monitors
+                hitting 2x prior value override suppression. Co-firing monitors
+                group under one root-cause hypothesis.
+              </p>
+            </article>
+          </div>
+
+          <figure class="bp-case-figure" aria-label="Human AI boundary diagram">
+            <figcaption>
+              <span>fig. 01 / responsibility boundary</span
+              ><span>model assists / human owns action</span>
+            </figcaption>
+            <div class="bp-case-figure-grid">
+              <div>
+                <span>AI handles</span><strong>Surface</strong>
+                <p>
+                  Pulls, groups, summarises, ranks, and points attention toward
+                  likely signal.
+                </p>
+              </div>
+              <div>
+                <span>Gate handles</span><strong>Escalate</strong>
+                <p>
+                  Overrides suppression when the same issue worsens instead of
+                  letting prior posts silence the problem.
+                </p>
+              </div>
+              <div>
+                <span>Human handles</span><strong>Decide</strong>
+                <p>
+                  Diagnosis, ownership, and action remain with the on-call team.
+                </p>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 03 / result</span
+        ><span>noise reduction / critical surface / V2</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Result</p>
+          <h2>
+            The win was not fewer alerts. It was a clearer decision surface.
+          </h2>
+          <p>
+            The 83% reduction matters because it made attention usable. The
+            critical miss matters because it proves the compression did not
+            erase the signal.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Outcome</p>
+            <h3>One missed critical issue justified the architecture.</h3>
+            <p>
+              The signal that justifies the design is not only the alert count.
+              It is the critical feature failure the on-call team's human review
+              had missed. The system surfaced it inside the V1 run; without that
+              surface, it could have continued silently.
+            </p>
+            <ul>
+              <li>
+                <strong>230 raw alerts to 39 posts</strong> across the two-week
+                production run.
+              </li>
+              <li>
+                <strong>83% reduction</strong> in alert noise while preserving
+                escalation paths.
+              </li>
+              <li>
+                <strong>Hourly alert review cycle</strong> replacing
+                multi-hour manual review.
+              </li>
+              <li>
+                <strong>V2 build in progress</strong> based on the observed V1
+                surface and suppression patterns.
+              </li>
+            </ul>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Design lesson</p>
+            <h3>Suppression is the dangerous part.</h3>
+            <p>
+              Most alert-triage systems focus on suppressing duplicates. This
+              one also asks when suppression should fail. The override rule
+              exists because a system can become unsafe if it silences a
+              worsening issue with its own earlier post.
+            </p>
+          </article>
+
+          <div class="bp-case-tags" aria-label="Technologies and methods">
+            <span class="bp-case-tag">Claude API</span>
+            <span class="bp-case-tag">Amplitude</span>
+            <span class="bp-case-tag">AI workflow design</span>
+            <span class="bp-case-tag">Human-AI collaboration</span>
+            <span class="bp-case-tag">Alert triage</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 04 / next</span><span>case library / about / contact</span>
+      </div>
+      <section class="bp-case-next">
+        <a href="../work/"
+          ><span class="bp-case-mono bp-case-accent">More cases</span
+          ><strong>Full case library.</strong
+          ><span
+            >Sixteen primary cases across seven categories: question discovery,
+            instrumentation, experimentation, AI workflows, adoption, marketing
+            analytics, and data engineering.</span
+          ></a
+        >
+        <a href="../about/"
+          ><span class="bp-case-mono bp-case-accent">About</span
+          ><strong>Bio, skills, certifications.</strong
+          ><span
+            >The longer version: methodology, credentials, and what I am
+            available for.</span
+          ></a
+        >
+        <a href="../contact/"
+          ><span class="bp-case-mono bp-case-accent">Get in touch</span
+          ><strong>Contact and context.</strong
+          ><span
+            >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or
+            any other in detail.</span
+          ></a
+        >
+      </section>

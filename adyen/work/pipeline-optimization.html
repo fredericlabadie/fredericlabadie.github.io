@@ -1,0 +1,354 @@
+---
+layout: adyen
+adyen_nav: work
+skip_link: "#case"
+skip_label: "Skip to case study"
+robots: "noindex, nofollow"
+extra_css:
+  - "/css/case-blueprint.css"
+title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction."
+description: "Second-pass audit and architectural redesign of a GA4-to-BigQuery reporting layer. Claude and BigQuery MCP supported inspection of repeated scans, a 1.2 TB intermediate table, and an approximately $112/run cascading CTE chain before scheduled-query costs were cut roughly in half."
+og_title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction. &mdash; case study"
+og_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query cost by roughly half."
+og_url: "https://fredericlabadie.com/adyen/work/pipeline-optimization.html"
+twitter_title: "Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction."
+twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query cost by roughly half."
+---
+      <header class="bp-case-hero">
+        <div>
+          <p class="bp-case-kicker bp-case-accent">
+            // Case study / Data engineering
+          </p>
+          <h1>
+            Three raw scans to one. Fifteen CTEs to zero. ~50% cost reduction.
+          </h1>
+          <p class="bp-case-dek">
+            A second-pass audit of the GA4-to-BigQuery reporting layer built
+            after the initial 38-hours/month BI enablement work. When the
+            company signed an Anthropic contract, I used Claude with BigQuery
+            MCP as an analysis collaborator to trace repeated scans, a 1.2 TB
+            intermediate table, and an approximately $112/run cascading CTE
+            chain. Redesigning the scan pattern cut scheduled-query costs by
+            roughly half.
+          </p>
+        </div>
+        <aside class="bp-case-hero-panel" aria-label="Case summary">
+          <div class="bp-case-panel-head">
+            <span>Case file</span><span>Static / anonymised</span>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Client context</span>
+            <p>
+              State-regulated retail platform / analytics architecture
+              engagement
+            </p>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Project timing</span><strong>Apr 2026</strong>
+          </div>
+          <div class="bp-case-panel-row">
+            <span>Role</span>
+            <p>
+              Pipeline audit, SQL redesign, BigQuery MCP-assisted analysis,
+              DAG simplification, migration planning
+            </p>
+          </div>
+        </aside>
+      </header>
+
+      <section class="bp-case-receipts" aria-label="Case proof points">
+        <article><strong>~50%</strong><span>pipeline cost reduction</span></article>
+        <article>
+          <strong>1.2 TB</strong><span>intermediate table retired</span>
+        </article>
+        <article>
+          <strong>$112</strong><span>approximate old run cost</span>
+        </article>
+        <article>
+          <strong>15+</strong><span>independent CTE scans removed</span>
+        </article>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 01 / thesis</span><span>pipeline debt / system view</span>
+      </div>
+      <section class="bp-case-content" id="case">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Core argument</p>
+          <h2>The optimisation was architectural, not query-level.</h2>
+          <p>
+            Pipeline debt accumulates one reasonable decision at a time. The
+            work was not to tune a single query; it was to step back and
+            redesign the shape of the system.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-proof-panel">
+            <p class="bp-case-mono bp-case-accent">What happened</p>
+            <h3>A repeated-scan pipeline became one shared computation.</h3>
+            <p>
+              A GA4-to-BigQuery analytics pipeline had grown into a
+              <strong>roughly $112/run CTE chain</strong> processing
+              approximately <strong>18 TB per execution</strong>. I redesigned
+              the pipeline around a single conditional-aggregation pass,
+              retiring the 1.2 TB <code>GA4_Event_Params</code> intermediate
+              table and cutting costs by roughly half.
+            </p>
+            <p>
+              The result was cheaper, faster, easier to maintain, and more
+              consistent: channel-grouping logic defined once instead of
+              repeated in slightly different forms, and two intermediate tables
+              retired without information loss.
+            </p>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Situation</p>
+            <h3>
+              Each individual decision made sense. The system no longer did.
+            </h3>
+            <p>
+              The first pass had already replaced the recurring manual reporting
+              cycle with a BigQuery, Dataform, and Looker Studio reporting
+              layer. The next question was cost and maintainability. I had been
+              watching places where the pipeline could be simplified, and when
+              the company signed an Anthropic contract, it created the opening
+              to test a more collaborative audit process using Claude and
+              BigQuery MCP.
+            </p>
+            <p>
+              The pipeline scanned <code>events_*</code> three separate times,
+              unnested every event type into a generic key-value table, then ran
+              15+ separate CTEs over that 1.2 TB table and full-outer-joined
+              them back together. Additional debt came from
+              <code>SELECT DISTINCT</code> on 30-50 columns, duplicated
+              channel-grouping logic, and a 429 GB unpartitioned table that
+              forced full scans downstream.
+            </p>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Task</p>
+            <h3>Find the actual cost source and redesign around it.</h3>
+            <p>
+              The brief was to audit the whole data flow, identify where the
+              costs were really coming from, and propose a migration plan that
+              the team could execute without freezing the reporting layer. Cost
+              reduction was the visible target. Maintainability and consistency
+              were the real ones.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 02 / architecture</span><span>before / after / migration</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Redesign</p>
+          <h2>Spend the modelling work once.</h2>
+          <p>
+            The key move was replacing repeated independent scans with a single
+            event-level computation that produced a flat, analysis-ready row.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Method</p>
+            <h3>Claude and BigQuery MCP turned the audit into a collaborative inspection process.</h3>
+            <p>
+              I used Claude with BigQuery MCP to inspect schema shape, query
+              structure, scan patterns, and candidate simplifications while
+              keeping the architectural decisions, validation plan, and migration
+              sequence human-owned.
+            </p>
+          </article>
+
+          <figure
+            class="bp-case-figure"
+            aria-label="Pipeline architecture before and after"
+          >
+            <figcaption>
+              <span>fig. 01 / architecture shift</span
+              ><span>repeated scans to shared computation</span>
+            </figcaption>
+            <div class="bp-case-figure-grid">
+              <div>
+                <span>Before</span><strong>15+ CTEs</strong>
+                <p>
+                  Independent scans over the same 1.2 TB key-value table,
+                  stitched back together with full outer joins.
+                </p>
+              </div>
+              <div>
+                <span>Move</span><strong>1 pass</strong>
+                <p>
+                  Conditional aggregation pivots 25+ event parameter keys into
+                  columns in one grouped computation.
+                </p>
+              </div>
+              <div>
+                <span>After</span><strong>6-step DAG</strong>
+                <p>
+                  Sequential chain restructured into a three-tier DAG with
+                  parallel execution where dependencies allowed it.
+                </p>
+              </div>
+            </div>
+          </figure>
+
+          <div class="bp-case-gates" aria-label="Pipeline redesign stages">
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">1</span
+              ><strong>Single raw scan</strong>
+              <p>
+                Read the needed GA4 event rows once instead of repeating the
+                same scan for each parameter extraction.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">2</span
+              ><strong>Conditional aggregation</strong>
+              <p>
+                Use
+                <code>MAX(IF(ep.key = 'x', ep.value.string_value, NULL))</code>
+                to pivot 25+ event parameters simultaneously.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">3</span
+              ><strong>Canonical logic</strong>
+              <p>
+                Move channel grouping into one definition instead of maintaining
+                three slightly different CASE statements.
+              </p>
+            </article>
+            <article class="bp-case-gate">
+              <span class="bp-case-flow-label">4</span
+              ><strong>Partition + migrate</strong>
+              <p>
+                Add partitioning to large reporting tables and deliver a
+                four-phase rollout with a 2-4 week validation window.
+              </p>
+            </article>
+          </div>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Migration plan</p>
+            <h3>No freeze required.</h3>
+            <p>
+              The rollout was designed as four phases: schema preparation,
+              historical backfill, scheduled-query deployment, and table
+              cleanup. The validation window let the team compare outputs before
+              retiring the older intermediate tables.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 03 / result</span
+        ><span>cost / maintainability / transfer pattern</span>
+      </div>
+      <section class="bp-case-content">
+        <aside class="bp-case-sidebar">
+          <p class="bp-case-mono bp-case-accent">Result</p>
+          <h2>
+            Cost reduction was the visible win. Architecture was the durable
+            one.
+          </h2>
+          <p>
+            The same decision pattern transfers to other analytics rebuilds:
+            model the expensive thing once, make downstream surfaces consume the
+            shared result. BigQuery MCP helped accelerate the audit, but the
+            durable value was the architecture it made easier to reason about.
+          </p>
+        </aside>
+        <div class="bp-case-main">
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Outcome</p>
+            <h3>The pipeline became cheaper and easier to reason about.</h3>
+            <ul>
+              <li>
+                <strong>Scheduled query cost halved</strong> — the pipeline had
+                grown from negligible to ~$300/month after app and web data were
+                added; the CTE redesign cut that by roughly half.
+              </li>
+              <li>
+                <strong>Looker Studio scan cost halved separately</strong> —
+                each user triggered a full-table scan at ~$30/scan across a
+                6-person team (~$180 at full load). Scoping the data window from
+                all-time to two years brought that to ~$15/scan (~$90 at full
+                load).
+              </li>
+              <li>
+                <strong>1.2 TB intermediate table retired</strong>, along with
+                the redundant <code>pdp_pageview_params</code> layer.
+              </li>
+              <li>
+                <strong>15+ independent CTE scans removed</strong> by replacing
+                repeated extraction with one shared computation.
+              </li>
+              <li>
+                <strong>Channel grouping unified</strong> into one canonical
+                definition instead of duplicated CASE logic.
+              </li>
+            </ul>
+          </article>
+
+          <article class="bp-case-block">
+            <p class="bp-case-mono bp-case-accent">Design lesson</p>
+            <h3>Optimise the system boundary, not the symptom.</h3>
+            <p>
+              Most of the waste lived between queries, not inside any single
+              query. The durable fix was to redraw the boundary between raw
+              event ingestion, parameter extraction, reporting tables, and
+              dashboards so that the expensive modelling work happened once.
+            </p>
+          </article>
+
+          <div class="bp-case-tags" aria-label="Technologies and methods">
+            <span class="bp-case-tag">BigQuery</span>
+            <span class="bp-case-tag">BigQuery MCP</span>
+            <span class="bp-case-tag">Claude-assisted analysis</span>
+            <span class="bp-case-tag">DAG redesign</span>
+            <span class="bp-case-tag">Conditional aggregation</span>
+            <span class="bp-case-tag">Partitioning</span>
+            <span class="bp-case-tag">Cost engineering</span>
+            <span class="bp-case-tag">Migration planning</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="bp-case-section-tag" aria-hidden="true">
+        <span>// 04 / next</span
+        ><span>case library / adjacent evidence / contact</span>
+      </div>
+      <section class="bp-case-next">
+        <a href="../work/"
+          ><span class="bp-case-mono bp-case-accent">More cases</span
+          ><strong>Full case library.</strong
+          ><span
+            >Sixteen primary cases across seven categories: question discovery,
+            instrumentation, experimentation, AI workflows, adoption, marketing
+            analytics, and data engineering.</span
+          ></a
+        >
+        <a href="sslp-enablement.html"
+          ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+          ><strong>The reporting layer this optimisation followed.</strong
+          ><span
+            >BigQuery, Dataform, and Looker Studio reporting infrastructure that
+            recovered 38 analyst hours per month before the cost pass.</span
+          ></a
+        >
+        <a href="../contact/"
+          ><span class="bp-case-mono bp-case-accent">Get in touch</span
+          ><strong>Contact and context.</strong
+          ><span
+            >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or
+            any other in detail.</span
+          ></a
+        >
+      </section>
