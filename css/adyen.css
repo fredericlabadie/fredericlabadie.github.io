@@ -26,6 +26,7 @@
   --c-bg: var(--adyen-paper);
   --c-border: var(--adyen-line);
   --c-card-border: var(--adyen-line);
+  --c-rule-light: var(--adyen-line);
   background:
     radial-gradient(
         circle at 1px 1px,
@@ -136,6 +137,11 @@
   background: var(--adyen-panel);
 }
 
+.adyen-microsite .card-row,
+.adyen-microsite .channel-list {
+  border-color: var(--adyen-line);
+}
+
 .adyen-microsite .callout,
 .adyen-microsite .card,
 .adyen-microsite .case-card,
@@ -230,8 +236,15 @@
 }
 
 .adyen-microsite .footer {
+  padding: 0;
   background: #fff;
   border-top: 1px solid var(--adyen-line);
+}
+
+.adyen-microsite .footer-inner {
+  max-width: none;
+  padding: 18px 32px;
+  color: var(--adyen-muted);
 }
 
 @media (max-width: 720px) {
@@ -272,6 +285,15 @@
 }
 
 /* Contact page components */
+.adyen-microsite .contact-intro .container + .container {
+  padding-top: 0;
+  padding-bottom: 56px;
+}
+
+.adyen-microsite .contact-intro .channel-list-4 {
+  margin-top: 40px;
+}
+
 .adyen-microsite .contact-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;

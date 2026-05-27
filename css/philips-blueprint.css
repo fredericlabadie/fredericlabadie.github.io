@@ -412,6 +412,7 @@
 }
 
 .philips-microsite .footer {
+  padding: 0;
   background: #ffffff;
   border-top: 1px solid var(--philips-blue-dark);
 }
@@ -535,6 +536,14 @@
 /* ============================================================
    Contact page components
    ============================================================ */
+
+.philips-microsite .contact-intro .container + .container {
+  padding-bottom: 48px;
+}
+
+.philips-microsite .contact-intro .channel-list {
+  margin-top: 40px;
+}
 
 .philips-microsite .contact-hero-grid {
   display: grid;

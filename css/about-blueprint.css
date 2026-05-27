@@ -12,51 +12,6 @@
 
 .bp-about-body strong { color: inherit; }
 
-.bp-about-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  min-height: 48px;
-  padding: 12px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  background: #16263a;
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.bp-about-nav a:hover { text-decoration: none; }
-
-.bp-about-nav-brand,
-.bp-about-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.bp-about-nav-links {
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.bp-about-nav-links a { color: #ffffff; }
-.bp-about-nav-links a[aria-current="page"] { color: #b9412a; }
-.bp-about-nav-muted { color: #a3b4c7; }
-
-.bp-about-dot {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  border-radius: 999px;
-  background: #3e7f5b;
-  box-shadow: 0 0 0 2px rgba(62, 127, 91, 0.25);
-}
 
 .bp-about-page {
   background:
@@ -389,18 +344,6 @@
 }
 
 @media (max-width: 720px) {
-  .bp-about-nav {
-    position: static;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 14px 20px;
-  }
-
-  .bp-about-nav-links {
-    justify-content: flex-start;
-    gap: 12px 18px;
-  }
-
   .bp-about-hero,
   .bp-about-content,
   .bp-about-section-tag {
