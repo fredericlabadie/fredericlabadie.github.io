@@ -440,28 +440,6 @@
   }
 }
 
-@media (max-width: 860px) {
-  .philips-microsite .nav {
-    position: static;
-  }
-
-  .philips-microsite .nav-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 14px 20px;
-  }
-
-  .philips-microsite .nav-brand,
-  .philips-microsite .nav-links {
-    width: 100%;
-  }
-
-  .philips-microsite .nav-links {
-    justify-content: flex-start;
-    row-gap: 10px;
-  }
-}
-
 @media (max-width: 720px) {
   .philips-microsite .container,
   .philips-microsite .hero .container,
