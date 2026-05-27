@@ -44,82 +44,13 @@
     var(--philips-paper);
 }
 
-/* Navigation: match the current site-nav visual language while preserving
-   the Philips-specific information architecture. */
-.philips-microsite .nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  min-height: 48px;
-  height: auto;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  background: var(--philips-blue-dark);
-  color: #ffffff;
-  border-bottom: 1px solid var(--philips-blue-dark);
-}
-
-.philips-microsite .nav-inner {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 12px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.philips-microsite .nav-brand,
-.philips-microsite .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.philips-microsite .nav-brand,
-.philips-microsite .nav-links a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.philips-microsite .nav-brand {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-}
-
-.philips-microsite .nav-brand-dot {
-  order: -1;
-  width: 8px;
-  height: 8px;
+/* Nav: site-nav.css handles layout; override only what differs from the core palette */
+.philips-microsite .bp-site-dot {
   background: var(--philips-blue);
   box-shadow: 0 0 0 2px rgba(11, 94, 215, 0.25);
 }
 
-.philips-microsite .nav-brand-role {
-  color: #a3b4c7;
-}
-
-.philips-microsite .nav-links {
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.philips-microsite .nav-links a {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  border-bottom: 0;
-}
-
-.philips-microsite .nav-links a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.philips-microsite .nav-links a[aria-current="page"] {
+.philips-microsite .bp-site-nav-links a[aria-current="page"] {
   color: var(--philips-blue-soft);
 }
 

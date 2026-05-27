@@ -1,17 +1,16 @@
-<nav class="nav" aria-label="Philips microsite">
-  <div class="nav-inner">
-    <a href="{{ '/philips/' | relative_url }}" class="nav-brand">
-      Frederic Labadie<span class="nav-brand-dot"></span
-      ><span class="nav-brand-role"
-        >Philips &middot; UX Telemetry Expert role fit</span
-      >
-    </a>
-    <!-- prettier-ignore -->
-    <ul class="nav-links" id="primary-nav">
-      {% if page.philips_nav == "home" %}<li><a href="{{ '/philips/' | relative_url }}" aria-current="page">Home</a></li>{% else %}<li><a href="{{ '/philips/' | relative_url }}">Home</a></li>{% endif %}
-      {% if page.philips_nav == "work" %}<li><a href="{{ '/philips/work/' | relative_url }}" aria-current="page">Work</a></li>{% else %}<li><a href="{{ '/philips/work/' | relative_url }}">Work</a></li>{% endif %}
-      {% if page.philips_nav == "about" %}<li><a href="{{ '/philips/about/' | relative_url }}" aria-current="page">About</a></li>{% else %}<li><a href="{{ '/philips/about/' | relative_url }}">About</a></li>{% endif %}
-      {% if page.philips_nav == "contact" %}<li><a href="{{ '/philips/contact/' | relative_url }}" aria-current="page">Contact</a></li>{% else %}<li><a href="{{ '/philips/contact/' | relative_url }}">Contact</a></li>{% endif %}
-    </ul>
-  </div>
+<nav class="bp-site-nav" aria-label="Philips microsite">
+  <a href="{{ '/philips/' | relative_url }}" class="bp-site-nav-brand">
+    <span class="bp-site-dot" aria-hidden="true"></span>
+    <span>Frederic Labadie</span>
+    <span class="bp-site-nav-muted"
+      >/ Philips &middot; UX Telemetry Expert role fit</span
+    >
+  </a>
+  <!-- prettier-ignore -->
+  <ul class="bp-site-nav-links" id="primary-nav">
+    {% if page.philips_nav == "home" %}<li><a href="{{ '/philips/' | relative_url }}" aria-current="page">Home</a></li>{% else %}<li><a href="{{ '/philips/' | relative_url }}">Home</a></li>{% endif %}
+    {% if page.philips_nav == "work" %}<li><a href="{{ '/philips/work/' | relative_url }}" aria-current="page">Work</a></li>{% else %}<li><a href="{{ '/philips/work/' | relative_url }}">Work</a></li>{% endif %}
+    {% if page.philips_nav == "about" %}<li><a href="{{ '/philips/about/' | relative_url }}" aria-current="page">About</a></li>{% else %}<li><a href="{{ '/philips/about/' | relative_url }}">About</a></li>{% endif %}
+    {% if page.philips_nav == "contact" %}<li><a href="{{ '/philips/contact/' | relative_url }}" aria-current="page">Contact</a></li>{% else %}<li><a href="{{ '/philips/contact/' | relative_url }}">Contact</a></li>{% endif %}
+  </ul>
 </nav>
