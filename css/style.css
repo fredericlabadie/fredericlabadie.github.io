@@ -2616,10 +2616,10 @@ a.callout-link:hover {
 
 /* ============================================================
    BLUEPRINT HOMEPAGE PASS
-   Scoped to body.blueprint-home so the redesign can move page by page.
+   Scoped to body.bp-home-body so the redesign can move page by page.
    ============================================================ */
 
-.blueprint-home {
+.bp-home-body {
   --bp-canvas: #eef2f5;
   --bp-inset: #dde4ec;
   --bp-card: #ffffff;
@@ -2639,14 +2639,14 @@ a.callout-link:hover {
   color: var(--bp-ink);
 }
 
-.blueprint-home main,
-.blueprint-home section {
+.bp-home-body main,
+.bp-home-body section {
   background: transparent;
 }
 
-.blueprint-home h1,
-.blueprint-home h2,
-.blueprint-home h3 {
+.bp-home-body h1,
+.bp-home-body h2,
+.bp-home-body h3 {
   letter-spacing: 0;
 }
 
