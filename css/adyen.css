@@ -75,11 +75,15 @@
 .adyen-microsite .case-card-title a,
 .adyen-microsite .case-card-title a:visited {
   color: var(--adyen-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: box-shadow 160ms ease, color 160ms ease;
 }
 
 .adyen-microsite .case-card-title a:hover,
 .adyen-microsite .case-card-title a:focus {
-  color: var(--adyen-green-text);
+  color: var(--adyen-ink);
+  box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.42);
 }
 
 .adyen-microsite .hero,
@@ -109,13 +113,10 @@
 .adyen-microsite .section-eyebrow,
 .adyen-microsite .card-label,
 .adyen-microsite .case-card-meta,
-.adyen-microsite .deeper-label,
-.adyen-microsite .tag,
-.adyen-microsite .metric-label {
+.adyen-microsite .tag {
   color: var(--adyen-green-text);
 }
 
-.adyen-microsite .eyebrow::before,
 .adyen-microsite .section-eyebrow::before {
   background: var(--adyen-green);
 }
@@ -138,11 +139,7 @@
 .adyen-microsite .callout,
 .adyen-microsite .card,
 .adyen-microsite .case-card,
-.adyen-microsite .deeper-card,
-.adyen-microsite .metric,
-.adyen-microsite .flow-step,
 .adyen-microsite .case-toc-item,
-.adyen-microsite .channel-primary,
 .adyen-microsite .channel-card {
   background: rgba(255, 255, 255, 0.9);
   border-color: var(--adyen-line);
@@ -180,19 +177,6 @@
   color: var(--adyen-green-dark);
 }
 
-.adyen-microsite .case-argument,
-.adyen-microsite .outcome {
-  background: var(--adyen-navy);
-  color: #fff;
-  border-color: var(--adyen-navy);
-}
-
-.adyen-microsite .outcome-title,
-.adyen-microsite .outcome-icon {
-  color: var(--adyen-green);
-}
-
-.adyen-microsite .metric:nth-child(even),
 .adyen-microsite .card.accent,
 .adyen-microsite .case-toc-item:hover,
 .adyen-microsite .case-toc-item:focus,
@@ -204,20 +188,15 @@
 .adyen-microsite .case-toc-item:hover,
 .adyen-microsite .case-toc-item:focus,
 .adyen-microsite .channel-card:hover,
-.adyen-microsite .channel-card:focus,
-.adyen-microsite .deeper-card:hover,
-.adyen-microsite .deeper-card:focus {
+.adyen-microsite .channel-card:focus {
   border-left-color: var(--adyen-green);
 }
 
-.adyen-microsite .metric-value,
-.adyen-microsite .flow-num,
 .adyen-microsite .case-toc-num {
   color: var(--adyen-green);
 }
 
-.adyen-microsite .channel-label,
-.adyen-microsite .channel-primary .channel-label {
+.adyen-microsite .channel-label {
   color: var(--adyen-green-text);
 }
 
@@ -229,14 +208,8 @@
   border-top-width: 1px;
 }
 
-.adyen-microsite .card.accent,
-.adyen-microsite .metric:nth-child(even) {
+.adyen-microsite .card.accent {
   box-shadow: inset 0 3px 0 var(--adyen-green);
-}
-
-.adyen-microsite .card.amber {
-  background: var(--adyen-green-wash);
-  border-color: rgba(10, 191, 83, 0.32);
 }
 
 .adyen-microsite .tag {
@@ -272,5 +245,98 @@
   .adyen-microsite .page-intro.hero h1 {
     font-size: clamp(42px, 11vw, 58px);
     line-height: 1;
+  }
+}
+
+/* Channel card link reset */
+.adyen-microsite .channel-card,
+.adyen-microsite .channel-card:visited {
+  color: var(--adyen-ink);
+  text-decoration: none;
+}
+
+.adyen-microsite .channel-card .channel-title,
+.adyen-microsite .channel-card .channel-body {
+  color: var(--adyen-ink);
+}
+
+.adyen-microsite .channel-card:hover,
+.adyen-microsite .channel-card:focus {
+  color: var(--adyen-ink);
+  text-decoration: none;
+}
+
+.adyen-microsite .channel-card:hover .channel-title,
+.adyen-microsite .channel-card:focus .channel-title {
+  box-shadow: inset 0 -3px 0 rgba(10, 191, 83, 0.42);
+}
+
+/* Contact page components */
+.adyen-microsite .contact-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.adyen-microsite .contact-photo-card {
+  margin: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--adyen-line);
+  border-top: 3px solid var(--adyen-green);
+}
+
+.adyen-microsite .contact-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(10, 191, 83, 0.35);
+}
+
+.adyen-microsite .contact-photo-card figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--adyen-muted);
+}
+
+.adyen-microsite .contact-photo-card figcaption span:first-child {
+  color: var(--adyen-ink);
+}
+
+.adyen-microsite .channel-list-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.adyen-microsite .channel-card-primary {
+  border-top: 3px solid var(--adyen-green);
+}
+
+@media (max-width: 980px) {
+  .adyen-microsite .contact-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adyen-microsite .contact-photo-card {
+    max-width: 260px;
+  }
+
+  .adyen-microsite .channel-list-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .adyen-microsite .channel-list-4 {
+    grid-template-columns: 1fr;
   }
 }
