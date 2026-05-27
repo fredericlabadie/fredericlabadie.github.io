@@ -458,3 +458,172 @@
     padding-bottom: 36px;
   }
 }
+
+/* ============================================================
+   Case-page rhythm
+   ============================================================ */
+
+.philips-microsite .page-intro.hero:has(.case-meta) + #case .section-body {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) + section:not(#case) .section-body {
+  padding-top: 32px;
+  padding-bottom: 28px;
+}
+
+.philips-microsite .page-intro.hero:has(.case-meta) + section + section .section-body {
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+
+.philips-microsite #case .section-body > .container > * + * {
+  margin-top: 26px;
+}
+
+.philips-microsite .page-intro.hero .page-intro-note {
+  max-width: 58ch;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--philips-rule);
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--c-ink-soft);
+}
+
+.philips-microsite .page-intro.hero .page-intro-note kbd {
+  font-size: 9.5px;
+  padding: 1px 5px;
+}
+
+/* ============================================================
+   Case card line-length cap
+   ============================================================ */
+
+.philips-microsite .case-card-title,
+.philips-microsite .case-card-body {
+  max-width: 112ch;
+}
+
+.philips-microsite .case-card-body {
+  margin-right: auto;
+}
+
+.philips-microsite .case-card .tags {
+  max-width: 112ch;
+}
+
+/* ============================================================
+   Next block sizing
+   ============================================================ */
+
+.philips-microsite #next .section-body {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.philips-microsite #next .section-heading {
+  max-width: 860px;
+  font-size: clamp(40px, 5vw, 72px);
+}
+
+.philips-microsite #next .deeper {
+  margin-top: 28px;
+}
+
+/* ============================================================
+   Contact page components
+   ============================================================ */
+
+.philips-microsite .contact-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.philips-microsite .contact-photo-card {
+  margin: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--philips-rule);
+  border-top: 3px solid var(--c-accent);
+}
+
+.philips-microsite .contact-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 102, 255, 0.32);
+}
+
+.philips-microsite .contact-photo-card figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-ink-soft);
+}
+
+.philips-microsite .contact-photo-card figcaption span:first-child {
+  color: var(--c-ink);
+}
+
+.philips-microsite .channel-list-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.philips-microsite .channel-card,
+.philips-microsite .channel-card:visited {
+  text-decoration: none;
+}
+
+.philips-microsite .channel-card-primary {
+  border-top: 3px solid var(--c-accent);
+}
+
+@media (max-width: 980px) {
+  .philips-microsite .contact-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philips-microsite .contact-photo-card {
+    max-width: 260px;
+  }
+
+  .philips-microsite .channel-list-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .philips-microsite .page-intro.hero:has(.case-meta) + section:not(#case) .section-body,
+  .philips-microsite .page-intro.hero:has(.case-meta) + section + section .section-body {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .philips-microsite .page-intro.hero .page-intro-note {
+    margin-top: 14px;
+    font-size: 10px;
+  }
+
+  .philips-microsite #next .section-body {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .philips-microsite .channel-list-4 {
+    grid-template-columns: 1fr;
+  }
+}
