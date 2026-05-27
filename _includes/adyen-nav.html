@@ -1,17 +1,16 @@
-<nav class="nav" aria-label="Adyen microsite">
-  <div class="nav-inner">
-    <a href="{{ '/adyen/' | relative_url }}" class="nav-brand">
-      Frederic Labadie<span class="nav-brand-dot"></span><span class="nav-brand-role">Adyen &middot; Senior Product Data Analyst</span>
-    </a>
-    <!-- prettier-ignore -->
-    <ul class="nav-links" id="primary-nav">
-      {% if page.adyen_nav == "home" %}<li><a href="{{ '/adyen/' | relative_url }}" aria-current="page">Home</a></li>{% else %}<li><a href="{{ '/adyen/' | relative_url }}">Home</a></li>{% endif %}
-      {% if page.adyen_nav == "work" %}<li><a href="{{ '/adyen/work/' | relative_url }}" aria-current="page">Work</a></li>{% else %}<li><a href="{{ '/adyen/work/' | relative_url }}">Work</a></li>{% endif %}
-      {% if page.adyen_nav == "about" %}<li><a href="{{ '/adyen/about/' | relative_url }}" aria-current="page">About</a></li>{% else %}<li><a href="{{ '/adyen/about/' | relative_url }}">About</a></li>{% endif %}
-      {% if page.adyen_nav == "contact" %}<li><a href="{{ '/adyen/contact/' | relative_url }}" aria-current="page">Contact</a></li>{% else %}<li><a href="{{ '/adyen/contact/' | relative_url }}">Contact</a></li>{% endif %}
-    </ul>
-    <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<nav class="bp-site-nav" aria-label="Adyen microsite">
+  <a href="{{ '/adyen/' | relative_url }}" class="bp-site-nav-brand">
+    <span class="bp-site-dot" aria-hidden="true"></span>
+    <span>Frederic Labadie</span>
+    <span class="bp-site-nav-muted"
+      >/ Adyen &middot; Senior Product Data Analyst</span
+    >
+  </a>
+  <!-- prettier-ignore -->
+  <ul class="bp-site-nav-links" id="primary-nav">
+    {% if page.adyen_nav == "home" %}<li><a href="{{ '/adyen/' | relative_url }}" aria-current="page">Home</a></li>{% else %}<li><a href="{{ '/adyen/' | relative_url }}">Home</a></li>{% endif %}
+    {% if page.adyen_nav == "work" %}<li><a href="{{ '/adyen/work/' | relative_url }}" aria-current="page">Work</a></li>{% else %}<li><a href="{{ '/adyen/work/' | relative_url }}">Work</a></li>{% endif %}
+    {% if page.adyen_nav == "about" %}<li><a href="{{ '/adyen/about/' | relative_url }}" aria-current="page">About</a></li>{% else %}<li><a href="{{ '/adyen/about/' | relative_url }}">About</a></li>{% endif %}
+    {% if page.adyen_nav == "contact" %}<li><a href="{{ '/adyen/contact/' | relative_url }}" aria-current="page">Contact</a></li>{% else %}<li><a href="{{ '/adyen/contact/' | relative_url }}">Contact</a></li>{% endif %}
+  </ul>
 </nav>

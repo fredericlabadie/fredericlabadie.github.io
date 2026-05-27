@@ -4,14 +4,18 @@
     {% include head.html %}
     <link rel="icon" href="https://www.adyen.com/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="https://www.adyen.com/favicon.ico" />
+    <link rel="stylesheet" href="{{ '/css/site-nav.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/css/adyen.css' | relative_url }}" />
-    <link rel="stylesheet" href="{{ '/css/adyen-live-qa.css' | relative_url }}" />
+    <link
+      rel="stylesheet"
+      href="{{ '/css/adyen-live-qa.css' | relative_url }}"
+    />
   </head>
   <body class="adyen-microsite">
-    <a class="skip-link" href="{{ page.skip_link | default: '#top' }}">{{ page.skip_label | default: "Skip to content" }}</a>
-    {% include adyen-nav.html %}
-    {{ content }}
-    {% include adyen-footer.html %}
+    <a class="skip-link" href="{{ page.skip_link | default: '#top' }}"
+      >{{ page.skip_label | default: "Skip to content" }}</a
+    >
+    {% include adyen-nav.html %} {{ content }} {% include adyen-footer.html %}
     {% include site-scripts.html %}
     <script src="{{ '/js/adyen.js' | relative_url }}"></script>
   </body>

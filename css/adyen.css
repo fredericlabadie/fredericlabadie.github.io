@@ -27,37 +27,45 @@
   --c-border: var(--adyen-line);
   --c-card-border: var(--adyen-line);
   background:
-    radial-gradient(circle at 1px 1px, rgba(10, 191, 83, 0.08) 1px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(
+        circle at 1px 1px,
+        rgba(10, 191, 83, 0.08) 1px,
+        transparent 0
+      )
+      0 0 / 22px 22px,
     var(--adyen-paper);
 }
 
-.adyen-microsite .nav {
+/* Nav: site-nav.css handles layout; override colours for Adyen palette */
+.adyen-microsite .bp-site-nav {
   background: var(--adyen-navy);
   border-top: 3px solid var(--adyen-green);
-  border-bottom: 1px solid #09131f;
+  border-bottom-color: #09131f;
 }
 
-.adyen-microsite .nav-brand {
-  color: #fff;
-}
-
-.adyen-microsite .nav-brand-role {
-  color: rgba(255, 255, 255, 0.58);
-}
-
-.adyen-microsite .nav-brand-dot {
+.adyen-microsite .bp-site-dot {
   background: var(--adyen-green);
   box-shadow: 0 0 0 4px rgba(10, 191, 83, 0.14);
 }
 
-.adyen-microsite .nav-links a {
+.adyen-microsite .bp-site-nav-muted {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.adyen-microsite .bp-site-nav-links a {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.adyen-microsite .nav a:hover,
-.adyen-microsite .nav a:focus,
-.adyen-microsite .nav a[aria-current="page"] {
+.adyen-microsite .bp-site-nav a:hover,
+.adyen-microsite .bp-site-nav a:focus,
+.adyen-microsite .bp-site-nav-links a[aria-current="page"] {
   color: var(--adyen-green);
+}
+
+@media (max-width: 860px) {
+  .adyen-microsite .bp-site-nav-muted {
+    display: none;
+  }
 }
 
 .adyen-microsite a {
@@ -263,6 +271,6 @@
   .adyen-microsite .hero h1,
   .adyen-microsite .page-intro.hero h1 {
     font-size: clamp(42px, 11vw, 58px);
-    line-height: 1.0;
+    line-height: 1;
   }
 }
