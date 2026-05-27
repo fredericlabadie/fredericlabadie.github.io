@@ -81,3 +81,26 @@
     row-gap: 10px;
   }
 }
+
+.bp-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 32px;
+  border-top: 1px solid #16263a;
+  background: #16263a;
+  color: #a3b4c7;
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 860px) {
+  .bp-footer {
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
