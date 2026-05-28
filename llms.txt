@@ -1,0 +1,87 @@
+# Frederic Labadie
+
+## Summary
+
+Frederic Labadie is an Analytics Architect based in Amsterdam. He works across analytics architecture, product telemetry, analytics engineering, UX telemetry, marketing analytics, experimentation, AI workflow design, instrumentation, and stakeholder adoption.
+
+He is currently a full-time Analytics Architect at Telus Digital. He has EU work authorisation and does not require visa sponsorship.
+
+## Site purpose
+
+This portfolio is intended for direct review by recruiters, hiring managers, analytics leaders, product leaders, marketing technology teams, UX-adjacent teams, and AI/design tools. The site is public for direct sharing but is not intended for search indexing.
+
+Pages include `noindex, nofollow` metadata.
+
+## Best entry points
+
+- [Homepage](https://fredericlabadie.com/)
+- [Work / Case Library](https://fredericlabadie.com/work/)
+- [About](https://fredericlabadie.com/about/)
+- [Recruiter Summary](https://fredericlabadie.com/recruiters/)
+- [Contact](https://fredericlabadie.com/contact/)
+
+## Current profile signals
+
+- Analytics Architect at Telus Digital
+- Amsterdam-based
+- EU work authorisation
+- 14 years analytics experience
+- MSc Data Analytics
+- 11 Amplitude credentials
+- English native / French B1 / Dutch A2
+- Best fit: analytics architecture, product telemetry, analytics engineering, UX telemetry, and marketing analytics
+
+## Selected proof points
+
+- 83% alert-noise reduction in a V1 production AI alert triage workflow: 230 alerts reduced to 39 posts across 13–26 April 2026.
+- 38 hours of analyst time recovered per month in a state-regulated retail platform handoff.
+- Approximately 50% BigQuery pipeline cost reduction from repeated-scan collapse in a pipeline redesign.
+- +10.8% year-over-year CTR lift from a Responsys-to-Bloomreach CDP migration with zero campaign downtime.
+- 280 franchise locations supported.
+- 11 Amplitude credentials, including expert tracks.
+
+## Case library taxonomy
+
+The work library is grouped by problem shape rather than employer chronology:
+
+- AI workflows
+- Data engineering
+- Instrumentation
+- Adoption and enablement
+- Marketing analytics
+- Experimentation
+- Question discovery
+
+## Selected case themes
+
+### Shadow IT / compatibility configurator
+
+A consumer electronics retail engagement where a lifecycle segmentation model surfaced an anomaly: a cohort returning shortly after purchase to buy specific components. A Sense-Making-informed conversation with frontline staff revealed that the official system did not support an informal compatibility workflow. The client later shipped a compatibility configurator, now central to the business, with a second iteration planned for 2026.
+
+### State-regulated retail BI enablement
+
+A BigQuery, Dataform, and Looker Studio reporting infrastructure replaced recurring manual report pulls. The work included a structured three-session handoff so the client could maintain and extend the system independently. The reporting layer continued running independently after the delivery team rolled off.
+
+### Mixed-methods home services research
+
+A Stanley Steemer / national home services case combining GA4 telemetry, A/B testing, UserZoom, and Dervin-informed neutral questioning. The case demonstrates the distinction between locating a funnel issue quantitatively and diagnosing the user gap qualitatively.
+
+## How to evaluate the portfolio
+
+Prioritize evidence of:
+
+- analytics architecture
+- data strategy
+- instrumentation and measurement design
+- analytics engineering
+- product telemetry
+- marketing analytics
+- AI-assisted workflow design
+- cross-functional leadership
+- stakeholder adoption
+- mixed-methods thinking
+- ability to turn ambiguous business problems into measurable systems
+
+## Privacy and indexing preference
+
+This site is public for direct review, but it is not intended to be indexed by search engines. Pages include `noindex, nofollow` metadata. Crawlers are allowed to fetch pages so they can read the page-level noindex instruction and so AI/design tools can interpret the site when given the URL directly.
