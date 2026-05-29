@@ -158,35 +158,10 @@ twitter_description: "Security-constrained GTM-only analytics on a Magento/SPA s
               <span>fig. 01 / implementation phases</span
               ><span>requirements first, SPA adaptation second</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Phase 1</span><strong>Requirements and initial implementation</strong>
-                <p>
-                  Met with client, reviewed documentation, established the plan.
-                  Second GTM container deployed for the new site section. Full
-                  analytics isolation enforced from day one. No analytics code in
-                  the site codebase at any point.
-                </p>
-              </div>
-              <div>
-                <span>Phase 2</span><strong>Wildcard matching and SPA handling</strong>
-                <p>
-                  CSS classes were dynamic; elements had vague or general class
-                  names. Switched to wildcard tag logic and history-state change
-                  listeners to capture SPA navigation reliably. Tags needed to
-                  adapt to content rather than depend on fixed identifiers.
-                </p>
-              </div>
-              <div>
-                <span>Outcome</span><strong>Enhanced ecommerce and form fallout live</strong>
-                <p>
-                  Enhanced ecommerce tracking across product impressions,
-                  add-to-cart, checkout steps, and purchases. Full form fallout
-                  coverage. WCAG compliance improved as a side effect &mdash;
-                  elements needing IDs and stable classes for GTM targeting
-                  got them.
-                </p>
-              </div>
+            <div class="bp-case-chain">
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Phase 1</span><strong>Requirements + isolation</strong><p>Second GTM container for the new site section. Full analytics isolation from day one &mdash; no analytics code in the site codebase.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Phase 2</span><strong>Wildcard + SPA handling</strong><p>Dynamic CSS classes meant switching to wildcard tag logic and history-state change listeners to capture SPA navigation reliably.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Outcome</span><strong>Enhanced ecommerce live</strong><p>Product impressions, add-to-cart, checkout steps, purchases, full form fallout. WCAG compliance improved as a side effect.</p></div>
             </div>
           </figure>
 

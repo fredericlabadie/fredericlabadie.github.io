@@ -74,12 +74,12 @@ twitter_description: "Human-led anomaly detection plus AI-assisted SDK source re
           <p>I first identified the cross-platform count gap and gathered proof that the issue was not a dashboard mismatch. Then I used AI assistance to inspect the Segment analytics-swift source path, compare candidate failure modes, and narrow where the cold-launch event loss lived.</p>
         </article>
 
-        <figure class="bp-case-figure" aria-label="SDK debugging sequence diagram">
+        <figure class="bp-case-figure" aria-label="SDK silent-loss path">
           <figcaption><span>fig. 01 / silent-loss path</span><span>cold launch to dropped event</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Startup</span><strong>Disabled gate</strong><p><code>rawSegment.enabled = false</code> at startup while remote config is unresolved.</p></div>
-            <div><span>Event</span><strong>Cold launch</strong><p><code>Application Opened</code> fires before remote config flips the SDK back on.</p></div>
-            <div><span>SDK</span><strong>Drop path</strong><p><code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>.</p></div>
+          <div class="bp-case-chain">
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">Startup</span><strong>Disabled gate</strong><p><code>rawSegment.enabled = false</code> at startup while remote config is unresolved.</p></div>
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">Event</span><strong>Cold launch</strong><p><code>Application Opened</code> fires before remote config flips the SDK back on.</p></div>
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">SDK</span><strong>Drop path</strong><p><code>process(incomingEvent:)</code> returns immediately when <code>enabled == false</code>.</p></div>
           </div>
         </figure>
 

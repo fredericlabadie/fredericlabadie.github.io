@@ -153,34 +153,17 @@ twitter_description: "Candidate journey instrumentation that turned vague drop-o
         <div class="bp-case-main">
           <figure
             class="bp-case-figure"
-            aria-label="Candidate funnel measurement architecture"
+            aria-label="Candidate selection funnel stages"
           >
             <figcaption>
               <span>fig. 01 / measurement layer</span
               ><span>operational flow to product question</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Instrument</span><strong>GA4 events</strong>
-                <p>
-                  Application start, exam steps, compliance checkpoints, and
-                  selection status captured as behavioural events.
-                </p>
-              </div>
-              <div>
-                <span>Model</span><strong>BigQuery</strong>
-                <p>
-                  GA4 export made candidate-flow events queryable by candidate
-                  and programme context.
-                </p>
-              </div>
-              <div>
-                <span>Surface</span><strong>Looker Studio</strong>
-                <p>
-                  Dashboard replaced manual Excel workflow with a view of
-                  step-level abandonment.
-                </p>
-              </div>
+            <div class="bp-case-funnel">
+              <div class="bp-case-funnel-stage"><span class="bp-case-funnel-bar"></span><span class="bp-case-funnel-text"><strong>Application start</strong><span>explicit denominator</span></span></div>
+              <div class="bp-case-funnel-stage"><span class="bp-case-funnel-bar"></span><span class="bp-case-funnel-text"><strong>Exam steps</strong><span>where candidates slow or stop</span></span></div>
+              <div class="bp-case-funnel-stage"><span class="bp-case-funnel-bar"></span><span class="bp-case-funnel-text"><strong>Compliance checkpoints</strong><span>friction vs intent</span></span></div>
+              <div class="bp-case-funnel-stage"><span class="bp-case-funnel-bar"></span><span class="bp-case-funnel-text"><strong>Selection status</strong><span>per-candidate, per-programme</span></span></div>
             </div>
           </figure>
 
