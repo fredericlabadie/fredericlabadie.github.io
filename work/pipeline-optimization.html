@@ -157,7 +157,10 @@ twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query
               I used Claude with BigQuery MCP to inspect schema shape, query
               structure, scan patterns, and candidate simplifications while
               keeping the architectural decisions, validation plan, and migration
-              sequence human-owned.
+              sequence human-owned. The model surfaced the scan redundancy and
+              CTE structure; I designed the replacement architecture, wrote and
+              validated each SQL change, and sequenced the four-phase migration
+              rollout.
             </p>
           </article>
 

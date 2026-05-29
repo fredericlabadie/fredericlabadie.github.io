@@ -3,7 +3,10 @@
     {% assign matches = site.data.cases | where: 'slug', selected.slug %}
     {% assign case = matches | first %}
     <article class="bp-rec-case">
-      <div><p class="bp-rec-mono bp-rec-accent">{{ selected.category }}</p></div>
+      <div>
+        <p class="bp-rec-mono bp-rec-accent">{{ selected.category }}</p>
+        {% if case.context %}<p class="bp-rec-mono">{{ case.context | split: " / " | first }}</p>{% endif %}
+      </div>
       <div>
         <h3>{{ selected.headline | default: case.title }}</h3>
         <p>{{ selected.summary | default: case.short_description | default: case.description }}</p>
