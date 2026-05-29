@@ -362,3 +362,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* case-blueprint rust-to-green overrides */
+.adyen-microsite .bp-case-accent { color: var(--adyen-green-text); }
+.adyen-microsite .bp-case-section-tag span:first-child { color: var(--adyen-green-text); }
+.adyen-microsite .bp-case-chain-node::after { color: var(--adyen-green); }

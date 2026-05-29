@@ -143,31 +143,18 @@ twitter_description: "BigQuery-to-Looker Studio reporting infrastructure that re
             aria-label="Enablement architecture diagram"
           >
             <figcaption>
-              <span>fig. 01 / adoption chain</span
-              ><span>infrastructure to independent use</span>
+              <span>fig. 01 / what the handoff bought</span
+              ><span>query plate / not a chart</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Build</span><strong>Unified layer</strong>
-                <p>
-                  Web, Search Console, Braze, and third-party data unified
-                  through BigQuery and scheduled Dataform pipelines.
-                </p>
-              </div>
-              <div>
-                <span>Expose</span><strong>Dashboards</strong>
-                <p>
-                  Looker Studio surfaces gave domain specialists cross-channel
-                  visibility without manual pulling.
-                </p>
-              </div>
-              <div>
-                <span>Transfer</span><strong>Ownership</strong>
-                <p>
-                  Three handoff sessions, documentation, repo practices,
-                  checklist, ERD, and data dictionary.
-                </p>
-              </div>
+            <div class="bp-case-query">
+              <pre><code><span class="bp-case-q-kw">SELECT</span> hours_recovered, handoff_sessions, ramp_up_days
+<span class="bp-case-q-kw">FROM</span> engagement.adoption_handoff
+<span class="bp-case-q-kw">WHERE</span> client = <span class="bp-case-q-str">'sslp_retail'</span>;</code></pre>
+            </div>
+            <div class="bp-case-result">
+              <div><strong>38h</strong><span>recovered / month</span></div>
+              <div><strong>3</strong><span>handoff sessions</span></div>
+              <div><strong>Day 1</strong><span>incoming analysts operational</span></div>
             </div>
           </figure>
 

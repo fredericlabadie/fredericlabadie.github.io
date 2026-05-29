@@ -171,30 +171,13 @@ twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query
           >
             <figcaption>
               <span>fig. 01 / architecture shift</span
-              ><span>repeated scans to shared computation</span>
+              ><span>before &rarr; after / reduction as evidence</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Before</span><strong>15+ CTEs</strong>
-                <p>
-                  Independent scans over the same 1.2 TB key-value table,
-                  stitched back together with full outer joins.
-                </p>
-              </div>
-              <div>
-                <span>Move</span><strong>1 pass</strong>
-                <p>
-                  Conditional aggregation pivots 25+ event parameter keys into
-                  columns in one grouped computation.
-                </p>
-              </div>
-              <div>
-                <span>After</span><strong>6-step DAG</strong>
-                <p>
-                  Sequential chain restructured into a three-tier DAG with
-                  parallel execution where dependencies allowed it.
-                </p>
-              </div>
+            <div class="bp-case-diff">
+              <div class="bp-case-diff-row"><span class="bp-case-diff-before">15+ independent CTEs</span><span class="bp-case-diff-arrow" aria-hidden="true">&rarr;</span><span class="bp-case-diff-after">1 grouped pass</span></div>
+              <div class="bp-case-diff-row"><span class="bp-case-diff-before">1.2 TB repeated scans</span><span class="bp-case-diff-arrow" aria-hidden="true">&rarr;</span><span class="bp-case-diff-after">single shared scan</span></div>
+              <div class="bp-case-diff-row"><span class="bp-case-diff-before">sequential chain</span><span class="bp-case-diff-arrow" aria-hidden="true">&rarr;</span><span class="bp-case-diff-after">6-step parallel DAG</span></div>
+              <div class="bp-case-diff-row"><span class="bp-case-diff-before">baseline compute cost</span><span class="bp-case-diff-arrow" aria-hidden="true">&rarr;</span><span class="bp-case-diff-after">~50% reduction</span></div>
             </div>
           </figure>
 

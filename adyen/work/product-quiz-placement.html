@@ -155,37 +155,17 @@ twitter_description: "GA instrumentation confirmed a product quiz's conversion s
         <div class="bp-case-main">
           <figure
             class="bp-case-figure"
-            aria-label="Two-phase engagement structure"
+            aria-label="A/B placement variant comparison"
           >
             <figcaption>
-              <span>fig. 01 / engagement structure</span
-              ><span>confirm signal then find surface</span>
+              <span>fig. 01 / placement test</span
+              ><span>four variants / one winner</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Phase 1</span><strong>Signal confirmation</strong>
-                <p>
-                  GA instrumentation across Start, Quiz, Setup, and product
-                  category pages. Compared session conversion rates between
-                  quiz-exposed and non-exposed cohorts.
-                </p>
-              </div>
-              <div>
-                <span>Phase 2</span><strong>Placement test</strong>
-                <p>
-                  VWO A/B test across four store-page entry variants. Custom GA
-                  dimensions tracked test assignment against downstream
-                  conversion events.
-                </p>
-              </div>
-              <div>
-                <span>Finding</span><strong>Prominence wins</strong>
-                <p>
-                  The thick-bar variant &mdash; sized to a hero image &mdash;
-                  generated the highest pathed CVR. Subtler variants confirmed
-                  that reduced visibility reduced conversion.
-                </p>
-              </div>
+            <div class="bp-case-ab">
+              <div class="bp-case-ab-variant"><span class="bp-case-ab-bar"></span><span class="bp-case-ab-key">A</span><strong>Control</strong><span class="bp-case-ab-note">no quiz bar &mdash; baseline</span></div>
+              <div class="bp-case-ab-variant bp-case-ab-winner"><span class="bp-case-ab-bar"></span><span class="bp-case-ab-key">B</span><strong>Thick bar</strong><span class="bp-case-ab-note">~2&times; control &mdash; winner</span></div>
+              <div class="bp-case-ab-variant"><span class="bp-case-ab-bar"></span><span class="bp-case-ab-key">C</span><strong>Thin / subtle</strong><span class="bp-case-ab-note">&gt; control, &lt; B</span></div>
+              <div class="bp-case-ab-variant"><span class="bp-case-ab-bar"></span><span class="bp-case-ab-key">D</span><strong>Thin / bright</strong><span class="bp-case-ab-note">&asymp; variant C</span></div>
             </div>
           </figure>
 
