@@ -147,51 +147,22 @@ twitter_description: "GA analytics for a global automotive OEM eBrochure program
         <div class="bp-case-main">
           <figure
             class="bp-case-figure"
-            aria-label="MY18 retrospective findings"
+            aria-label="MY18 retrospective query results"
           >
             <figcaption>
               <span>fig. 01 / MY18 findings</span
               ><span>reach / engagement / CTA / load time</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Reach</span><strong>~45% YoY growth</strong>
-                <p>
-                  Mobile was the primary driver. Growth was concentrated: the
-                  top-performing distributors accounted for the large majority
-                  of total reach growth. Newer markets showed significant
-                  percentage growth from a smaller base.
-                </p>
-              </div>
-              <div>
-                <span>Engagement</span><strong>Flat overall</strong>
-                <p>
-                  Engagement declined for the highest-volume model following
-                  its model-year peak, which dragged overall metrics. Other
-                  models showed stronger engagement, with higher average
-                  time-on-content. CTA click patterns varied significantly by
-                  distributor region.
-                </p>
-              </div>
-              <div>
-                <span>CTA performance</span><strong>Shopping tools dominant</strong>
-                <p>
-                  The Shopping Tools spread generated the dominant share of
-                  conversion actions. Build&nbsp;&amp;&nbsp;Price performance
-                  declined across most models. CTA standardisation across
-                  distributors was identified as an incremental opportunity.
-                </p>
-              </div>
-              <div>
-                <span>Load time</span><strong>67% desktop exit before entry</strong>
-                <p>
-                  Nearly two-thirds of desktop users directed to the Guided
-                  Tour abandoned before the tour loaded. This was not a
-                  standard dashboard metric. It appeared during deeper
-                  engagement analysis and was confirmed as a load-time issue
-                  rather than a content or navigation problem.
-                </p>
-              </div>
+            <div class="bp-case-query">
+              <pre><code><span class="bp-case-q-kw">SELECT</span> reach_yoy, engagement_trend, cta_leader, desktop_tour_exit
+<span class="bp-case-q-kw">FROM</span> analytics.oem_ebrochure
+<span class="bp-case-q-kw">WHERE</span> model_year = <span class="bp-case-q-str">'MY18'</span>;</code></pre>
+            </div>
+            <div class="bp-case-result">
+              <div><strong>+45%</strong><span>reach YoY, mobile primary</span></div>
+              <div><strong>Flat</strong><span>overall engagement</span></div>
+              <div><strong>Shopping Tools</strong><span>dominant CTA</span></div>
+              <div><strong>67%</strong><span>desktop tour exit pre-load</span></div>
             </div>
           </figure>
         </div>

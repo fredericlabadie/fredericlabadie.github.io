@@ -141,34 +141,17 @@ twitter_description: "Greenfield mobile analytics layer across iOS and Android: 
         <div class="bp-case-main">
           <figure
             class="bp-case-figure"
-            aria-label="Mobile instrumentation delivery chain"
+            aria-label="Mobile instrumentation delivery stages"
           >
             <figcaption>
               <span>fig. 01 / delivery chain</span
               ><span>question to production event stream</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Design</span><strong>Taxonomy</strong>
-                <p>
-                  GA4 e-commerce taxonomy, screen coverage, interaction events,
-                  and event-level product metadata.
-                </p>
-              </div>
-              <div>
-                <span>Ship</span><strong>Tickets</strong>
-                <p>
-                  30+ Jira tickets authored, owned, validated, and shipped
-                  across iOS and Android.
-                </p>
-              </div>
-              <div>
-                <span>Govern</span><strong>Consent</strong>
-                <p>
-                  TrustArc integrated with tag configuration before production
-                  launch.
-                </p>
-              </div>
+            <div class="bp-case-chain">
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Schema</span><strong>Event design</strong><p>Full GA4 e-commerce taxonomy: purchase, add_to_cart, view_item, begin_checkout, items array, value, currency, transaction_id.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Telemetry</span><strong>Interaction events</strong><p>Bottom navigation, search-query submission, PDP metadata, barcode-scanner interactions, and account-management flows.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">QA</span><strong>Parity + testing</strong><p>30+ Jira tickets across iOS and Android, real-device testing, GA4 DebugView validation, regression QA checklists per sprint.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Governance</span><strong>Privacy sign-off</strong><p>Privacy-compliance review before any PII-adjacent property was specified, plus data-governance sign-off from client stakeholders.</p></div>
             </div>
           </figure>
 

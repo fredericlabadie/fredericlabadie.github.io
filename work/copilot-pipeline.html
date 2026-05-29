@@ -68,12 +68,13 @@ twitter_description: "GA4-to-BigQuery pipeline for enterprise GenAI platform ana
         <p>The other half was making the data legible to the people building the platform.</p>
       </aside>
       <div class="bp-case-main">
-        <figure class="bp-case-figure" aria-label="AI platform analytics pipeline diagram">
+        <figure class="bp-case-figure" aria-label="Behavioural signal pipeline stages">
           <figcaption><span>fig. 01 / behavioural signal layer</span><span>product events to engineering questions</span></figcaption>
-          <div class="bp-case-figure-grid">
-            <div><span>Collect</span><strong>GA4 events</strong><p>Platform-wide and organisation-specific front-end behavioural events captured from the GenAI product.</p></div>
-            <div><span>Export</span><strong>BigQuery</strong><p>GA4 export made the event stream queryable for engineering and product analysis.</p></div>
-            <div><span>Enable</span><strong>Query primer</strong><p>Engineering enablement covered schema, event-parameter unnesting, and KPI query examples.</p></div>
+          <div class="bp-case-chain">
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">Event layer</span><strong>GA4 collection</strong><p>Platform-wide and organisation-specific behavioural events captured from the GenAI product.</p></div>
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">BigQuery export</span><strong>Queryable stream</strong><p>GA4 export made the event stream available to engineering and product analysis.</p></div>
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">KPI queries</span><strong>Query primer</strong><p>Schema, event-parameter unnesting, and example queries including copilot count and conversations per user.</p></div>
+            <div class="bp-case-chain-node"><span class="bp-case-chain-step">Advisory</span><strong>Platform input</strong><p>Measurement-layer advisory input to a related platform tool.</p></div>
           </div>
         </figure>
 

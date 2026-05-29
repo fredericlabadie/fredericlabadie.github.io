@@ -137,34 +137,17 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
         <div class="bp-case-main">
           <figure
             class="bp-case-figure"
-            aria-label="Alert remediation architecture"
+            aria-label="Error observability remediation chain"
           >
             <figcaption>
               <span>fig. 01 / alert remediation</span
               ><span>threshold / taxonomy / context</span>
             </figcaption>
-            <div class="bp-case-figure-grid">
-              <div>
-                <span>Threshold</span><strong>Rate + change</strong>
-                <p>
-                  Combined absolute rate with rate-of-change so low-traffic
-                  volatility did not dominate the channel.
-                </p>
-              </div>
-              <div>
-                <span>Taxonomy</span><strong>Stable IDs</strong>
-                <p>
-                  Hierarchical IDs such as <code>SYS-INF-001</code> and
-                  <code>SYS-APP-VAL-010</code> made errors governable.
-                </p>
-              </div>
-              <div>
-                <span>Context</span><strong>cart_id</strong>
-                <p>
-                  Checkout error events would gain cart context so engineering
-                  could correlate failures to specific basket instances.
-                </p>
-              </div>
+            <div class="bp-case-chain">
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Threshold</span><strong>Rate + change</strong><p>Monitors redesigned around absolute rate plus rate-of-change, reducing overreaction to low-traffic Active% volatility.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Chart guidance</span><strong>Inline diagnosis</strong><p>Engineering-facing troubleshooting guidance added directly on each chart — the alert carried the start of the diagnosis.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Taxonomy</span><strong>Stable IDs</strong><p>Hierarchical error-category IDs such as <code>SYS-INF-001</code> with deterministic mapping rules and governance against schema drift.</p></div>
+              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Context</span><strong>cart_id</strong><p>Specification to add <code>cart_id</code> to <code>Checkout Started Error Received</code> so error and success events shared the same context level.</p></div>
             </div>
           </figure>
 
