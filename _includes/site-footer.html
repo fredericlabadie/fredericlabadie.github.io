@@ -1,8 +1,5 @@
-{% assign footer_label = page.footer_label | default: page.nav_key | default: 'Portfolio' %}
-{% assign footer_label = footer_label | replace: '-', ' ' | capitalize %}
-
 <footer class="bp-footer">
   <span>&copy; 2026 Frederic Labadie / Amsterdam</span>
-  <span>Plain HTML + CSS / GitHub Pages</span>
-  <span>{{ footer_label }} / static portfolio</span>
+  <span>Open to senior analytics &amp; IC roles</span>
+  <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>
 </footer>

@@ -2918,6 +2918,47 @@ a.callout-link:hover {
   line-height: 1.5;
 }
 
+/* one-click-to-proof: linked receipts */
+a.bp-receipt-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+a.bp-receipt-link:hover,
+a.bp-receipt-link:focus-visible {
+  background: var(--bp-inset);
+}
+
+a.bp-receipt-link:focus-visible {
+  outline: 2px solid var(--bp-accent);
+  outline-offset: -2px;
+}
+
+.bp-receipt-tail {
+  margin-top: 14px;
+  font-family: var(--bp-font-mono, var(--font-mono));
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bp-accent);
+}
+
+/* one-click-to-proof: linked headings */
+.bp-now-item h2 a,
+.bp-case-copy h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bp-now-item h2 a:hover,
+.bp-now-item h2 a:focus-visible,
+.bp-case-copy h2 a:hover,
+.bp-case-copy h2 a:focus-visible {
+  color: var(--bp-accent);
+}
+
 .bp-section {
   padding-left: 0;
   padding-right: 0;

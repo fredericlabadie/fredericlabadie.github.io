@@ -14,6 +14,13 @@
 
 <link rel="stylesheet" href="{{ '/css/site-nav.css' | relative_url }}" />
 
+{% unless current_nav == 'recruiters' %}
+  <a class="bp-recruiter-strip" href="{{ '/recruiters/' | relative_url }}" aria-label="Recruiter shortcut">
+    <span><span class="bp-recruiter-strip-cue">// recruiter?</span> <span class="bp-recruiter-strip-arrow" aria-hidden="true">&rarr;</span> 60-second version</span>
+    <span class="bp-recruiter-strip-meta">analytics architect &middot; Amsterdam</span>
+  </a>
+{% endunless %}
+
 <nav class="bp-site-nav" aria-label="Primary">
   <a class="bp-site-nav-brand" href="{{ '/' | relative_url }}">
     <span class="bp-site-dot" aria-hidden="true"></span>

@@ -5,7 +5,7 @@
 <div class="bp-case-copy">
   <p class="bp-kicker">{{ selected.kicker }}</p>
   <p class="bp-case-meta">{{ selected.meta | default: case.context }}</p>
-  <h2>{{ selected.headline | default: case.title }}</h2>
+  <h2><a href="{{ case.url | relative_url }}">{{ selected.headline | default: case.title }}</a></h2>
   <p>{{ selected.body | default: case.short_description | default: case.description }}</p>
   {% if selected.quote %}
     <blockquote>{{ selected.quote }}</blockquote>

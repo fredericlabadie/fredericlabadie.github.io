@@ -1,10 +1,24 @@
 {% assign wrapper = include.element | default: 'div' %}
 <{{ wrapper }} class="{{ include.class | default: 'bp-receipts' }}"{% if include.aria_label %} aria-label="{{ include.aria_label }}"{% endif %}>
   {% for receipt in include.receipts %}
-    <article class="{{ include.item_class | default: 'bp-receipt' }}">
-      {% if receipt.kicker %}<p>{{ receipt.kicker }}</p>{% endif %}
-      <strong>{{ receipt.value }}</strong>
-      <span>{{ receipt.label }}</span>
-    </article>
+    {% assign case_url = nil %}
+    {% if receipt.slug %}
+      {% assign matched = site.data.cases | where: 'slug', receipt.slug | first %}
+      {% if matched %}{% assign case_url = matched.url %}{% endif %}
+    {% endif %}
+    {% if case_url %}
+      <a class="{{ include.item_class | default: 'bp-receipt' }} bp-receipt-link" href="{{ case_url | relative_url }}">
+        {% if receipt.kicker %}<p>{{ receipt.kicker }}</p>{% endif %}
+        <strong>{{ receipt.value }}</strong>
+        <span>{{ receipt.label }}</span>
+        <span class="bp-receipt-tail" aria-hidden="true">{{ receipt.link_label | default: 'Read the case &rarr;' }}</span>
+      </a>
+    {% else %}
+      <article class="{{ include.item_class | default: 'bp-receipt' }}">
+        {% if receipt.kicker %}<p>{{ receipt.kicker }}</p>{% endif %}
+        <strong>{{ receipt.value }}</strong>
+        <span>{{ receipt.label }}</span>
+      </article>
+    {% endif %}
   {% endfor %}
 </{{ wrapper }}>

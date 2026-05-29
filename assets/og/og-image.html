@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #16263a; --canvas: #eef2f5; --soft: #52617a;
+    --accent: #b9412a; --rule: #cdd3da; --on-dark-soft: #a3b4c7;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  .og {
+    position: relative;
+    width: 1200px; height: 630px;
+    background-color: var(--canvas);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><circle cx='1' cy='1' r='0.6' fill='%23c6cdd5'/></svg>");
+    background-size: 24px 24px;
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border-top: 10px solid var(--accent);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .og-top { display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 17px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--soft); }
+  .og-top .dot { display: inline-block; width: 10px; height: 10px; border-radius: 999px;
+    background: var(--accent); margin-right: 12px; vertical-align: middle; }
+  .og-name { font-family: 'Fraunces', Georgia, serif; font-weight: 500;
+    font-size: 92px; line-height: 0.98; color: var(--ink); letter-spacing: -0.01em; }
+  .og-dek { margin-top: 22px; font-family: 'Newsreader', Georgia, serif;
+    font-size: 30px; line-height: 1.4; color: var(--soft); max-width: 880px; }
+  .og-receipts { display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--ink); }
+  .og-receipt { padding: 22px 24px; border-right: 1px solid var(--ink); }
+  .og-receipt:last-child { border-right: 0; }
+  .og-receipt span { display: block; font-family: var(--mono); font-size: 14px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); }
+  .og-receipt strong { display: block; margin-top: 8px; font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500; font-size: 46px; line-height: 1; color: var(--ink); }
+  .og-receipt em { display: block; margin-top: 6px; font-style: normal;
+    font-size: 15px; color: var(--soft); }
+</style>
+</head>
+<body>
+  <div class="og">
+    <div class="og-top">
+      <span><span class="dot"></span>fredericlabadie.com</span>
+      <span>analytics architect &middot; Amsterdam</span>
+    </div>
+    <div>
+      <h1 class="og-name">Frederic Labadie</h1>
+      <p class="og-dek">Instrumentation, pipelines, and qualitative practice for teams that need to stop guessing.</p>
+    </div>
+    <div class="og-receipts">
+      <div class="og-receipt"><span>alert noise</span><strong>&minus;83%</strong><em>230 alerts to 39 posts</em></div>
+      <div class="og-receipt"><span>analyst hours</span><strong>38h</strong><em>recovered per month</em></div>
+      <div class="og-receipt"><span>CDP migration CTR</span><strong>+10.8%</strong><em>zero campaign downtime</em></div>
+    </div>
+  </div>
+</body>
+</html>

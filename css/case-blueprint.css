@@ -441,3 +441,196 @@
     font-size: 38px;
   }
 }
+
+/* ── distinct per-case signature visuals (pilot) ───────────────── */
+
+/* shadow-it — discovery chain (connected horizontal trail) */
+.bp-case-chain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-chain-node {
+  position: relative;
+  padding: 20px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-chain-node::after {
+  content: "\2192";
+  position: absolute;
+  top: 20px;
+  right: -8px;
+  z-index: 1;
+  color: #b9412a;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+.bp-case-chain-node:last-child::after {
+  content: none;
+}
+.bp-case-chain-step {
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bp-case-chain-node strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.bp-case-chain-node p {
+  margin-top: 8px;
+  color: #a3b4c7;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* sslp-enablement — SQL query plate + result grid */
+.bp-case-query {
+  padding: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-query pre {
+  margin: 0;
+  overflow-x: auto;
+  color: #e7edf3;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+.bp-case-q-kw {
+  color: #d8704f;
+}
+.bp-case-q-str {
+  color: #8fb6a0;
+}
+.bp-case-result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-result div {
+  padding: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-result strong {
+  display: block;
+  color: #ffffff;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
+}
+.bp-case-result span {
+  display: block;
+  margin-top: 8px;
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ux-research-home-services — mixed-methods streams */
+.bp-case-streams {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-stream {
+  padding: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 3px solid var(--stream-accent, #52617a);
+}
+.bp-case-stream:nth-child(1) {
+  --stream-accent: #3e7f5b;
+}
+.bp-case-stream:nth-child(2) {
+  --stream-accent: #b9412a;
+}
+.bp-case-stream:nth-child(3) {
+  --stream-accent: #a3b4c7;
+}
+.bp-case-stream span {
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bp-case-stream strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.bp-case-stream p {
+  margin-top: 8px;
+  color: #a3b4c7;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* pipeline-optimization — before/after diff strip */
+.bp-case-diff {
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-diff-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+.bp-case-diff-row:last-child {
+  border-bottom: 0;
+}
+.bp-case-diff-before {
+  color: #a3b4c7;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: line-through;
+  text-decoration-color: rgba(184, 65, 42, 0.7);
+}
+.bp-case-diff-arrow {
+  color: #b9412a;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.bp-case-diff-after {
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .bp-case-chain,
+  .bp-case-result,
+  .bp-case-streams {
+    grid-template-columns: 1fr;
+  }
+  .bp-case-chain-node::after {
+    content: none;
+  }
+  .bp-case-diff-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .bp-case-diff-after {
+    text-align: left;
+  }
+}
