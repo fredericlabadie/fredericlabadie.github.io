@@ -183,6 +183,7 @@
 }
 
 .cr-grow .cr-co em {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-style: normal;
   font-size: 10.5px;
   color: #52617a;
