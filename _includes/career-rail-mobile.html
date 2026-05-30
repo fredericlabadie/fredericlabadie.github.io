@@ -1,0 +1,106 @@
+<div class="cr-rail-v" id="cr-mobile"></div>
+<script>
+  (function () {
+    var AXIS_START = 2011,
+      AXIS_END = 2026;
+    var TRACK = 560;
+    var span = AXIS_END - AXIS_START;
+    var y = function (yr) {
+      return ((yr - AXIS_START) / span) * TRACK;
+    };
+    var durTxt = function (r) {
+      if (r.now) return "2024 – now";
+      return (
+        r.start +
+        " – " +
+        r.end +
+        " \xB7 " +
+        (r.end - r.start <= 1 ? "1 yr" : r.end - r.start + " yrs")
+      );
+    };
+
+    var roles = [
+      { co: "Melody Health", start: 2011, end: 2015, lane: 0, anchor: "start" },
+      { co: "The Designory", start: 2015, end: 2018, lane: 0, anchor: "start" },
+      {
+        co: "Stanley Steemer",
+        start: 2018,
+        end: 2023,
+        lane: 0,
+        anchor: "start",
+      },
+      {
+        co: "Xivic",
+        start: 2018,
+        end: 2019,
+        lane: 1,
+        anchor: "end",
+        note: "concurrent \xB7 remote",
+      },
+      { co: "Micro Center", start: 2023, end: 2024, lane: 0, anchor: "start" },
+      {
+        co: "Telus Digital",
+        start: 2024,
+        end: 2026,
+        lane: 0,
+        anchor: "start",
+        now: true,
+      },
+    ];
+
+    var rail = document.getElementById("cr-mobile");
+    rail.style.height = TRACK + 16 + "px";
+
+    var spine = document.createElement("div");
+    spine.className = "cr-spine-v";
+    spine.style.height = TRACK + "px";
+    rail.appendChild(spine);
+
+    [2011, 2014, 2017, 2020, 2023, 2026].forEach(function (yr) {
+      var t = document.createElement("div");
+      t.className = "cr-yr-tick";
+      t.style.top = y(yr) + "px";
+      t.innerHTML = "<span>" + yr + "</span><i></i>";
+      rail.appendChild(t);
+    });
+
+    roles.forEach(function (r) {
+      var top = y(r.start);
+      var h = y(r.end) - y(r.start);
+
+      var seg = document.createElement("div");
+      seg.className =
+        "cr-vseg" +
+        (r.now ? " cr-now" : "") +
+        (r.lane === 1 ? " cr-lane1" : "");
+      seg.style.top = top + "px";
+      seg.style.height = h + "px";
+      rail.appendChild(seg);
+
+      var lbl = document.createElement("div");
+      lbl.className = "cr-vlbl" + (r.now ? " cr-now" : "");
+      lbl.style.top = (r.anchor === "end" ? y(r.end) : top) + "px";
+      lbl.innerHTML =
+        '<div class="cr-co-v">' +
+        r.co +
+        "</div>" +
+        '<div class="cr-meta">' +
+        durTxt(r) +
+        (r.note ? " \xB7 " + r.note : "") +
+        "</div>";
+      rail.appendChild(lbl);
+
+      if (r.now) {
+        var cap = document.createElement("div");
+        cap.className = "cr-now-cap";
+        cap.style.top = y(r.end) - 3.5 + "px";
+        rail.appendChild(cap);
+      }
+    });
+
+    var tie = document.createElement("div");
+    tie.className = "cr-tie";
+    tie.style.top = y(2018) + "px";
+    rail.appendChild(tie);
+  })();
+</script>

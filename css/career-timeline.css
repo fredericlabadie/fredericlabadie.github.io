@@ -1,106 +1,321 @@
-.bp-ct-h {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  overflow-x: auto;
-  padding-top: 16px;
-  padding-bottom: 2px;
-  border-top: 1px solid #cdd3da;
+/* career-timeline.css
+   Three rail variants: spine (A desktop), gantt (B compact desktop), mobile (A vertical).
+   Class prefix: cr- throughout to avoid collision with Blueprint bp- classes.
+*/
+
+/* === RESPONSIVE VISIBILITY ============================================== */
+
+.cr-desktop-only {
+  display: block;
+}
+.cr-mobile-only {
+  display: none;
 }
 
-.bp-ct-h-entry {
-  flex: 1;
-  min-width: 72px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (max-width: 639px) {
+  .cr-desktop-only {
+    display: none;
+  }
+  .cr-mobile-only {
+    display: block;
+  }
 }
 
-.bp-ct-h-year {
-  font-family:
-    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 10px;
+/* === OPTION A — TRUE-SCALE HORIZONTAL SPINE (recruiters desktop) ======== */
+
+.cr-spine {
+  position: relative;
+  height: 1px;
+  background: #16263a;
+  margin: 110px 0 0;
+}
+
+.cr-spine-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.cr-spine-tick i {
+  display: block;
+  width: 1px;
+  height: 7px;
+  background: #cdd3da;
+  margin: 0 auto;
+}
+
+.cr-spine-tick span {
+  display: block;
+  margin-top: 7px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
   letter-spacing: 0.04em;
   color: #52617a;
-  margin-bottom: 4px;
-  white-space: nowrap;
 }
 
-.bp-ct-h-mid {
-  position: relative;
-  width: 100%;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bp-ct-h-mid::before {
-  content: "";
+.cr-seg {
   position: absolute;
-  right: 50%;
-  left: 0;
-  top: 50%;
-  height: 1px;
-  background: #52617a;
+  top: 0;
+  height: 9px;
+  background: #16263a;
   transform: translateY(-50%);
 }
 
-.bp-ct-h-mid::after {
+.cr-seg.cr-now {
+  background: #b9412a;
+}
+
+.cr-seg.cr-lane1 {
+  height: 7px;
+  top: -13px;
+  background: #52617a;
+  transform: none;
+}
+
+.cr-seg-lbl {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  white-space: nowrap;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #16263a;
+}
+
+.cr-seg.cr-tier-hi .cr-seg-lbl {
+  bottom: 40px;
+}
+
+.cr-seg.cr-align-right .cr-seg-lbl {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+.cr-seg.cr-align-center .cr-seg-lbl {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.cr-seg-lbl em {
+  font-style: normal;
+  color: #52617a;
+  margin-left: 8px;
+}
+
+.cr-seg.cr-now .cr-seg-lbl {
+  color: #b9412a;
+}
+
+.cr-concurrent-brace {
+  position: absolute;
+  top: -13px;
+  height: 13px;
+  border-left: 1px dashed #b9412a;
+}
+
+/* === OPTION B COMPACT — GANTT LEDGER (about desktop) ==================== */
+
+.cr-gantt {
+  position: relative;
+}
+
+.cr-gantt-axis {
+  position: relative;
+  height: 15px;
+  margin-left: 238px;
+  margin-right: 92px;
+  border-bottom: 1px solid #cdd3da;
+  margin-bottom: 4px;
+}
+
+.cr-gt {
+  position: absolute;
+  bottom: 3px;
+  transform: translateX(-50%);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  color: #52617a;
+}
+
+.cr-gt::after {
   content: "";
   position: absolute;
   left: 50%;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: #52617a;
-  transform: translateY(-50%);
+  bottom: -7px;
+  width: 1px;
+  height: 5px;
+  background: #cdd3da;
 }
 
-.bp-ct-h-entry:first-child .bp-ct-h-mid::before {
-  display: none;
+.cr-grow {
+  display: grid;
+  grid-template-columns: 238px 1fr 92px;
+  align-items: center;
+  min-height: 27px;
+  border-bottom: 1px solid #e6eaee;
 }
 
-.bp-ct-h-entry:last-child .bp-ct-h-mid::after {
-  display: none;
+.cr-grow:last-child {
+  border-bottom: none;
 }
 
-.bp-ct-h-dot {
-  position: relative;
-  z-index: 1;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #16263a;
-  border: 2px solid #eef2f5;
-  flex-shrink: 0;
-  display: block;
-}
-
-.bp-ct-h-current .bp-ct-h-dot {
-  background: #b9412a;
-  width: 10px;
-  height: 10px;
-  box-shadow: 0 0 0 3px rgba(185, 65, 42, 0.15);
-}
-
-.bp-ct-h-co {
-  font-family:
-    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 10px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #52617a;
-  margin-top: 4px;
-  text-align: center;
+.cr-grow .cr-co {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-right: 14px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  padding: 0 2px;
 }
 
-.bp-ct-h-current .bp-ct-h-co {
+.cr-grow .cr-co b {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #16263a;
-  font-weight: 600;
+}
+
+.cr-grow .cr-co em {
+  font-style: normal;
+  font-size: 10.5px;
+  color: #52617a;
+  white-space: nowrap;
+}
+
+.cr-gtrack {
+  position: relative;
+  height: 27px;
+}
+
+.cr-gbar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  background: #16263a;
+}
+
+.cr-gbar.cr-now {
+  background: #b9412a;
+}
+
+.cr-grow .cr-dur {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: #52617a;
+  text-align: right;
+}
+
+.cr-grow.cr-now .cr-dur {
+  color: #b9412a;
+}
+
+.cr-grow.cr-now .cr-co b {
+  color: #b9412a;
+}
+
+/* === OPTION A MOBILE — VERTICAL SPINE (both pages <640px) =============== */
+
+.cr-rail-v {
+  position: relative;
+}
+
+.cr-yr-tick {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.cr-yr-tick span {
+  width: 30px;
+  text-align: right;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  color: #52617a;
+}
+
+.cr-yr-tick i {
+  display: block;
+  width: 8px;
+  height: 1px;
+  background: #cdd3da;
+}
+
+.cr-spine-v {
+  position: absolute;
+  left: 52px;
+  top: 0;
+  width: 1px;
+  background: #16263a;
+}
+
+.cr-vseg {
+  position: absolute;
+  left: 48px;
+  width: 9px;
+  background: #16263a;
+}
+
+.cr-vseg.cr-now {
+  background: #b9412a;
+}
+
+.cr-vseg.cr-lane1 {
+  left: 62px;
+  width: 7px;
+  background: #52617a;
+}
+
+.cr-vlbl {
+  position: absolute;
+  left: 86px;
+  transform: translateY(-2px);
+}
+
+.cr-vlbl .cr-co-v {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #16263a;
+  line-height: 1.2;
+}
+
+.cr-vlbl .cr-meta {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10.5px;
+  color: #52617a;
+  margin-top: 2px;
+}
+
+.cr-vlbl.cr-now .cr-co-v,
+.cr-vlbl.cr-now .cr-meta {
+  color: #b9412a;
+}
+
+.cr-tie {
+  position: absolute;
+  left: 53px;
+  width: 16px;
+  border-top: 1px dashed #b9412a;
+}
+
+.cr-now-cap {
+  position: absolute;
+  left: 49px;
+  width: 7px;
+  height: 7px;
+  background: #b9412a;
+  border-radius: 50%;
 }

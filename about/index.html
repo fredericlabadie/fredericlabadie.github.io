@@ -41,7 +41,12 @@ extra_css:
             the longer version: origin, method, stack, credentials, and how the
             work has developed across roles.
           </p>
-          {% include career-timeline.html %}
+          <div class="cr-desktop-only">
+            {% include career-rail-gantt.html %}
+          </div>
+          <div class="cr-mobile-only">
+            {% include career-rail-mobile.html %}
+          </div>
         </div>
         <aside class="bp-about-panel" aria-label="Profile summary">
           <div class="bp-about-panel-head">

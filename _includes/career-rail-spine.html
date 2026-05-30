@@ -1,0 +1,76 @@
+<div class="cr-spine" id="cr-spine"></div>
+<script>
+  (function () {
+    var AXIS_START = 2011,
+      AXIS_END = 2026;
+    var span = AXIS_END - AXIS_START;
+    var pct = function (y) {
+      return ((y - AXIS_START) / span) * 100;
+    };
+    var dur = function (r) {
+      if (r.now) return "2024–now";
+      return r.end - r.start <= 1 ? "1 yr" : r.end - r.start + " yrs";
+    };
+
+    var roles = [
+      { co: "Melody Health", start: 2011, end: 2015, lane: 0, tier: "lo" },
+      { co: "The Designory", start: 2015, end: 2018, lane: 0, tier: "lo" },
+      {
+        co: "Stanley Steemer",
+        start: 2018,
+        end: 2023,
+        lane: 0,
+        tier: "lo",
+        alignCenter: true,
+      },
+      {
+        co: "Xivic \xB7 concurrent",
+        start: 2018,
+        end: 2019,
+        lane: 1,
+        tier: "hi",
+      },
+      { co: "Micro Center", start: 2023, end: 2024, lane: 0, tier: "hi" },
+      {
+        co: "Telus Digital",
+        start: 2024,
+        end: 2026,
+        lane: 0,
+        tier: "lo",
+        now: true,
+        alignRight: true,
+      },
+    ];
+
+    var axis = document.getElementById("cr-spine");
+
+    [2011, 2014, 2017, 2020, 2023, 2026].forEach(function (y) {
+      var t = document.createElement("div");
+      t.className = "cr-spine-tick";
+      t.style.left = pct(y) + "%";
+      t.innerHTML = "<i></i><span>" + y + "</span>";
+      axis.appendChild(t);
+    });
+
+    roles.forEach(function (r) {
+      var seg = document.createElement("div");
+      seg.className =
+        "cr-seg" +
+        (r.now ? " cr-now" : "") +
+        (r.lane === 1 ? " cr-lane1" : "") +
+        (r.tier === "hi" ? " cr-tier-hi" : "") +
+        (r.alignRight ? " cr-align-right" : "") +
+        (r.alignCenter ? " cr-align-center" : "");
+      seg.style.left = pct(r.start) + "%";
+      seg.style.width = pct(r.end) - pct(r.start) + "%";
+      seg.innerHTML =
+        '<span class="cr-seg-lbl">' + r.co + " <em>" + dur(r) + "</em></span>";
+      axis.appendChild(seg);
+    });
+
+    var brace = document.createElement("div");
+    brace.className = "cr-concurrent-brace";
+    brace.style.left = pct(2018) + "%";
+    axis.appendChild(brace);
+  })();
+</script>

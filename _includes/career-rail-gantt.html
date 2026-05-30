@@ -1,0 +1,63 @@
+<div class="cr-gantt" id="cr-gantt"></div>
+<script>
+  (function () {
+    var AXIS_START = 2011,
+      AXIS_END = 2026;
+    var span = AXIS_END - AXIS_START;
+    var pct = function (y) {
+      return ((y - AXIS_START) / span) * 100;
+    };
+
+    var roles = [
+      { co: "Melody Health", role: "Earlier roles", start: 2011, end: 2015 },
+      { co: "The Designory", role: "Web Analyst", start: 2015, end: 2018 },
+      { co: "Stanley Steemer", role: "Analytics / BI", start: 2018, end: 2023 },
+      { co: "Xivic", role: "Analyst \xB7 concurrent", start: 2018, end: 2019 },
+      { co: "Micro Center", role: "Marketing", start: 2023, end: 2024 },
+      {
+        co: "Telus Digital",
+        role: "Analytics Architect",
+        start: 2024,
+        end: 2026,
+        now: true,
+      },
+    ];
+
+    var g = document.getElementById("cr-gantt");
+    var years = [2011, 2014, 2017, 2020, 2023, 2026];
+    var axisHTML = '<div class="cr-gantt-axis">';
+    years.forEach(function (y) {
+      axisHTML +=
+        '<span class="cr-gt" style="left:' + pct(y) + '%">' + y + "</span>";
+    });
+    axisHTML += "</div>";
+    g.innerHTML = axisHTML;
+
+    var ordered = roles.slice().sort(function (a, b) {
+      return a.start - b.start || a.end - b.end;
+    });
+
+    ordered.forEach(function (r) {
+      var row = document.createElement("div");
+      row.className = "cr-grow" + (r.now ? " cr-now" : "");
+      row.innerHTML =
+        '<div class="cr-co"><b>' +
+        r.co +
+        "</b><em>" +
+        r.role +
+        "</em></div>" +
+        '<div class="cr-gtrack"><div class="cr-gbar' +
+        (r.now ? " cr-now" : "") +
+        '" style="left:' +
+        pct(r.start) +
+        "%;width:" +
+        (pct(r.end) - pct(r.start)) +
+        '%"></div></div>' +
+        '<div class="cr-dur">' +
+        r.start +
+        (r.now ? "–now" : "–" + r.end) +
+        "</div>";
+      g.appendChild(row);
+    });
+  })();
+</script>

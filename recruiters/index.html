@@ -59,7 +59,12 @@ extra_css:
               >Download CV</a
             >
           </div>
-          {% include career-timeline.html %}
+          <div class="cr-desktop-only">
+            {% include career-rail-spine.html %}
+          </div>
+          <div class="cr-mobile-only">
+            {% include career-rail-mobile.html %}
+          </div>
         </div>
         <aside class="bp-rec-panel" aria-label="Recruiter snapshot">
           <div class="bp-rec-panel-head">
