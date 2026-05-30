@@ -3,7 +3,9 @@
   width: 100%;
   margin-top: 20px;
   overflow-x: auto;
+  padding-top: 16px;
   padding-bottom: 2px;
+  border-top: 1px solid #cdd3da;
 }
 
 .bp-ct-h-entry {
@@ -17,7 +19,7 @@
 .bp-ct-h-year {
   font-family:
     "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.04em;
   color: #52617a;
   margin-bottom: 4px;
@@ -40,7 +42,7 @@
   left: 0;
   top: 50%;
   height: 1px;
-  background: #cdd3da;
+  background: #52617a;
   transform: translateY(-50%);
 }
 
@@ -51,7 +53,7 @@
   right: 0;
   top: 50%;
   height: 1px;
-  background: #cdd3da;
+  background: #52617a;
   transform: translateY(-50%);
 }
 
@@ -69,7 +71,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #cdd3da;
+  background: #16263a;
   border: 2px solid #eef2f5;
   flex-shrink: 0;
   display: block;
@@ -85,7 +87,7 @@
 .bp-ct-h-co {
   font-family:
     "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #52617a;
