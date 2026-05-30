@@ -3,9 +3,6 @@ links:
   - key: home
     label: home
     url: /
-  - key: recruiters
-    label: recruiters
-    url: /recruiters/
   - key: work
     label: work
     url: /work/
