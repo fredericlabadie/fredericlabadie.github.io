@@ -14,6 +14,7 @@ twitter_title: "About &mdash; Frederic Labadie"
 twitter_description: "Curiosity, systems, instrumentation, credentials, and the longer path into analytics architecture."
 extra_css:
   - "/css/about-blueprint.css"
+  - "/css/career-timeline.css"
 ---
 
 <!doctype html>
@@ -58,7 +59,10 @@ extra_css:
           </div>
           <div class="bp-about-panel-row">
             <span>Languages</span>
-            <p>English native / French B1 / Dutch A2 (targeting English-speaking roles in NL).</p>
+            <p>
+              English native / French B1 / Dutch A2 (targeting English-speaking
+              roles in NL).
+            </p>
           </div>
           <div class="bp-about-panel-row">
             <span>Best fit</span>
@@ -83,6 +87,22 @@ extra_css:
           <strong>38h</strong><span>monthly analyst hours recovered</span>
         </article>
         <article><strong>EU</strong><span>work authorisation</span></article>
+      </section>
+
+      <div class="bp-about-section-tag" aria-hidden="true">
+        <span>// career arc</span
+        ><span>in-house and agency &middot; 2011&ndash;present</span>
+      </div>
+      <section class="bp-about-content" id="career">
+        <aside class="bp-about-sidebar">
+          <p class="bp-about-mono bp-about-accent">Career arc</p>
+          <h2>Agency, in-house, and back.</h2>
+          <p>
+            Fourteen years across agencies and in-house brands, from early
+            communications work through analytics architecture.
+          </p>
+        </aside>
+        <div class="bp-about-main">{% include career-timeline.html %}</div>
       </section>
 
       <div class="bp-about-section-tag" aria-hidden="true">
@@ -293,7 +313,10 @@ extra_css:
       <section class="bp-about-content" id="certifications">
         <aside class="bp-about-sidebar">
           <p class="bp-about-mono bp-about-accent">Credentials</p>
-          <h2>Eleven Amplitude credentials, warehouses and engineering certifications, and an MSc.</h2>
+          <h2>
+            Eleven Amplitude credentials, warehouses and engineering
+            certifications, and an MSc.
+          </h2>
           <p>
             Credential density is not the argument by itself. It is supporting
             evidence for the hands-on architecture work in the case library.
@@ -327,8 +350,8 @@ extra_css:
               <p>
                 Prompt Design in Vertex AI, Data Mesh Architecture, Bloomreach
                 Engagement, and Anthropic AI credentials (Claude API, MCP,
-                agents). Full list on the <a href="/credentials/">credentials
-                page</a>.
+                agents). Full list on the
+                <a href="/credentials/">credentials page</a>.
               </p>
             </article>
             <article class="bp-about-mini-card">
@@ -376,8 +399,18 @@ extra_css:
         </aside>
         <div class="bp-about-main">
           <article class="bp-about-proof-card">
-            <p class="bp-about-mono bp-about-accent">TELUS Digital Insights &middot; April 2025</p>
-            <h3><a href="https://www.telusdigital.com/insights/digital-experience/article/advancing-the-maturity-of-your-data-pipeline-with-user-level-analytics" target="_blank" rel="noopener">Advancing the maturity of your data pipeline from events to sessions to users</a></h3>
+            <p class="bp-about-mono bp-about-accent">
+              TELUS Digital Insights &middot; April 2025
+            </p>
+            <h3>
+              <a
+                href="https://www.telusdigital.com/insights/digital-experience/article/advancing-the-maturity-of-your-data-pipeline-with-user-level-analytics"
+                target="_blank"
+                rel="noopener"
+                >Advancing the maturity of your data pipeline from events to
+                sessions to users</a
+              >
+            </h3>
             <p>
               The case for moving past volume-based event metrics to user-level
               identity resolution. Covers the three-stage maturity progression,

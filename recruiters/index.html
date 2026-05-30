@@ -14,7 +14,9 @@ twitter_title: "Frederic Labadie &mdash; for recruiters"
 twitter_description: "Quick-scan recruiter version."
 extra_css:
   - "/css/recruiters-blueprint.css"
+  - "/css/career-timeline.css"
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -81,15 +83,27 @@ extra_css:
           </div>
           <div class="bp-rec-panel-row">
             <span>Matching against</span>
-            <p>Senior Analytics Engineer / Analytics Lead / Analytics Architect / Staff Analyst / Principal Analyst</p>
+            <p>
+              Senior Analytics Engineer / Analytics Lead / Analytics Architect /
+              Staff Analyst / Principal Analyst
+            </p>
           </div>
           <div class="bp-rec-panel-row">
             <span>Operating mode</span>
-            <p>Data Swiss Army knife; useful within a two-week ramp. Applies Sense-Making Methodology (Dervin's neutral-questioning framework for surfacing unspoken user needs) to separate measurement gaps from question gaps &mdash; relevant for UX telemetry and product analytics roles.</p>
+            <p>
+              Data Swiss Army knife; useful within a two-week ramp. Applies
+              Sense-Making Methodology (Dervin's neutral-questioning framework
+              for surfacing unspoken user needs) to separate measurement gaps
+              from question gaps &mdash; relevant for UX telemetry and product
+              analytics roles.
+            </p>
           </div>
           <div class="bp-rec-panel-row">
             <span>Languages</span>
-            <p>English native. Dutch A2; targeting English-speaking roles in the Netherlands.</p>
+            <p>
+              English native. Dutch A2; targeting English-speaking roles in the
+              Netherlands.
+            </p>
           </div>
         </aside>
       </header>
@@ -109,6 +123,21 @@ extra_css:
           <strong>38h</strong><span>monthly hours recovered</span>
         </article>
         <article><strong>EU</strong><span>work authorisation</span></article>
+      </section>
+
+      <div class="bp-rec-section-tag" aria-hidden="true">
+        <span>// career arc</span
+        ><span>in-house and agency &middot; 2011&ndash;present</span>
+      </div>
+      <section class="bp-rec-content" id="career">
+        <aside class="bp-rec-sidebar">
+          <p class="bp-rec-mono bp-rec-accent">Career arc</p>
+          <h2>Where the fourteen years went.</h2>
+          <p>
+            Six roles across agencies, in-house brands, and enterprise clients.
+          </p>
+        </aside>
+        <div class="bp-rec-main">{% include career-timeline.html %}</div>
       </section>
 
       <div class="bp-rec-section-tag" aria-hidden="true">
@@ -146,11 +175,17 @@ extra_css:
             </div>
             <div>
               <dt>Operating mode</dt>
-              <dd>Data Swiss Army knife with a two-week ramp. Applies Sense-Making Methodology to separate measurement gaps from question gaps.</dd>
+              <dd>
+                Data Swiss Army knife with a two-week ramp. Applies Sense-Making
+                Methodology to separate measurement gaps from question gaps.
+              </dd>
             </div>
             <div>
               <dt>Languages</dt>
-              <dd>English native; Dutch A2. Targeting English-speaking roles in the Netherlands.</dd>
+              <dd>
+                English native; Dutch A2. Targeting English-speaking roles in
+                the Netherlands.
+              </dd>
             </div>
             <div>
               <dt>Compensation</dt>
@@ -158,7 +193,14 @@ extra_css:
             </div>
             <div>
               <dt>Career path</dt>
-              <dd>Analytics Architect, TELUS Digital (2024–present) · Email &amp; SMS Marketing Manager, Micro Center (2023–24) · Digital Analytics Architect, Stanley Steemer (2018–23) · Web Analyst, The Designory (2015–18) · Digital Communications Specialist, Melody Health (2011–15) · independent analytics contracts throughout</dd>
+              <dd>
+                Analytics Architect, TELUS Digital (2024–present) · Email &amp;
+                SMS Marketing Manager, Micro Center (2023–24) · Digital
+                Analytics Architect, Stanley Steemer (2018–23) · Web Analyst,
+                The Designory (2015–18) · Digital Communications Specialist,
+                Melody Health (2011–15) · independent analytics contracts
+                throughout
+              </dd>
             </div>
             <div>
               <dt>Reply time</dt>
@@ -247,11 +289,8 @@ extra_css:
             deeper conversation makes sense.
           </p>
         </aside>
-        <div class="bp-rec-main">
-          {% include recruiter-proof-cases.html %}
-        </div>
+        <div class="bp-rec-main">{% include recruiter-proof-cases.html %}</div>
       </section>
-
 
       <div class="bp-rec-section-tag" aria-hidden="true">
         <span>// 04 / stack</span
@@ -633,7 +672,6 @@ extra_css:
         </div>
       </section>
     </main>
-    {% include site-footer.html %}
-    {% include site-scripts.html %}
+    {% include site-footer.html %} {% include site-scripts.html %}
   </body>
 </html>
