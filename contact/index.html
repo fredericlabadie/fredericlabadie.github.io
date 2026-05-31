@@ -15,6 +15,7 @@ twitter_description: "Email, LinkedIn, GitHub, CV download, and context for seni
 extra_css:
   - "/css/contact-blueprint.css"
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,12 +39,21 @@ extra_css:
             a typical reply within two working days.
           </p>
         </div>
-        <aside class="bp-contact-panel bp-contact-photo-panel" aria-label="Contact snapshot">
-          <img src="/assets/photo/frederic-portrait.jpg"
-               srcset="/assets/photo/frederic-portrait.jpg 1x, /assets/photo/frederic-portrait@2x.jpg 2x"
-               width="480" height="640"
-               alt="Frederic Labadie"
-               loading="lazy" />
+        <aside
+          class="bp-contact-panel bp-contact-photo-panel"
+          aria-label="Contact snapshot"
+        >
+          <img
+            src="/assets/photo/frederic-portrait.jpg"
+            srcset="
+              /assets/photo/frederic-portrait.jpg    1x,
+              /assets/photo/frederic-portrait@2x.jpg 2x
+            "
+            width="480"
+            height="640"
+            alt="Frederic Labadie"
+            loading="lazy"
+          />
           <div class="bp-contact-photo-caption">
             <span>Frederic Labadie</span>
             <span>Data &amp; analytics leader &middot; Amsterdam</span>
@@ -60,7 +70,10 @@ extra_css:
           >
             <span class="bp-contact-mono bp-contact-accent">Email</span>
             <strong>frederic.labadie@gmail.com</strong>
-            <span>Pre-filled subject: Portfolio inquiry / Senior analytics role.</span>
+            <span
+              >Pre-filled subject: Portfolio inquiry / Senior analytics
+              role.</span
+            >
           </a>
           <a
             class="bp-contact-card"
@@ -87,7 +100,7 @@ extra_css:
             href="../assets/resume/frederic-labadie-cv.pdf"
             download
           >
-            <span class="bp-contact-mono bp-contact-accent">CV / Resume</span>
+            <span class="bp-contact-mono bp-contact-accent">CV</span>
             <strong>Two-page PDF</strong>
             <span>Download &darr;</span>
           </a>
@@ -97,7 +110,9 @@ extra_css:
           <p class="bp-contact-mono bp-contact-accent">
             What I am best to talk to about
           </p>
-          <h3>Roles where instrumentation connects to understanding behaviour.</h3>
+          <h3>
+            Roles where instrumentation connects to understanding behaviour.
+          </h3>
           <p>
             Useful outreach includes role title, location or remote setup,
             salary band if available, and why the role needs both analytics
@@ -106,20 +121,19 @@ extra_css:
               >product analytics, UX telemetry, and analytics
               architecture</strong
             >
-            in Amsterdam or remote-EU. Open to data engineering where the
-            domain is worth it.
+            in Amsterdam or remote-EU. Open to data engineering where the domain
+            is worth it.
           </p>
           <p>
             Also relevant: speaking, podcast, or workshop invitations on
             instrumentation paired with qualitative methodology, AI-assisted
             analytics workflows, or how Sense-Making methodology changes
-            question design in measurement. Recruiter notes are welcome when
-            the role itself is the fit. Please skip generic outreach.
+            question design in measurement. Recruiter notes are welcome when the
+            role itself is the fit. Please skip generic outreach.
           </p>
         </aside>
       </section>
     </main>
-    {% include site-footer.html %}
-    {% include site-scripts.html %}
+    {% include site-footer.html %} {% include site-scripts.html %}
   </body>
 </html>
