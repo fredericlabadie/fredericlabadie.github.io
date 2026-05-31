@@ -3,7 +3,7 @@ nav_key: thoughts
 footer_label: Current Meditations
 title: "Current Meditations"
 title_tag: "Current Meditations &mdash; Frederic Labadie, Analytics Architect"
-description: "Current Meditations: koan-like tensions in analytics methodology, AI-assisted workflows, instrumentation design, and the tradeoffs the official measurement layer does not resolve."
+description: "Current Meditations: koan-like tensions in analytics methodology, AI-assisted workflows, instrumentation design, and the trade-offs the official measurement layer does not resolve."
 robots: "noindex, nofollow"
 theme_color: "#eef2f5"
 og_type: "website"
@@ -13,6 +13,7 @@ twitter_title: "Current Meditations &mdash; Frederic Labadie"
 extra_css:
   - "/css/thoughts-blueprint.css"
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,10 +34,11 @@ extra_css:
           <p class="bp-thoughts-dek">
             A practitioner's working-thinking archive for sitting with tensions,
             not resolving them too quickly. I think of these questions as
-            koan-like: compact contradictions to carry around, return to, and let
-            change how the problem is seen. They are drafts, working theories,
-            and open tradeoffs in methodology, AI-assisted workflows, schema
-            design, and the gaps the official measurement layer does not settle.
+            koan-like: compact contradictions to carry around, return to, and
+            let change how the problem is seen. They are drafts, working
+            theories, and open trade-offs in methodology, AI-assisted workflows,
+            schema design, and the gaps the official measurement layer does not
+            settle.
           </p>
         </div>
         <aside class="bp-thoughts-panel" aria-label="Archive summary">
@@ -54,8 +56,8 @@ extra_css:
           <div class="bp-thoughts-panel-row">
             <span>Topics</span>
             <p>
-              Mixed-methods feedback loops, AI workflow gates, session continuity,
-              event taxonomy, insight visibility.
+              Mixed-methods feedback loops, AI workflow gates, session
+              continuity, event taxonomy, insight visibility.
             </p>
           </div>
         </aside>
@@ -72,7 +74,7 @@ extra_css:
           <h2>The question is a practice.</h2>
           <p>
             Each note starts where a clean answer would be premature. The point
-            is to hold the tradeoff long enough to understand what each side
+            is to hold the trade-off long enough to understand what each side
             makes visible, hides, enables, and costs.
           </p>
         </aside>
@@ -87,13 +89,14 @@ extra_css:
               <h3>
                 <a href="#q-feedback-loop-methodology"
                   >What does a complete qualitative and quantitative data
-                  feedback loop look like, from instrumentation to optimization?</a
+                  feedback loop look like, from instrumentation to
+                  optimisation?</a
                 >
               </h3>
               <p>
                 Instrumentation can locate where behaviour changes. Qualitative
                 method can explain what the gap means. Experimentation and
-                optimization can test whether the response actually improved the
+                optimisation can test whether the response actually improved the
                 system. The missing piece is a practical methodology that treats
                 those as one loop rather than separate research, analytics, and
                 CRO rituals.
@@ -104,7 +107,7 @@ extra_css:
                 the interaction, test the intervention, and feed the result back
                 into the schema. Quantitative data tells the system where to
                 look. Qualitative method explains what question to ask next.
-                Optimization closes the loop by proving whether the answer held.
+                Optimisation closes the loop by proving whether the answer held.
               </p>
             </div>
           </article>
@@ -122,12 +125,12 @@ extra_css:
                 >
               </h3>
               <p>
-                Before, the human prompted the AI: analyze this, summarize this,
+                Before, the human prompted the AI: analyse this, summarise this,
                 check this. Now the AI increasingly prompts the human: react to
                 this, approve this, escalate this, ignore this. That reverses
-                the agency problem. The question is no longer only whether AI can
-                assist judgment, but whether it begins to own the queue of human
-                attention.
+                the agency problem. The question is no longer only whether AI
+                can assist judgement, but whether it begins to own the queue of
+                human attention.
               </p>
               <p>
                 <strong>Working theory:</strong> the risk is not only that AI
@@ -197,12 +200,12 @@ extra_css:
               </p>
               <p>
                 <strong>Working theory:</strong> event minimalism only works
-                when parameter richness is strong enough to preserve meaning. The
-                event should name the user action; the parameter should explain
-                the conditions that made the action meaningful. A skipped step
-                becomes an event only when the skip itself is an intentional
-                action. Otherwise, it belongs as context on the event that
-                followed.
+                when parameter richness is strong enough to preserve meaning.
+                The event should name the user action; the parameter should
+                explain the conditions that made the action meaningful. A
+                skipped step becomes an event only when the skip itself is an
+                intentional action. Otherwise, it belongs as context on the
+                event that followed.
               </p>
             </div>
           </article>
@@ -228,11 +231,11 @@ extra_css:
               <p>
                 <strong>Working theory:</strong> adoption is not the same thing
                 as visibility. A shared company data layer should let insights
-                travel across teams instead of getting stuck in Phil's personal
-                dashboard. The success metric is not how many people made charts;
-                it is whether useful findings become reusable, discoverable, and
-                governed enough to change decisions outside the team that found
-                them.
+                travel across teams instead of getting stuck in one analyst's
+                personal dashboard. The success metric is not how many people
+                made charts; it is whether useful findings become reusable,
+                discoverable, and governed enough to change decisions outside
+                the team that found them.
               </p>
             </div>
           </article>
@@ -246,7 +249,6 @@ extra_css:
         </div>
       </section>
     </main>
-    {% include site-footer.html %}
-    {% include site-scripts.html %}
+    {% include site-footer.html %} {% include site-scripts.html %}
   </body>
 </html>
