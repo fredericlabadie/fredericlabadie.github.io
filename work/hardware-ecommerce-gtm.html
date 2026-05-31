@@ -10,300 +10,323 @@ og_url: "https://fredericlabadie.com/work/hardware-ecommerce-gtm.html"
 twitter_title: "All analytics in the tag manager. Not one line in the site code."
 twitter_description: "Security-constrained GTM-only analytics on a Magento/SPA storefront: enhanced ecommerce, form fallout, SPA history-state pageviews."
 ---
-      <header class="bp-case-hero">
-        <div>
-          <p class="bp-case-kicker bp-case-accent">
-            // Case study / Instrumentation
-          </p>
-          <h1>All analytics in the tag manager. Not one line in the site code.</h1>
-          <p class="bp-case-dek">
-            A B2B/B2C hardware authentication brand&rsquo;s e-commerce storefront
-            had a security requirement that banned analytics code from the site
-            codebase entirely. Every tag, variable, and trigger had to live in
-            GTM. When the purchase funnel became a Single Page Application
-            mid-build, the constraint stayed the same &mdash; wildcard matching,
-            history-state pageviews, and enhanced ecommerce delivered from a
-            container alone.
-          </p>
-        </div>
-        <aside class="bp-case-hero-panel" aria-label="Case summary">
-          <div class="bp-case-panel-head">
-            <span>Case file</span><span>Static / semi-anonymised</span>
-          </div>
-          <div class="bp-case-panel-row">
-            <span>Client context</span>
-            <p>B2B/B2C hardware authentication brand / e-commerce instrumentation / agency engagement</p>
-          </div>
-          <div class="bp-case-panel-row">
-            <span>Project timing</span><strong>2016</strong>
-          </div>
-          <div class="bp-case-panel-row">
-            <span>Role</span>
-            <p>
-              GTM architecture, container implementation, requirements design,
-              SPA pageview handling, enhanced ecommerce tagging, form fallout
-              tracking, QA, downstream GA analysis
-            </p>
-          </div>
-        </aside>
-      </header>
 
-      <section class="bp-case-receipts" aria-label="Case proof points">
-        <article>
-          <strong>0</strong><span>analytics lines in site codebase</span>
-        </article>
-        <article>
-          <strong>2</strong><span>GTM containers deployed</span>
-        </article>
-        <article>
-          <strong>SPA</strong><span>history-state pageview handling</span>
-        </article>
-        <article>
-          <strong>Enhanced</strong><span>ecommerce + full form fallout tracking</span>
-        </article>
-      </section>
+<header class="bp-case-hero">
+  <div>
+    <p class="bp-case-kicker bp-case-accent">// Case study / Instrumentation</p>
+    <h1>All analytics in the tag manager. Not one line in the site code.</h1>
+    <p class="bp-case-dek">
+      A B2B/B2C hardware authentication brand&rsquo;s e-commerce storefront had
+      a security requirement that banned analytics code from the site codebase
+      entirely. Every tag, variable, and trigger had to live in GTM. When the
+      purchase funnel became a Single Page Application mid-build, the constraint
+      stayed the same &mdash; wildcard matching, history-state pageviews, and
+      enhanced ecommerce delivered from a container alone.
+    </p>
+  </div>
+  <aside class="bp-case-hero-panel" aria-label="Case summary">
+    <div class="bp-case-panel-head">
+      <span>Case file</span><span>Static / semi-anonymised</span>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Client context</span>
+      <p>
+        B2B/B2C hardware authentication brand / e-commerce instrumentation /
+        agency engagement
+      </p>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Project timing</span><strong>2016</strong>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Role</span>
+      <p>
+        GTM architecture, container implementation, requirements design, SPA
+        pageview handling, enhanced ecommerce tagging, form fallout tracking,
+        QA, downstream GA analysis
+      </p>
+    </div>
+  </aside>
+</header>
 
-      <div class="bp-case-section-tag" aria-hidden="true">
-        <span>// 01 / thesis</span
-        ><span>security constraint / GTM as full analytics layer</span>
-      </div>
-      <section class="bp-case-content" id="case">
-        <aside class="bp-case-sidebar">
-          <p class="bp-case-mono bp-case-accent">Core argument</p>
-          <h2>
-            Security drove the architecture. GTM became the only analytics
-            surface.
-          </h2>
+<section class="bp-case-receipts" aria-label="Case proof points">
+  <article>
+    <strong>0</strong><span>analytics lines in site codebase</span>
+  </article>
+  <article><strong>2</strong><span>GTM containers deployed</span></article>
+  <article>
+    <strong>SPA</strong><span>history-state pageview handling</span>
+  </article>
+  <article>
+    <strong>Enhanced</strong><span>ecommerce + full form fallout tracking</span>
+  </article>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 01 / thesis</span
+  ><span>security constraint / GTM as full analytics layer</span>
+</div>
+<section class="bp-case-content" id="case">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Core argument</p>
+    <h2>
+      Security drove the architecture. GTM became the only analytics surface.
+    </h2>
+    <p>
+      A requirement to keep analytics code out of the site codebase forced every
+      tag, variable, and trigger into GTM &mdash; including handling a purchase
+      funnel that became a Single Page Application partway through the build.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <article class="bp-case-proof-panel">
+      <p class="bp-case-mono bp-case-accent">What happened</p>
+      <h3>
+        Security constraint, GTM-only architecture, SPA funnel handled without
+        touching the codebase.
+      </h3>
+      <p>
+        The client was a hardware authentication brand building an e-commerce
+        storefront on Magento with a custom frontend. Security requirements
+        prohibited analytics code from the site codebase entirely. All
+        measurement had to live in a tag management container. When the purchase
+        funnel became a SPA mid-build, the constraint stayed fixed &mdash; the
+        implementation approach had to change instead.
+      </p>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Context</p>
+      <h3>
+        Magento backend, custom storefront, rapid iteration, and a security
+        constraint.
+      </h3>
+      <p>
+        Magento handled purchase processing; developers were building the
+        storefront on top of it. The site was in active development &mdash;
+        class names and element structures changing across sprints. The security
+        concern was straightforward: analytics code embedded in the codebase
+        could introduce vulnerabilities and created an audit surface the client
+        was not willing to accept.
+      </p>
+      <p>
+        GTM was selected to handle the full analytics layer. That meant
+        DOM-driven variables, history-state listeners for SPA navigation, and
+        the ability to prototype and iterate tags without touching the site code
+        &mdash; requirements that shaped every implementation decision from day
+        one.
+      </p>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Task</p>
+      <h3>
+        Define the requirements, build the containers, and keep pace with the
+        site.
+      </h3>
+      <p>
+        The role covered the full implementation: writing tagging requirements,
+        building GTM containers, designing DOM-based variable schemas, handling
+        SPA pageview capture via history state, configuring enhanced ecommerce,
+        and specifying form fallout and error tracking. QA ran against each
+        sprint release as the site changed beneath the container.
+      </p>
+    </article>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 02 / implementation</span
+  ><span>Phase 1: requirements / Phase 2: SPA + wildcard</span>
+</div>
+<section class="bp-case-content">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Method</p>
+    <h2>
+      Two phases: initial implementation, then adapting when the SPA appeared.
+    </h2>
+    <p>
+      Phase&nbsp;1 established requirements and initial implementation against a
+      standard site. Phase&nbsp;2 addressed the harder problem: a purchase
+      funnel that had become a SPA with dynamic CSS classes and no stable
+      element identifiers.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <figure
+      class="bp-case-figure"
+      aria-label="Two-phase implementation structure"
+    >
+      <figcaption>
+        <span>fig. 01 / implementation phases</span
+        ><span>requirements first, SPA adaptation second</span>
+      </figcaption>
+      <div class="bp-case-chain">
+        <div class="bp-case-chain-node">
+          <span class="bp-case-chain-step">Phase 1</span
+          ><strong>Requirements + isolation</strong>
           <p>
-            A requirement to keep analytics code out of the site codebase forced
-            every tag, variable, and trigger into GTM &mdash; including handling
-            a purchase funnel that became a Single Page Application partway
-            through the build.
+            Second GTM container for the new site section. Full analytics
+            isolation from day one &mdash; no analytics code in the site
+            codebase.
           </p>
-        </aside>
-        <div class="bp-case-main">
-          <article class="bp-case-proof-panel">
-            <p class="bp-case-mono bp-case-accent">What happened</p>
-            <h3>
-              Security constraint, GTM-only architecture, SPA funnel handled
-              without touching the codebase.
-            </h3>
-            <p>
-              The client was a hardware authentication brand building an
-              e-commerce storefront on Magento with a custom frontend. Security
-              requirements prohibited analytics code from the site codebase
-              entirely. All measurement had to live in a tag management
-              container. When the purchase funnel became a SPA mid-build, the
-              constraint stayed fixed &mdash; the implementation approach had to
-              change instead.
-            </p>
-          </article>
-
-          <article class="bp-case-block">
-            <p class="bp-case-mono bp-case-accent">Context</p>
-            <h3>Magento backend, custom storefront, rapid iteration, and a security constraint.</h3>
-            <p>
-              Magento handled purchase processing; developers were building the
-              storefront on top of it. The site was in active development
-              &mdash; class names and element structures changing across sprints.
-              The security concern was straightforward: analytics code embedded
-              in the codebase could introduce vulnerabilities and created an
-              audit surface the client was not willing to accept.
-            </p>
-            <p>
-              GTM was selected to handle the full analytics layer. That meant
-              DOM-driven variables, history-state listeners for SPA navigation,
-              and the ability to prototype and iterate tags without touching the
-              site code &mdash; requirements that shaped every implementation
-              decision from day one.
-            </p>
-          </article>
-
-          <article class="bp-case-block">
-            <p class="bp-case-mono bp-case-accent">Task</p>
-            <h3>Define the requirements, build the containers, and keep pace with the site.</h3>
-            <p>
-              The role covered the full implementation: writing tagging
-              requirements, building GTM containers, designing DOM-based
-              variable schemas, handling SPA pageview capture via history state,
-              configuring enhanced ecommerce, and specifying form fallout and
-              error tracking. QA ran against each sprint release as the site
-              changed beneath the container.
-            </p>
-          </article>
         </div>
-      </section>
-
-      <div class="bp-case-section-tag" aria-hidden="true">
-        <span>// 02 / implementation</span
-        ><span>Phase 1: requirements / Phase 2: SPA + wildcard</span>
-      </div>
-      <section class="bp-case-content">
-        <aside class="bp-case-sidebar">
-          <p class="bp-case-mono bp-case-accent">Method</p>
-          <h2>Two phases: initial implementation, then adapting when the SPA appeared.</h2>
+        <div class="bp-case-chain-node">
+          <span class="bp-case-chain-step">Phase 2</span
+          ><strong>Wildcard + SPA handling</strong>
           <p>
-            Phase&nbsp;1 established requirements and initial implementation
-            against a standard site. Phase&nbsp;2 addressed the harder problem:
-            a purchase funnel that had become a SPA with dynamic CSS classes and
-            no stable element identifiers.
+            Dynamic CSS classes meant switching to wildcard tag logic and
+            history-state change listeners to capture SPA navigation reliably.
           </p>
-        </aside>
-        <div class="bp-case-main">
-          <figure
-            class="bp-case-figure"
-            aria-label="Two-phase implementation structure"
-          >
-            <figcaption>
-              <span>fig. 01 / implementation phases</span
-              ><span>requirements first, SPA adaptation second</span>
-            </figcaption>
-            <div class="bp-case-chain">
-              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Phase 1</span><strong>Requirements + isolation</strong><p>Second GTM container for the new site section. Full analytics isolation from day one &mdash; no analytics code in the site codebase.</p></div>
-              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Phase 2</span><strong>Wildcard + SPA handling</strong><p>Dynamic CSS classes meant switching to wildcard tag logic and history-state change listeners to capture SPA navigation reliably.</p></div>
-              <div class="bp-case-chain-node"><span class="bp-case-chain-step">Outcome</span><strong>Enhanced ecommerce live</strong><p>Product impressions, add-to-cart, checkout steps, purchases, full form fallout. WCAG compliance improved as a side effect.</p></div>
-            </div>
-          </figure>
-
-          <div class="bp-case-gates" aria-label="Implementation challenges">
-            <article class="bp-case-gate">
-              <span class="bp-case-flow-label">A</span
-              ><strong>Dynamic CSS classes</strong>
-              <p>
-                Wildcard matching required. Class names changed between sprints;
-                stable element identifiers were not available for standard GTM
-                trigger logic.
-              </p>
-            </article>
-            <article class="bp-case-gate">
-              <span class="bp-case-flow-label">B</span
-              ><strong>SPA purchase funnel</strong>
-              <p>
-                History-state listeners replaced standard pageview triggers once
-                the purchase funnel became a Single Page Application mid-build.
-              </p>
-            </article>
-            <article class="bp-case-gate">
-              <span class="bp-case-flow-label">C</span
-              ><strong>Security isolation</strong>
-              <p>
-                Zero analytics code in the site codebase, at any point. Every
-                analytics update deployed through the GTM container independently
-                of site releases.
-              </p>
-            </article>
-            <article class="bp-case-gate">
-              <span class="bp-case-flow-label">D</span
-              ><strong>Concurrent development</strong>
-              <p>
-                Site and analytics iterated in parallel across sprints, requiring
-                GTM to stay current without access to the site&rsquo;s build
-                pipeline.
-              </p>
-            </article>
-          </div>
         </div>
-      </section>
-
-      <div class="bp-case-section-tag" aria-hidden="true">
-        <span>// 03 / result</span
-        ><span>isolated layer / maintainable analytics</span>
-      </div>
-      <section class="bp-case-content">
-        <aside class="bp-case-sidebar">
-          <p class="bp-case-mono bp-case-accent">Result</p>
-          <h2>
-            The constraint produced a cleaner, more maintainable system.
-          </h2>
+        <div class="bp-case-chain-node">
+          <span class="bp-case-chain-step">Outcome</span
+          ><strong>Enhanced ecommerce live</strong>
           <p>
-            Keeping all analytics in GTM meant the measurement layer was
-            isolated, versioned, and independently deployable. Site changes did
-            not break analytics. Analytics updates did not require developer
-            tickets.
+            Product impressions, add-to-cart, checkout steps, purchases, full
+            form fallout. WCAG compliance improved as a side effect.
           </p>
-        </aside>
-        <div class="bp-case-main">
-          <article class="bp-case-block">
-            <p class="bp-case-mono bp-case-accent">Outcome</p>
-            <h3>Enhanced ecommerce live. Form fallout coverage complete. SPA handled correctly.</h3>
-            <ul>
-              <li>
-                <strong>Enhanced ecommerce:</strong> product impressions,
-                add-to-cart, checkout steps, and purchase events tracked
-                entirely via GTM.
-              </li>
-              <li>
-                <strong>Form fallout + error tracking:</strong> complete
-                coverage of purchase and account forms.
-              </li>
-              <li>
-                <strong>SPA pageviews:</strong> history-state-based virtual
-                pageviews firing correctly across the full funnel.
-              </li>
-              <li>
-                <strong>WCAG improvement:</strong> adding IDs and stable classes
-                for GTM targeting also improved accessibility compliance.
-              </li>
-            </ul>
-          </article>
-
-          <article class="bp-case-block">
-            <p class="bp-case-mono bp-case-accent">Design lesson</p>
-            <h3>When analytics can&rsquo;t touch the codebase, GTM has to be the whole system.</h3>
-            <p>
-              The security constraint that looked like a limitation produced a
-              cleaner architecture: one versioned container, all analytics logic
-              in one place, zero coupling between site releases and analytics
-              releases. That isolation principle applies anywhere a measurement
-              layer needs to be independently deployable.
-            </p>
-            <p>
-              The constraint also surfaced a problem that site-embedded analytics
-              often misses: when the only way to tag an element is via the DOM,
-              every poorly-structured markup decision becomes a tracking problem.
-              The feedback loop improved both the analytics layer and the
-              underlying site structure.
-            </p>
-          </article>
-
-          <div class="bp-case-tags" aria-label="Technologies and methods">
-            <span class="bp-case-tag">GTM</span>
-            <span class="bp-case-tag">Google Analytics (UA)</span>
-            <span class="bp-case-tag">Enhanced ecommerce</span>
-            <span class="bp-case-tag">SPA instrumentation</span>
-            <span class="bp-case-tag">DOM-based tagging</span>
-            <span class="bp-case-tag">Form fallout tracking</span>
-            <span class="bp-case-tag">Magento</span>
-            <span class="bp-case-tag">Security-constrained implementation</span>
-          </div>
         </div>
-      </section>
-
-      <div class="bp-case-section-tag" aria-hidden="true">
-        <span>// 04 / next</span
-        ><span>case library / adjacent evidence / contact</span>
       </div>
-      <section class="bp-case-next">
-        <a href="../work/"
-          ><span class="bp-case-mono bp-case-accent">More cases</span
-          ><strong>Full case library.</strong
-          ><span
-            >Fifteen primary cases across seven categories.</span
-          ></a
-        >
-        <a href="product-quiz-placement.html"
-          ><span class="bp-case-mono bp-case-accent">Adjacent case</span
-          ><strong>The quiz worked. The question was where to put it.</strong
-          ><span
-            >Same client engagement, Phase&nbsp;2: A/B testing across four
-            store-page placement variants.</span
-          ></a
-        >
-        <a href="../contact/"
-          ><span class="bp-case-mono bp-case-accent">Get in touch</span
-          ><strong>Contact and context.</strong
-          ><span
-            >Email, LinkedIn, GitHub, the CV.</span
-          ></a
-        >
-      </section>
+    </figure>
+
+    <div class="bp-case-gates" aria-label="Implementation challenges">
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">A</span
+        ><strong>Dynamic CSS classes</strong>
+        <p>
+          Wildcard matching required. Class names changed between sprints;
+          stable element identifiers were not available for standard GTM trigger
+          logic.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">B</span
+        ><strong>SPA purchase funnel</strong>
+        <p>
+          History-state listeners replaced standard pageview triggers once the
+          purchase funnel became a Single Page Application mid-build.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">C</span
+        ><strong>Security isolation</strong>
+        <p>
+          Zero analytics code in the site codebase, at any point. Every
+          analytics update deployed through the GTM container independently of
+          site releases.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">D</span
+        ><strong>Concurrent development</strong>
+        <p>
+          Site and analytics iterated in parallel across sprints, requiring GTM
+          to stay current without access to the site&rsquo;s build pipeline.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 03 / result</span
+  ><span>isolated layer / maintainable analytics</span>
+</div>
+<section class="bp-case-content">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Result</p>
+    <h2>The constraint produced a cleaner, more maintainable system.</h2>
+    <p>
+      Keeping all analytics in GTM meant the measurement layer was isolated,
+      versioned, and independently deployable. Site changes could be handled
+      without embedding analytics in the codebase. Analytics updates did not
+      require developer tickets.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Outcome</p>
+      <h3>
+        Enhanced ecommerce live. Form fallout coverage complete. SPA handled
+        correctly.
+      </h3>
+      <ul>
+        <li>
+          <strong>Enhanced ecommerce:</strong> product impressions, add-to-cart,
+          checkout steps, and purchase events tracked entirely via GTM.
+        </li>
+        <li>
+          <strong>Form fallout + error tracking:</strong> complete coverage of
+          purchase and account forms.
+        </li>
+        <li>
+          <strong>SPA pageviews:</strong> history-state-based virtual pageviews
+          firing correctly across the full funnel.
+        </li>
+        <li>
+          <strong>WCAG improvement:</strong> adding IDs and stable classes for
+          GTM targeting also improved accessibility compliance.
+        </li>
+      </ul>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Design lesson</p>
+      <h3>
+        When analytics can&rsquo;t touch the codebase, GTM has to be the whole
+        system.
+      </h3>
+      <p>
+        The security constraint that looked like a limitation produced a cleaner
+        architecture: one versioned container, all analytics logic in one place,
+        zero coupling between site releases and analytics releases. That
+        isolation principle applies anywhere a measurement layer needs to be
+        independently deployable.
+      </p>
+      <p>
+        The constraint also surfaced a problem that site-embedded analytics
+        often misses: when the only way to tag an element is via the DOM, every
+        poorly-structured markup decision becomes a tracking problem. The
+        feedback loop improved both the analytics layer and the underlying site
+        structure.
+      </p>
+    </article>
+
+    <div class="bp-case-tags" aria-label="Technologies and methods">
+      <span class="bp-case-tag">GTM</span>
+      <span class="bp-case-tag">Google Analytics (UA)</span>
+      <span class="bp-case-tag">Enhanced ecommerce</span>
+      <span class="bp-case-tag">SPA instrumentation</span>
+      <span class="bp-case-tag">DOM-based tagging</span>
+      <span class="bp-case-tag">Form fallout tracking</span>
+      <span class="bp-case-tag">Magento</span>
+      <span class="bp-case-tag">Security-constrained implementation</span>
+    </div>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 04 / next</span
+  ><span>case library / adjacent evidence / contact</span>
+</div>
+<section class="bp-case-next">
+  <a href="../work/"
+    ><span class="bp-case-mono bp-case-accent">More cases</span
+    ><strong>Full case library.</strong
+    ><span>Fifteen active cases across seven categories.</span></a
+  >
+  <a href="product-quiz-placement.html"
+    ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+    ><strong>The quiz worked. The question was where to put it.</strong
+    ><span
+      >Same client engagement, Phase&nbsp;2: A/B testing across four store-page
+      placement variants.</span
+    ></a
+  >
+  <a href="../contact/"
+    ><span class="bp-case-mono bp-case-accent">Get in touch</span
+    ><strong>Contact and context.</strong
+    ><span>Email, LinkedIn, GitHub, the CV.</span></a
+  >
+</section>
