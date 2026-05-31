@@ -12,169 +12,246 @@ og_url: "https://fredericlabadie.com/philips/work/hardware-ecommerce-gtm.html"
 ---
 
 <main id="top">
-      <section class="page-intro hero">
-        <div class="container">
-          <p class="eyebrow">
-            Case study &middot; Path 02 &middot; GTM instrumentation
-          </p>
-          <h1>All analytics in the tag manager. Not one line in the site code.</h1>
-          <p class="hero-subtitle">
-            A hardware authentication brand&rsquo;s security requirement &mdash; no analytics code in the site codebase &mdash; forced the entire measurement layer into GTM. DOM-driven variables, history-state SPA pageviews, enhanced ecommerce, and full form fallout tracking, all from a container.
-          </p>
-          <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context">/ B2B/B2C hardware authentication brand &middot; e-commerce instrumentation &middot; 2016</span>
-          </p>
+  <section class="page-intro hero">
+    <div class="container">
+      <p class="eyebrow">
+        Case study &middot; Path 02 &middot; GTM instrumentation
+      </p>
+      <h1>All analytics in the tag manager. Not one line in the site code.</h1>
+      <p class="hero-subtitle">
+        A hardware authentication brand&rsquo;s security requirement &mdash; no
+        analytics code in the site codebase &mdash; forced the entire
+        measurement layer into GTM. DOM-driven variables, history-state SPA
+        pageviews, enhanced ecommerce, and full form fallout tracking, all from
+        a container.
+      </p>
+      <p class="case-meta" style="margin-top: 28px">
+        <span class="case-context"
+          >/ B2B/B2C hardware authentication brand &middot; e-commerce
+          instrumentation &middot; 2016</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="section-body">
+      <div class="container">
+        <div class="callout">
+          <div class="callout-label">Role-fit signal</div>
+          <div class="callout-body">
+            <strong
+              >Security forced the analytics layer out of the site codebase
+              entirely.</strong
+            >
+            The Philips role describes translating data needs into event
+            specifications, implementation requirements, and production
+            telemetry. This case shows what that looks like under a hard
+            constraint: a security requirement that removed the option to embed
+            analytics in the site code forced cleaner architecture &mdash;
+            versioned container, isolated deployment, no coupling between site
+            releases and measurement layer.
+          </div>
         </div>
-      </section>
 
-      <section id="case">
-        <div class="section-body">
-          <div class="container">
-            <div class="callout">
-              <div class="callout-label">Role-fit signal</div>
-              <div class="callout-body">
-                <strong>Security forced the analytics layer out of the site codebase entirely.</strong>
-                The Philips role describes translating data needs into event specifications, implementation requirements, and production telemetry. This case shows what that looks like under a hard constraint: a security requirement that removed the option to embed analytics in the site code forced cleaner architecture &mdash; versioned container, isolated deployment, no coupling between site releases and measurement layer.
-              </div>
-            </div>
-
-            <div class="outcome">
-              <div class="outcome-icon">&rarr;</div>
-              <div>
-                <div class="outcome-title">What happened</div>
-                <div class="outcome-body">
-                  A hardware authentication brand needed full e-commerce analytics for a Magento storefront, but a security policy required that analytics code live entirely outside the site codebase. Every tag, variable, and trigger was built in GTM. When the purchase funnel became a Single Page Application mid-build, the constraint stayed fixed. DOM-based variable schemas, wildcard tag matching, and history-state listeners handled the SPA. Enhanced ecommerce and full form fallout tracking shipped from the container alone.
-                </div>
-              </div>
-            </div>
-
-            <div class="case-argument">
-              <strong>The security requirement removed the option to embed. GTM became the complete measurement system &mdash; not a supplementary layer.</strong>
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card">
-                <div class="card-label">Context</div>
-                <div class="card-body">
-                  The client was iterating rapidly on a Magento storefront with a custom frontend. Class names and element structures changed across sprints. A security concern about analytics code introducing codebase vulnerabilities required all measurement to stay in GTM &mdash; never in the site&rsquo;s code. When the purchase funnel transitioned to a SPA mid-build, the DOM-based tagging approach had to adapt without the security constraint changing.
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-label">Task</div>
-                <div class="card-body">
-                  Full implementation: write tagging requirements, build GTM containers, design DOM-based variable schemas, handle SPA pageview capture via history-state listeners, configure enhanced ecommerce across the purchase funnel, specify and implement form fallout and error tracking, QA against sprint releases.
-                </div>
-              </div>
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card amber">
-                <div class="card-label">Action</div>
-                <div class="card-body">
-                  Built two GTM containers &mdash; one for the existing site, one for the new section. DOM-driven variable schemas captured element state without requiring stable class names. Wildcard tag logic and history-state change listeners replaced standard pageview triggers once the SPA appeared. Enhanced ecommerce implemented across product impressions, add-to-cart, checkout steps, and purchase events. Form fallout coverage across purchase and account forms.
-                </div>
-              </div>
-              <div class="card accent">
-                <div class="card-label">Result</div>
-                <div class="card-body">
-                  Zero analytics lines in the site codebase at any point. Enhanced ecommerce and form fallout live. SPA pageviews firing correctly via history state. As a side effect: adding IDs and stable class names for GTM targeting also improved WCAG compliance across the elements that needed them.
-                </div>
-              </div>
-            </div>
-
-            <div class="flow">
-              <div class="flow-step">
-                <div class="flow-num">01</div>
-                <div class="flow-label">Requirements and scoping</div>
-                <div class="flow-desc">
-                  Reviewed documentation, defined tagging requirements, established the plan. Second container deployed for the new site section due to security scope requirements.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">02</div>
-                <div class="flow-label">Initial container build</div>
-                <div class="flow-desc">
-                  DOM-driven variable schemas, standard pageview and event tags, enhanced ecommerce across the existing purchase funnel. No analytics code in the site at any point.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">03</div>
-                <div class="flow-label">SPA adaptation</div>
-                <div class="flow-desc">
-                  Purchase funnel became a SPA mid-build. Switched to wildcard tag logic and history-state change listeners. Dynamic CSS classes required pattern-matching rather than fixed-identifier approaches.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">04</div>
-                <div class="flow-label">Enhanced ecommerce and form fallout</div>
-                <div class="flow-desc">
-                  Full purchase funnel coverage: impressions, add-to-cart, checkout step tracking, and transaction. Form fallout and error tracking across purchase and account flows.
-                </div>
-              </div>
-            </div>
-
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric-value">0</div>
-                <div class="metric-label">Analytics lines in site codebase</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">2</div>
-                <div class="metric-label">GTM containers deployed</div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">Enhanced</div>
-                <div class="metric-label">Ecommerce + form fallout live at launch</div>
-              </div>
-            </div>
-
-            <p>
-              The same client engagement continued into Phase 2 A/B testing &mdash; see <a href="/philips/work/product-quiz-placement.html">the placement optimisation case &rarr;</a>.
-            </p>
-
-            <div class="tags">
-              <span class="tag">GTM</span>
-              <span class="tag">Google Analytics (UA)</span>
-              <span class="tag">Enhanced ecommerce</span>
-              <span class="tag">SPA instrumentation</span>
-              <span class="tag">DOM-based tagging</span>
-              <span class="tag">Form fallout tracking</span>
-              <span class="tag">Magento</span>
-              <span class="tag">Security-constrained implementation</span>
+        <div class="outcome">
+          <div class="outcome-icon">&rarr;</div>
+          <div>
+            <div class="outcome-title">What happened</div>
+            <div class="outcome-body">
+              A hardware authentication brand needed full e-commerce analytics
+              for a Magento storefront, but a security policy required that
+              analytics code live entirely outside the site codebase. Every tag,
+              variable, and trigger was built in GTM. When the purchase funnel
+              became a Single Page Application mid-build, the constraint stayed
+              fixed. DOM-based variable schemas, wildcard tag matching, and
+              history-state listeners handled the SPA. Enhanced ecommerce and
+              full form fallout tracking shipped from the container alone.
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="next" class="alt">
-        <div class="section-body">
-          <div class="container">
-            <p class="section-eyebrow">Next</p>
-            <h2 class="section-heading">
-              More from the Philips selection, or get in touch.
-            </h2>
+        <div class="case-argument">
+          <strong
+            >The security requirement removed the option to embed. GTM became
+            the complete measurement system &mdash; not a supplementary
+            layer.</strong
+          >
+        </div>
 
-            <div class="deeper deeper-three">
-              <a class="deeper-card" href="/philips/work/">
-                <span class="deeper-label">More cases</span>
-                <span class="deeper-title">Philips selection &mdash; <em>twelve cases, six evidence paths</em>.</span>
-                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
-                <span class="deeper-cta">Open the selection &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/work/d2c-ga-migration.html">
-                <span class="deeper-label">Adjacent case</span>
-                <span class="deeper-title">Off Adobe, onto Google. Three phases and a cleared backlog.</span>
-                <span class="deeper-body">Same GTM-implementation method, different constraint: Adobe Analytics migration on a Meteor.js SPA.</span>
-                <span class="deeper-cta">Read adjacent case &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/contact/">
-                <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title">Contact &mdash; channels and context.</span>
-                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for the UX Telemetry Expert role.</span>
-                <span class="deeper-cta">Open contact page &rarr;</span>
-              </a>
+        <div class="card-row card-row-2">
+          <div class="card">
+            <div class="card-label">Context</div>
+            <div class="card-body">
+              The client was iterating rapidly on a Magento storefront with a
+              custom frontend. Class names and element structures changed across
+              sprints. A security concern about analytics code introducing
+              codebase vulnerabilities required all measurement to stay in GTM
+              &mdash; never in the site&rsquo;s code. When the purchase funnel
+              transitioned to a SPA mid-build, the DOM-based tagging approach
+              had to adapt without the security constraint changing.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">Task</div>
+            <div class="card-body">
+              Full implementation: write tagging requirements, build GTM
+              containers, design DOM-based variable schemas, handle SPA pageview
+              capture via history-state listeners, configure enhanced ecommerce
+              across the purchase funnel, specify and implement form fallout and
+              error tracking, QA against sprint releases.
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="card-row card-row-2">
+          <div class="card amber">
+            <div class="card-label">Action</div>
+            <div class="card-body">
+              Built two GTM containers &mdash; one for the existing site, one
+              for the new section. DOM-driven variable schemas captured element
+              state without requiring stable class names. Wildcard tag logic and
+              history-state change listeners replaced standard pageview triggers
+              once the SPA appeared. Enhanced ecommerce implemented across
+              product impressions, add-to-cart, checkout steps, and purchase
+              events. Form fallout coverage across purchase and account forms.
+            </div>
+          </div>
+          <div class="card accent">
+            <div class="card-label">Result</div>
+            <div class="card-body">
+              Zero analytics lines in the site codebase at any point. Enhanced
+              ecommerce and form fallout live. SPA pageviews firing correctly
+              via history state. As a side effect: adding IDs and stable class
+              names for GTM targeting also improved WCAG compliance across the
+              elements that needed them.
+            </div>
+          </div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num">01</div>
+            <div class="flow-label">Requirements and scoping</div>
+            <div class="flow-desc">
+              Reviewed documentation, defined tagging requirements, established
+              the plan. Second container deployed for the new site section due
+              to security scope requirements.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">02</div>
+            <div class="flow-label">Initial container build</div>
+            <div class="flow-desc">
+              DOM-driven variable schemas, standard pageview and event tags,
+              enhanced ecommerce across the existing purchase funnel. No
+              analytics code in the site at any point.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">03</div>
+            <div class="flow-label">SPA adaptation</div>
+            <div class="flow-desc">
+              Purchase funnel became a SPA mid-build. Switched to wildcard tag
+              logic and history-state change listeners. Dynamic CSS classes
+              required pattern-matching rather than fixed-identifier approaches.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">04</div>
+            <div class="flow-label">Enhanced ecommerce and form fallout</div>
+            <div class="flow-desc">
+              Full purchase funnel coverage: impressions, add-to-cart, checkout
+              step tracking, and transaction. Form fallout and error tracking
+              across purchase and account flows.
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">0</div>
+            <div class="metric-label">Analytics lines in site codebase</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">2</div>
+            <div class="metric-label">GTM containers deployed</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">Enhanced</div>
+            <div class="metric-label">
+              Ecommerce + form fallout live at launch
+            </div>
+          </div>
+        </div>
+
+        <p>
+          The same client engagement continued into Phase 2 A/B testing &mdash;
+          see
+          <a href="/philips/work/product-quiz-placement.html"
+            >the placement optimisation case &rarr;</a
+          >.
+        </p>
+
+        <div class="tags">
+          <span class="tag">GTM</span>
+          <span class="tag">Google Analytics (UA)</span>
+          <span class="tag">Enhanced ecommerce</span>
+          <span class="tag">SPA instrumentation</span>
+          <span class="tag">DOM-based tagging</span>
+          <span class="tag">Form fallout tracking</span>
+          <span class="tag">Magento</span>
+          <span class="tag">Security-constrained implementation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="next" class="alt">
+    <div class="section-body">
+      <div class="container">
+        <p class="section-eyebrow">Next</p>
+        <h2 class="section-heading">
+          More from the Philips selection, or get in touch.
+        </h2>
+
+        <div class="deeper deeper-three">
+          <a class="deeper-card" href="/philips/work/">
+            <span class="deeper-label">More cases</span>
+            <span class="deeper-title"
+              >Philips selection &mdash;
+              <em>thirteen cases, five evidence paths</em>.</span
+            >
+            <span class="deeper-body"
+              >The curated case library mapped against the UX Telemetry Expert
+              role.</span
+            >
+            <span class="deeper-cta">Open the selection &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/work/d2c-ga-migration.html">
+            <span class="deeper-label">Adjacent case</span>
+            <span class="deeper-title"
+              >Off Adobe, onto Google. Three phases and a cleared backlog.</span
+            >
+            <span class="deeper-body"
+              >Same GTM-implementation method, different constraint: Adobe
+              Analytics migration on a Meteor.js SPA.</span
+            >
+            <span class="deeper-cta">Read adjacent case &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/contact/">
+            <span class="deeper-label">Get in touch</span>
+            <span class="deeper-title"
+              >Contact &mdash; channels and context.</span
+            >
+            <span class="deeper-body"
+              >Email, LinkedIn, GitHub, CV, and a pre-filled subject for the UX
+              Telemetry Expert role.</span
+            >
+            <span class="deeper-cta">Open contact page &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

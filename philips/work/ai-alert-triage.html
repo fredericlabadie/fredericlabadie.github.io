@@ -12,185 +12,224 @@ og_url: "https://fredericlabadie.com/philips/work/ai-alert-triage.html"
 ---
 
 <main id="top">
-      <section class="page-intro hero">
-        <div class="container">
-          <p class="eyebrow">
-            Case study &middot; Path 04 &middot; AI workflow design
-          </p>
-          <h1>Designing AI workflows that don't outsource the thinking.</h1>
-          <p class="hero-subtitle">
-            A production alert-triage system with explicit decisions about where AI assists and where human judgement is preserved &mdash; and why those lines are where they are.
-          </p>
-          <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context"
-              >/ Major quick-service restaurant brand &middot; analytics architect</span
+  <section class="page-intro hero">
+    <div class="container">
+      <p class="eyebrow">
+        Case study &middot; Path 04 &middot; AI workflow design
+      </p>
+      <h1>Designing AI workflows that don't outsource the thinking.</h1>
+      <p class="hero-subtitle">
+        A production alert-triage system with explicit decisions about where AI
+        assists and where human judgement is preserved &mdash; and why those
+        lines are where they are.
+      </p>
+      <p class="case-meta" style="margin-top: 28px">
+        <span class="case-context"
+          >/ Major quick-service restaurant brand &middot; analytics
+          architect</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="section-body">
+      <div class="container">
+        <div class="callout">
+          <div class="callout-label">Role-fit signal</div>
+          <div class="callout-body">
+            <strong
+              >AI-enabled telemetry where the workflow matters more than the
+              model.</strong
             >
-          </p>
+            The Philips role asks where advanced analytics and AI-supported
+            telemetry can strengthen product understanding and decision-making.
+            This case shows the operating principle: AI surfaces and ranks;
+            humans still diagnose and act.
+          </div>
         </div>
-      </section>
 
-      <section id="case">
-        <div class="section-body">
-          <div class="container">
-            <div class="callout">
-              <div class="callout-label">
-                Role-fit signal
-              </div>
-              <div class="callout-body">
-                <strong>AI-enabled telemetry where the workflow matters more than the model.</strong>
-                The Philips role asks where advanced analytics and AI-supported telemetry can strengthen product understanding and decision-making. This case shows the operating principle: AI surfaces and ranks; humans still diagnose and act.
-              </div>
-            </div>
-
-            <div class="outcome">
-              <div class="outcome-icon">&rarr;</div>
-              <div>
-                <div class="outcome-title">What happened</div>
-                <div class="outcome-body">
-                  A production AI alert-triage system compressed
-                  <strong>230 raw alerts to 39 posts</strong>
-                  across a two-week run on real on-call volume (13&ndash;26 April 2026). That is an <strong>83% reduction</strong> in alert noise. More importantly, it surfaced <strong>one critical feature failure</strong> that the human review had missed.
-                </div>
-              </div>
-            </div>
-
-            <div class="case-argument">
-              The risk in AI-assisted analytics is not automation by itself. It is <strong>outsourced thinking</strong>. The work is deciding where the model helps, where it must stop, and how humans get enough context to act.
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card">
-                <div class="card-label">Situation</div>
-                <div class="card-body">
-                  A noisy alert channel at a major QSR analytics stack was producing roughly 230 alerts per fortnight from production and staging monitors. The known failure mode was not absence of data. It was legibility: a prior critical checkout regression had gone unactioned because technical percentages obscured the signal.
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-label">Task</div>
-                <div class="card-body">
-                  Surface what matters, suppress what does not, escalate when a suppressed signal worsens, and never delegate the diagnose-and-act decision to the model. The workflow needed to reduce review burden while preserving accountability.
-                </div>
-              </div>
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card amber">
-                <div class="card-label">Action</div>
-                <div class="card-body">
-                  Built a four-stage hourly pipeline: suppress known issues, pull / dedupe / pre-screen, fetch seven-day trend and error breakdown from Amplitude, then gate, group, and post. The system automates collection, grouping, enrichment, and summarisation. It does not automate ownership.
-                </div>
-              </div>
-              <div class="card accent">
-                <div class="card-label">Result</div>
-                <div class="card-body">
-                  The win was not fewer alerts. It was a clearer decision surface. The 83% reduction made attention usable; the critical miss proved the compression did not erase the signal. V2 is in progress based on the observed V1 surface and suppression patterns.
-                </div>
-              </div>
-            </div>
-
-            <div class="flow">
-              <div class="flow-step">
-                <div class="flow-num">01</div>
-                <div class="flow-label">Suppress known issues</div>
-                <div class="flow-desc">
-                  Reads the alert channel, records monitors already posted today, and suppresses repeats unless a signal escalates significantly.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">02</div>
-                <div class="flow-label">Pull, dedupe, pre-screen</div>
-                <div class="flow-desc">
-                  Pulls the last hour of production and staging alerts, groups firings by monitor name, and drops known low-signal monitor errors before expensive review.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">03</div>
-                <div class="flow-label">Trend + error breakdown</div>
-                <div class="flow-desc">
-                  Queries Amplitude for each surviving monitor's seven-day chart and surfaces error-type breakdown so the summary has context.
-                </div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-num">04</div>
-                <div class="flow-label">Gate, group, post</div>
-                <div class="flow-desc">
-                  Posts Critical or Warning findings only. Suppressed monitors hitting 2&times; prior value override suppression. Co-firing monitors group under one root-cause hypothesis.
-                </div>
-              </div>
-            </div>
-
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric-value">230 &rarr; 39</div>
-                <div class="metric-label">
-                  Raw alerts compressed to posted findings across the two-week production run
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">83%</div>
-                <div class="metric-label">
-                  Alert noise reduction while preserving escalation paths
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">1</div>
-                <div class="metric-label">
-                  Critical feature failure surfaced that human-only review had missed
-                </div>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">Claude API</span>
-              <span class="tag">Amplitude</span>
-              <span class="tag">AI workflow design</span>
-              <span class="tag">Human-AI collaboration</span>
-              <span class="tag">Alert triage</span>
+        <div class="outcome">
+          <div class="outcome-icon">&rarr;</div>
+          <div>
+            <div class="outcome-title">What happened</div>
+            <div class="outcome-body">
+              A production AI alert-triage system compressed
+              <strong>230 raw alerts to 39 posts</strong>
+              across a two-week run on real on-call volume (13&ndash;26 April
+              2026). That is an <strong>83% reduction</strong> in alert noise.
+              More importantly, it surfaced
+              <strong>one critical feature failure</strong> that the human
+              review had missed.
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="next" class="alt">
-        <div class="section-body">
-          <div class="container">
-            <p class="section-eyebrow">Next</p>
-            <h2 class="section-heading">
-              More from the Philips selection, or get in touch.
-            </h2>
+        <div class="case-argument">
+          The risk in AI-assisted analytics is not automation by itself. It is
+          <strong>outsourced thinking</strong>. The work is deciding where the
+          model helps, where it must stop, and how humans get enough context to
+          act.
+        </div>
 
-            <div class="deeper deeper-three">
-              <a class="deeper-card" href="/philips/work/">
-                <span class="deeper-label">More cases</span>
-                <span class="deeper-title"
-                  >Philips selection &mdash;
-                  <em>twelve cases, six evidence paths</em>.</span
-                >
-                <span class="deeper-body"
-                  >The curated case library mapped against the UX Telemetry Expert role.</span
-                >
-                <span class="deeper-cta">Open the selection &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/about/">
-                <span class="deeper-label">About</span>
-                <span class="deeper-title">Bio, skills, credentials.</span>
-                <span class="deeper-body"
-                  >The longer version: method, stack, and where the clinical learning curve sits.</span
-                >
-                <span class="deeper-cta">Read more &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/contact/">
-                <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title"
-                  >Contact &mdash; channels and context.</span
-                >
-                <span class="deeper-body"
-                  >Email, LinkedIn, GitHub, CV, and a pre-filled subject for role 579397.</span
-                >
-                <span class="deeper-cta">Open contact page &rarr;</span>
-              </a>
+        <div class="card-row card-row-2">
+          <div class="card">
+            <div class="card-label">Situation</div>
+            <div class="card-body">
+              A noisy alert channel at a major QSR analytics stack was producing
+              roughly 230 alerts per fortnight from production and staging
+              monitors. The known failure mode was not absence of data. It was
+              legibility: a prior critical checkout regression had gone
+              unactioned because technical percentages obscured the signal.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">Task</div>
+            <div class="card-body">
+              Surface what matters, suppress what does not, escalate when a
+              suppressed signal worsens, and never delegate the diagnose-and-act
+              decision to the model. The workflow needed to reduce review burden
+              while preserving accountability.
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="card-row card-row-2">
+          <div class="card amber">
+            <div class="card-label">Action</div>
+            <div class="card-body">
+              Built a four-stage hourly pipeline: suppress known issues, pull /
+              dedupe / pre-screen, fetch seven-day trend and error breakdown
+              from Amplitude, then gate, group, and post. The system automates
+              collection, grouping, enrichment, and summarisation. It does not
+              automate ownership.
+            </div>
+          </div>
+          <div class="card accent">
+            <div class="card-label">Result</div>
+            <div class="card-body">
+              The win was not fewer alerts. It was a clearer decision surface.
+              The 83% reduction made attention usable; the critical miss proved
+              the compression did not erase the signal. V2 is in progress based
+              on the observed V1 surface and suppression patterns.
+            </div>
+          </div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num">01</div>
+            <div class="flow-label">Suppress known issues</div>
+            <div class="flow-desc">
+              Reads the alert channel, records monitors already posted today,
+              and suppresses repeats unless a signal escalates significantly.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">02</div>
+            <div class="flow-label">Pull, dedupe, pre-screen</div>
+            <div class="flow-desc">
+              Pulls the last hour of production and staging alerts, groups
+              firings by monitor name, and drops known low-signal monitor errors
+              before expensive review.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">03</div>
+            <div class="flow-label">Trend + error breakdown</div>
+            <div class="flow-desc">
+              Queries Amplitude for each surviving monitor's seven-day chart and
+              surfaces error-type breakdown so the summary has context.
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">04</div>
+            <div class="flow-label">Gate, group, post</div>
+            <div class="flow-desc">
+              Posts Critical or Warning findings only. Suppressed monitors
+              hitting 2&times; prior value override suppression. Co-firing
+              monitors group under one root-cause hypothesis.
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">230 &rarr; 39</div>
+            <div class="metric-label">
+              Raw alerts compressed to posted findings across the two-week
+              production run
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">83%</div>
+            <div class="metric-label">
+              Alert noise reduction while preserving escalation paths
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">1</div>
+            <div class="metric-label">
+              Critical feature failure surfaced that human-only review had
+              missed
+            </div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Claude API</span>
+          <span class="tag">Amplitude</span>
+          <span class="tag">AI workflow design</span>
+          <span class="tag">Human-AI collaboration</span>
+          <span class="tag">Alert triage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="next" class="alt">
+    <div class="section-body">
+      <div class="container">
+        <p class="section-eyebrow">Next</p>
+        <h2 class="section-heading">
+          More from the Philips selection, or get in touch.
+        </h2>
+
+        <div class="deeper deeper-three">
+          <a class="deeper-card" href="/philips/work/">
+            <span class="deeper-label">More cases</span>
+            <span class="deeper-title"
+              >Philips selection &mdash;
+              <em>thirteen cases, five evidence paths</em>.</span
+            >
+            <span class="deeper-body"
+              >The curated case library mapped against the UX Telemetry Expert
+              role.</span
+            >
+            <span class="deeper-cta">Open the selection &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/about/">
+            <span class="deeper-label">About</span>
+            <span class="deeper-title">Bio, skills, credentials.</span>
+            <span class="deeper-body"
+              >The longer version: method, stack, and where the clinical
+              learning curve sits.</span
+            >
+            <span class="deeper-cta">Read more &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/contact/">
+            <span class="deeper-label">Get in touch</span>
+            <span class="deeper-title"
+              >Contact &mdash; channels and context.</span
+            >
+            <span class="deeper-body"
+              >Email, LinkedIn, GitHub, CV, and a pre-filled subject for role
+              579397.</span
+            >
+            <span class="deeper-cta">Open contact page &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
