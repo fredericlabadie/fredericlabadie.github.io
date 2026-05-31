@@ -13,6 +13,7 @@ og_url: "https://fredericlabadie.com"
 twitter_title: "Frederic Labadie &mdash; Analytics Architect"
 twitter_description: "Instrumentation, pipelines, and qualitative practice for teams that need to stop guessing."
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,7 +46,7 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
               <span>11 Amplitude certs</span>
               <span>MSc Data Analytics</span>
               <span>HIPAA + consent design</span>
-              <span>EU work auth</span>
+              <span>EU work-authorised</span>
             </div>
             <div class="bp-actions">
               <a class="bp-btn bp-btn-primary" href="work/"
@@ -96,7 +97,8 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
             </div>
           </aside>
         </div>
-        {% include receipt-grid.html receipts=site.data.home_receipts class="bp-receipts" aria_label="Selected proof points" %}
+        {% include receipt-grid.html receipts=site.data.home_receipts
+        class="bp-receipts" aria_label="Selected proof points" %}
       </section>
 
       <section class="bp-section" id="selected-work">
@@ -104,13 +106,13 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
           <span>Section 01 / selected work</span>
           <span
             >three engagements / three different problem shapes / full library
-            on work</span
+            in Work</span
           >
         </div>
 
         <article class="bp-case-row">
-          {% assign selected_case = site.data.home_selected_cases | first %}
-          {% include home-selected-case-copy.html selected=selected_case %}
+          {% assign selected_case = site.data.home_selected_cases | first %} {%
+          include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-flow-figure"
@@ -152,8 +154,8 @@ twitter_description: "Instrumentation, pipelines, and qualitative practice for t
         </article>
 
         <article class="bp-case-row">
-          {% assign selected_case = site.data.home_selected_cases[1] %}
-          {% include home-selected-case-copy.html selected=selected_case %}
+          {% assign selected_case = site.data.home_selected_cases[1] %} {%
+          include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-query-figure"
@@ -175,8 +177,8 @@ WHERE  client = 'sslp_retail'</code></pre>
         </article>
 
         <article class="bp-case-row">
-          {% assign selected_case = site.data.home_selected_cases[2] %}
-          {% include home-selected-case-copy.html selected=selected_case %}
+          {% assign selected_case = site.data.home_selected_cases[2] %} {%
+          include home-selected-case-copy.html selected=selected_case %}
 
           <figure
             class="bp-figure bp-method-figure"
@@ -435,7 +437,6 @@ WHERE  client = 'sslp_retail'</code></pre>
         </div>
       </section>
     </main>
-    {% include site-footer.html %}
-    {% include site-scripts.html %}
+    {% include site-footer.html %} {% include site-scripts.html %}
   </body>
 </html>

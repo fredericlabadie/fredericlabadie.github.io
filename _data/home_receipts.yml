@@ -1,6 +1,6 @@
 - kicker: "alert noise"
   value: "83%"
-  label: "V1 production: 230 alerts to 39 posts across 13-26 April 2026."
+  label: "V1 production: 230 alerts to 39 posts across 13–26 April 2026."
   slug: ai-alert-triage
 
 - kicker: "analyst hours"

@@ -3,15 +3,19 @@
   id="case-library"
   aria-label="Case study category index"
 >
-  {% for lens in site.data.lenses %}
-    {% assign lens_cases = site.data.cases | where: 'lens_number', lens.number %}
-    <a class="bp-lens-card" href="#{{ lens.id }}">
-      <div class="bp-lens-card-top">
-        <span class="bp-mono bp-accent">Category {{ lens.number }}</span>
-        <span class="bp-mono">{{ lens_cases.size }} {% if lens_cases.size == 1 %}case{% else %}cases{% endif %}</span>
-      </div>
-      <h2>{{ lens.title }}</h2>
-      <p>{{ lens.summary }}</p>
-    </a>
+  {% for lens in site.data.lenses %} {% assign all_lens_cases = site.data.cases
+  | where: 'lens_number', lens.number %} {% assign lens_cases = all_lens_cases |
+  where_exp: 'case', 'case.deprecated != true' %}
+  <a class="bp-lens-card" href="#{{ lens.id }}">
+    <div class="bp-lens-card-top">
+      <span class="bp-mono bp-accent">Category {{ lens.number }}</span>
+      <span class="bp-mono"
+        >{{ lens_cases.size }} {% if lens_cases.size == 1 %}case{% else
+        %}cases{% endif %}</span
+      >
+    </div>
+    <h2>{{ lens.title }}</h2>
+    <p>{{ lens.summary }}</p>
+  </a>
   {% endfor %}
 </section>
