@@ -12,278 +12,356 @@ og_url: "https://fredericlabadie.com/philips/work/sslp-enablement.html"
 ---
 
 <main id="top">
-      <section class="page-intro hero">
-        <div class="container">
-          <p class="eyebrow">
-            Case study &middot; Path 05 &middot; Adoption &amp; cultural transition
-          </p>
-          <h1>The reporting layer survived the people who built it.</h1>
-          <p class="hero-subtitle">
-            A BigQuery, Dataform, and Looker Studio reporting build replaced recurring manual report pulls, then a structured handoff made the system maintainable by the client team.
-          </p>
-          <p class="case-meta" style="margin-top: 28px">
-            <span class="case-context"
-              >/ State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span
+  <section class="page-intro hero">
+    <div class="container">
+      <p class="eyebrow">
+        Case study &middot; Path 05 &middot; Adoption &amp; cultural transition
+      </p>
+      <h1>The reporting layer survived the people who built it.</h1>
+      <p class="hero-subtitle">
+        A BigQuery, Dataform, and Looker Studio reporting build replaced
+        recurring manual report pulls, then a structured handoff made the system
+        maintainable by the client team.
+      </p>
+      <p class="case-meta" style="margin-top: 28px">
+        <span class="case-context"
+          >/ State-regulated retail platform &middot; analytics architect
+          &middot; 2025&ndash;2026</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="section-body">
+      <div class="container">
+        <div class="callout">
+          <div class="callout-label">Role-fit signal</div>
+          <div class="callout-body">
+            <strong>Adoption is part of the telemetry system.</strong>
+            The Philips role asks for data storytelling, data literacy, and the
+            cultural transition toward evidence-based product management. This
+            case is the handoff layer: documentation, training, dashboards, and
+            operating practices designed so the team can use the measurement
+            system without the original builder in the room.
+          </div>
+        </div>
+
+        <div class="outcome">
+          <div class="outcome-icon">&rarr;</div>
+          <div>
+            <div class="outcome-title">What happened</div>
+            <div class="outcome-body">
+              A state-regulated retail platform moved from two analysts spending
+              the equivalent of
+              <strong>nearly a combined work-week per month</strong> manually
+              pulling data to a unified BigQuery, Dataform, and Looker Studio
+              stack with structured enablement behind it. The visible metric was
+              <strong>38 analyst hours recovered per month</strong>. The
+              stronger proof was durability: when the client team turned over,
+              new analysts required <strong>zero ramp-up time</strong> on the
+              data infrastructure.
+            </div>
+          </div>
+        </div>
+
+        <div class="case-argument">
+          <strong
+            >The deliverable was not just a dashboard. It was
+            independence.</strong
+          >
+          The final measure of an analytics engagement is whether the team
+          changes how they work after the builder leaves.
+        </div>
+
+        <div class="card-row card-row-2">
+          <div class="card">
+            <div class="card-label">Situation</div>
+            <div class="card-body">
+              Web, app, Google Search Console, Braze, and additional reporting
+              data lived in disconnected sources with no shared infrastructure.
+              A monthly reporting cycle required manual extraction,
+              reconciliation, and formatting. Domain specialists had no clean
+              self-serve path into their own data.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-label">Task</div>
+            <div class="card-body">
+              Build the system and the conditions for adoption: unified data
+              models, dashboards, documentation, repo access, branching and
+              review practices, data dictionaries, ERD summaries, and training
+              sessions built for the analysts who would inherit the system.
+            </div>
+          </div>
+        </div>
+
+        <div class="card-row card-row-2">
+          <div class="card amber">
+            <div class="card-label">Action</div>
+            <div class="card-body">
+              Unified web, Search Console, Braze, and third-party reporting data
+              into BigQuery via scheduled Dataform pipelines; built Looker
+              Studio dashboards for cross-channel visibility; added Python
+              automation against the Braze REST API; then documented the system
+              for a client analyst audience, not an agency audience.
+            </div>
+          </div>
+          <div class="card accent">
+            <div class="card-label">Result</div>
+            <div class="card-body">
+              The recovered hours were valuable. The stronger proof was that
+              those hours did not snap back when the team changed. New analysts
+              could start from domain expertise on day one because the
+              documentation and training architecture had been built for the
+              team that would inherit it.
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">38h</div>
+            <div class="metric-label">
+              Analyst hours recovered per month, redirected from data pulling to
+              analysis
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">3</div>
+            <div class="metric-label">
+              Structured handoff sessions across web, reporting, and lifecycle
+              layers
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">0</div>
+            <div class="metric-label">
+              Data-infrastructure ramp-up required after client-team turnover
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-mock" aria-label="Illustrative dashboard mockup">
+          <div class="dash-mock-head">
+            <div class="dash-mock-title">
+              Cross-channel executive view &middot; <em>illustrative</em>
+            </div>
+            <div class="dash-mock-filters">
+              <span class="dash-mock-chip">Last 30d</span>
+              <span class="dash-mock-chip">Web + App</span>
+              <span class="dash-mock-chip">All campaigns</span>
+            </div>
+          </div>
+          <div class="dash-mock-kpis">
+            <div class="dash-mock-kpi">
+              <div class="dash-mock-kpi-label">Sessions</div>
+              <div class="dash-mock-kpi-value">412k</div>
+              <div class="dash-mock-kpi-trend">+8.4% wow</div>
+            </div>
+            <div class="dash-mock-kpi">
+              <div class="dash-mock-kpi-label">Conversion</div>
+              <div class="dash-mock-kpi-value">3.7%</div>
+              <div class="dash-mock-kpi-trend">+0.4 pts</div>
+            </div>
+            <div class="dash-mock-kpi">
+              <div class="dash-mock-kpi-label">Email CTR</div>
+              <div class="dash-mock-kpi-value">5.1%</div>
+              <div class="dash-mock-kpi-trend down">&minus;0.3 pts</div>
+            </div>
+            <div class="dash-mock-kpi">
+              <div class="dash-mock-kpi-label">Org. share</div>
+              <div class="dash-mock-kpi-value">62%</div>
+              <div class="dash-mock-kpi-trend">+1.2 pts</div>
+            </div>
+          </div>
+          <div class="dash-mock-chart">
+            <div class="dash-mock-chart-title">
+              Weekly sessions &middot; web + app, side by side
+            </div>
+            <div class="dash-mock-bars">
+              <div class="dash-mock-bar" style="height: 38%"></div>
+              <div class="dash-mock-bar alt" style="height: 24%"></div>
+              <div class="dash-mock-bar" style="height: 52%"></div>
+              <div class="dash-mock-bar alt" style="height: 30%"></div>
+              <div class="dash-mock-bar" style="height: 61%"></div>
+              <div class="dash-mock-bar alt" style="height: 38%"></div>
+              <div class="dash-mock-bar" style="height: 74%"></div>
+              <div class="dash-mock-bar alt" style="height: 46%"></div>
+              <div class="dash-mock-bar" style="height: 82%"></div>
+              <div class="dash-mock-bar alt" style="height: 54%"></div>
+              <div class="dash-mock-bar" style="height: 96%"></div>
+              <div class="dash-mock-bar alt" style="height: 62%"></div>
+            </div>
+            <div class="dash-mock-bar-labels">
+              <span>W1</span><span>W1</span><span>W2</span><span>W2</span
+              ><span>W3</span><span>W3</span><span>W4</span><span>W4</span
+              ><span>W5</span><span>W5</span><span>W6</span><span>W6</span>
+            </div>
+            <div class="dash-mock-funnel">
+              <div class="dash-mock-funnel-row">
+                <span>Browse</span>
+                <div class="dash-mock-funnel-bar">
+                  <div class="dash-mock-funnel-fill" style="width: 100%"></div>
+                </div>
+                <span class="dash-mock-funnel-value">100%</span>
+              </div>
+              <div class="dash-mock-funnel-row">
+                <span>Add to cart</span>
+                <div class="dash-mock-funnel-bar">
+                  <div class="dash-mock-funnel-fill" style="width: 42%"></div>
+                </div>
+                <span class="dash-mock-funnel-value">42%</span>
+              </div>
+              <div class="dash-mock-funnel-row">
+                <span>Checkout</span>
+                <div class="dash-mock-funnel-bar">
+                  <div class="dash-mock-funnel-fill" style="width: 28%"></div>
+                </div>
+                <span class="dash-mock-funnel-value">28%</span>
+              </div>
+              <div class="dash-mock-funnel-row">
+                <span>Purchase</span>
+                <div class="dash-mock-funnel-bar">
+                  <div class="dash-mock-funnel-fill" style="width: 19%"></div>
+                </div>
+                <span class="dash-mock-funnel-value">19%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-label">Before</div>
+            <div class="timeline-title">
+              Two dedicated analysts. One monthly report. Two combined
+              work-weeks of manual data pulling per cycle.
+            </div>
+            <div class="timeline-body">
+              Web, app, Search Console, and Braze data lived in disconnected
+              sources. Each monthly cycle required manual extraction,
+              reconciliation, and formatting.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Build</div>
+            <div class="timeline-title">
+              BigQuery, Dataform, and Looker Studio created the maintained
+              reporting layer.
+            </div>
+            <div class="timeline-body">
+              Domain specialists gained direct self-serve access to their own
+              data. A Braze REST API automation removed another recurring CRM
+              reporting task.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Handoff 1</div>
+            <div class="timeline-title">
+              Web: GTM structure, GA4 event taxonomy, Looker Studio
+              architecture, BigQuery pipeline.
+            </div>
+            <div class="timeline-body">
+              Documented for a client analyst audience. Operational clarity over
+              technical performance.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Handoff 2</div>
+            <div class="timeline-title">
+              App and reporting: SDK patterns, GA4 DebugView, BigQuery schema,
+              production SQL walkthrough.
+            </div>
+            <div class="timeline-body">
+              Repo access, branching strategy, and PR review process were
+              explained so the client team could validate new events
+              independently.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Handoff 3</div>
+            <div class="timeline-title">
+              CRM: Braze dashboard orientation, Python automation walkthrough,
+              API key rotation, checklist.
+            </div>
+            <div class="timeline-body">
+              Confluence knowledge base, ERD summary, and data dictionary made
+              the system legible to the inheriting team.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Adoption test</div>
+            <div class="timeline-title">
+              Team turnover. New analysts onboarded. Zero ramp-up time on data
+              infrastructure.
+            </div>
+            <div class="timeline-body">
+              The system survived the people who built it.
+            </div>
+          </div>
+        </div>
+
+        <div class="tags">
+          <span class="tag">BigQuery / GCP</span>
+          <span class="tag">Dataform</span>
+          <span class="tag">GA4 (web + app)</span>
+          <span class="tag">Looker Studio</span>
+          <span class="tag">Braze REST API</span>
+          <span class="tag">Python</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">Client enablement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="next" class="alt">
+    <div class="section-body">
+      <div class="container">
+        <p class="section-eyebrow">Next</p>
+        <h2 class="section-heading">
+          More from the Philips selection, or get in touch.
+        </h2>
+
+        <div class="deeper deeper-three">
+          <a class="deeper-card" href="/philips/work/">
+            <span class="deeper-label">More cases</span>
+            <span class="deeper-title"
+              >Philips selection &mdash;
+              <em>twelve cases, six evidence paths</em>.</span
             >
-          </p>
+            <span class="deeper-body"
+              >The curated case library mapped against the UX Telemetry Expert
+              role.</span
+            >
+            <span class="deeper-cta">Open the selection &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/work/candidate-funnel.html">
+            <span class="deeper-label">Adjacent case</span>
+            <span class="deeper-title"
+              >A 50%+ candidate drop-off, decomposed step by step.</span
+            >
+            <span class="deeper-body"
+              >Another GA4-to-BigQuery-to-Looker Studio build: funnel
+              instrumentation that replaced a manual Excel workflow with
+              step-level abandonment evidence.</span
+            >
+            <span class="deeper-cta">Read adjacent case &rarr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/contact/">
+            <span class="deeper-label">Get in touch</span>
+            <span class="deeper-title"
+              >Contact &mdash; channels and context.</span
+            >
+            <span class="deeper-body"
+              >Email, LinkedIn, GitHub, CV, and a pre-filled subject for role
+              579397.</span
+            >
+            <span class="deeper-cta">Open contact page &rarr;</span>
+          </a>
         </div>
-      </section>
-
-      <section id="case">
-        <div class="section-body">
-          <div class="container">
-            <div class="callout">
-              <div class="callout-label">Role-fit signal</div>
-              <div class="callout-body">
-                <strong>Adoption is part of the telemetry system.</strong>
-                The Philips role asks for data storytelling, data literacy, and the cultural transition toward evidence-based product management. This case is the handoff layer: documentation, training, dashboards, and operating practices designed so the team can use the measurement system without the original builder in the room.
-              </div>
-            </div>
-
-            <div class="outcome">
-              <div class="outcome-icon">&rarr;</div>
-              <div>
-                <div class="outcome-title">What happened</div>
-                <div class="outcome-body">
-                  A state-regulated retail platform moved from two analysts spending the equivalent of <strong>two combined work-weeks per month</strong> manually pulling data to a unified BigQuery, Dataform, and Looker Studio stack with structured enablement behind it. The visible metric was <strong>38 analyst hours recovered per month</strong>. The stronger proof was durability: when the client team turned over, new analysts required <strong>zero ramp-up time</strong> on the data infrastructure.
-                </div>
-              </div>
-            </div>
-
-            <div class="case-argument">
-              <strong>The deliverable was not just a dashboard. It was independence.</strong> The final measure of an analytics engagement is whether the team changes how they work after the builder leaves.
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card">
-                <div class="card-label">Situation</div>
-                <div class="card-body">
-                  Web, app, Google Search Console, Braze, and additional reporting data lived in disconnected sources with no shared infrastructure. A monthly reporting cycle required manual extraction, reconciliation, and formatting. Domain specialists had no clean self-serve path into their own data.
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-label">Task</div>
-                <div class="card-body">
-                  Build the system and the conditions for adoption: unified data models, dashboards, documentation, repo access, branching and review practices, data dictionaries, ERD summaries, and training sessions built for the analysts who would inherit the system.
-                </div>
-              </div>
-            </div>
-
-            <div class="card-row card-row-2">
-              <div class="card amber">
-                <div class="card-label">Action</div>
-                <div class="card-body">
-                  Unified web, Search Console, Braze, and third-party reporting data into BigQuery via scheduled Dataform pipelines; built Looker Studio dashboards for cross-channel visibility; added Python automation against the Braze REST API; then documented the system for a client analyst audience, not an agency audience.
-                </div>
-              </div>
-              <div class="card accent">
-                <div class="card-label">Result</div>
-                <div class="card-body">
-                  The recovered hours were valuable. The stronger proof was that those hours did not snap back when the team changed. New analysts could start from domain expertise on day one because the documentation and training architecture had been built for the team that would inherit it.
-                </div>
-              </div>
-            </div>
-
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric-value">38h</div>
-                <div class="metric-label">
-                  Analyst hours recovered per month, redirected from data pulling to analysis
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">3</div>
-                <div class="metric-label">
-                  Structured handoff sessions across web, reporting, and lifecycle layers
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-value">0</div>
-                <div class="metric-label">
-                  Data-infrastructure ramp-up required after client-team turnover
-                </div>
-              </div>
-            </div>
-
-            <div class="dash-mock" aria-label="Illustrative dashboard mockup">
-              <div class="dash-mock-head">
-                <div class="dash-mock-title">
-                  Cross-channel executive view &middot; <em>illustrative</em>
-                </div>
-                <div class="dash-mock-filters">
-                  <span class="dash-mock-chip">Last 30d</span>
-                  <span class="dash-mock-chip">Web + App</span>
-                  <span class="dash-mock-chip">All campaigns</span>
-                </div>
-              </div>
-              <div class="dash-mock-kpis">
-                <div class="dash-mock-kpi">
-                  <div class="dash-mock-kpi-label">Sessions</div>
-                  <div class="dash-mock-kpi-value">412k</div>
-                  <div class="dash-mock-kpi-trend">+8.4% wow</div>
-                </div>
-                <div class="dash-mock-kpi">
-                  <div class="dash-mock-kpi-label">Conversion</div>
-                  <div class="dash-mock-kpi-value">3.7%</div>
-                  <div class="dash-mock-kpi-trend">+0.4 pts</div>
-                </div>
-                <div class="dash-mock-kpi">
-                  <div class="dash-mock-kpi-label">Email CTR</div>
-                  <div class="dash-mock-kpi-value">5.1%</div>
-                  <div class="dash-mock-kpi-trend down">&minus;0.3 pts</div>
-                </div>
-                <div class="dash-mock-kpi">
-                  <div class="dash-mock-kpi-label">Org. share</div>
-                  <div class="dash-mock-kpi-value">62%</div>
-                  <div class="dash-mock-kpi-trend">+1.2 pts</div>
-                </div>
-              </div>
-              <div class="dash-mock-chart">
-                <div class="dash-mock-chart-title">
-                  Weekly sessions &middot; web + app, side by side
-                </div>
-                <div class="dash-mock-bars">
-                  <div class="dash-mock-bar" style="height: 38%"></div>
-                  <div class="dash-mock-bar alt" style="height: 24%"></div>
-                  <div class="dash-mock-bar" style="height: 52%"></div>
-                  <div class="dash-mock-bar alt" style="height: 30%"></div>
-                  <div class="dash-mock-bar" style="height: 61%"></div>
-                  <div class="dash-mock-bar alt" style="height: 38%"></div>
-                  <div class="dash-mock-bar" style="height: 74%"></div>
-                  <div class="dash-mock-bar alt" style="height: 46%"></div>
-                  <div class="dash-mock-bar" style="height: 82%"></div>
-                  <div class="dash-mock-bar alt" style="height: 54%"></div>
-                  <div class="dash-mock-bar" style="height: 96%"></div>
-                  <div class="dash-mock-bar alt" style="height: 62%"></div>
-                </div>
-                <div class="dash-mock-bar-labels">
-                  <span>W1</span><span>W1</span><span>W2</span><span>W2</span><span>W3</span><span>W3</span><span>W4</span><span>W4</span><span>W5</span><span>W5</span><span>W6</span><span>W6</span>
-                </div>
-                <div class="dash-mock-funnel">
-                  <div class="dash-mock-funnel-row">
-                    <span>Browse</span>
-                    <div class="dash-mock-funnel-bar"><div class="dash-mock-funnel-fill" style="width: 100%"></div></div>
-                    <span class="dash-mock-funnel-value">100%</span>
-                  </div>
-                  <div class="dash-mock-funnel-row">
-                    <span>Add to cart</span>
-                    <div class="dash-mock-funnel-bar"><div class="dash-mock-funnel-fill" style="width: 42%"></div></div>
-                    <span class="dash-mock-funnel-value">42%</span>
-                  </div>
-                  <div class="dash-mock-funnel-row">
-                    <span>Checkout</span>
-                    <div class="dash-mock-funnel-bar"><div class="dash-mock-funnel-fill" style="width: 28%"></div></div>
-                    <span class="dash-mock-funnel-value">28%</span>
-                  </div>
-                  <div class="dash-mock-funnel-row">
-                    <span>Purchase</span>
-                    <div class="dash-mock-funnel-bar"><div class="dash-mock-funnel-fill" style="width: 19%"></div></div>
-                    <span class="dash-mock-funnel-value">19%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-label">Before</div>
-                <div class="timeline-title">
-                  Two dedicated analysts. One monthly report. Two combined work-weeks of manual data pulling per cycle.
-                </div>
-                <div class="timeline-body">
-                  Web, app, Search Console, and Braze data lived in disconnected sources. Each monthly cycle required manual extraction, reconciliation, and formatting.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-label">Build</div>
-                <div class="timeline-title">
-                  BigQuery, Dataform, and Looker Studio created the maintained reporting layer.
-                </div>
-                <div class="timeline-body">
-                  Domain specialists gained direct self-serve access to their own data. A Braze REST API automation removed another recurring CRM reporting task.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-label">Handoff 1</div>
-                <div class="timeline-title">
-                  Web: GTM structure, GA4 event taxonomy, Looker Studio architecture, BigQuery pipeline.
-                </div>
-                <div class="timeline-body">
-                  Documented for a client analyst audience. Operational clarity over technical performance.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-label">Handoff 2</div>
-                <div class="timeline-title">
-                  App and reporting: SDK patterns, GA4 DebugView, BigQuery schema, production SQL walkthrough.
-                </div>
-                <div class="timeline-body">
-                  Repo access, branching strategy, and PR review process were explained so the client team could validate new events independently.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-label">Handoff 3</div>
-                <div class="timeline-title">
-                  CRM: Braze dashboard orientation, Python automation walkthrough, API key rotation, checklist.
-                </div>
-                <div class="timeline-body">
-                  Confluence knowledge base, ERD summary, and data dictionary made the system legible to the inheriting team.
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="timeline-label">Adoption test</div>
-                <div class="timeline-title">
-                  Team turnover. New analysts onboarded. Zero ramp-up time on data infrastructure.
-                </div>
-                <div class="timeline-body">
-                  The system survived the people who built it.
-                </div>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">BigQuery / GCP</span>
-              <span class="tag">Dataform</span>
-              <span class="tag">GA4 (web + app)</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Braze REST API</span>
-              <span class="tag">Python</span>
-              <span class="tag">Confluence</span>
-              <span class="tag">Client enablement</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="next" class="alt">
-        <div class="section-body">
-          <div class="container">
-            <p class="section-eyebrow">Next</p>
-            <h2 class="section-heading">
-              More from the Philips selection, or get in touch.
-            </h2>
-
-            <div class="deeper deeper-three">
-              <a class="deeper-card" href="/philips/work/">
-                <span class="deeper-label">More cases</span>
-                <span class="deeper-title">Philips selection &mdash; <em>twelve cases, six evidence paths</em>.</span>
-                <span class="deeper-body">The curated case library mapped against the UX Telemetry Expert role.</span>
-                <span class="deeper-cta">Open the selection &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/work/candidate-funnel.html">
-                <span class="deeper-label">Adjacent case</span>
-                <span class="deeper-title">A 50%+ candidate drop-off, decomposed step by step.</span>
-                <span class="deeper-body">Another GA4-to-BigQuery-to-Looker Studio build: funnel instrumentation that replaced a manual Excel workflow with step-level abandonment evidence.</span>
-                <span class="deeper-cta">Read adjacent case &rarr;</span>
-              </a>
-              <a class="deeper-card" href="/philips/contact/">
-                <span class="deeper-label">Get in touch</span>
-                <span class="deeper-title">Contact &mdash; channels and context.</span>
-                <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject for role 579397.</span>
-                <span class="deeper-cta">Open contact page &rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </section>
+</main>
