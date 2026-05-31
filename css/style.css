@@ -3280,6 +3280,8 @@ a.bp-receipt-link:focus-visible {
 .bp-portrait {
   border: 1px solid var(--bp-ink);
   background: var(--bp-card);
+  margin: 0;
+  max-width: 100%;
   padding: 8px;
 }
 

@@ -20,6 +20,7 @@ Targeted role-fit microsites are preserved separately from the main portfolio fl
 
 ## Featured projects
 
+- **[Signal Conduit](https://signal-conduit.fredericlabadie.com)** &mdash; an analytics-governance workbench for canonical tracking specs, multi-analyst review, platform mapping, and Claude-ready Jira handoff kits. [source](https://github.com/fredericlabadie/Signal-Conduit)
 - **[Dervin's SMM Guide](https://smm.fredericlabadie.com)** &mdash; a practitioner's guide to Brenda Dervin's Sense-Making Methodology, with a working question rewriter (Hugging Face Inference Providers via a small Vercel API). [source](https://github.com/fredericlabadie/DervinsSMM_Course)
 - **[Writers Room](https://writersroom.fredericlabadie.com)** &mdash; a multi-agent AI workspace with four room types (Writers, Job Hunt, Career, Publishing), parallel and chained agent calls, pgvector RAG, and read-only review links. [source](https://github.com/fredericlabadie/Writers-room)
 - **[VibeReader](https://vibereader.fredericlabadie.com)** &mdash; book &harr; song recommendations that reason about mood, texture, and thematic resonance rather than genre tags. [source](https://github.com/fredericlabadie/VibeReader)
@@ -135,7 +136,7 @@ This README is not the active backlog. Use it for public maintenance notes only;
 - **Microsite clone discipline** &mdash; Adyen and Philips contain role-framed case clones. When a canonical case changes, check whether either microsite clone needs the same content correction or whether the role-specific framing should intentionally differ.
 - **CV export discipline** &mdash; re-export the relevant PDFs in `assets/resume/` only after substantive CV changes, and review them as binary assets before merge.
 - **Future case additions** &mdash; new cases should enter the active Work library only after proof, metric context, anonymisation, and source-of-truth checks are complete.
-- **Indexing preference** &mdash; the site is public for direct sharing but not intended for search indexing. Keep `robots.txt` fetchable and rely on page-level `noindex, nofollow` metadata unless that strategy changes deliberately.
+- **Indexing preference** &mdash; the site is public for direct sharing but not intended for search indexing. Keep `robots.txt` fetchable and rely on page-level `noindex, follow` metadata unless that strategy changes deliberately.
 
 ### Lower-priority polish
 
