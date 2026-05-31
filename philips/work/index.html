@@ -7,409 +7,794 @@ title: "Work &mdash; Frederic Labadie for Philips UX Telemetry"
 description: "Curated case library for the Philips UX Telemetry Expert role: thirteen cases organised around end-to-end telemetry delivery, AI workflow design, question framing, adoption, experimentation culture, and telemetry architecture."
 og_type: website
 og_title: "Work &mdash; Frederic Labadie for Philips UX Telemetry"
-og_description: "Twelve cases curated against the Philips UX Telemetry Expert role."
+og_description: "Thirteen cases curated against the Philips UX Telemetry Expert role."
 og_url: "https://fredericlabadie.com/philips/work/"
 ---
 
 <main id="top">
+  <!-- PAGE INTRO -->
+  <section class="page-intro hero">
+    <div class="container">
+      <p class="eyebrow">Work &middot; Philips UX Telemetry</p>
+      <h1>Thirteen cases, organised around the telemetry cycle.</h1>
+      <p>
+        This is the Philips-facing cut of the larger case library:
+        instrumentation first, because the role is explicitly about end-to-end
+        UX telemetry implementation; AI workflow design next, because the brief
+        calls for AI-enabled analytical opportunities; then question
+        formulation, adoption, experimentation culture, and telemetry
+        architecture.
+      </p>
+      <p>
+        Marketing and lifecycle cases are omitted unless they add something
+        specific to the UX Telemetry Expert role. The
+        <a href="/philips/">Philips overview</a> gives the shorter role-fit map;
+        <a href="/philips/about/">About</a> carries the bio, credentials, and
+        clinical-domain calibration.
+      </p>
+      <p class="page-intro-note">
+        Case pages are designed to print cleanly &mdash;
+        <kbd>Cmd/Ctrl + P</kbd> on any case gives you a clean one-up document
+        with resolved URLs in the footnotes.
+      </p>
+    </div>
+  </section>
 
-    <!-- PAGE INTRO -->
-    <section class="page-intro hero">
+  <!-- EVIDENCE INDEX -->
+  <section id="case-studies">
+    <div class="section-head">
+      <div class="num">00</div>
+      <div class="label">Evidence paths</div>
+      <div class="title">
+        Five paths &middot; thirteen cases &middot; Philips-facing order
+      </div>
+    </div>
+    <div class="section-body">
       <div class="container">
-        <p class="eyebrow">Work &middot; Philips UX Telemetry</p>
-        <h1>Thirteen cases, organised around the telemetry cycle.</h1>
-        <p>
-          This is the Philips-facing cut of the larger case library: instrumentation first, because the role is explicitly about end-to-end UX telemetry implementation; AI workflow design next, because the brief calls for AI-enabled analytical opportunities; then question formulation, adoption, experimentation culture, and telemetry architecture.
+        <p class="section-eyebrow">Evidence paths</p>
+        <h2 class="section-heading">Start where the role starts.</h2>
+        <p class="section-sub">
+          The order follows the role rather than the archive: implementation and
+          telemetry quality first, then AI-assisted analytics, question
+          formulation, adoption, experimentation culture, and architecture. The
+          numbers preserve the main library cross-reference, which is why they
+          are not sequential.
         </p>
-        <p>
-          Marketing and lifecycle cases are omitted unless they add something specific to the UX Telemetry Expert role. The <a href="/philips/">Philips overview</a> gives the shorter role-fit map; <a href="/philips/about/">About</a> carries the bio, credentials, and clinical-domain calibration.
-        </p>
-        <p class="page-intro-note">Case pages are designed to print cleanly &mdash; <kbd>Cmd/Ctrl + P</kbd> on any case gives you a clean one-up document with resolved URLs in the footnotes.</p>
+
+        <nav class="case-toc" aria-label="Case study evidence paths">
+          <a class="case-toc-item" href="#topic-instrumentation">
+            <div class="case-toc-num">02</div>
+            <div class="case-toc-title">
+              Instrumentation &amp; Cross-Platform Telemetry
+            </div>
+            <div class="case-toc-meta">
+              Error taxonomy &middot; greenfield mobile &middot; SDK debugging
+              &middot; GTM architecture &middot; platform migration
+            </div>
+          </a>
+          <a class="case-toc-item" href="#topic-ai">
+            <div class="case-toc-num">04</div>
+            <div class="case-toc-title">AI Workflow Design</div>
+            <div class="case-toc-meta">
+              Alert triage with explicit human gates &middot; GenAI platform
+              telemetry
+            </div>
+          </a>
+          <a class="case-toc-item" href="#topic-question">
+            <div class="case-toc-num">01</div>
+            <div class="case-toc-title">
+              Question Formulation &amp; Discovery
+            </div>
+            <div class="case-toc-meta">
+              Mixed-methods UX research &middot; Shadow IT detection
+            </div>
+          </a>
+          <a class="case-toc-item" href="#topic-adoption">
+            <div class="case-toc-num">05</div>
+            <div class="case-toc-title">Adoption &amp; Cultural Transition</div>
+            <div class="case-toc-meta">
+              Client enablement &middot; the system outlasting the builder
+            </div>
+          </a>
+          <a class="case-toc-item" href="#topic-experimentation">
+            <div class="case-toc-num">03</div>
+            <div class="case-toc-title">Experimentation Culture</div>
+            <div class="case-toc-meta">
+              A/B testing as leadership practice &middot; placement testing
+            </div>
+          </a>
+        </nav>
       </div>
-    </section>
 
-    <!-- EVIDENCE INDEX -->
-    <section id="case-studies">
-      <div class="section-head">
-        <div class="num">00</div>
-        <div class="label">Evidence paths</div>
-        <div class="title">Five paths &middot; thirteen cases &middot; Philips-facing order</div>
+      <!-- ===== PATH 02 — INSTRUMENTATION ===== -->
+      <div class="container case-group" id="topic-instrumentation">
+        <header class="case-group-header">
+          <p class="case-group-eyebrow">Path 02 &middot; primary evidence</p>
+          <h3 class="case-group-title">
+            Instrumentation &amp; Cross-Platform Telemetry
+          </h3>
+          <p class="case-group-sub">
+            The layer the rest of the telemetry cycle depends on: event schemas,
+            implementation requirements, cross-platform parity, SDK debugging,
+            error taxonomies, and monitors that can be trusted when product
+            teams need to act.
+          </p>
+          <p class="case-group-roles">
+            Maps to the brief: data needs, event definitions, tracking plans,
+            implementation coordination, and dashboard-ready telemetry.
+          </p>
+        </header>
       </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Evidence paths</p>
-          <h2 class="section-heading">Start where the role starts.</h2>
-          <p class="section-sub">The order follows the role rather than the archive: implementation and telemetry quality first, then AI-assisted analytics, question formulation, adoption, experimentation culture, and architecture. The numbers preserve the main library cross-reference, which is why they are not sequential.</p>
 
-          <nav class="case-toc" aria-label="Case study evidence paths">
-            <a class="case-toc-item" href="#topic-instrumentation">
-              <div class="case-toc-num">02</div>
-              <div class="case-toc-title">Instrumentation &amp; Cross-Platform Telemetry</div>
-              <div class="case-toc-meta">Error taxonomy &middot; greenfield mobile &middot; SDK debugging &middot; GTM architecture &middot; platform migration</div>
-            </a>
-            <a class="case-toc-item" href="#topic-ai">
-              <div class="case-toc-num">04</div>
-              <div class="case-toc-title">AI Workflow Design</div>
-              <div class="case-toc-meta">Alert triage with explicit human gates &middot; GenAI platform telemetry</div>
-            </a>
-            <a class="case-toc-item" href="#topic-question">
-              <div class="case-toc-num">01</div>
-              <div class="case-toc-title">Question Formulation &amp; Discovery</div>
-              <div class="case-toc-meta">Mixed-methods UX research &middot; Shadow IT detection</div>
-            </a>
-            <a class="case-toc-item" href="#topic-adoption">
-              <div class="case-toc-num">05</div>
-              <div class="case-toc-title">Adoption &amp; Cultural Transition</div>
-              <div class="case-toc-meta">Client enablement &middot; the system outlasting the builder</div>
-            </a>
-            <a class="case-toc-item" href="#topic-experimentation">
-              <div class="case-toc-num">03</div>
-              <div class="case-toc-title">Experimentation Culture</div>
-              <div class="case-toc-meta">A/B testing as leadership practice &middot; placement testing</div>
-            </a>
-          </nav>
-        </div>
-
-        <!-- ===== PATH 02 — INSTRUMENTATION ===== -->
-        <div class="container case-group" id="topic-instrumentation">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Path 02 &middot; primary evidence</p>
-            <h3 class="case-group-title">Instrumentation &amp; Cross-Platform Telemetry</h3>
-            <p class="case-group-sub">The layer the rest of the telemetry cycle depends on: event schemas, implementation requirements, cross-platform parity, SDK debugging, error taxonomies, and monitors that can be trusted when product teams need to act.</p>
-            <p class="case-group-roles">Maps to the brief: data needs, event definitions, tracking plans, implementation coordination, and dashboard-ready telemetry.</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Error taxonomy</span>
-              <span class="case-card-context">Major quick-service restaurant &middot; Amplitude monitors</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/mqsr-errors.html">Clean taxonomy, trustworthy alerts, enriched context.</a></h4>
-            <p class="case-card-body">Three layers of remediation on a noisy alert channel: threshold redesign, a hierarchical error-category ID scheme (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>), and <code>cart_id</code> context enrichment. The principle is simple: error events need the same diagnostic context as their success counterparts.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Event taxonomy, alert engineering, and telemetry context design &mdash; the foundations for dashboards and AI-assisted triage that teams can trust.</p>
-            <p class="case-card-body"><a href="/philips/work/mqsr-errors.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Amplitude monitors</span>
-              <span class="tag">Error taxonomy design</span>
-              <span class="tag">Alert engineering</span>
-              <span class="tag">Schema governance</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Greenfield instrumentation</span>
-              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/sslp-mobile.html">From "what should we measure?" to 30+ shipped tickets.</a></h4>
-            <p class="case-card-body">Greenfield mobile UX telemetry across iOS and Android: spec to production, 30+ tickets shipped, cross-platform parity audited, GA4 e-commerce taxonomy in place, with TrustArc and OneTrust consent management integrated before launch.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> The same delivery shape the Philips brief describes: translate questions into event definitions, implementation requirements, QA criteria, and production telemetry under privacy constraints.</p>
-            <p class="case-card-body"><a href="/philips/work/sslp-mobile.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GA4 (web + app)</span>
-              <span class="tag">Firebase SDK</span>
-              <span class="tag">Segment CDP</span>
-              <span class="tag">Cross-platform parity</span>
-              <span class="tag">Consent management</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Funnel instrumentation</span>
-              <span class="case-card-context">Global AI services firm &middot; candidate sourcing platform &middot; 2025</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/candidate-funnel.html">A 50%+ candidate drop-off, decomposed step by step.</a></h4>
-            <p class="case-card-body">GA4 instrumentation of a Candidate Management Platform decomposed a 50%+ candidate drop-off into step-level funnel evidence &mdash; per-step abandon rates, user-identity parameters, and a Looker Studio dashboard on the GA4-to-BigQuery pipeline that replaced a manual Excel workflow.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Translating a vague drop-off problem into per-step event definitions, identity parameters, and a dashboard-ready funnel view &mdash; the same translation the Philips brief describes from data needs to dashboard output.</p>
-            <p class="case-card-body"><a href="/philips/work/candidate-funnel.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GA4 instrumentation</span>
-              <span class="tag">BigQuery</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Funnel decomposition</span>
-              <span class="tag">User-identity parameters</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; SDK debugging</span>
-              <span class="case-card-context">Major quick-service restaurant &middot; Segment &middot; analytics-swift 1.9.1</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/mqsr-schema-sdk.html">A silent iOS data-loss bug, traced to the initialisation sequence.</a></h4>
-            <p class="case-card-body">An iOS undercount of <code>Application Opened</code> events versus Android, root-caused to a Segment SDK 1.9.1 gate that silently dropped events when <code>enabled = false</code>. The same engagement surfaced cross-platform parity gaps and GTM container governance issues.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Telemetry that undercounts is worse than telemetry that is obviously missing. This is the implementation-debugging discipline behind trustworthy product and workflow data.</p>
-            <p class="case-card-body"><a href="/philips/work/mqsr-schema-sdk.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Segment CDP</span>
-              <span class="tag">analytics-swift 1.9.1</span>
-              <span class="tag">GTM container governance</span>
-              <span class="tag">Cross-platform parity</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; GTM architecture</span>
-              <span class="case-card-context">B2B/B2C hardware authentication brand &middot; e-commerce instrumentation &middot; 2016</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/hardware-ecommerce-gtm.html">All analytics in the tag manager. Not one line in the site code.</a></h4>
-            <p class="case-card-body">Security requirements banned analytics code from the site codebase entirely &mdash; all tags, variables, and triggers had to live in GTM. When the purchase funnel became a Single Page Application mid-build, the constraint stayed fixed: DOM-based variables, wildcard matching, history-state pageviews, and enhanced ecommerce delivered from the container alone.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Advanced GTM architecture under constraints: the same design discipline behind translating data requirements into production telemetry without coupling the measurement layer to the site build cycle.</p>
-            <p class="case-card-body"><a href="/philips/work/hardware-ecommerce-gtm.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GTM</span>
-              <span class="tag">Enhanced ecommerce</span>
-              <span class="tag">SPA instrumentation</span>
-              <span class="tag">Security-constrained implementation</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Platform migration</span>
-              <span class="case-card-context">D2C health &amp; beverage brand &middot; Adobe Analytics to GA migration &middot; 2019</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/d2c-ga-migration.html">Off Adobe, onto Google. Three phases and a cleared backlog.</a></h4>
-            <p class="case-card-body">Adobe Analytics had made the client&rsquo;s tracking backlog unmanageable &mdash; every change required developer lift. Three-phase GTM-led migration to GA on a Meteor.js SPA: port the Adobe implementation, solve the pre-render data layer problem, clear years of deferred requirements, then add capabilities Adobe had made impractical.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Platform migration as instrumentation rebuild: the data layer push architecture for the Meteor.js SPA is the same challenge as implementing telemetry on any non-standard runtime &mdash; translate requirements into a delivery model that works within the platform&rsquo;s constraints.</p>
-            <p class="case-card-body"><a href="/philips/work/d2c-ga-migration.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GTM</span>
-              <span class="tag">Adobe Analytics migration</span>
-              <span class="tag">Meteor.js SPA</span>
-              <span class="tag">Data layer architecture</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== PATH 04 — AI WORKFLOW DESIGN ===== -->
-        <div class="container case-group" id="topic-ai">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Path 04 &middot; primary evidence</p>
-            <h3 class="case-group-title">AI Workflow Design</h3>
-            <p class="case-group-sub">The model is not the interesting part. The interesting part is the workflow: where AI assists, where human judgement stays accountable, and what prevents automation from becoming unexamined evidence.</p>
-            <p class="case-group-roles">Maps to the brief: AI-enabled telemetry use cases that strengthen product understanding and decision-making.</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; AI workflow design</span>
-              <span class="case-card-context">Major quick-service restaurant brand &middot; analytics architect</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/ai-alert-triage.html">Designing AI workflows that do not outsource the thinking.</a></h4>
-            <p class="case-card-body">A production alert-triage system with explicit gates around where AI assists and where human judgement is preserved. V1 ran 13&ndash;26 April 2026; 230 raw alerts became 39 posts, an 83% reduction, and one critical feature failure surfaced that the on-call team had missed.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> AI surfaces and ranks; it does not diagnose or decide. That gate-design discipline is the transferable part for high-stakes telemetry contexts.</p>
-            <p class="case-card-body"><a href="/philips/work/ai-alert-triage.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Claude API</span>
-              <span class="tag">Amplitude</span>
-              <span class="tag">AI workflow design</span>
-              <span class="tag">Human-AI collaboration</span>
-              <span class="tag">Alert triage</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; AI platform telemetry</span>
-              <span class="case-card-context">Fuel iX &middot; TELUS Digital enterprise GenAI platform</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/copilot-pipeline.html">Product analytics for an enterprise GenAI platform.</a></h4>
-            <p class="case-card-body">The platform had backend billing metering but no front-end behavioural signal. A GA4 event design and BigQuery export pipeline added that layer &mdash; with a query primer equipping the engineering team to answer product questions independently. Pipeline went live and into engineering use within a week.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Designing the measurement layer for an AI product &mdash; event schema, BigQuery export, engineering enablement &mdash; so the team building the product can answer usage and behaviour questions without routing every data question through analytics.</p>
-            <p class="case-card-body"><a href="/philips/work/copilot-pipeline.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">GA4-to-BigQuery</span>
-              <span class="tag">Enterprise GenAI</span>
-              <span class="tag">Event design</span>
-              <span class="tag">Engineering enablement</span>
-              <span class="tag">Product analytics</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== PATH 01 — QUESTION FORMULATION ===== -->
-        <div class="container case-group" id="topic-question">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Path 01</p>
-            <h3 class="case-group-title">Question Formulation &amp; Discovery</h3>
-            <p class="case-group-sub">The work before the event spec: defining the decision, locating the gap, and pairing behavioural data with the user context needed to interpret it.</p>
-            <p class="case-group-roles">Maps to the brief: workshops, UX telemetry questions, usability affinity, and the method behind measurement design.</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Mixed-methods methodology</span>
-              <span class="case-card-context">National home services franchise &middot; 2021&ndash;2022</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/ux-research-home-services.html">Telemetry locates. Method diagnoses.</a></h4>
-            <p class="case-card-body">GA4 and A/B telemetry located where users fell out. A UserZoom protocol built around Sense-Making-informed neutral questioning diagnosed what kind of gap it was. The resulting protocol treated analytics and qualitative research as sequential methods, not competing ones.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> The usability and human-factors bridge: telemetry can locate friction, but the method determines what the friction means.</p>
-            <p class="case-card-body"><a href="/philips/work/ux-research-home-services.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Sense-Making / Dervin</span>
-              <span class="tag">UserZoom (moderated)</span>
-              <span class="tag">Mixed-methods research</span>
-              <span class="tag">Gap-type diagnosis</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Sense-Making applied</span>
-              <span class="case-card-context">Consumer electronics retailer &middot; lifecycle marketing &middot; 2023&ndash;2025</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/shadow-it.html">The workaround broke. The data showed the gap. Frontline staff knew why.</a></h4>
-            <p class="case-card-body">A meaningful cohort returned post-purchase for additional components. The signal appeared while building lifecycle segments for something else; the root cause was a shadow-IT compatibility tool that had stopped working. The product capability that grew out of the finding is now central to the business.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Observational research plus neutral questioning can surface the gap between designed workflow and lived practice &mdash; exactly the gap telemetry alone often cannot explain.</p>
-            <p class="case-card-body"><a href="/philips/work/shadow-it.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">Sense-Making / Dervin</span>
-              <span class="tag">Observational research</span>
-              <span class="tag">Shadow IT detection</span>
-              <span class="tag">Influence without authority</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== PATH 05 — ADOPTION ===== -->
-        <div class="container case-group" id="topic-adoption">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Path 05</p>
-            <h3 class="case-group-title">Adoption &amp; Cultural Transition</h3>
-            <p class="case-group-sub">A measurement layer has not been adopted because it exists. It has been adopted when the team changes how it works, keeps using it, and can explain the system without the original builder in the room.</p>
-            <p class="case-group-roles">Maps to the brief: data storytelling, data literacy, and the cultural transition toward evidence-based product management.</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Enablement &amp; handoff</span>
-              <span class="case-card-context">State-regulated retail platform &middot; analytics architect &middot; 2025&ndash;2026</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/sslp-enablement.html">The reporting layer survived the people who built it.</a></h4>
-            <p class="case-card-body">BigQuery, Dataform, and Looker Studio reporting infrastructure replaced recurring manual report pulls, paired with a three-session structured handoff so the client team could maintain and extend the system independently.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Adoption measured in use, not delivery: 38 analyst hours recovered per month and zero data-infrastructure ramp-up after turnover.</p>
-            <p class="case-card-body"><a href="/philips/work/sslp-enablement.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">BigQuery / GCP</span>
-              <span class="tag">Dataform</span>
-              <span class="tag">GA4 (web + app)</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Client enablement</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- ===== PATH 03 — EXPERIMENTATION ===== -->
-        <div class="container case-group" id="topic-experimentation">
-          <header class="case-group-header">
-            <p class="case-group-eyebrow">Path 03</p>
-            <h3 class="case-group-title">Experimentation Culture</h3>
-            <p class="case-group-sub">Evidence-based practice is cultural work as much as technical work. The habit has to be built before the dashboard can matter.</p>
-            <p class="case-group-roles">Maps to the brief: evidence-based product management, data literacy, and decision practice.</p>
-          </header>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Compact &middot; Culture change</span>
-              <span class="case-card-context">Stanley Steemer &middot; 280 franchise locations &middot; five years</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/stanley-ab.html">Introducing A/B testing as a leadership practice.</a></h4>
-            <p class="case-card-body">Five years building marketing analytics from scratch across 280 franchise locations, including the householding data model and the introduction of A/B testing as a leadership-decision tool. By year two, leadership was actively requesting data-informed decisions.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> Evidence-based practice is cultural work as much as technical work; the habit has to be built before the dashboard can matter.</p>
-            <p class="case-card-body"><a href="/philips/work/stanley-ab.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">A/B testing introduction</span>
-              <span class="tag">Azure SQL Server (greenfield)</span>
-              <span class="tag">Leadership enablement</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="container">
-          <article class="case-card">
-            <div class="case-card-head">
-              <span class="case-card-meta">Case &middot; Placement A/B testing</span>
-              <span class="case-card-context">B2B/B2C hardware authentication brand &middot; 2016</span>
-            </div>
-            <h4 class="case-card-title"><a href="/philips/work/product-quiz-placement.html">The quiz worked. The question was where to put it.</a></h4>
-            <p class="case-card-body">A product selection quiz was quietly driving conversion &mdash; but only for users who found it. Phase&nbsp;1 GA instrumentation confirmed the signal. Phase&nbsp;2 VWO A/B testing across four store-page placement variants confirmed that prominence was the variable: the prominent entry-point variant roughly doubled the pathed conversion rate.</p>
-            <p class="case-card-body"><strong>Role fit &middot;</strong> A/B test design and instrumentation that translates a UX hypothesis into a measurable outcome. The method &mdash; confirm the signal, then test the surface &mdash; transfers to placement decisions in any telemetry-equipped product.</p>
-            <p class="case-card-body"><a href="/philips/work/product-quiz-placement.html">Read the full case &rarr;</a></p>
-            <div class="tags">
-              <span class="tag">VWO</span>
-              <span class="tag">Google Analytics (UA)</span>
-              <span class="tag">A/B testing</span>
-              <span class="tag">Placement testing</span>
-              <span class="tag">Conversion instrumentation</span>
-            </div>
-          </article>
-        </div>
-
-
-      </div>
-    </section>
-
-    <!-- CLOSE / CTA -->
-    <section id="close">
-      <div class="section-head">
-        <div class="num">09</div>
-        <div class="label">Next</div>
-        <div class="title">Three doors out</div>
-      </div>
-      <div class="section-body">
-        <div class="container">
-          <p class="section-eyebrow">Next</p>
-          <h2 class="section-heading">Start with the case that matches the question.</h2>
-
-          <div class="deeper deeper-three">
-            <a class="deeper-card" href="/philips/about/">
-              <span class="deeper-label">More context</span>
-              <span class="deeper-title">About &mdash; bio, skills, credentials, method.</span>
-              <span class="deeper-body">The longer version: HIPAA exposure, Sense-Making practice, Amplitude credentials, and the clinical-domain calibration.</span>
-              <span class="deeper-cta">Read more &rarr;</span>
-            </a>
-            <a class="deeper-card" href="/assets/resume/frederic-labadie-philips-cv.pdf" download>
-              <span class="deeper-label">Quick read</span>
-              <span class="deeper-title">CV &mdash; <em>two pages</em>.</span>
-              <span class="deeper-body">Fourteen years across two A4 pages: profile, skills, experience, and certifications. Updated May 2026.</span>
-              <span class="deeper-cta">Download PDF &darr;</span>
-            </a>
-            <a class="deeper-card" href="/philips/contact/">
-              <span class="deeper-label">Get in touch</span>
-              <span class="deeper-title">Contact &mdash; channels and context.</span>
-              <span class="deeper-body">Email, LinkedIn, GitHub, CV, and a pre-filled subject line for the UX Telemetry Expert role.</span>
-              <span class="deeper-cta">Open contact page &rarr;</span>
-            </a>
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Compact &middot; Error taxonomy</span>
+            <span class="case-card-context"
+              >Major quick-service restaurant &middot; Amplitude monitors</span
+            >
           </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/mqsr-errors.html"
+              >Clean taxonomy, trustworthy alerts, enriched context.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            Three layers of remediation on a noisy alert channel: threshold
+            redesign, a hierarchical error-category ID scheme
+            (<code>SYS-INF-001</code>, <code>SYS-APP-VAL-010</code>), and
+            <code>cart_id</code> context enrichment. The principle is simple:
+            error events need the same diagnostic context as their success
+            counterparts.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Event taxonomy, alert
+            engineering, and telemetry context design &mdash; the foundations
+            for dashboards and AI-assisted triage that teams can trust.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/mqsr-errors.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">Amplitude monitors</span>
+            <span class="tag">Error taxonomy design</span>
+            <span class="tag">Alert engineering</span>
+            <span class="tag">Schema governance</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Greenfield instrumentation</span
+            >
+            <span class="case-card-context"
+              >State-regulated retail platform &middot; analytics architect
+              &middot; 2025&ndash;2026</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/sslp-mobile.html"
+              >From "what should we measure?" to 30+ shipped tickets.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            Greenfield mobile UX telemetry across iOS and Android: spec to
+            production, 30+ tickets shipped, cross-platform parity audited, GA4
+            e-commerce taxonomy in place, with TrustArc and OneTrust consent
+            management integrated before launch.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> The same delivery shape the
+            Philips brief describes: translate questions into event definitions,
+            implementation requirements, QA criteria, and production telemetry
+            under privacy constraints.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/sslp-mobile.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">GA4 (web + app)</span>
+            <span class="tag">Firebase SDK</span>
+            <span class="tag">Segment CDP</span>
+            <span class="tag">Cross-platform parity</span>
+            <span class="tag">Consent management</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Funnel instrumentation</span
+            >
+            <span class="case-card-context"
+              >Global AI services firm &middot; candidate sourcing platform
+              &middot; 2025</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/candidate-funnel.html"
+              >A 50%+ candidate drop-off, decomposed step by step.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            GA4 instrumentation of a Candidate Management Platform decomposed a
+            50%+ candidate drop-off into step-level funnel evidence &mdash;
+            per-step abandon rates, user-identity parameters, and a Looker
+            Studio dashboard on the GA4-to-BigQuery pipeline that replaced a
+            manual Excel workflow.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Translating a vague drop-off
+            problem into per-step event definitions, identity parameters, and a
+            dashboard-ready funnel view &mdash; the same translation the Philips
+            brief describes from data needs to dashboard output.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/candidate-funnel.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">GA4 instrumentation</span>
+            <span class="tag">BigQuery</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">Funnel decomposition</span>
+            <span class="tag">User-identity parameters</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Compact &middot; SDK debugging</span>
+            <span class="case-card-context"
+              >Major quick-service restaurant &middot; Segment &middot;
+              analytics-swift 1.9.1</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/mqsr-schema-sdk.html"
+              >A silent iOS data-loss bug, traced to the initialisation
+              sequence.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            An iOS undercount of <code>Application Opened</code> events versus
+            Android, root-caused to a Segment SDK 1.9.1 gate that silently
+            dropped events when <code>enabled = false</code>. The same
+            engagement surfaced cross-platform parity gaps and GTM container
+            governance issues.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Telemetry that undercounts is
+            worse than telemetry that is obviously missing. This is the
+            implementation-debugging discipline behind trustworthy product and
+            workflow data.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/mqsr-schema-sdk.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">Segment CDP</span>
+            <span class="tag">analytics-swift 1.9.1</span>
+            <span class="tag">GTM container governance</span>
+            <span class="tag">Cross-platform parity</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Case &middot; GTM architecture</span>
+            <span class="case-card-context"
+              >B2B/B2C hardware authentication brand &middot; e-commerce
+              instrumentation &middot; 2016</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/hardware-ecommerce-gtm.html"
+              >All analytics in the tag manager. Not one line in the site
+              code.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            Security requirements banned analytics code from the site codebase
+            entirely &mdash; all tags, variables, and triggers had to live in
+            GTM. When the purchase funnel became a Single Page Application
+            mid-build, the constraint stayed fixed: DOM-based variables,
+            wildcard matching, history-state pageviews, and enhanced ecommerce
+            delivered from the container alone.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Advanced GTM architecture under
+            constraints: the same design discipline behind translating data
+            requirements into production telemetry without coupling the
+            measurement layer to the site build cycle.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/hardware-ecommerce-gtm.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">GTM</span>
+            <span class="tag">Enhanced ecommerce</span>
+            <span class="tag">SPA instrumentation</span>
+            <span class="tag">Security-constrained implementation</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Case &middot; Platform migration</span>
+            <span class="case-card-context"
+              >D2C health &amp; beverage brand &middot; Adobe Analytics to GA
+              migration &middot; 2019</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/d2c-ga-migration.html"
+              >Off Adobe, onto Google. Three phases and a cleared backlog.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            Adobe Analytics had made the client&rsquo;s tracking backlog
+            unmanageable &mdash; every change required developer lift.
+            Three-phase GTM-led migration to GA on a Meteor.js SPA: port the
+            Adobe implementation, solve the pre-render data layer problem, clear
+            years of deferred requirements, then add capabilities Adobe had made
+            impractical.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Platform migration as
+            instrumentation rebuild: the data layer push architecture for the
+            Meteor.js SPA is the same challenge as implementing telemetry on any
+            non-standard runtime &mdash; translate requirements into a delivery
+            model that works within the platform&rsquo;s constraints.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/d2c-ga-migration.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">GTM</span>
+            <span class="tag">Adobe Analytics migration</span>
+            <span class="tag">Meteor.js SPA</span>
+            <span class="tag">Data layer architecture</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== PATH 04 — AI WORKFLOW DESIGN ===== -->
+      <div class="container case-group" id="topic-ai">
+        <header class="case-group-header">
+          <p class="case-group-eyebrow">Path 04 &middot; primary evidence</p>
+          <h3 class="case-group-title">AI Workflow Design</h3>
+          <p class="case-group-sub">
+            The model is not the interesting part. The interesting part is the
+            workflow: where AI assists, where human judgement stays accountable,
+            and what prevents automation from becoming unexamined evidence.
+          </p>
+          <p class="case-group-roles">
+            Maps to the brief: AI-enabled telemetry use cases that strengthen
+            product understanding and decision-making.
+          </p>
+        </header>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Case &middot; AI workflow design</span>
+            <span class="case-card-context"
+              >Major quick-service restaurant brand &middot; analytics
+              architect</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/ai-alert-triage.html"
+              >Designing AI workflows that do not outsource the thinking.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            A production alert-triage system with explicit gates around where AI
+            assists and where human judgement is preserved. V1 ran 13&ndash;26
+            April 2026; 230 raw alerts became 39 posts, an 83% reduction, and
+            one critical feature failure surfaced that the on-call team had
+            missed.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> AI surfaces and ranks; it does
+            not diagnose or decide. That gate-design discipline is the
+            transferable part for high-stakes telemetry contexts.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/ai-alert-triage.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">Claude API</span>
+            <span class="tag">Amplitude</span>
+            <span class="tag">AI workflow design</span>
+            <span class="tag">Human-AI collaboration</span>
+            <span class="tag">Alert triage</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; AI platform telemetry</span
+            >
+            <span class="case-card-context"
+              >Fuel iX &middot; TELUS Digital enterprise GenAI platform</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/copilot-pipeline.html"
+              >Product analytics for an enterprise GenAI platform.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            The platform had backend billing metering but no front-end
+            behavioural signal. A GA4 event design and BigQuery export pipeline
+            added that layer &mdash; with a query primer equipping the
+            engineering team to answer product questions independently. Pipeline
+            went live and into engineering use within a week.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Designing the measurement layer
+            for an AI product &mdash; event schema, BigQuery export, engineering
+            enablement &mdash; so the team building the product can answer usage
+            and behaviour questions without routing every data question through
+            analytics.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/copilot-pipeline.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">GA4-to-BigQuery</span>
+            <span class="tag">Enterprise GenAI</span>
+            <span class="tag">Event design</span>
+            <span class="tag">Engineering enablement</span>
+            <span class="tag">Product analytics</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== PATH 01 — QUESTION FORMULATION ===== -->
+      <div class="container case-group" id="topic-question">
+        <header class="case-group-header">
+          <p class="case-group-eyebrow">Path 01</p>
+          <h3 class="case-group-title">Question Formulation &amp; Discovery</h3>
+          <p class="case-group-sub">
+            The work before the event spec: defining the decision, locating the
+            gap, and pairing behavioural data with the user context needed to
+            interpret it.
+          </p>
+          <p class="case-group-roles">
+            Maps to the brief: workshops, UX telemetry questions, usability
+            affinity, and the method behind measurement design.
+          </p>
+        </header>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Mixed-methods methodology</span
+            >
+            <span class="case-card-context"
+              >National home services franchise &middot; 2021&ndash;2022</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/ux-research-home-services.html"
+              >Telemetry locates. Method diagnoses.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            GA4 and A/B telemetry located where users fell out. A UserZoom
+            protocol built around Sense-Making-informed neutral questioning
+            diagnosed what kind of gap it was. The resulting protocol treated
+            analytics and qualitative research as sequential methods, not
+            competing ones.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> The usability and human-factors
+            bridge: telemetry can locate friction, but the method determines
+            what the friction means.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/ux-research-home-services.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">Sense-Making / Dervin</span>
+            <span class="tag">UserZoom (moderated)</span>
+            <span class="tag">Mixed-methods research</span>
+            <span class="tag">Gap-type diagnosis</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Sense-Making applied</span
+            >
+            <span class="case-card-context"
+              >Consumer electronics retailer &middot; lifecycle marketing
+              &middot; 2023&ndash;2025</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/shadow-it.html"
+              >The workaround broke. The data showed the gap. Frontline staff
+              knew why.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            A meaningful cohort returned post-purchase for additional
+            components. The signal appeared while building lifecycle segments
+            for something else; the root cause was a shadow-IT compatibility
+            tool that had stopped working. The product capability that grew out
+            of the finding is now central to the business.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Observational research plus
+            neutral questioning can surface the gap between designed workflow
+            and lived practice &mdash; exactly the gap telemetry alone often
+            cannot explain.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/shadow-it.html">Read the full case &rarr;</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Sense-Making / Dervin</span>
+            <span class="tag">Observational research</span>
+            <span class="tag">Shadow IT detection</span>
+            <span class="tag">Influence without authority</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== PATH 05 — ADOPTION ===== -->
+      <div class="container case-group" id="topic-adoption">
+        <header class="case-group-header">
+          <p class="case-group-eyebrow">Path 05</p>
+          <h3 class="case-group-title">Adoption &amp; Cultural Transition</h3>
+          <p class="case-group-sub">
+            A measurement layer has not been adopted because it exists. It has
+            been adopted when the team changes how it works, keeps using it, and
+            can explain the system without the original builder in the room.
+          </p>
+          <p class="case-group-roles">
+            Maps to the brief: data storytelling, data literacy, and the
+            cultural transition toward evidence-based product management.
+          </p>
+        </header>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Enablement &amp; handoff</span
+            >
+            <span class="case-card-context"
+              >State-regulated retail platform &middot; analytics architect
+              &middot; 2025&ndash;2026</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/sslp-enablement.html"
+              >The reporting layer survived the people who built it.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            BigQuery, Dataform, and Looker Studio reporting infrastructure
+            replaced recurring manual report pulls, paired with a three-session
+            structured handoff so the client team could maintain and extend the
+            system independently.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Adoption measured in use, not
+            delivery: 38 analyst hours recovered per month and zero
+            data-infrastructure ramp-up after turnover.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/sslp-enablement.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">BigQuery / GCP</span>
+            <span class="tag">Dataform</span>
+            <span class="tag">GA4 (web + app)</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">Client enablement</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== PATH 03 — EXPERIMENTATION ===== -->
+      <div class="container case-group" id="topic-experimentation">
+        <header class="case-group-header">
+          <p class="case-group-eyebrow">Path 03</p>
+          <h3 class="case-group-title">Experimentation Culture</h3>
+          <p class="case-group-sub">
+            Evidence-based practice is cultural work as much as technical work.
+            The habit has to be built before the dashboard can matter.
+          </p>
+          <p class="case-group-roles">
+            Maps to the brief: evidence-based product management, data literacy,
+            and decision practice.
+          </p>
+        </header>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta">Compact &middot; Culture change</span>
+            <span class="case-card-context"
+              >Stanley Steemer &middot; 280 franchise locations &middot; five
+              years</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/stanley-ab.html"
+              >Introducing A/B testing as a leadership practice.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            Five years building marketing analytics from scratch across 280
+            franchise locations, including the householding data model and the
+            introduction of A/B testing as a leadership-decision tool. By year
+            two, leadership was actively requesting data-informed decisions.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> Evidence-based practice is
+            cultural work as much as technical work; the habit has to be built
+            before the dashboard can matter.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/stanley-ab.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">A/B testing introduction</span>
+            <span class="tag">Azure SQL Server (greenfield)</span>
+            <span class="tag">Leadership enablement</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="case-card">
+          <div class="case-card-head">
+            <span class="case-card-meta"
+              >Case &middot; Placement A/B testing</span
+            >
+            <span class="case-card-context"
+              >B2B/B2C hardware authentication brand &middot; 2016</span
+            >
+          </div>
+          <h4 class="case-card-title">
+            <a href="/philips/work/product-quiz-placement.html"
+              >The quiz worked. The question was where to put it.</a
+            >
+          </h4>
+          <p class="case-card-body">
+            A product selection quiz was quietly driving conversion &mdash; but
+            only for users who found it. Phase&nbsp;1 GA instrumentation
+            confirmed the signal. Phase&nbsp;2 VWO A/B testing across four
+            store-page placement variants confirmed that prominence was the
+            variable: the prominent entry-point variant roughly doubled the
+            pathed conversion rate.
+          </p>
+          <p class="case-card-body">
+            <strong>Role fit &middot;</strong> A/B test design and
+            instrumentation that translates a UX hypothesis into a measurable
+            outcome. The method &mdash; confirm the signal, then test the
+            surface &mdash; transfers to placement decisions in any
+            telemetry-equipped product.
+          </p>
+          <p class="case-card-body">
+            <a href="/philips/work/product-quiz-placement.html"
+              >Read the full case &rarr;</a
+            >
+          </p>
+          <div class="tags">
+            <span class="tag">VWO</span>
+            <span class="tag">Google Analytics (UA)</span>
+            <span class="tag">A/B testing</span>
+            <span class="tag">Placement testing</span>
+            <span class="tag">Conversion instrumentation</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE / CTA -->
+  <section id="close">
+    <div class="section-head">
+      <div class="num">09</div>
+      <div class="label">Next</div>
+      <div class="title">Three doors out</div>
+    </div>
+    <div class="section-body">
+      <div class="container">
+        <p class="section-eyebrow">Next</p>
+        <h2 class="section-heading">
+          Start with the case that matches the question.
+        </h2>
+
+        <div class="deeper deeper-three">
+          <a class="deeper-card" href="/philips/about/">
+            <span class="deeper-label">More context</span>
+            <span class="deeper-title"
+              >About &mdash; bio, skills, credentials, method.</span
+            >
+            <span class="deeper-body"
+              >The longer version: HIPAA exposure, Sense-Making practice,
+              Amplitude credentials, and the clinical-domain calibration.</span
+            >
+            <span class="deeper-cta">Read more &rarr;</span>
+          </a>
+          <a
+            class="deeper-card"
+            href="/assets/resume/frederic-labadie-philips-cv.pdf"
+            download
+          >
+            <span class="deeper-label">Quick read</span>
+            <span class="deeper-title">CV &mdash; <em>two pages</em>.</span>
+            <span class="deeper-body"
+              >Fourteen years across two A4 pages: profile, skills, experience,
+              and certifications. Updated May 2026.</span
+            >
+            <span class="deeper-cta">Download PDF &darr;</span>
+          </a>
+          <a class="deeper-card" href="/philips/contact/">
+            <span class="deeper-label">Get in touch</span>
+            <span class="deeper-title"
+              >Contact &mdash; channels and context.</span
+            >
+            <span class="deeper-body"
+              >Email, LinkedIn, GitHub, CV, and a pre-filled subject line for
+              the UX Telemetry Expert role.</span
+            >
+            <span class="deeper-cta">Open contact page &rarr;</span>
+          </a>
         </div>
       </div>
-    </section>
-
-  </main>
+    </div>
+  </section>
+</main>
