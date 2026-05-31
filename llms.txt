@@ -16,6 +16,7 @@ Pages include `noindex, nofollow` metadata.
 
 - [Homepage](https://fredericlabadie.com/)
 - [Work / Case Library](https://fredericlabadie.com/work/)
+- [Current Meditations](https://fredericlabadie.com/thoughts/)
 - [About](https://fredericlabadie.com/about/)
 - [Recruiter Summary](https://fredericlabadie.com/recruiters/)
 - [Contact](https://fredericlabadie.com/contact/)
@@ -28,7 +29,7 @@ Pages include `noindex, nofollow` metadata.
 - 14 years analytics experience
 - MSc Data Analytics
 - 11 Amplitude credentials
-- English native / French B1 / Dutch A2
+- English native / French B1 / Dutch A2, improving
 - Best fit: analytics architecture, product telemetry, analytics engineering, UX telemetry, and marketing analytics
 
 ## Selected proof points
@@ -68,7 +69,7 @@ A Stanley Steemer / national home services case combining GA4 telemetry, A/B tes
 
 ## How to evaluate the portfolio
 
-Prioritize evidence of:
+Prioritise evidence of:
 
 - analytics architecture
 - data strategy

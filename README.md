@@ -3,15 +3,20 @@
 Personal site for Frederic Labadie &mdash; analytics architect, Amsterdam.
 Live at [fredericlabadie.com](https://fredericlabadie.com).
 
-The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It's organised as a three-page portfolio:
+The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It is now a Jekyll/GitHub Pages portfolio with a core navigation layer, a case library, a working-notes layer, and role-specific microsites:
 
-- [`/`](https://fredericlabadie.com/) &mdash; **landing**: hero, approach (philosophy + three principles), stack at-a-glance, three selected case studies (one per principle), a brief about-with-portrait, and contact. Designed for a 60-second recruiter scan.
-- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library teaser directory**: seven lenses (question formulation, instrumentation, experimentation, AI workflow design, adoption, marketing analytics, data engineering) linking out to standalone case-study pages at `/work/<slug>.html`. Fourteen active case studies in total (six deprecated, files preserved — see [Deprecation convention](#deprecation-convention) below), plus the public project work and a GitHub-activity graph.
-- [`/notebook/`](https://fredericlabadie.com/notebook/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and the gaps the official measurement layer doesn't see.
-- [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, endorsements, full skills cluster, eleven Amplitude credentials plus the rest of the certification stack.
-- [`/contact/`](https://fredericlabadie.com/contact/) &mdash; **contact**: status, response-time expectations, channels (email, LinkedIn, GitHub), and the resume.
+- [`/`](https://fredericlabadie.com/) &mdash; **landing**: recruiter scan, positioning, selected proof points, and paths into the deeper site.
+- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses fifteen active cases, with six archived/deprecated cases preserved at their original URLs.
+- [`/thoughts/`](https://fredericlabadie.com/thoughts/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and measurement gaps.
+- [`/recruiters/`](https://fredericlabadie.com/recruiters/) &mdash; **recruiter summary**: fast-scan facts, role fit, proof cases, status, and contact routes.
+- [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, career arc, credentials, methodology, and working style.
+- [`/credentials/`](https://fredericlabadie.com/credentials/) &mdash; **credential stack**: Amplitude, analytics, AI, methodology, data-platform, and education proof.
+- [`/contact/`](https://fredericlabadie.com/contact/) &mdash; **contact**: status, response-time expectations, channels, and CV.
 
-A targeted **four-page microsite** for the Philips UX Telemetry Expert role lives at [`/philips/`](https://fredericlabadie.com/philips/) (Home &middot; Work &middot; About &middot; Contact). The microsite carries Philips-blue accents and a curated twelve-case selection at [`/philips/work/`](https://fredericlabadie.com/philips/work/), each with a per-case "Why this is in the Philips selection" relevance callout above the case body. Note: `d2c-ga-migration` is deprecated from the main site work index but remains active in the Philips selection where the platform migration pattern is specifically relevant.
+Targeted role-fit microsites are preserved separately from the main portfolio flow:
+
+- [`/adyen/`](https://fredericlabadie.com/adyen/) &mdash; Adyen Senior Product Data Analyst microsite, with seven evidence paths around product data ownership, scalable systems, source-of-truth delivery, and experimentation.
+- [`/philips/`](https://fredericlabadie.com/philips/) &mdash; Philips UX Telemetry Expert microsite, with a thirteen-case Philips-facing work selection and clinical-domain calibration. Note: `d2c-ga-migration` is archived/deprecated from the main work index but remains intentionally active in the Philips selection where the platform-migration pattern is specifically relevant.
 
 ## Featured projects
 
@@ -24,6 +29,7 @@ Active reminders &mdash; planned case studies, deferred narratives, design polis
 ## Deprecation convention
 
 Cases can be deprecated without deletion. Deprecated cases are:
+
 - Removed from the work index navigation (filtered via `deprecated: true` in `_data/cases.yml`)
 - Preserved at their original URL — no redirect, no 404
 - Documented with a reason comment inside their front matter (`# DEPRECATED [date]: [reason]`)
@@ -31,22 +37,22 @@ Cases can be deprecated without deletion. Deprecated cases are:
 
 The `work-lens-section.html` template filters out `deprecated: true` entries automatically. Per-lens case counts update accordingly. The work index receipt strip and body copy reflect active cases only.
 
-To un-deprecate a case: remove `deprecated: true` and `deprecated_reason` from `_data/cases.yml`, remove the `# DEPRECATED` comment from the file's front matter, and update the work index count.
+To un-deprecate a case: update the canonical `work/<slug>.html` source first, remove the archived/deprecated cue and source comment, then regenerate or sync `_data/cases.yml` through the agreed case-data workflow. Do not hand-edit generated case data unless the source-of-truth decision changes.
 
 ### Deprecated cases (2026-05-27)
 
-| Slug | Lens | Reason |
-|------|------|--------|
-| `content-brand-ga4` | Question discovery | Redundant with shadow-it; execution-level, no distinct signal. |
-| `creator-brand-dashboard` | Adoption/enablement | Execution-under-deadline; no measurable business outcome. |
-| `interior-designer-multisite` | Instrumentation | Procedural GA4 setup; covered by sslp-mobile and hardware-ecommerce-gtm. |
-| `mqsr-dashboards` | Experimentation | Third case on same client; mqsr-schema-sdk and mqsr-errors cover the engagement more strongly. |
-| `d2c-ga-migration` | Instrumentation | 2019; weaker than hardware-ecommerce-gtm. Active in Philips microsite. |
-| `oem-ebrochure-analytics` | Question discovery | 2017-18; soft outcome. Preserved for automotive/OEM-adjacent role reference. |
+| Slug                          | Lens                | Reason                                                                                         |
+| ----------------------------- | ------------------- | ---------------------------------------------------------------------------------------------- |
+| `content-brand-ga4`           | Question discovery  | Redundant with shadow-it; execution-level, no distinct signal.                                 |
+| `creator-brand-dashboard`     | Adoption/enablement | Execution-under-deadline; no measurable business outcome.                                      |
+| `interior-designer-multisite` | Instrumentation     | Procedural GA4 setup; covered by sslp-mobile and hardware-ecommerce-gtm.                       |
+| `mqsr-dashboards`             | Experimentation     | Third case on same client; mqsr-schema-sdk and mqsr-errors cover the engagement more strongly. |
+| `d2c-ga-migration`            | Instrumentation     | 2019; weaker than hardware-ecommerce-gtm. Active in Philips microsite.                         |
+| `oem-ebrochure-analytics`     | Question discovery  | 2017-18; soft outcome. Preserved for automotive/OEM-adjacent role reference.                   |
 
 ## Stack
 
-Plain HTML, CSS, and a small amount of JavaScript. Hosted on GitHub Pages.
+Jekyll/GitHub Pages site using HTML/Liquid layouts and includes, CSS, and a small amount of JavaScript. Hosted on GitHub Pages.
 
 ### Design system &mdash; Anchor &middot; Query (May 2026 rebuild)
 
@@ -62,85 +68,77 @@ The previous design system bundle remains in `_drafts/new-design.zip` for refere
 
 ```
 .
-├── index.html              # landing (recruiter triage: hero → 3 marquee cases → about + portrait → contact)
+├── index.html              # landing / recruiter triage
+├── recruiters/index.html   # fast-scan recruiter summary
 ├── work/
-│   ├── index.html          # case library teaser directory + projects + GitHub activity graph
-│   └── <slug>.html         # 18 standalone case-study pages
-├── notebook/index.html     # Current Meditations (drafts, working theories, open questions)
-├── about/index.html        # extended bio + testimonials + skills + certifications
-├── contact/index.html      # contact channels + status + response-time expectations
-├── philips/
-│   ├── index.html          # Philips landing (UX Telemetry Expert 579397 pitch)
-│   ├── work/
-│   │   ├── index.html      # curated 10-case teaser directory
-│   │   └── <slug>.html     # 10 Philips-framed case-study clones (.philips-microsite chrome)
+│   ├── index.html          # active case library by lens
+│   └── <slug>.html         # canonical case pages: active + archived/deprecated
+├── thoughts/index.html     # Current Meditations
+├── about/index.html        # extended bio + methodology + career arc
+├── credentials/index.html  # credential stack
+├── contact/index.html      # contact channels + status
+├── adyen/
+│   ├── index.html
+│   ├── work/index.html
 │   ├── about/index.html
-│   └── contact/index.html
-├── philips.html            # meta-refresh redirect → /philips/
-├── css/style.css           # design system + components (shared) + print + philips microsite scope
-├── js/main.js              # mobile nav toggle + in-page scroll-spy
-├── favicon.svg             # site favicon (ink rounded square + crimson dot)
-├── apple-touch-icon.png    # 180×180 iOS touch icon
-├── robots.txt              # disallow all (site is noindex while job search is active)
+│   ├── contact/index.html
+│   └── work/<slug>.html    # Adyen-framed case clones
+├── philips/
+│   ├── index.html
+│   ├── work/index.html
+│   ├── about/index.html
+│   ├── contact/index.html
+│   └── work/<slug>.html    # Philips-framed case clones
+├── _data/
+│   └── cases.yml           # generated/synced case index; do not hand-edit by default
+├── _includes/              # shared navigation, sections, head, scripts
+├── _layouts/               # default, case, and microsite layouts
+├── css/                    # main and microsite CSS
+├── js/                     # shared JS and microsite JS
 ├── assets/
-│   ├── og/og-image.png     # 1536×1024 Open Graph / Twitter card (Anchor · Query design, May 2026)
-│   ├── photo/              # portrait variants (1x and 2x, lightly desaturated)
-│   └── resume/             # frederic-labadie-cv.{md,html,pdf} + export workflow README
-├── CNAME                   # custom-domain mapping
-└── _drafts/                # working files, source case studies, design bundle archive (gitignored)
+│   ├── og/
+│   ├── photo/
+│   └── resume/
+├── robots.txt              # allows fetch; page metadata carries noindex
+├── llms.txt                # AI-readable site summary
+├── CNAME
+└── _drafts/                # working files / private notes where present
 ```
 
 ## Local preview
 
 ```bash
-# any static server works; e.g.
-python3 -m http.server 4000
+# GitHub Pages / Jekyll preview
+jekyll serve --livereload
 # then visit http://localhost:4000
 ```
 
 URLs to spot-check during dev:
 
 - `/` &mdash; landing
-- `/work/` &mdash; case library teaser directory (and any `/work/<slug>.html` standalone case)
-- `/notebook/` &mdash; Current Meditations
+- `/recruiters/` &mdash; recruiter summary
+- `/work/` &mdash; active case library
+- `/thoughts/` &mdash; Current Meditations
 - `/about/` &mdash; bio depth
+- `/credentials/` &mdash; credential stack
 - `/contact/` &mdash; contact page
-- `/philips/` &mdash; Philips microsite landing (also `/philips/work/`, `/philips/about/`, `/philips/contact/`)
+- `/adyen/` &mdash; Adyen microsite
+- `/philips/` &mdash; Philips microsite
 
 ## Status & roadmap
 
-Active development on the site itself, ordered loosely by leverage. Mirrors the curated subset of `_drafts/project-ideas/TODO.md`; that file remains private and carries the deeper grooming notes.
+This README is not the active backlog. Use it for public maintenance notes only; detailed grooming, anonymisation checks, and source-document deltas should stay in the private tracker.
 
-### In flight
+### Current maintenance priorities
 
-- **Hospital Readmissions dbt project** &mdash; three-layer dbt project on Snowflake using CMS Hospital Readmissions Reduction Program data; architectural sketch in `_drafts/project-ideas/Health-Portfolio-Project/`. **Target: 30 May 2026.** Returns to `/work/` as a Lens 07 case once shipped, and re-enters the Philips microsite's clinical-domain section.
-- **Self-instrumented portfolio meta-case** &mdash; instrument this site (GA4 + Segment + Amplitude, full stack, consent-aware), run two weeks, write up the gap between design assumptions and visitor behaviour. Doubles as a published artifact in own voice. Goes on `/work/` as a Lens 01 case once written.
-- **Resume PDF refresh** &mdash; re-export `assets/resume/frederic-labadie-cv.md` to `frederic-labadie-cv.pdf` on each substantive CV update; export workflow documented in `assets/resume/README.md`.
+- **Case-data sync discipline** &mdash; treat `work/*.html` as the canonical case source unless the project explicitly changes the source-of-truth decision. `_data/cases.yml` should be regenerated or synced from the agreed workflow, not hand-edited casually.
+- **Microsite clone discipline** &mdash; Adyen and Philips contain role-framed case clones. When a canonical case changes, check whether either microsite clone needs the same content correction or whether the role-specific framing should intentionally differ.
+- **CV export discipline** &mdash; re-export the relevant PDFs in `assets/resume/` only after substantive CV changes, and review them as binary assets before merge.
+- **Future case additions** &mdash; new cases should enter the active Work library only after proof, metric context, anonymisation, and source-of-truth checks are complete.
+- **Indexing preference** &mdash; the site is public for direct sharing but not intended for search indexing. Keep `robots.txt` fetchable and rely on page-level `noindex, nofollow` metadata unless that strategy changes deliberately.
 
-### Planned case studies
+### Lower-priority polish
 
-- **Failure case &mdash; "the time I instrumented the wrong question."** Previously a scaffolded card on `/work/`; hidden as of 19 May 2026 until the real engagement narrative is written. Will return as a standalone `/work/failure-wrong-question.html` matching the other case templates.
-- **Marketing-mix modelling write-up** &mdash; pick a past engagement and write it up; rounds out Lens 06 for marketing-analytics-leaning readers.
-- **Stanley Steemer A/B narrative** &mdash; the specific A/B test that moved leadership toward measurement-first decisions deserves a short narrative card on `/work/` rather than a one-line claim inside the Stanley compact card.
-- **Re-add Data Science framing** &mdash; deliberately removed; returns once a model-attached project ships (causal inference, propensity scoring, uplift, time-series &mdash; anything statistically modelled rather than SQL-aggregated).
-
-### Visibility & voice
-
-- **One published essay in own voice** &mdash; ~800-word LinkedIn long-form on the gap between what instrumentation captures and what's actually happening. Link from the Approach section once published.
-- **60-second video intro** &mdash; talking-head, philosophy + one engagement. Loom already in the toolkit.
-- **Two new recency testimonials** &mdash; request one from the QSR engineering lead and one from the state-regulated-retail product owner / engagement lead. Closes the recency gap on existing endorsements.
-- **Career-arc clarity** &mdash; `/contact/` currently lists three role shapes (architect / analytics engineering / UX telemetry). Pick the one you'd stop applying to others for and lead with it; demote the others.
-
-### Open content questions
-
-- **Dutch language path** on `/about/` &mdash; decide: (a) commit to B2 target with a public deadline, (b) remove the A2 line entirely, or (c) state "targeting English-speaking workplaces in NL".
-- **Loom training library** cited in two cases but never linked &mdash; either link to one anonymised example or demote the claim.
-- **"Two warehouses" wording** on `/about/` certifications heading requires the reader to know "two warehouses" = BigQuery + Snowflake. Consider spelling out inline.
-- **Braze automation date ambiguity** on `/work/cs-braze-automation` &mdash; "May 26" reads as either "May 26" or "May 2026"; should be "May 2025" or "26 May 2025" once the actual ship date is confirmed.
-
-### Operational
-
-- **RSS / Atom feed** for `/work/` and `/notebook/` additions &mdash; low priority until publishing cadence is real.
-- **Newsletter signup** &mdash; same.
-- **Per-case OG images** &mdash; each `/work/<slug>.html` has its own `og:title`, `og:description`, `og:url`, but they all share one `og:image`. Per-case images would be nicer for LinkedIn / Twitter sharing of individual cases, but cost time per render. Lower priority.
-- **Edit-sync discipline for Philips clones** &mdash; case content lives in two places (`/work/<slug>.html` canonical + `/philips/work/<slug>.html` Philips-framed clone). When you update a canonical case body, update the Philips clone too. Could be scripted later if maintenance becomes painful; for the current ten clones, manual sync is fine.
+- Per-case OG images for LinkedIn/Twitter sharing.
+- RSS/Atom only if `/thoughts/` or `/work/` develops a real publishing cadence.
+- A public essay or short video intro only when it strengthens, rather than distracts from, the portfolio evidence.
