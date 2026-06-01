@@ -1,19 +1,21 @@
-import * as amplitude from "https://cdn.jsdelivr.net/npm/@amplitude/unified/+esm";
+// analytics.js — portfolio event tracking.
+// Amplitude is never imported here. amplitude-init.js loads it dynamically after
+// consent and exposes it as window.__amp. All tracking calls read FLConsent first.
 
-// ── Helpers ────────────────────────────────────────────────────────────────────
+// ── Helpers ─────────────────────────────────────────────────────────────────────
 
-function hasAnalyticsConsent() {
-  return window.Cookiebot?.consent?.statistics === true;
+function hasConsent() {
+  return window.FLConsent?.hasAnalytics() === true;
 }
 
 function track(event, props) {
-  if (!hasAnalyticsConsent()) return;
-  amplitude.track(event, { Domain: window.location.hostname, ...props });
+  if (!hasConsent() || !window.__amp) return;
+  window.__amp.track(event, { Domain: window.location.hostname, ...props });
 }
 
 function identifyUser(identify) {
-  if (!hasAnalyticsConsent()) return;
-  amplitude.identify(identify);
+  if (!hasConsent() || !window.__amp) return;
+  window.__amp.identify(identify);
 }
 
 const path = () => window.location.pathname;
@@ -41,7 +43,11 @@ function landingSection() {
 
 function visitorIntent() {
   if (path().includes("/recruiters")) return "recruiter";
-  if (path().includes("/work") || path().includes("/philips") || path().includes("/adyen"))
+  if (
+    path().includes("/work") ||
+    path().includes("/philips") ||
+    path().includes("/adyen")
+  )
     return "portfolio";
   if (path().includes("/thoughts")) return "content";
   return "general";
@@ -58,10 +64,13 @@ function isReturning() {
   }
 }
 
-// ── User properties (set once or updated) ─────────────────────────────────────
+// ── User properties ──────────────────────────────────────────────────────────────
+// Requires window.__amp (available only after Amplitude init). Called from
+// DOMContentLoaded (return visitor, amp already ready) or FLAmplitudeReady event.
 
 function initUserProperties() {
-  const identify = new amplitude.Identify();
+  if (!window.__amp) return;
+  const identify = new window.__amp.Identify();
   const returning = isReturning();
 
   identify.setOnce("First Landing Section", landingSection());
@@ -82,7 +91,7 @@ function initUserProperties() {
   identifyUser(identify);
 }
 
-// ── Engagement tracking ────────────────────────────────────────────────────────
+// ── Engagement tracking ──────────────────────────────────────────────────────────
 
 let engagedActionsCount = 0;
 let engagedSessionFired = false;
@@ -100,10 +109,9 @@ function recordEngagedAction(trigger) {
   }
 }
 
-// ── Event: portfolioLensSelected ──────────────────────────────────────────────
+// ── Event: portfolioLensSelected ─────────────────────────────────────────────────
 
 function attachLensTracking() {
-  // Blueprint work page uses a.bp-lens-card elements in the lens index grid
   document.querySelectorAll("a.bp-lens-card").forEach((card) => {
     card.addEventListener("click", () => {
       const lensName =
@@ -120,11 +128,9 @@ function attachLensTracking() {
   });
 }
 
-// ── Event: caseStudyOpened ────────────────────────────────────────────────────
+// ── Event: caseStudyOpened ───────────────────────────────────────────────────────
 
 function attachCaseStudyTracking() {
-  // /philips/ is a direct-link-only sub-site (not in main nav); retained here so
-  // any legacy deep-links to /philips/ case pages are still tracked.
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href") || "";
     const isCaseStudy =
@@ -141,10 +147,9 @@ function attachCaseStudyTracking() {
   });
 }
 
-// ── Event: caseStudyCompleted (scroll depth) ──────────────────────────────────
+// ── Event: caseStudyCompleted (scroll depth) ─────────────────────────────────────
 
 function attachCaseStudyCompletionTracking() {
-  // /philips/ retained — see note in attachCaseStudyTracking
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
   if (!isCasePage) return;
 
@@ -186,10 +191,9 @@ function attachCaseStudyCompletionTracking() {
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
-// ── Event: caseLibraryContinued ───────────────────────────────────────────────
+// ── Event: caseLibraryContinued ──────────────────────────────────────────────────
 
 function attachCaseLibraryTracking() {
-  // /philips/ retained — see note in attachCaseStudyTracking
   const isCasePage = /\/(philips|work)\/[a-z]/.test(path());
   if (!isCasePage) return;
 
@@ -214,10 +218,9 @@ function attachCaseLibraryTracking() {
   });
 }
 
-// ── Event: notebookTopicOpened ────────────────────────────────────────────────
+// ── Event: notebookTopicOpened ───────────────────────────────────────────────────
 
 function attachNotebookTracking() {
-  // Thoughts page uses .bp-thought h3 a anchor links
   document
     .querySelectorAll(
       ".post-entry .post-title a, .post-title a, .bp-thought h3 a",
@@ -248,12 +251,11 @@ function attachNotebookTracking() {
   });
 }
 
-// ── Event: notebookSectionReached (scroll) ────────────────────────────────────
+// ── Event: notebookSectionReached (scroll) ───────────────────────────────────────
 
 function attachNotebookSectionTracking() {
   if (!path().includes("/thoughts")) return;
 
-  // TopicLabel: derive from the nearest ancestor .bp-thought id, falling back to page h1
   const pageTopicLabel =
     document.querySelector("h1")?.textContent?.trim() || "";
 
@@ -293,14 +295,15 @@ function attachNotebookSectionTracking() {
   sections.forEach((s) => observer.observe(s));
 }
 
-// ── Event: resumeDownloaded ────────────────────────────────────────────────────
+// ── Event: resumeDownloaded ──────────────────────────────────────────────────────
 
 function attachResumeTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href") || "";
     if (!/resume|cv|curriculum/i.test(href)) return;
     link.addEventListener("click", () => {
-      const identify = new amplitude.Identify();
+      if (!window.__amp) return;
+      const identify = new window.__amp.Identify();
       identify.setOnce("CV Downloaded", "true");
       identifyUser(identify);
 
@@ -318,7 +321,7 @@ function attachResumeTracking() {
   });
 }
 
-// ── Events: contactChannelSelected / emailComposeStarted ──────────────────────
+// ── Events: contactChannelSelected / emailComposeStarted ─────────────────────────
 
 function attachContactTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -327,11 +330,12 @@ function attachContactTracking() {
 
     if (href.startsWith("mailto:")) {
       link.addEventListener("click", () => {
-        const identify = new amplitude.Identify();
-        identify.setOnce("Has Contacted", "true");
-        identify.set("Primary Contact Channel", "email");
-        identifyUser(identify);
-
+        if (window.__amp) {
+          const identify = new window.__amp.Identify();
+          identify.setOnce("Has Contacted", "true");
+          identify.set("Primary Contact Channel", "email");
+          identifyUser(identify);
+        }
         track("emailComposeStarted", {
           SourcePagePath: path(),
           EmailContext: path().includes("/recruiters")
@@ -352,11 +356,12 @@ function attachContactTracking() {
 
     if (/linkedin\.com/i.test(href)) {
       link.addEventListener("click", () => {
-        const identify = new amplitude.Identify();
-        identify.setOnce("Has Contacted", "true");
-        identify.set("Primary Contact Channel", "linkedin");
-        identifyUser(identify);
-
+        if (window.__amp) {
+          const identify = new window.__amp.Identify();
+          identify.setOnce("Has Contacted", "true");
+          identify.set("Primary Contact Channel", "linkedin");
+          identifyUser(identify);
+        }
         track("linkedinProfileOpened", {
           SourcePagePath: path(),
           SourceSection: cls.includes("primary") ? "primary" : "card",
@@ -391,7 +396,7 @@ function attachContactTracking() {
   });
 }
 
-// ── Event: projectSourceOpened ────────────────────────────────────────────────
+// ── Event: projectSourceOpened ───────────────────────────────────────────────────
 
 function attachProjectSourceTracking() {
   document.querySelectorAll("a[href]").forEach((link) => {
@@ -411,7 +416,7 @@ function attachProjectSourceTracking() {
   });
 }
 
-// ── Event: externalResourceOpened ────────────────────────────────────────────
+// ── Event: externalResourceOpened ───────────────────────────────────────────────
 
 function attachExternalResourceTracking() {
   const SOCIAL = /linkedin\.com|github\.com|twitter\.com|x\.com|t\.co/i;
@@ -440,10 +445,11 @@ function attachExternalResourceTracking() {
   });
 }
 
-// ── Init ───────────────────────────────────────────────────────────────────────
+// ── Init ─────────────────────────────────────────────────────────────────────────
 
 document.addEventListener("DOMContentLoaded", () => {
-  initUserProperties();
+  // Attach all DOM event trackers — safe pre-consent (just adds listeners).
+  // Each tracker's click handler calls track(), which checks consent internally.
   attachLensTracking();
   attachCaseStudyTracking();
   attachCaseStudyCompletionTracking();
@@ -454,4 +460,13 @@ document.addEventListener("DOMContentLoaded", () => {
   attachContactTracking();
   attachProjectSourceTracking();
   attachExternalResourceTracking();
+
+  // initUserProperties requires window.__amp (Amplitude class). Run now only if
+  // it's already available (return visitor who consented previously).
+  if (window.__amp) initUserProperties();
+});
+
+// New visitor who accepts mid-session: Amplitude becomes ready after consent.
+window.addEventListener("FLAmplitudeReady", () => {
+  initUserProperties();
 });
