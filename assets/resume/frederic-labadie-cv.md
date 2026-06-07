@@ -1,4 +1,5 @@
 # Frederic Labadie
+
 **Senior Data Analyst · Analytics Architect**
 
 +31 6 13 82 86 35 · frederic.labadie@gmail.com · linkedin.com/in/frederic-labadie · fredericlabadie.com
@@ -31,7 +32,8 @@ Senior data analyst and analytics architect with 14+ years building measurement 
 ## Experience
 
 ### Analytics Architect — Telus Digital
-*2024 – Present · 100% remote · Multi-client enterprise consultancy*
+
+_2024 – Present · 100% remote · Multi-client enterprise consultancy_
 
 Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently full-time; standard notice applies.
 
@@ -43,7 +45,8 @@ Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently f
 - Manage analytics codebases via GitHub; ensure GDPR-compliant data collection across all client implementations.
 
 ### Email & SMS Marketing Manager — Micro Center Inc.
-*2023 – 2025 · Remote contract (concurrent with Telus Digital) · Consumer electronics retail*
+
+_2023 – 2025 · Remote contract (concurrent with Telus Digital) · Consumer electronics retail_
 
 - Led the full **migration from Oracle Responsys to Bloomreach CDP** — redesigned customer data model, event schemas, segmentation logic, and marketing data flows with **zero campaign downtime** and GDPR-compliant consent management throughout.
 - Designed lifecycle event tracking architecture and customer identity data model supporting triggered campaign automation. **+10.8% YoY CTR, +5.8% YoY open rate** in the first year on the new platform.
@@ -52,7 +55,8 @@ Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently f
 - **Managed a team of two designers**, providing strategic direction on campaign design, creative assessment, and performance optimisation.
 
 ### Analytics Architect / BI Developer — Stanley Steemer Inc.
-*2018 – 2023 · National franchise service, 280 locations · Dublin, OH*
+
+_2018 – 2023 · National franchise service, 280 locations · Dublin, OH_
 
 Walked into an organisation with mature operations data but no marketing measurement capability. Built the entire marketing analytics and BI layer from scratch.
 
@@ -65,14 +69,16 @@ Walked into an organisation with mature operations data but no marketing measure
 - Implemented OneTrust across the full digital estate for GDPR- and CCPA-compliant data collection.
 
 ### Digital Business Analyst — Xivic, Inc.
-*2018 – 2019 · Digital agency · Los Angeles, CA*
+
+_2018 – 2019 · Digital agency · Los Angeles, CA_
 
 - Implemented end-to-end analytics tracking for SPA client products: data layer specifications, GTM configuration with custom JavaScript, Enhanced Ecommerce, and SDR-driven QA.
 - Built cross-domain tracking, custom dimension mapping, and conversion event schemas; troubleshot using browser dev tools and Omnibug.
 - Implemented OneTrust consent management.
 
 ### Web Analyst — Designory / TBWA Worldwide
-*2015 – 2018 · Premium automotive brand analytics · Long Beach, CA*
+
+_2015 – 2018 · Premium automotive brand analytics · Long Beach, CA_
 
 Primary clients: Subaru (primary), Audi (partial).
 
@@ -82,7 +88,8 @@ Primary clients: Subaru (primary), Audi (partial).
 - Implemented OneTrust at agency level, establishing GDPR-compliant consent management across client estates.
 
 ### Digital Communication Specialist — Melody Health / Planned Parenthood
-*2011 – 2015 · National nonprofit · Santa Ana, CA*
+
+_2011 – 2015 · National nonprofit · Santa Ana, CA_
 
 Melody Health was a new brand launched within Planned Parenthood.
 
@@ -107,6 +114,7 @@ Minors: Professional Writing, Philosophy
 ## Certifications
 
 **Analytics and product**
+
 - Amplitude **Expert: Analysis** · May 2026
 - Amplitude **Expert: Data Management** · May 2026
 - Amplitude Specialist: Marketing Analytics · Experiment · Data Cleanup — Mar 2026
@@ -116,6 +124,8 @@ Minors: Professional Writing, Philosophy
 - Google Analytics Certification · Conversion Optimization Certification — Google · 2025
 
 **Data engineering and AI**
+
+- SQL (Advanced) — HackerRank · Jun 2026
 - dbt Fundamentals — dbt Labs · Apr 2026
 - Academy Accreditation: Databricks Fundamentals — Databricks · Feb 2026
 - Prompt Design in Vertex AI — Google · Feb 2026
@@ -123,9 +133,11 @@ Minors: Professional Writing, Philosophy
 - SQL: Data Reporting and Analysis — LinkedIn · Mar 2026
 
 **MarTech and CDP**
+
 - Bloomreach Engagement Foundations · SMS · Jinja Jumpstart · Engagement Crash Course · 2024
 
 **Research methodology**
+
 - **Sense-Making Methodology (Dervin)** — The Ohio State University · Mar 2011 — applied across three employers (focus groups at Planned Parenthood, UX question design at Designory/TBWA, user testing at Stanley Steemer)
 - Decision Science Fundamentals — LinkedIn · Aug 2025
 
@@ -137,4 +149,4 @@ English (native) · French (A2 spoken / B1 written) · Dutch (A2, actively study
 
 ---
 
-*Portfolio and full case-study library: [fredericlabadie.com](https://fredericlabadie.com)*
+_Portfolio and full case-study library: [fredericlabadie.com](https://fredericlabadie.com)_
