@@ -1,0 +1,16 @@
+<nav class="bp-site-nav" aria-label="bol microsite">
+  <a href="{{ '/bol/' | relative_url }}" class="bp-site-nav-brand">
+    <span class="bp-site-dot" aria-hidden="true"></span>
+    <span>Frederic Labadie</span>
+    <span class="bp-site-nav-muted"
+      >/ bol &middot; Product Analyst, Checkout</span
+    >
+  </a>
+  <!-- prettier-ignore -->
+  <ul class="bp-site-nav-links" id="primary-nav">
+    {% if page.bol_nav == "home" %}<li><a href="{{ '/bol/' | relative_url }}" aria-current="page">Home</a></li>{% else %}<li><a href="{{ '/bol/' | relative_url }}">Home</a></li>{% endif %}
+    {% if page.bol_nav == "work" %}<li><a href="{{ '/bol/work/' | relative_url }}" aria-current="page">Work</a></li>{% else %}<li><a href="{{ '/bol/work/' | relative_url }}">Work</a></li>{% endif %}
+    {% if page.bol_nav == "about" %}<li><a href="{{ '/bol/about/' | relative_url }}" aria-current="page">About</a></li>{% else %}<li><a href="{{ '/bol/about/' | relative_url }}">About</a></li>{% endif %}
+    {% if page.bol_nav == "contact" %}<li><a href="{{ '/bol/contact/' | relative_url }}" aria-current="page">Contact</a></li>{% else %}<li><a href="{{ '/bol/contact/' | relative_url }}">Contact</a></li>{% endif %}
+  </ul>
+</nav>
