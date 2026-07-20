@@ -8,6 +8,7 @@
 
 .bol-microsite {
   --bol-blue: #0b3dff;
+  --bol-blue-bright: #8fa7ff;
   --bol-blue-text: #0026a3;
   --bol-blue-dark: #001a75;
   --bol-blue-soft: #dfe6ff;
@@ -54,6 +55,10 @@
   color: rgba(255, 255, 255, 0.58);
 }
 
+.bol-microsite .bp-site-nav-brand {
+  color: #ffffff;
+}
+
 .bol-microsite .bp-site-nav-links a {
   color: rgba(255, 255, 255, 0.82);
 }
@@ -61,7 +66,7 @@
 .bol-microsite .bp-site-nav a:hover,
 .bol-microsite .bp-site-nav a:focus,
 .bol-microsite .bp-site-nav-links a[aria-current="page"] {
-  color: var(--bol-blue);
+  color: var(--bol-blue-bright);
 }
 
 @media (max-width: 860px) {
