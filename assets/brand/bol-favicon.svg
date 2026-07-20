@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="bol microsite favicon">
+  <rect width="64" height="64" rx="14" fill="#0b3dff"/>
+  <circle cx="32" cy="32" r="22" fill="#ffffff" opacity="0.98"/>
+  <path d="M21 16h7v11.2c1.7-1.6 3.9-2.5 6.6-2.5 6.4 0 10.9 5 10.9 11.7 0 6.8-4.6 11.8-11.1 11.8-2.8 0-5.1-1-6.8-2.8V47h-6.6V16Zm12.2 25.7c3.3 0 5.6-2.5 5.6-6.3 0-3.7-2.3-6.2-5.6-6.2-3.2 0-5.5 2.5-5.5 6.2 0 3.8 2.3 6.3 5.5 6.3Z" fill="#0b3dff"/>
+</svg>

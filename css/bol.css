@@ -1,0 +1,370 @@
+/* ============================================================
+   bol Product Analyst, Checkout microsite
+   Separate role-specific layer. Reuses the main portfolio grammar but
+   shifts emphasis toward experimentation, product discovery, and
+   checkout-telemetry evidence rather than UX telemetry or product data
+   ownership.
+   ============================================================ */
+
+.bol-microsite {
+  --bol-blue: #0b3dff;
+  --bol-blue-text: #0026a3;
+  --bol-blue-dark: #001a75;
+  --bol-blue-soft: #dfe6ff;
+  --bol-blue-wash: #f1f4ff;
+  --bol-ink: #0b1220;
+  --bol-navy: #0a1330;
+  --bol-muted: #4d5566;
+  --bol-line: #ccd2e0;
+  --bol-paper: #f7f8fc;
+  --bol-panel: #eef0f8;
+
+  --c-accent: var(--bol-blue);
+  --c-accent-dark: var(--bol-blue-dark);
+  --c-primary: var(--bol-ink);
+  --c-ink: var(--bol-ink);
+  --c-ink-soft: var(--bol-muted);
+  --c-bg: var(--bol-paper);
+  --c-border: var(--bol-line);
+  --c-card-border: var(--bol-line);
+  --c-rule-light: var(--bol-line);
+  background:
+    radial-gradient(
+        circle at 1px 1px,
+        rgba(11, 61, 255, 0.08) 1px,
+        transparent 0
+      )
+      0 0 / 22px 22px,
+    var(--bol-paper);
+}
+
+/* Nav: site-nav.css handles layout; override colours for bol palette */
+.bol-microsite .bp-site-nav {
+  background: var(--bol-navy);
+  border-top: 3px solid var(--bol-blue);
+  border-bottom-color: #0b1220;
+}
+
+.bol-microsite .bp-site-dot {
+  background: var(--bol-blue);
+  box-shadow: 0 0 0 4px rgba(11, 61, 255, 0.14);
+}
+
+.bol-microsite .bp-site-nav-muted {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.bol-microsite .bp-site-nav-links a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.bol-microsite .bp-site-nav a:hover,
+.bol-microsite .bp-site-nav a:focus,
+.bol-microsite .bp-site-nav-links a[aria-current="page"] {
+  color: var(--bol-blue);
+}
+
+@media (max-width: 860px) {
+  .bol-microsite .bp-site-nav-muted {
+    display: none;
+  }
+}
+
+.bol-microsite a {
+  color: var(--bol-blue-text);
+}
+
+.bol-microsite .case-card-title a,
+.bol-microsite .case-card-title a:visited {
+  color: var(--bol-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: box-shadow 160ms ease, color 160ms ease;
+}
+
+.bol-microsite .case-card-title a:hover,
+.bol-microsite .case-card-title a:focus {
+  color: var(--bol-ink);
+  box-shadow: inset 0 -3px 0 rgba(11, 61, 255, 0.42);
+}
+
+.bol-microsite .hero,
+.bol-microsite .page-intro.hero {
+  padding: 0;
+}
+
+.bol-microsite .hero .container,
+.bol-microsite .page-intro.hero .container {
+  padding-top: 68px;
+  padding-bottom: 58px;
+}
+
+.bol-microsite .hero h1,
+.bol-microsite .page-intro.hero h1 {
+  max-width: 980px;
+  font-size: clamp(52px, 6.2vw, 94px);
+  line-height: 0.98;
+}
+
+.bol-microsite .hero-subtitle,
+.bol-microsite .page-intro p {
+  max-width: 70ch;
+}
+
+.bol-microsite .eyebrow,
+.bol-microsite .section-eyebrow,
+.bol-microsite .card-label,
+.bol-microsite .case-card-meta,
+.bol-microsite .tag {
+  color: var(--bol-blue-text);
+}
+
+.bol-microsite .section-eyebrow::before {
+  background: var(--bol-blue);
+}
+
+.bol-microsite .section-head {
+  background: #edf0f8;
+  border-top: 1px solid var(--bol-line);
+  border-bottom: 1px solid var(--bol-line);
+}
+
+.bol-microsite .section-body {
+  background: transparent;
+}
+
+.bol-microsite .alt .section-body,
+.bol-microsite section.alt {
+  background: var(--bol-panel);
+}
+
+.bol-microsite .card-row,
+.bol-microsite .channel-list {
+  border-color: var(--bol-line);
+}
+
+.bol-microsite .callout,
+.bol-microsite .card,
+.bol-microsite .case-card,
+.bol-microsite .case-toc-item,
+.bol-microsite .channel-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--bol-line);
+}
+
+.bol-microsite .callout {
+  max-width: 780px;
+  border-left: 4px solid var(--bol-blue);
+}
+
+.bol-microsite .btn,
+.bol-microsite .btn:visited {
+  background: var(--bol-blue);
+  border-color: var(--bol-blue);
+  color: #f5f7ff;
+}
+
+.bol-microsite .btn:hover,
+.bol-microsite .btn:focus {
+  background: var(--bol-blue-dark);
+  border-color: var(--bol-blue-dark);
+  color: #fff;
+}
+
+.bol-microsite .btn-secondary,
+.bol-microsite .btn-secondary:visited {
+  background: transparent;
+  border-color: var(--bol-blue-text);
+  color: var(--bol-blue-text);
+}
+
+.bol-microsite .btn-secondary:hover,
+.bol-microsite .btn-secondary:focus {
+  background: var(--bol-blue-soft);
+  color: var(--bol-blue-dark);
+}
+
+.bol-microsite .card.accent,
+.bol-microsite .case-toc-item:hover,
+.bol-microsite .case-toc-item:focus,
+.bol-microsite .channel-card:hover,
+.bol-microsite .channel-card:focus {
+  background: var(--bol-blue-soft);
+}
+
+.bol-microsite .case-toc-item:hover,
+.bol-microsite .case-toc-item:focus,
+.bol-microsite .channel-card:hover,
+.bol-microsite .channel-card:focus {
+  border-left-color: var(--bol-blue);
+}
+
+.bol-microsite .case-toc-num {
+  color: var(--bol-blue);
+}
+
+.bol-microsite .channel-label {
+  color: var(--bol-blue-text);
+}
+
+.bol-microsite .case-card {
+  border-top: 3px solid var(--bol-blue);
+}
+
+.bol-microsite .case-card + .case-card {
+  border-top-width: 1px;
+}
+
+.bol-microsite .card.accent {
+  box-shadow: inset 0 3px 0 var(--bol-blue);
+}
+
+.bol-microsite .tag {
+  border-color: rgba(11, 61, 255, 0.32);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.bol-microsite code,
+.bol-microsite kbd {
+  border-color: rgba(11, 61, 255, 0.28);
+  background: var(--bol-blue-wash);
+  color: var(--bol-blue-dark);
+}
+
+.bol-microsite ::selection {
+  background: var(--bol-blue);
+  color: #f5f7ff;
+}
+
+.bol-microsite .footer {
+  padding: 0;
+  background: #fff;
+  border-top: 1px solid var(--bol-line);
+}
+
+.bol-microsite .footer-inner {
+  max-width: none;
+  padding: 18px 32px;
+  color: var(--bol-muted);
+}
+
+@media (max-width: 720px) {
+  .bol-microsite .hero .container,
+  .bol-microsite .page-intro.hero .container {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .bol-microsite .hero h1,
+  .bol-microsite .page-intro.hero h1 {
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: 1;
+  }
+}
+
+/* Channel card link reset */
+.bol-microsite .channel-card,
+.bol-microsite .channel-card:visited {
+  color: var(--bol-ink);
+  text-decoration: none;
+}
+
+.bol-microsite .channel-card .channel-title,
+.bol-microsite .channel-card .channel-body {
+  color: var(--bol-ink);
+}
+
+.bol-microsite .channel-card:hover,
+.bol-microsite .channel-card:focus {
+  color: var(--bol-ink);
+  text-decoration: none;
+}
+
+.bol-microsite .channel-card:hover .channel-title,
+.bol-microsite .channel-card:focus .channel-title {
+  box-shadow: inset 0 -3px 0 rgba(11, 61, 255, 0.42);
+}
+
+/* Contact page components */
+.bol-microsite .contact-intro .container + .container {
+  padding-top: 0;
+  padding-bottom: 56px;
+}
+
+.bol-microsite .contact-intro .channel-list-4 {
+  margin-top: 40px;
+}
+
+.bol-microsite .contact-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.bol-microsite .contact-photo-card {
+  margin: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--bol-line);
+  border-top: 3px solid var(--bol-blue);
+}
+
+.bol-microsite .contact-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(11, 61, 255, 0.35);
+}
+
+.bol-microsite .contact-photo-card figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bol-muted);
+}
+
+.bol-microsite .contact-photo-card figcaption span:first-child {
+  color: var(--bol-ink);
+}
+
+.bol-microsite .channel-list-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bol-microsite .channel-card-primary {
+  border-top: 3px solid var(--bol-blue);
+}
+
+@media (max-width: 980px) {
+  .bol-microsite .contact-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bol-microsite .contact-photo-card {
+    max-width: 260px;
+  }
+
+  .bol-microsite .channel-list-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .bol-microsite .channel-list-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* case-blueprint rust-to-blue overrides */
+.bol-microsite .bp-case-accent { color: var(--bol-blue-text); }
+.bol-microsite .bp-case-section-tag span:first-child { color: var(--bol-blue-text); }
+.bol-microsite .bp-case-chain-node::after { color: var(--bol-blue); }
