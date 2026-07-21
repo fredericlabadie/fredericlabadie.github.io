@@ -1,0 +1,374 @@
+/* ============================================================
+   Vinted Decision Scientist, Marketing Modelling Intelligence microsite
+   Separate role-specific layer. Reuses the main portfolio grammar but
+   shifts emphasis toward media mix modelling, identity resolution,
+   experimentation culture, and marketing measurement evidence.
+   ============================================================ */
+
+.vinted-microsite {
+  --vinted-teal: #09b1ba;
+  --vinted-teal-bright: #7fe3e8;
+  --vinted-teal-text: #007782;
+  --vinted-teal-dark: #005a63;
+  --vinted-teal-soft: #d9f3f4;
+  --vinted-teal-wash: #eefafa;
+  --vinted-ink: #0d1a1c;
+  --vinted-deep: #0a2427;
+  --vinted-muted: #4c5c5e;
+  --vinted-line: #c8d8d9;
+  --vinted-paper: #f6fafa;
+  --vinted-panel: #e9f2f2;
+
+  --c-accent: var(--vinted-teal);
+  --c-accent-dark: var(--vinted-teal-dark);
+  --c-primary: var(--vinted-ink);
+  --c-ink: var(--vinted-ink);
+  --c-ink-soft: var(--vinted-muted);
+  --c-bg: var(--vinted-paper);
+  --c-border: var(--vinted-line);
+  --c-card-border: var(--vinted-line);
+  --c-rule-light: var(--vinted-line);
+  background:
+    radial-gradient(
+        circle at 1px 1px,
+        rgba(9, 177, 186, 0.1) 1px,
+        transparent 0
+      )
+      0 0 / 22px 22px,
+    var(--vinted-paper);
+}
+
+/* Nav: site-nav.css handles layout; override colours for Vinted palette */
+.vinted-microsite .bp-site-nav {
+  background: var(--vinted-deep);
+  border-top: 3px solid var(--vinted-teal);
+  border-bottom-color: #0d1a1c;
+}
+
+.vinted-microsite .bp-site-dot {
+  background: var(--vinted-teal);
+  box-shadow: 0 0 0 4px rgba(9, 177, 186, 0.16);
+}
+
+.vinted-microsite .bp-site-nav-muted {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.vinted-microsite .bp-site-nav-brand {
+  color: #ffffff;
+}
+
+.vinted-microsite .bp-site-nav-links a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.vinted-microsite .bp-site-nav a:hover,
+.vinted-microsite .bp-site-nav a:focus,
+.vinted-microsite .bp-site-nav-links a[aria-current="page"] {
+  color: var(--vinted-teal-bright);
+}
+
+@media (max-width: 860px) {
+  .vinted-microsite .bp-site-nav-muted {
+    display: none;
+  }
+}
+
+.vinted-microsite a {
+  color: var(--vinted-teal-text);
+}
+
+.vinted-microsite .case-card-title a,
+.vinted-microsite .case-card-title a:visited {
+  color: var(--vinted-ink);
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: box-shadow 160ms ease, color 160ms ease;
+}
+
+.vinted-microsite .case-card-title a:hover,
+.vinted-microsite .case-card-title a:focus {
+  color: var(--vinted-ink);
+  box-shadow: inset 0 -3px 0 rgba(9, 177, 186, 0.5);
+}
+
+.vinted-microsite .hero,
+.vinted-microsite .page-intro.hero {
+  padding: 0;
+}
+
+.vinted-microsite .hero .container,
+.vinted-microsite .page-intro.hero .container {
+  padding-top: 68px;
+  padding-bottom: 58px;
+}
+
+.vinted-microsite .hero h1,
+.vinted-microsite .page-intro.hero h1 {
+  max-width: 980px;
+  font-size: clamp(40px, 4.6vw, 68px);
+  line-height: 1.05;
+}
+
+.vinted-microsite .hero-subtitle,
+.vinted-microsite .page-intro p {
+  max-width: 70ch;
+}
+
+.vinted-microsite .eyebrow,
+.vinted-microsite .section-eyebrow,
+.vinted-microsite .card-label,
+.vinted-microsite .case-card-meta,
+.vinted-microsite .tag {
+  color: var(--vinted-teal-text);
+}
+
+.vinted-microsite .section-eyebrow::before {
+  background: var(--vinted-teal);
+}
+
+.vinted-microsite .section-head {
+  background: #ecf3f3;
+  border-top: 1px solid var(--vinted-line);
+  border-bottom: 1px solid var(--vinted-line);
+}
+
+.vinted-microsite .section-body {
+  background: transparent;
+}
+
+.vinted-microsite .alt .section-body,
+.vinted-microsite section.alt {
+  background: var(--vinted-panel);
+}
+
+.vinted-microsite .card-row,
+.vinted-microsite .channel-list {
+  border-color: var(--vinted-line);
+}
+
+.vinted-microsite .callout,
+.vinted-microsite .card,
+.vinted-microsite .case-card,
+.vinted-microsite .case-toc-item,
+.vinted-microsite .channel-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--vinted-line);
+}
+
+.vinted-microsite .callout {
+  max-width: 780px;
+  border-left: 4px solid var(--vinted-teal);
+}
+
+.vinted-microsite .btn,
+.vinted-microsite .btn:visited {
+  background: var(--vinted-teal-dark);
+  border-color: var(--vinted-teal-dark);
+  color: #f2fbfc;
+}
+
+.vinted-microsite .btn:hover,
+.vinted-microsite .btn:focus {
+  background: var(--vinted-ink);
+  border-color: var(--vinted-ink);
+  color: #fff;
+}
+
+.vinted-microsite .btn-secondary,
+.vinted-microsite .btn-secondary:visited {
+  background: transparent;
+  border-color: var(--vinted-teal-text);
+  color: var(--vinted-teal-text);
+}
+
+.vinted-microsite .btn-secondary:hover,
+.vinted-microsite .btn-secondary:focus {
+  background: var(--vinted-teal-soft);
+  color: var(--vinted-teal-dark);
+}
+
+.vinted-microsite .card.accent,
+.vinted-microsite .case-toc-item:hover,
+.vinted-microsite .case-toc-item:focus,
+.vinted-microsite .channel-card:hover,
+.vinted-microsite .channel-card:focus {
+  background: var(--vinted-teal-soft);
+}
+
+.vinted-microsite .case-toc-item:hover,
+.vinted-microsite .case-toc-item:focus,
+.vinted-microsite .channel-card:hover,
+.vinted-microsite .channel-card:focus {
+  border-left-color: var(--vinted-teal);
+}
+
+.vinted-microsite .case-toc-num {
+  color: var(--vinted-teal-text);
+}
+
+.vinted-microsite .channel-label {
+  color: var(--vinted-teal-text);
+}
+
+.vinted-microsite .case-card {
+  border-top: 3px solid var(--vinted-teal);
+}
+
+.vinted-microsite .case-card + .case-card {
+  border-top-width: 1px;
+}
+
+.vinted-microsite .card.accent {
+  box-shadow: inset 0 3px 0 var(--vinted-teal);
+}
+
+.vinted-microsite .tag {
+  border-color: rgba(9, 177, 186, 0.38);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.vinted-microsite code,
+.vinted-microsite kbd {
+  border-color: rgba(9, 177, 186, 0.32);
+  background: var(--vinted-teal-wash);
+  color: var(--vinted-teal-dark);
+}
+
+.vinted-microsite ::selection {
+  background: var(--vinted-teal-dark);
+  color: #f2fbfc;
+}
+
+.vinted-microsite .footer {
+  padding: 0;
+  background: #fff;
+  border-top: 1px solid var(--vinted-line);
+}
+
+.vinted-microsite .footer-inner {
+  max-width: none;
+  padding: 18px 32px;
+  color: var(--vinted-muted);
+}
+
+@media (max-width: 720px) {
+  .vinted-microsite .hero .container,
+  .vinted-microsite .page-intro.hero .container {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .vinted-microsite .hero h1,
+  .vinted-microsite .page-intro.hero h1 {
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: 1;
+  }
+}
+
+/* Channel card link reset */
+.vinted-microsite .channel-card,
+.vinted-microsite .channel-card:visited {
+  color: var(--vinted-ink);
+  text-decoration: none;
+}
+
+.vinted-microsite .channel-card .channel-title,
+.vinted-microsite .channel-card .channel-body {
+  color: var(--vinted-ink);
+}
+
+.vinted-microsite .channel-card:hover,
+.vinted-microsite .channel-card:focus {
+  color: var(--vinted-ink);
+  text-decoration: none;
+}
+
+.vinted-microsite .channel-card:hover .channel-title,
+.vinted-microsite .channel-card:focus .channel-title {
+  box-shadow: inset 0 -3px 0 rgba(9, 177, 186, 0.5);
+}
+
+/* Contact page components */
+.vinted-microsite .contact-intro .container + .container {
+  padding-top: 0;
+  padding-bottom: 56px;
+}
+
+.vinted-microsite .contact-intro .channel-list-4 {
+  margin-top: 40px;
+}
+
+.vinted-microsite .contact-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 48px;
+  align-items: center;
+}
+
+.vinted-microsite .contact-photo-card {
+  margin: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--vinted-line);
+  border-top: 3px solid var(--vinted-teal);
+}
+
+.vinted-microsite .contact-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(9, 177, 186, 0.4);
+}
+
+.vinted-microsite .contact-photo-card figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vinted-muted);
+}
+
+.vinted-microsite .contact-photo-card figcaption span:first-child {
+  color: var(--vinted-ink);
+}
+
+.vinted-microsite .channel-list-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.vinted-microsite .channel-card-primary {
+  border-top: 3px solid var(--vinted-teal);
+}
+
+@media (max-width: 980px) {
+  .vinted-microsite .contact-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vinted-microsite .contact-photo-card {
+    max-width: 260px;
+  }
+
+  .vinted-microsite .channel-list-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .vinted-microsite .channel-list-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* case-blueprint rust-to-teal overrides */
+.vinted-microsite .bp-case-accent { color: var(--vinted-teal-text); }
+.vinted-microsite .bp-case-section-tag span:first-child { color: var(--vinted-teal-text); }
+.vinted-microsite .bp-case-chain-node::after { color: var(--vinted-teal-text); }

@@ -1,0 +1,373 @@
+---
+nav_key: work
+footer_label: Case study
+layout: case
+title: "The identity layer that made the budget argument defensible"
+description: "A production media mix model at Stanley Steemer: automated multi-attribute hash blocking and union-find graph clustering resolved 280 locations' customers into one identity, Census household data modelled saturation, and a regression base plus a stakeholder-agreed weighted-allocation layer compared every channel on the same economics."
+og_title: "The identity layer that made the budget argument defensible &mdash; case study"
+og_description: "Identity resolution, household saturation modelling, and a production media mix model that changed real budget decisions at Stanley Steemer."
+og_url: "https://fredericlabadie.com/work/mmm-identity-resolution.html"
+twitter_title: "The identity layer that made the budget argument defensible"
+twitter_description: "Identity resolution, household saturation modelling, and a production media mix model that changed real budget decisions."
+---
+
+<header class="bp-case-hero">
+  <div>
+    <p class="bp-case-kicker bp-case-accent">
+      // Case study / Marketing analytics
+    </p>
+    <h1>The identity layer that made the budget argument defensible.</h1>
+    <p class="bp-case-dek">
+      Stanley Steemer's channels sat in disconnected systems with no consistent
+      way to compare cost-efficiency, and address churn was corrupting any
+      single customer view. Before a media mix model could mean anything, the
+      business needed one resolved customer identity to hang channel-level cost
+      and response data on. This case is the identity layer &mdash; and the
+      regression model that sat on top of it.
+    </p>
+  </div>
+  <aside class="bp-case-hero-panel" aria-label="Case summary">
+    <div class="bp-case-panel-head">
+      <span>Case file</span><span>Static / named employer</span>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Client context</span>
+      <p>Stanley Steemer / home services franchise / 280 locations</p>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Model regimes</span><strong>2</strong>
+    </div>
+    <div class="bp-case-panel-row">
+      <span>Role</span>
+      <p>
+        Identity resolution and householding, Census household integration,
+        media mix model design, channel budget-allocation advisory
+      </p>
+    </div>
+  </aside>
+</header>
+
+<section class="bp-case-receipts" aria-label="Case proof points">
+  <article>
+    <strong>13</strong><span>maximum hash types per customer record</span>
+  </article>
+  <article>
+    <strong>280</strong><span>locations resolved into one model</span>
+  </article>
+  <article>
+    <strong>2</strong
+    ><span>modelling regimes: regression + weighted allocation</span>
+  </article>
+  <article>
+    <strong>1</strong><span>resolved identity per customer household</span>
+  </article>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 01 / thesis</span><span>identity before modelling</span>
+</div>
+<section class="bp-case-content" id="case">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Core argument</p>
+    <h2>
+      A media mix model is only as defensible as the identity layer under it.
+    </h2>
+    <p>
+      Most of the real work happened before the regression: resolving who the
+      customer actually was.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <article class="bp-case-proof-panel">
+      <p class="bp-case-mono bp-case-accent">What happened</p>
+      <h3>
+        The problem was defined before the model was built &mdash; and the
+        problem was identity.
+      </h3>
+      <p>
+        Stanley Steemer's marketing ran across
+        <strong
+          >GA4, Google Ads, Facebook Ads, email via Bronto, direct mail, and
+          Valpak shared mail</strong
+        >
+        &mdash; each in its own system, with no consistent way to compare
+        cost-efficiency across them. Worse, address churn &mdash; moves,
+        marriages, household changes &mdash; meant the same customer appeared
+        as several different people, so any channel comparison built on raw
+        contact records would have been an argument about noise.
+      </p>
+      <p>
+        I built the identity-resolution layer first, then the model on top of
+        it: a <strong>regression base for addressable channels</strong> and a
+        <strong
+          >deliberate, stakeholder-agreed weighted-allocation layer</strong
+        >
+        for passive channels that genuinely cannot be measured with
+        response-level attribution. The result changed real budget decisions.
+      </p>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Context</p>
+      <h3>Six channels, six systems, no common customer.</h3>
+      <p>
+        Each channel reported its own performance in its own currency &mdash;
+        clicks, opens, response cards, coupon redemptions. Comparing a click to
+        a piece of mail requires both to resolve to the same customer and the
+        same household. Address churn was also driving real mail waste:
+        without reliable householding, the business was paying to mail people
+        who had moved, remarried, or already existed elsewhere in the file
+        under a different record.
+      </p>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Task</p>
+      <h3>One resolved identity, then one model both regimes could share.</h3>
+      <p>
+        Build the customer-identity layer the model would depend on, integrate
+        household-penetration context, and deliver a media mix model that
+        let leadership compare every channel's spend on the same economics
+        &mdash; while being explicit about which channels could carry full
+        response attribution and which could not. The model was built
+        bottom-up and response-level rather than as an aggregate time-series
+        MMM &mdash; a design choice: the resolved identity joins gave
+        individual-level response data that aggregate MMMs exist to
+        approximate, so modelling at that level used the stronger data
+        directly.
+      </p>
+    </article>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 02 / build layer</span
+  ><span>hash blocking / graph clustering / saturation / model</span>
+</div>
+<section class="bp-case-content">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Build layer</p>
+    <h2>Four layers, in dependency order.</h2>
+    <p>
+      Hash blocking generated candidate matches, graph clustering resolved
+      them, Census data added saturation context, and only then did the model
+      get built.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <figure
+      class="bp-case-figure"
+      aria-label="Identity resolution and modelling pipeline"
+    >
+      <figcaption>
+        <span>fig. 01 / identity layer to media mix model</span
+        ><span>blocking / clustering / saturation</span>
+      </figcaption>
+      <div class="bp-case-streams">
+        <div class="bp-case-stream">
+          <span>Blocking</span><strong>13 hash types</strong>
+          <p>
+            Automated multi-attribute MD5 hashing per customer record,
+            including gender-aware and nickname-normalised fallbacks, with
+            data-quality validation at the ingestion boundary.
+          </p>
+        </div>
+        <div class="bp-case-stream">
+          <span>Clustering</span><strong>Union-find</strong>
+          <p>
+            Connected components resolved via union-find merged every contact
+            sharing any candidate hash into one master identity per customer.
+          </p>
+        </div>
+        <div class="bp-case-stream">
+          <span>Saturation</span><strong>Census / ZCTA</strong>
+          <p>
+            US Census household data joined via a custom ZIP-to-ZCTA mapping,
+            measuring household penetration by ZCTA.
+          </p>
+        </div>
+      </div>
+    </figure>
+
+    <div class="bp-case-gates" aria-label="Pipeline build components">
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">1</span
+        ><strong>Hash-based blocking</strong>
+        <p>
+          Up to 13 distinct hash types per customer record &mdash; name, email,
+          phone, and address combinations, gender-aware fallbacks for surname
+          changes, and nickname normalisation so "Robert", "Bob", and "Bobby"
+          resolve as one person. Email, phone, and name validation ran at the
+          same ingestion boundary.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">2</span
+        ><strong>Union-find graph clustering</strong>
+        <p>
+          Only hashes shared by two or more contacts entered the graph as
+          candidate matches. Union-find then resolved the connected components,
+          pulling every transitively linked contact into one cluster, each
+          assigned a single master identity. USPS change-of-address records
+          and household changes folded in as matching signals rather than
+          items for manual review.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">3</span
+        ><strong>Household saturation via Census data</strong>
+        <p>
+          A custom ZIP-to-ZCTA mapping joined US Census household data to the
+          resolved identities &mdash; Knime profiled and cleaned the Census
+          dataset before it entered the pipeline &mdash; so the model could
+          estimate what share of an area's households each channel had already
+          reached.
+        </p>
+      </article>
+      <article class="bp-case-gate">
+        <span class="bp-case-flow-label">4</span
+        ><strong>Regression base + weighted allocation</strong>
+        <p>
+          A linear regression base model, prototyped in R against the SQL
+          Server estate the warehouse already ran on, attributed conversion
+          across addressable channels. Passive channels &mdash; Valpak shared
+          mail, radio &mdash; got a separate, stakeholder-agreed weighted
+          allocation instead: with no click, open, or individual exposure
+          signal, forcing them into response attribution would have been the
+          less rigorous choice.
+        </p>
+      </article>
+    </div>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Action</p>
+      <h3>The model replaced a hand-built attribution pipeline.</h3>
+      <p>
+        Before GA4's BigQuery export existed, channel attribution here ran on
+        Python scripts querying the Universal Analytics Reporting API, with
+        custom GA dimensions &mdash; session ID, user ID, zip code, Google and
+        Bing click IDs &mdash; injected as cross-system join keys into a daily
+        warehouse extract. Because those joins already existed in the
+        warehouse, the identity layer was engineered to sit on them rather
+        than bought as a black box. Every pipeline run was
+        registered under a batch-audit framework that tracked source, inserted,
+        and unprocessed record counts per workflow run &mdash; including
+        failure paths &mdash; so a bad run was visible before it reached the
+        model.
+      </p>
+    </article>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 03 / result</span
+  ><span>offer over personalisation / budget reallocation</span>
+</div>
+<section class="bp-case-content">
+  <aside class="bp-case-sidebar">
+    <p class="bp-case-mono bp-case-accent">Result</p>
+    <h2>The sharpest finding was a negative one.</h2>
+    <p>
+      It separated two questions the business had conflated: which channel, and
+      what message.
+    </p>
+  </aside>
+  <div class="bp-case-main">
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Outcome</p>
+      <h3>
+        Personalisation had no measurable effect on response. Changing the
+        offer did.
+      </h3>
+      <ul>
+        <li>
+          <strong
+            >Mail personalisation &mdash; image and content choices &mdash;
+            showed no measurable effect on response. Changing the offer itself
+            did.</strong
+          >
+          A falsifiable negative result from the direct-mail testing programme
+          the model ran alongside &mdash; it redirected testing effort from
+          creative variants to offers. Direct mail briefs changed from that
+          point forward.
+        </li>
+        <li>
+          <strong>Budget reallocation followed:</strong> Valpak shared mail
+          outperformed paid social, and email outperformed direct mail, on
+          cost-per-piece against tracked conversions measured from resolved
+          identities rather than derived from the allocation weights.
+        </li>
+        <li>
+          <strong>Householding cut mail waste at the source</strong> &mdash;
+          resolved identities meant the file stopped paying to reach the same
+          household twice.
+        </li>
+        <li>
+          <strong>The two-regime design held up in the room:</strong> being
+          explicit about which channels carried full response attribution and
+          which sat in the agreed allocation layer is what kept the budget
+          conversation from being contested.
+        </li>
+      </ul>
+    </article>
+
+    <article class="bp-case-block">
+      <p class="bp-case-mono bp-case-accent">Design lesson</p>
+      <h3>Spend the real time defining the problem.</h3>
+      <p>
+        The regression was the fast part. The decision that made the model
+        trustworthy was upstream: resolving identity before modelling, and
+        refusing to force passive channels into a response-attribution frame
+        they could not support. A lighter-weight method, agreed openly with
+        stakeholders, was more defensible than false precision. The model's
+        most useful output was a specific negative finding.
+      </p>
+    </article>
+
+    <div class="bp-case-tags" aria-label="Technologies and methods">
+      <span class="bp-case-tag">Identity resolution</span>
+      <span class="bp-case-tag">Hash-based blocking</span>
+      <span class="bp-case-tag">Union-find / graph clustering</span>
+      <span class="bp-case-tag">Media Mix Modelling</span>
+      <span class="bp-case-tag">Linear regression</span>
+      <span class="bp-case-tag">Census / ZCTA integration</span>
+      <span class="bp-case-tag">Knime</span>
+      <span class="bp-case-tag">R (SQL Server integration)</span>
+      <span class="bp-case-tag">ETL batch auditing</span>
+      <span class="bp-case-tag">Universal Analytics API → GA4 / BigQuery</span>
+    </div>
+  </div>
+</section>
+
+<div class="bp-case-section-tag" aria-hidden="true">
+  <span>// 04 / next</span
+  ><span>case library / adjacent evidence / contact</span>
+</div>
+<section class="bp-case-next">
+  <a href="../work/"
+    ><span class="bp-case-mono bp-case-accent">More cases</span
+    ><strong>Full case library.</strong
+    ><span
+      >Sixteen active cases across seven categories: question discovery,
+      instrumentation, experimentation, AI workflows, adoption, marketing
+      analytics, and data engineering.</span
+    ></a
+  >
+  <a href="stanley-ab.html"
+    ><span class="bp-case-mono bp-case-accent">Adjacent case</span
+    ><strong>Introducing A/B testing as a leadership practice.</strong
+    ><span
+      >The same employer and warehouse foundation, seen from the
+      experimentation-culture side: five years building the analytics function
+      this model lived inside.</span
+    ></a
+  >
+  <a href="../contact/"
+    ><span class="bp-case-mono bp-case-accent">Get in touch</span
+    ><strong>Contact and context.</strong
+    ><span
+      >Email, LinkedIn, GitHub, the CV. Happy to walk through this case or any
+      other in detail.</span
+    ></a
+  >
+</section>

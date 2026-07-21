@@ -6,7 +6,7 @@ Live at [fredericlabadie.com](https://fredericlabadie.com).
 The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It is now a Jekyll/GitHub Pages portfolio with a core navigation layer, a case library, a working-notes layer, and role-specific microsites:
 
 - [`/`](https://fredericlabadie.com/) &mdash; **landing**: recruiter scan, positioning, selected proof points, and paths into the deeper site.
-- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses fifteen active cases, with six archived/deprecated cases preserved at their original URLs.
+- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses sixteen active cases, with six archived/deprecated cases preserved at their original URLs.
 - [`/thoughts/`](https://fredericlabadie.com/thoughts/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and measurement gaps.
 - [`/recruiters/`](https://fredericlabadie.com/recruiters/) &mdash; **recruiter summary**: fast-scan facts, role fit, proof cases, status, and contact routes.
 - [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, career arc, credentials, methodology, and working style.
@@ -17,6 +17,8 @@ Targeted role-fit microsites are preserved separately from the main portfolio fl
 
 - [`/adyen/`](https://fredericlabadie.com/adyen/) &mdash; Adyen Senior Product Data Analyst microsite, with seven evidence paths around product data ownership, scalable systems, source-of-truth delivery, and experimentation.
 - [`/philips/`](https://fredericlabadie.com/philips/) &mdash; Philips UX Telemetry Expert microsite, with a thirteen-case Philips-facing work selection and clinical-domain calibration. Note: `d2c-ga-migration` is archived/deprecated from the main work index but remains intentionally active in the Philips selection where the platform-migration pattern is specifically relevant.
+- [`/bol/`](https://fredericlabadie.com/bol/) &mdash; bol Product Analyst (Checkout) microsite, with six evidence paths around experimentation, question discovery, BI enablement, alert engineering, instrumentation, and AI workflows.
+- [`/vinted/`](https://fredericlabadie.com/vinted/) &mdash; Vinted Decision Scientist (Marketing Modelling Intelligence) microsite, with five evidence paths led by the Stanley Steemer media mix model / identity-resolution case (`mmm-identity-resolution`).
 
 ## Featured projects
 
@@ -90,6 +92,8 @@ The previous design system bundle remains in `_drafts/new-design.zip` for refere
 │   ├── about/index.html
 │   ├── contact/index.html
 │   └── work/<slug>.html    # Philips-framed case clones
+├── bol/                    # bol microsite (same page structure as adyen/)
+├── vinted/                 # Vinted microsite (same page structure as adyen/)
 ├── _data/
 │   └── cases.yml           # generated/synced case index; do not hand-edit by default
 ├── _includes/              # shared navigation, sections, head, scripts
@@ -125,6 +129,8 @@ URLs to spot-check during dev:
 - `/contact/` &mdash; contact page
 - `/adyen/` &mdash; Adyen microsite
 - `/philips/` &mdash; Philips microsite
+- `/bol/` &mdash; bol microsite
+- `/vinted/` &mdash; Vinted microsite
 
 ## Status & roadmap
 
