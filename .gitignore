@@ -1,5 +1,6 @@
 .DS_Store
 Thumbs.db
+_site/
 *.env
 node_modules/
 .claude/

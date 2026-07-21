@@ -106,6 +106,27 @@
     - value: "15+"
       label: "independent CTE scans removed"
 
+- slug: mmm-identity-resolution
+  title: "The identity layer that made the budget argument defensible"
+  url: "/work/mmm-identity-resolution.html"
+  kind: "case"
+  lens_number: "06"
+  lens: "Marketing analytics"
+  kicker: "// Case study / Marketing analytics"
+  context: "Stanley Steemer / home services franchise / 280 locations"
+  role: "Identity resolution and householding, Census household integration, media mix model design, channel budget-allocation advisory"
+  description: "A production media mix model at Stanley Steemer: automated multi-attribute hash blocking and union-find graph clustering resolved 280 locations' customers into one identity, Census household data modelled saturation, and a regression base plus a stakeholder-agreed weighted-allocation layer compared every channel on the same economics."
+  short_description: "Identity resolution and a production media mix model that changed real budget decisions."
+  receipts:
+    - value: "13"
+      label: "maximum hash types per customer record"
+    - value: "280"
+      label: "locations resolved into one model"
+    - value: "2"
+      label: "modelling regimes: regression + weighted allocation"
+    - value: "1"
+      label: "resolved identity per customer household"
+
 - slug: cdp-migration
   title: "Replatformed the CDP. The campaigns did not notice."
   url: "/work/cdp-migration.html"

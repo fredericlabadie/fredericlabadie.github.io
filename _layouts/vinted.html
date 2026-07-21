@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <link rel="icon" href="{{ '/assets/brand/vinted-favicon.svg' | relative_url }}" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{ '/css/site-nav.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/css/vinted.css' | relative_url }}" />
+  </head>
+  <body class="vinted-microsite">
+    <a class="skip-link" href="{{ page.skip_link | default: '#top' }}"
+      >{{ page.skip_label | default: "Skip to content" }}</a
+    >
+    {% include vinted-nav.html %} {{ content }} {% include vinted-footer.html %}
+    {% include site-scripts.html %}
+    <script src="{{ '/js/vinted.js' | relative_url }}"></script>
+  </body>
+</html>
