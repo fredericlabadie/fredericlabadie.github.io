@@ -219,9 +219,9 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
         relevant Amplitude charts, designed a hierarchical error-category ID
         scheme with governance rules, and authored the specification to enrich
         checkout error events with
-        <code>cart_id</code>. The goal was not fewer alerts for its own sake. It
-        was alerts that responders could interpret and act on without recreating
-        the context from scratch.
+        <code>cart_id</code>. The goal was alerts that responders could
+        interpret and act on without recreating the context from scratch;
+        reducing volume alone would not have achieved that.
       </p>
     </article>
   </div>
@@ -270,10 +270,7 @@ twitter_description: "Three layers of remediation on a noisy alert channel."
 
     <article class="bp-case-block">
       <p class="bp-case-mono bp-case-accent">Design lesson</p>
-      <h3>
-        Alerting problems are often taxonomy problems wearing an operations
-        costume.
-      </h3>
+      <h3>Most of this alerting problem was a taxonomy problem.</h3>
       <p>
         If errors are inconsistently categorised or stripped of the context
         success events carry, the alert channel forces humans to reconstruct

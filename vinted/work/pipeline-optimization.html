@@ -97,7 +97,10 @@ twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query
 
     <article class="bp-case-block">
       <p class="bp-case-mono bp-case-accent">Situation</p>
-      <h3>Each individual decision made sense. The system no longer did.</h3>
+      <h3>
+        A pipeline of individually reasonable decisions had stopped making
+        sense as a system.
+      </h3>
       <p>
         The first pass had already replaced the recurring manual reporting cycle
         with a BigQuery, Dataform, and Looker Studio reporting layer. The next
@@ -123,7 +126,8 @@ twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query
         The brief was to audit the whole data flow, identify where the costs
         were really coming from, and propose a migration plan that the team
         could execute without freezing the reporting layer. Cost reduction was
-        the visible target. Maintainability and consistency were the real ones.
+        the visible target; the underlying goals were maintainability and
+        consistency.
       </p>
     </article>
   </div>
@@ -247,7 +251,8 @@ twitter_description: "GA4-to-BigQuery pipeline redesign that cut scheduled-query
   <aside class="bp-case-sidebar">
     <p class="bp-case-mono bp-case-accent">Result</p>
     <h2>
-      Cost reduction was the visible win. Architecture was the durable one.
+      Beyond the cost cut, the durable gain was an architecture the team can
+      reason about.
     </h2>
     <p>
       The same decision pattern transfers to other analytics rebuilds: model the

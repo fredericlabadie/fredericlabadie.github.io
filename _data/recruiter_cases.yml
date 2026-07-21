@@ -5,7 +5,7 @@
 
 - slug: pipeline-optimization
   category: "Data engineering"
-  headline: "Pipeline Optimization: ~50% BigQuery cost reduction."
+  headline: "Pipeline Optimisation: ~50% BigQuery cost reduction."
   summary: "Second-pass BigQuery optimisation using Claude and BigQuery MCP as analysis collaborators; three raw scans to one, 15+ CTEs to zero, 1.2 TB intermediate table retired."
 
 - slug: sslp-enablement

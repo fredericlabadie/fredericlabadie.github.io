@@ -69,7 +69,7 @@ twitter_description: "GA4-to-BigQuery pipeline for enterprise GenAI platform ana
 <section class="bp-case-content" id="case">
   <aside class="bp-case-sidebar">
     <p class="bp-case-mono bp-case-accent">Core argument</p>
-    <h2>Backend metering could bill usage. It could not explain behaviour.</h2>
+    <h2>Backend metering could bill usage but could not explain behaviour.</h2>
     <p>
       The platform needed a front-end signal layer to answer which agents and
       copilots were used, by whom, how often, and what product behaviour looked
@@ -217,9 +217,9 @@ twitter_description: "GA4-to-BigQuery pipeline for enterprise GenAI platform ana
       <p>
         GA4 event collection and BigQuery export pipeline were the delivery;
         engineering adoption was the harder part. A querying primer &mdash;
-        event-parameter unnesting, schema model, KPI queries &mdash; made the
-        data available to the team building the platform, not just accessible in
-        principle.
+        event-parameter unnesting, schema model, KPI queries &mdash; turned the
+        raw export tables into something the team building the platform could
+        work with directly.
       </p>
     </article>
   </div>
@@ -275,8 +275,8 @@ twitter_description: "GA4-to-BigQuery pipeline for enterprise GenAI platform ana
       <p>
         Even on an enterprise GenAI platform, the core questions are familiar:
         who used what, how often, in which context, and what changed after
-        release. The platform may be novel; the need for trustworthy behavioural
-        telemetry is not.
+        release. A novel platform still needs the same trustworthy behavioural
+        telemetry as any established product.
       </p>
     </article>
 
