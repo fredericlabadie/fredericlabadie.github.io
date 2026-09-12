@@ -6,7 +6,7 @@ Live at [fredericlabadie.com](https://fredericlabadie.com).
 The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It is now a Jekyll/GitHub Pages portfolio with a core navigation layer, a case library, a working-notes layer, and role-specific microsites:
 
 - [`/`](https://fredericlabadie.com/) &mdash; **landing**: recruiter scan, positioning, selected proof points, and paths into the deeper site.
-- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses sixteen active cases, with six archived/deprecated cases preserved at their original URLs.
+- [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses seventeen active cases, with six archived/deprecated cases preserved at their original URLs.
 - [`/thoughts/`](https://fredericlabadie.com/thoughts/) &mdash; **Current Meditations**: a practitioner's working-thinking archive of drafts, working theories, and open questions on methodology, AI-assisted workflows, schema design, and measurement gaps.
 - [`/recruiters/`](https://fredericlabadie.com/recruiters/) &mdash; **recruiter summary**: fast-scan facts, role fit, proof cases, status, and contact routes.
 - [`/about/`](https://fredericlabadie.com/about/) &mdash; **bio depth**: extended bio, career arc, credentials, methodology, and working style.

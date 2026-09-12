@@ -33,16 +33,16 @@ Senior data analyst and analytics architect with 14+ years building measurement 
 
 ### Analytics Architect — Telus Digital
 
-_2024 – Present · 100% remote · Multi-client enterprise consultancy_
+_2024 – 2026 · 100% remote · Multi-client enterprise consultancy_
 
-Clients span consumer electronics, B2B SaaS, e-commerce, and travel. Currently full-time; standard notice applies.
+Clients spanned consumer electronics, B2B SaaS, e-commerce, and travel. Available immediately; no notice period.
 
-- Lead end-to-end analytics implementation engagements for enterprise clients — measurement planning, SDR creation, GTM deployment (client and server-side), QA, and reporting infrastructure.
-- Built and operated an **AI-assisted alert triage system** for client product telemetry. V1 ran in production 13–26 April 2026, compressing **230 raw Amplitude alerts to 39 AI-posted findings (83% reduction)** while preserving human-judgement gates throughout (surface, suppress, escalate when warranted, never silence a worsening issue). **Surfaced one critical feature failure the on-call team had missed in human-only review** — a signal that would have continued silently otherwise. V2 build in progress.
+- Led end-to-end analytics implementation engagements for enterprise clients — measurement planning, SDR creation, GTM deployment (client and server-side), QA, and reporting infrastructure.
+- Built and operated an **AI-assisted alert triage system** for client product telemetry. V1 ran in production 13–26 April 2026, compressing **230 raw Amplitude alerts to 39 AI-posted findings (83% reduction)** while preserving human-judgement gates throughout (surface, suppress, escalate when warranted, never silence a worsening issue). **Surfaced one critical feature failure the on-call team had missed in human-only review** — a signal that would have continued silently otherwise.
 - Automated 12+ hours per week of manual reporting per client through SQL pipeline development; built standardised Looker Studio and BigQuery dashboards aligned to client KPI frameworks.
 - Designed event schemas and tracking plans tailored to each client's MarTech ecosystem (GA4, Adobe Analytics, Amplitude); led vendor evaluation work including Mixpanel comparison.
-- Lead A/B testing programmes end-to-end: success criteria, guardrails, sample sizing, statistical analysis, and stakeholder-ready synthesis.
-- Manage analytics codebases via GitHub; ensure GDPR-compliant data collection across all client implementations.
+- Led A/B testing programmes end-to-end: success criteria, guardrails, sample sizing, statistical analysis, and stakeholder-ready synthesis.
+- Managed analytics codebases via GitHub; ensured GDPR-compliant data collection across all client implementations.
 
 ### Email & SMS Marketing Manager — Micro Center Inc.
 

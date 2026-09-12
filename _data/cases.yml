@@ -148,6 +148,27 @@
     - value: "2"
       label: "designers managed on campaign creative"
 
+- slug: lifecycle-measurement-signoff
+  title: "The dashboards were approved before a single one was built"
+  url: "/work/lifecycle-measurement-signoff.html"
+  kind: "case"
+  lens_number: "06"
+  lens: "Lifecycle measurement"
+  kicker: "// Case study / Lifecycle measurement"
+  context: "Financial services brand / B2B lifecycle marketing programme / agency engagement"
+  role: "Measurement framework design, metric registry, synthetic-data engine, React / ECharts prototype, review facilitation, sign-off export"
+  description: "A seven-dashboard lifecycle marketing measurement framework was rendered as a synthetic-data React and ECharts prototype so the client could interrogate and sign off on every metric before the Tableau build. 207 metrics, each with a worked methodology panel; per-metric votes exported as a markdown sign-off matrix; nine build prerequisites surfaced before any BI work started. The prototype is live, with the client removed."
+  short_description: "A synthetic-data prototype became the client sign-off instrument for a 207-metric lifecycle measurement framework, ahead of the BI build."
+  receipts:
+    - value: "7"
+      label: "dashboards rendered with synthetic data"
+    - value: "207"
+      label: "metrics with a worked methodology panel"
+    - value: "9"
+      label: "build prerequisites surfaced before the BI build"
+    - value: "0"
+      label: "rows of client data in the prototype"
+
 - slug: sslp-mobile
   title: "From what should we measure to 30+ shipped tickets"
   url: "/work/sslp-mobile.html"
