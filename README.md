@@ -104,7 +104,7 @@ The previous design system bundle remains in `_drafts/new-design.zip` for refere
 │   ├── og/
 │   ├── photo/
 │   └── resume/
-├── robots.txt              # allows fetch; page metadata carries noindex
+├── robots.txt              # allows crawling; points at the generated sitemap
 ├── llms.txt                # AI-readable site summary
 ├── CNAME
 └── _drafts/                # working files / private notes where present
@@ -142,7 +142,7 @@ This README is not the active backlog. Use it for public maintenance notes only;
 - **Microsite clone discipline** &mdash; Adyen and Philips contain role-framed case clones. When a canonical case changes, check whether either microsite clone needs the same content correction or whether the role-specific framing should intentionally differ.
 - **CV export discipline** &mdash; re-export the relevant PDFs in `assets/resume/` only after substantive CV changes, and review them as binary assets before merge.
 - **Future case additions** &mdash; new cases should enter the active Work library only after proof, metric context, anonymisation, and source-of-truth checks are complete.
-- **Indexing preference** &mdash; the site is public for direct sharing but not intended for search indexing. Keep `robots.txt` fetchable and rely on page-level `noindex, follow` metadata unless that strategy changes deliberately.
+- **Indexing** &mdash; the core site is indexable (`index, follow` default in `head.html`, canonical links, `jekyll-sitemap`). Role microsites (`philips/`, `bol/`, `adyen/`, `vinted/`) and archived/deprecated cases stay `noindex` and out of the sitemap via `_config.yml` defaults and page front matter.
 
 ### Lower-priority polish
 

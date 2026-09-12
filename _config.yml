@@ -14,3 +14,20 @@ exclude:
   - serve.js
   - playwright.config.ts
   - tests
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope: { path: "philips" }
+    values: { robots: "noindex, nofollow", sitemap: false }
+  - scope: { path: "bol" }
+    values: { robots: "noindex, nofollow", sitemap: false }
+  - scope: { path: "adyen" }
+    values: { robots: "noindex, nofollow", sitemap: false }
+  - scope: { path: "vinted" }
+    values: { robots: "noindex, nofollow", sitemap: false }
+  - scope: { path: "assets" }
+    values: { sitemap: false }
+  - scope: { path: "philips.html" }
+    values: { sitemap: false }
+  - scope: { path: "notebook" }
+    values: { sitemap: false }

@@ -8,9 +8,9 @@ He was most recently a full-time Analytics Architect at TELUS Digital (2024–20
 
 ## Site purpose
 
-This portfolio is intended for direct review by recruiters, hiring managers, analytics leaders, product leaders, marketing technology teams, UX-adjacent teams, and AI/design tools. The site is public for direct sharing but is not intended for search indexing.
+This portfolio is intended for direct review by recruiters, hiring managers, analytics leaders, product leaders, marketing technology teams, UX-adjacent teams, and AI/design tools. The site is public and indexable; role-specific microsites and archived cases are excluded from search via page-level metadata.
 
-Pages include `noindex, nofollow` metadata.
+A sitemap is published at `/sitemap.xml`.
 
 ## Best entry points
 
@@ -89,4 +89,4 @@ Prioritise evidence of:
 
 ## Privacy and indexing preference
 
-This site is public for direct review, but it is not intended to be indexed by search engines. Pages include `noindex, nofollow` metadata. Crawlers are allowed to fetch pages so they can read the page-level noindex instruction and so AI/design tools can interpret the site when given the URL directly.
+This site is public and open to search indexing. Core pages carry `index, follow` metadata and a canonical link; role-specific microsites and archived case pages carry `noindex, follow` and are omitted from the sitemap. AI/design tools are welcome to read the site when given a URL directly.
