@@ -3,7 +3,7 @@
 Personal site for Frederic Labadie &mdash; analytics architect, Amsterdam.
 Live at [fredericlabadie.com](https://fredericlabadie.com).
 
-The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It is now a Jekyll/GitHub Pages portfolio with a core navigation layer, a case library, a working-notes layer, and role-specific microsites:
+The site sits at the intersection of instrumentation and Sense-Making methodology &mdash; the gap between what users say and what they actually do. It is now a Jekyll/GitHub Pages portfolio with a core navigation layer, a case library, and a working-notes layer:
 
 - [`/`](https://fredericlabadie.com/) &mdash; **landing**: recruiter scan, positioning, selected proof points, and paths into the deeper site.
 - [`/work/`](https://fredericlabadie.com/work/) &mdash; **case library**: seven lenses linking to standalone case-study pages at `/work/<slug>.html`. The current library uses seventeen active cases, with six archived/deprecated cases preserved at their original URLs.
@@ -13,12 +13,7 @@ The site sits at the intersection of instrumentation and Sense-Making methodolog
 - [`/credentials/`](https://fredericlabadie.com/credentials/) &mdash; **credential stack**: Amplitude, analytics, AI, methodology, data-platform, and education proof.
 - [`/contact/`](https://fredericlabadie.com/contact/) &mdash; **contact**: status, response-time expectations, channels, and CV.
 
-Targeted role-fit microsites are preserved separately from the main portfolio flow:
-
-- [`/adyen/`](https://fredericlabadie.com/adyen/) &mdash; Adyen Senior Product Data Analyst microsite, with seven evidence paths around product data ownership, scalable systems, source-of-truth delivery, and experimentation.
-- [`/philips/`](https://fredericlabadie.com/philips/) &mdash; Philips UX Telemetry Expert microsite, with a thirteen-case Philips-facing work selection and clinical-domain calibration. Note: `d2c-ga-migration` is archived/deprecated from the main work index but remains intentionally active in the Philips selection where the platform-migration pattern is specifically relevant.
-- [`/bol/`](https://fredericlabadie.com/bol/) &mdash; bol Product Analyst (Checkout) microsite, with six evidence paths around experimentation, question discovery, BI enablement, alert engineering, instrumentation, and AI workflows.
-- [`/vinted/`](https://fredericlabadie.com/vinted/) &mdash; Vinted Decision Scientist (Marketing Modelling Intelligence) microsite, with five evidence paths led by the Stanley Steemer media mix model / identity-resolution case (`mmm-identity-resolution`).
+The four role-fit microsites (Adyen, Philips, bol, Vinted) were retired on 2026-09-12. Their sources, layouts, includes, stylesheets, and role CVs live under `_archive/microsites/` (ignored by Jekyll); each old URL (`/adyen/`, `/philips/`, `/bol/`, `/vinted/`) now serves a `noindex` retirement page that points to the main site.
 
 ## Featured projects
 
@@ -50,7 +45,7 @@ To un-deprecate a case: update the canonical `work/<slug>.html` source first, re
 | `creator-brand-dashboard`     | Adoption/enablement | Execution-under-deadline; no measurable business outcome.                                      |
 | `interior-designer-multisite` | Instrumentation     | Procedural GA4 setup; covered by sslp-mobile and hardware-ecommerce-gtm.                       |
 | `mqsr-dashboards`             | Experimentation     | Third case on same client; mqsr-schema-sdk and mqsr-errors cover the engagement more strongly. |
-| `d2c-ga-migration`            | Instrumentation     | 2019; weaker than hardware-ecommerce-gtm. Active in Philips microsite.                         |
+| `d2c-ga-migration`            | Instrumentation     | 2019; weaker than hardware-ecommerce-gtm. Was active in the (now archived) Philips microsite.  |
 | `oem-ebrochure-analytics`     | Question discovery  | 2017-18; soft outcome. Preserved for automotive/OEM-adjacent role reference.                   |
 
 ## Stack
@@ -80,26 +75,17 @@ The previous design system bundle remains in `_drafts/new-design.zip` for refere
 ├── about/index.html        # extended bio + methodology + career arc
 ├── credentials/index.html  # credential stack
 ├── contact/index.html      # contact channels + status
-├── adyen/
-│   ├── index.html
-│   ├── work/index.html
-│   ├── about/index.html
-│   ├── contact/index.html
-│   └── work/<slug>.html    # Adyen-framed case clones
-├── philips/
-│   ├── index.html
-│   ├── work/index.html
-│   ├── about/index.html
-│   ├── contact/index.html
-│   └── work/<slug>.html    # Philips-framed case clones
-├── bol/                    # bol microsite (same page structure as adyen/)
-├── vinted/                 # Vinted microsite (same page structure as adyen/)
+├── adyen/index.html        # retirement stub (noindex) — microsite archived
+├── philips/index.html      # retirement stub
+├── bol/index.html          # retirement stub
+├── vinted/index.html       # retirement stub
+├── _archive/microsites/    # archived microsite sources + their layouts/CSS/CVs (not built)
 ├── _data/
-│   └── cases.yml           # generated/synced case index; do not hand-edit by default
+│   └── cases.yml           # hand-maintained case index (do not regenerate)
 ├── _includes/              # shared navigation, sections, head, scripts
-├── _layouts/               # default, case, and microsite layouts
-├── css/                    # main and microsite CSS
-├── js/                     # shared JS and microsite JS
+├── _layouts/               # case layout
+├── css/                    # site CSS
+├── js/                     # shared JS
 ├── assets/
 │   ├── og/
 │   ├── photo/
